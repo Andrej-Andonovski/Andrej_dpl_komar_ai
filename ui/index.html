@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FPL AI Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #080c14;
+      --bg-card: #0f1623;
+      --bg-elevated: #161f30;
+      --bg-pitch: #1a472a;
+      --border: #1e2d45;
+      --border-bright: #2a3f5f;
+      --text: #ddeeff;
+      --text-secondary: #6a88aa;
+      --text-muted: #3a5070;
+      --green: #00e676;
+      --amber: #ffb300;
+      --red: #ff1744;
+      --chip-tc: #ffd700;
+      --chip-bb: #9c27b0;
+      --chip-wc: #00c853;
+      --chip-fh: #00bcd4;
+      --header-h: 64px;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── HEADER ── */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      z-index: 100;
+      background: rgba(8, 12, 20, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      gap: 16px;
+    }
+
+    #brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    #stats-strip {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+    }
+
+    .stat-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .stat-value.negative { color: var(--red); }
+
+    #chips-used {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .chip-badge {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .chip-badge.chip-tc { background: var(--chip-tc); color: #000; }
+    .chip-badge.chip-bb { background: var(--chip-bb); color: #fff; }
+    .chip-badge.chip-wc { background: var(--chip-wc); color: #000; }
+    .chip-badge.chip-fh { background: var(--chip-fh); color: #000; }
+
+    /* ── RUN BUTTON ── */
+    #run-btn {
+      padding: 10px 20px;
+      border-radius: 24px;
+      background: var(--green);
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    #run-btn:hover:not(.running) {
+      background: #33eb91;
+    }
+
+    #run-btn.running {
+      background: var(--border);
+      color: var(--text-secondary);
+      cursor: not-allowed;
+    }
+
+    #run-btn.running::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      border-top-color: var(--green);
+      animation: spin 0.8s linear infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ── CAROUSEL ── */
+    #carousel-wrapper {
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0; bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #carousel-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform var(--transition);
+    }
+
+    #carousel-track.no-transition {
+      transition: none;
+    }
+
+    .gw-page {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 40px 80px;
+      overflow-y: auto;
+    }
+
+    /* ── NAV ARROWS ── */
+    .nav-arrow {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .nav-arrow:hover:not(:disabled) {
+      border-color: var(--border-bright);
+      background: var(--bg-card);
+    }
+
+    .nav-arrow:disabled {
+      opacity: 0.25;
+      cursor: default;
+    }
+
+    #nav-prev { left: 12px; }
+    #nav-next { right: 12px; }
+
+    /* ── GW INDICATOR ── */
+    #gw-indicator {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* ── GW DOTS ── */
+    #gw-dots {
+      position: fixed;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      max-width: 600px;
+      justify-content: center;
+    }
+
+    .gw-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .gw-dot.active {
+      background: var(--green);
+      transform: scale(1.4);
+    }
+
+    .gw-dot:hover {
+      background: var(--border-bright);
+    }
+
+    /* ── GW PAGE CONTENT ── */
+    .gw-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 12px;
+    }
+
+    .gw-number {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .chip-badge-large {
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .gw-score {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .gw-actual {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .gw-actual.positive { color: var(--green); }
+    .gw-actual.negative { color: var(--red); }
+
+    .gw-predicted {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    /* ── PITCH ── */
+    .pitch-container {
+      position: relative;
+      max-width: 780px;
+      width: 100%;
+      background: var(--bg-pitch);
+      background-image: repeating-linear-gradient(
+        0deg,
+        #1a472a,
+        #1a472a 40px,
+        #1c4e2e 40px,
+        #1c4e2e 80px
+      );
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 16px 8px;
+    }
+
+    .pitch-lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .pitch-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 8px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── PLAYER CARD ── */
+    .player-card {
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 8px;
+      padding: 6px 4px;
+      border: 1px solid transparent;
+      position: relative;
+    }
+
+    .player-card.border-green { border-color: var(--green); }
+    .player-card.border-amber { border-color: var(--amber); }
+    .player-card.border-red   { border-color: var(--red); }
+
+    .player-name {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      word-break: break-word;
+      line-height: 1.2;
+      max-height: 2.4em;
+      overflow: hidden;
+      color: var(--text);
+    }
+
+    .player-pts {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .player-pts-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--chip-tc);
+      line-height: 1;
+    }
+
+    .player-predicted {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .cap-badge {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--chip-tc);
+      color: #000;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cap-badge.vc {
+      background: #aaa;
+      color: #000;
+    }
+
+    /* ── BENCH ── */
+    .bench-strip {
+      max-width: 780px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .bench-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .bench-row {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .bench-row .player-card {
+      width: 70px;
+      opacity: 0.75;
+    }
+
+    .bench-row .player-card.subbed-out {
+      opacity: 0.45;
+      border-color: var(--text-muted) !important;
+    }
+
+    .sub-out-badge {
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--red);
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── GW FOOTER ── */
+    .gw-footer {
+      max-width: 780px;
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+    }
+
+    .footer-section {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .transfer-in  { color: var(--green); }
+    .transfer-out { color: var(--red); }
+
+    .hit-line {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    /* ── ERROR STATE ── */
+    #error-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      gap: 16px;
+      color: var(--text-secondary);
+      font-size: 16px;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #error-state.visible { display: flex; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+  <div id="brand">FPL AI</div>
+
+  <div id="stats-strip">
+    <div class="stat-item">
+      <span class="stat-label">PTS</span>
+      <span class="stat-value" id="stat-pts">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">AVG</span>
+      <span class="stat-value" id="stat-avg">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">HITS</span>
+      <span class="stat-value" id="stat-hits">—</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-label">CHIPS</span>
+      <div id="chips-used"></div>
+    </div>
+  </div>
+
+  <button id="run-btn" onclick="runSimulation()">RUN SIMULATION</button>
+</div>
+
+<!-- NAV ARROWS -->
+<button class="nav-arrow" id="nav-prev" onclick="goToGW(currentGW - 1)">&#8249;</button>
+<button class="nav-arrow" id="nav-next" onclick="goToGW(currentGW + 1)">&#8250;</button>
+
+<!-- CAROUSEL -->
+<div id="carousel-wrapper">
+  <div id="error-state">
+    <div>No simulation data. Run the simulator to get started.</div>
+  </div>
+  <div id="carousel-track"></div>
+</div>
+
+<!-- GW DOTS -->
+<div id="gw-dots"></div>
+
+<!-- GW INDICATOR -->
+<div id="gw-indicator">GW — / —</div>
+
+<script>
+  let data = null;
+  let currentGW = 0;
+  let isRunning = false;
+  let pollInterval = null;
+
+  // ── INIT ──────────────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', init);
+
+  async function init() {
+    const res = await fetch('/api/data');
+    if (!res.ok) {
+      document.getElementById('error-state').classList.add('visible');
+      document.getElementById('carousel-track').style.display = 'none';
+      document.getElementById('nav-prev').style.display = 'none';
+      document.getElementById('nav-next').style.display = 'none';
+      document.getElementById('gw-dots').style.display = 'none';
+      document.getElementById('gw-indicator').style.display = 'none';
+      return;
+    }
+    data = await res.json();
+    if (data.error) {
+      document.getElementById('error-state').classList.add('visible');
+      document.getElementById('carousel-track').style.display = 'none';
+      document.getElementById('nav-prev').style.display = 'none';
+      document.getElementById('nav-next').style.display = 'none';
+      document.getElementById('gw-dots').style.display = 'none';
+      document.getElementById('gw-indicator').style.display = 'none';
+      return;
+    }
+    renderHeader();
+    renderCarousel();
+    updateNav();
+    setInterval(checkStatus, 4000);
+  }
+
+  // ── HEADER ─────────────────────────────────────────────────────────────────
+  function renderHeader() {
+    document.getElementById('stat-pts').textContent = data.total_actual_pts;
+
+    const gwCount = data.gameweeks.length;
+    const avg = gwCount > 0 ? (data.total_actual_pts / gwCount).toFixed(1) : '—';
+    document.getElementById('stat-avg').textContent = avg;
+
+    const hitsEl = document.getElementById('stat-hits');
+    hitsEl.textContent = data.total_penalties < 0 ? data.total_penalties : '0';
+    if (data.total_penalties < 0) hitsEl.classList.add('negative');
+
+    const chipsEl = document.getElementById('chips-used');
+    chipsEl.innerHTML = '';
+    if (data.chips_used && data.chips_used.length > 0) {
+      data.chips_used.forEach(c => {
+        const type = chipType(c.chip);
+        const badge = document.createElement('span');
+        badge.className = `chip-badge chip-${type.toLowerCase()}`;
+        badge.textContent = type;
+        chipsEl.appendChild(badge);
+      });
+    } else {
+      chipsEl.textContent = '—';
+    }
+  }
+
+  function chipType(chipStr) {
+    if (!chipStr) return '';
+    const s = chipStr.toLowerCase();
+    if (s.startsWith('tc')) return 'TC';
+    if (s.startsWith('bb')) return 'BB';
+    if (s.startsWith('wc')) return 'WC';
+    if (s.startsWith('fh')) return 'FH';
+    return chipStr.toUpperCase();
+  }
+
+  function chipClass(chipStr) {
+    const t = chipType(chipStr).toLowerCase();
+    return `chip-${t}`;
+  }
+
+  function chipLabel(chipStr) {
+    const s = chipStr ? chipStr.toLowerCase() : '';
+    if (s.startsWith('tc')) return 'TRIPLE CAPTAIN';
+    if (s.startsWith('bb')) return 'BENCH BOOST';
+    if (s.startsWith('wc')) return 'WILDCARD';
+    if (s.startsWith('fh')) return 'FREE HIT';
+    return chipStr ? chipStr.toUpperCase() : '';
+  }
+
+  // ── CAROUSEL ───────────────────────────────────────────────────────────────
+  function renderCarousel() {
+    const track = document.getElementById('carousel-track');
+    track.innerHTML = '';
+
+    data.gameweeks.forEach(gw => {
+      track.appendChild(buildGWPage(gw));
+    });
+
+    // Dots
+    const dotsEl = document.getElementById('gw-dots');
+    dotsEl.innerHTML = '';
+    data.gameweeks.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'gw-dot' + (i === currentGW ? ' active' : '');
+      dot.addEventListener('click', () => goToGW(i));
+      dotsEl.appendChild(dot);
+    });
+
+    goToGW(currentGW, false);
+  }
+
+  // ── BUILD GW PAGE ──────────────────────────────────────────────────────────
+  function buildGWPage(gw) {
+    const page = document.createElement('div');
+    page.className = 'gw-page';
+
+    // ── GW HEADER
+    const gwHeader = document.createElement('div');
+    gwHeader.className = 'gw-header';
+
+    const gwNum = document.createElement('div');
+    gwNum.className = 'gw-number';
+    gwNum.textContent = `GW ${gw.gw}`;
+    gwHeader.appendChild(gwNum);
+
+    if (gw.chip) {
+      const chipEl = document.createElement('span');
+      chipEl.className = `chip-badge chip-badge-large ${chipClass(gw.chip)}`;
+      chipEl.textContent = chipLabel(gw.chip);
+      gwHeader.appendChild(chipEl);
+    } else {
+      gwHeader.appendChild(document.createElement('span'));
+    }
+
+    const actualTotal = gw.actual_total != null
+      ? gw.actual_total
+      : (gw.actual_pts != null ? gw.actual_pts : sumPtsCounted(gw.xi));
+    const predTotal = gw.predicted_total != null ? gw.predicted_total : 0;
+
+    const scoreDiv = document.createElement('div');
+    scoreDiv.className = 'gw-score';
+    const actualEl = document.createElement('span');
+    actualEl.className = 'gw-actual ' + (actualTotal >= predTotal ? 'positive' : 'negative');
+    actualEl.textContent = actualTotal;
+    const predEl = document.createElement('span');
+    predEl.className = 'gw-predicted';
+    predEl.textContent = `/ ${Math.round(predTotal)}`;
+    scoreDiv.appendChild(actualEl);
+    scoreDiv.appendChild(predEl);
+    gwHeader.appendChild(scoreDiv);
+
+    page.appendChild(gwHeader);
+
+    // ── PITCH
+    const pitch = document.createElement('div');
+    pitch.className = 'pitch-container';
+
+    // SVG pitch markings
+    pitch.innerHTML = `
+      <svg class="pitch-lines" viewBox="0 0 780 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <line x1="0" y1="260" x2="780" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <circle cx="390" cy="260" r="60" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <circle cx="390" cy="260" r="3" fill="rgba(255,255,255,0.08)"/>
+        <rect x="195" y="20" width="390" height="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <rect x="300" y="20" width="180" height="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <rect x="195" y="380" width="390" height="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+        <rect x="300" y="470" width="180" height="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+      </svg>
+    `;
+
+    // Group XI by position
+    const groups = { GK: [], DEF: [], MID: [], FWD: [] };
+    (gw.xi || []).forEach(p => {
+      if (groups[p.pos]) groups[p.pos].push(p);
+    });
+
+    // Find vice-captain
+    const vc = (gw.xi || []).find(p => p.captain_multiplier === 2 && !p.is_captain) || null;
+
+    // Render rows: FWD → MID → DEF → GK
+    ['FWD', 'MID', 'DEF', 'GK'].forEach(pos => {
+      const row = document.createElement('div');
+      row.className = 'pitch-row';
+      groups[pos].forEach(p => row.appendChild(buildPlayerCard(p, vc)));
+      pitch.appendChild(row);
+    });
+
+    page.appendChild(pitch);
+
+    // ── BENCH
+    const benchStrip = document.createElement('div');
+    benchStrip.className = 'bench-strip';
+    const benchLabel = document.createElement('div');
+    benchLabel.className = 'bench-label';
+    benchLabel.textContent = 'BENCH';
+    benchStrip.appendChild(benchLabel);
+    const benchRow = document.createElement('div');
+    benchRow.className = 'bench-row';
+
+    // Order: GK first, then outfield by predicted_pts desc, auto_subbed_out last
+    const benchSorted = [...(gw.bench || [])].sort((a, b) => {
+      if (a.pos === 'GK' && b.pos !== 'GK') return -1;
+      if (b.pos === 'GK' && a.pos !== 'GK') return 1;
+      if (a.auto_subbed_out && !b.auto_subbed_out) return 1;
+      if (b.auto_subbed_out && !a.auto_subbed_out) return -1;
+      return (b.predicted_pts || 0) - (a.predicted_pts || 0);
+    });
+    benchSorted.forEach(p => benchRow.appendChild(buildPlayerCard(p, null)));
+    benchStrip.appendChild(benchRow);
+    page.appendChild(benchStrip);
+
+    // ── FOOTER
+    const footer = document.createElement('div');
+    footer.className = 'gw-footer';
+
+    const transfersIn = gw.transfers_in || [];
+    const transfersOut = gw.transfers_out || [];
+
+    if (transfersIn.length === 0 && transfersOut.length === 0) {
+      const noT = document.createElement('span');
+      noT.textContent = 'No transfers';
+      footer.appendChild(noT);
+    } else {
+      if (transfersIn.length > 0) {
+        const sec = document.createElement('div');
+        sec.className = 'footer-section';
+        transfersIn.forEach(name => {
+          const s = document.createElement('span');
+          s.innerHTML = `<span class="transfer-in">&#8593;</span> ${name}`;
+          sec.appendChild(s);
+        });
+        footer.appendChild(sec);
+      }
+      if (transfersOut.length > 0) {
+        const sec = document.createElement('div');
+        sec.className = 'footer-section';
+        transfersOut.forEach(name => {
+          const s = document.createElement('span');
+          s.innerHTML = `<span class="transfer-out">&#8595;</span> ${name}`;
+          sec.appendChild(s);
+        });
+        footer.appendChild(sec);
+      }
+    }
+
+    if (gw.penalty_pts < 0) {
+      const hitEl = document.createElement('span');
+      hitEl.className = 'hit-line';
+      hitEl.textContent = `HIT: ${gw.penalty_pts} pts`;
+      footer.appendChild(hitEl);
+    }
+
+    page.appendChild(footer);
+    return page;
+  }
+
+  function buildPlayerCard(p, vc) {
+    const card = document.createElement('div');
+    card.className = 'player-card';
+
+    // Border color
+    const actual = p.actual_pts != null ? p.actual_pts : 0;
+    const pred   = p.predicted_pts != null ? p.predicted_pts : 0;
+    if (p.auto_subbed_out) {
+      card.classList.add('subbed-out');
+    } else if (pred === 0 && actual === 0) {
+      card.classList.add('border-amber');
+    } else if (actual > pred + 1) {
+      card.classList.add('border-green');
+    } else if (actual < pred - 1) {
+      card.classList.add('border-red');
+    } else {
+      card.classList.add('border-amber');
+    }
+
+    // Subbed-out badge (red arrow down)
+    if (p.auto_subbed_out) {
+      const badge = document.createElement('div');
+      badge.className = 'sub-out-badge';
+      badge.textContent = '↓';
+      card.appendChild(badge);
+    }
+
+    // Captain / VC badge
+    if (p.is_captain) {
+      const badge = document.createElement('div');
+      badge.className = 'cap-badge';
+      badge.textContent = 'C';
+      card.appendChild(badge);
+    } else if (vc && p.player_id === vc.player_id) {
+      const badge = document.createElement('div');
+      badge.className = 'cap-badge vc';
+      badge.textContent = 'V';
+      card.appendChild(badge);
+    }
+
+    const nameEl = document.createElement('div');
+    nameEl.className = 'player-name';
+    nameEl.textContent = p.web_name;
+    card.appendChild(nameEl);
+
+    // Points: use pts_counted for captain (already multiplied)
+    const ptsEl = document.createElement('div');
+    ptsEl.className = 'player-pts';
+    ptsEl.textContent = p.pts_counted != null ? p.pts_counted : actual;
+    card.appendChild(ptsEl);
+
+    // Show ×2 / ×3 tag for captain
+    if (p.is_captain && p.captain_multiplier > 1) {
+      const multEl = document.createElement('div');
+      multEl.className = 'player-pts-sub';
+      multEl.textContent = `×${p.captain_multiplier}`;
+      card.appendChild(multEl);
+    }
+
+    if (pred > 0) {
+      const predEl = document.createElement('div');
+      predEl.className = 'player-predicted';
+      predEl.textContent = `~${pred.toFixed(1)}`;
+      card.appendChild(predEl);
+    }
+
+    return card;
+  }
+
+  function sumPtsCounted(xi) {
+    if (!xi) return 0;
+    return xi.reduce((s, p) => s + (p.pts_counted || 0), 0);
+  }
+
+  // ── NAVIGATION ─────────────────────────────────────────────────────────────
+  function goToGW(index, animate = true) {
+    if (!data || data.gameweeks.length === 0) return;
+    index = Math.max(0, Math.min(data.gameweeks.length - 1, index));
+    currentGW = index;
+
+    const track = document.getElementById('carousel-track');
+    if (!animate) {
+      track.classList.add('no-transition');
+      track.style.transform = `translateX(-${index * 100}%)`;
+      track.getBoundingClientRect(); // force reflow
+      track.classList.remove('no-transition');
+    } else {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.getElementById('gw-indicator').textContent =
+      `GW ${index + 1} / ${data.gameweeks.length}`;
+
+    document.querySelectorAll('.gw-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    updateNav();
+  }
+
+  function updateNav() {
+    const total = data ? data.gameweeks.length : 0;
+    document.getElementById('nav-prev').disabled = currentGW <= 0;
+    document.getElementById('nav-next').disabled = currentGW >= total - 1;
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft')  goToGW(currentGW - 1);
+    if (e.key === 'ArrowRight') goToGW(currentGW + 1);
+  });
+
+  // ── RUN SIMULATION ─────────────────────────────────────────────────────────
+  async function runSimulation() {
+    if (isRunning) return;
+    isRunning = true;
+
+    const btn = document.getElementById('run-btn');
+    btn.classList.add('running');
+    btn.textContent = 'SIMULATING\u2026';
+
+    await fetch('/api/run', { method: 'POST' });
+
+    pollInterval = setInterval(checkStatus, 3000);
+  }
+
+  async function checkStatus() {
+    const res = await fetch('/api/status');
+    const json = await res.json();
+
+    if (!json.running && isRunning) {
+      clearInterval(pollInterval);
+      pollInterval = null;
+      isRunning = false;
+
+      const btn = document.getElementById('run-btn');
+      btn.classList.remove('running');
+      btn.textContent = 'RUN SIMULATION';
+
+      // Refresh data
+      const dataRes = await fetch('/api/data');
+      if (dataRes.ok) {
+        const newData = await dataRes.json();
+        if (!newData.error) {
+          data = newData;
+          renderHeader();
+          renderCarousel();
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>

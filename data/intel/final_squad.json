@@ -1,0 +1,1134 @@
+{
+  "generated_at": "2026-03-16T11:39:28.295277+00:00",
+  "mode": "backtest",
+  "model": "xgboost + intel_pipeline",
+  "gameweeks": [
+    {
+      "gw": 1,
+      "chip": null,
+      "predicted_score": 67.01581110463619,
+      "squad_value": 100.0,
+      "free_transfers": 1,
+      "transfers_in": [],
+      "transfers_out": [],
+      "penalty_pts": 0,
+      "captain": "Salah",
+      "captain_id": 381,
+      "captain_source": "ilp",
+      "xi": [
+        "Lynch Sánchez",
+        "Robertson",
+        "van Dijk",
+        "van de Ven",
+        "Anthony",
+        "Palmer",
+        "Salah",
+        "Borges Fernandes",
+        "Junqueira de Jesus",
+        "Wissa",
+        "Wood"
+      ],
+      "xi_ids": [
+        220,
+        372,
+        373,
+        575,
+        200,
+        235,
+        381,
+        449,
+        249,
+        135,
+        525
+      ],
+      "xi_final": [
+        "Lynch Sánchez",
+        "Robertson",
+        "van Dijk",
+        "van de Ven",
+        "Anthony",
+        "Palmer",
+        "Salah",
+        "Borges Fernandes",
+        "Junqueira de Jesus",
+        "Guéhi",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        220,
+        372,
+        373,
+        575,
+        200,
+        235,
+        381,
+        449,
+        249,
+        260,
+        525
+      ],
+      "bench": [
+        "Proctor",
+        "Guéhi",
+        "Mfuni",
+        "Dowman"
+      ],
+      "bench_ids": [
+        703,
+        260,
+        740,
+        700
+      ],
+      "bench_final": [
+        "Proctor",
+        "Mfuni",
+        "Dowman",
+        "Wissa"
+      ],
+      "bench_final_ids": [
+        703,
+        740,
+        700,
+        135
+      ],
+      "auto_subs": [
+        [
+          "Wissa",
+          "Guéhi"
+        ]
+      ],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Martínez Romero",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 2,
+      "chip": null,
+      "predicted_score": 45.5155893458724,
+      "squad_value": 99.6,
+      "free_transfers": 2,
+      "transfers_in": [
+        "Mitchell",
+        "Keane"
+      ],
+      "transfers_out": [
+        "Robertson",
+        "Mfuni"
+      ],
+      "penalty_pts": 0,
+      "captain": "Palmer",
+      "captain_id": 235,
+      "captain_source": "ilp",
+      "xi": [
+        "Lynch Sánchez",
+        "van Dijk",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Palmer",
+        "Salah",
+        "Borges Fernandes",
+        "Wood",
+        "Mitchell",
+        "Junqueira de Jesus"
+      ],
+      "xi_ids": [
+        220,
+        373,
+        260,
+        575,
+        200,
+        235,
+        381,
+        449,
+        525,
+        258,
+        249
+      ],
+      "xi_final": [
+        "Lynch Sánchez",
+        "van Dijk",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Keane",
+        "Salah",
+        "Borges Fernandes",
+        "Wood",
+        "Mitchell",
+        "Junqueira de Jesus"
+      ],
+      "xi_final_ids": [
+        220,
+        373,
+        260,
+        575,
+        200,
+        295,
+        381,
+        449,
+        525,
+        258,
+        249
+      ],
+      "bench": [
+        "Proctor",
+        "Keane",
+        "Dowman",
+        "Wissa"
+      ],
+      "bench_ids": [
+        703,
+        295,
+        700,
+        135
+      ],
+      "bench_final": [
+        "Proctor",
+        "Dowman",
+        "Palmer",
+        "Wissa"
+      ],
+      "bench_final_ids": [
+        703,
+        700,
+        235,
+        135
+      ],
+      "auto_subs": [
+        [
+          "Palmer",
+          "Keane"
+        ]
+      ],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Sels",
+          "avail": 5,
+          "rot_risk": null,
+          "combined_mult": 0.05
+        }
+      }
+    },
+    {
+      "gw": 3,
+      "chip": null,
+      "predicted_score": 65.495693836236,
+      "squad_value": 98.2,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Semenyo"
+      ],
+      "transfers_out": [
+        "Borges Fernandes"
+      ],
+      "penalty_pts": 0,
+      "captain": "Wood",
+      "captain_id": 525,
+      "captain_source": "ilp",
+      "xi": [
+        "Lynch Sánchez",
+        "Mitchell",
+        "Keane",
+        "van Dijk",
+        "Guéhi",
+        "Dowman",
+        "Palmer",
+        "Salah",
+        "Junqueira de Jesus",
+        "Wood",
+        "Semenyo"
+      ],
+      "xi_ids": [
+        220,
+        258,
+        295,
+        373,
+        260,
+        700,
+        235,
+        381,
+        249,
+        525,
+        82
+      ],
+      "xi_final": [
+        "Lynch Sánchez",
+        "Mitchell",
+        "Keane",
+        "van Dijk",
+        "Guéhi",
+        "Dowman",
+        "van de Ven",
+        "Salah",
+        "Junqueira de Jesus",
+        "Wood",
+        "Semenyo"
+      ],
+      "xi_final_ids": [
+        220,
+        258,
+        295,
+        373,
+        260,
+        700,
+        575,
+        381,
+        249,
+        525,
+        82
+      ],
+      "bench": [
+        "Proctor",
+        "van de Ven",
+        "Anthony",
+        "Wissa"
+      ],
+      "bench_ids": [
+        703,
+        575,
+        200,
+        135
+      ],
+      "bench_final": [
+        "Proctor",
+        "Anthony",
+        "Palmer",
+        "Wissa"
+      ],
+      "bench_final_ids": [
+        703,
+        200,
+        235,
+        135
+      ],
+      "auto_subs": [
+        [
+          "Palmer",
+          "van de Ven"
+        ]
+      ],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Soler Barreto",
+          "avail": 5,
+          "rot_risk": null,
+          "combined_mult": 0.05
+        }
+      }
+    },
+    {
+      "gw": 4,
+      "chip": null,
+      "predicted_score": 57.78555997817516,
+      "squad_value": 99.8,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Ekitiké"
+      ],
+      "transfers_out": [
+        "Wissa"
+      ],
+      "penalty_pts": 0,
+      "captain": "Junqueira de Jesus",
+      "captain_id": 249,
+      "captain_source": "ilp",
+      "xi": [
+        "Lynch Sánchez",
+        "Keane",
+        "van Dijk",
+        "Guéhi",
+        "van de Ven",
+        "Dowman",
+        "Palmer",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Wood"
+      ],
+      "xi_ids": [
+        220,
+        295,
+        373,
+        260,
+        575,
+        700,
+        235,
+        381,
+        82,
+        249,
+        525
+      ],
+      "xi_final": [
+        "Lynch Sánchez",
+        "Keane",
+        "van Dijk",
+        "Guéhi",
+        "van de Ven",
+        "Mitchell",
+        "Palmer",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        220,
+        295,
+        373,
+        260,
+        575,
+        258,
+        235,
+        381,
+        82,
+        249,
+        525
+      ],
+      "bench": [
+        "Proctor",
+        "Mitchell",
+        "Anthony",
+        "Ekitiké"
+      ],
+      "bench_ids": [
+        703,
+        258,
+        200,
+        661
+      ],
+      "bench_final": [
+        "Proctor",
+        "Dowman",
+        "Anthony",
+        "Ekitiké"
+      ],
+      "bench_final_ids": [
+        703,
+        700,
+        200,
+        661
+      ],
+      "auto_subs": [
+        [
+          "Dowman",
+          "Mitchell"
+        ]
+      ],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Samuels Colwill",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 5,
+      "chip": "wildcard_2",
+      "predicted_score": 73.80317733597757,
+      "squad_value": 99.7,
+      "free_transfers": 15,
+      "transfers_in": [],
+      "transfers_out": [],
+      "penalty_pts": 0,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp",
+      "xi": [
+        "Lynch Sánchez",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_ids": [
+        220,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        249,
+        430,
+        525
+      ],
+      "xi_final": [
+        "Lynch Sánchez",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        220,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        249,
+        430,
+        525
+      ],
+      "bench": [
+        "Dennis",
+        "Estève",
+        "Cullen",
+        "Xhaka"
+      ],
+      "bench_ids": [
+        68,
+        191,
+        205,
+        668
+      ],
+      "bench_final": [
+        "Dennis",
+        "Estève",
+        "Cullen",
+        "Xhaka"
+      ],
+      "bench_final_ids": [
+        68,
+        191,
+        205,
+        668
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Samuels Colwill",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 6,
+      "chip": "triple_captain",
+      "predicted_score": 75.64229394924641,
+      "squad_value": 99.8,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Roefs"
+      ],
+      "transfers_out": [
+        "Lynch Sánchez"
+      ],
+      "penalty_pts": 0,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp+intel_05",
+      "xi": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_ids": [
+        670,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        249,
+        430,
+        525
+      ],
+      "xi_final": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        670,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        249,
+        430,
+        525
+      ],
+      "bench": [
+        "Dennis",
+        "Estève",
+        "Cullen",
+        "Xhaka"
+      ],
+      "bench_ids": [
+        68,
+        191,
+        205,
+        668
+      ],
+      "bench_final": [
+        "Dennis",
+        "Estève",
+        "Cullen",
+        "Xhaka"
+      ],
+      "bench_final_ids": [
+        68,
+        191,
+        205,
+        668
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Lynch Sánchez",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 7,
+      "chip": "bench_boost",
+      "predicted_score": 76.93381058263779,
+      "squad_value": 100.0,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Gudmundsson"
+      ],
+      "transfers_out": [
+        "Estève"
+      ],
+      "penalty_pts": 0,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp+intel_05",
+      "xi": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Xhaka",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_ids": [
+        670,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        668,
+        430,
+        525
+      ],
+      "xi_final": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Keane",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Xhaka",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        670,
+        224,
+        295,
+        260,
+        575,
+        200,
+        381,
+        82,
+        668,
+        430,
+        525
+      ],
+      "bench": [
+        "Dennis",
+        "Gudmundsson",
+        "Cullen",
+        "Junqueira de Jesus"
+      ],
+      "bench_ids": [
+        68,
+        347,
+        205,
+        249
+      ],
+      "bench_final": [
+        "Dennis",
+        "Gudmundsson",
+        "Cullen",
+        "Junqueira de Jesus"
+      ],
+      "bench_final_ids": [
+        68,
+        347,
+        205,
+        249
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Chalobah",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 8,
+      "chip": null,
+      "predicted_score": 69.7094035897255,
+      "squad_value": 99.8,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Mukiele"
+      ],
+      "transfers_out": [
+        "Keane"
+      ],
+      "penalty_pts": 0,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp+intel_05",
+      "xi": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Xhaka",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_ids": [
+        670,
+        224,
+        260,
+        575,
+        200,
+        381,
+        82,
+        668,
+        249,
+        430,
+        525
+      ],
+      "xi_final": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "van de Ven",
+        "Anthony",
+        "Salah",
+        "Semenyo",
+        "Xhaka",
+        "Junqueira de Jesus",
+        "Haaland",
+        "Wood"
+      ],
+      "xi_final_ids": [
+        670,
+        224,
+        260,
+        575,
+        200,
+        381,
+        82,
+        668,
+        249,
+        430,
+        525
+      ],
+      "bench": [
+        "Dennis",
+        "Gudmundsson",
+        "Mukiele",
+        "Cullen"
+      ],
+      "bench_ids": [
+        68,
+        347,
+        694,
+        205
+      ],
+      "bench_final": [
+        "Dennis",
+        "Gudmundsson",
+        "Mukiele",
+        "Cullen"
+      ],
+      "bench_final_ids": [
+        68,
+        347,
+        694,
+        205
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Becker",
+          "avail": 5,
+          "rot_risk": null,
+          "combined_mult": 0.05
+        }
+      }
+    },
+    {
+      "gw": 9,
+      "chip": null,
+      "predicted_score": 61.2741817728281,
+      "squad_value": 99.9,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Mateta",
+        "Woltemade"
+      ],
+      "transfers_out": [
+        "Junqueira de Jesus",
+        "Wood"
+      ],
+      "penalty_pts": 4,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp+intel_05",
+      "xi": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "Mukiele",
+        "van de Ven",
+        "Anthony",
+        "Cullen",
+        "Semenyo",
+        "Xhaka",
+        "Haaland",
+        "Woltemade"
+      ],
+      "xi_ids": [
+        670,
+        224,
+        260,
+        694,
+        575,
+        200,
+        205,
+        82,
+        668,
+        430,
+        714
+      ],
+      "xi_final": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "Mukiele",
+        "van de Ven",
+        "Anthony",
+        "Cullen",
+        "Semenyo",
+        "Xhaka",
+        "Haaland",
+        "Woltemade"
+      ],
+      "xi_final_ids": [
+        670,
+        224,
+        260,
+        694,
+        575,
+        200,
+        205,
+        82,
+        668,
+        430,
+        714
+      ],
+      "bench": [
+        "Dennis",
+        "Gudmundsson",
+        "Salah",
+        "Mateta"
+      ],
+      "bench_ids": [
+        68,
+        347,
+        381,
+        283
+      ],
+      "bench_final": [
+        "Dennis",
+        "Gudmundsson",
+        "Salah",
+        "Mateta"
+      ],
+      "bench_final_ids": [
+        68,
+        347,
+        381,
+        283
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Gusto",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    },
+    {
+      "gw": 10,
+      "chip": null,
+      "predicted_score": 69.84896381151675,
+      "squad_value": 99.9,
+      "free_transfers": 1,
+      "transfers_in": [
+        "Anderson"
+      ],
+      "transfers_out": [
+        "Anthony"
+      ],
+      "penalty_pts": 0,
+      "captain": "Haaland",
+      "captain_id": 430,
+      "captain_source": "ilp",
+      "xi": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "Mukiele",
+        "van de Ven",
+        "Salah",
+        "Semenyo",
+        "Anderson",
+        "Xhaka",
+        "Haaland",
+        "Woltemade"
+      ],
+      "xi_ids": [
+        670,
+        224,
+        260,
+        694,
+        575,
+        381,
+        82,
+        517,
+        668,
+        430,
+        714
+      ],
+      "xi_final": [
+        "Roefs",
+        "Cucurella Saseta",
+        "Guéhi",
+        "Mukiele",
+        "van de Ven",
+        "Salah",
+        "Semenyo",
+        "Anderson",
+        "Xhaka",
+        "Haaland",
+        "Woltemade"
+      ],
+      "xi_final_ids": [
+        670,
+        224,
+        260,
+        694,
+        575,
+        381,
+        82,
+        517,
+        668,
+        430,
+        714
+      ],
+      "bench": [
+        "Dennis",
+        "Gudmundsson",
+        "Cullen",
+        "Mateta"
+      ],
+      "bench_ids": [
+        68,
+        347,
+        205,
+        283
+      ],
+      "bench_final": [
+        "Dennis",
+        "Gudmundsson",
+        "Cullen",
+        "Mateta"
+      ],
+      "bench_final_ids": [
+        68,
+        347,
+        205,
+        283
+      ],
+      "auto_subs": [],
+      "intel_adjustments": {
+        "players_penalized": 622,
+        "biggest_penalty": {
+          "name": "Becker",
+          "avail": 0,
+          "rot_risk": null,
+          "combined_mult": 0.0
+        }
+      }
+    }
+  ],
+  "total_predicted_points": 663.0244853068518,
+  "total_penalties": 4,
+  "chips_used": [
+    {
+      "chip": "wildcard_2",
+      "gw": 5
+    },
+    {
+      "chip": "triple_captain",
+      "gw": 6
+    },
+    {
+      "chip": "bench_boost",
+      "gw": 7
+    }
+  ],
+  "best_gw": {
+    "gw": 7,
+    "score": 76.93381058263779,
+    "squad": [
+      "Dennis",
+      "Roefs",
+      "Cucurella Saseta",
+      "Keane",
+      "Gudmundsson",
+      "Guéhi",
+      "van de Ven",
+      "Anthony",
+      "Cullen",
+      "Salah",
+      "Semenyo",
+      "Xhaka",
+      "Junqueira de Jesus",
+      "Haaland",
+      "Wood"
+    ]
+  },
+  "most_captained": "Haaland",
+  "squad_value_trajectory": [
+    {
+      "gw": 1,
+      "value": 100.0
+    },
+    {
+      "gw": 2,
+      "value": 99.6
+    },
+    {
+      "gw": 3,
+      "value": 98.2
+    },
+    {
+      "gw": 4,
+      "value": 99.8
+    },
+    {
+      "gw": 5,
+      "value": 99.7
+    },
+    {
+      "gw": 6,
+      "value": 99.8
+    },
+    {
+      "gw": 7,
+      "value": 100.0
+    },
+    {
+      "gw": 8,
+      "value": 99.8
+    },
+    {
+      "gw": 9,
+      "value": 99.9
+    },
+    {
+      "gw": 10,
+      "value": 99.9
+    }
+  ],
+  "captain_overrides": 0
+}

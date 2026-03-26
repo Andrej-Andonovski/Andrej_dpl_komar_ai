@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# Large data files
+data/raw/
+data/intel/archive/
+data/intel/random_search_full/trial_*.json
+data/intel/random_search_full/trial_*_sim.json
+Fantasy-Premier-League/
+
+# Models (large binaries)
+models/*.pkl
+
+# Locks
+*.lock
+
+# OS
+.DS_Store
+Thumbs.db

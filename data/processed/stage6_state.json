@@ -1,0 +1,101 @@
+{
+  "last_completed_step": 8,
+  "step4": {
+    "players_with_prev_data": 26,
+    "total_columns": 44,
+    "output": "data/processed/base_gw_table.csv"
+  },
+  "step5": {
+    "team_form_cols_added": 11,
+    "opp_form_cols_added": 11,
+    "total_new_cols": 22,
+    "nan_remaining": 0,
+    "total_columns": 66,
+    "leakage_issues": [
+      [
+        "xG_last5",
+        1
+      ],
+      [
+        "xGA_last5",
+        1
+      ],
+      [
+        "attacking_strength",
+        116
+      ],
+      [
+        "defensive_strength",
+        116
+      ],
+      [
+        "clean_sheet_probability",
+        1
+      ],
+      [
+        "xG_season_avg",
+        1
+      ],
+      [
+        "xGA_season_avg",
+        1
+      ]
+    ],
+    "output": "data/processed/base_gw_table.csv"
+  },
+  "step5_gw1_patch": "GW1 team form cols zeroed for consistency -- no cross-season bleed",
+  "step6": {
+    "fixture_cols_added": 5,
+    "fdr_is_proxy_0": 0,
+    "fdr_is_proxy_1": 51044,
+    "trajectory_is_full_1": 0,
+    "nan_in_fixture_cols": 0,
+    "total_columns": 71,
+    "output": "data/processed/base_gw_table.csv",
+    "fdr_proxy_fix_applied": "bool-dtype bug fixed: astype(int) before map"
+  },
+  "step7": {
+    "positions": {
+      "GK": {
+        "rows": 4421,
+        "cols": 69,
+        "nan_after_fill": 0,
+        "gw1_violations": 0
+      },
+      "DEF": {
+        "rows": 18828,
+        "cols": 67,
+        "nan_after_fill": 0,
+        "gw1_violations": 0
+      },
+      "MID": {
+        "rows": 22132,
+        "cols": 65,
+        "nan_after_fill": 0,
+        "gw1_violations": 0
+      },
+      "FWD": {
+        "rows": 5663,
+        "cols": 65,
+        "nan_after_fill": 0,
+        "gw1_violations": 0
+      }
+    },
+    "outputs": [
+      "data/processed/train_gk.csv",
+      "data/processed/train_def.csv",
+      "data/processed/train_mid.csv",
+      "data/processed/train_fwd.csv"
+    ]
+  },
+  "stage6_complete": true,
+  "step8": {
+    "timestamp": "2026-03-11 15:13:52",
+    "checks_passed": 10,
+    "checks_failed": 0,
+    "report": "data/processed/stage6_validation_report.txt",
+    "players_with_prev": 26,
+    "players_vaastav_only": 1210,
+    "total_rows": 51044
+  }
+}

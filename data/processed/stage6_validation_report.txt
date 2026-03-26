@@ -1,0 +1,51 @@
+======================================================================
+STAGE 6 FINAL VALIDATION REPORT
+Generated: 2026-03-11 15:13:52
+======================================================================
+
+CRITICAL CHECKS:
+  Check 1  -- No NaN               GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 2  -- No 2025-26           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 3  -- 6 seasons            GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 4  -- GW1 zeros            GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 5  -- Points sane          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 6  -- Row counts           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 7  -- Pos purity           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 8  -- No neg min           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 9  -- All numeric          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 10 -- Prev isolation       GK PASS  DEF PASS  MID PASS  FWD PASS
+
+OVERALL: ALL CHECKS PASSED
+
+TRAINING FILE SUMMARY:
+  File                       Rows   Cols   Mean pts   Max pts  Seasons
+  train_gk.csv              4,421     69       3.52        16        6
+  train_def.csv            18,828     67       2.93        24        6
+  train_mid.csv            22,132     65       3.30        26        6
+  train_fwd.csv             5,663     65       3.94        24        6
+  TOTAL                    51,044
+
+FEATURE ENGINEERING SUMMARY:
+  Base GW rows:                51,044
+  Rolling features added:      10
+  Prev league features added:  12  (position-specific)
+  Team form features added:    22  (11 own + 11 opp)
+  Fixture features added:      4
+  Players with prev data:      26  (stage4a/4b new signings)
+  Players vaastav-only:        1210
+  GW1 leakage checks passed:   all
+  Cross-season bleed:          none
+  NaN in final files:          0
+
+DATA SOURCES:
+  Vaastav historical GW data:  2019-20 to 2024-25
+  FBref new signings:          Stage 4a (63 players) +
+                               Stage 4b (26 players)
+  Team form:                   Stage 3 (vaastav + understat)
+  Fixture difficulty:          FPL API (proxy for training,
+                               live FDR for GW1 prediction)
+
+======================================================================
+Stage 6 complete. Training data ready.
+Ready for Stage 7 -- XGBoost Model Training.
+======================================================================

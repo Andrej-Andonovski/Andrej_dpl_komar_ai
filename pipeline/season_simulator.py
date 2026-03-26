@@ -1,0 +1,1910 @@
+"""
+pipeline/season_simulator.py
+Fully standalone GW1-28 FPL season simulator.
+No imports from other pipeline files.
+"""
+import os, json, random, warnings, sys
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+import numpy as np
+import pandas as pd
+from datetime import datetime
+from collections import defaultdict
+import xgboost as xgb
+import lightgbm as lgb
+from pulp import (LpProblem, LpMaximize, LpVariable, lpSum,
+                  LpBinary, LpInteger, LpStatus, PULP_CBC_CMD)
+
+warnings.filterwarnings("ignore")
+random.seed(42)
+np.random.seed(42)
+
+# ── Paths ─────────────────────────────────────────────────────────────────────
+_HERE        = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR     = os.path.join(_HERE, "..", "data")
+HIST_CSV     = os.path.join(DATA_DIR, "raw", "fpl_api", "player_history.csv")
+PLAYERS_CSV  = os.path.join(DATA_DIR, "raw", "fpl_api", "players_raw.csv")
+FIXTURES_CSV = os.path.join(DATA_DIR, "raw", "fpl_api", "fixtures_raw.csv")
+TRAIN_DIR    = os.path.join(DATA_DIR, "processed")
+OUTPUT_JSON  = os.path.join(DATA_DIR, "intel", "season_simulation.json")
+AVAIL_JSON   = os.path.join(DATA_DIR, "intel", "availability.json")
+RECS_JSON    = os.path.join(DATA_DIR, "intel", "recommendations.json")
+
+# ── Constants ─────────────────────────────────────────────────────────────────
+BUDGET         = 100.0
+MAX_CLUB       = 3
+SIM_END_GW     = 28
+CHIP_LOCKOUT   = 4
+MAX_HITS       = 1
+FDR_MULT        = 0.02   # trial 220 best
+FDR_MULT_DEF    = 0.08   # trial 220 best — GK/DEF position-specific
+OWN_BOOST_GW1  = 0.15   # trial 220 best
+PRED_CAP       = 20.0   # per-player prediction ceiling
+XI_PRED_CAP    = 120.0  # XI predicted total ceiling — keeps predictions calibrated
+TC_THRESH      = 6.0    # tuned — enables tc2 at GW25 (+67 pts)
+TC_FORM_MIN    = 6.0    # tuned — enables tc2 at GW25 (+67 pts)
+TC2_MIN_GW   = 20     # earliest GW tc2 is allowed to fire (set2 only)
+FORCE_TC2_GW   = None   # if set, force tc2 to fire on this exact GW (overrides threshold)
+FH2_EARLIEST_GW = 20    # earliest GW fh2 is allowed to fire (set2 only)
+TC_FORM_FORCE  = 5.0    # minimum form to use TC even when force-used at GW18
+BB_THRESH      = 9.0    # bench outfield total (3 outfield bench combined)
+BB_FORCE_MIN   = 10.0   # bench pred floor for force-using BB at GW19
+WC_THRESH      = 5      # squad members below pos avg triggers WC
+WC17_LOYALTY   = 5.0    # loyalty bonus when force-using WC at GW17
+CAP_STREAK_MAX      = 3     # consecutive captain GWs before rotation considered
+CAP_FORM_MIN        = 6.0   # form_last3 below this + streak triggers rotation
+CAP_FORM_GATE       = 4.0   # trial 220 best
+CAP_FORM_PENALTY    = 0.3   # trial 220 best
+CAP_STREAK_LIMIT    = 2     # trial 220 best
+CAP_STREAK_FORM     = 6.0   # streak penalty only if form_last3 below this
+CAP_STREAK_MULT     = 0.9   # trial 220 best
+CAP_HOME_MARGIN     = 1.0   # prefer home player if top candidate is within this many pts
+CAP_MIN_RELIABILITY = 0.4   # never captain player with minutes_reliability below this
+CAP_FORM_GW_MIN     = 2     # apply form gate from this GW onward
+CAP_FDR_MULT        = 0.10  # trial 220 best
+CAP_BLANK_THRESH    = 4     # trial 220 best
+CAP_BLANK_PENALTY   = 0.9   # trial 220 best
+BLEND_GWS           = 8.0   # GW1 blending fades to 0 by GW9
+MC_SQUADS      = 3      # Monte Carlo random squads
+DGW_PRED_MULT  = 2.0   # prediction boost for players with 2 fixtures in DGW weeks
+
+# ── Intel 07 — Bench Intelligence ─────────────────────────────────────────────
+MAX_BENCH_PRICE    = 5.5   # max price for bench candidates (£m)
+MIN_MINUTES_REL    = 0.5   # must have played 50%+ of available minutes
+MIN_FORM_LAST3     = 2.0   # minimum form to be considered
+BENCH_BONUS_NORMAL = 0.0   # Trial 148 — no bench bonus on normal GWs
+BENCH_BONUS_BB_GW  = 2.0   # Trial 148 — minimal bonus on BB target GW
+LOOKAHEAD_GWS      = 3     # how many GWs ahead to evaluate for BB window
+BB_MIN_GW          = 9     # Trial 148 — don't target BB before this GW
+BB_MAX_GW_SET1     = 19    # Set 1 BB must fire by GW19
+BB_MAX_GW_SET2     = 38    # Set 2 BB must fire by GW38
+
+CAP_MULT = {1: 0.0, 2: 0.75, 3: 1.15, 4: 1.25}   # by element_type
+
+# Availability tier multipliers — applied to pred before ILP (from intel_03)
+AVAIL_MULT = {
+    "out":       0.0,    # zero prediction entirely
+    "suspended": 0.0,    # zero prediction entirely
+    "unlikely":  0.3,    # very doubtful
+    "doubtful":  0.5,    # halve prediction
+    "unknown":   0.85,   # mild penalty for uncertainty
+    "probable":  0.95,   # near-certain, tiny penalty
+    "available": 1.0,    # no penalty
+}
+
+# Loyalty bonus added to pred for current squad members
+def loyalty_bonus(gw):
+    if gw <= 5:  return 10.0
+    if gw <= 10: return 2.0
+    return 1.0
+
+MODEL_TYPE = "lgbm"  # trial 220 best
+
+XGB_PARAMS = dict(
+    n_estimators=300, max_depth=4, learning_rate=0.05,
+    subsample=0.8, colsample_bytree=0.8, min_child_weight=3,
+    random_state=42, verbosity=0
+)
+
+LGBM_PARAMS = dict(
+    n_estimators=300, max_depth=3, learning_rate=0.03,
+    num_leaves=31, subsample=0.9, colsample_bytree=0.6,
+    min_child_samples=30, random_state=42, verbosity=-1
+)
+
+FEAT_COLS = [
+    "form_last3", "form_last5", "avg_points_per_game",
+    "minutes_reliability", "goals_per_game", "assists_per_game",
+    "clean_sheet_rate", "saves_per_game",
+    "value", "was_home", "fdr",
+]
+
+# Intel 08 feature flags — kept for trial_runner compatibility; team/opp features
+# are NOT in FEAT_COLS so these flags have no effect on predictions.
+TEAM_FEATURES = True
+OPP_FEATURES  = True
+
+POS_MAP = {1: "GK", 2: "DEF", 3: "MID", 4: "FWD"}
+
+# Column name aliases in training CSVs -> our FEAT_COLS names
+_COL_ALIAS = {
+    "avg_points_per_game_season": "avg_points_per_game",
+    "minutes_reliability_season": "minutes_reliability",
+    "goals_per_game_season":      "goals_per_game",
+    "assists_per_game_season":    "assists_per_game",
+    "clean_sheet_rate_season":    "clean_sheet_rate",
+    "saves_per_game_season":      "saves_per_game",
+    "current_gw_fdr":             "fdr",
+    "home_advantage":             "was_home",
+}
+
+TRAIN_FILES = {
+    "GK":  "train_gk.csv",
+    "DEF": "train_def.csv",
+    "MID": "train_mid.csv",
+    "FWD": "train_fwd.csv",
+}
+
+
+# ── Data Loaders ──────────────────────────────────────────────────────────────
+
+def load_player_history():
+    """Returns {player_id: {gw: {total_points, minutes, goals_scored,
+                                  assists, clean_sheets, saves, value, was_home}}}
+    DGW: players can have 2 rows per GW — points/minutes/stats are summed."""
+    df = pd.read_csv(HIST_CSV)
+    hist = defaultdict(dict)
+    for r in df.itertuples(index=False):
+        pid = int(r.player_id)
+        gw  = int(r.gameweek)
+        row = {
+            "total_points":  float(r.total_points),
+            "minutes":       int(r.minutes),
+            "goals_scored":  int(r.goals_scored),
+            "assists":       int(r.assists),
+            "clean_sheets":  int(r.clean_sheets),
+            "saves":         int(r.saves),
+            "value":         float(r.value),
+            "was_home":      int(r.was_home),
+            "transfers_in":  int(getattr(r, "transfers_in",  0) or 0),
+            "transfers_out": int(getattr(r, "transfers_out", 0) or 0),
+            "bonus":         int(getattr(r, "bonus", 0) or 0),
+        }
+        if gw in hist[pid]:
+            # DGW: accumulate additive stats; keep latest value for non-additive
+            existing = hist[pid][gw]
+            existing["total_points"] += row["total_points"]
+            existing["minutes"]      += row["minutes"]
+            existing["goals_scored"] += row["goals_scored"]
+            existing["assists"]      += row["assists"]
+            existing["clean_sheets"] += row["clean_sheets"]
+            existing["saves"]        += row["saves"]
+            existing["bonus"]        += row["bonus"]
+            existing["value"]    = row["value"]
+            existing["was_home"] = row["was_home"]
+        else:
+            hist[pid][gw] = row
+    return hist
+
+
+def load_players_raw():
+    df = pd.read_csv(PLAYERS_CSV)
+    if "price" not in df.columns:
+        df["price"] = df["now_cost"] / 10.0
+    if "position" not in df.columns and "element_type" in df.columns:
+        df["position"] = df["element_type"].map(POS_MAP)
+    if "web_name" not in df.columns:
+        df["web_name"] = df.get("second_name", df.get("id").astype(str))
+    return df
+
+
+def load_fixtures():
+    """Returns fdr_lookup {(team_id,gw)->fdr}, home_lookup {(team_id,gw)->1/0},
+    dgw_gws set, gw_teams {gw: {team_id: count}}"""
+    df = pd.read_csv(FIXTURES_CSV)
+    df = df.dropna(subset=["gameweek"])
+    df["gameweek"] = df["gameweek"].astype(int)
+    fdr_lookup  = {}
+    home_lookup = {}
+    gw_teams    = defaultdict(lambda: defaultdict(int))
+    for r in df.itertuples(index=False):
+        gw = int(r.gameweek)
+        th, ta = int(r.team_h), int(r.team_a)
+        fdr_lookup[(th, gw)]  = int(r.team_h_difficulty)
+        fdr_lookup[(ta, gw)]  = int(r.team_a_difficulty)
+        home_lookup[(th, gw)] = 1
+        home_lookup[(ta, gw)] = 0
+        gw_teams[gw][th] += 1
+        gw_teams[gw][ta] += 1
+    dgw_gws = {gw for gw, teams in gw_teams.items()
+               if any(c > 1 for c in teams.values())}
+    return fdr_lookup, home_lookup, dgw_gws, gw_teams
+
+
+def load_training_data():
+    """Returns {pos: DataFrame} with columns renamed to FEAT_COLS equivalents."""
+    train_dfs = {}
+    for pos, fname in TRAIN_FILES.items():
+        path = os.path.join(TRAIN_DIR, fname)
+        if not os.path.exists(path):
+            print(f"  [WARN] Missing training file: {path}")
+            train_dfs[pos] = pd.DataFrame()
+            continue
+        df = pd.read_csv(path)
+        df = df.rename(columns=_COL_ALIAS)
+        df = df.loc[:, ~df.columns.duplicated()]   # drop duplicate cols
+        train_dfs[pos] = df
+    return train_dfs
+
+
+# ── Name normalisation ────────────────────────────────────────────────────────
+
+def _norm(s):
+    import unicodedata
+    try:
+        s = unicodedata.normalize("NFD", str(s))
+        s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    except Exception:
+        pass
+    return "".join(c for c in s.lower() if c.isalpha())
+
+
+# ── Intel-03 Availability ─────────────────────────────────────────────────────
+
+def load_availability():
+    """Load intel_03 availability.json → {gw_str: gw_data}."""
+    if not os.path.exists(AVAIL_JSON):
+        print("  [AVAIL] availability.json not found — skipping intel penalties")
+        return {}
+    with open(AVAIL_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("gameweeks", {})
+
+
+def load_recommendations():
+    """Load intel_05 recommendations.json → {gw_str: gw_data}."""
+    if not os.path.exists(RECS_JSON):
+        print("  [RECS] recommendations.json not found — captain override disabled")
+        return {}
+    with open(RECS_JSON, encoding="utf-8") as f:
+        data = json.load(f)
+    gws = data.get("gameweeks", {})
+    print(f"  [RECS] recommendations.json: {len(gws)} GWs loaded")
+    return gws
+
+
+CAP_OVERRIDE_THRESH = 0.5  # minimum adj-score advantage for intel_05 override
+
+
+def apply_intel_captain_override(captain_id, xi_pids, pool_by_pid, recs_gws, gw):
+    """
+    If intel_05 recommended a different captain AND that player is in the XI
+    AND their adj score is >= CAP_OVERRIDE_THRESH pts higher, override.
+    Returns (captain_id, source_str).
+    """
+    gw_recs = recs_gws.get(str(gw), {})
+    intel_name = gw_recs.get("decisions", {}).get("captain", {}).get("name")
+    if not intel_name:
+        return captain_id, "ilp"
+
+    # Find recommended player in XI by web_name
+    new_cap_pid = None
+    for pid in xi_pids:
+        p = pool_by_pid.get(pid, {})
+        if p.get("web_name") == intel_name:
+            new_cap_pid = pid
+            break
+
+    if new_cap_pid is None or new_cap_pid == captain_id:
+        return captain_id, "ilp"
+
+    def adj(pid):
+        p = pool_by_pid.get(pid, {})
+        return p.get("pred", 0.0) * CAP_MULT.get(p.get("element_type", 3), 1.0)
+
+    current_adj = adj(captain_id)
+    new_adj     = adj(new_cap_pid)
+
+    if new_adj >= current_adj + CAP_OVERRIDE_THRESH:
+        old_name = pool_by_pid.get(captain_id, {}).get("web_name", str(captain_id))
+        print(f"  [INTEL-CAP] GW{gw} override: {old_name} -> {intel_name} "
+              f"(adj: {current_adj:.1f} -> {new_adj:.1f})")
+        return new_cap_pid, "intel_05"
+
+    return captain_id, "ilp"
+
+
+def apply_availability_penalties(pool, avail_gws, gw):
+    """
+    Apply AVAIL_MULT to pool predictions using intel_03 tier data (player_id keyed).
+    Returns (pool, n_penalized).
+    """
+    gw_str = str(gw)
+    if gw_str not in avail_gws:
+        return pool, 0
+
+    gw_avail    = avail_gws[gw_str].get("players", {})
+    n_penalized = 0
+    out_names   = []
+    dbt_names   = []
+
+    for p in pool:
+        pid_str = str(p["player_id"])
+        if pid_str not in gw_avail:
+            continue
+        tier = gw_avail[pid_str].get("availability_tier", "available")
+        mult = AVAIL_MULT.get(tier, 1.0)
+        if mult < 1.0:
+            p["pred"] = p["pred"] * mult
+            n_penalized += 1
+            if mult == 0.0:
+                out_names.append(p["web_name"])
+            elif mult <= 0.5:
+                dbt_names.append(p["web_name"])
+
+    if n_penalized > 0:
+        def _fmt(lst): return ", ".join(lst[:10]) + (f" +{len(lst)-10}" if len(lst) > 10 else "")
+        print(f"  [AVAIL] GW{gw}: {n_penalized} players penalized")
+        if out_names:
+            print(f"    OUT/SUSP: {_fmt(out_names)}")
+        if dbt_names:
+            print(f"    DOUBTFUL: {_fmt(dbt_names)}")
+
+    return pool, n_penalized
+
+
+# ── Intel 07 — Bench Intelligence ─────────────────────────────────────────────
+
+def _score_bench_candidates(pool, gw):
+    """
+    Score all affordable players as bench candidates.
+    Returns dict with by_position, recommended, all_candidates.
+    Each candidate has fdr_adj and bench_score added.
+    """
+    # GW1: form data is 2024-25 season averages — artificially low, so use looser threshold
+    form3_threshold = 0.5 if gw == 1 else MIN_FORM_LAST3
+
+    candidates = []
+    for p in pool:
+        if p.get("price", 0) > MAX_BENCH_PRICE:
+            continue
+        if p.get("zero_minutes", False):
+            continue
+        if p.get("minutes_reliability", 0) < MIN_MINUTES_REL:
+            continue
+        if p.get("form_last3", 0) < form3_threshold:
+            continue
+
+        fdr     = p.get("fdr", 3.0)
+        fdr_adj = max(0.5, 1.0 - 0.03 * (fdr - 3.0))
+        form3   = p.get("form_last3", 0.0)
+        min_rel = p.get("minutes_reliability", 0.0)
+
+        bench_score = form3 * min_rel * fdr_adj
+
+        candidates.append({
+            **p,
+            "fdr_adj":     fdr_adj,
+            "bench_score": bench_score,
+        })
+
+    candidates.sort(key=lambda x: x["bench_score"], reverse=True)
+
+    by_pos = {"GK": [], "DEF": [], "MID": [], "FWD": []}
+    for c in candidates:
+        cpos = c.get("pos", "MID")
+        if cpos in by_pos:
+            by_pos[cpos].append(c)
+
+    best_gk       = by_pos["GK"][0] if by_pos["GK"] else None
+    outfield      = [c for c in candidates if c.get("pos") != "GK"]
+    best_outfield = outfield[:3]
+
+    return {
+        "by_position":    by_pos,
+        "recommended":    {"GK": best_gk, "outfield": best_outfield},
+        "all_candidates": candidates[:20],
+    }
+
+
+def _find_bb_target_gw(pools_by_gw, bb_min_gw, bb_max_gw):
+    """
+    Find best BB week from a dict of {gw: bench_candidates_result}.
+    Signal: bench candidates fixture quality score.
+    """
+    gw_scores = {}
+    for g, result in pools_by_gw.items():
+        if g < bb_min_gw or g > bb_max_gw:
+            continue
+        rec      = result.get("recommended", {})
+        gk       = rec.get("GK")
+        outfield = rec.get("outfield", [])
+        bench_score = (gk["bench_score"] if gk else 0.0) + sum(p["bench_score"] for p in outfield[:3])
+        gw_scores[g] = bench_score
+
+    if not gw_scores:
+        return {
+            "target_gw":    bb_min_gw,
+            "target_score": 0.0,
+            "gw_scores":    {},
+            "reasoning":    "No valid GWs found",
+        }
+
+    target_gw = max(gw_scores, key=gw_scores.get)
+    return {
+        "target_gw":    target_gw,
+        "target_score": gw_scores[target_gw],
+        "gw_scores":    gw_scores,
+        "reasoning":    (
+            f"GW{target_gw} has best bench score "
+            f"{gw_scores[target_gw]:.2f}"
+        ),
+    }
+
+def get_bench_intel(pool, gw, chips_used, bb1_used, bb2_used,
+                    fdr_lookup=None, home_lookup=None):
+    """
+    Intel 07: bench intelligence and BB targeting. Called each GW.
+
+    Returns: {
+        "bench_candidates":  {player_id: bonus_pts},
+        "bb_target_gw":      int or None,
+        "bb_set":            1 or 2,
+        "recommended_bench": [player dicts],
+        "is_bb_target_gw":   bool
+    }
+    """
+    use_set1 = (gw <= 19)
+    bb_used  = bb1_used if use_set1 else bb2_used
+
+    if bb_used:
+        return {
+            "bench_candidates":  {},
+            "bb_target_gw":      None,
+            "bb_set":            1 if use_set1 else 2,
+            "recommended_bench": [],
+            "is_bb_target_gw":   False,
+        }
+
+    current_result = _score_bench_candidates(pool, gw)
+
+    bb_max = BB_MAX_GW_SET1 if use_set1 else BB_MAX_GW_SET2
+    bb_min = max(gw, BB_MIN_GW)
+
+    lookahead_pools = {}
+    for future_gw in range(bb_min, min(bb_max + 1, gw + LOOKAHEAD_GWS + 1)):
+        if fdr_lookup and home_lookup:
+            future_pool = []
+            for p in pool:
+                team = p.get("team")
+                fp = dict(p)
+                fp["fdr"]      = float(fdr_lookup.get((team, future_gw), 3.0))
+                fp["was_home"] = float(home_lookup.get((team, future_gw), 0))
+                future_pool.append(fp)
+        else:
+            future_pool = pool
+        lookahead_pools[future_gw] = _score_bench_candidates(future_pool, future_gw)
+
+    bb_target = _find_bb_target_gw(lookahead_pools, bb_min, bb_max)
+    target_gw = bb_target["target_gw"]
+    is_target = (gw == target_gw)
+
+    bonus = BENCH_BONUS_BB_GW if is_target else BENCH_BONUS_NORMAL
+
+    bench_candidates  = {}
+    recommended_bench = []
+
+    rec = current_result["recommended"]
+    if rec.get("GK"):
+        pid = rec["GK"]["player_id"]
+        bench_candidates[pid] = bonus
+        recommended_bench.append(rec["GK"])
+
+    for p in rec.get("outfield", []):
+        pid = p["player_id"]
+        bench_candidates[pid] = bonus
+        recommended_bench.append(p)
+
+    print(f"  [BENCH-INTEL] GW{gw} | BB target: GW{target_gw} "
+          f"(score: {bb_target['target_score']:.2f}) | "
+          f"is_target: {is_target} | bonus: {bonus:.1f}pts")
+    print(f"  [BENCH-INTEL] Lookahead scores: " +
+          ", ".join(f"GW{g}:{s:.2f}"
+                    for g, s in sorted(bb_target["gw_scores"].items())))
+    if recommended_bench:
+        print(f"  [BENCH-INTEL] Recommended bench: " +
+              ", ".join(
+                  f"{p['web_name']}(£{p['price']:.1f}m,"
+                  f"f3={p['form_last3']:.1f})"
+                  for p in recommended_bench
+              ))
+
+    return {
+        "bench_candidates":  bench_candidates,
+        "bb_target_gw":      target_gw,
+        "bb_set":            1 if use_set1 else 2,
+        "recommended_bench": recommended_bench,
+        "is_bb_target_gw":   is_target,
+    }
+
+
+# ── Intel 08: Team Form Lookups ───────────────────────────────────────────────
+
+def build_hist_team_form_lookup():
+    """
+    Load team_form_vaastav.csv and build lookup for historical training rows.
+    Returns {(team_name_lower, season, gw): {team_goals_last3, team_cs_rate_last3}}
+    Values are already per-game averages in the vaastav file.
+    """
+    path = os.path.join(DATA_DIR, "raw", "vaastav", "team_form_vaastav.csv")
+    if not os.path.exists(path):
+        print("  [WARN] team_form_vaastav.csv not found — team form zeros in hist rows")
+        return {}
+
+    df = pd.read_csv(path)
+    lookup = {}
+
+    goals_col  = "goals_scored_last3" if "goals_scored_last3" in df.columns else "goals_scored_last5"
+    cs_col     = "clean_sheet_rate_last3" if "clean_sheet_rate_last3" in df.columns else "clean_sheet_rate_last5"
+    team_col   = "team"   if "team"    in df.columns else "team_name"
+    season_col = "season" if "season"  in df.columns else None
+    gw_col     = "GW"     if "GW"      in df.columns else "gameweek"
+
+    for _, row in df.iterrows():
+        team   = str(row.get(team_col, "")).lower().strip()
+        season = str(row.get(season_col, "")) if season_col else "unknown"
+        gw     = int(_safe_float(row.get(gw_col, 0)))
+        goals  = float(row.get(goals_col, 1.5) or 1.5)
+        cs     = float(row.get(cs_col,    0.3) or 0.3)
+
+        # Safety: if value looks like a raw sum rather than per-game avg, normalise
+        if goals_col.endswith("last3") and goals > 5:
+            goals = goals / 3.0
+        elif goals_col.endswith("last5") and goals > 8:
+            goals = goals / 5.0
+
+        lookup[(team, season, gw)] = {
+            "team_goals_last3":  goals,
+            "team_cs_rate_last3": cs,
+        }
+
+    print(f"  [HIST TEAM FORM] Loaded {len(lookup)} team-GW entries from vaastav")
+    return lookup
+
+
+def build_team_form_lookup(hist_lookup, players_df, completed_gw):
+    """
+    Build {(team_id, gw): {team_goals_last3, team_cs_rate_last3}}
+    from 2025-26 actuals up to completed_gw.
+    team_goals_last3  = mean goals scored by team per GW over last 3 GWs
+    team_cs_rate_last3 = fraction of last 3 GWs where team kept a clean sheet
+    """
+    team_players = defaultdict(list)
+    for r in players_df.itertuples(index=False):
+        team_players[int(r.team)].append(int(r.id))
+
+    lookup = {}
+
+    for team_id, player_ids in team_players.items():
+        team_gw_stats = {}
+
+        for g in range(1, completed_gw + 1):
+            team_goals = 0
+            had_cs     = False
+            any_data   = False
+
+            for pid in player_ids:
+                if pid in hist_lookup and g in hist_lookup[pid]:
+                    s = hist_lookup[pid][g]
+                    if s["minutes"] > 0:
+                        team_goals += s["goals_scored"]
+                        if s["clean_sheets"] > 0:
+                            had_cs = True
+                        any_data = True
+
+            if any_data:
+                team_gw_stats[g] = {"goals": team_goals, "had_cs": had_cs}
+
+        sorted_gws = sorted(team_gw_stats.keys())
+
+        for target_gw in range(2, completed_gw + 2):
+            prior = [g for g in sorted_gws if g < target_gw][-3:]
+
+            if not prior:
+                lookup[(team_id, target_gw)] = {
+                    "team_goals_last3":  0.0,
+                    "team_cs_rate_last3": 0.0,
+                }
+                continue
+
+            lookup[(team_id, target_gw)] = {
+                "team_goals_last3":  float(np.mean([team_gw_stats[g]["goals"]          for g in prior])),
+                "team_cs_rate_last3": float(np.mean([1.0 if team_gw_stats[g]["had_cs"] else 0.0
+                                                     for g in prior])),
+            }
+
+    return lookup
+
+
+
+def build_bonus_lookup(hist_lookup, completed_gw):
+    """
+    Compute per-player bonus consistency from GW1..completed_gw actuals.
+    bonus_rate_last5: fraction of last 5 played GWs where player earned bonus > 0
+    bonus_avg_last5:  average bonus pts per game over last 5 played GWs
+    Returns {player_id: {bonus_rate_last5, bonus_avg_last5}}
+    """
+    lookup = {}
+    for pid, gw_data in hist_lookup.items():
+        played_gws = [
+            (g, d) for g, d in gw_data.items()
+            if g <= completed_gw and d.get("minutes", 0) > 0
+        ]
+        played_gws.sort(key=lambda x: x[0])
+        last5 = played_gws[-5:]
+        if not last5:
+            lookup[pid] = {"bonus_rate_last5": 0.0, "bonus_avg_last5": 0.0}
+            continue
+        bonus_vals = [d.get("bonus", 0) for _, d in last5]
+        bonus_rate = sum(1 for b in bonus_vals if b > 0) / len(bonus_vals)
+        bonus_avg  = sum(bonus_vals) / len(bonus_vals)
+        lookup[pid] = {
+            "bonus_rate_last5": round(bonus_rate, 3),
+            "bonus_avg_last5":  round(bonus_avg, 3),
+        }
+    return lookup
+
+def build_opponent_lookup(fixtures_csv_path, team_form_lookup):
+    """
+    Build {(team_id, gw): {opp_goals_last3, opp_cs_rate_last3}}
+    by joining each team's opponent's form for that GW.
+    """
+    df = pd.read_csv(fixtures_csv_path)
+    df = df.dropna(subset=["gameweek"])
+    df["gameweek"] = df["gameweek"].astype(int)
+
+    opp_lookup = {}
+    for _, row in df.iterrows():
+        gw = int(row["gameweek"])
+        th = int(row["team_h"])
+        ta = int(row["team_a"])
+
+        away_form = team_form_lookup.get((ta, gw), {})
+        home_form = team_form_lookup.get((th, gw), {})
+
+        opp_lookup[(th, gw)] = {
+            "opp_goals_last3":  away_form.get("team_goals_last3",  0.0),
+            "opp_cs_rate_last3": away_form.get("team_cs_rate_last3", 0.0),
+        }
+        opp_lookup[(ta, gw)] = {
+            "opp_goals_last3":  home_form.get("team_goals_last3",  0.0),
+            "opp_cs_rate_last3": home_form.get("team_cs_rate_last3", 0.0),
+        }
+
+    return opp_lookup
+
+
+def build_gw1_team_form(players_df):
+    """
+    For GW1, use 2024-25 season averages from team_form.csv as team form prior.
+    Returns {team_id: {team_goals_last3, team_cs_rate_last3}}
+    """
+    team_form_path = os.path.join(DATA_DIR, "processed", "team_form.csv")
+    if not os.path.exists(team_form_path):
+        print("  [WARN] team_form.csv not found — using league-average GW1 team form")
+        return {}
+
+    df = pd.read_csv(team_form_path)
+    if "season" in df.columns:
+        df = df[df["season"] == "2024-25"]
+    if df.empty:
+        return {}
+
+    # Build team name -> FPL team_id mapping via teams_raw.csv
+    teams_raw_path = os.path.join(DATA_DIR, "raw", "fpl_api", "teams_raw.csv")
+    team_name_to_id = {}
+    if os.path.exists(teams_raw_path):
+        tdf = pd.read_csv(teams_raw_path)
+        for r in tdf.itertuples(index=False):
+            name = getattr(r, "name", None)
+            tid  = getattr(r, "id",   None)
+            if name is not None and tid is not None:
+                team_name_to_id[str(name).lower().strip()] = int(tid)
+
+    goals_col = "goals_scored_last5" if "goals_scored_last5" in df.columns else None
+    cs_col    = "clean_sheet_rate_last5" if "clean_sheet_rate_last5" in df.columns else None
+    if not goals_col or not cs_col:
+        return {}
+
+    result = {}
+    team_col = "team" if "team" in df.columns else "team_name"
+    for team_name, grp in df.groupby(team_col):
+        goals   = float(grp[goals_col].mean())
+        cs_rate = float(grp[cs_col].mean())
+        team_id = team_name_to_id.get(str(team_name).lower().strip())
+        if team_id:
+            result[team_id] = {
+                "team_goals_last3":  goals,   # already per-game avg
+                "team_cs_rate_last3": cs_rate,
+            }
+
+    print(f"  [GW1 TEAM FORM] Loaded 2024-25 averages for {len(result)} teams")
+    return result
+
+
+# ── GW1 Player Pool ───────────────────────────────────────────────────────────
+
+def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
+    """Build feature vectors for GW1 from 2024-25 training data averages."""
+    # Position averages from 2024-25 (fallback)
+    pos_avgs = {}
+    for pos, df in train_dfs.items():
+        df25 = df[df["season"] == "2024-25"] if "season" in df.columns else df
+        if df25.empty:
+            df25 = df
+        avail = [c for c in FEAT_COLS if c in df25.columns]
+        pos_avgs[pos] = df25[avail].mean().to_dict() if avail else {}
+
+    # Name index from 2024-25: norm_name -> feature dict
+    name_idx = {}
+    for pos, df in train_dfs.items():
+        df25 = df[df["season"] == "2024-25"] if "season" in df.columns else df
+        if df25.empty or "name" not in df25.columns:
+            continue
+        feat_avail = [c for c in FEAT_COLS if c in df25.columns]
+        for nm, grp in df25.groupby("name"):
+            name_idx[_norm(nm)] = grp[feat_avail].mean().to_dict()
+
+    pool = []
+    stats = {"exact": 0, "partial": 0, "pos_avg": 0}
+    for r in players_df.itertuples(index=False):
+        pid   = int(r.id)
+        pos   = str(r.position)
+        etype = int(r.element_type)
+        team  = int(r.team)
+        web   = str(r.web_name)
+        price = float(r.price)
+        sbp   = float(r.selected_by_percent) if hasattr(r, "selected_by_percent") else 0.0
+        fn    = str(getattr(r, "first_name", ""))
+        sn    = str(getattr(r, "second_name", ""))
+
+        feats = None
+        for candidate in [web, sn, fn + " " + sn, fn]:
+            nc = _norm(candidate)
+            if nc and nc in name_idx:
+                feats = dict(name_idx[nc])
+                stats["exact"] += 1
+                break
+
+        if feats is None:
+            nw = _norm(web)
+            for tn, tf in name_idx.items():
+                if nw and len(nw) >= 4 and (nw in tn or tn in nw):
+                    feats = dict(tf)
+                    stats["partial"] += 1
+                    break
+
+        if feats is None:
+            feats = dict(pos_avgs.get(pos, {}))
+            stats["pos_avg"] += 1
+
+        for f in FEAT_COLS:
+            feats.setdefault(f, 0.0)
+
+        feats["value"]    = price
+        feats["was_home"] = float(home_lookup.get((team, 1), 0))
+        feats["fdr"]      = float(fdr_lookup.get((team, 1), 3.0))
+
+        pool.append({
+            "player_id": pid, "web_name": web, "pos": pos,
+            "element_type": etype, "team": team,
+            "price": price, "sbp": sbp, "zero_minutes": False,
+            **{f: feats.get(f, 0.0) for f in FEAT_COLS}
+        })
+
+    print(f"  [GW1 pool] {len(pool)} players | "
+          f"exact={stats['exact']} partial={stats['partial']} pos_avg={stats['pos_avg']}")
+
+    # Attach team form features (GW1: use 2024-25 historical averages)
+    gw1_team_form = build_gw1_team_form(players_df) if TEAM_FEATURES else {}
+    for p in pool:
+        team_id = p["team"]
+        tf = gw1_team_form.get(team_id, {})
+        p["team_goals_last3"]  = tf.get("team_goals_last3",  1.5)
+        p["team_cs_rate_last3"] = tf.get("team_cs_rate_last3", 0.3)
+        p["opp_goals_last3"]   = 1.5   # GW1: no opponent data yet, league average
+        p["opp_cs_rate_last3"] = 0.3
+
+    return pool
+
+
+# ── GW2+ Pool (rolling features from actuals) ─────────────────────────────────
+
+def build_rolling_pool(players_df, hist_lookup, fdr_lookup, home_lookup,
+                       completed_gw, team_form_lookup=None, opp_lookup=None):
+    """Build feature vectors for predicting completed_gw+1 from actuals 1..completed_gw."""
+    next_gw = completed_gw + 1
+    pool = []
+    for r in players_df.itertuples(index=False):
+        pid   = int(r.id)
+        pos   = str(r.position)
+        etype = int(r.element_type)
+        team  = int(r.team)
+        web   = str(r.web_name)
+        price_static = float(r.price)
+        sbp   = float(r.selected_by_percent) if hasattr(r, "selected_by_percent") else 0.0
+
+        ph = hist_lookup.get(pid, {})
+
+        # Latest price
+        latest_price = price_static
+        for g in range(completed_gw, 0, -1):
+            if g in ph:
+                latest_price = ph[g]["value"]
+                break
+
+        pts_ser, min_ser, g_ser, a_ser, cs_ser, sv_ser = [], [], [], [], [], []
+        total_mins = 0
+        for g in range(1, completed_gw + 1):
+            if g not in ph:
+                continue
+            h = ph[g]
+            pts_ser.append(h["total_points"])
+            min_ser.append(h["minutes"])
+            g_ser.append(h["goals_scored"])
+            a_ser.append(h["assists"])
+            cs_ser.append(h["clean_sheets"])
+            sv_ser.append(h["saves"])
+            total_mins += h["minutes"]
+
+        n = len(pts_ser)
+        zero_mins = (total_mins == 0 and n > 0)
+
+        # Per-game stats: use played GWs only (avoids bench-GW dilution)
+        played = [(pts_ser[i], g_ser[i], a_ser[i], cs_ser[i], sv_ser[i])
+                  for i in range(len(pts_ser)) if min_ser[i] > 0]
+        pl_pts = [x[0] for x in played]
+        pl_g   = [x[1] for x in played]
+        pl_a   = [x[2] for x in played]
+        pl_cs  = [x[3] for x in played]
+        pl_sv  = [x[4] for x in played]
+
+        tf  = (team_form_lookup or {}).get((team, next_gw), {}) if TEAM_FEATURES else {}
+        opp = (opp_lookup       or {}).get((team, next_gw), {}) if OPP_FEATURES  else {}
+
+        pool.append({
+            "player_id": pid, "web_name": web, "pos": pos,
+            "element_type": etype, "team": team,
+            "price": latest_price, "sbp": sbp, "zero_minutes": zero_mins,
+            "form_last3":          float(np.mean(pts_ser[-3:])) if pts_ser else 0.0,
+            "form_last5":          float(np.mean(pts_ser[-5:])) if pts_ser else 0.0,
+            "avg_points_per_game": float(np.mean(pl_pts)) if pl_pts else 0.0,
+            "minutes_reliability": total_mins / (completed_gw * 90.0),
+            "goals_per_game":      float(np.mean(pl_g))  if pl_g  else 0.0,
+            "assists_per_game":    float(np.mean(pl_a))  if pl_a  else 0.0,
+            "clean_sheet_rate":    float(np.mean(pl_cs)) if pl_cs else 0.0,
+            "saves_per_game":      float(np.mean(pl_sv)) if pl_sv else 0.0,
+            "value":               latest_price,
+            "was_home":            float(home_lookup.get((team, next_gw), 0)),
+            "fdr":                 float(fdr_lookup.get((team, next_gw), 3.0)),
+            "team_goals_last3":    tf.get("team_goals_last3",   1.5),
+            "team_cs_rate_last3":  tf.get("team_cs_rate_last3", 0.3),
+            "opp_goals_last3":     opp.get("opp_goals_last3",   1.5),
+            "opp_cs_rate_last3":   opp.get("opp_cs_rate_last3", 0.3),
+        })
+    return pool
+
+
+# ── Build retrain rows from accumulated 2025-26 actuals ───────────────────────
+
+def build_retrain_rows(players_df, hist_lookup, fdr_lookup, home_lookup,
+                       up_to_gw, team_form_lookup=None, opp_lookup=None):
+    """Rows for GW 2..up_to_gw: features from prior GWs, target = actual points."""
+    rows_by_pos = defaultdict(list)
+    for r in players_df.itertuples(index=False):
+        pid  = int(r.id)
+        pos  = str(r.position)
+        team = int(r.team)
+        price_static = float(r.price)
+        ph   = hist_lookup.get(pid, {})
+        if not ph:
+            continue
+
+        for target_gw in range(2, up_to_gw + 1):
+            if target_gw not in ph:
+                continue
+            target_pts = ph[target_gw]["total_points"]
+            completed  = target_gw - 1
+
+            pts_ser, min_ser, g_ser, a_ser, cs_ser, sv_ser = [], [], [], [], [], []
+            total_mins = 0
+            for g in range(1, completed + 1):
+                if g not in ph:
+                    continue
+                h = ph[g]
+                pts_ser.append(h["total_points"])
+                min_ser.append(h["minutes"])
+                g_ser.append(h["goals_scored"])
+                a_ser.append(h["assists"])
+                cs_ser.append(h["clean_sheets"])
+                sv_ser.append(h["saves"])
+                total_mins += h["minutes"]
+
+            latest_price = price_static
+            for g in range(completed, 0, -1):
+                if g in ph:
+                    latest_price = ph[g]["value"]
+                    break
+
+            # Per-game stats: played GWs only (avoids bench-GW dilution)
+            played = [(pts_ser[i], g_ser[i], a_ser[i], cs_ser[i], sv_ser[i])
+                      for i in range(len(pts_ser)) if min_ser[i] > 0]
+            pl_pts = [x[0] for x in played]
+            pl_g   = [x[1] for x in played]
+            pl_a   = [x[2] for x in played]
+            pl_cs  = [x[3] for x in played]
+            pl_sv  = [x[4] for x in played]
+
+            tf  = (team_form_lookup or {}).get((team, target_gw), {}) if TEAM_FEATURES else {}
+            opp = (opp_lookup       or {}).get((team, target_gw), {}) if OPP_FEATURES  else {}
+
+            rows_by_pos[pos].append({
+                "form_last3":          float(np.mean(pts_ser[-3:])) if pts_ser else 0.0,
+                "form_last5":          float(np.mean(pts_ser[-5:])) if pts_ser else 0.0,
+                "avg_points_per_game": float(np.mean(pl_pts)) if pl_pts else 0.0,
+                "minutes_reliability": total_mins / (completed * 90.0) if completed else 0.0,
+                "goals_per_game":      float(np.mean(pl_g))  if pl_g  else 0.0,
+                "assists_per_game":    float(np.mean(pl_a))  if pl_a  else 0.0,
+                "clean_sheet_rate":    float(np.mean(pl_cs)) if pl_cs else 0.0,
+                "saves_per_game":      float(np.mean(pl_sv)) if pl_sv else 0.0,
+                "value":               latest_price,
+                "was_home":            float(home_lookup.get((team, target_gw), 0)),
+                "fdr":                 float(fdr_lookup.get((team, target_gw), 3.0)),
+                "team_goals_last3":    tf.get("team_goals_last3",   1.5),
+                "team_cs_rate_last3":  tf.get("team_cs_rate_last3", 0.3),
+                "opp_goals_last3":     opp.get("opp_goals_last3",   1.5),
+                "opp_cs_rate_last3":   opp.get("opp_cs_rate_last3", 0.3),
+                "total_points":        target_pts,
+            })
+    return rows_by_pos
+
+
+# ── Model Training ────────────────────────────────────────────────────────────
+
+def train_models(rows_by_pos, weights_by_pos=None):
+    """Train XGBoost or LightGBM per position depending on MODEL_TYPE."""
+    models = {}
+    for pos in ["GK", "DEF", "MID", "FWD"]:
+        rows = rows_by_pos.get(pos, [])
+        if len(rows) < 5:
+            models[pos] = None
+            continue
+        df = pd.DataFrame(rows)
+        X  = df[FEAT_COLS].fillna(0.0).values
+        y  = df["total_points"].values
+        w  = weights_by_pos.get(pos) if weights_by_pos else None
+        if MODEL_TYPE == "lgbm":
+            m = lgb.LGBMRegressor(**LGBM_PARAMS)
+        else:
+            m = xgb.XGBRegressor(**XGB_PARAMS)
+        m.fit(X, y, sample_weight=w)
+        models[pos] = m
+        print(f"    {pos}: {len(rows)} rows")
+    return models
+
+
+def _safe_float(val):
+    """Convert a value that may be a Series (duplicate columns) to float."""
+    if hasattr(val, "iloc"):
+        val = val.iloc[0]
+    try:
+        return float(val)
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def build_hist_rows(train_dfs, hist_team_form=None):
+    """Extract all 6-season historical rows in FEAT_COLS format for retraining."""
+    rows_by_pos = defaultdict(list)
+    for pos, df in train_dfs.items():
+        if df.empty:
+            continue
+        df = df.loc[:, ~df.columns.duplicated()]
+        avail = [c for c in FEAT_COLS if c in df.columns]
+        if "total_points" not in df.columns or not avail:
+            continue
+        for _, row in df.iterrows():
+            d = {c: _safe_float(row[c]) if c in row.index else 0.0 for c in FEAT_COLS}
+            # Attach historical team + opponent form (keyed by team_name_lower, season, gw)
+            if hist_team_form and TEAM_FEATURES:
+                team   = str(row.get("team",          "")).lower().strip()
+                opp    = str(row.get("opponent_team", "")).lower().strip()
+                season = str(row.get("season", ""))
+                gw     = int(_safe_float(row.get("GW", 0)))
+                tf     = hist_team_form.get((team, season, gw), {})
+                opp_tf = hist_team_form.get((opp,  season, gw), {})
+                d["team_goals_last3"]   = tf.get("team_goals_last3",   1.5)
+                d["team_cs_rate_last3"] = tf.get("team_cs_rate_last3", 0.3)
+                d["opp_goals_last3"]    = opp_tf.get("team_goals_last3",   1.5)
+                d["opp_cs_rate_last3"]  = opp_tf.get("team_cs_rate_last3", 0.3)
+            else:
+                d["team_goals_last3"]   = 1.5
+                d["team_cs_rate_last3"] = 0.3
+                d["opp_goals_last3"]    = 1.5
+                d["opp_cs_rate_last3"]  = 0.3
+            d["total_points"] = _safe_float(row["total_points"])
+            rows_by_pos[pos].append(d)
+    return rows_by_pos
+
+
+def train_gw1_models(train_dfs, hist_team_form=None):
+    rows_by_pos = build_hist_rows(train_dfs, hist_team_form)
+    print("  Training GW1 models on all 6-season historical data:")
+    return train_models(rows_by_pos)
+
+
+# ── Prediction ────────────────────────────────────────────────────────────────
+
+def predict_pool(pool, models, gw, current_squad_ids,
+                 gw1_preds=None, loyalty_override=None, sold_last_gw=None):
+    """
+    Predict points for all players.
+    gw1_preds: stored after GW1 — blended into GW2-8 predictions for stability.
+    loyalty_override: overrides loyalty_bonus(gw) (used for forced WC at GW17).
+    sold_last_gw: reserved for future sell-buyback penalty (not active).
+    """
+    bonus = loyalty_override if loyalty_override is not None else loyalty_bonus(gw)
+    completed_gws = gw - 1
+    season_weight = min(1.0, completed_gws / BLEND_GWS) if gw1_preds else 1.0
+
+    for p in pool:
+        pos   = p["pos"]
+        pid   = p["player_id"]
+        model = models.get(pos)
+        feats = np.array([[p.get(f, 0.0) for f in FEAT_COLS]], dtype=float)
+
+        if model is not None:
+            pred = float(model.predict(feats)[0])
+        else:
+            pred = p.get("avg_points_per_game", 2.0)
+
+        # FDR adjustment — GK/DEF use position-specific multiplier
+        fdr      = p.get("fdr", 3.0)
+        pos      = p.get("pos", "MID")
+        fdr_mult = FDR_MULT_DEF if pos in ("GK", "DEF") else FDR_MULT
+        pred *= max(0.5, 1.0 - fdr_mult * (fdr - 3.0))
+
+        # Zero-minutes filter
+        if p.get("zero_minutes", False):
+            pred = 0.0
+
+        # GW1: add ownership signal on top of model prediction
+        if gw == 1:
+            pred += p.get("sbp", 0.0) * OWN_BOOST_GW1
+
+        # GW2-8: blend retrained pred with GW1 pred for early-season stability
+        if gw1_preds and 2 <= gw <= 8 and pid in gw1_preds:
+            pred = season_weight * pred + (1.0 - season_weight) * gw1_preds[pid]
+
+        # Per-player prediction ceiling
+        pred = min(max(0.0, pred), PRED_CAP)
+
+        # Loyalty bonus for existing squad members
+        if pid in current_squad_ids:
+            pred += bonus
+
+        p["pred"] = pred
+
+    # Keep predictions calibrated — if top-11 sum exceeds cap, scale all down
+    top11_sum = sum(sorted([p["pred"] for p in pool], reverse=True)[:11])
+    if top11_sum > XI_PRED_CAP:
+        scale = XI_PRED_CAP / top11_sum
+        for p in pool:
+            p["pred"] *= scale
+
+    return pool
+
+
+# ── Captain Selection ─────────────────────────────────────────────────────────
+
+def select_captain(xi_pids, pool_by_pid, cap_streak=0, last_cap_pid=None,
+                   captain_history=None, gw=1, current_squad_ids=None,
+                   last_cap_actual=None):
+    """
+    Select captain by position-adjusted prediction with form gate, streak
+    breaker, home advantage tiebreak, and minutes-reliability filter.
+    GW1: no form data — use raw adj score only.
+    """
+    if captain_history is None:
+        captain_history = []
+    if current_squad_ids is None:
+        current_squad_ids = set()
+    use_form = (gw >= CAP_FORM_GW_MIN)
+
+    candidates = []
+    for pid in xi_pids:
+        p = pool_by_pid.get(pid, {})
+        if p.get("pos") == "GK":
+            continue
+        if p.get("minutes_reliability", 1.0) < CAP_MIN_RELIABILITY:
+            continue
+
+        raw_pred = p.get("pred", 0.0)
+        adj      = raw_pred * CAP_MULT.get(p.get("element_type", 3), 1.0)
+        form3    = p.get("form_last3", 0.0)
+        fdr      = p.get("fdr", 3.0)
+        was_home = p.get("was_home", 0)
+
+        # Extra FDR penalty for captaincy — hard fixtures count double here
+        adj *= max(0.5, 1.0 - CAP_FDR_MULT * (fdr - 3.0))
+
+        if use_form:
+            # Form gate — penalise out-of-form players
+            if form3 < CAP_FORM_GATE:
+                adj *= CAP_FORM_PENALTY
+            # Streak breaker — penalise repeated captain if form has dropped
+            if (cap_streak >= CAP_STREAK_LIMIT and
+                    pid == last_cap_pid and
+                    form3 < CAP_STREAK_FORM):
+                adj *= CAP_STREAK_MULT
+            # Blank rotation — penalise if this player blanked as captain last GW
+            if (pid == last_cap_pid and
+                    last_cap_actual is not None and
+                    last_cap_actual <= CAP_BLANK_THRESH):
+                adj *= CAP_BLANK_PENALTY
+                print(f"  [CAP] GW{gw} blank penalty on {p.get('web_name',str(pid))} "
+                      f"(capped last GW, scored {last_cap_actual}pts)")
+
+        candidates.append({
+            "adj": adj, "pid": pid, "raw": raw_pred,
+            "form3": form3, "was_home": was_home,
+            "name": p.get("web_name", str(pid)),
+            "pos":  p.get("pos", "?"),
+        })
+
+    if not candidates:
+        return last_cap_pid
+
+    candidates.sort(key=lambda x: x["adj"], reverse=True)
+
+    # Change 3: home advantage tiebreak — if top is away and 2nd is home
+    # and within CAP_HOME_MARGIN pts, swap
+    if (len(candidates) >= 2 and
+            candidates[0]["was_home"] == 0 and
+            candidates[1]["was_home"] == 1 and
+            (candidates[0]["adj"] - candidates[1]["adj"]) <= CAP_HOME_MARGIN):
+        candidates[0], candidates[1] = candidates[1], candidates[0]
+
+    chosen = candidates[0]
+
+    # Change 5: print top 3 candidates
+    print(f"  [CAP] GW{gw} candidates:")
+    for i, c in enumerate(candidates[:3]):
+        tag = "  <- SELECTED" if i == 0 else ""
+        print(f"    {i+1}. {c['name']} ({c['pos']}) "
+              f"raw:{c['raw']:.1f} adj:{c['adj']:.1f} "
+              f"form3:{c['form3']:.1f} home:{c['was_home']}{tag}")
+
+    streak_now = cap_streak + 1 if chosen["pid"] == last_cap_pid else 1
+    print(f"  [CAP] GW{gw} -> {chosen['name']} selected "
+          f"(streak: {streak_now} consecutive)")
+
+    return chosen["pid"]
+
+
+# ── ILP Optimizer ─────────────────────────────────────────────────────────────
+
+# Bonus consistency constants
+BONUS_RATE_WEIGHT = 0.15   # how much bonus_rate affects prediction
+BONUS_AVG_WEIGHT  = 0.10   # how much bonus_avg affects prediction
+BONUS_MIN_GW      = 5      # only apply from GW5+ (need enough data)
+
+
+def apply_bonus_adjustment(pool, bonus_lookup, gw):
+    """
+    Post-prediction adjustment based on bonus consistency.
+    pred *= (1.0 + BONUS_RATE_WEIGHT * bonus_rate_last5)
+    pred += BONUS_AVG_WEIGHT * bonus_avg_last5
+    Only applied from GW5+. Only outfield players.
+    """
+    if gw < BONUS_MIN_GW:
+        return pool, 0
+    n_adjusted = 0
+    for p in pool:
+        pid = p["player_id"]
+        if p.get("pos") == "GK":
+            continue
+        if p.get("zero_minutes", False):
+            continue
+        bl = bonus_lookup.get(pid, {})
+        bonus_rate = bl.get("bonus_rate_last5", 0.0)
+        bonus_avg  = bl.get("bonus_avg_last5",  0.0)
+        if bonus_rate == 0.0 and bonus_avg == 0.0:
+            continue
+        old_pred = p["pred"]
+        p["pred"] = old_pred * (1.0 + BONUS_RATE_WEIGHT * bonus_rate)                     + BONUS_AVG_WEIGHT * bonus_avg
+        if p["pred"] != old_pred:
+            n_adjusted += 1
+    return pool, n_adjusted
+
+
+def run_ilp(pool, current_squad_ids, available_budget, free_transfers,
+            is_wildcard=False, is_freehit=False, gw=1):
+    players = [p for p in pool if p.get("price", 0) > 0]
+    n   = len(players)
+    idx = list(range(n))
+
+    pred  = [p["pred"]         for p in players]
+    price = [p["price"]        for p in players]
+    pos   = [p["element_type"] for p in players]
+    team  = [p["team"]         for p in players]
+    pid   = [p["player_id"]    for p in players]
+    in_sq = [1 if p["player_id"] in current_squad_ids else 0 for p in players]
+
+    no_transfers = (is_wildcard or is_freehit or gw == 1)
+
+    for attempt in range(5):
+        budget_limit = available_budget + 0.5 * attempt
+        prob = LpProblem(f"fpl_gw{gw}_a{attempt}", LpMaximize)
+
+        x = [LpVariable(f"x{i}", cat=LpBinary) for i in idx]  # squad
+        s = [LpVariable(f"s{i}", cat=LpBinary) for i in idx]  # XI
+
+        if not no_transfers:
+            ti   = [LpVariable(f"ti{i}", cat=LpBinary) for i in idx]
+            to   = [LpVariable(f"to{i}", cat=LpBinary) for i in idx]
+            hits = LpVariable("hits", lowBound=0, cat=LpInteger)
+        else:
+            ti = to = hits = None
+
+        # Objective: maximise XI score minus hit penalties
+        obj = lpSum(pred[i] * s[i] for i in idx)
+        if hits is not None:
+            obj -= 4.0 * hits
+        prob += obj
+
+        # Squad structure
+        prob += lpSum(x) == 15
+        prob += lpSum(x[i] for i in idx if pos[i] == 1) == 2
+        prob += lpSum(x[i] for i in idx if pos[i] == 2) == 5
+        prob += lpSum(x[i] for i in idx if pos[i] == 3) == 5
+        prob += lpSum(x[i] for i in idx if pos[i] == 4) == 3
+
+        # Budget
+        prob += lpSum(price[i] * x[i] for i in idx) <= budget_limit
+
+        # Club limit
+        for cl in set(team):
+            prob += lpSum(x[i] for i in idx if team[i] == cl) <= MAX_CLUB
+
+        # XI structure
+        prob += lpSum(s) == 11
+        prob += lpSum(s[i] for i in idx if pos[i] == 1) == 1
+        prob += lpSum(s[i] for i in idx if pos[i] == 2) >= 3
+        prob += lpSum(s[i] for i in idx if pos[i] == 2) <= 5
+        prob += lpSum(s[i] for i in idx if pos[i] == 3) >= 2
+        prob += lpSum(s[i] for i in idx if pos[i] == 3) <= 5
+        prob += lpSum(s[i] for i in idx if pos[i] == 4) >= 1
+        prob += lpSum(s[i] for i in idx if pos[i] == 4) <= 3
+
+        for i in idx:
+            prob += s[i] <= x[i]
+
+        # Transfer constraints
+        if ti is not None:
+            for i in idx:
+                prob += x[i] == in_sq[i] + ti[i] - to[i]
+            prob += lpSum(ti) == lpSum(to)
+            prob += hits >= lpSum(ti) - free_transfers
+            prob += lpSum(ti) - free_transfers <= MAX_HITS  # max 1 hit
+
+        prob.solve(PULP_CBC_CMD(msg=0))
+
+        if LpStatus[prob.status] == "Optimal":
+            sq_idx  = [i for i in idx if x[i].value() and x[i].value() > 0.5]
+            xi_idx  = [i for i in sq_idx if s[i].value() and s[i].value() > 0.5]
+            sq_pids = [pid[i] for i in sq_idx]
+            xi_pids = [pid[i] for i in xi_idx]
+            bench_pids = [p for p in sq_pids if p not in set(xi_pids)]
+
+            if ti is not None:
+                in_pids  = [pid[i] for i in idx if ti[i].value() and ti[i].value() > 0.5]
+                out_pids = [pid[i] for i in idx if to[i].value() and to[i].value() > 0.5]
+                n_hits   = max(0, int(round(hits.value() or 0)))
+            else:
+                in_pids  = [p for p in sq_pids if p not in current_squad_ids] if gw > 1 else sq_pids
+                out_pids = [p for p in current_squad_ids if p not in set(sq_pids)] if gw > 1 else []
+                n_hits   = 0
+
+            return {
+                "squad": sq_pids, "xi": xi_pids, "bench": bench_pids,
+                "transfers_in": in_pids, "transfers_out": out_pids, "hits": n_hits,
+            }
+
+    print(f"  [WARN] ILP infeasible at GW{gw} after 5 attempts")
+    return None
+
+
+# ── Auto-subs ─────────────────────────────────────────────────────────────────
+
+def apply_auto_subs(xi_pids, bench_pids, pool_by_pid, gw_actuals):
+    xi    = list(xi_pids)
+    bench = list(bench_pids)
+    subs  = []
+
+    def pos(pid):  return pool_by_pid.get(pid, {}).get("pos", "MID")
+    def mins(pid): return gw_actuals.get(pid, {}).get("minutes", 0)
+    def valid(lst):
+        defs = sum(1 for p in lst if pos(p) == "DEF")
+        fwds = sum(1 for p in lst if pos(p) == "FWD")
+        return defs >= 3 and fwds >= 1
+
+    # Order bench: GK last, outfield by pred descending
+    bench_sorted = sorted(bench,
+        key=lambda p: (1 if pos(p) == "GK" else 0,
+                       -pool_by_pid.get(p, {}).get("pred", 0)))
+
+    for i, starter in enumerate(xi):
+        if mins(starter) > 0:
+            continue
+        starter_pos = pos(starter)
+        subbed = False
+
+        # Same position first
+        for sub in bench_sorted[:]:
+            if sub not in bench or pos(sub) != starter_pos or mins(sub) == 0:
+                continue
+            new_xi = list(xi); new_xi[i] = sub
+            if valid(new_xi) or starter_pos == "GK":
+                xi[i] = sub
+                bench.remove(sub); bench_sorted.remove(sub)
+                subs.append([
+                    pool_by_pid.get(starter, {}).get("web_name", str(starter)),
+                    pool_by_pid.get(sub, {}).get("web_name", str(sub))
+                ])
+                subbed = True; break
+
+        if subbed:
+            continue
+
+        # Any outfield
+        for sub in bench_sorted[:]:
+            if sub not in bench or pos(sub) == "GK" or mins(sub) == 0:
+                continue
+            new_xi = list(xi); new_xi[i] = sub
+            if valid(new_xi):
+                xi[i] = sub
+                bench.remove(sub); bench_sorted.remove(sub)
+                subs.append([
+                    pool_by_pid.get(starter, {}).get("web_name", str(starter)),
+                    pool_by_pid.get(sub, {}).get("web_name", str(sub))
+                ])
+                break
+
+    return xi, bench, subs
+
+
+# ── Chip Logic ────────────────────────────────────────────────────────────────
+
+def _best_cap_stats(squad_pool, home_lookup, gw, loyalty_strip=0.0):
+    """
+    Return (best_adj, best_form3, best_home) for the best captain candidate.
+    loyalty_strip: subtract this from pred before computing adj, so loyalty
+    inflation does not cause premature TC/force-chip triggers.
+    """
+    best_adj, best_form3, best_home = 0.0, 0.0, False
+    for p in squad_pool:
+        if p.get("pos") == "GK":
+            continue
+        raw = max(0.0, p.get("pred", 0.0) - loyalty_strip)
+        adj = raw * CAP_MULT.get(p.get("element_type", 3), 1.0)
+        if adj > best_adj:
+            best_adj  = adj
+            best_form3 = p.get("form_last3", 0.0)
+            best_home  = bool(home_lookup.get((p["team"], gw), 0))
+    return best_adj, best_form3, best_home
+
+
+def decide_chip(gw, chips_used, pool, current_squad_ids,
+                dgw_gws, gw_teams, bench_pred_history, home_lookup,
+                bb_target_gw=None):
+    if gw <= CHIP_LOCKOUT:
+        return None
+
+    use_set1 = (gw <= 19)
+    s1 = lambda c: c + "1"
+    chip_name = lambda c: s1(c) if use_set1 else c + "2"
+
+    squad_pool = [p for p in pool if p["player_id"] in current_squad_ids]
+
+    lb = loyalty_bonus(gw)   # loyalty inflation to strip for chip-quality checks
+
+    # Diagnostic: log chip state each GW
+    print(f"  [CHIP-CHECK] GW{gw} | chips_used: {sorted(chips_used)} | dgw: {gw in dgw_gws}")
+
+    # ── Force-use safety net (Fix 3 — with quality gates) ────────────────────
+    if gw == 17 and s1("wc") not in chips_used and use_set1:
+        # WC17 force: loyalty override applied in main loop (Fix 3)
+        return s1("wc")
+
+    if gw == 18 and s1("tc") not in chips_used and use_set1:
+        # Only use TC if captain's form_last3 >= TC_FORM_FORCE, else waste
+        best_adj, best_form3, best_home = _best_cap_stats(squad_pool, home_lookup, gw, lb)
+        if best_form3 >= TC_FORM_FORCE:
+            return s1("tc")
+        print(f"  [CHIP] GW18 TC force skipped — captain form3={best_form3:.1f} < {TC_FORM_FORCE}, wasting TC1")
+        return None
+
+    if gw == 19 and use_set1:
+        for c in ["fh", "tc", "wc"]:   # BB excluded — let it be wasted naturally
+            if s1(c) not in chips_used:
+                if c == "fh":
+                    # Only force FH if GW19 is actually a DGW — never waste it on a normal week
+                    if gw in dgw_gws:
+                        print(f"  [CHIP] GW19 FH1 force-used (DGW detected)")
+                        return s1("fh")
+                    else:
+                        print(f"  [CHIP] GW19 FH1 NOT force-used — GW19 is not a DGW, wasting FH1")
+                        continue
+                elif c == "tc":
+                    best_adj, best_form3, _ = _best_cap_stats(squad_pool, home_lookup, gw, lb)
+                    if best_form3 >= TC_FORM_FORCE:
+                        return s1("tc")
+                    print(f"  [CHIP] GW19 TC force skipped — form3={best_form3:.1f} < {TC_FORM_FORCE}, wasting TC1")
+                    continue
+                else:
+                    return s1(c)  # WC: use without additional checks
+
+    # ── Natural triggers ──────────────────────────────────────────────────────
+
+    # Free Hit: DGW with <6 squad players having DGW fixtures (lockout respected by outer check)
+    fh2_blocked = (not use_set1 and gw < FH2_EARLIEST_GW)
+    if gw in dgw_gws and gw > CHIP_LOCKOUT and not fh2_blocked:
+        fh = chip_name("fh")
+        if fh not in chips_used:
+            dgw_count = sum(1 for p in squad_pool
+                            if gw_teams.get(gw, {}).get(p["team"], 0) >= 2)
+            if dgw_count < 6:
+                print(f"  [CHIP] GW{gw} FH triggered naturally — DGW with only {dgw_count} DGW squad players")
+                return fh
+
+    # Wildcard: 5+ squad members below position average
+    wc = chip_name("wc")
+    if wc not in chips_used:
+        pos_preds = defaultdict(list)
+        for p in pool:
+            pos_preds[p["pos"]].append(p["pred"])
+        pos_mean = {ps: np.mean(vs) for ps, vs in pos_preds.items()}
+        below = sum(1 for p in squad_pool if p["pred"] < pos_mean.get(p["pos"], 0))
+        if below >= WC_THRESH:
+            return wc
+
+    # Triple Captain: loyalty-stripped adj >= TC_THRESH and form gate
+    # Strip loyalty bonus so the threshold compares raw model quality,
+    # matching intel_06's adj_pred (which also excludes loyalty).
+    # No home requirement — a dominant away favourite still warrants TC.
+    tc = chip_name("tc")
+    if tc not in chips_used:
+        if not use_set1 and FORCE_TC2_GW is not None:
+            # Force tc2 on the exact GW specified — ignore threshold/form
+            if gw == FORCE_TC2_GW:
+                return tc
+        elif not use_set1 and gw < TC2_MIN_GW:
+            pass  # delay tc2 until TC2_MIN_GW
+        else:
+            best_adj, best_form3, best_home = _best_cap_stats(squad_pool, home_lookup, gw, lb)
+            if best_adj >= TC_THRESH and best_form3 >= TC_FORM_MIN:
+                return tc
+
+    # Bench Boost: only trigger on Intel 07 target GW
+    bb = chip_name("bb")
+    if bb not in chips_used and bb_target_gw is not None:
+        if gw == bb_target_gw:
+            print(f"  [CHIP] BB triggered on Intel 07 target GW{gw}")
+            return bb
+
+    return None
+
+
+# ── Free Transfer Updates ─────────────────────────────────────────────────────
+
+def next_ft(gw, ft_start, used, is_wc, is_fh):
+    """Compute free transfers for next GW after completing gw."""
+    actual_used = 0 if (is_wc or is_fh or gw == 1) else used
+    remaining   = max(0, ft_start - actual_used)
+    next_gw     = gw + 1
+    if next_gw == 15:
+        return 5              # GW15 always gets 5 FTs flat (banked lost)
+    cap = 5 if next_gw > 15 else 2
+    return min(cap, remaining + 1)
+
+
+# ── Score Computation ─────────────────────────────────────────────────────────
+
+def compute_score(xi_pids, bench_pids, captain_pid, chip, gw_actuals, penalty_pts):
+    cap_mult = 3 if chip in ("tc1", "tc2") else 2
+    total = 0
+    for pid in xi_pids:
+        pts = gw_actuals.get(pid, {}).get("total_points", 0)
+        total += pts * cap_mult if pid == captain_pid else pts
+    if chip in ("bb1", "bb2"):
+        for pid in bench_pids:
+            total += gw_actuals.get(pid, {}).get("total_points", 0)
+    return int(total) - penalty_pts
+
+
+# ── Main Simulation ───────────────────────────────────────────────────────────
+
+def run_simulation():
+    print("=" * 70)
+    print("  FPL Season Simulator — GW1 to GW28")
+    print("=" * 70)
+
+    print("\n[LOAD] Loading data...")
+    hist_lookup                          = load_player_history()
+    players_df                           = load_players_raw()
+    fdr_lookup, home_lookup, dgw_gws, gw_teams = load_fixtures()
+    train_dfs                            = load_training_data()
+    avail_gws                            = load_availability()
+    recs_gws                             = load_recommendations()
+    print(f"  Players: {len(players_df)} | DGW GWs in range: {sorted(g for g in dgw_gws if g <= SIM_END_GW)}")
+    print(f"  Availability data: {len(avail_gws)} GWs loaded")
+
+    print("\n[LOAD] Building historical team form lookup (Intel 08)...")
+    hist_team_form = build_hist_team_form_lookup()
+
+    print("\n[TRAIN] Initial models from all 6-season historical data...")
+    models = train_gw1_models(train_dfs, hist_team_form)
+
+    # Pre-build historical rows once — used as weighted prior in GW2+ retraining
+    hist_rows_for_retrain = build_hist_rows(train_dfs, hist_team_form)
+
+    # Weight for 2025-26 rows relative to historical rows.
+    # Increases each GW so current-season signal dominates progressively.
+    # GW2: 3x, GW10: 11x, GW28: 29x  (formula: 1 + completed_gws)
+    CURRENT_SEASON_BASE_WEIGHT = 1  # historical weight = 1.0 always
+
+    # State
+    current_squad    = set()
+    bank             = 0.0
+    free_transfers   = 1
+    chips_used       = set()
+    pre_fh_squad     = None
+    bank_pre_fh      = 0.0
+    bench_pred_hist  = []
+    # Captain tracking
+    cap_streak       = 0
+    last_cap_pid     = None
+    last_cap_actual  = None   # actual pts scored by last GW's captain
+    captain_history  = []
+    gw1_preds        = None
+    # Intel 08: team form (populated each GW from GW2 onward)
+    team_form_lookup = {}
+    bonus_lookup     = {}   # Intel 09: bonus consistency
+    opp_lookup       = {}
+
+    log = {
+        "generated_at":     datetime.now().isoformat(),
+        "total_actual_pts": 0,
+        "total_predicted_pts": 0,
+        "total_penalties":  0,
+        "chips_used":       [],
+        "learning_curve":   [],
+        "gameweeks":        [],
+    }
+
+    os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
+
+    for gw in range(1, SIM_END_GW + 1):
+        print(f"\n{'-'*70}")
+        print(f"  GW {gw}  |  FT: {free_transfers}  |  Bank: {bank:.1f}m")
+
+        # ── Build pool ──────────────────────────────────────────────────────
+        if gw == 1:
+            pool = build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup)
+        else:
+            # Intel 08: rebuild team form from accumulated actuals
+            team_form_lookup = build_team_form_lookup(hist_lookup, players_df, gw - 1)
+            opp_lookup       = build_opponent_lookup(FIXTURES_CSV, team_form_lookup)
+            attacking = sorted(
+                [(t, v["team_goals_last3"]) for (t, g), v in team_form_lookup.items() if g == gw],
+                key=lambda x: -x[1]
+            )[:3]
+            defensive = sorted(
+                [(t, v["team_cs_rate_last3"]) for (t, g), v in team_form_lookup.items() if g == gw],
+                key=lambda x: -x[1]
+            )[:3]
+            print(f"  [TEAM FORM] GW{gw} top attack: {attacking} | top defence: {defensive}")
+            pool = build_rolling_pool(players_df, hist_lookup,
+                                      fdr_lookup, home_lookup, gw - 1,
+                                      team_form_lookup=team_form_lookup,
+                                      opp_lookup=opp_lookup)
+        pool_by_pid = {p["player_id"]: p for p in pool}
+
+        # ── Update available budget ─────────────────────────────────────────
+        if gw == 1:
+            available_budget = BUDGET
+        else:
+            squad_val = sum(pool_by_pid.get(pid, {}).get("price", 0.0)
+                            for pid in current_squad)
+            available_budget = bank + squad_val
+
+        # ── Fix 3: pre-detect WC17 force to apply loyalty override ─────────
+        wc17_force    = (gw == 17 and "wc1" not in chips_used)
+        loyalty_ovr   = WC17_LOYALTY if wc17_force else None
+
+        # ── Predict ─────────────────────────────────────────────────────────
+        pool = predict_pool(pool, models, gw, current_squad,
+                            gw1_preds=gw1_preds, loyalty_override=loyalty_ovr)
+
+        # ── DGW boost: players with 2 fixtures in this GW play twice ─────────
+        if gw in dgw_gws:
+            n_dgw = 0
+            for p in pool:
+                if gw_teams.get(gw, {}).get(p["team"], 0) >= 2:
+                    p["pred"] = min(PRED_CAP, p["pred"] * DGW_PRED_MULT)
+                    n_dgw += 1
+            if n_dgw > 0:
+                print(f"  [DGW] GW{gw}: {n_dgw} players boosted x{DGW_PRED_MULT}")
+
+        # ── Availability penalties (intel_03 tier data) ─────────────────────
+        pool, _ = apply_availability_penalties(pool, avail_gws, gw)
+        pool_by_pid = {p["player_id"]: p for p in pool}
+
+        # Save GW1 predictions for early-season blending
+        if gw == 1:
+            gw1_preds = {p["player_id"]: p["pred"] for p in pool}
+
+        # ── Intel 07: bench intelligence and BB targeting ────────────────────
+        bb1_used    = "bb1" in chips_used
+        bb2_used    = "bb2" in chips_used
+        bench_intel = get_bench_intel(
+            pool, gw, chips_used, bb1_used, bb2_used,
+            fdr_lookup=fdr_lookup,
+            home_lookup=home_lookup
+        )
+
+        # Apply bench candidate bonus to predictions
+        for p in pool:
+            bpid = p["player_id"]
+            if bpid in bench_intel["bench_candidates"]:
+                p["pred"] += bench_intel["bench_candidates"][bpid]
+
+        pool_by_pid = {p["player_id"]: p for p in pool}  # refresh after bonuses
+
+        # ── Chip decision ───────────────────────────────────────────────────
+        chip = decide_chip(gw, chips_used, pool, current_squad,
+                           dgw_gws, gw_teams, bench_pred_hist, home_lookup,
+                           bb_target_gw=bench_intel.get("bb_target_gw"))
+        is_wc = chip in ("wc1", "wc2")
+        is_fh = chip in ("fh1", "fh2")
+        is_tc = chip in ("tc1", "tc2")
+        is_bb = chip in ("bb1", "bb2")
+
+        # GW19 end-of-window diagnostic: confirm FH1 fate
+        if gw == 19 and "fh1" not in chips_used and chip != "fh1":
+            print(f"  [CHIP] GW19 complete — FH1 wasted (not a DGW, better to waste than misuse)")
+
+        if is_fh:
+            pre_fh_squad = set(current_squad)
+            bank_pre_fh  = bank
+
+        ft_ilp = 15 if (gw == 1 or is_wc or is_fh) else free_transfers
+
+        # ── ILP ─────────────────────────────────────────────────────────────
+        result = run_ilp(pool, current_squad, available_budget,
+                         ft_ilp, is_wc, is_fh, gw)
+        if result is None:
+            print(f"  [ERROR] ILP failed GW{gw}, skipping.")
+            continue
+
+        xi_pids    = result["xi"]
+        bench_pids = result["bench"]
+        t_in_pids  = result["transfers_in"]
+        t_out_pids = result["transfers_out"]
+        n_hits     = result["hits"]
+
+        # ── Captain ─────────────────────────────────────────────────────────
+        captain_id = select_captain(xi_pids, pool_by_pid, cap_streak, last_cap_pid,
+                                    captain_history, gw, last_cap_actual=last_cap_actual)
+        # Intel_05 override (0.5 adj-pt threshold, post-ILP, no squad effect)
+        captain_id, cap_source = apply_intel_captain_override(
+            captain_id, xi_pids, pool_by_pid, recs_gws, gw)
+
+        # ── Update bank from transfers ───────────────────────────────────────
+        if gw == 1:
+            squad_cost = sum(pool_by_pid.get(p, {}).get("price", 0.0)
+                             for p in result["squad"])
+            bank = BUDGET - squad_cost
+        elif not (is_wc or is_fh):
+            sell = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_out_pids)
+            buy  = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_in_pids)
+            bank += sell - buy
+        else:
+            # WC/FH: new squad cost
+            new_cost = sum(pool_by_pid.get(p, {}).get("price", 0.0)
+                           for p in result["squad"])
+            bank = available_budget - new_cost
+
+        penalty_pts = n_hits * 4
+        if chip:
+            chips_used.add(chip)
+            log["chips_used"].append({"chip": chip, "gw": gw})
+
+        current_squad = set(result["squad"])
+
+        # ── Actuals ─────────────────────────────────────────────────────────
+        gw_actuals = {}
+        for pid in current_squad:
+            if pid in hist_lookup and gw in hist_lookup[pid]:
+                gw_actuals[pid] = hist_lookup[pid][gw]
+            else:
+                gw_actuals[pid] = {"total_points": 0, "minutes": 0}
+
+        # ── Auto-subs ───────────────────────────────────────────────────────
+        xi_final, bench_final, auto_subs = apply_auto_subs(
+            xi_pids, bench_pids, pool_by_pid, gw_actuals)
+
+        # ── Score ────────────────────────────────────────────────────────────
+        actual_total    = compute_score(xi_final, bench_final, captain_id,
+                                        chip, gw_actuals, penalty_pts)
+        pred_total      = sum(pool_by_pid.get(p, {}).get("pred", 0) for p in xi_pids)
+        if is_tc:
+            pred_total += pool_by_pid.get(captain_id, {}).get("pred", 0)
+
+        # ── MAE (GW2+) ───────────────────────────────────────────────────────
+        if gw >= 2:
+            xi_preds   = [pool_by_pid.get(p, {}).get("pred", 0.0) for p in xi_pids]
+            xi_acts    = [gw_actuals.get(p, {}).get("total_points", 0.0) for p in xi_pids]
+            mae = float(np.mean(np.abs(np.array(xi_preds) - np.array(xi_acts))))
+            log["learning_curve"].append({"gw": gw, "mae": round(mae, 3)})
+
+        # Update captain streak + history
+        if captain_id == last_cap_pid:
+            cap_streak += 1
+        else:
+            cap_streak = 1
+        last_cap_actual = gw_actuals.get(captain_id, {}).get("total_points", 0)
+        last_cap_pid    = captain_id
+        captain_history.append(captain_id)
+
+        # ── Bench pred history (retained for reference) ──────────────────────
+        bench_of = sum(pool_by_pid.get(p, {}).get("pred", 0.0)
+                       for p in bench_pids
+                       if pool_by_pid.get(p, {}).get("pos") != "GK")
+        bench_pred_hist.append(bench_of)
+
+        # ── Update squad value & bank post-GW ───────────────────────────────
+        squad_end_val = sum(
+            hist_lookup.get(pid, {}).get(gw, {}).get("value",
+                pool_by_pid.get(pid, {}).get("price", 0.0))
+            for pid in current_squad
+        )
+
+        if is_fh and pre_fh_squad is not None:
+            # Revert squad for next GW
+            current_squad = set(pre_fh_squad)
+            bank = bank_pre_fh
+            squad_end_val = sum(
+                hist_lookup.get(pid, {}).get(gw, {}).get("value",
+                    pool_by_pid.get(pid, {}).get("price", 0.0))
+                for pid in current_squad
+            )
+            pre_fh_squad = None
+
+        # Bank after price movements: total = bank + squad_val (invariant)
+        # Bank itself doesn't change from price movements — only squad_val does
+
+        # ── Free transfer rollover ───────────────────────────────────────────
+        used_fts       = 0 if (is_wc or is_fh or gw == 1) else len(t_in_pids)
+        free_transfers = next_ft(gw, free_transfers, used_fts, is_wc, is_fh)
+
+        # ── Retrain ─────────────────────────────────────────────────────────
+        if gw < SIM_END_GW:
+            # current-season weight grows each GW: GW1->2x, GW10->11x, GW28->29x
+            cs_weight = CURRENT_SEASON_BASE_WEIGHT + gw
+            print(f"  [RETRAIN] History (w=1.0) + GW1-{gw} actuals (w={cs_weight})...")
+            retrain_rows = build_retrain_rows(
+                players_df, hist_lookup, fdr_lookup, home_lookup, gw,
+                team_form_lookup=team_form_lookup, opp_lookup=opp_lookup)
+            combined_rows = {}
+            combined_weights = {}
+            for pos in ["GK", "DEF", "MID", "FWD"]:
+                h_rows = hist_rows_for_retrain.get(pos, [])
+                r_rows = retrain_rows.get(pos, [])
+                combined_rows[pos] = h_rows + r_rows
+                combined_weights[pos] = (
+                    [1.0] * len(h_rows) + [float(cs_weight)] * len(r_rows)
+                )
+            if any(combined_rows.values()):
+                models = train_models(combined_rows, combined_weights)
+
+        # ── Log entry ───────────────────────────────────────────────────────
+        cap_mult_log = 3 if is_tc else 2
+
+        def player_entry(pid, is_cap=False):
+            p   = pool_by_pid.get(pid, {})
+            act = gw_actuals.get(pid, {})
+            apt = float(act.get("total_points", 0))
+            cm  = cap_mult_log if is_cap else 1
+            return {
+                "player_id":         pid,
+                "web_name":          p.get("web_name", str(pid)),
+                "pos":               p.get("pos", "?"),
+                "team":              p.get("team", 0),
+                "price":             round(p.get("price", 0), 1),
+                "predicted_pts":     round(p.get("pred", 0), 2),
+                "actual_pts":        int(apt),
+                "is_captain":        is_cap,
+                "captain_multiplier": cm,
+                "pts_counted":       int(apt * cm),
+            }
+
+        xi_entries    = [player_entry(p, p == captain_id) for p in xi_final]
+        bench_entries = [player_entry(p) for p in bench_final]
+
+        # Players subbed OUT (were in original XI, got 0 mins) go to bench display
+        xi_final_set = set(xi_final)
+        for pid in xi_pids:
+            if pid not in xi_final_set:
+                entry = player_entry(pid)
+                entry["auto_subbed_out"] = True
+                bench_entries.append(entry)
+
+        cap_pool_entry = pool_by_pid.get(captain_id, {})
+        cap_actual_pts = gw_actuals.get(captain_id, {}).get("total_points", 0)
+        gw_entry = {
+            "gw":             gw,
+            "chip":           chip,
+            "free_transfers": ft_ilp,
+            "bank":           round(bank, 1),
+            "squad_value":    round(squad_end_val, 1),
+            "transfers_in":   [pool_by_pid.get(p, {}).get("web_name", str(p)) for p in t_in_pids],
+            "transfers_out":  [pool_by_pid.get(p, {}).get("web_name", str(p)) for p in t_out_pids],
+            "penalty_pts":    -penalty_pts,
+            "xi":             xi_entries,
+            "bench":          bench_entries,
+            "captain_id":     captain_id,
+            "captain_source": cap_source,
+            "captain": {
+                "player_id":  captain_id,
+                "web_name":   cap_pool_entry.get("web_name", str(captain_id)),
+                "pos":        cap_pool_entry.get("pos", "?"),
+                "actual_pts": cap_actual_pts,
+                "predicted_pts": round(cap_pool_entry.get("pred", 0), 1),
+                "source":     cap_source,
+            },
+            "predicted_total": round(pred_total, 1),
+            "actual_total":   actual_total,
+            "auto_subs":               auto_subs,
+            "bench_intel_target":      bench_intel.get("bb_target_gw"),
+            "bench_intel_recommended": [p["web_name"] for p in bench_intel.get("recommended_bench", [])],
+            "is_bb_target_gw":         bench_intel.get("is_bb_target_gw", False),
+        }
+        log["gameweeks"].append(gw_entry)
+        log["total_actual_pts"]     += actual_total
+        log["total_predicted_pts"]  += pred_total
+        log["total_penalties"]      -= penalty_pts
+
+        cap_name = pool_by_pid.get(captain_id, {}).get("web_name", str(captain_id))
+        chip_str = f" [{chip.upper()}]" if chip else ""
+        print(f"  Predicted: {pred_total:.1f} | Actual: {actual_total} | "
+              f"Cap: {cap_name}{chip_str} | Hits: {n_hits}")
+        print(f"  FT next GW: {free_transfers} | Bank: {bank:.1f}m | "
+              f"Squad val: {squad_end_val:.1f}m")
+
+        with open(OUTPUT_JSON, "w") as f:
+            json.dump(log, f, indent=2)
+        print(f"  [SAVED]")
+
+    print(f"\n{'='*70}")
+    print(f"  SIMULATION COMPLETE")
+    print(f"  Total actual pts:    {log['total_actual_pts']}")
+    print(f"  Total predicted:     {log['total_predicted_pts']:.1f}")
+    print(f"  Total penalties:     {log['total_penalties']}")
+    print(f"  Chips used:          {[c['chip'] for c in log['chips_used']]}")
+    print("=" * 70)
+    return log
+
+
+if __name__ == "__main__":
+    run_simulation()
