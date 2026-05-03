@@ -19,7 +19,7 @@
   \item Intel 03: Пресметка на достапност (0--100) по играч.
   \item Intel 04: Пресметка на ризик за ротација (0--100) по играч.
   \item Intel 05: LLM препораки (Gemini 2.5 Flash).
-  \item Intel 06: Примена на казни на предикциите → скорегирани предикции.
+  \item Intel 06: Примена на казни на предикциите $\rightarrow$ скорегирани предикции.
   \item LightGBM: Предикција на поени по играч.
   \item ILP: Избор на оптимален тим од 15 играчи.
   \item Intel 07: Анализа на бенч зголемување (lookahead).
@@ -201,7 +201,7 @@ r_i^{(t)} = -\left[\frac{\partial \mathcal{L}(y_i, \hat{y}_i)}{\partial \hat{y}_
 \sum_{i \in \text{DEF}} x_i &= 5 \quad \text{(одбранбени)} \\
 \sum_{i \in \text{MID}} x_i &= 5 \quad \text{(средни)} \\
 \sum_{i \in \text{FWD}} x_i &= 3 \quad \text{(напаѓачи)} \\
-\sum_i \text{price}_i \cdot x_i &\leq 100.0 \quad \text{(буџет во милиони £)} \\
+\sum_i \text{price}_i \cdot x_i &\leq 100.0 \quad \text{(буџет во милиони \pounds)} \\
 \sum_{i \in \text{club}_j} x_i &\leq 3 \quad \forall j \in \text{clubs} \quad \text{(клуб лимит)} \\
 \sum_i c_i &= 1 \quad \text{(точно еден капитен)} \\
 \sum_i v_i &= 1 \quad \text{(точно еден вицекапитен)} \\
