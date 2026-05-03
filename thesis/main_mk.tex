@@ -4,11 +4,12 @@
 % ============================================================
 \documentclass[a4paper,12pt]{report}
 
-% --- Encoding & Language ---
-\usepackage[T2A]{fontenc}        % T2A: required for Cyrillic
-\usepackage[utf8]{inputenc}      % UTF-8 source encoding
-\usepackage[english,macedonian]{babel} % macedonian = primary language
-\usepackage{paratype}            % PT fonts: full Cyrillic glyph support
+% ── ENCODING: these three MUST come first, in this order ─────────────────────
+\usepackage{cmap}              % PDF search/copy of Cyrillic (load before fontenc)
+\usepackage[T2A]{fontenc}      % Cyrillic encoding — NOT T1
+\usepackage[utf8]{inputenc}    % UTF-8 source files
+\usepackage[macedonian]{babel} % Macedonian only — avoids T1 English font init
+% ─────────────────────────────────────────────────────────────────────────────
 
 % --- Page Layout ---
 \usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
@@ -16,7 +17,6 @@
 % --- Typography & Spacing ---
 \usepackage{setspace}
 \onehalfspacing
-% microtype removed: conflicts with T2A/Cyrillic in pdfLaTeX
 
 % --- Math ---
 \usepackage{amsmath}
@@ -24,7 +24,6 @@
 
 % --- Graphics ---
 \usepackage{graphicx}
-\usepackage[export]{adjustbox}
 
 % --- Tables ---
 \usepackage{booktabs}
@@ -45,12 +44,13 @@
   frame=single,
   numbers=left,
   numberstyle=\tiny\color{gray},
-  captionpos=b
+  captionpos=b,
+  extendedchars=true,
+  inputencoding=utf8
 }
 
 % --- Captions ---
 \usepackage{caption}
-\usepackage{subcaption}
 
 % --- Headers & Footers ---
 \usepackage{fancyhdr}
@@ -69,12 +69,13 @@
 % --- Table of Contents ---
 \usepackage{tocloft}
 
-% --- Hyperlinks ---
+% --- Hyperlinks (load last among formatting packages) ---
 \usepackage[
   colorlinks=true,
   linkcolor=black,
   citecolor=blue,
   urlcolor=blue,
+  unicode=true,
   pdfauthor={Andrej Andonovski},
   pdftitle={Prediktiven sistem za upravuvanje so tim vo Fantazi Premier Liga}
 ]{hyperref}
@@ -105,7 +106,7 @@
   \centering
   \vspace*{1cm}
 
-  {\large \textbf{Универзитет „Св. Кирил и Методиј" во Скопје}}\\[0.3cm]
+  {\large \textbf{Универзитет „Св.\ Кирил и Методиј" во Скопје}}\\[0.3cm]
   {\large \textbf{Факултет за информатички науки и компјутерско инженерство}}\\[2cm]
 
   % \includegraphics[width=4cm,keepaspectratio]{figures/finki_logo}
@@ -116,14 +117,15 @@
 
   \rule{\linewidth}{0.5pt}\\[0.5cm]
   {\LARGE \bfseries
-    Предиктивен систем за управување со тим во Фантази Премиер Лига базиран на хибридна вештачка интелигенција
+    Предиктивен систем за управување со тим во Фантази Премиер Лига
+    базиран на хибридна вештачка интелигенција
   }\\[0.5cm]
   \rule{\linewidth}{0.5pt}\\[2cm]
 
   \begin{minipage}{0.45\textwidth}
     \raggedright
     \textbf{Ментор:}\\
-    \mentor{Prof. d-r [Ime Prezime]}
+    \mentor{Prof.\ d-r [Ime Prezime]}
   \end{minipage}
   \hfill
   \begin{minipage}{0.45\textwidth}
