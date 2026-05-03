@@ -5,9 +5,10 @@
 \documentclass[a4paper,12pt]{report}
 
 % --- Encoding & Language ---
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[english,macedonian]{babel}
+\usepackage[T2A]{fontenc}        % T2A: required for Cyrillic
+\usepackage[utf8]{inputenc}      % UTF-8 source encoding
+\usepackage[english,macedonian]{babel} % macedonian = primary language
+\usepackage{paratype}            % PT fonts: full Cyrillic glyph support
 
 % --- Page Layout ---
 \usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
@@ -15,7 +16,7 @@
 % --- Typography & Spacing ---
 \usepackage{setspace}
 \onehalfspacing
-\usepackage{microtype}
+% microtype removed: conflicts with T2A/Cyrillic in pdfLaTeX
 
 % --- Math ---
 \usepackage{amsmath}
@@ -107,7 +108,8 @@
   {\large \textbf{Универзитет „Св. Кирил и Методиј" во Скопје}}\\[0.3cm]
   {\large \textbf{Факултет за информатички науки и компјутерско инженерство}}\\[2cm]
 
-  \includegraphics[width=4cm,keepaspectratio]{figures/finki_logo}
+  % \includegraphics[width=4cm,keepaspectratio]{figures/finki_logo}
+  % Uncomment the line above after uploading finki_logo.png to figures/
   \vspace{1.5cm}
 
   {\Large \textbf{Дипломска работа}}\\[1cm]
