@@ -35,12 +35,12 @@ MAX_CLUB       = 3
 SIM_END_GW     = 28
 CHIP_LOCKOUT   = 4
 MAX_HITS       = 1
-FDR_MULT        = 0.02   # trial 220 best
-FDR_MULT_DEF    = 0.08   # trial 220 best — GK/DEF position-specific
-OWN_BOOST_GW1  = 0.15   # trial 220 best
+FDR_MULT        = 0.028451479772615692   # optuna trial 429 best (1799 pts, 0 pen)
+FDR_MULT_DEF    = 0.08424155707006356   # optuna trial 429 best
+OWN_BOOST_GW1  = 0.212871272538615     # optuna trial 429 best
 PRED_CAP       = 20.0   # per-player prediction ceiling
 XI_PRED_CAP    = 120.0  # XI predicted total ceiling — keeps predictions calibrated
-TC_THRESH      = 6.0    # tuned — enables tc2 at GW25 (+67 pts)
+TC_THRESH      = 6.1714966141844405   # optuna trial 429 best
 TC_FORM_MIN    = 6.0    # tuned — enables tc2 at GW25 (+67 pts)
 TC2_MIN_GW   = 20     # earliest GW tc2 is allowed to fire (set2 only)
 FORCE_TC2_GW   = None   # if set, force tc2 to fire on this exact GW (overrides threshold)
@@ -52,17 +52,17 @@ WC_THRESH      = 5      # squad members below pos avg triggers WC
 WC17_LOYALTY   = 5.0    # loyalty bonus when force-using WC at GW17
 CAP_STREAK_MAX      = 3     # consecutive captain GWs before rotation considered
 CAP_FORM_MIN        = 6.0   # form_last3 below this + streak triggers rotation
-CAP_FORM_GATE       = 4.0   # trial 220 best
-CAP_FORM_PENALTY    = 0.3   # trial 220 best
-CAP_STREAK_LIMIT    = 2     # trial 220 best
-CAP_STREAK_FORM     = 6.0   # streak penalty only if form_last3 below this
-CAP_STREAK_MULT     = 0.9   # trial 220 best
-CAP_HOME_MARGIN     = 1.0   # prefer home player if top candidate is within this many pts
-CAP_MIN_RELIABILITY = 0.4   # never captain player with minutes_reliability below this
-CAP_FORM_GW_MIN     = 2     # apply form gate from this GW onward
-CAP_FDR_MULT        = 0.10  # trial 220 best
-CAP_BLANK_THRESH    = 4     # trial 220 best
-CAP_BLANK_PENALTY   = 0.9   # trial 220 best
+CAP_FORM_GATE       = 6.565535461604104    # optuna trial 429 best
+CAP_FORM_PENALTY    = 0.5736997458448272   # optuna trial 429 best
+CAP_STREAK_LIMIT    = 2                    # optuna trial 429 best
+CAP_STREAK_FORM     = 6.0                  # streak penalty only if form_last3 below this
+CAP_STREAK_MULT     = 0.8988579789528998   # optuna trial 429 best
+CAP_HOME_MARGIN     = 1.0                  # prefer home player if top candidate is within this many pts
+CAP_MIN_RELIABILITY = 0.4                  # never captain player with minutes_reliability below this
+CAP_FORM_GW_MIN     = 2                    # apply form gate from this GW onward
+CAP_FDR_MULT        = 0.009167472856084574 # optuna trial 429 best
+CAP_BLANK_THRESH    = 4                    # optuna trial 429 best
+CAP_BLANK_PENALTY   = 0.7567954078245613   # optuna trial 429 best
 BLEND_GWS           = 8.0   # GW1 blending fades to 0 by GW9
 MC_SQUADS      = 3      # Monte Carlo random squads
 DGW_PRED_MULT  = 2.0   # prediction boost for players with 2 fixtures in DGW weeks
@@ -71,10 +71,10 @@ DGW_PRED_MULT  = 2.0   # prediction boost for players with 2 fixtures in DGW wee
 MAX_BENCH_PRICE    = 5.5   # max price for bench candidates (£m)
 MIN_MINUTES_REL    = 0.5   # must have played 50%+ of available minutes
 MIN_FORM_LAST3     = 2.0   # minimum form to be considered
-BENCH_BONUS_NORMAL = 0.0   # Trial 148 — no bench bonus on normal GWs
-BENCH_BONUS_BB_GW  = 2.0   # Trial 148 — minimal bonus on BB target GW
+BENCH_BONUS_NORMAL = 2.7084338238469625   # optuna trial 429 best
+BENCH_BONUS_BB_GW  = 2.2462419467730097   # optuna trial 429 best
 LOOKAHEAD_GWS      = 3     # how many GWs ahead to evaluate for BB window
-BB_MIN_GW          = 9     # Trial 148 — don't target BB before this GW
+BB_MIN_GW          = 8   # optuna trial 429 best
 BB_MAX_GW_SET1     = 19    # Set 1 BB must fire by GW19
 BB_MAX_GW_SET2     = 38    # Set 2 BB must fire by GW38
 
@@ -97,7 +97,7 @@ def loyalty_bonus(gw):
     if gw <= 10: return 2.0
     return 1.0
 
-MODEL_TYPE = "lgbm"  # trial 220 best
+MODEL_TYPE = "lgbm"  # optuna trial 429 best (1799 pts, 0 pen)
 
 XGB_PARAMS = dict(
     n_estimators=300, max_depth=4, learning_rate=0.05,
@@ -106,9 +106,9 @@ XGB_PARAMS = dict(
 )
 
 LGBM_PARAMS = dict(
-    n_estimators=300, max_depth=3, learning_rate=0.03,
-    num_leaves=31, subsample=0.9, colsample_bytree=0.6,
-    min_child_samples=30, random_state=42, verbosity=-1
+    n_estimators=200, max_depth=3, learning_rate=0.04390698211469097,
+    num_leaves=31, subsample=0.9321213778928387, colsample_bytree=0.8240721576385306,
+    min_child_samples=27, random_state=42, verbosity=-1
 )
 
 FEAT_COLS = [

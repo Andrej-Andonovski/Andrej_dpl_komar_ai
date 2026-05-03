@@ -1,0 +1,94 @@
+{
+  "GK": {
+    "best_params": {
+      "n_estimators": 201,
+      "max_depth": 3,
+      "learning_rate": 0.012454681572582994,
+      "subsample": 0.7250997366013455,
+      "colsample_bytree": 0.9317044107201923,
+      "min_child_weight": 9
+    },
+    "mae_per_fold": [
+      2.39665757657411,
+      2.2548608908052996,
+      2.426193947634421,
+      2.1998465638882028,
+      2.1697504533014333
+    ],
+    "weighted_mae": 2.264020457767571,
+    "mean_top3_precision": 0.45002370791844476,
+    "mean_top5_precision": 0.4414509246088193,
+    "feature_count": 48,
+    "training_rows": 4421,
+    "training_time_s": 103.6
+  },
+  "DEF": {
+    "best_params": {
+      "n_estimators": 552,
+      "max_depth": 3,
+      "learning_rate": 0.014385832350094932,
+      "subsample": 0.7645067558058479,
+      "colsample_bytree": 0.8718180931199356,
+      "min_child_weight": 9
+    },
+    "mae_per_fold": [
+      2.4665470021984386,
+      2.4758799898542585,
+      2.3870100999080135,
+      2.380184894373507,
+      2.217305373962339
+    ],
+    "weighted_mae": 2.355676554461664,
+    "mean_top3_precision": 0.6343764817449028,
+    "mean_top5_precision": 0.6082503556187767,
+    "feature_count": 47,
+    "training_rows": 18828,
+    "training_time_s": 162.8
+  },
+  "MID": {
+    "best_params": {
+      "n_estimators": 201,
+      "max_depth": 3,
+      "learning_rate": 0.027425664988122184,
+      "subsample": 0.6766638988738276,
+      "colsample_bytree": 0.8055830963960509,
+      "min_child_weight": 3
+    },
+    "mae_per_fold": [
+      1.8830486259500916,
+      1.975049398089648,
+      1.9675474702159912,
+      2.094398496721724,
+      2.004857927932777
+    ],
+    "weighted_mae": 2.003128768911919,
+    "mean_top3_precision": 0.6862019914651494,
+    "mean_top5_precision": 0.6836130867709815,
+    "feature_count": 45,
+    "training_rows": 22132,
+    "training_time_s": 120.7
+  },
+  "FWD": {
+    "best_params": {
+      "n_estimators": 380,
+      "max_depth": 3,
+      "learning_rate": 0.02101697167551122,
+      "subsample": 0.6767209439768658,
+      "colsample_bytree": 0.6022371619082516,
+      "min_child_weight": 8
+    },
+    "mae_per_fold": [
+      2.75910606183321,
+      2.780453137729479,
+      2.7782147555187198,
+      2.6700101057602295,
+      2.987866426586091
+    ],
+    "weighted_mae": 2.8124839823623713,
+    "mean_top3_precision": 0.47316263632053096,
+    "mean_top5_precision": 0.4437553342816501,
+    "feature_count": 45,
+    "training_rows": 5663,
+    "training_time_s": 89.1
+  }
+}

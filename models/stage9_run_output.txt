@@ -1,0 +1,1231 @@
+======================================================
+  FPL AI Stage 9 -- LLM Agent Layer
+======================================================
+
+Initialising Anthropic client...
+  Client ready  model: claude-sonnet-4-20250514
+
+Loading Stage 8 models...
+Loaded 4 XGBoost models.
+
+Loading training data...
+  Loaded train_gk.csv: 4421 rows, 69 cols
+  Loaded train_def.csv: 18828 rows, 67 cols
+  Loaded train_mid.csv: 22132 rows, 65 cols
+  Loaded train_fwd.csv: 5663 rows, 65 cols
+
+Loading FPL API data...
+
+players_raw.csv columns (41): ['id', 'first_name', 'second_name', 'team', 'element_type', 'now_cost', 'selected_by_percent', 'transfers_in', 'transfers_out', 'total_points', 'points_per_game', 'minutes', 'goals_scored', 'assists', 'clean_sheets', 'goals_conceded', 'yellow_cards', 'red_cards', 'saves', 'bonus', 'bps', 'influence', 'creativity', 'threat', 'ict_index', 'form', 'value_form', 'value_season', 'corners_and_indirect_freekicks_order', 'direct_freekicks_order', 'penalties_order', 'team_name', 'position', 'price', 'penalty_taker_order', 'corner_taker_order', 'freekick_taker_order', 'is_penalty_taker', 'is_corner_taker', 'is_freekick_taker', 'is_set_piece_taker']
+   id first_name            second_name  team  element_type  now_cost  selected_by_percent  transfers_in  transfers_out  total_points  points_per_game  minutes  goals_scored  assists  clean_sheets  goals_conceded  yellow_cards  red_cards  saves  bonus  bps  influence  creativity  threat  ict_index  form  value_form  value_season  corners_and_indirect_freekicks_order  direct_freekicks_order  penalties_order team_name position  price  penalty_taker_order  corner_taker_order  freekick_taker_order  is_penalty_taker  is_corner_taker  is_freekick_taker  is_set_piece_taker
+0   1      David            Raya Martín     1             1        60                 34.4       4031171        2357374           122              4.1     2700             0        0            14              22             1          0     47      6  487      425.8        33.4     0.0       46.0   3.8         0.6          20.3                                     0                       0                0   Arsenal       GK    6.0                    0                   0                     0                 0                0                  0                   0
+1   2       Kepa  Arrizabalaga Revuelta     1             1        41                  0.4         14544          76743             0              0.0        0             0        0             0               0             0          0      0      0    0        0.0         0.0     0.0        0.0   0.0         0.0           0.0                                     0                       0                0   Arsenal       GK    4.1                    0                   0                     0                 0                0                  0                   0
+
+player_history.csv columns (13): ['player_id', 'gameweek', 'opponent_team_id', 'opponent_team', 'was_home', 'total_points', 'minutes', 'goals_scored', 'assists', 'clean_sheets', 'saves', 'bonus', 'value']
+   player_id  gameweek  opponent_team_id opponent_team  was_home  total_points  minutes  goals_scored  assists  clean_sheets  saves  bonus  value
+0          1         1                14       Man Utd     False            10       90             0        0             1      7      3    5.5
+1          1         2                11         Leeds      True             6       90             0        0             1      1      0    5.5
+
+fixtures_raw.csv columns (10): ['id', 'gameweek', 'team_h', 'team_a', 'team_h_name', 'team_a_name', 'team_h_difficulty', 'team_a_difficulty', 'finished', 'kickoff_time']
+    id  gameweek  team_h  team_a team_h_name     team_a_name  team_h_difficulty  team_a_difficulty  finished          kickoff_time
+0  307       NaN      13       8    Man City  Crystal Palace                  3                  5     False                   NaN
+1    1       1.0      12       4   Liverpool     Bournemouth                  3                  4      True  2025-08-15T19:00:00Z
+
+fixture_difficulty.csv columns (7): ['team_name', 'gameweek', 'opponent', 'was_home', 'fdr', 'trajectory_raw', 'trajectory_score']
+  team_name  gameweek opponent  was_home  fdr  trajectory_raw  trajectory_score
+0   Arsenal         1  Man Utd     False    4            12.8          0.205882
+1   Arsenal         2    Leeds      True    2            12.4          0.354839
+
+player_upcoming_fixtures.csv columns (6): ['player_id', 'gameweek', 'opponent_team_id', 'opponent_team', 'is_home', 'difficulty']
+   player_id  gameweek  opponent_team_id  opponent_team  is_home  difficulty
+0          1      30.0               NaN            NaN     True           3
+1          1      32.0               NaN            NaN     True           3
+
+teams_raw.csv columns (10): ['id', 'name', 'short_name', 'strength', 'strength_overall_home', 'strength_overall_away', 'strength_attack_home', 'strength_attack_away', 'strength_defence_home', 'strength_defence_away']
+   id         name short_name  strength  strength_overall_home  strength_overall_away  strength_attack_home  strength_attack_away  strength_defence_home  strength_defence_away
+0   1      Arsenal        ARS         5                   1300                   1365                  1340                  1390                   1260                   1340
+1   2  Aston Villa        AVL         3                   1155                   1225                  1120                  1230                   1190                   1220
+
+Detecting DGWs / BGWs...
+  DGW gameweeks: [26]
+  Simulation starts at real GW30
+
+Fetching live FPL injury data...
+  Live FPL injury data loaded: 310 players with news
+  Doubtful/injured players: 309
+  Top injury news:
+    [I] id=22: Foot injury - Unknown return date
+    [I] id=48: Ankle injury - Expected back 11 Apr
+    [I] id=58: Knee injury - Expected back 01 Jun
+    [I] id=186: Achilles injury - Expected back 11 Apr
+    [I] id=194: Hamstring injury - Unknown return date
+    [I] id=198: Achilles injury - Expected back 11 Apr
+    [I] id=205: Knee injury - Expected back 30 Sep
+    [I] id=216: Knee injury - Expected back 11 Apr
+    [I] id=80: Hamstring injury - Expected back 01 Jun
+    [I] id=81: Knee injury - Expected back 09 May
+
+Building player pool...
+  Cost filter: 820 players with now_cost > 0
+  Minutes reliability filter: 185 players removed (< 0.4)
+
+Player pool built: 635 active players
+
+------------------------------------------------------
+  GW1  (real GW30)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 24 players  (16 high-conf -> -50%,  4 medium -> -25%)
+    Heung-min: unavailable [high]
+    Tolentino Coelho de Lima: unavailable [high]
+    Rashford: unavailable [high]
+    Díaz Marulanda: unavailable [high]
+    Isak: injury [high]
+    Kluivert: injury [high]
+    Wood: injury [high]
+    Kudus: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Merino Zazón: injury [high]
+    Santos Lopes de Macedo: injury [high]
+    Tielemans: injury [high]
+    Cullen: injury [high]
+    Maddison: injury [high]
+    Gvardiol: injury [high]
+    Sancho: suspension [high]
+    Ødegaard: injury [medium]
+    Almeida de Oliveira Gonçalves: injury [medium]
+    Okafor: injury [medium]
+    Bynoe-Gittens: injury [medium]
+  Captain candidates (top 5):
+    Salah                  (MID)  raw:  6.6  adj:  7.6
+    Watkins                (FWD)  raw:  5.3  adj:  6.6
+    Wissa                  (FWD)  raw:  5.3  adj:  6.6
+    Palmer                 (MID)  raw:  5.5  adj:  6.3
+    Mbeumo                 (MID)  raw:  5.1  adj:  5.9
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 1  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 1 squad, I need to evaluate the ILP's captain
+  choice and optimize the team setup for the season opener. ## Captain
+  Analysis The ILP has selected **Salah** as captain with an adjusted
+  score of 14.7. Looking at the alternatives, none come close to the 15.2
+  threshold needed for an override - Palmer (12.0), Watkins (11.8), and
+  Wissa (11.8) are all significantly lower. Salah at home to a
+  newly-promoted side is the standout choice, especially given his
+  historical dominance in opening gameweeks. The captain selection is
+  optimal.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Lecomte              FUL   3.9   3.4    3.4    A FDR:3
+  DEF  Cucurella Saseta     CHE   6.0   3.5    5.4    H FDR:3
+  DEF  Robertson            LIV   5.7   3.9    2.9    H FDR:3
+  DEF  van Dijk             LIV   6.2   4.0    4.9    H FDR:3
+  MID  Schade               BRE   6.9   4.9    4.5    H FDR:2
+  MID  Palmer               CHE   10.6  5.5    3.4    H FDR:3 [V]
+  MID  Fernández            CHE   6.7   4.9    4.9    H FDR:3
+  MID  Salah                LIV   14.0  6.6    5.9    H FDR:3 [C]
+  MID  Mbeumo               MUN   8.7   5.1    6.0    H FDR:3
+  FWD  Watkins              AVL   8.5   5.3    5.5    A FDR:4
+  FWD  Wissa                NEW   7.3   5.3    6.4    A FDR:4
+  Captain: Salah
+    Salah's adjusted score of 14.7 is significantly higher than any
+    alternative, with Palmer next at 12.0. Home fixture agai
+  Vice-C:  Palmer
+    Palmer has the highest adjusted score among outfield alternatives and
+    offers captaincy security if S
+
+BENCH
+  GK:  Bettinelli             pred:3.4
+  1st: Abdullahi              pred:3.3
+  2nd: Nichols                pred:2.7
+  3rd: Akinmboni              pred:2.6
+  Abdullahi most likely to feature if needed, with others ordered by
+  potential playing time.
+
+TRANSFERS
+  None (GW1 fresh squad)
+
+CHIP ADVICE
+  No chip this week
+  Save chips for later in the season when fixtures become more challenging
+  or injury crises emerge.
+
+RISK FLAGS
+  [!] [HIGH] Heung-min: Has joined Los Angeles FC permanently
+  [!] [HIGH] Tolentino Coelho de Lima: Has joined Flamengo permanently
+  [!] [HIGH] Rashford: Has joined Barcelona on loan for the rest of the season
+  [!] [HIGH] Díaz Marulanda: Has joined Bayern Munich permanently
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing, expected back May
+  [!] [HIGH] Wood: Knee injury with 0% chance of playing, unknown return date
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing
+  [!] [HIGH] Merino Zazón: Foot injury with 0% chance of playing, unknown return date
+  [!] [HIGH] Santos Lopes de Macedo: Foot injury with 0% chance of playing, unknown return date
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing
+  [!] [HIGH] Cullen: Knee injury with 0% chance of playing
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing, unknown return date
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing, unknown return date
+  [!] [HIGH] Sancho: Ineligible to face parent club with 0% chance of playing
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [MEDIUM] Almeida de Oliveira Gonçalves: Hamstring injury with only 50% chance of playing
+  [!] [MEDIUM] Okafor: Hamstring injury with only 50% chance of playing
+  [!] [MEDIUM] Bynoe-Gittens: Hamstring injury with only 50% chance of playing
+  [!] Heavy Liverpool investment (3 players) creates concentration risk
+  [!] Both forwards face difficult away fixtures (FDR 4)
+
+  PREDICTED SCORE: 61.7 pts
+------------------------------------------------------
+
+  Retraining models for GW2...
+  Models retrained.
+
+------------------------------------------------------
+  GW2  (real GW31)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 11 players  (11 high-conf -> -50%,  0 medium -> -25%)
+    Ødegaard: injury [high]
+    Tielemans: injury [high]
+    Maddison: injury [high]
+    Kudus: injury [high]
+    Rashford: unavailable [high]
+    Schär: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Heung-min: unavailable [high]
+    Kovačić: injury [high]
+    Isak: injury [high]
+    Gvardiol: injury [high]
+  Captain candidates (top 5):
+    Mbeumo                 (MID)  raw:  6.5  adj:  7.4
+    Foden                  (MID)  raw:  6.4  adj:  7.4
+    Rogers                 (MID)  raw:  6.0  adj:  6.9
+    Borges Fernandes       (MID)  raw:  5.9  adj:  6.8
+    Haaland                (FWD)  raw:  5.4  adj:  6.8
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 2  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 2 squad, I need to evaluate the captain choice,
+  bench order, and overall strategy. ## Captain Analysis The ILP has
+  selected Mbeumo as captain with an adjusted score of 14.3. While this
+  might seem surprising given his lower price point, the mathematics are
+  sound - his fixture-adjusted horizon score is the highest available.
+  Foden (14.0) is close but doesn't meet the 0.5-point threshold for
+  override at 14.8. Mbeumo at home to a struggling defensive unit
+  represents excellent value, and his recent form (6.0 over 3 games)
+  supports this selection.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   5.3    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   5.0    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.8    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   7.4    3.4    A FDR:5
+  MID  Rogers               AVL   7.5   6.0    5.4    A FDR:4
+  MID  Foden                MCI   8.1   6.4    6.9    A FDR:2 [V]
+  MID  Mbeumo               MUN   8.7   6.5    6.0    H FDR:3 [C]
+  MID  Borges Fernandes     MUN   10.0  5.9    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   5.8    5.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   5.3    4.5    H FDR:2
+  FWD  Haaland              MCI   14.6  5.4    6.1    A FDR:2
+  Captain: Mbeumo
+    The ILP selection is mathematically sound with the highest adjusted
+    score of 14.3. Foden's 14.0 doesn't meet the 0.5-poi
+  Vice-C:  Foden
+    Highest adjusted score after the captain with excellent away form and
+    City's attacking potential.
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.3
+  1st: Redmond                pred:3.4
+  2nd: Guéhi                  pred:3.6
+  3rd: van den Berg           pred:3.1
+  Redmond has a better fixture than Guéhi who faces City away, with van
+  den Berg remaining as the chea
+
+TRANSFERS
+  None
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-positioned for the gameweek with no urgent needs, better
+  to save chips for more optima
+
+RISK FLAGS
+  [!] [HIGH] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing, expected back April 11
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing, expected back April 11
+  [!] [HIGH] Rashford: Has joined Barcelona on loan for the rest of the season
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing, expected back April 18
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing, expected back April 11
+  [!] [HIGH] Heung-min: Has joined Los Angeles FC permanently
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing, expected back April 11
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing and unknown return date
+  [!] Heavy Manchester United exposure (3 players) creates concentration risk if they 
+
+  PREDICTED SCORE: 73.6 pts
+------------------------------------------------------
+
+  Retraining models for GW3...
+  Models retrained.
+
+------------------------------------------------------
+  GW3  (real GW32)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 12 players  (10 high-conf -> -50%,  1 medium -> -25%)
+    Kudus: injury [high]
+    Tielemans: injury [high]
+    Maddison: injury [high]
+    Schär: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Kovačić: injury [high]
+    Gvardiol: injury [high]
+    Isak: injury [high]
+    Ødegaard: injury [medium]
+    Heung-min: suspension [high]
+    Rashford: suspension [high]
+  Captain candidates (top 5):
+    Mbeumo                 (MID)  raw:  6.8  adj:  7.9
+    Foden                  (MID)  raw:  6.6  adj:  7.6
+    Borges Fernandes       (MID)  raw:  6.5  adj:  7.5
+    Diallo                 (MID)  raw:  6.3  adj:  7.3
+    Sarr                   (MID)  raw:  6.1  adj:  7.1
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 3  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 3 squad, I need to evaluate the ILP's captain
+  choice and optimize the team setup. ## Captain Analysis The ILP has
+  selected **Mbeumo** as captain with an adjusted score of 14.9. Looking
+  at the alternatives, Foden has 14.6 (0.3 lower) and Bruno Fernandes has
+  14.1 (0.8 lower). Since no alternative reaches the 15.4 threshold (14.9
+  + 0.5), and there are no strong qualitative concerns about Mbeumo, I'll
+  stick with the ILP recommendation. Mbeumo has been in excellent form
+  (6.0 form3) and faces a reasonable home fixture against a Manchester
+  United defense that has shown vulnerabilities.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   5.3    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   4.8    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.1    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   7.6    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.1    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.6    6.9    A FDR:2 [V]
+  MID  Mbeumo               MUN   8.7   6.8    6.0    H FDR:3 [C]
+  MID  Borges Fernandes     MUN   10.0  6.5    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   6.3    5.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   5.6    4.5    H FDR:2
+  FWD  Haaland              MCI   14.6  5.3    6.1    A FDR:2
+  Captain: Mbeumo
+    ILP choice is optimal with 14.9 adj score, no alternative reaches the
+    15.4 override threshold, and Mbeumo has strong for
+  Vice-C:  Foden
+    Highest alternative with 14.6 adj score and reliable City attacking
+    threat away to a weaker opponent
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.3
+  1st: Guéhi                  pred:3.7
+  2nd: Redmond                pred:3.2
+  3rd: van den Berg           pred:3.0
+  Prioritizing defender first for clean sheet potential, then attacking
+  midfielder, with least likely
+
+TRANSFERS
+  IN:  Sarr                   (CRY)  GBP6.3m
+  OUT: Rogers                 (AVL)  GBP7.5m
+  Cost: Free  (1 transfer(s))
+  LLM transfer suggestions:
+    OUT: Guéhi -> IN: Alternative defender  [recommended]
+      Data shows him at wrong club (MCI instead of CRY) which could indicate availabil
+
+CHIP ADVICE
+  No chip this week
+  No compelling reason to use chips in GW3 with a well-balanced squad
+  already in place.
+
+RISK FLAGS
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing and expected return April 11th.
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing and expected return April 11th.
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing and expected return April 18th.
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing and expected return April 1
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing and expected return April 11th.
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing this gameweek.
+  [!] [HIGH] Heung-min: Has permanently joined Los Angeles FC and is unavailable.
+  [!] [HIGH] Rashford: On loan to Barcelona for the rest of the season.
+  [!] Heavy Manchester United exposure (3 players) creates concentration risk
+  [!] Guéhi data error showing wrong club affiliation
+
+  PREDICTED SCORE: 75.4 pts
+------------------------------------------------------
+
+  Retraining models for GW4...
+  Models retrained.
+
+------------------------------------------------------
+  GW4  (real GW33)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 15 players  (14 high-conf -> -50%,  1 medium -> -25%)
+    Kudus: injury [high]
+    Schär: injury [high]
+    Tielemans: injury [high]
+    Maddison: injury [high]
+    Ødegaard: injury [high]
+    Trossard: injury [medium]
+    Heung-min: suspension [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Scarlett: suspension [high]
+    Kovačić: injury [high]
+    Isak: injury [high]
+    Marshall: suspension [high]
+    Rashford: suspension [high]
+    Gvardiol: injury [high]
+    Almeida de Oliveira Gonçalves: injury [high]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  6.5  adj:  8.2
+    Mbeumo                 (MID)  raw:  7.1  adj:  8.1
+    Foden                  (MID)  raw:  6.6  adj:  7.5
+    Borges Fernandes       (MID)  raw:  6.5  adj:  7.5
+    Diallo                 (MID)  raw:  6.4  adj:  7.3
+  LLM Call 2 complete
+  Captain override: Strand Larsen -> Mbeumo
+
++====================================================+
+|   FPL AI GAMEWEEK 4  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  ## FPL Manager Report - Gameweek 4 ### Captain Analysis The ILP has
+  suggested Strand Larsen (adj: 14.2) as captain, but Mbeumo shows a
+  significantly higher adjusted score of 15.5 - a difference of 1.3 points
+  which exceeds our 0.5 threshold for override consideration. Mbeumo faces
+  Leicester at home with an excellent FDR of 3, has been in strong form
+  (6.0 form3), and represents Brentford's primary attacking threat. His
+  higher ceiling and superior fixture make him the optimal captain choice
+  over Strand Larsen. ### Squad Assessment This is a well-balanced squad
+  with strong attacking coverage from Manchester United's triple-up
+  (Mbeumo, Bruno Fernandes, Diallo) who face Leicester at home. The
+  defense looks solid with Timber (Arsenal), Cucurella (Chelsea), and the
+  differential pick Keane (Everton away).
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   5.2    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   4.7    4.0    H FDR:3
+  DEF  Cucurella Saseta     CHE   6.0   4.3    5.4    H FDR:3
+  DEF  Keane                EVE   4.6   7.4    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.2    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.6    6.9    A FDR:2
+  MID  Mbeumo               MUN   8.7   7.1    6.0    H FDR:3 [C]
+  MID  Borges Fernandes     MUN   10.0  6.5    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   6.4    5.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   6.5    4.5    H FDR:2
+  FWD  Haaland              MCI   14.6  5.6    6.1    A FDR:2
+  Captain: Mbeumo
+    Mbeumo's adjusted score of 15.5 is 1.3 points higher than Strand
+    Larsen's 14.2, exceeding the 0.5 threshold for override
+  Vice-C:  Bruno Fernandes
+    Reliable penalty taker with strong home fixture and consistent returns.
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: Guéhi                  pred:3.3
+  2nd: Redmond                pred:3.3
+  3rd: van den Berg           pred:3.0
+  Guéhi most likely to play meaningful minutes as a regular starter.
+
+TRANSFERS
+  IN:  Cucurella Saseta       (CHE)  GBP6.0m
+  OUT: Mitchell               (CRY)  GBP5.0m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-positioned without requiring chip assistance this
+  gameweek.
+
+RISK FLAGS
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing
+  [!] [HIGH] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [MEDIUM] Trossard: Knock with 75% chance of playing
+  [!] [HIGH] Heung-min: Has permanently joined Los Angeles FC
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing
+  [!] [HIGH] Scarlett: On loan to Hibernian for rest of season
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing
+  [!] [HIGH] Marshall: On loan to VfL Bochum for rest of season
+  [!] [HIGH] Rashford: On loan to Barcelona for rest of season
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing
+  [!] [HIGH] Almeida de Oliveira Gonçalves: Hamstring injury with 50% chance of playing
+  [!] Keane faces difficult away fixture despite high prediction
+  [!] Steele has challenging away fixture with limited GK alternatives
+
+  PREDICTED SCORE: 76.9 pts
+------------------------------------------------------
+
+  Retraining models for GW5...
+  Models retrained.
+
+------------------------------------------------------
+  GW5  (real GW34)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 15 players  (13 high-conf -> -50%,  2 medium -> -25%)
+    Kudus: injury [high]
+    Schär: injury [high]
+    Maddison: injury [high]
+    Tielemans: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Heung-min: suspension [high]
+    Scarlett: suspension [high]
+    Kovačić: injury [high]
+    Isak: injury [high]
+    Rashford: suspension [high]
+    Ødegaard: injury [medium]
+    Trossard: injury [medium]
+    Gvardiol: injury [high]
+    Kulusevski: injury [high]
+    Kluivert: injury [high]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.0  adj:  8.7
+    Mbeumo                 (MID)  raw:  7.3  adj:  8.4
+    Diallo                 (MID)  raw:  6.7  adj:  7.7
+    Borges Fernandes       (MID)  raw:  6.7  adj:  7.7
+    Foden                  (MID)  raw:  6.4  adj:  7.3
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 5  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  ## Gameweek 5 FPL Manager Report ### Captain Analysis The ILP has
+  suggested Strand Larsen (adj: 15.4) as captain, but Mbeumo has a
+  marginally higher adjusted score of 15.9. However, this 0.5-point
+  difference is exactly at the threshold, and both players have decent
+  fixtures - Strand Larsen faces Crystal Palace at home (FDR: 2) while
+  Mbeumo faces Manchester United at home (FDR: 3). Given that Strand
+  Larsen has been in better recent form and Crystal Palace's defensive
+  vulnerabilities, I'll stick with the ILP recommendation despite Mbeumo's
+  slightly higher adjusted score. ### Squad Assessment The starting XI
+  looks well-balanced with strong attacking coverage from Manchester
+  United's triple-up (Mbeumo, Bruno Fernandes, Diallo) who face a
+  struggling defense. The defensive line features good value picks in
+  Mitchell and Keane, with Timber providing Arsenal coverage.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   5.0    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   5.0    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.3    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   7.0    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.4    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.4    6.9    A FDR:2
+  MID  Mbeumo               MUN   8.7   7.3    6.0    H FDR:3 [V]
+  MID  Borges Fernandes     MUN   10.0  6.7    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   6.7    5.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.0    4.5    H FDR:2 [C]
+  FWD  Haaland              MCI   14.6  5.4    6.1    A FDR:2
+  Captain: Strand Larsen
+    While Mbeumo has a marginally higher adjusted score (15.9 vs 15.4), the
+    difference is minimal and Strand Larsen faces a
+  Vice-C:  Mbeumo
+    Highest adjusted score among alternatives and faces Manchester United's
+    leaky defense at home.
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: Redmond                pred:3.2
+  2nd: van den Berg           pred:3.0
+  3rd: Guéhi                  pred:3.3
+  Guéhi faces the toughest fixture against Manchester City, while Redmond
+  has a slightly better matchu
+
+TRANSFERS
+  IN:  Mitchell               (CRY)  GBP5.0m
+  OUT: Cucurella Saseta       (CHE)  GBP6.0m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-positioned for this gameweek with no urgent need for chip
+  usage.
+
+RISK FLAGS
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing, expected back April 18.
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Heung-min: Has joined Los Angeles FC permanently and is unavailable.
+  [!] [HIGH] Scarlett: Has joined Hibernian on loan for the rest of the season.
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Rashford: Has joined Barcelona on loan for the rest of the season.
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing this gameweek.
+  [!] [MEDIUM] Trossard: Knock with 75% chance of playing, creating uncertainty.
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Kulusevski: Knee injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing, expected back May 9.
+  [!] Triple Manchester United coverage creates high variance
+  [!] Foden rotation risk in Guardiola's system
+
+  PREDICTED SCORE: 77.9 pts
+------------------------------------------------------
+
+  Retraining models for GW6...
+  Models retrained.
+
+------------------------------------------------------
+  GW6  (real GW35)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 25 players  (18 high-conf -> -50%,  7 medium -> -25%)
+    Schär: injury [high]
+    Kudus: injury [high]
+    Tielemans: injury [high]
+    Maddison: injury [high]
+    Scarlett: unavailable [high]
+    Heung-min: unavailable [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Isak: injury [high]
+    Kovačić: injury [high]
+    Gvardiol: injury [high]
+    Kulusevski: injury [high]
+    Kluivert: injury [high]
+    Merino Zazón: injury [high]
+    Danns: injury [high]
+    Jackson: unavailable [high]
+    Janelt: injury [high]
+    Marshall: unavailable [high]
+    Rashford: unavailable [high]
+    Ødegaard: injury [medium]
+    Trossard: injury [medium]
+    Almeida de Oliveira Gonçalves: injury [medium]
+    Lobo Alves Palhares Costa Palhinha Gonçalves: injury [medium]
+    Kaoru: injury [medium]
+    Ndoye: injury [medium]
+    Becker: injury [medium]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.3  adj:  9.1
+    Mbeumo                 (MID)  raw:  7.2  adj:  8.3
+    Diallo                 (MID)  raw:  6.9  adj:  8.0
+    Borges Fernandes       (MID)  raw:  6.7  adj:  7.6
+    Foden                  (MID)  raw:  6.6  adj:  7.5
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 6  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  ## FPL Manager Report - Gameweek 6 ### Squad Overview Your current squad
+  shows strong fundamentals with 406 points accumulated through 9 stages,
+  maintaining pace above the average manager benchmark. The ILP optimizer
+  has constructed a balanced XI with multiple Manchester United assets
+  capitalizing on their favorable home fixture (FDR:3) against what
+  appears to be a weaker opponent. ### Captain Analysis The ILP suggests
+  **Strand Larsen** as captain with an impressive adjusted score of 16.0,
+  significantly higher than alternatives. While Mbeumo (15.9) comes close,
+  the 0.1 difference doesn't meet our 0.5+ threshold for override. Strand
+  Larsen benefits from Crystal Palace's excellent home fixture (FDR:2) and
+  represents strong value at £6.1m.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   4.8    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   4.9    4.0    H FDR:3
+  DEF  Cucurella Saseta     CHE   6.0   4.5    5.4    H FDR:3
+  DEF  Keane                EVE   4.6   6.9    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.3    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.6    6.9    A FDR:2
+  MID  Mbeumo               MUN   8.7   7.2    6.0    H FDR:3 [V]
+  MID  Borges Fernandes     MUN   10.0  6.7    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   6.9    5.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.3    4.5    H FDR:2 [C]
+  FWD  Haaland              MCI   14.6  5.1    6.1    A FDR:2
+  Captain: Strand Larsen
+    ILP captain has highest adjusted score at 16.0, with no alternative
+    reaching the 16.5+ threshold for override. Crystal P
+  Vice-C:  Mbeumo
+    Second-highest adjusted score (15.9) with Manchester United's favorable
+    home fixture and consistent
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: Redmond                pred:3.1
+  2nd: van den Berg           pred:3.0
+  3rd: Guéhi                  pred:2.9
+  Ordered by predicted points with Redmond most likely to feature if
+  needed.
+
+TRANSFERS
+  IN:  Cucurella Saseta       (CHE)  GBP6.0m
+  OUT: Mitchell               (CRY)  GBP5.0m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is optimally positioned for current fixtures without need for chip
+  enhancement.
+
+RISK FLAGS
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing
+  [!] [HIGH] Maddison: ACL injury with unknown return date and 0% availability
+  [!] [HIGH] Scarlett: On loan at Hibernian for rest of season
+  [!] [HIGH] Heung-min: Transferred permanently to Los Angeles FC
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing
+  [!] [HIGH] Kovačić: Ankle injury with unknown return date
+  [!] [HIGH] Gvardiol: Leg injury with unknown return date
+  [!] [HIGH] Kulusevski: Knee injury with unknown return date
+  [!] [HIGH] Kluivert: Knee injury expected back May 9th
+  [!] [HIGH] Merino Zazón: Foot injury with unknown return date
+  [!] [HIGH] Danns: Hamstring injury with unknown return date
+  [!] [HIGH] Jackson: On loan at Bayern Munich for rest of season
+  [!] [HIGH] Janelt: Foot injury with unknown return date
+  [!] [HIGH] Marshall: On loan at VfL Bochum for rest of season
+  [!] [HIGH] Rashford: On loan at Barcelona for rest of season
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [MEDIUM] Trossard: Knock reducing availability to 75%
+  [!] [MEDIUM] Almeida de Oliveira Gonçalves: Hamstring injury with 50% chance of playing
+  [!] [MEDIUM] Lobo Alves Palhares Costa Palhinha Gonçalves: Head injury with 75% chance of playing
+  [!] [MEDIUM] Kaoru: Ankle injury with 75% chance of playing
+  [!] [MEDIUM] Ndoye: Knock with 75% chance of playing
+  [!] [MEDIUM] Becker: Knock with 75% chance of playing
+  [!] Manchester United triple-up creates concentration risk
+  [!] Haaland underperforming relative to £14.6m price point
+
+  PREDICTED SCORE: 78.1 pts
+------------------------------------------------------
+
+  Retraining models for GW7...
+  Models retrained.
+
+------------------------------------------------------
+  GW7  (real GW36)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 22 players  (22 high-conf -> -50%,  0 medium -> -25%)
+    Schär: injury [high]
+    Kudus: injury [high]
+    Tielemans: injury [high]
+    Maddison: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Kovačić: injury [high]
+    Isak: injury [high]
+    Danns: injury [high]
+    Kluivert: injury [high]
+    Merino Zazón: injury [high]
+    Gvardiol: injury [high]
+    Cullen: injury [high]
+    Kulusevski: injury [high]
+    Janelt: injury [high]
+    Ødegaard: injury [high]
+    Almeida de Oliveira Gonçalves: injury [high]
+    Scarlett: suspension [high]
+    Heung-min: suspension [high]
+    Jackson: suspension [high]
+    Rashford: suspension [high]
+    Marshall: suspension [high]
+    Sancho: suspension [high]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.6  adj:  9.5
+    Mbeumo                 (MID)  raw:  7.3  adj:  8.4
+    Diallo                 (MID)  raw:  7.2  adj:  8.3
+    Borges Fernandes       (MID)  raw:  6.8  adj:  7.8
+    Foden                  (MID)  raw:  6.6  adj:  7.6
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 7  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  ## FPL Manager Report - Gameweek 7 ### Squad Overview The optimized
+  squad shows strong fundamentals with 477 points accumulated through 9
+  stages, tracking well above the average manager benchmark of 57.0
+  pts/GW. The team structure is well-balanced with premium assets in key
+  positions and value picks providing depth. ### Captain Analysis The ILP
+  has selected **Strand Larsen** as captain with an adjusted horizon score
+  of 16.5. While this may seem unconventional given his modest 7.6
+  predicted points, the FDR-adjusted scoring accounts for Crystal Palace's
+  favorable home fixture (FDR:2) and his strong underlying metrics.
+  Looking at alternatives, **Mbeumo** (16.2 adj) and **Diallo** (16.1 adj)
+  are very close but neither reaches the 17.0 threshold required for
+  override.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   4.9    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   5.0    4.0    H FDR:3
+  DEF  Cucurella Saseta     CHE   6.0   4.3    5.4    H FDR:3
+  DEF  Keane                EVE   4.6   6.9    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.4    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.6    6.9    A FDR:2
+  MID  Mbeumo               MUN   8.7   7.3    6.0    H FDR:3 [V]
+  MID  Borges Fernandes     MUN   10.0  6.8    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   7.2    5.3    H FDR:3
+  FWD  Delap                CHE   6.2   5.4    4.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.6    4.5    H FDR:2 [C]
+  Captain: Strand Larsen
+    ILP's horizon-adjusted score of 16.5 already accounts for fixture
+    difficulty. No alternative reaches the 17.0 override t
+  Vice-C:  Mbeumo
+    Highest alternative with 16.2 adjusted score and strong recent form for
+    Manchester United at home.
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: Redmond                pred:3.2
+  2nd: van den Berg           pred:3.2
+  3rd: Guéhi                  pred:2.9
+  Redmond first for attacking potential, van den Berg second for defensive
+  cover, Guéhi last due to di
+
+TRANSFERS
+  IN:  Delap                  (CHE)  GBP6.2m
+  OUT: Haaland                (MCI)  GBP14.6m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Mixed fixture difficulty doesn't warrant chip usage - save for clearer
+  double gameweeks or favorable
+
+RISK FLAGS
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing and expected return April 18th.
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing and expected return April 11th.
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing and expected return April 11th.
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing and expected return April 1
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing and expected return April 11th.
+  [!] [HIGH] Danns: Hamstring injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing and expected return May 9th.
+  [!] [HIGH] Merino Zazón: Foot injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Cullen: Knee injury with 0% chance of playing and expected return September 30
+  [!] [HIGH] Kulusevski: Knee injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Janelt: Foot injury with 0% chance of playing and unknown return date.
+  [!] [HIGH] Ødegaard: Knee injury with only 50% chance of playing.
+  [!] [HIGH] Almeida de Oliveira Gonçalves: Hamstring injury with only 50% chance of playing.
+  [!] [HIGH] Scarlett: On loan to Hibernian for the rest of the season.
+  [!] [HIGH] Heung-min: Permanently transferred to Los Angeles FC.
+  [!] [HIGH] Jackson: On loan to Bayern Munich for the rest of the season.
+  [!] [HIGH] Rashford: On loan to Barcelona for the rest of the season.
+  [!] [HIGH] Marshall: On loan to VfL Bochum for the rest of the season.
+  [!] [HIGH] Sancho: Ineligible to face parent club with expected return date.
+  [!] Manchester United triple-up concentration risk
+  [!] Keane facing difficult away fixture (FDR:5)
+
+  PREDICTED SCORE: 79.7 pts
+------------------------------------------------------
+
+  Retraining models for GW8...
+  Models retrained.
+
+------------------------------------------------------
+  GW8  (real GW37)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 24 players  (18 high-conf -> -50%,  2 medium -> -25%)
+    Schär: injury [high]
+    Kudus: injury [high]
+    Maddison: injury [high]
+    Tielemans: injury [high]
+    Scarlett: suspension [high]
+    Heung-min: suspension [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Kovačić: injury [high]
+    Isak: injury [high]
+    Danns: injury [high]
+    Rashford: suspension [high]
+    Kluivert: injury [high]
+    Jackson: suspension [high]
+    Cullen: injury [high]
+    Merino Zazón: injury [high]
+    Gvardiol: injury [high]
+    Kulusevski: injury [high]
+    Billing: suspension [high]
+    Ødegaard: injury [medium]
+    Almeida de Oliveira Gonçalves: injury [medium]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.6  adj:  9.5
+    Diallo                 (MID)  raw:  7.6  adj:  8.8
+    Mbeumo                 (MID)  raw:  7.5  adj:  8.6
+    Borges Fernandes       (MID)  raw:  6.8  adj:  7.8
+    Foden                  (MID)  raw:  6.5  adj:  7.5
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 8  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 8 squad, I need to evaluate the captain choice
+  and optimize the team setup. ## Captain Analysis The ILP has selected
+  Strand Larsen as captain with an adjusted score of 16.6. Looking at the
+  alternatives, Diallo has a marginally higher adjusted score of 16.8, but
+  this 0.2 difference falls well short of the 0.5 threshold required for
+  an override. Both players have identical predicted scores of 7.6 for
+  this gameweek. Strand Larsen faces Crystal Palace at home (FDR 2), which
+  is an excellent fixture.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   4.8    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   4.9    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.3    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   6.7    3.4    A FDR:5
+  MID  Sarr                 CRY   6.3   6.5    5.0    H FDR:2
+  MID  Foden                MCI   8.1   6.5    6.9    A FDR:2
+  MID  Mbeumo               MUN   8.7   7.5    6.0    H FDR:3
+  MID  Borges Fernandes     MUN   10.0  6.8    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   7.6    5.3    H FDR:3 [V]
+  FWD  Delap                CHE   6.2   5.4    4.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.6    4.5    H FDR:2 [C]
+  Captain: Strand Larsen
+    Diallo's 16.8 adj score vs Strand Larsen's 16.6 is only a 0.2
+    difference, well below the 0.5 threshold for override. Bot
+  Vice-C:  Diallo
+    Highest adjusted score among alternatives and provides captaincy
+    insurance with same fixture difficu
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: van den Berg           pred:3.2
+  2nd: Redmond                pred:3.2
+  3rd: Guéhi                  pred:2.7
+  Van den Berg has highest predicted score and better rotation potential
+  than current order.
+
+TRANSFERS
+  IN:  Mitchell               (CRY)  GBP5.0m
+  OUT: Cucurella Saseta       (CHE)  GBP6.0m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-optimized for current fixtures with no urgent needs
+  warranting chip usage.
+
+RISK FLAGS
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing
+  [!] [HIGH] Maddison: ACL injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing
+  [!] [HIGH] Scarlett: On loan at Hibernian for rest of season
+  [!] [HIGH] Heung-min: Permanently transferred to Los Angeles FC
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing
+  [!] [HIGH] Kovačić: Ankle injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing
+  [!] [HIGH] Danns: Hamstring injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Rashford: On loan at Barcelona for rest of season
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing
+  [!] [HIGH] Jackson: On loan at Bayern Munich for rest of season
+  [!] [HIGH] Cullen: Knee injury with 0% chance of playing
+  [!] [HIGH] Merino Zazón: Foot injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Gvardiol: Leg injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Kulusevski: Knee injury with unknown return date and 0% chance of playing
+  [!] [HIGH] Billing: Permanently transferred to Midtjylland
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [MEDIUM] Almeida de Oliveira Gonçalves: Hamstring injury with 50% chance of playing
+  [!] Keane has difficult away fixture at Brighton (FDR 5)
+  [!] Heavy reliance on mid-price players without premium captain options
+
+  PREDICTED SCORE: 80.0 pts
+------------------------------------------------------
+
+  Retraining models for GW9...
+  Models retrained.
+
+------------------------------------------------------
+  GW9  (real GW38)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 20 players  (20 high-conf -> -50%,  0 medium -> -25%)
+    Schär: injury [high]
+    Kudus: injury [high]
+    Maddison: injury [high]
+    Tielemans: injury [high]
+    Scarlett: suspension [high]
+    Ødegaard: injury [high]
+    Almeida de Oliveira Gonçalves: injury [high]
+    Danns: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Heung-min: suspension [high]
+    Kovačić: injury [high]
+    Kluivert: injury [high]
+    Isak: injury [high]
+    Jackson: suspension [high]
+    Rashford: suspension [high]
+    Merino Zazón: injury [high]
+    Gvardiol: injury [high]
+    Billing: suspension [high]
+    Cullen: injury [high]
+    Janelt: injury [high]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.6  adj:  9.5
+    Diallo                 (MID)  raw:  7.8  adj:  9.0
+    Mbeumo                 (MID)  raw:  7.4  adj:  8.5
+    Borges Fernandes       (MID)  raw:  6.8  adj:  7.8
+    Sarr                   (MID)  raw:  6.5  adj:  7.5
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 9  -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 9 squad, I need to evaluate the captain choice,
+  bench order, and overall strategy. ## Captain Analysis The ILP has
+  selected Strand Larsen as captain with an adjusted score of 16.8. The
+  only alternative that comes close is Diallo at 17.2 adjusted - a
+  difference of just 0.4 points, which falls short of the 0.5 threshold
+  required for override. While Diallo has a slightly higher prediction
+  (7.8 vs 7.6) and better form, Strand Larsen faces Crystal Palace at home
+  (FDR 2) compared to Diallo's Manchester United home fixture (FDR 3). The
+  mathematical optimization already accounts for fixture difficulty, so
+  I'll stick with the ILP recommendation.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   4.8    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   5.0    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.3    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   6.6    3.4    A FDR:5
+  MID  Eze                  ARS   7.2   6.3    4.6    H FDR:3
+  MID  Sarr                 CRY   6.3   6.5    5.0    H FDR:2
+  MID  Mbeumo               MUN   8.7   7.4    6.0    H FDR:3
+  MID  Borges Fernandes     MUN   10.0  6.8    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   7.8    5.3    H FDR:3 [V]
+  FWD  Delap                CHE   6.2   5.5    4.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.6    4.5    H FDR:2 [C]
+  Captain: Strand Larsen
+    Diallo's adjusted score of 17.2 is only 0.4 higher than Strand Larsen's
+    16.8, falling short of the 0.5 threshold for ove
+  Vice-C:  Diallo
+    Highest adjusted score among alternatives and strong recent form makes
+    him the logical vice-captain
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.2
+  1st: Redmond                pred:3.3
+  2nd: van den Berg           pred:3.2
+  3rd: Guéhi                  pred:2.9
+  Redmond has highest prediction for potential rotation, while Guéhi faces
+  the toughest fixture agains
+
+TRANSFERS
+  IN:  Eze                    (ARS)  GBP7.2m
+  OUT: Foden                  (MCI)  GBP8.1m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-balanced with good fixtures, no immediate need for chip
+  usage.
+
+RISK FLAGS
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing, expected back April 18th
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing, expected back April 11th
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing, expected back April 11th
+  [!] [HIGH] Scarlett: Unavailable as he has joined Hibernian on loan for the rest of the sea
+  [!] [HIGH] Ødegaard: Knee injury with only 50% chance of playing
+  [!] [HIGH] Almeida de Oliveira Gonçalves: Hamstring injury with only 50% chance of playing
+  [!] [HIGH] Danns: Hamstring injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing, expected back April 11th
+  [!] [HIGH] Heung-min: Unavailable as he has joined Los Angeles FC permanently
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing, expected back May 9th
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing, expected back April 11th
+  [!] [HIGH] Jackson: Unavailable as he has joined Bayern Munich on loan for the rest of the
+  [!] [HIGH] Rashford: Unavailable as he has joined Barcelona on loan for the rest of the sea
+  [!] [HIGH] Merino Zazón: Foot injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing and unknown return date
+  [!] [HIGH] Billing: Unavailable as he has joined Midtjylland permanently
+  [!] [HIGH] Cullen: Knee injury with 0% chance of playing, expected back September 30th
+  [!] [HIGH] Janelt: Foot injury with 0% chance of playing and unknown return date
+  [!] Heavy Manchester United exposure with three players
+  [!] Keane faces difficult away fixture (FDR 5)
+
+  PREDICTED SCORE: 80.3 pts
+------------------------------------------------------
+
+  Retraining models for GW10...
+  Models retrained.
+
+------------------------------------------------------
+  GW10  (real GW39)
+------------------------------------------------------
+  LLM Call 1 complete
+  Flagged: 25 players  (18 high-conf -> -50%,  2 medium -> -25%)
+    Schär: injury [high]
+    Kudus: injury [high]
+    Maddison: injury [high]
+    Tielemans: injury [high]
+    Danns: injury [high]
+    Guimarães Rodriguez Moura: injury [high]
+    Kluivert: injury [high]
+    Isak: injury [high]
+    Merino Zazón: injury [high]
+    Kovačić: injury [high]
+    Gvardiol: injury [high]
+    Cullen: injury [high]
+    Kulusevski: injury [high]
+    Scarlett: rotation [high]
+    Heung-min: rotation [high]
+    Jackson: rotation [high]
+    Rashford: rotation [high]
+    Billing: rotation [high]
+    Ødegaard: injury [medium]
+    Almeida de Oliveira Gonçalves: injury [medium]
+  Captain candidates (top 5):
+    Strand Larsen          (FWD)  raw:  7.7  adj:  9.6
+    Diallo                 (MID)  raw:  7.9  adj:  9.0
+    Mbeumo                 (MID)  raw:  7.3  adj:  8.4
+    Borges Fernandes       (MID)  raw:  6.8  adj:  7.8
+    Sarr                   (MID)  raw:  6.5  adj:  7.5
+  LLM Call 2 complete
+
++====================================================+
+|   FPL AI GAMEWEEK 10 -- MANAGER REPORT           |
++====================================================+
+
+SQUAD ANALYSIS
+  Looking at this Gameweek 10 squad, I need to evaluate the captain
+  choice, optimize the bench, and assess any concerns. ## Captain Analysis
+  The ILP has selected Strand Larsen (adj: 16.9) over Diallo (adj: 17.3).
+  While Diallo's adjusted score is 0.4 points higher, this falls short of
+  the 0.5-point threshold required for an override. Both players have
+  favorable home fixtures - Strand Larsen faces Crystal Palace (FDR 2)
+  while Diallo faces Manchester United's own fixture. Strand Larsen has
+  been in excellent form with 7.7 predicted points and has shown
+  consistent returns.
+
+STARTING XI
+  Pos  Player               Club  GBP   Pred   Form3  Fix
+  --------------------------------------------------------------
+  GK   Steele               BHA   4.2   4.9    3.3    A FDR:4
+  DEF  Timber               ARS   6.3   4.9    4.0    H FDR:3
+  DEF  Mitchell             CRY   5.0   4.3    3.8    H FDR:2
+  DEF  Keane                EVE   4.6   6.6    3.4    A FDR:5
+  MID  Eze                  ARS   7.2   6.3    4.6    H FDR:3
+  MID  Sarr                 CRY   6.3   6.5    5.0    H FDR:2
+  MID  Mbeumo               MUN   8.7   7.3    6.0    H FDR:3
+  MID  Borges Fernandes     MUN   10.0  6.8    5.7    H FDR:3
+  MID  Diallo               MUN   6.2   7.9    5.3    H FDR:3 [V]
+  FWD  Delap                CHE   6.2   5.6    4.3    H FDR:3
+  FWD  Strand Larsen        CRY   6.1   7.7    4.5    H FDR:2 [C]
+  Captain: Strand Larsen
+    While Diallo has a slightly higher adjusted score (17.3 vs 16.9), the
+    0.4 difference is below the 0.5 threshold for over
+  Vice-C:  Diallo
+    Highest adjusted score among alternatives and offers good captaincy
+    insurance with strong home fixtu
+
+BENCH
+  GK:  Arrizabalaga Revuelta  pred:3.3
+  1st: Tete                   pred:3.9
+  2nd: Redmond                pred:3.3
+  3rd: Guéhi                  pred:2.8
+  Tete has highest prediction (3.9) for potential rotation coverage, while
+  Guéhi faces City away makin
+
+TRANSFERS
+  IN:  Tete                   (FUL)  GBP4.5m
+  OUT: van den Berg           (BRE)  GBP4.5m
+  Cost: Free  (1 transfer(s))
+
+CHIP ADVICE
+  No chip this week
+  Squad is well-positioned with no immediate chip deployment needed - save
+  for future double gameweeks
+
+RISK FLAGS
+  [!] [HIGH] Schär: Ankle injury with 0% chance of playing, expected back April 18.
+  [!] [HIGH] Kudus: Thigh injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Maddison: ACL injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Tielemans: Ankle injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Danns: Hamstring injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Guimarães Rodriguez Moura: Hamstring injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Kluivert: Knee injury with 0% chance of playing, expected back May 9.
+  [!] [HIGH] Isak: Ankle injury with 0% chance of playing, expected back April 11.
+  [!] [HIGH] Merino Zazón: Foot injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Kovačić: Ankle injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Gvardiol: Leg injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Cullen: Knee injury with 0% chance of playing, expected back September 30.
+  [!] [HIGH] Kulusevski: Knee injury with 0% chance of playing, unknown return date.
+  [!] [HIGH] Scarlett: On loan to Hibernian for the rest of the season.
+  [!] [HIGH] Heung-min: Has permanently joined Los Angeles FC.
+  [!] [HIGH] Jackson: On loan to Bayern Munich for the rest of the season.
+  [!] [HIGH] Rashford: On loan to Barcelona for the rest of the season.
+  [!] [HIGH] Billing: Has permanently joined Midtjylland.
+  [!] [MEDIUM] Ødegaard: Knee injury with only 50% chance of playing.
+  [!] [MEDIUM] Almeida de Oliveira Gonçalves: Hamstring injury with only 50% chance of playing.
+  [!] Monitor Trossard fitness (75% chance) for Arsenal coverage
+  [!] Keane faces difficult away fixture at FDR 5
+
+  PREDICTED SCORE: 80.3 pts
+------------------------------------------------------
+
+======================================================
+  STAGE 8 vs STAGE 9 COMPARISON
+======================================================
+  Stage        Total Pts    Avg/GW     vs Stage 8
+  -----------  ----------   --------   ----------
+  Stage 8      579          57.9       baseline
+  Stage 9      763          76.3       +184 pts
+
+  GW   S8 Pts   S9 Pts   Diff     Cap S8          Cap S9          Override?
+  ---- ------   ------   ------   -------------   -------------   --------
+  1    39       59       +20      Isak            Salah           No
+  2    51       86       +35      Haaland         Mbeumo          No
+  3    56       82       +26      Haaland         Mbeumo          No
+  4    86       83       -3       Haaland         Mbeumo          Yes
+  5    57       96       +39      Haaland         Strand Larsen   No
+  6    47       71       +24      Haaland         Strand Larsen   No
+  7    81       73       -8       Haaland         Strand Larsen   No
+  8    61       62       +1       Haaland         Strand Larsen   No
+  9    30       78       +48      Haaland         Strand Larsen   No
+  10   71       73       +2       Haaland         Strand Larsen   No
+======================================================
+
+Results saved: C:\Users\Andrej\Desktop\fpl ai\models\stage9_results.json
+Total API calls made: 20 (2 per GW)

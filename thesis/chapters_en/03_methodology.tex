@@ -1,0 +1,348 @@
+% ============================================================
+% 03_methodology.tex — Methodology (English)
+% ============================================================
+
+\section{System Architecture Overview}
+
+The system comprises three primary layers that operate sequentially before each gameweek deadline, supported by an intelligence pipeline that gathers real-time information.
+
+\textbf{Layer 1 — Prediction}: Four LightGBM models (one per player position) forecast expected points for each available player in the upcoming gameweek, using a combination of historical and current-season features. These models are fully retrained after every gameweek as new actual-points data becomes available.
+
+\textbf{Layer 2 — Optimisation}: An ILP solver (PuLP with CBC backend) takes the predicted points and solves a squad selection problem to identify the 15-player squad that maximises total predicted points while satisfying all FPL constraints. The chip management and transfer strategy are integrated into this layer.
+
+\textbf{Layer 3 — Intelligence}: A seven-module intelligence pipeline provides pre-deadline signals (availability, rotation risk) that adjust predictions before optimisation, and LLM components (Gemini 2.5 Flash for recommendations, Claude for narratives) provide strategic guidance and interpretability.
+
+The operational flow for each gameweek is as follows:
+\begin{enumerate}
+  \item \textbf{intel\_01}: Fetch current FPL API snapshot (statuses, prices, ownership, transfer volumes).
+  \item \textbf{intel\_02}: Scrape press conference summaries from Fantasy Football Scout.
+  \item \textbf{intel\_03}: Compute per-player availability scores (0--100) by merging FPL and press signals.
+  \item \textbf{intel\_04}: Compute per-player rotation risk scores (0--100) from five statistical signals.
+  \item \textbf{intel\_05}: Generate LLM recommendations (Gemini 2.5 Flash API).
+  \item \textbf{intel\_06}: Apply availability and rotation penalties to model predictions.
+  \item \textbf{LightGBM}: Predict points per player using adjusted predictions.
+  \item \textbf{ILP}: Select the optimal 15-player squad.
+  \item \textbf{intel\_07}: Bench boost lookahead scoring.
+  \item \textbf{Stage 9}: Claude API generates per-gameweek narrative explanations.
+\end{enumerate}
+
+\section{Dataset and Feature Engineering}
+
+\subsection{Historical FPL Data}
+
+The training dataset is built on historical FPL player-gameweek data available through the Vaastav repository \cite{vaastav2024fpl}, which aggregates the official FPL API data for each completed season. The dataset spans six seasons — 2019--20 through 2024--25 — with a filter applied to retain only observations where the player played at least 30 minutes (ensuring that near-zero-minute bench appearances do not distort the target variable distribution). After filtering, the dataset contains \textbf{51,044 rows} split into four positional files:
+
+\begin{table}[h]
+\centering
+\caption{Training dataset split by player position}
+\label{tab:dataset_split_en}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Position} & \textbf{Rows} & \textbf{Columns} \\
+\midrule
+Goalkeeper (GK)   & 4,421  & 69 \\
+Defender (DEF)    & 18,828 & 67 \\
+Midfielder (MID)  & 22,132 & 65 \\
+Forward (FWD)     & 5,663  & 65 \\
+\midrule
+\textbf{Total}    & \textbf{51,044} & — \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Each row represents a single player's performance in a single gameweek. The target variable is \texttt{total\_points} — the actual FPL points earned. The 2025--26 season constitutes a \textbf{strict blind test}: no data from the current season enters any training or feature computation process.
+
+\subsection{Team Form Features from Understat}
+
+Team form features are derived from Understat, a website that records expected goals (xG) and expected goals against (xGA) for every Premier League match. Since Understat no longer embeds data directly in the page HTML, our system queries the JSON API endpoints directly. For each team and each match, rolling five-match windows are computed:
+
+\begin{equation}
+\texttt{team\_xG\_last5}_t = \frac{1}{5} \sum_{i=t-5}^{t-1} \texttt{xG}_i
+\end{equation}
+
+where $\texttt{xG}_i$ is the team's expected goals in match $i$. Analogous features are computed for \texttt{team\_xGA\_last5}, \texttt{team\_attacking\_strength}, \texttt{team\_defensive\_strength}, and \texttt{team\_cs\_probability} (the probability of a clean sheet derived from the rolling xGA).
+
+\subsection{New Signing Features from FBref}
+
+For players without FPL history (Premier League debutants), the system collects statistics from their previous leagues via FBref. Nine European leagues are covered, each assigned a \textit{league multiplier} reflecting its competitive level relative to the Premier League:
+
+\begin{table}[h]
+\centering
+\caption{League multipliers for new signing statistics normalisation}
+\label{tab:league_multipliers_en}
+\begin{tabular}{lc}
+\toprule
+\textbf{League} & \textbf{Multiplier} \\
+\midrule
+La Liga (Spain)              & 0.92 \\
+Serie A (Italy)              & 0.88 \\
+Bundesliga (Germany)         & 0.89 \\
+Ligue 1 (France)             & 0.82 \\
+Championship (England)       & 0.72 \\
+Primeira Liga (Portugal)     & 0.78 \\
+Eredivisie (Netherlands)     & 0.75 \\
+Belgian Pro League           & 0.74 \\
+Scottish Premiership         & 0.65 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Statistics (goals, assists, minutes, interceptions, tackles won) are normalised to a per-90-minutes basis and multiplied by the league multiplier before being integrated into the training set.
+
+\subsection{Live FPL API Data}
+
+Before each gameweek, the system fetches the following live data from the official FPL API:
+\begin{itemize}
+  \item \texttt{value}: current player price in millions of pounds.
+  \item \texttt{selected\_by\_percent}: percentage of managers who own the player.
+  \item \texttt{transfers\_in\_event}: inbound transfer volume in the current gameweek window.
+  \item \texttt{transfers\_out\_event}: outbound transfer volume.
+  \item \texttt{status}: player availability status code.
+  \item Fixture difficulty rating (FDR) for the upcoming gameweek.
+\end{itemize}
+
+\subsection{Complete Feature Groups}
+
+Features are organised into six groups. Columns excluded from model inputs are: \texttt{name}, \texttt{season}, \texttt{GW}, \texttt{team}, \texttt{opponent\_team}, \texttt{position}, \texttt{was\_home}, \texttt{fdr\_is\_proxy}, and \texttt{trajectory\_is\_full}.
+
+\textbf{Rolling player form}: \texttt{form\_last3}, \texttt{form\_last5}, \texttt{avg\_points\_per\_game\_season}, \texttt{goals\_per\_game\_season}, \texttt{assists\_per\_game\_season}, \texttt{clean\_sheet\_rate\_season}, \texttt{minutes\_reliability\_season}, \texttt{points\_per\_million}.
+
+\textbf{Previous league (debutants)}: \texttt{has\_prev\_league\_data}, \texttt{prev\_adjG\_per\_90}, \texttt{prev\_adjA\_per\_90}, \texttt{prev\_league\_multiplier}, \texttt{prev\_seasons\_available}, \texttt{prev\_reliability\_avg}.
+
+\textbf{Team form}: \texttt{team\_xG\_last5}, \texttt{team\_xGA\_last5}, \texttt{team\_xG\_season\_avg}, \texttt{team\_xGA\_season\_avg}, \texttt{team\_attacking\_strength}, \texttt{team\_defensive\_strength}, \texttt{team\_cs\_probability}.
+
+\textbf{Opponent form}: \texttt{opp\_xG\_last5}, \texttt{opp\_xGA\_last5}, \texttt{opp\_attacking\_strength}, \texttt{opp\_defensive\_strength}, \texttt{opp\_cs\_probability}.
+
+\textbf{Fixture}: \texttt{current\_gw\_fdr}, \texttt{fixture\_trajectory\_score}, \texttt{home\_advantage}.
+
+\textbf{Market}: \texttt{transfers\_in}, \texttt{transfers\_out}, \texttt{selected}, \texttt{value}.
+
+\textbf{GK-specific}: \texttt{saves\_per\_game\_season}, \texttt{prev\_cs\_rate}.
+
+\textbf{DEF-specific}: \texttt{tackles\_won\_per\_90}, \texttt{interceptions\_per\_90}.
+
+\section{LightGBM Prediction Models}
+
+\subsection{Rationale for Four Separate Models}
+
+The FPL scoring system is fundamentally different by position: goalkeepers earn points primarily for saves and clean sheets, defenders for clean sheets and occasional goals, midfielders for goals, assists, and clean sheets, forwards almost exclusively for goals and assists. Training a single unified model across all positions would force it to simultaneously model four distinct output distributions with very different statistical properties, substantially increasing variance and reducing predictive power. Position-specific models are therefore trained independently with position-appropriate feature sets.
+
+\subsection{Algorithm Description}
+
+LightGBM \cite{ke2017lightgbm} builds an ensemble of decision trees as follows. Starting from a constant prediction, each successive tree $f_t$ is trained to approximate the negative gradient (pseudo-residuals) of the current ensemble's loss:
+
+\begin{equation}
+r_i^{(t)} = -\left[\frac{\partial \mathcal{L}(y_i, \hat{y}_i)}{\partial \hat{y}_i}\right]_{\hat{y}_i = \hat{y}_i^{(t-1)}}
+\end{equation}
+
+where $\mathcal{L}$ is the loss function (mean squared error in our case), $y_i$ is the true value, and $\hat{y}_i^{(t-1)}$ is the prediction from the previous $t-1$ trees. The new tree is fitted to $r_i^{(t)}$ and added to the ensemble with learning rate $\eta$:
+
+\begin{equation}
+\hat{y}_i^{(t)} = \hat{y}_i^{(t-1)} + \eta \cdot f_t(x_i)
+\end{equation}
+
+The leaf-wise growth strategy selects the leaf with maximum gain at each step:
+
+\begin{equation}
+\text{leaf}^* = \arg\max_{\text{leaf}} \left[ \frac{G_\ell^2}{H_\ell + \lambda} + \frac{G_r^2}{H_r + \lambda} - \frac{(G_\ell + G_r)^2}{H_\ell + H_r + \lambda} \right]
+\end{equation}
+
+where $G$ and $H$ are the sums of gradients and Hessians for the left ($\ell$) and right ($r$) splits, and $\lambda$ is the regularisation parameter.
+
+\subsection{Walk-Forward Cross-Validation}
+
+The temporal nature of FPL data mandates a time-aware validation strategy. Standard $k$-fold cross-validation would permit future data to inform model training, constituting leakage. Instead, a walk-forward strategy with five folds is applied:
+
+\begin{table}[h]
+\centering
+\caption{Walk-forward cross-validation scheme}
+\label{tab:walkforward_en}
+\begin{tabular}{clcl}
+\toprule
+\textbf{Fold} & \textbf{Training Set} & \textbf{Validation Set} & \textbf{Weight} \\
+\midrule
+1 & 2019--20                      & 2020--21 & 1.0 \\
+2 & 2019--20 to 2020--21          & 2021--22 & 1.5 \\
+3 & 2019--20 to 2021--22          & 2022--23 & 2.0 \\
+4 & 2019--20 to 2022--23          & 2023--24 & 2.5 \\
+5 & 2019--20 to 2023--24          & 2024--25 & 3.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Fold weights (1.0, 1.5, 2.0, 2.5, 3.0) give greater importance to more recent seasons when computing the weighted average MAE, since the statistical patterns of recent seasons are more representative of the 2025--26 target season.
+
+\subsection{Online Retraining Mechanism}
+
+After each gameweek, the actual points earned by all players are appended to the training set and all four models are retrained from scratch (full retrain, not incremental updates). This decision was made deliberately: full retraining ensures consistent, reproducible results, avoids error accumulation present in incremental learning methods, and is computationally feasible given the dataset size. The retraining time for all four models combined is under five minutes on a standard laptop CPU.
+
+\section{ILP Optimiser}
+
+\subsection{Problem Formulation}
+
+Let $x_i \in \{0, 1\}$ indicate whether player $i$ is selected in the squad, $c_i \in \{0, 1\}$ whether player $i$ is captain, and $v_i \in \{0, 1\}$ whether player $i$ is vice-captain.
+
+\textbf{Objective} (maximise):
+\begin{equation}
+\max \sum_{i} \hat{p}_i \cdot x_i + \hat{p}_{c^*} \cdot \text{cap\_mult}
+\end{equation}
+
+where $\hat{p}_i$ is the adjusted prediction for player $i$ and $\text{cap\_mult}$ is 1.0 for a standard double-points captain or 2.0 for Triple Captain.
+
+\textbf{Constraints}:
+\begin{align}
+\sum_i x_i &= 15 \quad \text{(total squad size)} \\
+\sum_{i \in \text{GK}} x_i &= 2, \quad \sum_{i \in \text{DEF}} x_i = 5, \quad \sum_{i \in \text{MID}} x_i = 5, \quad \sum_{i \in \text{FWD}} x_i = 3 \\
+\sum_i \text{price}_i \cdot x_i &\leq 100.0 \quad \text{(budget in £M)} \\
+\sum_{i \in \text{club}_j} x_i &\leq 3 \quad \forall j \in \text{clubs} \quad \text{(club limit)} \\
+\sum_i c_i = 1, \quad \sum_i v_i &= 1, \quad c_i + v_i \leq x_i \quad \forall i.
+\end{align}
+
+\subsection{Chip Management}
+
+The system automatically activates FPL chips based on configurable thresholds:
+
+\begin{itemize}
+  \item \textbf{Triple Captain}: Activated if the best captain candidate's form exceeds \texttt{TC\_THRESH = 6.17} and \texttt{TC\_FORM\_MIN = 6.0}. At most two TC chips are available per season; the second cannot be used before GW20 (\texttt{TC2\_MIN\_GW = 20}).
+  \item \textbf{Bench Boost}: Activated if the average bench prediction exceeds \texttt{BB\_THRESH = 9.0} (not before GW8, \texttt{BB\_MIN\_GW = 8}).
+  \item \textbf{Wildcard}: Activated if more than \texttt{WC\_THRESH = 5} squad members are performing below their positional average.
+  \item \textbf{Free Hit}: Activated on double gameweeks to maximise fixture coverage.
+\end{itemize}
+
+\subsection{Transfer Strategy}
+
+The system banks free transfers up to the FPL maximum of 5 (per 2025--26 rules). If the ILP recommends more transfers than the banked allowance, each additional transfer incurs a penalty of minus four points, subtracted from the gameweek score. A chip lockout prevents transfers in the first four gameweeks, and loyalty bonuses discourage excessive early churn.
+
+\section{Intelligence Pipeline}
+
+\subsection{intel\_01: FPL Live Snapshot}
+
+The \texttt{intel\_01} module fetches current player statuses from the FPL API. Each player receives an initial FPL score based on the official status field: \textit{available} maps to 100\%, \textit{doubtful} to 70\%, \textit{injured} or \textit{suspended} to 0\%.
+
+\subsection{intel\_02: Press Conference Scraping}
+
+The \texttt{intel\_02} module scrapes FPL-oriented press conference summaries from Fantasy Football Scout (FFS). For each club mentioned in the article header, the text is analysed for injury-related keywords (\textit{doubt}, \textit{injury}, \textit{out}, \textit{fitness}, \textit{concern}) and availability-related keywords (\textit{available}, \textit{fit}, \textit{fine}, \textit{ready}). The result is a per-player press conference score (0--100).
+
+A known limitation is that clubs not mentioned in article headers may be missed entirely — Newcastle United is a documented example where injured players were referenced only in-text under other clubs' sections.
+
+\subsection{intel\_03: Availability Score}
+
+The \texttt{intel\_03} module merges intel\_01 and intel\_02 signals into a unified availability score:
+
+\begin{equation}
+\texttt{availability\_pct} = 0.65 \cdot \texttt{press\_score} + 0.35 \cdot \texttt{fpl\_score} + 5 \cdot \mathbb{1}[\text{both sources agree}]
+\end{equation}
+
+The 65\% weight for press conferences reflects the empirical observation that managers' verbal statements at press conferences are typically more timely and specific than the official FPL status field.
+
+\subsection{intel\_04: Rotation Risk Score}
+
+The \texttt{intel\_04} module quantifies the risk of a player not starting the upcoming fixture. Five signals contribute to the composite score:
+
+\begin{enumerate}
+  \item \textbf{Start rate}: Fraction of recent matches in which the player started.
+  \item \textbf{Minutes volatility}: Standard deviation of minutes played across recent matches.
+  \item \textbf{Bench rate}: Fraction of recent matches where the player was a substitute.
+  \item \textbf{Recent trend}: Whether minutes are decreasing over the last three matches.
+  \item \textbf{Press rotation keywords}: Mentions of rotation-related language in press conferences.
+\end{enumerate}
+
+The final score is a normalised weighted sum of these five signals, in the range [0, 100].
+
+\subsection{intel\_05: LLM Recommendations}
+
+The \texttt{intel\_05} module calls the Gemini 2.5 Flash API with a structured prompt including the current squad, form table, fixture schedule, and intel signals. The model returns structured recommendations: captain pick, differential targets, transfer targets, and risk warnings. These are narrative in nature and are displayed through the Flask user interface.
+
+\subsection{intel\_06: Prediction Adjustment}
+
+The \texttt{intel\_06} module applies multiplicative adjustments to model predictions before optimisation:
+
+\begin{equation}
+\texttt{avail\_mult} = \frac{\texttt{availability\_pct}}{100}
+\end{equation}
+
+\begin{equation}
+\texttt{rot\_mult} = \begin{cases}
+0.40 & \text{if } \texttt{rotation\_risk} \geq 80 \\
+0.60 & \text{if } \texttt{rotation\_risk} \geq 60 \\
+0.80 & \text{if } \texttt{rotation\_risk} \geq 40 \\
+1.00 & \text{otherwise}
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\hat{p}_{\text{adjusted}} = \hat{p}_{\text{original}} \times \texttt{avail\_mult} \times \texttt{rot\_mult}
+\end{equation}
+
+These adjusted predictions $\hat{p}_{\text{adjusted}}$ are passed to the ILP optimiser instead of the raw model outputs.
+
+\subsection{intel\_07: Bench Boost Lookahead}
+
+The \texttt{intel\_07} module implements lookahead scoring for the Bench Boost chip. When the simulator anticipates activating a Bench Boost within the next few gameweeks, bench candidates receive a prediction bonus (\texttt{BENCH\_BONUS\_BB\_GW = 2.25}), incentivising the ILP to select stronger bench players before the chip is deployed.
+
+\section{Hyperparameter Optimisation}
+
+\subsection{Joint Random Search (250 Trials)}
+
+The first optimisation phase performed a joint random search over the full configuration space: ML hyperparameters (model type, tree depth, learning rate, subsampling ratios) combined with simulator parameters (TC threshold, BB threshold, FDR multipliers, captain gate, etc.). Each trial ran a complete GW1--28 season simulation, evaluating approximately 28 ILP calls per trial.
+
+The search space spanned: model type (XGBoost or LightGBM), \texttt{n\_estimators} $\in [100, 500]$, \texttt{max\_depth} $\in [2, 7]$, \texttt{learning\_rate} $\in [0.01, 0.20]$, \texttt{subsample} $\in [0.6, 1.0]$, \texttt{colsample\_bytree} $\in [0.4, 1.0]$, and twelve simulator parameters.
+
+The key finding from this phase is the dominance of LightGBM: \textbf{14 of the top 15 results} used LightGBM. The best LightGBM trial (Trial 220) scored 1,760 points, compared to the best XGBoost trial (Trial 1) with 1,716 points.
+
+\subsection{Optuna Bayesian Optimisation (100 Trials)}
+
+The second optimisation phase used Optuna \cite{akiba2019optuna} with the TPE sampler. Trial 1 was warm-started with the parameters from random search Trial 220, ensuring that Bayesian exploration began from a high-quality region of the hyperparameter space.
+
+After 100 trials, Trial 429 achieved \textbf{1,799 points} — a 39-point improvement over Trial 220. The Bayesian method converged to the optimal region faster than random search, confirming the practical benefits described by Snoek et al. \cite{snoek2012practical}.
+
+\subsection{Final Hyperparameter Table}
+
+\begin{table}[h]
+\centering
+\caption{Final system hyperparameters (Optuna Trial 429)}
+\label{tab:hyperparams_en}
+\begin{tabular}{llc}
+\toprule
+\textbf{Parameter} & \textbf{Description} & \textbf{Value} \\
+\midrule
+\texttt{MODEL\_TYPE}          & Algorithm               & lgbm   \\
+\texttt{n\_estimators}        & Number of trees         & 300    \\
+\texttt{max\_depth}           & Maximum tree depth      & 3      \\
+\texttt{learning\_rate}       & Learning rate ($\eta$)  & 0.03   \\
+\texttt{subsample}            & Row subsampling ratio   & 0.9    \\
+\texttt{colsample\_bytree}    & Column subsampling      & 0.6    \\
+\texttt{num\_leaves}          & Maximum leaves          & 31     \\
+\texttt{min\_child\_samples}  & Minimum samples per leaf & 30    \\
+\midrule
+\texttt{FDR\_MULT}            & FDR weight (MID/FWD)    & 0.028  \\
+\texttt{FDR\_MULT\_DEF}       & FDR weight (GK/DEF)     & 0.084  \\
+\texttt{OWN\_BOOST\_GW1}      & GW1 ownership bonus     & 0.213  \\
+\texttt{TC\_THRESH}           & Triple Captain threshold & 6.17  \\
+\texttt{BB\_THRESH}           & Bench Boost threshold   & 9.0    \\
+\texttt{DGW\_PRED\_MULT}      & DGW prediction boost    & 2.0    \\
+\texttt{BENCH\_BONUS\_NORMAL} & Bench candidate bonus   & 2.71   \\
+\texttt{CAP\_FORM\_GATE}      & Captain minimum form    & 6.57   \\
+\texttt{WC\_THRESH}           & Wildcard trigger        & 5      \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Stage 9: LLM Narrative Layer}
+
+After the simulation, Stage 9 calls the Claude API (model \texttt{claude-sonnet-4-20250514}, \texttt{max\_tokens=1200}, \texttt{temperature=0}) for each gameweek, generating a narrative explanation of each squad decision. The prompt includes the selected squad, player form and predictions, fixture difficulty ratings, transfer decisions, and chip activations. The output is stored as a JSON file (\texttt{models/stage9\_explanations.json}) and displayed through the Flask interface.
+
+\begin{lstlisting}[language=Python, caption=Stage 9 Claude API call for narrative generation]
+import anthropic
+
+client = anthropic.Anthropic(api_key=api_key)
+message = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1200,
+    temperature=0,
+    messages=[{"role": "user", "content": prompt}]
+)
+narrative = message.content[0].text
+\end{lstlisting}
+
+The narrative layer is explanatory only — decisions are made by the ILP optimiser informed by the intelligence pipeline. The LLM does not make selection decisions; it explains them post-hoc in natural language.

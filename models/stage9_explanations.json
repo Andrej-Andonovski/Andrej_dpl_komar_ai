@@ -1,0 +1,484 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "source": "C:\\Users\\Andrej\\Desktop\\fpl ai\\data\\intel\\season_simulation.json",
+  "total_actual_pts": 1799,
+  "total_predicted_pts": 2174.0,
+  "gameweeks": [
+    {
+      "gw": 1,
+      "actual_pts": 79,
+      "predicted_pts": 115.8,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his affordable 4.0 price point while still offering a reasonable predicted score of 8.4 points.",
+        "dos Santos Magalhães": "Chosen for his high predicted score of 10.9 points, representing strong expected returns from Arsenal's defense.",
+        "Timber": "Selected as an Arsenal defender with a predicted score of 8.0 points at a reasonable 6.3 price point.",
+        "van Dijk": "Picked for his solid predicted score of 9.1 points from Liverpool's defense at a competitive 6.2 price.",
+        "Guéhi": "Selected for his excellent predicted score of 9.4 points at just 5.2 price, offering outstanding value from Manchester City's defense.",
+        "van de Ven": "Chosen for his budget-friendly 4.4 price while still contributing a predicted 6.7 points from Tottenham's defense.",
+        "Semenyo": "Selected for his outstanding predicted score of 13.7 points, the highest among midfielders in the squad.",
+        "Borges Fernandes": "Picked for his strong predicted score of 11.9 points as Manchester United's premium midfielder option.",
+        "Junqueira de Jesus": "Selected for his high predicted score of 11.8 points as Chelsea's attacking forward option.",
+        "Ekitiké": "Chosen for his solid predicted score of 10.2 points as Liverpool's forward at 9.1 price.",
+        "Haaland": "Selected for his league-leading predicted score of 15.8 points as Manchester City's premium striker."
+      },
+      "captain_note": "Haaland was chosen as captain due to his highest predicted score of 15.8 points, maximizing the potential returns from the captaincy armband."
+    },
+    {
+      "gw": 2,
+      "actual_pts": 83,
+      "predicted_pts": 120.0,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his 9.9 predicted points offering strong value at just 4.0 price point.",
+        "dos Santos Magalhães": "Chosen for his high 11.1 predicted points despite the premium 6.0 price, indicating strong expected returns from Arsenal's defense.",
+        "Timber": "Selected based on his 9.7 predicted points at a reasonable 5.5 price, providing good value from Arsenal's defensive assets.",
+        "van Dijk": "Picked for his solid 10.2 predicted points from Liverpool's defense at 6.0 price, offering reliable returns from a premium defender.",
+        "Guéhi": "Selected for his excellent 10.3 predicted points at just 4.5 price, representing outstanding value from Manchester City's defense.",
+        "van de Ven": "Chosen for his 8.9 predicted points at the budget-friendly 4.5 price, providing necessary defensive coverage within budget constraints.",
+        "Semenyo": "Selected for his impressive 12.3 predicted points at 7.0 price, offering strong midfield returns from Manchester City.",
+        "Borges Fernandes": "Picked for his 11.6 predicted points despite the premium 9.0 price, providing reliable midfield production from Manchester United.",
+        "Junqueira de Jesus": "Selected for his 11.5 predicted points at 7.5 price, offering good value as a forward option from Chelsea.",
+        "Ekitiké": "Chosen for his 10.8 predicted points at 8.5 price, providing solid forward returns from Liverpool's attack.",
+        "Haaland": "Selected for his 13.7 predicted points despite the premium 14.0 price, representing the highest predicted scorer in the forward position."
+      },
+      "captain_note": "Haaland was chosen as captain due to his highest predicted points of 13.7, making him the optimal choice for the double points multiplier."
+    },
+    {
+      "gw": 3,
+      "actual_pts": 63,
+      "predicted_pts": 113.6,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his budget-friendly 4.0 price point while still offering a reasonable predicted score of 9.8 points.",
+        "dos Santos Magalhães": "Chosen for his strong predicted score of 10.9 points, representing excellent value at 6.0 price point for an Arsenal defender.",
+        "Timber": "Selected for his solid predicted return of 9.9 points at a competitive 5.5 price for an Arsenal defensive asset.",
+        "van Dijk": "Picked for his reliable predicted score of 10.2 points and proven consistency as Liverpool's premium defensive option at 6.0.",
+        "Guéhi": "Selected for his exceptional predicted score of 10.2 points at just 4.5 price, offering outstanding value as a budget defender.",
+        "van de Ven": "Chosen as a budget-enabling defender at 4.5 price while still contributing a predicted 9.1 points to the team total.",
+        "Dowman": "Selected as a budget midfielder at 4.5 price to enable premium players elsewhere in the squad despite modest predicted returns.",
+        "Semenyo": "Picked for his high predicted score of 12.4 points, representing strong value at 7.1 price for a Manchester City midfielder.",
+        "Borges Fernandes": "Selected for his consistent predicted returns of 11.6 points as Manchester United's premium midfield option at 9.0.",
+        "Junqueira de Jesus": "Chosen for his strong predicted score of 11.7 points at 7.5 price, offering good value as Chelsea's attacking option.",
+        "Ekitiké": "Selected for his solid predicted return of 10.8 points at 8.6 price as Liverpool's forward option."
+      },
+      "captain_note": "Junqueira de Jesus was selected as captain due to his highest predicted score of 11.7 points among the starting eleven players."
+    },
+    {
+      "gw": 4,
+      "actual_pts": 98,
+      "predicted_pts": 122.7,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his budget-friendly 4.0 price point while still offering a solid predicted return of 10.0 points.",
+        "dos Santos Magalhães": "Chosen for his strong predicted score of 11.1 points, representing excellent value from Arsenal's defense.",
+        "Timber": "Selected for his reliable 10.3 predicted points from Arsenal's solid defensive setup at a reasonable 5.6 price.",
+        "van Dijk": "Picked for his consistent 10.4 predicted points from Liverpool's strong defensive foundation.",
+        "Guéhi": "Selected for his exceptional predicted score of 12.7 points at just 4.5 price, offering outstanding value from Manchester City's defense.",
+        "van de Ven": "Chosen for his budget-friendly 4.6 price while contributing 9.2 predicted points from Tottenham's defense.",
+        "Semenyo": "Selected for his strong predicted return of 12.2 points from Manchester City's attacking midfield options.",
+        "Borges Fernandes": "Picked for his 11.4 predicted points despite the premium 9.0 price, representing Manchester United's key creative outlet.",
+        "Junqueira de Jesus": "Chosen for his solid 11.6 predicted points from Chelsea's forward line at a reasonable 7.6 price point.",
+        "Ekitiké": "Selected for his 10.8 predicted points from Liverpool's attacking options at 8.7 price.",
+        "Haaland": "Picked for his reliable 13.1 predicted points as Manchester City's premium striker option despite the high 14.1 price."
+      },
+      "captain_note": "Haaland was chosen as captain due to his highest predicted score of 13.1 points among all selected players, maximizing the captaincy multiplier potential."
+    },
+    {
+      "gw": 5,
+      "actual_pts": 62,
+      "predicted_pts": 114.7,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the goalkeeper with a strong predicted score of 10.1 points at an affordable 4.0 price point.",
+        "dos Santos Magalhães": "Chosen for his high predicted score of 10.8 points, offering excellent value as an Arsenal defender.",
+        "Timber": "Selected as an Arsenal defender with a solid predicted score of 10.1 points at a reasonable 5.7 price.",
+        "van Dijk": "Picked for his strong predicted score of 10.5 points as a premium Liverpool defender at 6.0 price.",
+        "Guéhi": "Selected for his predicted score of 9.8 points while providing excellent value at just 4.6 price as a Manchester City defender.",
+        "van de Ven": "Chosen for his predicted score of 9.4 points at an attractive 4.6 price point as a Tottenham defender.",
+        "Semenyo": "Selected for his high predicted score of 11.9 points as a Manchester City midfielder priced at 7.4.",
+        "Borges Fernandes": "Picked for his strong predicted score of 11.6 points as a premium Manchester United midfielder at 9.0 price.",
+        "Ekitiké": "Selected as a Liverpool forward despite a lower predicted score of 5.3 points, likely due to positional constraints and 8.8 price point.",
+        "Junqueira de Jesus": "Chosen for his excellent predicted score of 11.8 points as a Chelsea forward at 7.7 price, offering strong value.",
+        "Haaland": "Selected for his high predicted score of 13.5 points as the premium Manchester City striker at 14.1 price."
+      },
+      "captain_note": "Haaland was chosen as captain due to his highest predicted score of 13.5 points among all selected players."
+    },
+    {
+      "gw": 6,
+      "actual_pts": 101,
+      "predicted_pts": 96.9,
+      "chip": "tc1",
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 7,
+      "actual_pts": 70,
+      "predicted_pts": 83.8,
+      "chip": null,
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 8,
+      "actual_pts": 88,
+      "predicted_pts": 73.4,
+      "chip": "bb1",
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper with a solid predicted score of 6.2 points at an affordable 4.0 price point.",
+        "dos Santos Magalhães": "Chosen for his high predicted score of 7.6 points, offering strong attacking potential from defense.",
+        "Timber": "Selected as a reliable Arsenal defender with a predicted 6.1 points at a reasonable 5.8 price.",
+        "van Dijk": "Picked for his consistent defensive returns with a predicted 6.6 points from Liverpool's backline.",
+        "Guéhi": "Chosen as an excellent value option at 4.8 price with a predicted 5.7 points from Manchester City's defense.",
+        "Alderete": "Selected as the new transfer with a predicted 5.8 points at just 4.1 price, offering exceptional value.",
+        "Semenyo": "Chosen for his strong predicted score of 8.2 points, representing good attacking potential from midfield.",
+        "Borges Fernandes": "Selected despite a low predicted score of 3.4, likely due to positional constraints and premium status.",
+        "Nascimento Rodrigues": "Picked as a forward option with predicted 5.8 points at a mid-range 6.0 price point.",
+        "Junqueira de Jesus": "Selected for his predicted 6.8 points, offering decent forward returns at 7.7 price.",
+        "Haaland": "Chosen as the premium forward option with the highest predicted score of 11.3 points despite his 14.4 price tag."
+      },
+      "captain_note": "Haaland was selected as captain due to having the highest predicted score of 11.3 points among all players in the squad."
+    },
+    {
+      "gw": 9,
+      "actual_pts": 47,
+      "predicted_pts": 68.4,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper with a predicted score of 5.8 points, providing adequate coverage at a budget-friendly 4.0 price point.",
+        "Timber": "Chosen for his strong predicted return of 5.9 points matching his 5.9 price, offering excellent value from Arsenal's defense.",
+        "van Dijk": "Selected despite a modest 5.6 predicted score due to Liverpool's defensive reliability and his premium defender status at 6.1 price.",
+        "Guéhi": "Picked for his solid 5.0 predicted points at an affordable 4.9 price, providing budget-conscious defensive coverage from Manchester City.",
+        "dos Santos Magalhães": "Selected as part of Arsenal's defensive double-up despite a lower 3.6 predicted score, likely due to positional requirements and fixture considerations.",
+        "Zubimendi Ibáñez": "Chosen for his 5.2 predicted points at a reasonable 5.5 price, offering midfield stability from Arsenal's setup.",
+        "Semenyo": "Selected as a premium midfield option with 7.3 predicted points, justifying his 8.0 price tag from Manchester City's attacking potential.",
+        "Borges Fernandes": "Picked despite underperforming predictions (6.2 vs 9.0 price) due to his premium midfielder status and Manchester United's attacking threat.",
+        "Nascimento Rodrigues": "Selected for his strong 6.8 predicted points at 6.1 price, offering excellent value as Brentford's attacking focal point.",
+        "Haaland": "Chosen as the premium forward option with 11.6 predicted points, justifying his hefty 14.6 price as Manchester City's primary goal threat.",
+        "Woltemade": "Selected as the new transfer with 5.4 predicted points at 7.3 price, providing forward depth from Newcastle's attacking options."
+      },
+      "captain_note": "Haaland was selected as captain due to his highest predicted score of 11.6 points among all players, maximizing the potential return from the captaincy multiplier."
+    },
+    {
+      "gw": 10,
+      "actual_pts": 74,
+      "predicted_pts": 78.6,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the goalkeeper option due to his budget-friendly 4.0 price point allowing funds to be allocated elsewhere in the squad.",
+        "dos Santos Magalhães": "Chosen for his high predicted score of 8.6 points, offering strong attacking potential from Arsenal's defense.",
+        "Timber": "Selected for his solid predicted return of 7.1 points at a reasonable 6.0 price from Arsenal's defensive line.",
+        "van Dijk": "Picked for his consistent predicted score of 6.0 points at good value from Liverpool's reliable defense.",
+        "Guéhi": "Chosen as an affordable defensive option at 4.9 price with a decent predicted return of 5.4 points from Manchester City.",
+        "Zubimendi Ibáñez": "Selected for his predicted 6.4 points at an attractive 5.5 price point from Arsenal's midfield.",
+        "Semenyo": "Chosen for his high predicted score of 8.9 points, representing strong midfield value from Manchester City.",
+        "Borges Fernandes": "Selected despite a lower predicted score due to his premium status and potential for high returns from Manchester United.",
+        "Nascimento Rodrigues": "Picked as a budget forward option at 6.1 price with a solid predicted return of 6.2 points from Brentford.",
+        "Haaland": "Selected for his premium status and high ceiling despite a predicted score of 11.9 points from Manchester City's attack.",
+        "Woltemade": "Chosen as a mid-priced forward option at 7.4 with a predicted return of 6.6 points from Newcastle."
+      },
+      "captain_note": "Haaland was selected as captain due to his premium forward status and highest potential for explosive returns despite the predicted score being lower than his price suggests."
+    },
+    {
+      "gw": 11,
+      "actual_pts": 46,
+      "predicted_pts": 64.1,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his budget-friendly 4.0 price point while offering a predicted 4.8 points.",
+        "dos Santos Magalhães": "Chosen for his strong predicted score of 6.3 points, representing excellent value from Arsenal's defense.",
+        "Timber": "Selected as an Arsenal defender with a solid predicted return of 4.9 points at a reasonable 6.1 price.",
+        "Hartman": "Picked as a budget defender at 4.0 price with a predicted 4.8 points, likely filling a positional constraint.",
+        "van Dijk": "Selected as Liverpool's premium defender despite a lower predicted score of 4.0, likely for his consistent floor and captaincy potential.",
+        "Lomba Neto": "Chosen as a Chelsea midfielder with a predicted 5.0 points at 7.0 price, offering mid-range value.",
+        "Semenyo": "Selected for his high predicted score of 6.0 points as Manchester City's attacking midfielder option.",
+        "Borges Fernandes": "Picked as Manchester United's premium midfielder with a predicted 5.4 points despite his high 8.9 price.",
+        "Nascimento Rodrigues": "Selected as Brentford's forward with a strong predicted 5.4 points at an affordable 6.2 price point.",
+        "Haaland": "Chosen as the premium forward option with the highest predicted score of 12.0 points at 14.8 price.",
+        "Woltemade": "Selected as Newcastle's forward with a predicted 5.4 points, providing attacking coverage at 7.5 price."
+      },
+      "captain_note": "Haaland was selected as captain due to his highest predicted score of 12.0 points among all players in the squad."
+    },
+    {
+      "gw": 12,
+      "actual_pts": 45,
+      "predicted_pts": 58.0,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his 4.3 predicted points at the minimum price point of 4.0, providing essential positional coverage.",
+        "Hartman": "Chosen for his strong 4.8 predicted points at the budget price of 4.0, offering excellent value in defense.",
+        "Chalobah": "Picked as the new transfer with a 4.4 predicted points return at 5.1 price, filling a defensive slot after replacing dos Santos Magalhães.",
+        "van Dijk": "Selected for his reliable 5.6 predicted points, justifying his premium 5.9 price tag as a consistent defensive asset.",
+        "Guéhi": "Included despite a lower 3.8 predicted score due to positional requirements and his 5.1 price fitting the squad structure.",
+        "Zubimendi Ibáñez": "Chosen for his 4.3 predicted points at a reasonable 5.4 price, providing midfield balance.",
+        "Lomba Neto": "Selected for his strong 6.0 predicted points at 7.1 price, offering good midfield value.",
+        "Borges Fernandes": "Picked for his 5.7 predicted points despite the premium 8.9 price, maintaining midfield quality.",
+        "Nascimento Rodrigues": "Chosen for his solid 5.4 predicted points at 6.2 price, providing forward depth.",
+        "Haaland": "Selected despite a lower 8.7 predicted score due to his premium status and potential for explosive returns at 14.8 price.",
+        "Woltemade": "Included for his 5.0 predicted points at 7.5 price, completing the forward line requirements."
+      },
+      "captain_note": "Lomba Neto was chosen as captain due to his highest predicted points of 6.0 among the starting eleven, maximizing the captaincy multiplier potential."
+    },
+    {
+      "gw": 13,
+      "actual_pts": 61,
+      "predicted_pts": 56.5,
+      "chip": null,
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 14,
+      "actual_pts": 60,
+      "predicted_pts": 54.6,
+      "chip": null,
+      "player_explanations": {
+        "Dúbravka": "Selected as the starting goalkeeper due to his budget-friendly 4.0 price point while maintaining a reasonable predicted score of 4.2 points.",
+        "Timber": "Chosen for his solid predicted return of 4.7 points at a mid-range defensive price of 6.3, offering good value in the Arsenal backline.",
+        "Hartman": "Selected as an enabler defender at the minimum 4.0 price point while still contributing a predicted 3.9 points from Burnley's defense.",
+        "Chalobah": "Picked for his strong predicted score of 4.6 points at a reasonable 5.1 price, providing Chelsea defensive coverage.",
+        "Muñoz Mejía": "Brought in as a free transfer for his excellent predicted return of 5.4 points and delivered 14 actual points, justifying his 5.9 price tag.",
+        "van Dijk": "Selected for his premium predicted score of 6.0 points matching his 6.0 price, representing Liverpool's defensive reliability.",
+        "Zubimendi Ibáñez": "Chosen as a budget midfield option at 5.4 price with a predicted 4.0 return, allowing funds to be allocated elsewhere.",
+        "Lomba Neto": "Selected for his solid predicted score of 5.3 points at 7.1 price, providing Chelsea midfield coverage with decent expected returns.",
+        "Borges Fernandes": "Picked for his high predicted score of 7.1 points despite the premium 8.9 price, representing Manchester United's key attacking midfielder.",
+        "Haaland": "Selected despite his massive 14.9 price tag due to his explosive potential, delivering 14 actual points even with a modest 4.5 prediction.",
+        "Woltemade": "Chosen for his reasonable predicted return of 5.0 points at 7.4 price, offering Newcastle attacking coverage at a mid-range forward price."
+      },
+      "captain_note": "Borges Fernandes was selected as captain due to his highest predicted score of 7.1 points among all players, maximizing the expected captaincy returns."
+    },
+    {
+      "gw": 15,
+      "actual_pts": 61,
+      "predicted_pts": 61.8,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as goalkeeper with a predicted score of 5.2 points, providing solid value at £5.7m price point.",
+        "Chalobah": "Chosen as a defensive option with a predicted 4.3 points at an affordable £5.2m price, fitting budget constraints.",
+        "Muñoz Mejía": "Selected for his predicted 5.3 points at £6.0m, offering decent defensive value despite the blank return.",
+        "van Dijk": "Picked for his strong predicted score of 6.1 points, justifying his £6.0m price tag as a premium defender.",
+        "Lomba Neto": "Selected despite a modest 4.9 predicted points due to positional requirements and £7.2m price point.",
+        "Semenyo": "Chosen for his 5.2 predicted points at £7.8m, providing midfield coverage with reasonable expected returns.",
+        "Borges Fernandes": "Selected for his high predicted score of 6.2 points, delivering exceptional actual returns of 18 points.",
+        "Guimarães Rodriguez Moura": "Picked for his predicted 5.0 points at £6.7m as a new transfer addition to strengthen midfield options.",
+        "Kudus": "Selected for his 5.4 predicted points at £6.5m price, offering good value as a recent transfer acquisition.",
+        "Haaland": "Chosen for his premium status and predicted 6.7 points despite the high £14.9m price tag.",
+        "Woltemade": "Selected for his strong predicted score of 7.5 points at £7.4m, offering excellent forward value."
+      },
+      "captain_note": "Haaland was captained as the premium forward option with the highest predicted ceiling despite a modest 6.7 predicted points."
+    },
+    {
+      "gw": 16,
+      "actual_pts": 82,
+      "predicted_pts": 58.1,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the starting goalkeeper with a predicted score of 5.3 points, providing reliable coverage in the premium goalkeeper slot.",
+        "Hartman": "Chosen as a budget defender at 4.0 price with a solid predicted return of 4.4 points, offering excellent value for money.",
+        "Chalobah": "Selected for his 4.8 predicted points at a reasonable 5.2 price point, providing defensive stability from Chelsea.",
+        "Andersen": "Brought in as a free transfer with the highest predicted score among defenders at 6.0 points for just 4.5 price.",
+        "van Dijk": "Selected despite a modest 4.6 predicted score due to his premium status and Liverpool's defensive reliability.",
+        "Lomba Neto": "Chosen as a Chelsea midfielder with 4.8 predicted points at 7.2 price, filling the midfield requirement.",
+        "Semenyo": "Selected as a Manchester City midfielder with 4.6 predicted points, benefiting from City's attacking potential.",
+        "Borges Fernandes": "Picked for his strong 7.4 predicted score as Manchester United's key creative midfielder at 9.0 price.",
+        "Guimarães Rodriguez Moura": "Selected as Newcastle's midfield option with 5.2 predicted points at a reasonable 6.8 price point.",
+        "Kudus": "Chosen as Tottenham's attacking midfielder with 5.2 predicted points for 6.5, providing good value in midfield.",
+        "Haaland": "Selected as the premium forward despite a lower predicted score of 5.9, maintaining his essential status in most squads."
+      },
+      "captain_note": "Borges Fernandes was chosen as captain with the highest predicted score of 7.4 points among all selected players."
+    },
+    {
+      "gw": 17,
+      "actual_pts": 65,
+      "predicted_pts": 106.4,
+      "chip": "wc1",
+      "player_explanations": {
+        "Donnarumma": "Selected as goalkeeper with the highest predicted score of 10.0 points among available options.",
+        "Chalobah": "Chosen as a budget defender at £5.4m offering decent predicted returns of 8.2 points.",
+        "Andersen": "Selected as the most cost-effective defender at £4.6m with a strong predicted score of 9.0 points.",
+        "van Dijk": "Picked for his high predicted score of 9.8 points despite premium pricing at £5.9m.",
+        "Lomba Neto": "Selected as a mid-priced midfielder at £7.3m with solid predicted returns of 8.8 points.",
+        "Semenyo": "Chosen for his excellent predicted score of 9.9 points at £7.6m pricing.",
+        "Borges Fernandes": "Selected for his outstanding predicted score of 13.7 points, the highest among all midfielders.",
+        "Guimarães Rodriguez Moura": "Picked for his strong predicted score of 9.2 points at reasonable £7.0m pricing.",
+        "Kudus": "Selected as good value at £6.5m with a predicted score of 8.9 points.",
+        "Haaland": "Chosen despite high cost at £15.0m for his premium forward status and predicted 10.7 points.",
+        "Woltemade": "Selected as an affordable forward option at £7.5m with decent predicted returns of 8.3 points."
+      },
+      "captain_note": "Borges Fernandes was captained due to having the highest predicted score of 13.7 points among all selected players."
+    },
+    {
+      "gw": 18,
+      "actual_pts": 38,
+      "predicted_pts": 62.3,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the primary goalkeeper option with a solid predicted score of 5.6 points for this gameweek.",
+        "Tarkowski": "Brought in as a new transfer with a reasonable predicted score of 5.3 points at a mid-range price of 5.5m.",
+        "Senesi Barón": "Chosen as an affordable defensive option at 4.9m price point to enable budget allocation elsewhere in the squad.",
+        "Andersen": "Selected for his strong predicted score of 5.6 points, offering good value at 4.6m price.",
+        "van Dijk": "Included for his high predicted score of 6.2 points despite the premium 5.9m price tag.",
+        "Lomba Neto": "Selected as a mid-priced midfielder option at 7.3m with a predicted score of 5.2 points.",
+        "Semenyo": "Chosen for his predicted score of 5.7 points as a Manchester City midfielder asset.",
+        "Borges Fernandes": "Selected as the premium midfielder option with a predicted score of 5.8 points despite the high 9.3m price.",
+        "Guimarães Rodriguez Moura": "Included as a Newcastle midfielder with a predicted score of 4.8 points at 7.0m price.",
+        "Haaland": "Selected as the premium forward option with the highest predicted score of 9.6 points in the starting eleven.",
+        "Woltemade": "Chosen as a mid-priced forward option at 7.3m with a predicted score of 4.7 points."
+      },
+      "captain_note": "Haaland was captained due to having the highest predicted score of 9.6 points among all starting players."
+    },
+    {
+      "gw": 19,
+      "actual_pts": 50,
+      "predicted_pts": 56.8,
+      "chip": null,
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 20,
+      "actual_pts": 38,
+      "predicted_pts": 59.2,
+      "chip": null,
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 21,
+      "actual_pts": 100,
+      "predicted_pts": 62.3,
+      "chip": "tc2",
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 22,
+      "actual_pts": 42,
+      "predicted_pts": 66.0,
+      "chip": null,
+      "player_explanations": {
+        "Kelleher": "Selected as the goalkeeper with a predicted score of 6.6 points, providing decent value at £4.5m.",
+        "Tarkowski": "Chosen as a defensive option despite a lower predicted score of 4.4, likely due to positional requirements and price point at £5.7m.",
+        "Andersen": "Selected for his solid predicted return of 4.5 points at an affordable £4.6m price point.",
+        "van Dijk": "Picked for his strong predicted score of 5.9 points, matching his premium price of £5.9m.",
+        "Garner": "Selected for his excellent predicted score of 7.7 points at a reasonable £5.1m price, offering strong value.",
+        "Semenyo": "Chosen despite a modest predicted score of 5.4 points, likely due to his premium positioning at £7.6m.",
+        "Borges Fernandes": "Selected as a premium midfielder option at £9.1m despite a predicted score of 5.7 points.",
+        "Guimarães Rodriguez Moura": "Picked for his predicted return of 5.2 points at £7.1m, providing midfield coverage.",
+        "Nascimento Rodrigues": "Selected for his solid predicted score of 6.1 points at £7.0m, offering good forward value.",
+        "Woltemade": "Chosen as a forward option at £7.3m despite a lower predicted score of 4.5 points, likely for positional balance.",
+        "Haaland": "Selected as the premium forward option with the highest predicted score of 9.9 points, justifying his £15.1m price tag."
+      },
+      "captain_note": "Garner was chosen as captain due to his highest predicted score of 7.7 points among all selected players."
+    },
+    {
+      "gw": 23,
+      "actual_pts": 47,
+      "predicted_pts": 66.8,
+      "chip": "bb2",
+      "player_explanations": {},
+      "captain_note": ""
+    },
+    {
+      "gw": 24,
+      "actual_pts": 56,
+      "predicted_pts": 49.5,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the starting goalkeeper with a predicted score of 4.9 points, providing the required positional coverage in goal.",
+        "dos Santos Magalhães": "Brought in as a free transfer with a strong predicted score of 5.1 points and premium price point of 6.9, justifying his inclusion in the starting defense.",
+        "Tarkowski": "Selected for his solid predicted return of 5.2 points at a reasonable 5.8 price point, offering good value in defense.",
+        "Andersen": "Chosen as an affordable defensive option at 4.6 price with a 4.0 predicted score, providing budget-friendly squad balance.",
+        "van Dijk": "Included for his reliable 5.0 predicted points at 5.9 price, representing consistent defensive value.",
+        "Ayari": "Selected as a budget midfield option at 4.8 price with 4.1 predicted points, enabling funds to be allocated elsewhere in the squad.",
+        "Garner": "Chosen for his 4.7 predicted score at 5.2 price point, providing solid midfield value.",
+        "Borges Fernandes": "Selected as the premium midfield option with the highest predicted score of 7.4 points, justifying his 9.3 price tag.",
+        "Semenyo": "Included despite a 0.0 predicted score, likely due to positional requirements and his 7.7 price point fitting the squad structure.",
+        "Nascimento Rodrigues": "Selected for his 5.2 predicted points at 7.2 price, offering good forward value.",
+        "Woltemade": "Chosen as a forward option with 4.0 predicted points at 7.2 price, completing the required attacking positions."
+      },
+      "captain_note": "Borges Fernandes was selected as captain due to having the highest predicted score of 7.4 points among all starting players."
+    },
+    {
+      "gw": 25,
+      "actual_pts": 62,
+      "predicted_pts": 59.9,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the starting goalkeeper with a predicted score of 4.3 points, representing the best available option in goal.",
+        "dos Santos Magalhães": "Chosen for his exceptional predicted score of 9.9 points, the highest among all defenders in the squad.",
+        "Tarkowski": "Selected as a budget-friendly defender at £5.8m with a solid predicted return of 5.1 points.",
+        "Andersen": "Picked as the cheapest defender option at £4.6m while still offering a reasonable predicted score of 4.3 points.",
+        "van Dijk": "Included as a premium defender option at £5.9m despite a modest predicted score of 4.2 points.",
+        "Garner": "Selected as a mid-priced midfielder at £5.2m with a predicted score of 4.6 points for squad balance.",
+        "Semenyo": "Chosen despite his high price of £7.8m for his predicted return of 5.7 points from Manchester City.",
+        "Borges Fernandes": "Selected as the premium midfielder option with a strong predicted score of 7.0 points justifying his £9.5m price tag.",
+        "Guimarães Rodriguez Moura": "Picked for his excellent predicted score of 4.4 points at a reasonable £7.2m price point.",
+        "Nascimento Rodrigues": "Selected as a forward option at £7.2m with a predicted return of 4.2 points.",
+        "Junqueira de Jesus": "Brought in as the new transfer with a promising predicted score of 6.1 points at £7.3m."
+      },
+      "captain_note": "Borges Fernandes was chosen as captain due to his highest predicted score of 7.0 points among all starting players."
+    },
+    {
+      "gw": 26,
+      "actual_pts": 60,
+      "predicted_pts": 82.8,
+      "chip": "fh2",
+      "player_explanations": {
+        "Donnarumma": "Selected as goalkeeper with a predicted score of 5.7 points, providing reliable coverage for Manchester City's defensive assets.",
+        "dos Santos Magalhães": "Chosen for his exceptional predicted score of 14.1 points, the highest among all defenders in the squad.",
+        "Timber": "Selected with a strong predicted score of 10.2 points while offering good value at £6.4m for Arsenal's defensive coverage.",
+        "Lacroix": "Picked as an affordable defensive option at £5.1m with a predicted score of 5.3 points to complete the defensive structure.",
+        "Semenyo": "Selected despite underperforming predictions due to his actual strong form, delivering 14 points against a predicted 6.4.",
+        "Borges Fernandes": "Chosen as a premium midfielder with a predicted score of 7.3 points, justifying his £9.7m price tag for Manchester United coverage.",
+        "Santos Carneiro da Cunha": "Selected with a predicted score of 6.0 points at £8.0m, providing Manchester United midfield representation.",
+        "Gomes da Silva": "Picked as budget midfield coverage at £5.3m with a predicted score of 5.2 points for Wolverhampton.",
+        "Havertz": "Selected with the highest forward predicted score of 9.8 points, representing Arsenal's attacking potential.",
+        "Junqueira de Jesus": "Chosen with a predicted score of 5.9 points at £7.5m, providing Chelsea forward coverage in the lineup.",
+        "Haaland": "Selected despite a modest predicted score of 6.8 points due to his premium status and Manchester City attacking representation."
+      },
+      "captain_note": "Borges Fernandes was captained with a predicted score of 7.3 points as the highest-scoring midfielder option available for the double points multiplier."
+    },
+    {
+      "gw": 27,
+      "actual_pts": 47,
+      "predicted_pts": 60.3,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the goalkeeper with a solid predicted score of 4.7 points, providing reliable coverage in the premium price bracket.",
+        "dos Santos Magalhães": "Chosen for his strong predicted return of 6.2 points as Arsenal's defensive asset in a favorable fixture.",
+        "Tarkowski": "Selected as a budget-friendly defender at 5.8m with a decent predicted score of 5.0 points for Everton.",
+        "Andersen": "Picked as the cheapest defensive option at 4.6m while still offering a predicted 3.6 points from Fulham's backline.",
+        "van Dijk": "Selected for his high predicted score of 5.5 points as Liverpool's premium defensive asset with strong attacking threat.",
+        "Rogers": "Brought in as a new transfer with a predicted 5.6 points at 7.6m, offering mid-range value from Aston Villa.",
+        "Palmer": "Selected as the premium midfielder with the highest predicted score of 8.4 points, justifying his 10.5m price tag for Chelsea.",
+        "Garner": "Chosen as a budget midfielder at 5.2m with a predicted 4.7 points, providing essential squad balance for Everton.",
+        "Borges Fernandes": "Selected despite underperforming predictions due to his premium status and potential for high returns from Manchester United.",
+        "Junqueira de Jesus": "Picked for his strong predicted score of 8.0 points as Chelsea's attacking asset at 7.6m price point.",
+        "Woltemade": "Selected as a budget forward option at 6.9m to enable premium spending elsewhere, despite low predicted returns."
+      },
+      "captain_note": "Junqueira de Jesus was captained due to his highest predicted score of 8.0 points among the starting eleven, maximizing potential returns."
+    },
+    {
+      "gw": 28,
+      "actual_pts": 55,
+      "predicted_pts": 58.2,
+      "chip": null,
+      "player_explanations": {
+        "Donnarumma": "Selected as the starting goalkeeper with a predicted score of 4.3 points, providing reliable coverage in the premium goalkeeper slot.",
+        "dos Santos Magalhães": "Chosen for his strong predicted return of 5.4 points, offering excellent value from Arsenal's defense.",
+        "Tarkowski": "Selected as a budget defensive option at 5.7m with a predicted 4.2 points, fulfilling the defensive positional requirement cost-effectively.",
+        "van Dijk": "Picked for his high predicted score of 7.7 points, representing the strongest expected return among the defensive options.",
+        "Rice": "Brought in as a free transfer with a predicted 5.0 points, providing midfield coverage from Arsenal at 7.6m price point.",
+        "Rogers": "Selected for his strong predicted return of 6.3 points at 7.7m, offering good value in the midfield position.",
+        "Palmer": "Chosen for his premium midfield status at 10.6m with a predicted 6.5 points, justifying the high price point investment.",
+        "Borges Fernandes": "Selected for his predicted 6.1 points as a premium midfield option, providing consistent returns at 9.8m.",
+        "Nascimento Rodrigues": "Picked for his predicted 4.9 points at 7.0m, offering reasonable forward coverage from Brentford.",
+        "Junqueira de Jesus": "Selected for his 4.5 predicted points at 7.7m, providing forward depth from Chelsea's attacking options.",
+        "Woltemade": "Chosen as a budget forward option at 6.9m with 3.4 predicted points, fulfilling the forward positional requirement economically."
+      },
+      "captain_note": "Palmer was selected as captain due to his premium status and predicted 6.5 points, representing one of the highest expected returns in the starting eleven."
+    }
+  ]
+}

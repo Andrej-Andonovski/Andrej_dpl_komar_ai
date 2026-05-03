@@ -1,0 +1,2359 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "sim_start_gw": 1,
+  "gameweeks": [
+    {
+      "gw": 1,
+      "real_gw": 1,
+      "chip": null,
+      "predicted_score": 63.0,
+      "simulated_actual": 90.8,
+      "real_total": 37.0,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Wissa",
+      "penalty": 0,
+      "n_flagged": 26,
+      "flagged_high": [
+        "Isak",
+        "Wood",
+        "Guimar\u00e3es Rodriguez Moura",
+        "Kluivert",
+        "Kudus",
+        "Heung-min",
+        "Merino Zaz\u00f3n",
+        "Tielemans",
+        "Sancho",
+        "Tolentino Coelho de Lima",
+        "Maddison",
+        "Cullen",
+        "Santos Lopes de Macedo",
+        "D\u00edaz Marulanda",
+        "Kulusevski",
+        "Rashford",
+        "Gvardiol",
+        "Jackson"
+      ],
+      "flagged_medium": [
+        "\u00d8degaard",
+        "Trossard",
+        "Almeida de Oliveira Gon\u00e7alves",
+        "Ndoye",
+        "Lobo Alves Palhares Costa Palhinha Gon\u00e7alves",
+        "Kaoru",
+        "Okafor",
+        "Bynoe-Gittens"
+      ],
+      "xi": [
+        "Lecomte",
+        "dos Santos Magalh\u00e3es",
+        "Timber",
+        "Robertson",
+        "Rice",
+        "Salah",
+        "Szoboszlai",
+        "Borges Fernandes",
+        "Gordon",
+        "Watkins",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Lecomte",
+          "pid": 664,
+          "pred": 3.4,
+          "real": 0
+        },
+        {
+          "name": "dos Santos Magalh\u00e3es",
+          "pid": 5,
+          "pred": 4.5,
+          "real": 6
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 4.0,
+          "real": 0
+        },
+        {
+          "name": "Robertson",
+          "pid": 372,
+          "pred": 3.8,
+          "real": 0
+        },
+        {
+          "name": "Rice",
+          "pid": 21,
+          "pred": 5.2,
+          "real": 6
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 6.8,
+          "real": 8
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 5.0,
+          "real": 2
+        },
+        {
+          "name": "Borges Fernandes",
+          "pid": 449,
+          "pred": 5.5,
+          "real": 2
+        },
+        {
+          "name": "Gordon",
+          "pid": 485,
+          "pred": 5.0,
+          "real": 3
+        },
+        {
+          "name": "Watkins",
+          "pid": 64,
+          "pred": 5.0,
+          "real": 2
+        },
+        {
+          "name": "Wissa [V]",
+          "pid": 135,
+          "pred": 5.3,
+          "real": 0
+        }
+      ],
+      "transfers_in": [],
+      "transfers_out": [],
+      "squad_value": 100.0,
+      "call1_prose": "Looking at the player pool for Gameweek 1, I need to identify players who should be excluded due to clear availability risks. The data shows several players with concerning injury statuses and availability issues.\n\nThe most obvious exclusions are players marked as unavailable (u) or injured (i) with 0% chance of playing. Several high-profile players have permanent transfers or loans that make them unavailable for their listed teams. Additionally, players with doubtful status (d) and reduced chance of playing present significant risk for squad selection.\n\nKey injury concerns include long-term i",
+      "call2_prose": "## FPL Gameweek 1 Analysis Report\n\n### Captain Decision\nThe ILP has selected **Salah** as captain with an adjusted score of 14.9, significantly ahead of the next best option Bruno Fernandes at 12.1. With Liverpool facing Ipswich at home (FDR 2), this represents an excellent fixture for Salah to start the season strongly. His form score of 8.9 is exceptional, and there are no injury concerns flagged. The 1.4-point gap over the next alternative is substantial enough that no override is warranted.\n\n### Squad Assessment\nThe starting XI looks well-balanced with strong representation from Liverpool (3), Arsenal (3), and Manchester United (2) - all teams with favorable opening fixtures. The triple Liverpool attack of Salah, Szoboszlai, and Robertson against newly-promoted Ipswich offers excellent captaincy and differential potential.\n\n**Key Strengths:**\n- No flagged injury concerns in the starting XI\n- Good fixture spread with most players facing FDR 2-3 opponents\n- Strong premium assets in S",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with 0% chance of playing and expected return April 11th"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "Guimar\u00e3es Rodriguez Moura",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury with 0% chance of playing and expected return April 11th"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing and expected return May 9th"
+          },
+          {
+            "name": "Kudus",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Thigh injury with 0% chance of playing and expected return April 11th"
+          },
+          {
+            "name": "Almeida de Oliveira Gon\u00e7alves",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Hamstring injury with only 50% chance of playing"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently"
+          },
+          {
+            "name": "Ndoye",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "Lobo Alves Palhares Costa Palhinha Gon\u00e7alves",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Head injury with 75% chance of playing"
+          },
+          {
+            "name": "Merino Zaz\u00f3n",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Foot injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing"
+          },
+          {
+            "name": "Tielemans",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with 0% chance of playing and expected return April 11th"
+          },
+          {
+            "name": "Sancho",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Ineligible to face parent club with 0% chance of playing"
+          },
+          {
+            "name": "Tolentino Coelho de Lima",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Flamengo permanently"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "Cullen",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing and expected return September 30th"
+          },
+          {
+            "name": "Santos Lopes de Macedo",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Foot injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "D\u00edaz Marulanda",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Bayern Munich permanently"
+          },
+          {
+            "name": "Kulusevski",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "Okafor",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Hamstring injury with only 50% chance of playing"
+          },
+          {
+            "name": "Bynoe-Gittens",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Hamstring injury with only 50% chance of playing"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Gvardiol",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Leg injury with 0% chance of playing and unknown return date"
+          },
+          {
+            "name": "Jackson",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Bayern Munich on loan for the rest of the season"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 14.9 is 2.8 points clear of the next best option, with Liverpool facing newly-promoted Ipswich at home. No injury concerns and exceptional recent form make this an obvious choice."
+        },
+        "vice_captain": {
+          "name": "Wissa",
+          "reasoning": "Wissa offers the highest adjusted score among forwards and provides good differential potential against Southampton."
+        },
+        "bench_order": {
+          "bench_gk": "Bettinelli",
+          "bench_1": "Obi",
+          "bench_2": "Worrall",
+          "bench_3": "Piva\u0161",
+          "reasoning": "Obi leads as United defender with decent fixture, followed by Worrall for defensive cover, with Piva\u0161 least likely to feature."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Squad is well-positioned for GW1 without chip enhancement, better to save for double gameweeks or difficult periods."
+        },
+        "risk_flags": [
+          "Triple Liverpool exposure could backfire if they underperform",
+          "Timber minutes uncertainty as Arsenal rotation option"
+        ]
+      }
+    },
+    {
+      "gw": 2,
+      "real_gw": 2,
+      "chip": "wildcard_1",
+      "predicted_score": 87.3,
+      "simulated_actual": 86.2,
+      "real_total": 45.0,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 28,
+      "flagged_high": [
+        "Isak",
+        "Wood",
+        "\u00d8degaard",
+        "Heung-min",
+        "Kluivert",
+        "Rashford",
+        "Maddison",
+        "Guimar\u00e3es Rodriguez Moura",
+        "Tielemans",
+        "Sancho",
+        "Greenwood",
+        "Lascelles",
+        "Dasilva",
+        "Kulusevski",
+        "Kova\u010di\u0107",
+        "Cullen",
+        "Gvardiol",
+        "Krafth",
+        "Roerslev Rasmussen",
+        "Almeida de Oliveira Gon\u00e7alves",
+        "van de Ven",
+        "Merino Zaz\u00f3n",
+        "Onana"
+      ],
+      "flagged_medium": [
+        "Trossard",
+        "Kaoru",
+        "Becker",
+        "Brobbey",
+        "Flemming"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "Robinson",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mbeumo",
+        "Diallo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.7,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 5.6,
+          "real": 24
+        },
+        {
+          "name": "Robinson",
+          "pid": 316,
+          "pred": 5.4,
+          "real": 1
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 5.9,
+          "real": 1
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.0,
+          "real": 1
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 9.7,
+          "real": 5
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.5,
+          "real": 2
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.7,
+          "real": 2
+        },
+        {
+          "name": "Diallo",
+          "pid": 452,
+          "pred": 6.0,
+          "real": 1
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.7,
+          "real": 2
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 6.5,
+          "real": 0
+        }
+      ],
+      "transfers_in": [],
+      "transfers_out": [],
+      "squad_value": 99.7,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or significant rotation risk.\n\nFrom the current squad, all players appear to be available (status 'a') with 100% chance of playing, so no immediate exclusions are needed there.\n\nHowever, examining the broader player pool reveals several players with clear availability issues:\n\n**Injured Players (status 'i'):** Isak has an ankle injury with unknown return date, Wood has a knee injury with unknown return date, Kluivert has a knee injury expected back May 9th, Maddison h",
+      "call2_prose": "## Gameweek 2 FPL Manager Report\n\n### Squad Overview\nYour team is performing exceptionally well with 91 points from the opening gameweek, significantly outpacing the average manager benchmark of 57 points. The ILP optimizer has selected a balanced squad with strong fixtures across the board, featuring mostly FDR 2-3 matchups.\n\n### Captain Analysis\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted horizon score of 21.3. Liverpool face a favorable FDR 2 fixture, and Salah's form (8.9 over last 3 games) combined with his consistent scoring record makes him the clear standout. While Mbeumo (17.0 adj) and Haaland (16.9 adj) are decent alternatives, neither reaches the 21.8 threshold required for an override. Salah's premium status and Liverpool's attacking potential justify maintaining him as captain.\n\n### Key Player Considerations\nYour midfield looks particularly strong with both Liverpool assets (Salah, Szoboszlai) benefiting from favorable fixtures. Mb",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with unknown return date"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Los Angeles FC"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury expected back May 9th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "On loan to Barcelona for rest of season"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "Guimar\u00e3es Rodriguez Moura",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury expected back April 11th"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing"
+          },
+          {
+            "name": "Tielemans",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury expected back April 11th"
+          },
+          {
+            "name": "Sancho",
+            "risk_type": "ineligible",
+            "confidence": "high",
+            "reason": "Ineligible to face parent club on March 15th"
+          },
+          {
+            "name": "Greenwood",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Pogon Szczecin"
+          },
+          {
+            "name": "Lascelles",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Leicester City"
+          },
+          {
+            "name": "Dasilva",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Lack of match fitness expected back May 24th"
+          },
+          {
+            "name": "Kulusevski",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "Kova\u010di\u0107",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with unknown return date"
+          },
+          {
+            "name": "Becker",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "Cullen",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury expected back September 30th"
+          },
+          {
+            "name": "Gvardiol",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Leg injury with unknown return date"
+          },
+          {
+            "name": "Krafth",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "Roerslev Rasmussen",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Southampton"
+          },
+          {
+            "name": "Almeida de Oliveira Gon\u00e7alves",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury with 50% chance of playing"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd"
+          },
+          {
+            "name": "Merino Zaz\u00f3n",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Foot injury with unknown return date"
+          },
+          {
+            "name": "Brobbey",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Lack of match fitness with 75% chance of playing"
+          },
+          {
+            "name": "Onana",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "On loan to Trabzonspor for rest of season"
+          },
+          {
+            "name": "Flemming",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Lack of match fitness with 75% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 21.3 is significantly higher than alternatives, with excellent form and a favorable FDR 2 fixture. No alternative reaches the 21.8 override threshold."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Haaland offers the highest ceiling as vice-captain with his premium status and goal-scoring potential despite a slightly tougher fixture."
+        },
+        "bench_order": {
+          "bench_gk": "Bettinelli",
+          "bench_1": "Abdullahi",
+          "bench_2": "Nichols",
+          "bench_3": "Nallo",
+          "reasoning": "Abdullahi has the highest predicted score (3.3) among outfield bench players and most likely to contribute if needed."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Strong squad with no pressing issues - save chips for double gameweeks or more challenging periods."
+        },
+        "risk_flags": []
+      }
+    },
+    {
+      "gw": 3,
+      "real_gw": 3,
+      "chip": null,
+      "predicted_score": 86.7,
+      "simulated_actual": 69.3,
+      "real_total": 50.5,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 12,
+      "flagged_high": [
+        "Isak",
+        "Rashford",
+        "Kluivert",
+        "Wood",
+        "Heung-min",
+        "\u00d8degaard",
+        "Maddison",
+        "Guimar\u00e3es Rodriguez Moura",
+        "Kulusevski",
+        "van de Ven",
+        "Almeida de Oliveira Gon\u00e7alves"
+      ],
+      "flagged_medium": [
+        "Trossard"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "Robinson",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mbeumo",
+        "Diallo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.7,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.3,
+          "real": 2
+        },
+        {
+          "name": "Robinson",
+          "pid": 316,
+          "pred": 5.2,
+          "real": 1
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 6.7,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 5.9,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 9.2,
+          "real": 3
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.8,
+          "real": 13
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.5,
+          "real": 10
+        },
+        {
+          "name": "Diallo",
+          "pid": 452,
+          "pred": 6.0,
+          "real": 5
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.7,
+          "real": 9
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 5.7,
+          "real": 0
+        }
+      ],
+      "transfers_in": [],
+      "transfers_out": [],
+      "squad_value": 99.7,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or rotation risk.\n\nFrom the current squad, all players appear to be available (status 'a') with 100% chance of playing, so no immediate exclusions are needed from the existing team.\n\nHowever, when considering potential transfers from the player pool, several high-performing players have clear availability issues that make them unsuitable for selection:\n\n**Injured Players**: Isak (ankle injury, expected back April 11th) is the most notable exclusion given his high pred",
+      "call2_prose": "## FPL Manager Report - Gameweek 3\n\n### Squad Overview\nYour current squad is well-positioned for GW3 with strong fixture runs across most positions. At 177 points through 9 stages, you're performing well above the average benchmark of 57 pts/GW. The team structure looks solid with premium assets Salah and Haaland leading the line, supported by strong mid-price options like Mbeumo and emerging talents.\n\n### Captain Analysis\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted score of 20.2. Liverpool face a favorable fixture (FDR:2) and Salah's form has been exceptional (8.9 average over last 3 games). While Haaland (16.9 adj) and Mbeumo (16.5 adj) are viable alternatives, neither reaches the 20.7 threshold required for an override. Salah's consistency and fixture advantage make him the clear choice.\n\n### Key Player Assessment\n**Strengths:**\n- Salah and Szoboszlai both benefit from Liverpool's excellent fixture\n- Timber offers Arsenal defensive stability",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with expected return date of April 11th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with expected return date of May 9th"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Anterior cruciate ligament injury with unknown return date"
+          },
+          {
+            "name": "Guimar\u00e3es Rodriguez Moura",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury with expected return date of April 11th"
+          },
+          {
+            "name": "Kulusevski",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "Almeida de Oliveira Gon\u00e7alves",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury with only 50% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 20.2 is significantly higher than alternatives, with excellent form (8.9) and favorable fixture (FDR:2). No alternative reaches the 20.7 threshold for override."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Haaland offers the highest ceiling as vice-captain with his proven goal-scoring record despite recent form concerns."
+        },
+        "bench_order": {
+          "bench_gk": "Bettinelli",
+          "bench_1": "Abdullahi",
+          "bench_2": "Nallo",
+          "bench_3": "Nichols",
+          "reasoning": "Abdullahi first as most likely to get minutes if needed, with the other two unlikely to feature."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "No compelling reason to use chips this gameweek with good fixture spread and all players available."
+        },
+        "risk_flags": [
+          "Steele as starting GK carries rotation risk",
+          "Weak bench limits flexibility if injuries occur"
+        ]
+      }
+    },
+    {
+      "gw": 4,
+      "real_gw": 4,
+      "chip": null,
+      "predicted_score": 85.3,
+      "simulated_actual": 86.6,
+      "real_total": 56.5,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 12,
+      "flagged_high": [
+        "Isak",
+        "Kluivert",
+        "Rashford",
+        "Wood",
+        "Heung-min",
+        "Maddison",
+        "\u00d8degaard",
+        "Guimar\u00e3es Rodriguez Moura",
+        "Kulusevski"
+      ],
+      "flagged_medium": [
+        "Kaoru",
+        "Trossard",
+        "Becker"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "Robinson",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.6,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.0,
+          "real": 8
+        },
+        {
+          "name": "Robinson",
+          "pid": 316,
+          "pred": 4.8,
+          "real": 0
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 6.9,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 5.8,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 9.4,
+          "real": 9
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.8,
+          "real": 3
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.5,
+          "real": 6
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.4,
+          "real": 2
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.4,
+          "real": 13
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.7,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Heaton",
+        "Mota Veiga de Carvalho e Silva"
+      ],
+      "transfers_out": [
+        "Bettinelli",
+        "Diallo"
+      ],
+      "squad_value": 99.8,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, rotation risk, or availability concerns.\n\nFrom the current squad, all players appear to be available (status 'a') with 100% chance of playing, so no immediate exclusions are needed from existing players.\n\nHowever, examining the broader player pool reveals several high-value players who should be flagged for various availability issues:\n\n**Injury Concerns:**\n- Isak (10.3m) has an ankle injury with unknown return timeline despite being a top predicted scorer\n- Kluivert ",
+      "call2_prose": "## FPL Manager Report - Gameweek 4\n\n### Squad Overview\nYour current squad is well-positioned for GW4 with strong fixture runs across multiple players. At 246 points through 9 stages, you're tracking well above the average benchmark of 57 pts/GW. The team shows good balance with premium assets in Salah and Haaland, supported by solid mid-price options.\n\n### Captain Analysis\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted score of 20.6. Liverpool face a favorable away fixture (FDR:2), and Salah's recent form (8.9 over last 3 games) supports this selection. While Mbeumo (16.3 adj) and Haaland (16.2 adj) are decent alternatives, neither reaches the 21.1 threshold required for an override. Salah's consistency and fixture advantage make him the clear choice.\n\n### Key Player Assessment\n**Strengths:**\n- Strong Liverpool double-up with Salah and Szoboszlai both facing favorable fixtures\n- Haaland provides premium forward coverage despite slightly tougher fi",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with no clear return date despite high prediction score."
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury not expected back until May 9th."
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season."
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date."
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently."
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date."
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing."
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing."
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing."
+          },
+          {
+            "name": "Guimar\u00e3es Rodriguez Moura",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury expected back April 11th."
+          },
+          {
+            "name": "Kulusevski",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date."
+          },
+          {
+            "name": "Becker",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing."
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "ILP selection is optimal with 20.6 adjusted score and favorable Liverpool fixture. No alternative reaches the 21.1 override threshold, and Salah's form supports the choice."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Premium asset with highest ceiling after Salah despite slightly tougher fixture."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Abdullahi",
+          "bench_2": "Nichols",
+          "bench_3": "Nallo",
+          "reasoning": "Abdullahi most likely to feature if needed, with Arsenal and Liverpool budget options unlikely to play."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Squad is well-positioned for current fixtures and chips better saved for double gameweeks or more favorable opportunities."
+        },
+        "risk_flags": [
+          "Steele goalkeeper choice carries defensive uncertainty",
+          "Limited bench depth with three budget players"
+        ]
+      }
+    },
+    {
+      "gw": 5,
+      "real_gw": 5,
+      "chip": null,
+      "predicted_score": 85.9,
+      "simulated_actual": 107.3,
+      "real_total": 29.5,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 12,
+      "flagged_high": [
+        "Isak",
+        "Kluivert",
+        "Rashford",
+        "Wood",
+        "Heung-min",
+        "Maddison",
+        "Guimar\u00e3es Rodriguez Moura",
+        "\u00d8degaard",
+        "Sancho",
+        "Greenwood"
+      ],
+      "flagged_medium": [
+        "Kaoru",
+        "Trossard"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "A\u00eft-Nouri",
+        "Krafth",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.1,
+          "real": 1
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.2,
+          "real": 0
+        },
+        {
+          "name": "Krafth",
+          "pid": 479,
+          "pred": 4.8,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.0,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 9.7,
+          "real": 5
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.8,
+          "real": 1
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.6,
+          "real": 1
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.2,
+          "real": 3
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.4,
+          "real": 9
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.4,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Krafth"
+      ],
+      "transfers_out": [
+        "Robinson"
+      ],
+      "squad_value": 99.2,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, rotation risk, or poor form based on their status codes and chance of playing percentages.\n\nFrom the current squad, all players appear to be available (status 'a') with 100% chance of playing or 'OK' status, so no immediate exclusions are needed from the existing squad.\n\nHowever, when considering potential transfers from the player pool, several high-value players have clear availability issues that make them unsuitable for selection this gameweek:\n\n**Injured Players*",
+      "call2_prose": "## FPL Manager Report - Gameweek 5\n\n### Squad Overview\nYour current squad is well-positioned for GW5 with strong fixture runs across multiple players. At 333 points through 9 stages, you're tracking well above the average benchmark of 57 pts/GW. The team structure looks solid with premium assets Salah and Haaland leading the line.\n\n### Captain Analysis\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted score of 21.4. Liverpool face Crystal Palace away (FDR:2), and Salah's recent form (8.9 over last 3 games) combined with his consistent delivery makes him the standout option. While Haaland (16.2 adj) and Mbeumo (15.9 adj) are viable alternatives, neither reaches the 21.9 threshold required to override the ILP recommendation. Salah's fixture advantage and superior form justify maintaining him as captain.\n\n### Key Player Assessment\n**Strong Performers:**\n- **Salah & Szoboszlai**: Both Liverpool midfielders benefit from excellent fixtures (FDR:2) and shou",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with expected return date of April 11th"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with expected return date of May 9th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Anterior cruciate ligament injury with unknown return date"
+          },
+          {
+            "name": "Guimar\u00e3es Rodriguez Moura",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Hamstring injury with expected return April 11th"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with only 75% chance of playing"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with only 75% chance of playing"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Sancho",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Ineligible to face his parent club"
+          },
+          {
+            "name": "Greenwood",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Pogon Szczecin permanently"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "ILP recommendation is optimal with 21.4 adjusted score significantly ahead of alternatives. Liverpool's favorable fixture and Salah's excellent form (8.9) make him the clear choice."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Second-highest adjusted score (16.2) and reliable premium asset despite tougher fixture."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Abdullahi",
+          "bench_3": "Nallo",
+          "reasoning": "Current order is optimal with minimal predicted differences between outfield bench players."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Squad is well-positioned for current fixtures and better chip opportunities will emerge later."
+        },
+        "risk_flags": [
+          "Krafth lowest predicted scorer but necessary budget enabler",
+          "Monitor Wissa's away form against Newcastle"
+        ]
+      }
+    },
+    {
+      "gw": 6,
+      "real_gw": 6,
+      "chip": null,
+      "predicted_score": 85.9,
+      "simulated_actual": 80.0,
+      "real_total": 39.0,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 9,
+      "flagged_high": [
+        "Krafth",
+        "Isak",
+        "Rashford",
+        "Wood",
+        "Maddison",
+        "van de Ven"
+      ],
+      "flagged_medium": [
+        "\u00d8degaard",
+        "Kaoru",
+        "Trossard"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "Robinson",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.1,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.3,
+          "real": 2
+        },
+        {
+          "name": "Robinson",
+          "pid": 316,
+          "pred": 4.3,
+          "real": 1
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.3,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.1,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 9.8,
+          "real": 2
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 7.0,
+          "real": 5
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.7,
+          "real": 1
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.3,
+          "real": 2
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.2,
+          "real": 16
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.4,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Robinson"
+      ],
+      "transfers_out": [
+        "Krafth"
+      ],
+      "squad_value": 99.8,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or rotation risk.\n\nFrom the current squad, **Krafth** stands out as a major concern. He has an injury status with 0% chance of playing due to a knee injury with an unknown return date. This makes him completely unavailable for selection.\n\nIn the broader player pool, several high-profile players have clear availability issues. **Isak** is injured with an ankle problem, **Rashford** has joined Barcelona on loan, **Wood** has a knee injury with unknown return date, and *",
+      "call2_prose": "## Gameweek 6 FPL Manager Report\n\n### Squad Overview\nYour team is performing well above the average manager benchmark at 440 points through 9 stages. The ILP has constructed a balanced squad with strong captaincy options and favorable fixtures across the board.\n\n### Captain Analysis\nThe ILP suggests **Salah** as captain with an adjusted horizon score of 21.6, significantly ahead of the next best options. Salah faces a favorable FDR:2 fixture and has been in excellent form (8.9 over last 3 games). While Mbeumo (16.0 adj) and Haaland (15.9 adj) are alternatives, neither reaches the 22.1 threshold required for override, and Salah's superior form and fixture make him the clear choice.\n\n### Squad Strengths\n- **Attacking Core**: Salah, Haaland, and Mbeumo provide premium captaincy options\n- **Fixture Run**: Excellent fixture difficulty ratings across the starting XI (mostly FDR:2)\n- **Value Picks**: Robinson (4.9) and McNeil (5.5) offer budget-friendly returns\n- **Liverpool Double-Up**: Sala",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Krafth",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with 0% chance of playing"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "rotation",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "rotation",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd with 0% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 21.6 is significantly higher than alternatives, and his excellent form (8.9) combined with a favorable FDR:2 fixture makes him the optimal choice. No alternative reaches the 22.1 threshold for override."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Haaland offers the highest ceiling as vice-captain with his proven goal-scoring ability despite a slightly tougher fixture."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Nallo",
+          "bench_3": "Abdullahi",
+          "reasoning": "Order based on predicted points with Nichols (3.4) most likely to feature if needed for rotation."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Strong fixture run ahead warrants holding all chips for future double gameweeks or more challenging periods."
+        },
+        "risk_flags": [
+          "Bench provides minimal cover with all players predicted under 3.5 points",
+          "Heavy City exposure with three players creates concentration risk"
+        ]
+      }
+    },
+    {
+      "gw": 7,
+      "real_gw": 7,
+      "chip": null,
+      "predicted_score": 86.7,
+      "simulated_actual": 90.7,
+      "real_total": 35.0,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 11,
+      "flagged_high": [
+        "Isak",
+        "Rashford",
+        "Kluivert",
+        "Wood",
+        "Maddison",
+        "Heung-min",
+        "\u00d8degaard",
+        "van de Ven"
+      ],
+      "flagged_medium": [
+        "Kaoru",
+        "Trossard",
+        "Becker"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "A\u00eft-Nouri",
+        "Krafth",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.1,
+          "real": 11
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.4,
+          "real": 0
+        },
+        {
+          "name": "Krafth",
+          "pid": 479,
+          "pred": 5.1,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 10.0,
+          "real": 2
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 7.1,
+          "real": 1
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.6,
+          "real": 1
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.2,
+          "real": 6
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.1,
+          "real": 8
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.2,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Krafth"
+      ],
+      "transfers_out": [
+        "Robinson"
+      ],
+      "squad_value": 99.2,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or rotation risk.\n\nFrom the current squad, all players appear to be available (status 'a') with 100% chance of playing, so no immediate exclusions are needed from the existing team.\n\nHowever, examining the broader player pool reveals several high-profile players who should be flagged due to clear availability issues:\n\n**Injured Players**: Isak (ankle injury, expected back April 11th), Kluivert (knee injury, expected back May 9th), Wood (knee injury, unknown return), M",
+      "call2_prose": "## FPL Manager Report - Gameweek 7\n\n### Squad Overview\nYour current squad shows strong fundamentals with excellent fixture runs across most positions. At 520 points through 9 stages, you're tracking well above the average benchmark of 57 pts/GW. The team is well-balanced with premium assets in Salah and Haaland, supported by strong mid-price options.\n\n### Captain Analysis\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted score of 22.0. Liverpool face Crystal Palace away (FDR:2), and Salah's recent form (8.9 over last 3 games) combined with his excellent fixture run makes him the clear choice. No alternative comes close to the 22.5 threshold needed for an override - Mbeumo (15.9) and Haaland (15.7) are significantly lower despite their own decent fixtures.\n\n### Key Player Assessment\n**Strengths:**\n- Salah and Szoboszlai both benefit from Liverpool's excellent fixture run\n- Haaland remains essential despite City's slightly tougher fixtures\n- Defensive ",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with expected return date of April 11th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with expected return date of May 9th"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Anterior cruciate ligament injury with unknown return date"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd"
+          },
+          {
+            "name": "Becker",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "ILP selection is optimal with 22.0 adjusted score significantly ahead of alternatives. Liverpool's excellent fixture and Salah's strong form (8.9) make this the clear choice."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Premium asset with consistent scoring potential despite tougher fixture."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Nallo",
+          "bench_3": "Abdullahi",
+          "reasoning": "Order by predicted points with Nichols most likely to feature if needed."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Squad is well-positioned for this gameweek and chips better saved for double gameweeks or more favorable opportunities."
+        },
+        "risk_flags": [
+          "Steele as starting GK carries rotation/performance risk",
+          "Minimal bench depth limits flexibility if injuries occur"
+        ]
+      }
+    },
+    {
+      "gw": 8,
+      "real_gw": 8,
+      "chip": null,
+      "predicted_score": 86.7,
+      "simulated_actual": 72.0,
+      "real_total": 44.5,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 11,
+      "flagged_high": [
+        "Krafth",
+        "Isak",
+        "Rashford",
+        "Kluivert",
+        "Wood",
+        "Maddison",
+        "Heung-min",
+        "van de Ven"
+      ],
+      "flagged_medium": [
+        "\u00d8degaard",
+        "Kaoru",
+        "Trossard"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "Roerslev Rasmussen",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.2,
+          "real": 6
+        },
+        {
+          "name": "Roerslev Rasmussen",
+          "pid": 112,
+          "pred": 4.2,
+          "real": 0
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.5,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.3,
+          "real": 1
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 10.1,
+          "real": 2
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.9,
+          "real": 4
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.8,
+          "real": 1
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.2,
+          "real": 9
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.2,
+          "real": 13
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.4,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Roerslev Rasmussen"
+      ],
+      "transfers_out": [
+        "Krafth"
+      ],
+      "squad_value": 99.4,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or rotation risk.\n\nFrom the current squad, **Krafth** stands out as a major concern. He has a knee injury with unknown return date and 0% chance of playing, making him completely unavailable for selection.\n\nAmong the highly-rated players in the pool, several have clear availability issues:\n\n**Isak** (10.3 GBP, 7.5 prediction) has an ankle injury and is expected back April 11th with 0% chance of playing. **Rashford** has joined Barcelona on loan for the rest of the sea",
+      "call2_prose": "## Gameweek 8 FPL Manager Report\n\n### Squad Overview\nYour team is performing well above the average manager benchmark at 611 points through 9 stages. The ILP optimizer has selected a balanced squad with strong attacking options and decent defensive coverage.\n\n### Captain Analysis\nThe ILP has correctly identified **Salah** as the optimal captain choice with an adjusted score of 22.2. Liverpool face a favorable fixture (FDR:2) and Salah's form has been excellent (8.9 over last 3 games). Looking at alternatives, Mbeumo and Haaland both have adjusted scores of 15.9, which is significantly below the 22.7 threshold needed to override. Salah's superior form, fixture quality, and penalty-taking ability make him the clear choice.\n\n### Squad Concerns\nSeveral flagged players don't affect your current squad, but there are some rotation risks to monitor:\n- **Timber** could face rotation in Arsenal's busy schedule\n- **A\u00eft-Nouri** may be subject to Pep's rotation at City\n- **Mota Veiga de Carvalho e ",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Krafth",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with 0% chance of playing, expected back April 11th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing, expected back May 9th"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Los Angeles FC permanently"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing"
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd with 0% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 22.2 is significantly higher than any alternative, with excellent form and a favorable fixture. No alternative meets the 22.7 threshold for override."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Haaland offers the highest ceiling if Salah doesn't play, despite rotation concerns."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Nallo",
+          "bench_3": "Abdullahi",
+          "reasoning": "Nichols most likely to play if Timber is rotated, followed by Nallo and Abdullahi in order of playing probability."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Strong squad with good fixtures doesn't warrant chip usage this week."
+        },
+        "risk_flags": [
+          "Monitor City rotation news for A\u00eft-Nouri and Savinho",
+          "Timber could face Arsenal rotation"
+        ]
+      }
+    },
+    {
+      "gw": 9,
+      "real_gw": 9,
+      "chip": null,
+      "predicted_score": 87.2,
+      "simulated_actual": 88.4,
+      "real_total": 48.0,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 10,
+      "flagged_high": [
+        "Roerslev Rasmussen",
+        "Isak",
+        "Rashford",
+        "Maddison",
+        "Wood",
+        "Heung-min",
+        "\u00d8degaard",
+        "van de Ven"
+      ],
+      "flagged_medium": [
+        "Trossard",
+        "Kaoru"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "A\u00eft-Nouri",
+        "Krafth",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.3,
+          "real": 6
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.5,
+          "real": 0
+        },
+        {
+          "name": "Krafth",
+          "pid": 479,
+          "pred": 4.8,
+          "real": 0
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.3,
+          "real": 0
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 10.1,
+          "real": 6
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 7.0,
+          "real": 10
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.6,
+          "real": 2
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.2,
+          "real": 15
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.3,
+          "real": 2
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.3,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "Krafth"
+      ],
+      "transfers_out": [
+        "Roerslev Rasmussen"
+      ],
+      "squad_value": 99.2,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to clear availability risks.\n\nFrom the current squad, **Roerslev Rasmussen** stands out as a major concern - he has permanently joined Southampton and is marked as unavailable, making him completely unusable for this gameweek. This is a critical issue that needs immediate attention.\n\nIn the broader player pool, several high-profile players have clear availability issues. **Isak** is injured with an ankle problem, **Rashford** has joined Barcelona on loan, and **Heung-min** has permanently m",
+      "call2_prose": "Looking at this Gameweek 9 squad, I need to evaluate the captain choice, bench order, and identify any concerns.\n\n## Captain Analysis\n\nThe ILP has selected Salah as captain with an adjusted score of 22.2. Looking at the alternatives, none come close to the 22.7 threshold needed for an override:\n- Haaland: 16.0 (6.2 points below threshold)\n- Mbeumo: 15.7 (7.0 points below threshold)\n- Szoboszlai: 15.4 (7.3 points below threshold)\n\nSalah has excellent form (8.9 over last 3 games), faces a favorable FDR 2 fixture, and his horizon scoring already accounts for fixture difficulty. There's no compelling reason to override the ILP recommendation.\n\n## Bench Order Optimization\n\nThe current bench order needs adjustment for optimal fixture-based rotation:\n- Nichols (ARS, FDR 2) should be first as he has the best fixture\n- Nallo (LIV, FDR 2) second with equally good fixture\n- Abdullahi (SUN) third as the worst option\n\n## Key Concerns\n\nSeveral flagged players pose risks:\n1. **\u00d8degaard injury concern",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Roerslev Rasmussen",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Southampton and is marked unavailable."
+          },
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with expected return April 11th."
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season."
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date."
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date."
+          },
+          {
+            "name": "Heung-min",
+            "risk_type": "unavailable",
+            "confidence": "high",
+            "reason": "Has permanently joined Los Angeles FC."
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with only 50% chance of playing."
+          },
+          {
+            "name": "Trossard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knock with 75% chance of playing."
+          },
+          {
+            "name": "Kaoru",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Ankle injury with 75% chance of playing."
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd."
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "Salah's adjusted score of 22.2 is significantly higher than any alternative, with none reaching the 22.7 override threshold. His excellent form and favorable fixture make him the clear choice."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Haaland has the highest adjusted score among alternatives and provides captaincy security if Salah doesn't play."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Nallo",
+          "bench_3": "Abdullahi",
+          "reasoning": "Reordered by fixture difficulty with Nichols (FDR 2) first, followed by Nallo (FDR 2), then Abdullahi as the weakest option."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "No compelling chip opportunity this gameweek with a weak bench making bench boost unattractive and no obvious triple captain target beyond current captain choice."
+        },
+        "risk_flags": [
+          "Monitor \u00d8degaard injury news (50% chance of playing)",
+          "Watch for late team news on Trossard knock"
+        ]
+      }
+    },
+    {
+      "gw": 10,
+      "real_gw": 10,
+      "chip": null,
+      "predicted_score": 86.5,
+      "simulated_actual": 78.2,
+      "real_total": 53.5,
+      "captain_ilp": "Salah",
+      "captain_final": "Salah",
+      "captain_override": false,
+      "vice_captain": "Haaland",
+      "penalty": 0,
+      "n_flagged": 8,
+      "flagged_high": [
+        "Krafth",
+        "Isak",
+        "Rashford",
+        "Kluivert",
+        "Wood",
+        "Maddison",
+        "van de Ven"
+      ],
+      "flagged_medium": [
+        "\u00d8degaard"
+      ],
+      "xi": [
+        "Steele",
+        "Timber",
+        "White",
+        "A\u00eft-Nouri",
+        "McNeil",
+        "Salah",
+        "Szoboszlai",
+        "Mota Veiga de Carvalho e Silva",
+        "Mbeumo",
+        "Haaland",
+        "Wissa"
+      ],
+      "xi_player_rows": [
+        {
+          "name": "Steele",
+          "pid": 138,
+          "pred": 6.2,
+          "real": 0
+        },
+        {
+          "name": "Timber",
+          "pid": 8,
+          "pred": 6.2,
+          "real": 6
+        },
+        {
+          "name": "White",
+          "pid": 11,
+          "pred": 4.1,
+          "real": 0
+        },
+        {
+          "name": "A\u00eft-Nouri",
+          "pid": 402,
+          "pred": 7.6,
+          "real": 1
+        },
+        {
+          "name": "McNeil",
+          "pid": 300,
+          "pred": 6.3,
+          "real": 1
+        },
+        {
+          "name": "Salah [C]",
+          "pid": 381,
+          "pred": 10.1,
+          "real": 10
+        },
+        {
+          "name": "Szoboszlai",
+          "pid": 387,
+          "pred": 6.9,
+          "real": 2
+        },
+        {
+          "name": "Mota Veiga de Carvalho e Silva",
+          "pid": 416,
+          "pred": 6.5,
+          "real": 2
+        },
+        {
+          "name": "Mbeumo",
+          "pid": 119,
+          "pred": 7.1,
+          "real": 2
+        },
+        {
+          "name": "Haaland [V]",
+          "pid": 430,
+          "pred": 7.4,
+          "real": 13
+        },
+        {
+          "name": "Wissa",
+          "pid": 135,
+          "pred": 4.3,
+          "real": 0
+        }
+      ],
+      "transfers_in": [
+        "White"
+      ],
+      "transfers_out": [
+        "Krafth"
+      ],
+      "squad_value": 100.0,
+      "call1_prose": "Looking at the current squad and player pool data, I need to identify players who should be excluded due to injury, suspension, or rotation risk.\n\nFrom the current squad, **Krafth** stands out as a major concern. He has an injury status with 0% chance of playing due to a knee injury with an unknown return date. This makes him completely unavailable for selection.\n\nIn the broader player pool, there are several players with clear availability issues that would make them poor transfer targets:\n\n**Isak** is injured with an ankle problem and 0% chance of playing, expected back April 11th. **Rashfor",
+      "call2_prose": "## Gameweek 10 FPL Manager Report\n\n### Current Position Analysis\nAt 771 points through 9 gameweeks, you're averaging 85.7 points per gameweek, significantly outperforming the 57.0 benchmark. This strong foundation provides flexibility for strategic decisions.\n\n### Captain Decision\nThe ILP has correctly identified Salah as the optimal captain choice with an adjusted score of 22.2. Liverpool face Brighton away (FDR 2), and Salah's recent form (8.9 average over last 3 games) combined with his consistent delivery makes him the clear choice. No alternative comes close to the 22.7 threshold needed for an override - Haaland's 16.2 adjusted score is well below despite City's favorable fixtures.\n\n### Team Structure Assessment\nYour XI looks well-balanced with strong defensive coverage from Arsenal (Timber, White) and attacking threats from Liverpool's double-up (Salah, Szoboszlai). The City assets (A\u00eft-Nouri, Mota Veiga, Haaland) provide excellent fixture coverage, while Mbeumo offers differenti",
+      "decisions_call1": {
+        "flagged_players": [
+          {
+            "name": "Krafth",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Isak",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Ankle injury with 0% chance of playing, expected back April 11th"
+          },
+          {
+            "name": "Rashford",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Has joined Barcelona on loan for the rest of the season"
+          },
+          {
+            "name": "Kluivert",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with 0% chance of playing, not expected back until May 9th"
+          },
+          {
+            "name": "Wood",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "Knee injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "Maddison",
+            "risk_type": "injury",
+            "confidence": "high",
+            "reason": "ACL injury with unknown return date and 0% chance of playing"
+          },
+          {
+            "name": "\u00d8degaard",
+            "risk_type": "injury",
+            "confidence": "medium",
+            "reason": "Knee injury with only 50% chance of playing"
+          },
+          {
+            "name": "van de Ven",
+            "risk_type": "suspension",
+            "confidence": "high",
+            "reason": "Suspended until March 22nd with 0% chance of playing"
+          }
+        ]
+      },
+      "decisions_call2": {
+        "captain": {
+          "name": "Salah",
+          "override": false,
+          "reasoning": "ILP selection is optimal with 22.2 adjusted score well ahead of alternatives. Liverpool's favorable fixture and Salah's excellent form (8.9 average) make this the clear choice."
+        },
+        "vice_captain": {
+          "name": "Haaland",
+          "reasoning": "Highest adjusted score alternative at 16.2 with City's strong fixture run providing good backup option."
+        },
+        "bench_order": {
+          "bench_gk": "Heaton",
+          "bench_1": "Nichols",
+          "bench_2": "Nallo",
+          "bench_3": "Abdullahi",
+          "reasoning": "Nichols most likely to start if needed, Nallo has better fixture than Abdullahi for potential cameos."
+        },
+        "transfer_suggestions": [],
+        "chip_advice": {
+          "play_chip": "none",
+          "reasoning": "Squad is well-positioned for current fixtures with no urgent need for chip usage."
+        },
+        "risk_flags": [
+          "Monitor City rotation risk with midweek fixtures",
+          "Watch for late team news on all starters"
+        ]
+      }
+    }
+  ],
+  "total_predicted": 841.2,
+  "total_simulated": 849.4,
+  "total_real": 438.5
+}

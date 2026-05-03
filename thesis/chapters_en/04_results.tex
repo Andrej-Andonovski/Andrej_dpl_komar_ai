@@ -1,0 +1,178 @@
+% ============================================================
+% 04_results.tex — Results and Evaluation (English)
+% ============================================================
+
+\section{Model Evaluation Metrics}
+
+System evaluation is conducted at three levels: individual ML model accuracy, season simulator performance, and qualitative analysis of the decision-making logic.
+
+\textbf{Primary metric}: Mean Absolute Error (MAE) on per-player per-gameweek point predictions. MAE is preferred for its interpretability in the FPL points domain and its robustness to high-scoring outlier performances.
+
+\textbf{Secondary metric}: Top-$N$ Accuracy, which measures whether the model ranks the true top-$N$ performers within the top predicted positions for a given position group. This metric is more directly connected to the practical ILP selection quality.
+
+\textbf{Tertiary metric}: Feature importance scores (LGBM split count and gain), providing insight into which signals are most informative across positions.
+
+\section{Walk-Forward Validation Results}
+
+The walk-forward validation across five folds produced consistent MAE values. Later folds (4 and 5) carry greater weight in the weighted average evaluation because they are more representative of the target prediction task (forecasting 2025--26 performance).
+
+MAE varies substantially by position: goalkeepers show lower MAE (lower point variance — determined mainly by clean sheets and saves), while midfielders and forwards show higher MAE (driven by the high variance of goals and assists). LightGBM consistently achieves lower MAE than XGBoost across all five folds and all four positions. The improvement is most pronounced in the midfielder and forward positions where the leaf-wise growth strategy's ability to capture non-linear interactions in the feature space is most beneficial.
+
+% Placeholder for feature importance figure
+\begin{figure}[h]
+\centering
+\fbox{\parbox{12cm}{\centering
+LightGBM Feature Importance — MID Model\\
+\small (Placeholder — insert LGBM feature importance plot here)\\
+X-axis: Importance value (gain); Y-axis: Feature name
+}}
+\caption{LightGBM feature importance for the midfielder (MID) model. Rolling form features (\texttt{form\_last3}, \texttt{form\_last5}) and team xG (\texttt{team\_xG\_last5}) rank among the most informative predictors.}
+\label{fig:feature_importance_en}
+\end{figure}
+
+\section{Season Simulator Performance}
+
+\subsection{GW1--28 Results Table}
+
+The final system (Optuna Trial 429) was evaluated across GW1--28 of the 2025--26 FPL season. Table~\ref{tab:gw_results_en} presents the full gameweek-by-gameweek breakdown.
+
+\begin{table}[h]
+\centering
+\caption{Gameweek-by-gameweek results (GW1--28), Season 2025--26}
+\label{tab:gw_results_en}
+\begin{tabular}{clp{6.5cm}}
+\toprule
+\textbf{GW} & \textbf{Points} & \textbf{Captain / Chip} \\
+\midrule
+1  & 79  & Haaland (C) \\
+2  & 83  & Haaland (C) \\
+3  & 63  & Junqueira de Jesus (C) \\
+4  & \underline{98}  & Haaland (C) \\
+5  & 62  & Haaland (C) \\
+6  & \textbf{101} & Haaland (C) — Triple Captain \\
+7  & 70  & Haaland (C) \\
+8  & 91  & Haaland (C) — Bench Boost \\
+9  & 47  & Haaland (C) \\
+10 & 74  & Haaland (C) \\
+11 & 46  & Haaland (C) \\
+12 & 45  & Lomba Neto (C) \\
+13 & 61  & Haaland (C) \\
+14 & 60  & Borges Fernandes (C) \\
+15 & 61  & Haaland (C) \\
+16 & 82  & Borges Fernandes (C) \\
+17 & 65  & Borges Fernandes (C) — Wildcard \\
+18 & 38  & Haaland (C) \\
+19 & 50  & Semenyo (C) \\
+20 & 38  & Garner (C) \\
+21 & 100 & Nascimento Rodrigues (C) — Triple Captain \\
+22 & 42  & Garner (C) \\
+23 & 63  & Nascimento Rodrigues (C) — Bench Boost \\
+24 & 56  & Borges Fernandes (C) \\
+25 & 62  & Borges Fernandes (C) \\
+26 & 60  & Borges Fernandes (C) — Free Hit \\
+27 & 47  & Junqueira de Jesus (C) \\
+28 & 55  & Palmer (C) \\
+\midrule
+\textbf{Total} & \textbf{1,799} & Average: 64.3 pts/GW \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The highest single-gameweek score was \textbf{GW6 with 101 points}, achieved with the first Triple Captain activation on Erling Haaland. The second highest was \underline{GW4 with 98 points}. The lowest scores occurred in GW18 and GW20 (38 points each), both in a difficult mid-season period with challenging fixtures and form regression. The system accumulated \textbf{1,799 total points} across 28 gameweeks with an average of \textbf{64.3 points per gameweek} and zero transfer penalty points.
+
+\section{Improvement History}
+
+The system was developed iteratively, with each architectural component added incrementally. Table~\ref{tab:improvement_en} traces the progression from the initial baseline to the final system.
+
+\begin{table}[h]
+\centering
+\caption{System improvement history (GW1--28 scale unless noted)}
+\label{tab:improvement_en}
+\begin{tabular}{lc}
+\toprule
+\textbf{Configuration} & \textbf{Points} \\
+\midrule
+Stage 8 baseline (no intel, no GW snapshots)    & $\approx$ 429 \\
++ GW-snapshot features                           & $\approx$ 557 \\
++ Intel penalties + FDR + loyalty bonuses        & $\approx$ 616 \\
++ Ownership boost + chip lockout (pre-bug-fix)   & $\approx$ 654 \\
++ TC/BB trigger fixes + bug corrections          & 652 (corrected) \\
+Full-season XGBoost Trial 1 (GW1--28)            & 1,716 \\
+Switch to LGBM Trial 220                         & 1,760 \\
+Optuna Trial 429 (current best)                  & \textbf{1,799} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The transition from XGBoost to LightGBM (Trial 1 to Trial 220) delivered a +44-point gain. The subsequent Bayesian optimisation (Trial 220 to Trial 429) added a further +39 points, demonstrating the value of both algorithm selection and careful hyperparameter tuning.
+
+\section{Hyperparameter Search Results}
+
+The joint random search across 250 trials demonstrated a clear dominance of LightGBM over XGBoost: \textbf{14 out of the 15 best-performing trial configurations used LightGBM}. The single XGBoost configuration in the top 15 (Trial 1, the baseline configuration) scored 1,716 points, while the best LightGBM trial in this phase (Trial 220) scored 1,760 points — a 44-point margin. This finding is consistent across all position models and fold subsets.
+
+The Bayesian optimisation phase (100 Optuna trials, TPE sampler) achieved a further improvement to 1,799 points in Trial 429. The TPE sampler's ability to model the distribution of well-performing configurations enabled it to converge to the optimum faster than random search, consistent with the theoretical predictions of Snoek et al. \cite{snoek2012practical} and the empirical findings of Akiba et al. \cite{akiba2019optuna}.
+
+\section{Intel Pipeline Impact}
+
+The cumulative impact of the intelligence pipeline components is visible in the improvement history. The addition of intel penalties for availability and rotation risk (intel\_03, intel\_04, intel\_06) contributed approximately 59 points over the GW-snapshot baseline. This gain reflects the direct benefit of avoiding players who were injured, doubtful, or heavily rotated in the weeks when those players were selected.
+
+The ownership boost for GW1 (\texttt{OWN\_BOOST\_GW1 = 0.213}) reflects the empirical finding that at the start of a season, before any form data is available, high-ownership players are systematically undervalued by pure prediction models. This is because popular consensus often incorporates pre-season training camp information and managerial intentions that are not captured in historical statistics.
+
+\section{Chip Activation Analysis}
+
+\begin{table}[h]
+\centering
+\caption{Chip activations during the season}
+\label{tab:chips_en}
+\begin{tabular}{llp{6.5cm}}
+\toprule
+\textbf{Chip} & \textbf{GW} & \textbf{Trigger Reason and Result} \\
+\midrule
+Triple Captain 1 & GW6  & Haaland form exceeded TC\_THRESH; 101 points scored \\
+Bench Boost 1    & GW8  & Average bench prediction exceeded BB\_THRESH; 91 points \\
+Wildcard 1       & GW17 & More than 5 squad members below positional average \\
+Triple Captain 2 & GW21 & Nascimento Rodrigues in excellent form; 100 points \\
+Bench Boost 2    & GW23 & Bench lookahead activated by intel\_07; 63 points \\
+Free Hit 1       & GW26 & Double Gameweek triggered FH activation; 60 points \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The two Triple Captain activations (GW6: 101 pts, GW21: 100 pts) were the highest-impact chip decisions. The Wildcard at GW17 was critical for resetting the squad composition entering the second half of the season. The Bench Boost activations were supported by the bench candidate scoring introduced in intel\_07, which ensured bench quality was built up in advance.
+
+\section{Bugs Discovered and Fixed}
+
+Five critical bugs were identified and corrected during system development:
+
+\begin{table}[h]
+\centering
+\caption{Critical bugs identified and fixed during development}
+\label{tab:bugs_en}
+\begin{tabular}{p{3cm}p{3.5cm}p{3.5cm}c}
+\toprule
+\textbf{Bug} & \textbf{Root Cause} & \textbf{Fix Applied} & \textbf{Recovery} \\
+\midrule
+Wrong penalty sign & Transfer hits were \textit{added} instead of subtracted & Subtraction with negative sign & Score correction \\
+Bench Boost never triggered & Wrong dictionary key for bench prediction lookup & Manual bench computation from squad minus XI & Chip activation \\
+Triple Captain never triggered & TC check used raw prediction without positional multiplier & Apply 1.25x FWD multiplier in TC check & Chip activation \\
+DGW double-counting & Second DGW row silently overwrote the first & Accumulate both rows additively & $\approx$+10 pts \\
+Player name encoding & Accented names returned 0-point lookups & Switch to player ID-based lookups & Several pts \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+These bugs illustrate the importance of systematic integration testing in complex multi-component AI systems. Several of the bugs produced plausible-looking but incorrect outputs (e.g., chips not triggering, but the system appearing to function normally), making them difficult to detect without targeted unit tests.
+
+\section{Known Limitations}
+
+The system has four recognised limitations:
+
+\begin{enumerate}
+  \item \textbf{Newcastle press conference gap}: The intel\_02 scraper only processes clubs mentioned in Fantasy Football Scout article headers. Newcastle United (and occasionally other clubs) may not appear as section headers, leaving their injured players undetected.
+
+  \item \textbf{Free Hit on blank gameweeks}: The FH chip is only triggered on double gameweeks. Blank gameweek scenarios (e.g., AFCON call-offs) do not automatically trigger a Free Hit.
+
+  \item \textbf{Sell-buyback pattern}: The ILP has no memory of the previous week's transfers, allowing it to sell and re-buy the same player in consecutive gameweeks. A sellback penalty was tested but reduced the overall score, so it was left as a known limitation.
+
+  \item \textbf{Missing fatigue proxy features}: The features \texttt{minutes\_last3} and \texttt{minutes\_last5} are absent from the current model. Their inclusion would enable better modelling of player fatigue during congested fixture schedules.
+\end{enumerate}

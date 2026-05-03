@@ -1,0 +1,41 @@
+% ============================================================
+% 06_conclusion.tex — Conclusion (English)
+% ============================================================
+
+\section{Summary of Architecture and Contributions}
+
+This thesis has presented the design, implementation, and evaluation of a fully automated FPL team management system built on a three-layer hybrid artificial intelligence architecture. Each layer makes a distinct and complementary contribution:
+
+\textbf{Layer 1 — LightGBM Prediction}: The four position-specific models provide quantitative point forecasts based on a rich feature set spanning rolling player form, team-level expected goals, fixture difficulty, market signals, and previous-league statistics for debutants. Walk-forward cross-validation with five temporally ordered folds ensured realistic out-of-sample performance estimates, and online full retraining after each gameweek kept the models aligned with the current season's statistical patterns.
+
+\textbf{Layer 2 — ILP Optimisation}: Formulating squad selection as an Integer Linear Programming problem provides a mathematical guarantee of global optimality within the specified constraints. The integration of chip management logic (Triple Captain, Bench Boost, Wildcard, Free Hit) and transfer cost penalties into the ILP objective ensures that short-term transfer decisions are coherent with longer-term season strategy.
+
+\textbf{Layer 3 — Intelligence Pipeline and LLM}: The seven intel modules supply pre-deadline signals that no historical dataset can provide: real-time injury statuses, press conference statements, and market sentiment. The multiplicative penalty formula translates these signals into direct adjustments to predicted points, penalising selections that carry elevated risk. The narrative layer, powered by the Claude API, makes the system's decisions transparent and interpretable to the end user.
+
+\section{Key Findings}
+
+Several significant findings emerged from the evaluation:
+
+\textbf{LightGBM consistently outperforms XGBoost}: Across 250 random search trials and all four positional models, LightGBM dominated the performance landscape. Fourteen of the fifteen best-performing configurations used LightGBM. The leaf-wise growth strategy and GOSS subsampling appear particularly well-suited to the moderate-size, tabular, temporally structured nature of FPL data.
+
+\textbf{The intelligence pipeline adds substantial value}: The cumulative contribution of the availability and rotation risk adjustments amounted to approximately 59 points over a baseline without intelligence signals. This finding underscores that point prediction accuracy alone is insufficient for FPL success: information about which predicted points are actually achievable — given injury and rotation constraints — is equally important.
+
+\textbf{Bayesian optimisation is superior to random search}: The Optuna TPE sampler achieved a 39-point improvement over the best random search result using only 40\% as many evaluations. This confirms the practical utility of Bayesian methods for expensive black-box optimisation problems, consistent with the analysis of Snoek et al. \cite{snoek2012practical}.
+
+\textbf{Bug identification and correction is critical}: Five significant bugs were discovered and fixed during development, each affecting a different aspect of the system's correctness. The most impactful bugs (incorrect penalty sign, Bench Boost and Triple Captain never triggering) would have made the system appear functional while silently degrading its performance. Systematic testing and careful output validation are essential components of any complex AI pipeline.
+
+\section{Final Results and Significance}
+
+The system achieved \textbf{1,799 total points} across GW1--28 of the 2025--26 FPL season (average \textbf{64.3 points per gameweek}) with zero transfer penalty points, in a strict blind-test setting where no current-season data was used during model training.
+
+To contextualise this result: the average FPL manager in the 2024--25 season scored approximately 50 points per gameweek. A score of 64.3 points per gameweek would place a manager in the upper tier of the global FPL rankings. While direct comparison requires caution — the simulation replays decisions with the benefit of a fully calibrated system, whereas real-season management involves real-time decisions under time pressure — the result demonstrates that the system's decision-making logic is substantively better than baseline random-selection or simple heuristic approaches.
+
+The system presented in this thesis represents, to the best of the author's knowledge, the first documented attempt to combine ML prediction, ILP squad optimisation, a seven-module real-time intelligence pipeline, and LLM-powered narrative generation into a single automated FPL season management system. The codebase, data, and hyperparameter optimisation results are fully documented and reproducible.
+
+\section{Closing Remarks}
+
+Fantasy Premier League management is a multi-stage, multi-constraint decision problem under uncertainty — precisely the class of problem for which hybrid AI systems are well positioned. This thesis has demonstrated that a principled combination of machine learning, constrained optimisation, and intelligent information gathering can produce competitive, explainable, and fully automated FPL management across an entire season.
+
+The project also illustrated several important software engineering lessons: the value of systematic testing in multi-component systems, the danger of silent bugs that produce plausible-looking but incorrect outputs, and the importance of careful experimental design when claiming performance improvements. These lessons extend beyond FPL to any complex AI pipeline involving multiple interacting components.
+
+The system remains open for further development — new features, live deployment, reinforcement learning extensions — but the core architecture is functional, evaluated, and ready for production use.

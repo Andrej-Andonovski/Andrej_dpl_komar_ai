@@ -1,0 +1,338 @@
+{
+  "gameweeks": [
+    {
+      "gw": 1,
+      "chip": null,
+      "predicted_score": 63.26951789855957,
+      "squad_value": 100.0,
+      "transfers_in": [],
+      "transfers_out": [],
+      "penalty_pts": 0,
+      "captain": "Salah",
+      "xi": [
+        "Sels",
+        "James",
+        "Williams",
+        "Zinchenko",
+        "Palmer",
+        "Iwobi",
+        "Salah",
+        "Mbeumo",
+        "Watkins",
+        "Isak",
+        "Wissa"
+      ]
+    },
+    {
+      "gw": 2,
+      "chip": "wildcard_2",
+      "predicted_score": 76.02989077568054,
+      "squad_value": 94.4,
+      "transfers_in": [],
+      "transfers_out": [],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Mart\u00ednez Romero",
+        "Cucurella Saseta",
+        "Hall",
+        "Phillips",
+        "Rogers",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Mbeumo",
+        "Watkins",
+        "Haaland"
+      ]
+    },
+    {
+      "gw": 3,
+      "chip": null,
+      "predicted_score": 72.39572310447693,
+      "squad_value": 97.4,
+      "transfers_in": [
+        "Wood"
+      ],
+      "transfers_out": [
+        "Fraser"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Mart\u00ednez Romero",
+        "Cucurella Saseta",
+        "Hall",
+        "Phillips",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Mbeumo",
+        "Watkins",
+        "Haaland",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 4,
+      "chip": null,
+      "predicted_score": 73.14835381507874,
+      "squad_value": 97.6,
+      "transfers_in": [
+        "Steele"
+      ],
+      "transfers_out": [
+        "Green"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Steele",
+        "Cucurella Saseta",
+        "Hall",
+        "Phillips",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Mbeumo",
+        "Watkins",
+        "Haaland",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 5,
+      "chip": null,
+      "predicted_score": 74.3384096622467,
+      "squad_value": 97.3,
+      "transfers_in": [
+        "Eze"
+      ],
+      "transfers_out": [
+        "Rogers"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Steele",
+        "Cucurella Saseta",
+        "Hall",
+        "Phillips",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Mbeumo",
+        "Watkins",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 6,
+      "chip": null,
+      "predicted_score": 75.82539439201355,
+      "squad_value": 93.0,
+      "transfers_in": [
+        "Isak"
+      ],
+      "transfers_out": [
+        "Haaland"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Steele",
+        "Cucurella Saseta",
+        "Hall",
+        "Phillips",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Watkins",
+        "Isak",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 7,
+      "chip": null,
+      "predicted_score": 77.5082950592041,
+      "squad_value": 92.3,
+      "transfers_in": [
+        "Keane"
+      ],
+      "transfers_out": [
+        "Hall"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Steele",
+        "Cucurella Saseta",
+        "Keane",
+        "Phillips",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Watkins",
+        "Isak",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 8,
+      "chip": null,
+      "predicted_score": 78.08691143989563,
+      "squad_value": 91.0,
+      "transfers_in": [
+        "Rice"
+      ],
+      "transfers_out": [
+        "Mbeumo"
+      ],
+      "penalty_pts": 0,
+      "captain": "Esse",
+      "xi": [
+        "Steele",
+        "Cucurella Saseta",
+        "Keane",
+        "Phillips",
+        "Rice",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Isak",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 9,
+      "chip": null,
+      "predicted_score": 78.84617185592651,
+      "squad_value": 90.9,
+      "transfers_in": [
+        "Gvardiol"
+      ],
+      "transfers_out": [
+        "Cucurella Saseta"
+      ],
+      "penalty_pts": 0,
+      "captain": "Wood",
+      "xi": [
+        "Steele",
+        "Keane",
+        "Gvardiol",
+        "Phillips",
+        "Rice",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Szoboszlai",
+        "Isak",
+        "Wood"
+      ]
+    },
+    {
+      "gw": 10,
+      "chip": null,
+      "predicted_score": 78.4655532836914,
+      "squad_value": 90.8,
+      "transfers_in": [
+        "Guimar\u00e3es Rodriguez Moura"
+      ],
+      "transfers_out": [
+        "Szoboszlai"
+      ],
+      "penalty_pts": 0,
+      "captain": "Wood",
+      "xi": [
+        "Steele",
+        "Keane",
+        "Gvardiol",
+        "Phillips",
+        "Rice",
+        "Eze",
+        "Esse",
+        "McNeil",
+        "Guimar\u00e3es Rodriguez Moura",
+        "Isak",
+        "Wood"
+      ]
+    }
+  ],
+  "total_predicted_points": 747.9142212867737,
+  "total_penalties": 0,
+  "chips_used": [
+    {
+      "chip": "wildcard_2",
+      "gw": 2
+    }
+  ],
+  "best_gw": {
+    "gw": 9,
+    "score": 78.84617185592651,
+    "squad": [
+      "Mart\u00ednez Romero",
+      "Steele",
+      "Senesi Bar\u00f3n",
+      "Smith",
+      "Keane",
+      "Gvardiol",
+      "Phillips",
+      "Rice",
+      "Eze",
+      "Esse",
+      "McNeil",
+      "Szoboszlai",
+      "Watkins",
+      "Isak",
+      "Wood"
+    ]
+  },
+  "most_captained": "Esse",
+  "squad_value_trajectory": [
+    {
+      "gw": 1,
+      "value": 100.0
+    },
+    {
+      "gw": 2,
+      "value": 94.4
+    },
+    {
+      "gw": 3,
+      "value": 97.4
+    },
+    {
+      "gw": 4,
+      "value": 97.6
+    },
+    {
+      "gw": 5,
+      "value": 97.3
+    },
+    {
+      "gw": 6,
+      "value": 93.0
+    },
+    {
+      "gw": 7,
+      "value": 92.3
+    },
+    {
+      "gw": 8,
+      "value": 91.0
+    },
+    {
+      "gw": 9,
+      "value": 90.9
+    },
+    {
+      "gw": 10,
+      "value": 90.8
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "sim_start_gw": 1,
+  "gameweeks": [
+    {
+      "gw": 1,
+      "real_gw": 1,
+      "chip": null,
+      "predicted": 65.5,
+      "actual": 41,
+      "penalty": 0
+    },
+    {
+      "gw": 2,
+      "real_gw": 2,
+      "chip": "wildcard_1",
+      "predicted": 79.2,
+      "actual": 41,
+      "penalty": 0
+    },
+    {
+      "gw": 3,
+      "real_gw": 3,
+      "chip": null,
+      "predicted": 76.9,
+      "actual": 45,
+      "penalty": 2
+    },
+    {
+      "gw": 4,
+      "real_gw": 4,
+      "chip": null,
+      "predicted": 86.4,
+      "actual": 73,
+      "penalty": 0
+    },
+    {
+      "gw": 5,
+      "real_gw": 5,
+      "chip": null,
+      "predicted": 84.0,
+      "actual": 61,
+      "penalty": 0
+    },
+    {
+      "gw": 6,
+      "real_gw": 6,
+      "chip": null,
+      "predicted": 84.0,
+      "actual": 54,
+      "penalty": 0
+    },
+    {
+      "gw": 7,
+      "real_gw": 7,
+      "chip": null,
+      "predicted": 83.2,
+      "actual": 72,
+      "penalty": 0
+    },
+    {
+      "gw": 8,
+      "real_gw": 8,
+      "chip": null,
+      "predicted": 82.5,
+      "actual": 59,
+      "penalty": 0
+    },
+    {
+      "gw": 9,
+      "real_gw": 9,
+      "chip": null,
+      "predicted": 81.6,
+      "actual": 38,
+      "penalty": 0
+    },
+    {
+      "gw": 10,
+      "real_gw": 10,
+      "chip": null,
+      "predicted": 79.5,
+      "actual": 75,
+      "penalty": 0
+    }
+  ],
+  "total_predicted": 802.8,
+  "total_actual": 559
+}

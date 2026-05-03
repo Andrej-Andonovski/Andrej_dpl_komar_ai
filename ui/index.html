@@ -514,6 +514,66 @@
       color: var(--red);
     }
 
+    /* ── CLAUDE BUBBLE ── */
+    .claude-bubble {
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #7c3aed;
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.15s, transform 0.15s;
+    }
+
+    .claude-bubble:hover {
+      background: #9d5cf6;
+      transform: translateX(-50%) scale(1.15);
+    }
+
+    .claude-tooltip {
+      position: fixed;
+      z-index: 200;
+      max-width: 260px;
+      background: #1a1033;
+      border: 1px solid #7c3aed;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #e0d4ff;
+      line-height: 1.5;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+    }
+
+    .claude-tooltip.visible {
+      opacity: 1;
+    }
+
+    .claude-tooltip-label {
+      font-size: 10px;
+      font-weight: 600;
+      color: #9d5cf6;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 4px;
+    }
+
     /* ── ERROR STATE ── */
     #error-state {
       display: none;
@@ -577,8 +637,15 @@
 <!-- GW INDICATOR -->
 <div id="gw-indicator">GW — / —</div>
 
+<!-- CLAUDE TOOLTIP (singleton, repositioned on hover) -->
+<div class="claude-tooltip" id="claude-tooltip">
+  <div class="claude-tooltip-label">Claude AI</div>
+  <div id="claude-tooltip-text"></div>
+</div>
+
 <script>
   let data = null;
+  let explanations = {};   // gw number -> { players: {name: sentence}, captain: sentence }
   let currentGW = 0;
   let isRunning = false;
   let pollInterval = null;
@@ -607,10 +674,28 @@
       document.getElementById('gw-indicator').style.display = 'none';
       return;
     }
+
+    // Load Claude explanations (optional — UI works without them)
+    try {
+      const exRes = await fetch('/api/explanations');
+      if (exRes.ok) {
+        const exData = await exRes.json();
+        (exData.gameweeks || []).forEach(gw => {
+          explanations[gw.gw] = {
+            players: gw.player_explanations || {},
+            captain: gw.captain_note || '',
+          };
+        });
+      }
+    } catch (_) {}
+
     renderHeader();
     renderCarousel();
     updateNav();
     setInterval(checkStatus, 4000);
+
+    // Tooltip hide on scroll / click outside
+    document.addEventListener('click', hideTooltip);
   }
 
   // ── HEADER ─────────────────────────────────────────────────────────────────
@@ -758,7 +843,7 @@
     ['FWD', 'MID', 'DEF', 'GK'].forEach(pos => {
       const row = document.createElement('div');
       row.className = 'pitch-row';
-      groups[pos].forEach(p => row.appendChild(buildPlayerCard(p, vc)));
+      groups[pos].forEach(p => row.appendChild(buildPlayerCard(p, vc, gw.gw)));
       pitch.appendChild(row);
     });
 
@@ -782,7 +867,7 @@
       if (b.auto_subbed_out && !a.auto_subbed_out) return -1;
       return (b.predicted_pts || 0) - (a.predicted_pts || 0);
     });
-    benchSorted.forEach(p => benchRow.appendChild(buildPlayerCard(p, null)));
+    benchSorted.forEach(p => benchRow.appendChild(buildPlayerCard(p, null, gw.gw)));
     benchStrip.appendChild(benchRow);
     page.appendChild(benchStrip);
 
@@ -831,7 +916,7 @@
     return page;
   }
 
-  function buildPlayerCard(p, vc) {
+  function buildPlayerCard(p, vc, gwNum) {
     const card = document.createElement('div');
     card.className = 'player-card';
 
@@ -897,7 +982,52 @@
       card.appendChild(predEl);
     }
 
+    // Claude explanation bubble
+    const gwExpl = gwNum && explanations[gwNum];
+    const sentence = gwExpl && gwExpl.players[p.web_name];
+    if (sentence) {
+      const bubble = document.createElement('div');
+      bubble.className = 'claude-bubble';
+      bubble.textContent = 'AI';
+      bubble.addEventListener('click', e => {
+        e.stopPropagation();
+        showTooltip(bubble, sentence);
+      });
+      card.appendChild(bubble);
+    }
+
     return card;
+  }
+
+  // ── TOOLTIP ────────────────────────────────────────────────────────────────
+  function showTooltip(anchor, text) {
+    const tooltip = document.getElementById('claude-tooltip');
+    document.getElementById('claude-tooltip-text').textContent = text;
+
+    const rect = anchor.getBoundingClientRect();
+    const gap  = 10;
+    const tw   = 260;
+
+    // Place offscreen first to measure height
+    tooltip.style.left   = '-9999px';
+    tooltip.style.top    = '-9999px';
+    tooltip.style.right  = '';
+    tooltip.style.bottom = '';
+    tooltip.classList.add('visible');
+
+    const th   = tooltip.offsetHeight;
+    let left   = rect.left + rect.width / 2 - tw / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+    const topAbove = rect.top - th - gap;
+
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top  = topAbove < 70
+      ? `${rect.bottom + gap}px`
+      : `${topAbove}px`;
+  }
+
+  function hideTooltip() {
+    document.getElementById('claude-tooltip').classList.remove('visible');
   }
 
   function sumPtsCounted(xi) {

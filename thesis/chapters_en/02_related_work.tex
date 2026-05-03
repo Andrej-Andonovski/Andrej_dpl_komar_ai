@@ -1,0 +1,82 @@
+% ============================================================
+% 02_related_work.tex — Related Work (English)
+% ============================================================
+
+\section{Gradient Boosting Methods}
+
+Boosting methods are ensemble techniques in which a large number of weak predictors — typically shallow decision trees — are combined sequentially to form a strong predictor. Each successive tree is trained on the residual errors of the previous ensemble, gradually reducing the cumulative loss. This concept, formalised by Friedman's Gradient Boosting Machine framework, became the dominant paradigm for regression and classification on tabular data and has consistently achieved state-of-the-art performance on standard benchmarks.
+
+\subsection{XGBoost}
+
+Chen and Guestrin \cite{chen2016xgboost} introduced XGBoost (eXtreme Gradient Boosting) in 2016, a system that rapidly became the de facto standard for structured data competitions. XGBoost introduced several key innovations over prior boosting implementations: a regularisation term in the objective function to prevent overfitting, a histogram-based algorithm for efficient split finding, and support for parallel and distributed training. The system builds trees level-wise, evaluating all candidate splits at each depth level before selecting those with the highest gain. While this approach ensures balanced trees and predictable memory usage, it can be computationally wasteful when a small subset of leaves drives most of the gain.
+
+\subsection{LightGBM}
+
+Ke et al. \cite{ke2017lightgbm} introduced LightGBM (Light Gradient Boosting Machine) in 2017, with the primary goal of overcoming XGBoost's limitations on datasets with large numbers of features and training samples. The central innovation is the \textit{leaf-wise} tree growth strategy: instead of expanding all leaves at one depth level simultaneously (level-wise), the algorithm always selects the single leaf with the maximum gain for splitting, regardless of tree depth. This produces deeper, asymmetric trees that reduce loss faster per iteration but can overfit on small datasets. The parameters \texttt{num\_leaves} and \texttt{min\_child\_samples} constrain tree growth to manage this risk.
+
+LightGBM additionally introduced Gradient-based One-Side Sampling (GOSS), which subsamples training instances with small gradients (already well-learned examples) at a reduced rate, lowering computational cost without significant accuracy loss. Exclusive Feature Bundling (EFB) groups mutually exclusive features together, effectively reducing the feature dimensionality. The comparison between XGBoost and LightGBM is directly relevant to this thesis, as both algorithms were evaluated in the hyperparameter optimisation campaign and LightGBM was confirmed as the superior choice.
+
+\section{Sports Analytics and Expected Goals}
+
+Football analytics has undergone a transformative evolution over the past decade, driven by advances in tracking technology, open data availability, and statistical methodology. Traditional aggregate statistics — goals, assists, possession percentages — have been supplemented by advanced metrics that more accurately capture the quality of individual and collective performance.
+
+\subsection{Expected Goals (xG)}
+
+The expected goals metric (xG) assigns each shot a probability of resulting in a goal based on observable characteristics: location on the pitch, angle relative to goal, distance from goal, shot type (head versus foot), and the nature of the assist. Rathke \cite{rathke2017expected} conducted a formal analysis of xG models using camera-tracking data, demonstrating that xG is a significantly better predictor of future team performance than actual goal counts. This finding is particularly important for FPL: teams that consistently generate high xG are creating genuine attacking opportunities regardless of whether those opportunities happened to result in goals in a specific gameweek.
+
+In our system, team-level xG and xGA (Expected Goals Against) from Understat form the basis for team form features. The rolling five-gameweek averages provide a stable signal for the team's attacking and defensive quality that smooths over short-term noise.
+
+\subsection{Valuing Actions in Football}
+
+Decroos et al. \cite{decroos2019vaep} introduced VAEP (Valuing Actions by Estimating Probabilities), a framework for assigning a value to every individual action a player takes based on its effect on the probability of scoring or conceding. Unlike xG, which measures only shots, VAEP values every pass, dribble, and positional movement. While VAEP data is not directly incorporated in this thesis due to dataset availability constraints, the principle of statistically valuing individual player contributions underpins the design of our rolling player form features.
+
+\section{Fantasy Sports Prediction Research}
+
+The forecasting of fantasy sport performance has attracted research attention since the early 2010s. Hunter et al. \cite{hunter2012fantasy} were among the pioneers who formalised the problem of predicting fantasy points using machine learning, demonstrating that individual historical statistics possess significant predictive power. Crucially, they also showed that assembling the optimal fantasy team under budget and roster constraints is an NP-hard combinatorial problem, and that greedy heuristics frequently underperform against formal optimisation approaches. This observation directly motivates the use of ILP in our system rather than greedy selection.
+
+More recent work in Fantasy NFL and Fantasy NBA contexts has shown that ensemble methods and neural networks can outperform linear models when sufficient historical data is available. The FPL context is distinctive in several ways: variable positional scoring rules, the chip system (which creates multi-gameweek strategic dependencies), transfer penalties, and the need for season-long management rather than single-event optimisation. This thesis addresses all of these features simultaneously.
+
+\section{Integer Linear Programming for Team Selection}
+
+Dantzig \cite{dantzig1963linear_programming} laid the theoretical foundations of linear programming, a method with immense practical reach. Integer Linear Programming (ILP) is its generalisation where some or all variables are constrained to integer values, making it ideal for combinatorial selection problems. The simplex method and its extensions (branch-and-bound, cutting planes) can solve ILP instances to provable optimality, a guarantee that heuristic methods like genetic algorithms or greedy search cannot offer.
+
+In the context of sports team management, ILP has been applied to lineup selection in daily fantasy sports, where the objective is to maximise projected points subject to salary and roster constraints. The FPL constraints — budget, positional composition, club limit, transfer costs — are naturally linear, making ILP the ideal tool. Our implementation uses the PuLP modelling library \cite{mitchell2011pulp} with the CBC (Coin Branch and Cut) open-source solver.
+
+\section{Bayesian Hyperparameter Optimisation}
+
+Hyperparameter optimisation is a critical step in any machine learning pipeline. Traditional methods treat the performance function as a black box: grid search evaluates all combinations in a predefined grid (computationally prohibitive in high dimensions), while random search samples configurations uniformly at random. Bergstra and Bengio (2012) showed that random search outperforms grid search when only a few hyperparameters are relevant, but both methods ignore information from previously evaluated configurations.
+
+Snoek et al. \cite{snoek2012practical} introduced practical Bayesian optimisation for ML hyperparameters, fitting a Gaussian Process surrogate to the observed (hyperparameter, performance) pairs and selecting the next configuration to evaluate by maximising an acquisition function (Expected Improvement). This allows convergence with substantially fewer evaluations than random search, especially important when each evaluation requires running a full training and simulation pipeline.
+
+Akiba et al. \cite{akiba2019optuna} developed Optuna, a hyperparameter optimisation framework implementing the Tree-structured Parzen Estimator (TPE) sampler. TPE models $p(x|y < y^*)$ and $p(x|y \geq y^*)$ separately — the distribution of configurations that achieved good and poor performance respectively — using these to compute the expected improvement analytically. TPE handles high-dimensional and conditional hyperparameter spaces more efficiently than Gaussian Processes, making it well suited to our joint ML-plus-simulator optimisation problem.
+
+\section{Large Language Models in Decision Support}
+
+The Transformer architecture, introduced by Vaswani et al. in 2017, revolutionised natural language processing. Models built on this architecture at scale have demonstrated remarkable reasoning capabilities.
+
+Brown et al. \cite{brown2020gpt3} presented GPT-3, a 175-billion-parameter language model that demonstrated few-shot learning: the ability to perform new tasks given only a small number of examples in the prompt, without weight updates. This showed that sufficiently large language models develop emergent reasoning capabilities that generalise across domains. Achiam et al. \cite{achiam2023gpt4} extended this with GPT-4, showing substantial improvements in mathematical reasoning, instruction following, and factual accuracy.
+
+The Gemini family \cite{geminiteam2024gemini}, developed by Google DeepMind, introduced multimodal capabilities alongside strong language reasoning. Our system uses Gemini 2.5 Flash for pre-deadline strategic recommendations (intel\_05), exploiting its ability to synthesise structured statistical tables with unstructured press conference text and produce actionable squad management advice.
+
+The Claude model family, developed by Anthropic, is used in the narrative explanation layer (Stage 9). Its strength in following complex structured output instructions makes it well-suited for generating consistent per-gameweek explanations from structured squad decision data.
+
+\section{Walk-Forward Validation for Time Series}
+
+Tashman \cite{tashman2000out} formalised out-of-sample testing for forecasting models, establishing that in-sample performance systematically overstates out-of-sample performance, particularly for models with many parameters. The correct approach is strict temporal separation: the model must never observe any data point from the evaluation period during training.
+
+In the FPL context, this is especially critical. Using statistics from future gameweeks as features when training a model intended to predict those same gameweeks constitutes direct data leakage, inflating reported accuracy metrics. Prior work in sports analytics and fantasy sports prediction has sometimes failed to respect this boundary, producing results that do not generalise to live settings.
+
+Our walk-forward cross-validation with five folds (see Chapter~3) strictly enforces this temporal boundary. Additionally, the 2025--26 season (the evaluation season) is completely withheld from all training data, ensuring that the season simulation constitutes a true blind test.
+
+\section{Identified Gap in the Literature}
+
+Following the review above, a clear gap in the existing literature can be identified. No prior work combines the following four components in a single automated system:
+
+\begin{enumerate}
+  \item Machine learning prediction of individual player performance with walk-forward temporal validation and online retraining after each gameweek;
+  \item Integer Linear Programming squad optimisation with full support for chips, transfer banking, and season-long strategy;
+  \item A real-time intelligence pipeline based on web scraping and LLM reasoning that adjusts predictions before each deadline;
+  \item Automated full-season simulation with Bayesian hyperparameter optimisation across the joint ML-and-simulator parameter space.
+\end{enumerate}
+
+Existing work typically addresses one or two of these components in isolation. This thesis fills this gap by integrating all four into a coherent, evaluated, and documented system.

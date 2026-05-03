@@ -1,0 +1,185 @@
+% ============================================================
+% main_mk.tex — Macedonian version root file
+% Compiler: pdfLaTeX + biber
+% ============================================================
+\documentclass[a4paper,12pt]{report}
+
+% --- Encoding & Language ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[macedonian,english]{babel}
+
+% --- Page Layout ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% --- Typography & Spacing ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{microtype}
+
+% --- Math ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Graphics ---
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+
+% --- Code Listings ---
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray}\itshape,
+  stringstyle=\color{orange},
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  captionpos=b
+}
+
+% --- Captions ---
+\usepackage{caption}
+\usepackage{subcaption}
+
+% --- Headers & Footers ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Section Formatting ---
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+% --- Table of Contents ---
+\usepackage{tocloft}
+
+% --- Hyperlinks ---
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue,
+  pdfauthor={Andrej Andonovski},
+  pdftitle={Prediktiven sistem za upravuvanje so tim vo Fantazi Premier Liga}
+]{hyperref}
+
+% --- Bibliography ---
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99
+]{biblatex}
+\addbibresource{references.bib}
+
+% --- Custom Commands ---
+\newcommand{\student}[1]{\textbf{#1}}
+\newcommand{\mentor}[1]{\textbf{#1}}
+
+% ============================================================
+\begin{document}
+
+% --- Front Matter (Roman numerals) ---
+\pagenumbering{roman}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+\begin{titlepage}
+  \centering
+  \vspace*{1cm}
+
+  {\large \textbf{Универзитет „Св. Кирил и Методиј" во Скопје}}\\[0.3cm]
+  {\large \textbf{Факултет за информатички науки и компјутерско инженерство}}\\[2cm]
+
+  \includegraphics[width=4cm,keepaspectratio]{figures/finki_logo}
+  \vspace{1.5cm}
+
+  {\Large \textbf{Дипломска работа}}\\[1cm]
+
+  \rule{\linewidth}{0.5pt}\\[0.5cm]
+  {\LARGE \bfseries
+    Предиктивен систем за управување со тим во Фантази Премиер Лига базиран на хибридна вештачка интелигенција
+  }\\[0.5cm]
+  \rule{\linewidth}{0.5pt}\\[2cm]
+
+  \begin{minipage}{0.45\textwidth}
+    \raggedright
+    \textbf{Ментор:}\\
+    \mentor{Prof. d-r [Ime Prezime]}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \textbf{Студент:}\\
+    \student{Андреј Андоновски}\\
+    Индекс: 196042
+  \end{minipage}
+
+  \vfill
+  {\large Скопје, 2026}
+\end{titlepage}
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\chapter*{Апстракт}
+\addcontentsline{toc}{chapter}{Апстракт}
+\input{chapters_mk/00_abstract}
+
+% ============================================================
+% TABLE OF CONTENTS
+% ============================================================
+\tableofcontents
+\listoftables
+\listoffigures
+
+% ============================================================
+% BODY (Arabic numerals)
+% ============================================================
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ============================================================
+% CHAPTERS
+% ============================================================
+\chapter{Вовед}
+\input{chapters_mk/01_introduction}
+
+\chapter{Преглед на литература}
+\input{chapters_mk/02_related_work}
+
+\chapter{Методологија}
+\input{chapters_mk/03_methodology}
+
+\chapter{Резултати и евалуација}
+\input{chapters_mk/04_results}
+
+\chapter{Иден развој}
+\input{chapters_mk/05_future_work}
+
+\chapter{Заклучок}
+\input{chapters_mk/06_conclusion}
+
+% ============================================================
+% BIBLIOGRAPHY
+% ============================================================
+\printbibliography[heading=bibintoc, title={Литература}]
+
+\end{document}

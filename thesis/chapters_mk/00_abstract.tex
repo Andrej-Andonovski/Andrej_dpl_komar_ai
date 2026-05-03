@@ -1,0 +1,37 @@
+% ============================================================
+% 00_abstract.tex — Abstract (MK + EN)
+% ============================================================
+
+\section*{Апстракт на македонски јазик}
+
+Оваа дипломска работа го претставува проектирањето, имплементацијата и евалуацијата на целосно автоматизиран систем за управување со тим во играта Фантази Премиер Лига (FPL), базиран на тројно-слојна хибридна архитектура на вештачка интелигенција. Системот ги интегрира техниките за машинско учење, комбинаторна оптимизација и јазични модели (LLM) со цел да донесува автономни одлуки за избор на тим, трансфери, капитенски избор и активирање на специјални чипови во текот на целата сезона.
+
+Во слојот за предикција, четири одделни модели базирани на алгоритмот LightGBM ги предвидуваат очекуваните поени на играчите за секоја натпреварувачка недела (ГН). Моделите се тренирани на историски податоци од шест сезони (2019--20 до 2024--25), вкупно 51\,044 редови организирани во четири позициски датотеки (GK, DEF, MID, FWD). Карактеристиките вклучуваат тркалачки форм (последни 3 и 5 ГН), тимски xG/xGA статистики од Understat, тежина на натпреварот (FDR), пазарни сигнали и статистики на новите трансфери преку девет европски лиги. Тренирањето се вршеше преку прошетна-напред кросвалидација со пет набори и временски пондерирање на поновите сезони.
+
+Во слојот за оптимизација, формулиран е проблем на цело-бројно линеарно програмирање (ILP) кој го максимизира предвидениот збир на поени за тим од 15 играчи, почитувајќи ги ограничувањата на буџетот (£100 милиони), позициската структура, правилото за максимум три играчи по клуб, и трошоците за трансфери (−4 поени за секој дополнителен трансфер).
+
+Третиот слој претставува интелигентна цевководна мрежа (intel pipeline) составена од седум модули кои собираат информации во реално време: статуси на играчи, прес-конференции, достапност (0--100), ризик од ротација (0--100), и LLM препораки преку Gemini 2.5 Flash API. Овие сигнали се претвораат во коефициенти кои ги коригираат предикциите пред оптимизацијата.
+
+Системот беше евалуиран на GW1--28 од сезоната 2025--26, постигнувајќи \textbf{1799 поени} (просек 64,3 поени/ГН) без ниту еден казнен поен. Хиперпараметрите беа оптимизирани преку 250 случајни обиди и 100 Bayesian обиди со Optuna (TPE), при што финалниот модел (trial 429) ги надмина сите претходни конфигурации. Резултатите покажуваат дека интелигентниот пипелајн додава значителна вредност над чистата ML-предикција, а LightGBM конзистентно го надминува XGBoost.
+
+\bigskip
+\noindent\textbf{Клучни зборови:} машинско учење, оптимизација, фантази спорт, LightGBM, ILP, LLM, LLM агент, Bayesian оптимизација, временски редови, Фантази Премиер Лига
+
+\bigskip\bigskip
+\hrule
+\bigskip
+
+\section*{Abstract in English}
+
+This thesis presents the design, implementation, and evaluation of a fully automated team management system for Fantasy Premier League (FPL), built on a three-layer hybrid artificial intelligence architecture. The system integrates machine learning, combinatorial optimisation, and large language models (LLMs) to make autonomous decisions about squad selection, transfers, captain choice, and chip activation throughout an entire season without any manual intervention.
+
+The prediction layer employs four separate LightGBM models — one per player position (goalkeeper, defender, midfielder, forward) — to forecast expected points for each gameweek. Models are trained on six seasons of historical FPL data (2019--20 through 2024--25), comprising 51\,044 rows of player-gameweek observations. Features encompass rolling form windows (last 3 and 5 gameweeks), team-level expected goals and expected goals against (xG/xGA) sourced from Understat, fixture difficulty ratings (FDR), market signals (transfer volume, ownership percentage), and new signing statistics from nine European leagues sourced from FBref. Training follows a walk-forward cross-validation protocol with five temporally ordered folds and exponentially increasing fold weights to emphasise recent seasons.
+
+The optimisation layer formulates squad selection as an Integer Linear Programming (ILP) problem, maximising the sum of predicted points for a 15-player squad subject to FPL constraints: a £100 million budget, positional structure requirements, a maximum of three players per club, and transfer penalty costs of negative four points per additional transfer.
+
+The intelligence layer consists of seven modules that gather real-time information before each deadline: player injury and availability status, press conference transcripts, per-player availability scores (0--100), rotation risk scores (0--100), and LLM-generated recommendations via the Gemini 2.5 Flash API. These signals are converted into multiplicative adjustment factors applied to model predictions before optimisation.
+
+The system was evaluated across gameweeks 1--28 of the 2025--26 FPL season, achieving \textbf{1,799 total points} (average 64.3 points per gameweek) with zero transfer penalty points incurred. Hyperparameters were tuned through a joint random search over 250 trials followed by 100-trial Bayesian optimisation using Optuna's TPE sampler, with the final configuration (Optuna trial 429) surpassing all prior configurations. Results demonstrate that the intelligence pipeline adds substantial value over pure ML-based prediction, and that LightGBM consistently outperforms XGBoost across all hyperparameter configurations explored.
+
+\bigskip
+\noindent\textbf{Keywords:} machine learning, optimisation, fantasy sports, LightGBM, ILP, LLM, LLM agent, Bayesian optimisation, time series, Fantasy Premier League

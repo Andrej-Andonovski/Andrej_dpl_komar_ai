@@ -1,0 +1,107 @@
+{
+  "sim_start_gw": 1,
+  "gameweeks": [
+    {
+      "gw": 1,
+      "real_gw": 1,
+      "chip": null,
+      "predicted": 63.8,
+      "actual": 53,
+      "penalty": 0,
+      "captain": "Salah",
+      "cap_pos": "MID"
+    },
+    {
+      "gw": 2,
+      "real_gw": 2,
+      "chip": "wildcard_1",
+      "predicted": 78.9,
+      "actual": 52,
+      "penalty": 0,
+      "captain": "Salah",
+      "cap_pos": "MID"
+    },
+    {
+      "gw": 3,
+      "real_gw": 3,
+      "chip": null,
+      "predicted": 76.2,
+      "actual": 62,
+      "penalty": 1,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 4,
+      "real_gw": 4,
+      "chip": null,
+      "predicted": 79.9,
+      "actual": 66,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 5,
+      "real_gw": 5,
+      "chip": null,
+      "predicted": 79.4,
+      "actual": 48,
+      "penalty": 1,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 6,
+      "real_gw": 6,
+      "chip": null,
+      "predicted": 82.0,
+      "actual": 55,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 7,
+      "real_gw": 7,
+      "chip": null,
+      "predicted": 80.6,
+      "actual": 47,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 8,
+      "real_gw": 8,
+      "chip": null,
+      "predicted": 78.9,
+      "actual": 53,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 9,
+      "real_gw": 9,
+      "chip": null,
+      "predicted": 77.8,
+      "actual": 58,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    },
+    {
+      "gw": 10,
+      "real_gw": 10,
+      "chip": null,
+      "predicted": 78.7,
+      "actual": 81,
+      "penalty": 0,
+      "captain": "Haaland",
+      "cap_pos": "FWD"
+    }
+  ],
+  "total_predicted": 776.2,
+  "total_actual": 575
+}

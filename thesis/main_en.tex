@@ -1,0 +1,185 @@
+% ============================================================
+% main_en.tex — English version root file
+% Compiler: pdfLaTeX + biber
+% ============================================================
+\documentclass[a4paper,12pt]{report}
+
+% --- Encoding & Language ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,macedonian]{babel}
+
+% --- Page Layout ---
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+% --- Typography & Spacing ---
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{microtype}
+
+% --- Math ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Graphics ---
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+
+% --- Code Listings ---
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue}\bfseries,
+  commentstyle=\color{gray}\itshape,
+  stringstyle=\color{orange},
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  captionpos=b
+}
+
+% --- Captions ---
+\usepackage{caption}
+\usepackage{subcaption}
+
+% --- Headers & Footers ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- Section Formatting ---
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{30pt}{20pt}
+
+% --- Table of Contents ---
+\usepackage{tocloft}
+
+% --- Hyperlinks ---
+\usepackage[
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  urlcolor=blue,
+  pdfauthor={Andrej Andonovski},
+  pdftitle={A Hybrid Artificial Intelligence System for Predictive Team Management in Fantasy Premier League}
+]{hyperref}
+
+% --- Bibliography ---
+\usepackage[
+  backend=biber,
+  style=numeric,
+  sorting=none,
+  maxbibnames=99
+]{biblatex}
+\addbibresource{references.bib}
+
+% --- Custom Commands ---
+\newcommand{\student}[1]{\textbf{#1}}
+\newcommand{\mentor}[1]{\textbf{#1}}
+
+% ============================================================
+\begin{document}
+
+% --- Front Matter (Roman numerals) ---
+\pagenumbering{roman}
+
+% ============================================================
+% TITLE PAGE
+% ============================================================
+\begin{titlepage}
+  \centering
+  \vspace*{1cm}
+
+  {\large \textbf{Ss. Cyril and Methodius University in Skopje}}\\[0.3cm]
+  {\large \textbf{Faculty of Computer Science and Engineering}}\\[2cm]
+
+  \includegraphics[width=4cm,keepaspectratio]{figures/finki_logo}
+  \vspace{1.5cm}
+
+  {\Large \textbf{Bachelor Thesis}}\\[1cm]
+
+  \rule{\linewidth}{0.5pt}\\[0.5cm]
+  {\LARGE \bfseries
+    A Hybrid Artificial Intelligence System for Predictive Team Management in Fantasy Premier League
+  }\\[0.5cm]
+  \rule{\linewidth}{0.5pt}\\[2cm]
+
+  \begin{minipage}{0.45\textwidth}
+    \raggedright
+    \textbf{Mentor:}\\
+    \mentor{Prof. d-r [Ime Prezime]}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \textbf{Student:}\\
+    \student{Andrej Andonovski}\\
+    Index: 196042
+  \end{minipage}
+
+  \vfill
+  {\large Skopje, 2026}
+\end{titlepage}
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{chapters_en/00_abstract}
+
+% ============================================================
+% TABLE OF CONTENTS
+% ============================================================
+\tableofcontents
+\listoftables
+\listoffigures
+
+% ============================================================
+% BODY (Arabic numerals)
+% ============================================================
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ============================================================
+% CHAPTERS
+% ============================================================
+\chapter{Introduction}
+\input{chapters_en/01_introduction}
+
+\chapter{Related Work}
+\input{chapters_en/02_related_work}
+
+\chapter{Methodology}
+\input{chapters_en/03_methodology}
+
+\chapter{Results and Evaluation}
+\input{chapters_en/04_results}
+
+\chapter{Future Work}
+\input{chapters_en/05_future_work}
+
+\chapter{Conclusion}
+\input{chapters_en/06_conclusion}
+
+% ============================================================
+% BIBLIOGRAPHY
+% ============================================================
+\printbibliography[heading=bibintoc, title={References}]
+
+\end{document}

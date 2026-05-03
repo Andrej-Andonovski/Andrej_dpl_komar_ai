@@ -1,0 +1,59 @@
+% ============================================================
+% 01_introduction.tex — Introduction (English)
+% ============================================================
+
+\section{Context and Motivation}
+
+Fantasy Premier League (FPL) is the official online fantasy game associated with the English Premier League, attracting more than ten million active managers worldwide in the 2024--25 season alone. Each participant assembles a virtual squad of fifteen players within a fixed budget of one hundred million pounds, accumulating points based on the real-world performances of their chosen players across each gameweek. Success in FPL demands continuous monitoring of statistics, injury bulletins, form trends, fixture schedules, and market movements, making team management over a full season a cognitively demanding and time-intensive endeavour.
+
+The fundamental challenge in FPL is the inherent unpredictability of player performance. Unlike traditional sport forecasting where a win or loss is the binary outcome, FPL scores are determined by a continuous and highly variable sequence of events: goals, assists, clean sheets, penalty saves, yellow cards, and minutes played. A player who scored eight points last week may return zero this week due to an unannounced rotation or an injury picked up in training. This stochastic nature makes the problem particularly well-suited for machine learning approaches, which can identify statistical regularities in historical data and encode them into predictive models that generalise to future gameweeks.
+
+Beyond point prediction, squad selection is subject to a rich set of constraints: a budget ceiling, strict positional requirements (two goalkeepers, five defenders, five midfielders, and three forwards), a limit of at most three players from any single club, and a transfer system in which additional player swaps beyond the weekly allowance incur four-point penalties. This constraint structure makes the problem a natural candidate for Integer Linear Programming (ILP), a class of combinatorial optimisation methods that can provably find the globally optimal solution within a specified feasibility region.
+
+In recent years, the emergence of large language models (LLMs) has opened a new dimension in automated decision-making. LLMs are capable of interpreting unstructured textual information — press conference transcripts, injury reports, pundit analysis — and converting it into structured signals that augment quantitative predictions. Pre-trained on vast text corpora, these models possess reasoning capabilities that are difficult to replicate through classical machine learning pipelines.
+
+\section{Problem Statement}
+
+The goal of this thesis is to design and implement a fully automated system that manages an FPL squad across an entire season without any human intervention. Formally, the system must:
+
+\begin{itemize}
+  \item Predict expected points for every available player before each gameweek deadline.
+  \item Select an optimal 15-player squad that respects all FPL rules and constraints.
+  \item Decide on player transfers, captain choice, and chip activation (Triple Captain, Bench Boost, Wildcard, Free Hit) for each gameweek.
+  \item Integrate real-time intelligence about injuries, rotation risk, and market sentiment before each deadline.
+  \item Provide interpretable narratives explaining each decision to the end user.
+\end{itemize}
+
+The system is evaluated on the 2025--26 FPL season in a strict blind-test setting: no data from the current season is used during model training. Only historical data from seasons 2019--20 through 2024--25 is available to the prediction models at the start of the season.
+
+\section{Contributions of This Thesis}
+
+This thesis makes four primary contributions:
+
+\begin{enumerate}
+  \item \textbf{A three-layer hybrid AI architecture}: The first system to combine ML prediction (LightGBM), ILP optimisation (PuLP), and LLM intelligence (Claude API, Gemini API) in a single coherent pipeline for automated FPL season management.
+
+  \item \textbf{A pre-deadline intelligence pipeline}: A suite of seven modules that gather real-time availability, rotation risk, press conference, and market data, automatically adjusting predictions before each deadline via a formal multiplicative penalty formula.
+
+  \item \textbf{A season simulator with hyperparameter optimisation}: A joint random search over 250 configurations and a Bayesian optimisation run with 100 Optuna TPE trials, simultaneously tuning ML hyperparameters and simulator configuration parameters to maximise season-long points.
+
+  \item \textbf{Systematic identification and correction of five critical bugs}: Discovered and fixed during development, these bugs affected score reporting, chip triggering, and data handling, and their correction directly improved the system's performance and robustness.
+\end{enumerate}
+
+\section{Thesis Structure}
+
+The thesis is organised into six chapters following this introduction.
+
+\textbf{Chapter 2 — Related Work} surveys the relevant literature across gradient boosting methods, sports analytics and expected goals, fantasy sports prediction, integer linear programming for team selection, Bayesian hyperparameter optimisation, large language models in decision support, and walk-forward validation for time series. A critical gap is identified: no prior work combines ML, ILP, and LLM intelligence in a unified pipeline for full-season FPL management.
+
+\textbf{Chapter 3 — Methodology} provides a detailed description of the complete system architecture, covering data collection and feature engineering across multiple sources, the training and validation strategy for the four LightGBM models, the ILP formulation with chip management and transfer strategy, each of the seven intel pipeline modules with formal mathematical descriptions, the hyperparameter optimisation campaign, and the LLM narrative layer.
+
+\textbf{Chapter 4 — Results and Evaluation} presents the quantitative season results (GW1--28), the ablation study tracing the improvement history from baseline to final system, the hyperparameter search outcomes, the impact of the intelligence pipeline, chip activation analysis, and a systematic account of bugs discovered and corrected during development.
+
+\textbf{Chapter 5 — Future Work} identifies five concrete directions for further development: additional player features, live GW30+ deployment, reinforcement learning formulations, improved press conference coverage, and sell-buyback prevention.
+
+\textbf{Chapter 6 — Conclusion} summarises the key findings and the significance of the approach for automated sports team management research.
+
+\section{Technology Stack}
+
+The system is implemented entirely in Python 3.11. Key libraries include: \texttt{lightgbm} for gradient boosting, \texttt{pulp} with the CBC solver for ILP, \texttt{anthropic} and \texttt{google-generativeai} for LLM API calls, \texttt{selenium}/SeleniumBase for web scraping with Cloudflare bypass, \texttt{optuna} for Bayesian optimisation, \texttt{pandas} and \texttt{numpy} for data processing, and \texttt{flask} for the user interface. The codebase is organised into a modular directory structure with clear separation between pipeline stages.

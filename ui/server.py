@@ -9,7 +9,8 @@ app = flask.Flask(__name__)
 
 UI_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(UI_DIR)
-DATA_FILE = os.path.join(PROJECT_ROOT, "data", "intel", "season_simulation.json")
+DATA_FILE  = os.path.join(PROJECT_ROOT, "data", "intel", "season_simulation.json")
+EXPL_FILE  = os.path.join(PROJECT_ROOT, "models", "stage9_explanations.json")
 
 _process_running = False
 _process_lock = threading.Lock()
@@ -32,6 +33,14 @@ def get_data():
     if not os.path.exists(DATA_FILE):
         return flask.jsonify({"error": "No data found"}), 404
     with open(DATA_FILE, "r", encoding="utf-8") as f:
+        return flask.jsonify(json.load(f))
+
+
+@app.route("/api/explanations")
+def get_explanations():
+    if not os.path.exists(EXPL_FILE):
+        return flask.jsonify({}), 200   # return empty, not an error
+    with open(EXPL_FILE, "r", encoding="utf-8") as f:
         return flask.jsonify(json.load(f))
 
 

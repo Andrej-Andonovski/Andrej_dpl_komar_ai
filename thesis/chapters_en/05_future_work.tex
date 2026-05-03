@@ -1,0 +1,91 @@
+% ============================================================
+% 05_future_work.tex — Future Work (English)
+% ============================================================
+
+\section{Additional Player Features}
+
+\subsection{Fatigue and Minutes Trend Features}
+
+The current model does not include direct measurements of player fatigue or playing time trends. The features \texttt{minutes\_last3} and \texttt{minutes\_last5} (the rolling averages of minutes played in the last three and five gameweeks, respectively) would serve as proxies for a player's current physical workload. A player who has consistently played 90-plus minutes across five consecutive gameweeks faces a meaningfully elevated fatigue risk in the next fixture, particularly when that fixture falls within a congested schedule of two or three matches per week.
+
+Implementing these features would require modifications to the feature engineering pipeline (\texttt{feature\_engineering\_stage6.py}) to compute the rolling minute windows, followed by full retraining of all four positional models. Preliminary correlation analysis suggests a positive association between \texttt{minutes\_last3} and \texttt{total\_points}, particularly for players with erratic minute distributions (e.g., squad rotation candidates who occasionally start). The key benefit is separating players who are in good form but tired from those who are in good form and fully fit.
+
+The derivative feature \texttt{minutes\_trend} — the signed slope of minutes across the last three matches — would detect players whose involvement is increasing or decreasing. A defender who played 45, 60, and 80 minutes in three consecutive matches is likely returning to full fitness and merits a positive adjustment, while the reverse trajectory would warrant a downward adjustment.
+
+\subsection{Injury History Features}
+
+Historical injury data — injury type, duration, and recurrence frequency — represents a potentially valuable signal that is currently absent from the model. Players with a documented history of hamstring or muscular injuries carry elevated recurrence risk during periods of high physical demand. While this information is available from third-party sources such as Transfermarkt and PhysioRoom, its integration requires careful modelling to avoid selection bias (players with severe injury histories may simply leave the league) and label inconsistency across sources.
+
+A practical implementation would maintain a per-player injury register updated from the intel\_01 FPL API data, tracking each injury event's start gameweek and duration. This register would generate features such as \texttt{days\_since\_last\_injury}, \texttt{injury\_count\_season}, and \texttt{injury\_type\_severity} that would augment the rotation risk model (intel\_04) with a longer-memory injury signal.
+
+\section{Live GW30+ Deployment}
+
+\subsection{Connecting to the Real FPL API}
+
+The system as evaluated operates in simulation mode, replaying historical gameweek data. The next natural development step is live deployment for GW30 onwards, connecting directly to the FPL API to execute actual team changes. This would require:
+
+\begin{enumerate}
+  \item Authentication with the FPL API using a real manager account's credentials.
+  \item Implementation of the transfer submission endpoint, sending the system's recommended transfers to FPL's servers before each deadline.
+  \item Operational monitoring to confirm that submitted transfers have been accepted and recorded correctly.
+  \item Automated post-gameweek data collection: fetching actual points, updating the training set, and triggering the full model retraining pipeline.
+\end{enumerate}
+
+Live deployment would provide independent external validation of the system's performance: results would be directly comparable to the global FPL rankings (average approximately 50 points per gameweek in 2024--25) and the top 100K managers' performance, which serves as a practical benchmark for elite FPL management.
+
+\subsection{Deployment Architecture}
+
+For a production deployment, the pipeline would be refactored into a microservice architecture scheduled via cron jobs. The intel pipeline (modules 01--05) would run approximately three hours before each deadline, the ILP optimiser would execute thirty minutes before the deadline with the final adjusted predictions, and results would be surfaced through the existing Flask UI. Error handling would include a fallback to the previous week's squad if the ILP fails to produce a valid solution within the time window.
+
+\section{Reinforcement Learning Approach}
+
+\subsection{MDP Formulation}
+
+Full-season FPL management can naturally be cast as a Markov Decision Process (MDP), making it a candidate for reinforcement learning approaches:
+
+\begin{itemize}
+  \item \textbf{State} $s_t$: the current squad composition, remaining budget, banked free transfers, remaining chips, player form profiles, and the FDR schedule for the next $N$ gameweeks.
+  \item \textbf{Action} $a_t$: a set of transfer decisions (buy/sell individual players), captain selection, and optional chip activation.
+  \item \textbf{Reward} $r_t$: actual points earned in gameweek $t$, minus transfer penalty points.
+  \item \textbf{Transitions}: stochastic, depending on the unpredictable real-world performances of players.
+\end{itemize}
+
+Algorithms such as Deep Q-Networks (DQN) or Proximal Policy Optimization (PPO) could directly optimise the long-term cumulative reward rather than the single-gameweek predicted points that the current ILP maximises. This is especially beneficial for chip decisions, which carry multi-gameweek implications: a Bench Boost chip is most valuable when deployed in a double gameweek where bench players have strong fixtures, which may be several weeks away from the current decision point.
+
+\subsection{Key Challenges}
+
+The primary challenge for an RL approach is the enormous state-action space: over 800 available players, 15 squad positions, continuous price dynamics, and a finite-horizon season of 38 gameweeks. Effective training requires simulated FPL environments built from historical season data, where the stochastic performance outcomes can be sampled from the empirical distribution of player points conditional on their form and fixture. The existing season simulator is a natural starting point for constructing such an environment.
+
+Model-based RL approaches that first learn a world model (predicting point distributions) and then plan within it may be particularly well suited, since the ML prediction models already provide the core world model component.
+
+\section{Improving Press Conference Coverage}
+
+\subsection{Fixing the Newcastle Limitation}
+
+The documented limitation of intel\_02 — missing clubs not mentioned in article headers — can be addressed through several complementary approaches:
+
+\begin{itemize}
+  \item \textbf{Cross-club name-matching}: Search for all known player names across all article text, regardless of which club section the text falls under. This was tested but produced a net score reduction of approximately 113 points due to cascading squad changes. A more carefully calibrated confidence threshold for cross-club matches may avoid this regression.
+  \item \textbf{Official club press conference streams}: Scraping the official club websites or YouTube channels for post-training press conference transcripts, which are typically published 48 hours before each fixture.
+  \item \textbf{Twitter/X integration}: Real-time monitoring of accounts belonging to journalists who specialise in specific clubs provides the most timely injury news, often published within minutes of a training session.
+\end{itemize}
+
+\subsection{Multi-Source Intel Fusion}
+
+A future intel\_08 module could implement a principled multi-source information fusion framework. Each source (FPL API, Fantasy Football Scout, Premier Injuries, club websites, social media) would be assigned a reliability weight based on its historical accuracy in predicting actual player status outcomes. A Bayesian update rule would combine signals from multiple sources into a posterior availability estimate:
+
+\begin{equation}
+P(\text{available} \mid \text{signals}) \propto P(\text{available}) \prod_k P(\text{signal}_k \mid \text{available})^{w_k}
+\end{equation}
+
+where $w_k$ is the reliability weight for source $k$, calibrated from historical data.
+
+\section{Sell-Buyback Prevention}
+
+\subsection{The Problem}
+
+The current ILP has no memory of the previous week's transfer decisions, permitting scenarios where the same player is sold in one gameweek and re-bought in the next. While technically permissible under FPL rules (at a four-point cost per transfer), this pattern suggests either an unstable prediction model or a suboptimal transfer strategy that could be corrected through a memory mechanism.
+
+\subsection{Potential Solutions}
+
+A sellback penalty term added to the ILP objective discourages re-buying a recently sold player. The optimal penalty magnitude depends on the expected benefit of the re-purchase: if the player's predicted score in the re-buy week substantially exceeds the penalty, the re-buy is rational. A dynamic penalty that decays exponentially with the number of gameweeks since the sale — high in the immediate next gameweek, approaching zero after five or more gameweeks — would strike a better balance than a fixed penalty while avoiding the score regression observed when a flat penalty was tested. Calibrating this decay rate is itself a hyperparameter that could be included in a future Optuna search.

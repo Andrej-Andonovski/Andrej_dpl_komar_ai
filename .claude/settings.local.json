@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip show fuzzywuzzy soccerdata)",
+      "Bash(python -c \"import fuzzywuzzy; import soccerdata; print\\(''both ok''\\)\")",
+      "Bash(pip install cloudscraper)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
