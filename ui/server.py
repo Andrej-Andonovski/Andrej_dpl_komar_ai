@@ -11,6 +11,8 @@ UI_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(UI_DIR)
 DATA_FILE  = os.path.join(PROJECT_ROOT, "data", "intel", "season_simulation.json")
 EXPL_FILE  = os.path.join(PROJECT_ROOT, "models", "stage9_explanations.json")
+AVAIL_FILE = os.path.join(PROJECT_ROOT, "data", "intel", "availability.json")
+ROT_FILE   = os.path.join(PROJECT_ROOT, "data", "intel", "rotation_risk.json")
 
 _process_running = False
 _process_lock = threading.Lock()
@@ -42,6 +44,33 @@ def get_explanations():
         return flask.jsonify({}), 200   # return empty, not an error
     with open(EXPL_FILE, "r", encoding="utf-8") as f:
         return flask.jsonify(json.load(f))
+
+
+@app.route("/api/intel")
+def get_intel():
+    """
+    Returns compact intel: { gw: { player_id: { avail_pct, rotation_risk } } }
+    Used by the UI to show availability/rotation warning icons on player cards.
+    """
+    out = {}  # gw_str -> {pid_str -> {avail_pct, rotation_risk}}
+
+    def _merge(path, keys_map):
+        if not os.path.exists(path):
+            return
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for gw_str, gw_data in data.get("gameweeks", {}).items():
+            out.setdefault(gw_str, {})
+            for pid_str, p in gw_data.get("players", {}).items():
+                rec = out[gw_str].setdefault(pid_str, {})
+                for src_key, dst_key in keys_map.items():
+                    if src_key in p:
+                        rec[dst_key] = p[src_key]
+
+    _merge(AVAIL_FILE, {"availability_pct": "avail_pct", "availability_tier": "avail_tier"})
+    _merge(ROT_FILE,   {"rotation_risk": "rotation_risk", "rotation_tier": "rot_tier"})
+
+    return flask.jsonify(out)
 
 
 @app.route("/api/run", methods=["POST"])

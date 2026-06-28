@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T13:58:19.019271+00:00",
+  "generated_at": "2026-06-06T21:10:57.726866+00:00",
   "mode": "backtest",
   "model": "gemini-2.5-flash",
   "sources": {
@@ -2186,33 +2186,80 @@
     "21": {
       "gw": 21,
       "pool_size": 40,
-      "llm_call_success": false,
+      "llm_call_success": true,
       "decisions": {
         "captain": {
-          "name": "Schade",
+          "name": "Thiago",
           "team": "BRE",
-          "position": "MID",
-          "reasoning": "Rule-based fallback: highest form, availability >= 80, rotation risk < 40"
+          "position": "N/A",
+          "reasoning": "Thiago (FWD, 7.2m) boasts a strong Form of 8.0 and an impressive PPG of 5.4. He faces Sunderland at home (FDR 2), which is a highly favorable fixture for attacking returns. His rotation risk is low at 22%, ensuring he's likely to start and play significant minutes."
         },
         "vice_captain": {
           "name": "N/A",
           "team": "N/A",
-          "reasoning": "Fallback"
+          "reasoning": ""
         },
         "differential": {
-          "name": "N/A",
-          "team": "N/A",
+          "name": "Schade",
+          "team": "BRE",
           "ownership_pct": 0,
-          "reasoning": "Fallback"
+          "reasoning": "Schade (MID, 6.8m) is an excellent differential with only 1.3% ownership. He has the highest form in the game at 9.7 and faces a weak Sunderland side at home (FDR 2). While his rotation risk is 32%, his recent form and fixture make him a high-upside pick."
         },
-        "transfers_in": [],
-        "transfers_out": [],
-        "risk_warnings": [
-          "LLM call failed -- using rule-based fallback"
+        "transfers_in": [
+          {
+            "name": "Thiago",
+            "team": "BRE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "High PPG (5.4), strong form (8.0), low rotation risk (22%), and an excellent home fixture against Sunderland (FDR 2). A reliable forward with high ceiling."
+          },
+          {
+            "name": "Garner",
+            "team": "EVE",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "A budget-friendly midfielder (5.2m) with great form (8.3) and a 'nailed' status for minutes. He has the best fixture of the gameweek, facing Wolves at home (FDR 1)."
+          },
+          {
+            "name": "Collins",
+            "team": "BRE",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "A defender (4.9m) with good form (7.7) and a low rotation risk (24%). Brentford's home fixture against Sunderland (FDR 2) offers a strong clean sheet potential and attacking returns."
+          }
         ],
-        "gw_narrative": "LLM unavailable. Rule-based fallback applied."
+        "transfers_out": [
+          {
+            "name": "Martinez",
+            "team": "MUN",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Martinez (DEF, 4.8m) carries the highest rotation risk in the squad at 62% ('heavy_rotation'), making him a significant benching threat."
+          },
+          {
+            "name": "Veltman",
+            "team": "BHA",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Veltman (DEF, 4.3m) has a high rotation risk of 60% ('heavy_rotation') and faces a very tough away fixture against Man City (FDR 5)."
+          },
+          {
+            "name": "Gray",
+            "team": "TOT",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Gray (MID, 4.8m) also has a high rotation risk of 60% ('heavy_rotation'), severely limiting his potential for gameweek minutes and points."
+          }
+        ],
+        "risk_warnings": [
+          "Heavy rotation risk for Martinez (MUN, 62%), Veltman (BHA, 60%), and Gray (TOT, 60%). Consider selling these players immediately.",
+          "Significant rotation risk for Ødegaard (ARS, 55%), Ajer (BRE, 54%), Tielemans (AVL, 52%), Trossard (ARS, 52%), Janelt (BRE, 52%), Cherki (MCI, 52%), and Gabriel (ARS, 51%). Monitor their minutes closely.",
+          "Players from Liverpool (Wirtz, Gravenberch) and Brighton (Ayari, Veltman) face the toughest fixtures of the gameweek (FDR 5) against Arsenal and Man City respectively. Avoid bringing them in.",
+          "Arsenal players (Ødegaard, Gabriel, Saka, Trossard, Rice) face a challenging home fixture against Liverpool (FDR 3), which could limit their attacking and defensive returns."
+        ],
+        "gw_narrative": ""
       },
-      "raw_prose": "",
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"CAPTAIN_PICK\": {\n      \"player\": \"Thiago\",\n      \"team\": \"BRE\",\n      \"reasoning\": \"Thiago (FWD, 7.2m) boasts a strong Form of 8.0 and an impressive PPG of 5.4. He faces Sunderland at home (FDR 2), which is a highly favorable fixture for attacking returns. His rotation risk is low at 22%, ensuring he's likely to start and play significant minutes.\"\n    },\n    \"DIFFERENTIAL_PICK\": {\n      \"player\": \"Schade\",\n      \"team\": \"BRE\",\n      \"reasoning\": \"Schade (MID, 6.8m) is an excellent differential with only 1.3% ownership. He has the highest form in the game at 9.7 and faces a weak Sunderland side at home (FDR 2). While his rotation risk is 32%, his recent form and fixture make him a high-upside pick.\"\n    },\n    \"TRANSFER_TARGETS_IN\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Thiago\",\n        \"team\": \"BRE\",\n        \"reasoning\": \"High PPG (5.4), strong form (8.0), low rotation risk (22%), and an excellent home fixture against Sunderland (FDR 2). A reliable forward with high ceiling.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"Garner\",\n        \"team\": \"EVE\",\n        \"reasoning\": \"A budget-friendly midfielder (5.2m) with great form (8.3) and a 'nailed' status for minutes. He has the best fixture of the gameweek, facing Wolves at home (FDR 1).\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Collins\",\n        \"team\": \"BRE\",\n        \"reasoning\": \"A defender (4.9m) with good form (7.7) and a low rotation risk (24%). Brentford's home fixture against Sunderland (FDR 2) offers a strong clean sheet potential and attacking returns.\"\n      }\n    ],\n    \"TRANSFER_TARGETS_OUT\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Martinez\",\n        \"team\": \"MUN\",\n        \"reasoning\": \"Martinez (DEF, 4.8m) carries the highest rotation risk in the squad at 62% ('heavy_rotation'), making him a significant benching threat.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"Veltman\",\n        \"team\": \"BHA\",\n        \"reasoning\": \"Veltman (DEF, 4.3m) has a high rotation risk of 60% ('heavy_rotation') and faces a very tough away fixture against Man City (FDR 5).\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Gray\",\n        \"team\": \"TOT\",\n        \"reasoning\": \"Gray (MID, 4.8m) also has a high rotation risk of 60% ('heavy_rotation'), severely limiting his potential for gameweek minutes and points.\"\n      }\n    ],\n    \"RISK_WARNINGS\": [\n      \"Heavy rotation risk for Martinez (MUN, 62%), Veltman (BHA, 60%), and Gray (TOT, 60%). Consider selling these players immediately.\",\n      \"Significant rotation risk for Ødegaard (ARS, 55%), Ajer (BRE, 54%), Tielemans (AVL, 52%), Trossard (ARS, 52%), Janelt (BRE, 52%), Cherki (MCI, 52%), and Gabriel (ARS, 51%). Monitor their minutes closely.\",\n      \"Players from Liverpool (Wirtz, Gravenberch) and Brighton (Ayari, Veltman) face the toughest fixtures of the gameweek (FDR 5) against Arsenal and Man City respectively. Avoid bringing them in.\",\n      \"Arsenal players (Ødegaard, Gabriel, Saka, Trossard, Rice) face a challenging home fixture against Liverpool (FDR 3), which could limit their attacking and defensive returns.\"\n    ]\n  }\n}\n```\n\n## Gameweek 21 FPL Analysis: Expert Recommendations\n\nWelcome to Gameweek 21! This week presents some clear opportunities with favorable fixtures for certain teams, while rotation risks continue to be a major concern for others. Let's dive into the actionable recommendations based on our intelligence dossier.\n\n### CAPTAIN PICK: Thiago (Brentford)\n\nOur top captain choice for Gameweek 21 is **Thiago (FWD, 7.2m)** from Brentford. Despite a slightly lower recent form (8.0) compared to teammate Schade, Thiago boasts a superior Points Per Game (PPG) of 5.4 and a lower rotation risk of just 22%. Brentford faces Sunderland at home, a highly appealing fixture with a Fixture Difficulty Rating (FDR) of 2. This combination of strong underlying performance, low rotation threat, and an excellent home fixture makes Thiago the prime candidate for a big haul this gameweek.\n\n### DIFFERENTIAL PICK: Schade (Brentford)\n\nFor managers looking for a low-ownership gem, **Schade (MID, 6.8m)** is our differential pick. With a minuscule ownership of 1.3%, Schade leads all players in recent form with an outstanding 9.7. Like Thiago, he benefits from Brentford's favorable home fixture against Sunderland (FDR 2). While his rotation risk is 32%, his explosive recent form suggests he has the highest upside potential among low-owned players this gameweek.\n\n### TRANSFER TARGETS IN\n\n1.  **Thiago (Brentford, FWD, 7.2m)**: As highlighted for our captain pick, Thiago offers a fantastic blend of consistent points (PPG 5.4), good form (8.0), and a secure starting spot (RotRisk 22%) against a weak opponent (Sunderland H, FDR 2). He should be your top priority if you need a forward.\n2.  **Garner (Everton, MID, 5.2m)**: A budget-friendly midfielder who is 'nailed' in Everton's lineup. Garner has an impressive form of 8.3 and faces the easiest fixture of the gameweek against Wolves at home (FDR 1). He offers excellent value and a high probability of returns.\n3.  **Collins (Brentford, DEF, 4.9m)**: To capitalize on Brentford's strong defensive fixture against Sunderland (H, FDR 2), Collins is an ideal defensive acquisition. He has a solid form of 7.7 for a defender and a manageable rotation risk of 24%, making him a strong candidate for a clean sheet and potential attacking contributions.\n\n### TRANSFER TARGETS OUT\n\n1.  **Martinez (Man Utd, DEF, 4.8m)**: Martinez carries the highest rotation risk in the entire dataset at 62%, categorized as 'heavy_rotation'. Holding onto him is a significant gamble for gameweek minutes.\n2.  **Veltman (Brighton, DEF, 4.3m)**: With a 60% rotation risk ('heavy_rotation') and a daunting away fixture against Man City (FDR 5), Veltman is a clear sell. His chances of playing and returning points are minimal.\n3.  **Gray (Spurs, MID, 4.8m)**: Gray also falls into the 'heavy_rotation' tier with a 60% rotation risk. His lack of guaranteed minutes makes him an unreliable asset for your FPL squad.\n\n### RISK WARNINGS\n\n*   **Heavy Rotation**: Be extremely wary of players with 'heavy_rotation' status. **Martinez (MUN, 62%), Veltman (BHA, 60%), and Gray (TOT, 60%)** are the most urgent sell candidates due to their high risk of being benched.\n*   **Significant Rotation Risk**: A number of other key players also carry significant rotation risk, including **Ødegaard (ARS, 55%), Ajer (BRE, 54%), Tielemans (AVL, 52%), Trossard (ARS, 52%), Janelt (BRE, 52%), Cherki (MCI, 52%), and Gabriel (ARS, 51%)**. Managers owning these players should monitor press conferences and team news closely.\n*   **Tough Fixtures**: Avoid investing in players from **Liverpool (Wirtz, Gravenberch)** and **Brighton (Ayari, Veltman)** this gameweek, as they face the toughest fixtures (FDR 5) against Arsenal and Man City respectively.\n*   **Arsenal's Challenge**: While at home, **Arsenal players (Ødegaard, Gabriel, Saka, Trossard, Rice)** face a challenging fixture against Liverpool (FDR 3). While they are strong assets, temper expectations for explosive returns this particular gameweek.",
       "context_summary": {
         "top_form_player": "Schade (9.7)",
         "most_concerning_availability": "Ekitiké (5%)",
@@ -2943,6 +2990,1014 @@
         "most_concerning_availability": "O'Brien (0%)",
         "highest_rotation_risk": "Bayindir (78, bench)"
       }
+    },
+    "29": {
+      "gw": 29,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "O'Reilly",
+          "team": "MCI",
+          "position": "DEF",
+          "reasoning": "O'Reilly boasts the highest form (12.0) among all players listed. Manchester City has a favourable home fixture against Nott'm Forest (FDR 3), offering strong clean sheet potential. While his rotation risk (37%) is present, his exceptional recent output makes him a high-ceiling captain choice."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Mac Allister",
+          "team": "LIV",
+          "ownership_pct": 0,
+          "reasoning": "With an ownership of just 1.8%, Mac Allister offers excellent differential potential. He is in superb form (8.3) and Liverpool faces a good away fixture against Wolves (FDR 2). His rotation risk (35%) is manageable, making him a strong, low-owned option."
+        },
+        "transfers_in": [
+          {
+            "name": "Semenyo",
+            "team": "MCI",
+            "position": "MID",
+            "priority": "#1",
+            "reasoning": "Semenyo is in excellent form (8.7) and has a relatively low rotation risk for a Manchester City attacker (24%). A home fixture against Nott'm Forest (FDR 3) makes him a prime candidate for attacking returns."
+          },
+          {
+            "name": "O'Reilly",
+            "team": "MCI",
+            "position": "DEF",
+            "priority": "#2",
+            "reasoning": "Despite a moderate rotation risk (37%), O'Reilly's outstanding form (12.0) and a favourable home fixture against Nott'm Forest (FDR 3) make him a top defensive target. His price (5.3) offers great value for his recent output."
+          },
+          {
+            "name": "Virgil",
+            "team": "LIV",
+            "position": "DEF",
+            "priority": "#3",
+            "reasoning": "Virgil is a nailed-on starter for Liverpool and is in excellent form (11.7). An away fixture against Wolves (FDR 2) presents a strong clean sheet opportunity, making him a reliable defensive asset."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Konaté",
+            "team": "LIV",
+            "position": "DEF",
+            "priority": "#1",
+            "reasoning": "Konaté is listed as OUT with only 5% availability due to injury. He should be an immediate transfer out to free up a squad spot and funds."
+          },
+          {
+            "name": "Saka",
+            "team": "ARS",
+            "position": "MID",
+            "priority": "#2",
+            "reasoning": "Saka is DOUBTFUL with 50% availability due to a hamstring injury, as confirmed by Mikel Arteta. With a tough away fixture against Brighton (FDR 4) and a high price (10.0), it's prudent to sell him for a playing asset."
+          },
+          {
+            "name": "Wilson",
+            "team": "FUL",
+            "position": "MID",
+            "priority": "#3",
+            "reasoning": "Harry Wilson is DOUBTFUL with 50% availability and remains on the Fulham injury list. Despite a good home fixture, his likely absence makes him a priority to sell for a guaranteed starter."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player_name": "Konaté",
+            "team": "LIV",
+            "risk_type": "Availability",
+            "details": "OUT (5% Avail). Immediate transfer out recommended."
+          },
+          {
+            "player_name": "Saka",
+            "team": "ARS",
+            "risk_type": "Availability",
+            "details": "DOUBTFUL (50% Avail) with a hamstring injury. Consider selling due to uncertainty and tough fixture."
+          },
+          {
+            "player_name": "Wilson",
+            "team": "FUL",
+            "risk_type": "Availability",
+            "details": "DOUBTFUL (50% Avail) with a foot injury. Likely to miss out, plan transfers accordingly."
+          },
+          {
+            "player_name": "Aït-Nouri",
+            "team": "MCI",
+            "risk_type": "Rotation",
+            "details": "Heavy rotation risk (63%). High chance of not starting despite good form."
+          },
+          {
+            "player_name": "J.Ramsey",
+            "team": "NEW",
+            "risk_type": "Rotation",
+            "details": "Heavy rotation risk (58%). Unreliable for consistent minutes."
+          },
+          {
+            "player_name": "Šeško",
+            "team": "MUN",
+            "risk_type": "Rotation",
+            "details": "Rotation risk (55%). Minutes not guaranteed, especially in a tough fixture."
+          },
+          {
+            "player_name": "Palmer",
+            "team": "CHE",
+            "risk_type": "Rotation",
+            "details": "Rotation risk (56%). Monitor team news closely if you own him."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player_name\": \"O'Reilly\",\n      \"team\": \"MCI\",\n      \"position\": \"DEF\",\n      \"reasoning\": \"O'Reilly boasts the highest form (12.0) among all players listed. Manchester City has a favourable home fixture against Nott'm Forest (FDR 3), offering strong clean sheet potential. While his rotation risk (37%) is present, his exceptional recent output makes him a high-ceiling captain choice.\"\n    },\n    \"differential_pick\": {\n      \"player_name\": \"Mac Allister\",\n      \"team\": \"LIV\",\n      \"position\": \"MID\",\n      \"reasoning\": \"With an ownership of just 1.8%, Mac Allister offers excellent differential potential. He is in superb form (8.3) and Liverpool faces a good away fixture against Wolves (FDR 2). His rotation risk (35%) is manageable, making him a strong, low-owned option.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Semenyo\",\n        \"team\": \"MCI\",\n        \"position\": \"MID\",\n        \"reasoning\": \"Semenyo is in excellent form (8.7) and has a relatively low rotation risk for a Manchester City attacker (24%). A home fixture against Nott'm Forest (FDR 3) makes him a prime candidate for attacking returns.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"O'Reilly\",\n        \"team\": \"MCI\",\n        \"position\": \"DEF\",\n        \"reasoning\": \"Despite a moderate rotation risk (37%), O'Reilly's outstanding form (12.0) and a favourable home fixture against Nott'm Forest (FDR 3) make him a top defensive target. His price (5.3) offers great value for his recent output.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Virgil\",\n        \"team\": \"LIV\",\n        \"position\": \"DEF\",\n        \"reasoning\": \"Virgil is a nailed-on starter for Liverpool and is in excellent form (11.7). An away fixture against Wolves (FDR 2) presents a strong clean sheet opportunity, making him a reliable defensive asset.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Konaté\",\n        \"team\": \"LIV\",\n        \"position\": \"DEF\",\n        \"reasoning\": \"Konaté is listed as OUT with only 5% availability due to injury. He should be an immediate transfer out to free up a squad spot and funds.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Saka\",\n        \"team\": \"ARS\",\n        \"position\": \"MID\",\n        \"reasoning\": \"Saka is DOUBTFUL with 50% availability due to a hamstring injury, as confirmed by Mikel Arteta. With a tough away fixture against Brighton (FDR 4) and a high price (10.0), it's prudent to sell him for a playing asset.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Wilson\",\n        \"team\": \"FUL\",\n        \"position\": \"MID\",\n        \"reasoning\": \"Harry Wilson is DOUBTFUL with 50% availability and remains on the Fulham injury list. Despite a good home fixture, his likely absence makes him a priority to sell for a guaranteed starter.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"player_name\": \"Konaté\",\n        \"team\": \"LIV\",\n        \"risk_type\": \"Availability\",\n        \"details\": \"OUT (5% Avail). Immediate transfer out recommended.\"\n      },\n      {\n        \"player_name\": \"Saka\",\n        \"team\": \"ARS\",\n        \"risk_type\": \"Availability\",\n        \"details\": \"DOUBTFUL (50% Avail) with a hamstring injury. Consider selling due to uncertainty and tough fixture.\"\n      },\n      {\n        \"player_name\": \"Wilson\",\n        \"team\": \"FUL\",\n        \"risk_type\": \"Availability\",\n        \"details\": \"DOUBTFUL (50% Avail) with a foot injury. Likely to miss out, plan transfers accordingly.\"\n      },\n      {\n        \"player_name\": \"Aït-Nouri\",\n        \"team\": \"MCI\",\n        \"risk_type\": \"Rotation\",\n        \"details\": \"Heavy rotation risk (63%). High chance of not starting despite good form.\"\n      },\n      {\n        \"player_name\": \"J.Ramsey\",\n        \"team\": \"NEW\",\n        \"risk_type\": \"Rotation\",\n        \"details\": \"Heavy rotation risk (58%). Unreliable for consistent minutes.\"\n      },\n      {\n        \"player_name\": \"Šeško\",\n        \"team\": \"MUN\",\n        \"risk_type\": \"Rotation\",\n        \"details\": \"Rotation risk (55%). Minutes not guaranteed, especially in a tough fixture.\"\n      },\n      {\n        \"player_name\": \"Palmer\",\n        \"team\": \"CHE\",\n        \"risk_type\": \"Rotation\",\n        \"details\": \"Rotation risk (56%). Monitor team news closely if you own him.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 29 FPL Analysis: The Man City & Liverpool Double-Up\n\nGameweek 29 presents some clear opportunities, particularly from Manchester City and Liverpool, who both have favourable fixtures. However, key injury doubts for popular assets demand immediate attention.\n\n### CAPTAIN PICK: O'Reilly (MCI DEF)\n\nOur top captain choice for Gameweek 29 is **O'Reilly (MCI DEF)**. He leads the form charts with an incredible 12.0, an exceptional return for a defender. Manchester City hosts Nott'm Forest (FDR 3), a fixture ripe for a clean sheet and potential attacking returns. While his rotation risk of 37% is a consideration, his recent output suggests he's currently integral, and the home advantage against a weaker opponent offers a high ceiling for points.\n\n### DIFFERENTIAL PICK: Mac Allister (LIV MID)\n\nFor managers seeking a low-owned gem, **Mac Allister (LIV MID)** stands out. With just 1.8% ownership, he's in excellent form (8.3) and Liverpool travels to face Wolves (FDR 2), a favourable fixture for attacking returns. His rotation risk of 35% is manageable, and being part of a high-flying Liverpool attack makes him an enticing differential.\n\n### TRANSFER TARGETS IN:\n\n1.  **Semenyo (MCI MID)**: With an impressive form of 8.7 and a low rotation risk of 24% for a Manchester City attacker, Semenyo is a top priority. His home fixture against Nott'm Forest (FDR 3) positions him perfectly for significant attacking returns.\n2.  **O'Reilly (MCI DEF)**: Despite a 37% rotation risk, O'Reilly's league-leading form (12.0) and attractive price (5.3) make him a must-consider. A home game against Nott'm Forest (FDR 3) offers strong clean sheet potential and the chance for more attacking contributions.\n3.  **Virgil (LIV DEF)**: A nailed-on starter for Liverpool, Virgil boasts excellent form (11.7) and a favourable away fixture against Wolves (FDR 2). He offers a reliable route to clean sheet points and potential bonus points.\n\n### TRANSFER TARGETS OUT:\n\n1.  **Konaté (LIV DEF)**: Listed as only 5% available and confirmed OUT due to injury, Konaté is an immediate and urgent sell. Free up that squad spot and funds.\n2.  **Saka (ARS MID)**: Bukayo Saka is DOUBTFUL (50% available) with a hamstring injury, as confirmed by Mikel Arteta. With a tough away fixture against Brighton (FDR 4) and a high price tag (10.0), it's wise to transfer him out for a playing asset.\n3.  **Wilson (FUL MID)**: Harry Wilson is also DOUBTFUL (50% available) and remains on Fulham's injury list. Despite a good home fixture, his likely absence makes him a priority to sell to ensure you have a full playing XI.\n\n### RISK WARNINGS:\n\n*   **Major Injuries/Doubts**: **Konaté (LIV DEF)** is OUT (5% Avail). **Saka (ARS MID)** and **Wilson (FUL MID)** are DOUBTFUL (50% Avail). Managers should plan transfers accordingly to avoid fielding non-playing assets.\n*   **Heavy Rotation Risk**: **Aït-Nouri (MCI DEF)** carries a significant 63% rotation risk, making him highly unreliable for consistent minutes. **J.Ramsey (NEW MID)** also faces heavy rotation at 58%.\n*   **Rotation Risk**: Players like **Šeško (MUN FWD, 55% RotRisk)** and **Palmer (CHE MID, 56% RotRisk)** also carry high rotation risk. Monitor team news closely if you own these players, as their minutes are not guaranteed.",
+      "context_summary": {
+        "top_form_player": "O'Reilly (12.0)",
+        "most_concerning_availability": "Dorgu (0%)",
+        "highest_rotation_risk": "Mamardashvili (77, bench)"
+      }
+    },
+    "30": {
+      "gw": 30,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "João Pedro",
+          "team": "CHE",
+          "position": "N/A",
+          "reasoning": "João Pedro is in exceptional form (9.3) and has a favourable home fixture against Newcastle (FDR 3). His PPG is strong (5.5) and his rotation risk is relatively low at 29%, making him the standout captain choice for Gameweek 30."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Mac Allister",
+          "team": "LIV",
+          "ownership_pct": 0,
+          "reasoning": "With an ownership of just 1.8%, Mac Allister offers significant differential potential. He is in excellent form (8.0) and Liverpool has a good home fixture against Spurs (FDR 3). His rotation risk of 34% is manageable for an attacking midfielder in a top team."
+        },
+        "transfers_in": [
+          {
+            "name": "João Pedro",
+            "team": "CHE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Top of the form charts (9.3) and a forward with a good home fixture (Newcastle, FDR 3). His 29% rotation risk is acceptable for a player delivering such high returns."
+          },
+          {
+            "name": "J.Timber",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Despite a tough immediate fixture (Everton H, FDR 5), Timber's form (8.0) is excellent for a defender, and he offers strong attacking potential. His price (6.0) and relatively low rotation risk (30%) make him a solid long-term defensive asset."
+          },
+          {
+            "name": "Henderson",
+            "team": "CRY",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "A budget-friendly goalkeeper (5.1) who is nailed in his position and in good form (7.3). Crystal Palace has the best fixture of the gameweek (Leeds H, FDR 2), offering high clean sheet potential."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Branthwaite",
+            "team": "EVE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Faces the highest rotation risk (66%) among all listed players, combined with a very low PPG (0.8) and a terrible fixture against Arsenal (A, FDR 5). A clear sell."
+          },
+          {
+            "name": "Hermansen",
+            "team": "WHU",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "As a goalkeeper with heavy rotation risk (64%) and a tough fixture against Man City (H, FDR 4), Hermansen offers very little FPL appeal for Gameweek 30."
+          },
+          {
+            "name": "Aït-Nouri",
+            "team": "MCI",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Despite playing for Man City, Aït-Nouri carries a significant rotation risk (62%) and has a very low PPG (1.5), making him an unreliable option."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player": "Harry Wilson",
+            "team": "FUL",
+            "risk_type": "Availability",
+            "details": "Listed as 50% available and DOUBTFUL due to an ankle injury. While Marco Silva suggests he's 'in contention', his status should be monitored closely before the deadline."
+          },
+          {
+            "player": "Marcos Senesi",
+            "team": "BOU",
+            "risk_type": "Availability",
+            "details": "Also listed as 50% available and DOUBTFUL. Despite manager praise, his fitness for the upcoming game is uncertain."
+          },
+          {
+            "player": "Branthwaite (EVE), Hermansen (WHU), Aït-Nouri (MCI), Rodrigo (MCI)",
+            "team": "Various",
+            "risk_type": "Heavy Rotation",
+            "details": "These players have rotation risks of 66%, 64%, 62%, and 57% respectively. Managers should avoid bringing them in and consider selling if they are currently owned."
+          },
+          {
+            "player": "Gabriel (ARS), Saka (ARS), Eze (ARS), Gyökeres (ARS)",
+            "team": "ARS",
+            "risk_type": "Rotation Risk",
+            "details": "Key Arsenal assets Gabriel (44%), Saka (42%), Eze (48%), and Gyökeres (42%) all carry notable rotation risks. While they are strong players, managers should be aware of potential benchings."
+          },
+          {
+            "player": "O'Reilly (MCI), Iwobi (FUL)",
+            "team": "Various",
+            "risk_type": "Rotation Risk",
+            "details": "O'Reilly (46%) and potential differential Iwobi (42%) also have significant rotation risks that could impact their gameweek minutes."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player\": \"João Pedro\",\n      \"team\": \"CHE\",\n      \"reasoning\": \"João Pedro is in exceptional form (9.3) and has a favourable home fixture against Newcastle (FDR 3). His PPG is strong (5.5) and his rotation risk is relatively low at 29%, making him the standout captain choice for Gameweek 30.\"\n    },\n    \"differential_pick\": {\n      \"player\": \"Mac Allister\",\n      \"team\": \"LIV\",\n      \"reasoning\": \"With an ownership of just 1.8%, Mac Allister offers significant differential potential. He is in excellent form (8.0) and Liverpool has a good home fixture against Spurs (FDR 3). His rotation risk of 34% is manageable for an attacking midfielder in a top team.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"priority\": 1,\n        \"player\": \"João Pedro\",\n        \"team\": \"CHE\",\n        \"reasoning\": \"Top of the form charts (9.3) and a forward with a good home fixture (Newcastle, FDR 3). His 29% rotation risk is acceptable for a player delivering such high returns.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"J.Timber\",\n        \"team\": \"ARS\",\n        \"reasoning\": \"Despite a tough immediate fixture (Everton H, FDR 5), Timber's form (8.0) is excellent for a defender, and he offers strong attacking potential. His price (6.0) and relatively low rotation risk (30%) make him a solid long-term defensive asset.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Henderson\",\n        \"team\": \"CRY\",\n        \"reasoning\": \"A budget-friendly goalkeeper (5.1) who is nailed in his position and in good form (7.3). Crystal Palace has the best fixture of the gameweek (Leeds H, FDR 2), offering high clean sheet potential.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Branthwaite\",\n        \"team\": \"EVE\",\n        \"reasoning\": \"Faces the highest rotation risk (66%) among all listed players, combined with a very low PPG (0.8) and a terrible fixture against Arsenal (A, FDR 5). A clear sell.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"Hermansen\",\n        \"team\": \"WHU\",\n        \"reasoning\": \"As a goalkeeper with heavy rotation risk (64%) and a tough fixture against Man City (H, FDR 4), Hermansen offers very little FPL appeal for Gameweek 30.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Aït-Nouri\",\n        \"team\": \"MCI\",\n        \"reasoning\": \"Despite playing for Man City, Aït-Nouri carries a significant rotation risk (62%) and has a very low PPG (1.5), making him an unreliable option.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"player\": \"Harry Wilson\",\n        \"team\": \"FUL\",\n        \"risk_type\": \"Availability\",\n        \"details\": \"Listed as 50% available and DOUBTFUL due to an ankle injury. While Marco Silva suggests he's 'in contention', his status should be monitored closely before the deadline.\"\n      },\n      {\n        \"player\": \"Marcos Senesi\",\n        \"team\": \"BOU\",\n        \"risk_type\": \"Availability\",\n        \"details\": \"Also listed as 50% available and DOUBTFUL. Despite manager praise, his fitness for the upcoming game is uncertain.\"\n      },\n      {\n        \"player\": \"Branthwaite (EVE), Hermansen (WHU), Aït-Nouri (MCI), Rodrigo (MCI)\",\n        \"team\": \"Various\",\n        \"risk_type\": \"Heavy Rotation\",\n        \"details\": \"These players have rotation risks of 66%, 64%, 62%, and 57% respectively. Managers should avoid bringing them in and consider selling if they are currently owned.\"\n      },\n      {\n        \"player\": \"Gabriel (ARS), Saka (ARS), Eze (ARS), Gyökeres (ARS)\",\n        \"team\": \"ARS\",\n        \"risk_type\": \"Rotation Risk\",\n        \"details\": \"Key Arsenal assets Gabriel (44%), Saka (42%), Eze (48%), and Gyökeres (42%) all carry notable rotation risks. While they are strong players, managers should be aware of potential benchings.\"\n      },\n      {\n        \"player\": \"O'Reilly (MCI), Iwobi (FUL)\",\n        \"team\": \"Various\",\n        \"risk_type\": \"Rotation Risk\",\n        \"details\": \"O'Reilly (46%) and potential differential Iwobi (42%) also have significant rotation risks that could impact their gameweek minutes.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 30 FPL Intelligence Report\n\nWelcome to your Gameweek 30 FPL intelligence briefing. This week's dossier highlights players in peak form, potential differential gems, and crucial warnings regarding player availability and rotation.\n\n---\n\n### CAPTAIN PICK\n\n**João Pedro (CHE)**\nOur top captain choice for Gameweek 30 is Chelsea's forward, **João Pedro (7.4m)**. He leads the form charts with an outstanding **9.3** and boasts a strong PPG of **5.5**. With a favourable home fixture against Newcastle (FDR 3) and a relatively low rotation risk of **29%**, Pedro is poised to deliver significant returns. His recent output makes him a more compelling option than other high-ownership players with slightly lower form.\n\n---\n\n### DIFFERENTIAL PICK\n\n**Mac Allister (LIV)**\nFor managers seeking a low-ownership gem, Liverpool's midfielder **Mac Allister (6.1m)** stands out. With an ownership of just **1.8%**, he offers excellent differential potential. Mac Allister is in superb form (8.0) and Liverpool faces Spurs at home (FDR 3), a fixture with high attacking upside. His rotation risk of **34%** is manageable for an attacking midfielder in a top-tier team.\n\n---\n\n### TRANSFER TARGETS IN\n\n1.  **João Pedro (CHE) - FWD (7.4m)**\n    *   **Reasoning:** As our top captain pick, João Pedro is a must-have for his exceptional form (9.3), strong PPG (5.5), and a promising home fixture against Newcastle (FDR 3). His relatively low rotation risk (29%) further solidifies his appeal.\n2.  **J.Timber (ARS) - DEF (6.0m)**\n    *   **Reasoning:** Despite a challenging immediate fixture against Everton (H, FDR 5), J.Timber's form (8.0) is outstanding for a defender, indicating strong attacking and defensive potential. His price point and manageable rotation risk (30%) make him a valuable long-term defensive acquisition for Arsenal's strong defensive unit.\n3.  **Henderson (CRY) - GK (5.1m)**\n    *   **Reasoning:** Henderson offers excellent value as a nailed-on goalkeeper with good form (7.3). Crystal Palace has the most favourable fixture of the gameweek against Leeds (H, FDR 2), providing a high probability of a clean sheet and save points.\n\n---\n\n### TRANSFER TARGETS OUT\n\n1.  **Branthwaite (EVE) - DEF (5.3m)**\n    *   **Reasoning:** Branthwaite carries the highest rotation risk in our dossier at **66%**. Coupled with a very low PPG (0.8) and a daunting away fixture against Arsenal (FDR 5), he is an immediate sell.\n2.  **Hermansen (WHU) - GK (4.2m)**\n    *   **Reasoning:** With a heavy rotation risk of **64%** and a tough home fixture against Manchester City (FDR 4), Hermansen is an unreliable option for Gameweek 30 and should be moved on.\n3.  **Aït-Nouri (MCI) - DEF (5.7m)**\n    *   **Reasoning:** Despite playing for Manchester City, Aït-Nouri's significant rotation risk of **62%** and low PPG (1.5) make him a poor FPL asset. There are far more reliable defensive options available.\n\n---\n\n### RISK WARNINGS\n\n*   **Availability Concerns:**\n    *   **Harry Wilson (FUL)** (50% available) and **Marcos Senesi (BOU)** (50% available) are both listed as DOUBTFUL. While quotes suggest Wilson is 'in contention', managers should monitor their status closely before the deadline.\n*   **Heavy Rotation Risk:**\n    *   Players like **Branthwaite (EVE, 66%)**, **Hermansen (WHU, 64%)**, **Aït-Nouri (MCI, 62%)**, and **Rodrigo (MCI, 57%)** face significant rotation. Avoid transferring them in and consider selling if they are in your squad.\n*   **Arsenal Assets Rotation:**\n    *   Key Arsenal players including **Gabriel (44%)**, **Saka (42%)**, **Eze (48%)**, and **Gyökeres (42%)** all have notable rotation risks. While they are strong FPL options, be aware of potential benchings or reduced minutes.\n*   **Man City & Fulham Midfielders:**\n    *   **O'Reilly (MCI, 46%)** and potential differential **Iwobi (FUL, 42%)** also carry significant rotation risks that could impact their playing time in Gameweek 30.",
+      "context_summary": {
+        "top_form_player": "João Pedro (9.3)",
+        "most_concerning_availability": "Neto (0%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "31": {
+      "gw": 31,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Wilson",
+          "team": "FUL",
+          "position": "N/A",
+          "reasoning": "Despite his form (5.0) not being the highest, Wilson faces Burnley at home (FDR 1), which is the easiest fixture of the gameweek. This significantly increases his potential for attacking returns and a clean sheet bonus for Fulham. With several top teams blanking, the FDR 1 fixture makes him a standout captaincy choice."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Truffert",
+          "team": "BOU",
+          "ownership_pct": 0,
+          "reasoning": "Truffert (DEF, 4.8m) boasts excellent form (7.7) for a defender and is 'nailed' with 95% availability. His ownership is very low (5.3%), making him a true differential. Bournemouth face Manchester United at home (FDR 3), a reasonable fixture for defensive returns and potential attacking contributions."
+        },
+        "transfers_in": [
+          {
+            "name": "Wilson",
+            "team": "FUL",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Wilson (MID, 5.8m) has the most favorable fixture of the gameweek against Burnley at home (FDR 1). While his form is 5.0, his season PPG is 4.8, indicating consistent output. This fixture offers high potential for points."
+          },
+          {
+            "name": "João Pedro",
+            "team": "CHE",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "João Pedro (FWD, 7.4m) is in excellent form (7.7) and has a decent fixture away to Everton (FDR 3). He has low rotation risk (28%) and high availability (95%), making him a reliable forward option."
+          },
+          {
+            "name": "Senesi",
+            "team": "BOU",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Senesi (DEF, 5.2m) is a high-performing defender with impressive form (8.3) and low rotation risk (24%). Bournemouth host Manchester United (FDR 3), offering a good chance for defensive returns and potential attacking points."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Tarkowski",
+            "team": "EVE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Tarkowski (DEF, 5.8m) is listed as DOUBTFUL with only 50% availability. The press conference quote indicates he's only 'in and around' the squad, making him a significant risk for Gameweek 31."
+          },
+          {
+            "name": "Ballard",
+            "team": "SUN",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Ballard (DEF, 4.6m) is also listed as DOUBTFUL with 50% availability due to a hamstring injury. He is highly unlikely to feature, making him an urgent sell."
+          },
+          {
+            "name": "Gabriel",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Gabriel (DEF, 7.3m) has a blank gameweek (N/A opponent) and a moderate rotation risk (43%). While his form is high, he will not score points this week, making him a prime candidate to sell if you need active players."
+          }
+        ],
+        "risk_warnings": [
+          "Tarkowski (EVE): DOUBTFUL (50% availability) due to injury concerns. 'Hopeful' to be 'in and around' the squad.",
+          "Ballard (SUN): DOUBTFUL (50% availability) with a hamstring injury. Unlikely to feature.",
+          "Arsenal (Gabriel, Saliba, J.Timber, Raya) and Manchester City (Semenyo, Rodrigo, Aït-Nouri) players have a BLANK GAMEDAY and will not play.",
+          "Mikkel Damsgaard (BRE): Despite 95% availability, the press conference quote mentions a 'knock' and he will be given 'every chance to be fit'. He also has a 46% rotation risk.",
+          "High Rotation Risk Players (>40%): Aït-Nouri (MCI, 64%), Frimpong (LIV, 62%), Canvot (CRY, 61%), Rodrigo (MCI, 56%), Šeško (MUN, 55%), Hill (BOU, 53%), Saliba (ARS, 51%), Sarr (CRY, 51%), O.Dango (BRE, 47%), Dewsbury-Hall (EVE, 47%), Ekitiké (LIV, 46%), Damsgaard (BRE, 46%), Gordon (NEW, 44%), Gabriel (ARS, 43%), Iwobi (FUL, 41%)."
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"CAPTAIN_PICK\": {\n      \"player\": \"Wilson\",\n      \"team\": \"FUL\",\n      \"reasoning\": \"Despite his form (5.0) not being the highest, Wilson faces Burnley at home (FDR 1), which is the easiest fixture of the gameweek. This significantly increases his potential for attacking returns and a clean sheet bonus for Fulham. With several top teams blanking, the FDR 1 fixture makes him a standout captaincy choice.\"\n    },\n    \"DIFFERENTIAL_PICK\": {\n      \"player\": \"Truffert\",\n      \"team\": \"BOU\",\n      \"reasoning\": \"Truffert (DEF, 4.8m) boasts excellent form (7.7) for a defender and is 'nailed' with 95% availability. His ownership is very low (5.3%), making him a true differential. Bournemouth face Manchester United at home (FDR 3), a reasonable fixture for defensive returns and potential attacking contributions.\"\n    },\n    \"TRANSFER_TARGETS_IN\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Wilson\",\n        \"team\": \"FUL\",\n        \"reasoning\": \"Wilson (MID, 5.8m) has the most favorable fixture of the gameweek against Burnley at home (FDR 1). While his form is 5.0, his season PPG is 4.8, indicating consistent output. This fixture offers high potential for points.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"João Pedro\",\n        \"team\": \"CHE\",\n        \"reasoning\": \"João Pedro (FWD, 7.4m) is in excellent form (7.7) and has a decent fixture away to Everton (FDR 3). He has low rotation risk (28%) and high availability (95%), making him a reliable forward option.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Senesi\",\n        \"team\": \"BOU\",\n        \"reasoning\": \"Senesi (DEF, 5.2m) is a high-performing defender with impressive form (8.3) and low rotation risk (24%). Bournemouth host Manchester United (FDR 3), offering a good chance for defensive returns and potential attacking points.\"\n      }\n    ],\n    \"TRANSFER_TARGETS_OUT\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Tarkowski\",\n        \"team\": \"EVE\",\n        \"reasoning\": \"Tarkowski (DEF, 5.8m) is listed as DOUBTFUL with only 50% availability. The press conference quote indicates he's only 'in and around' the squad, making him a significant risk for Gameweek 31.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"Ballard\",\n        \"team\": \"SUN\",\n        \"reasoning\": \"Ballard (DEF, 4.6m) is also listed as DOUBTFUL with 50% availability due to a hamstring injury. He is highly unlikely to feature, making him an urgent sell.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Gabriel\",\n        \"team\": \"ARS\",\n        \"reasoning\": \"Gabriel (DEF, 7.3m) has a blank gameweek (N/A opponent) and a moderate rotation risk (43%). While his form is high, he will not score points this week, making him a prime candidate to sell if you need active players.\"\n      }\n    ],\n    \"RISK_WARNINGS\": [\n      \"Tarkowski (EVE): DOUBTFUL (50% availability) due to injury concerns. 'Hopeful' to be 'in and around' the squad.\",\n      \"Ballard (SUN): DOUBTFUL (50% availability) with a hamstring injury. Unlikely to feature.\",\n      \"Arsenal (Gabriel, Saliba, J.Timber, Raya) and Manchester City (Semenyo, Rodrigo, Aït-Nouri) players have a BLANK GAMEDAY and will not play.\",\n      \"Mikkel Damsgaard (BRE): Despite 95% availability, the press conference quote mentions a 'knock' and he will be given 'every chance to be fit'. He also has a 46% rotation risk.\",\n      \"High Rotation Risk Players (>40%): Aït-Nouri (MCI, 64%), Frimpong (LIV, 62%), Canvot (CRY, 61%), Rodrigo (MCI, 56%), Šeško (MUN, 55%), Hill (BOU, 53%), Saliba (ARS, 51%), Sarr (CRY, 51%), O.Dango (BRE, 47%), Dewsbury-Hall (EVE, 47%), Ekitiké (LIV, 46%), Damsgaard (BRE, 46%), Gordon (NEW, 44%), Gabriel (ARS, 43%), Iwobi (FUL, 41%).\"\n    ]\n  }\n}\n```\n\n## Gameweek 31 FPL Intelligence Report\n\nWelcome to your Gameweek 31 FPL briefing! This week presents some unique challenges with several top teams blanking, making fixture analysis and player availability paramount.\n\n### CAPTAIN PICK: Wilson (FUL)\n\nOur top captaincy choice for Gameweek 31 is **Wilson (FUL)**. While his recent form (5.0) isn't the highest among all players, his fixture against Burnley at home (FDR 1) is the most favorable of the entire gameweek. With Arsenal and Manchester City players blanking, and other top contenders facing tougher opposition (e.g., Fernandes away to Bournemouth, FDR 4), Wilson's home fixture against the league's easiest opponent stands out. Fulham will be expected to score and potentially keep a clean sheet, offering multiple avenues for points. His season PPG of 4.8 suggests he's capable of delivering.\n\n### DIFFERENTIAL PICK: Truffert (BOU)\n\nFor managers looking for a low-ownership gem, **Truffert (BOU)** is an excellent differential pick. Priced at just 4.8m, this defender boasts an impressive form of 7.7 and is listed as 'nailed' with 95% availability. His ownership is a mere 5.3%, making him a true under-the-radar option. Bournemouth face Manchester United at home (FDR 3), a reasonable fixture where Truffert could contribute defensively and potentially with attacking returns.\n\n### TRANSFER TARGETS IN\n\n1.  **Wilson (FUL) - Priority 1:** As highlighted for captaincy, Wilson (MID, 5.8m) has the standout fixture of the gameweek against Burnley at home (FDR 1). This is a must-have for managers looking to capitalize on a prime scoring opportunity.\n2.  **João Pedro (CHE) - Priority 2:** The Chelsea forward (7.4m) is in excellent form (7.7) and has a decent fixture away to Everton (FDR 3). With low rotation risk (28%) and high availability (95%), he offers a reliable attacking option for your squad.\n3.  **Senesi (BOU) - Priority 3:** For defensive reinforcements, Senesi (DEF, 5.2m) is a strong candidate. His form of 8.3 is exceptional for a defender, and he has a low rotation risk (24%). Bournemouth's home tie against Manchester United (FDR 3) provides a good chance for defensive returns.\n\n### TRANSFER TARGETS OUT\n\n1.  **Tarkowski (EVE) - Priority 1:** The Everton defender (5.8m) is listed as DOUBTFUL with only 50% availability. Manager quotes suggest he's only 'in and around' the squad, making him a significant risk for Gameweek 31. Sell immediately to avoid a blank.\n2.  **Ballard (SUN) - Priority 2:** Similar to Tarkowski, Ballard (DEF, 4.6m) is also DOUBTFUL with 50% availability due to a hamstring injury. He is highly unlikely to feature and should be transferred out.\n3.  **Gabriel (ARS) - Priority 3:** Gabriel (DEF, 7.3m) and all other Arsenal players have a blank gameweek. While his form is high, he will not score points this week. With a 43% rotation risk, he's a prime candidate to sell if you need active players for Gameweek 31.\n\n### RISK WARNINGS\n\n*   **Tarkowski (EVE) & Ballard (SUN):** Both defenders are listed as DOUBTFUL (50% availability) due to injury concerns. Managers should plan to transfer them out.\n*   **Blank Gameweeks:** All players from **Arsenal (Gabriel, Saliba, J.Timber, Raya)** and **Manchester City (Semenyo, Rodrigo, Aït-Nouri)** have a blank gameweek and will not play. Ensure you have sufficient active players.\n*   **Mikkel Damsgaard (BRE):** Despite 95% availability, the press conference quote mentions a 'knock' and he will be given 'every chance to be fit'. He also carries a 46% rotation risk, adding to the uncertainty.\n*   **High Rotation Risk Players (>40%):** Be cautious with players like Aït-Nouri (MCI, 64%), Frimpong (LIV, 62%), Canvot (CRY, 61%), Rodrigo (MCI, 56%), Šeško (MUN, 55%), Hill (BOU, 53%), Saliba (ARS, 51%), Sarr (CRY, 51%), O.Dango (BRE, 47%), Dewsbury-Hall (EVE, 47%), Ekitiké (LIV, 46%), Damsgaard (BRE, 46%), Gordon (NEW, 44%), Gabriel (ARS, 43%), and Iwobi (FUL, 41%). These players face a higher chance of being benched or substituted.",
+      "context_summary": {
+        "top_form_player": "B.Fernandes (10.3)",
+        "most_concerning_availability": "Angulo (5%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "32": {
+      "gw": 32,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "B.Fernandes",
+          "team": "MUN",
+          "position": "N/A",
+          "reasoning": "B.Fernandes is the standout captain choice for Gameweek 32. He boasts the highest form among all players (10.3) and faces an excellent home fixture against Leeds (FDR 2). His total points (189) and PPG (6.1) are elite, reflecting consistent returns. While his rotation risk is 34%, his importance to Manchester United and the favourable fixture make him highly likely to start and deliver."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Garner",
+          "team": "EVE",
+          "ownership_pct": 0,
+          "reasoning": "Garner (3.6% ownership) presents a strong differential option. He is listed as 'nailed' for rotation risk, ensuring playing time. His form is a respectable 6.7, and he has a decent away fixture against Brentford (FDR 3). At a price of 5.2, he offers good value with consistent returns (PPG 4.5)."
+        },
+        "transfers_in": [
+          {
+            "name": "B.Fernandes",
+            "team": "MUN",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "If you don't own him, B.Fernandes is a must-have. Top form (10.3), excellent fixture (Leeds H, FDR 2), and high ceiling for points. Despite a 34% rotation risk, his output makes him essential."
+          },
+          {
+            "name": "Gordon",
+            "team": "NEW",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Gordon offers explosive potential with exceptional form (9.3) and very low ownership (3.1%). He faces Crystal Palace away (FDR 3), a good fixture for attacking returns. The main caveat is his 43% rotation risk, but his current form might outweigh this for a differential punt."
+          },
+          {
+            "name": "N.Williams",
+            "team": "NFO",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "A solid defensive option at a low price (4.8). N.Williams has good form (7.0), a favourable home fixture against Aston Villa (FDR 3), and a manageable rotation risk of 27%. He offers a route to clean sheets and potential attacking returns."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Gabriel",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Gabriel is listed as 50% available and DOUBTFUL. Despite press conference quotes suggesting he 'recovered from injury to feature in midweek', his availability percentage remains a major concern. With 45.4% ownership, he's a high-priority sell to avoid a blank."
+          },
+          {
+            "name": "J.Timber",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Similar to Gabriel, J.Timber is 50% available and DOUBTFUL. The press conference quote states he was 'still absent against Sporting', indicating he's unlikely to feature. With 15.2% ownership, he's a clear sell."
+          },
+          {
+            "name": "Saliba",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Saliba carries a significant 51% rotation risk. While not injured, this high risk for a defender, especially with Arsenal facing a tough fixture against Man City (FDR 5) in GW33, makes him a prime candidate for sale to free up funds and avoid potential benchings."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player": "Gabriel (ARS)",
+            "risk": "Availability",
+            "details": "50% available, DOUBTFUL. Despite featuring in midweek, his status remains uncertain for GW32."
+          },
+          {
+            "player": "J.Timber (ARS)",
+            "risk": "Availability",
+            "details": "50% available, DOUBTFUL. Was still absent in midweek, making his return unlikely."
+          },
+          {
+            "player": "Saliba (ARS)",
+            "risk": "Rotation",
+            "details": "51% rotation risk. High chance of being benched or rotated."
+          },
+          {
+            "player": "Gordon (NEW)",
+            "risk": "Rotation",
+            "details": "43% rotation risk. While in excellent form, there's a notable chance of rotation."
+          },
+          {
+            "player": "Aït-Nouri (MCI)",
+            "risk": "Rotation",
+            "details": "64% rotation risk (heavy_rotation). Very high chance of not starting."
+          },
+          {
+            "player": "Canvot (CRY)",
+            "risk": "Rotation",
+            "details": "61% rotation risk (heavy_rotation). Very high chance of not starting."
+          },
+          {
+            "player": "Ellborg (SUN)",
+            "risk": "Rotation",
+            "details": "59% rotation risk (heavy_rotation). Very high chance of not starting."
+          },
+          {
+            "player": "Aina (NFO)",
+            "risk": "Rotation",
+            "details": "57% rotation risk (heavy_rotation). High chance of not starting."
+          },
+          {
+            "player": "Barkley (AVL)",
+            "risk": "Rotation",
+            "details": "56% rotation risk (heavy_rotation). High chance of not starting."
+          },
+          {
+            "player": "Rodrigo (MCI)",
+            "risk": "Rotation",
+            "details": "56% rotation risk (heavy_rotation). High chance of not starting."
+          },
+          {
+            "player": "Bijol (LEE)",
+            "risk": "Rotation",
+            "details": "56% rotation risk. High chance of not starting."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"CAPTAIN_PICK\": {\n      \"player\": \"B.Fernandes\",\n      \"team\": \"MUN\",\n      \"reasoning\": \"B.Fernandes is the standout captain choice for Gameweek 32. He boasts the highest form among all players (10.3) and faces an excellent home fixture against Leeds (FDR 2). His total points (189) and PPG (6.1) are elite, reflecting consistent returns. While his rotation risk is 34%, his importance to Manchester United and the favourable fixture make him highly likely to start and deliver.\"\n    },\n    \"DIFFERENTIAL_PICK\": {\n      \"player\": \"Garner\",\n      \"team\": \"EVE\",\n      \"reasoning\": \"Garner (3.6% ownership) presents a strong differential option. He is listed as 'nailed' for rotation risk, ensuring playing time. His form is a respectable 6.7, and he has a decent away fixture against Brentford (FDR 3). At a price of 5.2, he offers good value with consistent returns (PPG 4.5).\"\n    },\n    \"TRANSFER_TARGETS_IN\": [\n      {\n        \"priority\": 1,\n        \"player\": \"B.Fernandes\",\n        \"team\": \"MUN\",\n        \"reasoning\": \"If you don't own him, B.Fernandes is a must-have. Top form (10.3), excellent fixture (Leeds H, FDR 2), and high ceiling for points. Despite a 34% rotation risk, his output makes him essential.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"Gordon\",\n        \"team\": \"NEW\",\n        \"reasoning\": \"Gordon offers explosive potential with exceptional form (9.3) and very low ownership (3.1%). He faces Crystal Palace away (FDR 3), a good fixture for attacking returns. The main caveat is his 43% rotation risk, but his current form might outweigh this for a differential punt.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"N.Williams\",\n        \"team\": \"NFO\",\n        \"reasoning\": \"A solid defensive option at a low price (4.8). N.Williams has good form (7.0), a favourable home fixture against Aston Villa (FDR 3), and a manageable rotation risk of 27%. He offers a route to clean sheets and potential attacking returns.\"\n      }\n    ],\n    \"TRANSFER_TARGETS_OUT\": [\n      {\n        \"priority\": 1,\n        \"player\": \"Gabriel\",\n        \"team\": \"ARS\",\n        \"reasoning\": \"Gabriel is listed as 50% available and DOUBTFUL. Despite press conference quotes suggesting he 'recovered from injury to feature in midweek', his availability percentage remains a major concern. With 45.4% ownership, he's a high-priority sell to avoid a blank.\"\n      },\n      {\n        \"priority\": 2,\n        \"player\": \"J.Timber\",\n        \"team\": \"ARS\",\n        \"reasoning\": \"Similar to Gabriel, J.Timber is 50% available and DOUBTFUL. The press conference quote states he was 'still absent against Sporting', indicating he's unlikely to feature. With 15.2% ownership, he's a clear sell.\"\n      },\n      {\n        \"priority\": 3,\n        \"player\": \"Saliba\",\n        \"team\": \"ARS\",\n        \"reasoning\": \"Saliba carries a significant 51% rotation risk. While not injured, this high risk for a defender, especially with Arsenal facing a tough fixture against Man City (FDR 5) in GW33, makes him a prime candidate for sale to free up funds and avoid potential benchings.\"\n      }\n    ],\n    \"RISK_WARNINGS\": [\n      {\n        \"player\": \"Gabriel (ARS)\",\n        \"risk\": \"Availability\",\n        \"details\": \"50% available, DOUBTFUL. Despite featuring in midweek, his status remains uncertain for GW32.\"\n      },\n      {\n        \"player\": \"J.Timber (ARS)\",\n        \"risk\": \"Availability\",\n        \"details\": \"50% available, DOUBTFUL. Was still absent in midweek, making his return unlikely.\"\n      },\n      {\n        \"player\": \"Saliba (ARS)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"51% rotation risk. High chance of being benched or rotated.\"\n      },\n      {\n        \"player\": \"Gordon (NEW)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"43% rotation risk. While in excellent form, there's a notable chance of rotation.\"\n      },\n      {\n        \"player\": \"Aït-Nouri (MCI)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"64% rotation risk (heavy_rotation). Very high chance of not starting.\"\n      },\n      {\n        \"player\": \"Canvot (CRY)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"61% rotation risk (heavy_rotation). Very high chance of not starting.\"\n      },\n      {\n        \"player\": \"Ellborg (SUN)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"59% rotation risk (heavy_rotation). Very high chance of not starting.\"\n      },\n      {\n        \"player\": \"Aina (NFO)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"57% rotation risk (heavy_rotation). High chance of not starting.\"\n      },\n      {\n        \"player\": \"Barkley (AVL)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"56% rotation risk (heavy_rotation). High chance of not starting.\"\n      },\n      {\n        \"player\": \"Rodrigo (MCI)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"56% rotation risk (heavy_rotation). High chance of not starting.\"\n      },\n      {\n        \"player\": \"Bijol (LEE)\",\n        \"risk\": \"Rotation\",\n        \"details\": \"56% rotation risk. High chance of not starting.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 32 FPL Intelligence Report\n\nWelcome to your pre-deadline FPL intelligence report for Gameweek 32 of the 2025/26 Premier League season. This dossier provides actionable recommendations based on the latest player form, availability, rotation risks, fixtures, and press conference insights.\n\n### CAPTAIN PICK\n\n**B.Fernandes (MUN)** is our top captain pick for Gameweek 32. The Manchester United midfielder is in scintillating form, leading all players with a form rating of **10.3**. He boasts an impressive 189 total points and 6.1 points per game (PPG). This week, United host Leeds at home, a fixture rated with a favourable **FDR of 2**. While his rotation risk stands at 34%, Fernandes's pivotal role in the team and the excellent fixture make him the most reliable and high-upside captain choice.\n\n### DIFFERENTIAL PICK\n\nFor managers looking for a low-ownership (<10%) gem, **Garner (EVE)** is an excellent shout. With just **3.6% ownership**, Garner offers a strong differential. He is listed as 'nailed' for rotation risk, guaranteeing playing time, and comes with a solid form rating of **6.7**. Everton face Brentford away (FDR 3), a decent fixture where Garner could contribute defensively and potentially offensively. His PPG of 4.5 for a 5.2m midfielder is also very appealing.\n\n### TRANSFER TARGETS IN\n\n1.  **B.Fernandes (MUN)**: If you don't already own him, Fernandes should be your absolute priority. His league-leading form (10.3) and the plum home fixture against Leeds (FDR 2) make him an essential acquisition for potential explosive returns.\n2.  **Gordon (NEW)**: Despite a 43% rotation risk, Gordon's exceptional form of **9.3** and incredibly low ownership of **3.1%** make him a high-upside differential target. Newcastle travel to Crystal Palace (FDR 3), a fixture where Gordon could thrive if he starts.\n3.  **N.Williams (NFO)**: At a budget-friendly price of 4.8m, N.Williams offers strong defensive value. He has a good form rating of **7.0**, a favourable home fixture against Aston Villa (FDR 3), and a manageable rotation risk of **27%**. He's a solid option for a defensive upgrade.\n\n### TRANSFER TARGETS OUT\n\n1.  **Gabriel (ARS)**: The Arsenal defender is a priority sell. He is listed as **50% available** and **DOUBTFUL** for Gameweek 32. Despite quotes suggesting he 'recovered from injury to feature in midweek', his official availability status remains a major red flag, especially given his high ownership of **45.4%**.\n2.  **J.Timber (ARS)**: Another Arsenal defender facing significant uncertainty. J.Timber is also **50% available** and **DOUBTFUL**. The press conference explicitly stated he was 'still absent against Sporting', indicating he is unlikely to feature. Managers with his **15.2% ownership** should look to move him on.\n3.  **Saliba (ARS)**: While not injured, Saliba carries a substantial **51% rotation risk**. This is a significant concern for a defender, particularly with Arsenal facing a tough fixture against Man City (FDR 5) in Gameweek 33. Managers with his **17.1% ownership** should consider selling to avoid potential benchings.\n\n### RISK WARNINGS\n\n*   **Gabriel (ARS)**: **50% available, DOUBTFUL**. Despite recent recovery, his status for GW32 is highly uncertain.\n*   **J.Timber (ARS)**: **50% available, DOUBTFUL**. Confirmed to be absent in midweek, making his GW32 participation unlikely.\n*   **Saliba (ARS)**: **51% rotation risk**. A high chance of being benched or rotated, especially for a defender.\n*   **Gordon (NEW)**: **43% rotation risk**. While in excellent form, there's a notable chance he might not start.\n*   **Aït-Nouri (MCI)**: **64% rotation risk (heavy_rotation)**. Very high chance of not starting.\n*   **Canvot (CRY)**: **61% rotation risk (heavy_rotation)**. Very high chance of not starting.\n*   **Ellborg (SUN)**: **59% rotation risk (heavy_rotation)**. Very high chance of not starting.\n*   **Aina (NFO)**: **57% rotation risk (heavy_rotation)**. High chance of not starting.\n*   **Barkley (AVL)**: **56% rotation risk (heavy_rotation)**. High chance of not starting.\n*   **Rodrigo (MCI)**: **56% rotation risk (heavy_rotation)**. High chance of not starting.\n*   **Bijol (LEE)**: **56% rotation risk**. High chance of not starting.\n\nManagers should carefully review these risks before making their final decisions. Good luck for Gameweek 32!",
+      "context_summary": {
+        "top_form_player": "B.Fernandes (10.3)",
+        "most_concerning_availability": "Strand Larsen (0%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "33": {
+      "gw": 33,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "N.Williams",
+          "team": "N/A",
+          "position": "N/A",
+          "reasoning": "N.Williams boasts excellent recent form (10.3) and faces the easiest fixture of the gameweek (Burnley H, FDR 1). His rotation risk is low at 27%, and as a defender, he offers clean sheet potential alongside attacking returns. While B.Fernandes has a higher PPG, Williams' combination of top form and the best fixture makes him a compelling, albeit slightly differential, captain choice."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "N.Williams",
+          "team": "N/A",
+          "ownership_pct": 0,
+          "reasoning": "With an ownership of just 4.2%, N.Williams is a strong differential. He has outstanding form (10.3), the best fixture of the gameweek (Burnley H, FDR 1), and a low rotation risk (27%). His price of 4.8 also makes him an excellent value pick."
+        },
+        "transfers_in": [
+          {
+            "name": "N.Williams",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Top form (10.3), the best fixture (Burnley H, FDR 1), and a low rotation risk (27%) make him a must-have. His price (4.8) and good upcoming fixtures (next 3: 3,3,3) further solidify his appeal."
+          },
+          {
+            "name": "Thiago",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Thiago offers good attacking potential as a forward with solid form (7.7). Crucially, he has a very low rotation risk (20%) and a decent home fixture against Fulham (FDR 3). His next three fixtures also include an FDR 2 game."
+          },
+          {
+            "name": "Milenković",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "A nailed-on defender (rotation risk 'nailed') from Nottingham Forest, Milenković benefits from the same excellent fixture as N.Williams (Burnley H, FDR 1). His form (5.7) is respectable, and his price (5.1) is reasonable for a secure starter in a favourable match."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "O'Reilly",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Despite Pep Guardiola's quote, O'Reilly is listed with only 50% availability. With 19.2% ownership, this uncertainty is too high for a player who might not feature, making him an urgent sell."
+          },
+          {
+            "name": "Canvot",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Canvot carries the highest rotation risk in the squad (60%, 'heavy_rotation'). This makes him an unreliable starter, regardless of his recent form (5.7)."
+          },
+          {
+            "name": "Barkley",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Barkley is another player in the 'heavy_rotation' tier with a 57% rotation risk. His low total points (37) and PPG (1.2) combined with this high risk make him an easy decision to sell."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player": "O'Reilly (MCI)",
+            "type": "Availability Concern",
+            "details": "Despite Pep Guardiola's positive press conference quote, O'Reilly is listed with only 50% availability. Managers should be wary of this discrepancy and consider alternative options."
+          },
+          {
+            "player": "Canvot (CRY), Barkley (AVL), Aina (NFO), Darlow (LEE)",
+            "type": "Heavy Rotation Risk",
+            "details": "These players have rotation risks of 60%, 57%, 56%, and 56% respectively, placing them in the 'heavy_rotation' tier. Starting them is highly speculative and should be avoided if possible."
+          },
+          {
+            "player": "Mavropanos (WHU), Gordon (NEW), Beto (EVE), Gabriel (ARS)",
+            "type": "Significant Rotation Risk",
+            "details": "Despite good recent form for some, these players carry rotation risks between 43% and 48%. While not 'heavy_rotation', their chances of starting are not guaranteed, which could lead to unexpected benchings."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player\": \"N.Williams (NFO)\",\n      \"reasoning\": \"N.Williams boasts excellent recent form (10.3) and faces the easiest fixture of the gameweek (Burnley H, FDR 1). His rotation risk is low at 27%, and as a defender, he offers clean sheet potential alongside attacking returns. While B.Fernandes has a higher PPG, Williams' combination of top form and the best fixture makes him a compelling, albeit slightly differential, captain choice.\"\n    },\n    \"differential_pick\": {\n      \"player\": \"N.Williams (NFO)\",\n      \"reasoning\": \"With an ownership of just 4.2%, N.Williams is a strong differential. He has outstanding form (10.3), the best fixture of the gameweek (Burnley H, FDR 1), and a low rotation risk (27%). His price of 4.8 also makes him an excellent value pick.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"player\": \"N.Williams (NFO)\",\n        \"priority\": 1,\n        \"reasoning\": \"Top form (10.3), the best fixture (Burnley H, FDR 1), and a low rotation risk (27%) make him a must-have. His price (4.8) and good upcoming fixtures (next 3: 3,3,3) further solidify his appeal.\"\n      },\n      {\n        \"player\": \"Thiago (BRE)\",\n        \"priority\": 2,\n        \"reasoning\": \"Thiago offers good attacking potential as a forward with solid form (7.7). Crucially, he has a very low rotation risk (20%) and a decent home fixture against Fulham (FDR 3). His next three fixtures also include an FDR 2 game.\"\n      },\n      {\n        \"player\": \"Milenković (NFO)\",\n        \"priority\": 3,\n        \"reasoning\": \"A nailed-on defender (rotation risk 'nailed') from Nottingham Forest, Milenković benefits from the same excellent fixture as N.Williams (Burnley H, FDR 1). His form (5.7) is respectable, and his price (5.1) is reasonable for a secure starter in a favourable match.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"player\": \"O'Reilly (MCI)\",\n        \"priority\": 1,\n        \"reasoning\": \"Despite Pep Guardiola's quote, O'Reilly is listed with only 50% availability. With 19.2% ownership, this uncertainty is too high for a player who might not feature, making him an urgent sell.\"\n      },\n      {\n        \"player\": \"Canvot (CRY)\",\n        \"priority\": 2,\n        \"reasoning\": \"Canvot carries the highest rotation risk in the squad (60%, 'heavy_rotation'). This makes him an unreliable starter, regardless of his recent form (5.7).\"\n      },\n      {\n        \"player\": \"Barkley (AVL)\",\n        \"priority\": 3,\n        \"reasoning\": \"Barkley is another player in the 'heavy_rotation' tier with a 57% rotation risk. His low total points (37) and PPG (1.2) combined with this high risk make him an easy decision to sell.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"player\": \"O'Reilly (MCI)\",\n        \"type\": \"Availability Concern\",\n        \"details\": \"Despite Pep Guardiola's positive press conference quote, O'Reilly is listed with only 50% availability. Managers should be wary of this discrepancy and consider alternative options.\"\n      },\n      {\n        \"player\": \"Canvot (CRY), Barkley (AVL), Aina (NFO), Darlow (LEE)\",\n        \"type\": \"Heavy Rotation Risk\",\n        \"details\": \"These players have rotation risks of 60%, 57%, 56%, and 56% respectively, placing them in the 'heavy_rotation' tier. Starting them is highly speculative and should be avoided if possible.\"\n      },\n      {\n        \"player\": \"Mavropanos (WHU), Gordon (NEW), Beto (EVE), Gabriel (ARS)\",\n        \"type\": \"Significant Rotation Risk\",\n        \"details\": \"Despite good recent form for some, these players carry rotation risks between 43% and 48%. While not 'heavy_rotation', their chances of starting are not guaranteed, which could lead to unexpected benchings.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 33 FPL Intelligence Report\n\nWelcome to your Gameweek 33 FPL briefing! This week's intelligence dossier highlights key opportunities and risks as we head into the deadline.\n\n---\n\n### CAPTAIN PICK: N.Williams (NFO)\n\n**Reasoning:** Our top captain choice for Gameweek 33 is **N.Williams (NFO)**. He stands out with an exceptional recent form of **10.3**, the highest among our top considerations. Crucially, Nottingham Forest faces **Burnley at home (FDR 1)**, the easiest fixture of the gameweek. With a low rotation risk of **27%** and a budget-friendly price of **4.8**, Williams offers a fantastic blend of form, fixture, and security. While midfielders like B.Fernandes (9.0 form, 6.0 PPG) offer a higher ceiling, Williams' optimal fixture and strong defensive potential (clean sheet + attacking returns) make him a compelling, and potentially differential, captain.\n\n---\n\n### DIFFERENTIAL PICK: N.Williams (NFO)\n\n**Reasoning:** **N.Williams (NFO)** also takes our differential pick spot, with a low ownership of just **4.2%**. His outstanding form (10.3), combined with the prime home fixture against Burnley (FDR 1) and a low rotation risk (27%), makes him an excellent under-the-radar option. He offers significant upside for managers looking to gain an edge on their rivals.\n\n---\n\n### TRANSFER TARGETS IN:\n\n1.  **N.Williams (NFO) - Priority 1**\n    *   **Reasoning:** As highlighted for our captain and differential picks, Williams is in superb form (10.3), has the best fixture of the gameweek (Burnley H, FDR 1), and a low rotation risk (27%). His price of 4.8 and favourable upcoming fixtures (next 3: 3,3,3) make him an essential transfer target.\n\n2.  **Thiago (BRE) - Priority 2**\n    *   **Reasoning:** Thiago (7.2m) is a forward in good form (7.7) with a very low rotation risk of just **20%**. Brentford faces Fulham at home (FDR 3), a decent fixture, and their subsequent schedule includes an FDR 2 game, offering good long-term value.\n\n3.  **Milenković (NFO) - Priority 3**\n    *   **Reasoning:** Another Nottingham Forest defender, Milenković (5.1m) is listed as 'nailed' for minutes, offering excellent security. He benefits from the same prime fixture as N.Williams (Burnley H, FDR 1) and has a respectable form of 5.7. He's a solid, reliable option to bolster your defence.\n\n---\n\n### TRANSFER TARGETS OUT:\n\n1.  **O'Reilly (MCI) - Priority 1**\n    *   **Reasoning:** Despite Pep Guardiola's press conference quote stating O'Reilly is 'fine', the data shows his availability at a concerning **50%**. With an ownership of **19.2%**, this level of uncertainty for a highly-owned player makes him an urgent sell to avoid a potential blank.\n\n2.  **Canvot (CRY) - Priority 2**\n    *   **Reasoning:** Canvot (4.5m) carries the highest rotation risk in our dossier at **60%**, categorised as 'heavy_rotation'. This makes him an extremely unreliable starter and a prime candidate for transfer out, regardless of his recent form (5.7).\n\n3.  **Barkley (AVL) - Priority 3**\n    *   **Reasoning:** Barkley (4.8m) is another player in the 'heavy_rotation' tier, with a **57%** rotation risk. His low total points (37) and PPG (1.2) further diminish his appeal, making him an easy decision to offload.\n\n---\n\n### RISK WARNINGS:\n\n*   **O'Reilly (MCI) - Availability Discrepancy:** Be extremely cautious with O'Reilly. While Pep Guardiola's quote suggests he's 'fine', the official data lists him as only **50% available**. This contradiction is a major red flag, and managers should prepare for his potential absence.\n*   **Heavy Rotation Risks:** Players like **Canvot (CRY, 60% RR), Barkley (AVL, 57% RR), Aina (NFO, 56% RR), and Darlow (LEE, 56% RR)** are all in the 'heavy_rotation' tier. Relying on these players for gameweek minutes is highly risky and should be avoided.\n*   **Significant Rotation Risks:** Several popular players, including **Mavropanos (WHU, 48% RR), Gordon (NEW, 44% RR), Beto (EVE, 45% RR), and Gabriel (ARS, 43% RR)**, carry notable rotation risks. While their form might be good, their chances of starting are not guaranteed, which could lead to unexpected benchings and lost points.",
+      "context_summary": {
+        "top_form_player": "Mavropanos (12.0)",
+        "most_concerning_availability": "Maguire (0%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "34": {
+      "gw": 34,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "B.Fernandes",
+          "team": "MUN",
+          "position": "N/A",
+          "reasoning": "Highest PPG (6.0) among active players with a good fixture. Excellent form (7.7) and a favourable home match against Brentford (FDR 3). While his ownership is high (48%), he offers a reliable captaincy option in a gameweek with many blanks. His rotation risk (33%) is manageable."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Gibbs-White",
+          "team": "NFO",
+          "ownership_pct": 0,
+          "reasoning": "Outstanding form (10.0) and a strong PPG (4.7). He is nailed in the Nottingham Forest lineup and faces Sunderland (A, FDR 3), a good fixture. With only 9.2% ownership, he offers significant differential potential for managers looking to climb ranks."
+        },
+        "transfers_in": [
+          {
+            "name": "Gibbs-White",
+            "team": "NFO",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Top form (10.0), nailed, and a favourable fixture against Sunderland (A, FDR 3). His low ownership (9.2%) makes him an excellent value pick with high upside."
+          },
+          {
+            "name": "Bowen",
+            "team": "WHU",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Consistent performer with good form (6.0) and a strong PPG (4.8). He is nailed and has a good home fixture against Everton (FDR 3). West Ham's next three fixtures are also reasonable."
+          },
+          {
+            "name": "Watkins",
+            "team": "AVL",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Strong form (9.0) and a decent away fixture against Fulham (FDR 3). Aston Villa also has a very appealing fixture in GW36 (Burnley A, FDR 2), making him a good long-term hold despite a moderate rotation risk (30%)."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Beto",
+            "team": "EVE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Confirmed OUT due to concussion protocol. He is unavailable for Gameweek 34 and should be an immediate transfer out."
+          },
+          {
+            "name": "Okafor",
+            "team": "LEE",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Leeds United has a blank gameweek (N/A fixture) and Okafor carries a significant rotation risk (48%). Managers should look to move him on for an active player."
+          },
+          {
+            "name": "Cherki",
+            "team": "MCI",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Manchester City has a blank gameweek (N/A fixture) and Cherki has a high rotation risk (48%). Selling him frees up funds and a squad spot for a player who will actually play."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "type": "Availability",
+            "player_name": "Beto",
+            "team": "EVE",
+            "details": "Beto (EVE) is confirmed OUT for Gameweek 34 due to concussion protocol. Managers should transfer him out immediately."
+          },
+          {
+            "type": "Blank Gameweek",
+            "player_name": "Multiple Teams",
+            "team": "MCI, LEE, BHA, BOU",
+            "details": "Manchester City, Leeds, Brighton, and Bournemouth all have a blank gameweek (N/A fixture). Managers should check their squads and prioritize transferring out players from these teams, especially those with high rotation risk."
+          },
+          {
+            "type": "Rotation Risk",
+            "player_name": "M.Salah",
+            "team": "LIV",
+            "details": "Despite having a fixture, M.Salah (LIV) carries a rotation risk of 49%. Managers should be aware of this potential for reduced minutes or benching."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"CAPTAIN_PICK\": {\n      \"player_name\": \"B.Fernandes\",\n      \"team\": \"MUN\",\n      \"reasoning\": \"Highest PPG (6.0) among active players with a good fixture. Excellent form (7.7) and a favourable home match against Brentford (FDR 3). While his ownership is high (48%), he offers a reliable captaincy option in a gameweek with many blanks. His rotation risk (33%) is manageable.\"\n    },\n    \"DIFFERENTIAL_PICK\": {\n      \"player_name\": \"Gibbs-White\",\n      \"team\": \"NFO\",\n      \"reasoning\": \"Outstanding form (10.0) and a strong PPG (4.7). He is nailed in the Nottingham Forest lineup and faces Sunderland (A, FDR 3), a good fixture. With only 9.2% ownership, he offers significant differential potential for managers looking to climb ranks.\"\n    },\n    \"TRANSFER_TARGETS_IN\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Gibbs-White\",\n        \"team\": \"NFO\",\n        \"reasoning\": \"Top form (10.0), nailed, and a favourable fixture against Sunderland (A, FDR 3). His low ownership (9.2%) makes him an excellent value pick with high upside.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Bowen\",\n        \"team\": \"WHU\",\n        \"reasoning\": \"Consistent performer with good form (6.0) and a strong PPG (4.8). He is nailed and has a good home fixture against Everton (FDR 3). West Ham's next three fixtures are also reasonable.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Watkins\",\n        \"team\": \"AVL\",\n        \"reasoning\": \"Strong form (9.0) and a decent away fixture against Fulham (FDR 3). Aston Villa also has a very appealing fixture in GW36 (Burnley A, FDR 2), making him a good long-term hold despite a moderate rotation risk (30%).\"\n      }\n    ],\n    \"TRANSFER_TARGETS_OUT\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Beto\",\n        \"team\": \"EVE\",\n        \"reasoning\": \"Confirmed OUT due to concussion protocol. He is unavailable for Gameweek 34 and should be an immediate transfer out.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Okafor\",\n        \"team\": \"LEE\",\n        \"reasoning\": \"Leeds United has a blank gameweek (N/A fixture) and Okafor carries a significant rotation risk (48%). Managers should look to move him on for an active player.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Cherki\",\n        \"team\": \"MCI\",\n        \"reasoning\": \"Manchester City has a blank gameweek (N/A fixture) and Cherki has a high rotation risk (48%). Selling him frees up funds and a squad spot for a player who will actually play.\"\n      }\n    ],\n    \"RISK_WARNINGS\": [\n      {\n        \"type\": \"Availability\",\n        \"player_name\": \"Beto\",\n        \"team\": \"EVE\",\n        \"details\": \"Beto (EVE) is confirmed OUT for Gameweek 34 due to concussion protocol. Managers should transfer him out immediately.\"\n      },\n      {\n        \"type\": \"Blank Gameweek\",\n        \"player_name\": \"Multiple Teams\",\n        \"team\": \"MCI, LEE, BHA, BOU\",\n        \"details\": \"Manchester City, Leeds, Brighton, and Bournemouth all have a blank gameweek (N/A fixture). Managers should check their squads and prioritize transferring out players from these teams, especially those with high rotation risk.\"\n      },\n      {\n        \"type\": \"Rotation Risk\",\n        \"player_name\": \"M.Salah\",\n        \"team\": \"LIV\",\n        \"details\": \"Despite having a fixture, M.Salah (LIV) carries a rotation risk of 49%. Managers should be aware of this potential for reduced minutes or benching.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 34 FPL Analysis: Navigating the Blanks\n\nGameweek 34 presents a challenging landscape for FPL managers, with a significant number of teams blanking. Careful planning and attention to player availability and rotation risk will be crucial for success.\n\n### Captain Pick: Bruno Fernandes (MUN)\n\nOur top captaincy recommendation for Gameweek 34 is **Bruno Fernandes (MUN)**. With a strong PPG of 6.0 and good recent form (7.7), Fernandes offers a reliable option. Manchester United faces Brentford at home (FDR 3), a fixture where Fernandes has historically thrived. His ownership is high (48%), making him a safe choice to avoid falling behind, and his rotation risk (33%) is manageable, suggesting he's likely to play a significant role.\n\n### Differential Pick: Morgan Gibbs-White (NFO)\n\nFor managers seeking a differential, **Morgan Gibbs-White (NFO)** stands out. With an impressive form of 10.0 and a PPG of 4.7, he's been delivering consistent returns. He is nailed in the Nottingham Forest lineup and faces Sunderland away (FDR 3), a favourable fixture. Crucially, his ownership is only 9.2%, offering excellent potential for a significant rank boost.\n\n### Transfer Targets In\n\n1.  **Morgan Gibbs-White (NFO)**: As highlighted for the differential pick, Gibbs-White's exceptional form (10.0), nailed status, and good fixture against Sunderland (A, FDR 3) make him the top priority. He offers great value for his price.\n2.  **Jarrod Bowen (WHU)**: Bowen continues to be a consistent FPL asset, with good form (6.0) and a PPG of 4.8. He is nailed in the West Ham team and has a promising home fixture against Everton (FDR 3). West Ham's upcoming fixtures also look reasonable.\n3.  **Ollie Watkins (AVL)**: Despite a moderate rotation risk (30%), Watkins' strong form (9.0) and a good away fixture against Fulham (FDR 3) make him an attractive option. Furthermore, Aston Villa has a very appealing fixture in Gameweek 36 (Burnley A, FDR 2), making him a solid long-term investment.\n\n### Transfer Targets Out\n\n1.  **Beto (EVE)**: This is an urgent transfer out. David Moyes has confirmed Beto will miss the West Ham game due to concussion protocol. He is unavailable and must be sold.\n2.  **Okafor (LEE)**: Leeds United has a blank gameweek (N/A fixture) in Gameweek 34. Additionally, Okafor carries a significant rotation risk (48%), making him a prime candidate to be transferred out for a playing asset.\n3.  **Cherki (MCI)**: Similar to Okafor, Manchester City has a blank gameweek. Cherki also has a high rotation risk (48%). Managers should look to replace him with a player who will feature this gameweek.\n\n### Risk Warnings\n\n*   **Beto (EVE) OUT**: Everton's Beto is confirmed to miss Gameweek 34 due to concussion protocol. Ensure he is not in your starting XI or bench.\n*   **Blank Gameweek**: A significant number of teams will not play in Gameweek 34. **Manchester City, Leeds, Brighton, and Bournemouth** all have N/A fixtures. Managers must carefully check their squads and prioritize transferring out players from these teams, especially those with high rotation risk.\n*   **Mohamed Salah (LIV) Rotation Risk**: Despite having a fixture against Crystal Palace (H, FDR 3), Mohamed Salah carries a notable rotation risk of 49%. Managers should be aware that he might not play the full 90 minutes or could even be benched, which is a significant concern given his premium price.",
+      "context_summary": {
+        "top_form_player": "Beto (10.7)",
+        "most_concerning_availability": "Beto (5%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "35": {
+      "gw": 35,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Gibbs-White",
+          "team": "NFO",
+          "position": "N/A",
+          "reasoning": "Highest form (11.7) among all players, nailed for starts, and faces Chelsea (A, FDR 3) which is a decent fixture for attacking returns. Offers a strong blend of form, security, and potential."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Casemiro",
+          "team": "MUN",
+          "ownership_pct": 3.8,
+          "reasoning": "Boasts excellent form (8.7) for a midfielder at his price point (5.8), with low ownership (3.8%). Faces Liverpool (H, FDR 3), a fixture where he could be involved in defensive actions and set-piece attacks. His 33% rotation risk is manageable compared to other high-form differentials."
+        },
+        "transfers_in": [
+          {
+            "name": "Okafor",
+            "team": "LEE",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Despite a 48% rotation risk, his form (10.3) is outstanding, and he has the best fixture of the gameweek against Burnley (H, FDR 1). At a price of 5.5, he offers explosive potential for GW35 if he starts."
+          },
+          {
+            "name": "Gibbs-White",
+            "team": "NFO",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Top form (11.7), nailed status, and a reasonable fixture against Chelsea (A, FDR 3). A consistent performer who is a strong long-term hold and a great captaincy option for this week."
+          },
+          {
+            "name": "Bowen",
+            "team": "WHU",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Solid form (8.7) and nailed in West Ham's attack. Faces Brentford (A, FDR 3), a fixture where he has historically performed well. A reliable FWD option with good goal and assist threat."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Shaw",
+            "team": "MUN",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Confirmed 0% availability (OUT). Must be transferred out immediately."
+          },
+          {
+            "name": "M.Salah",
+            "team": "LIV",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Listed as DOUBTFUL with 50% availability due to a hamstring issue. At his high price (14.0) and facing a tough fixture against Man Utd (A, FDR 4), the risk of him not playing or being limited is too high."
+          },
+          {
+            "name": "Boscagli",
+            "team": "BHA",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "High rotation risk (65%) and classified as 'heavy_rotation'. His low total points (38) and form (5.7) suggest he's not a valuable asset to hold."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player_name": "M.Salah",
+            "team": "LIV",
+            "warning": "DOUBTFUL (50% availability) due to a hamstring issue. Managers should have a strong bench or consider selling given his high price and the tough fixture."
+          },
+          {
+            "player_name": "Okafor",
+            "team": "LEE",
+            "warning": "Significant rotation risk (48%). While his form and fixture are excellent, there's a high chance he might not start or play a full 90 minutes. Ensure you have bench cover if you bring him in."
+          },
+          {
+            "player_name": "Mavropanos",
+            "team": "WHU",
+            "warning": "High rotation risk (47%). Despite good form, his minutes are not guaranteed, which could lead to frustration for owners."
+          },
+          {
+            "player_name": "Heavy Rotation Players",
+            "team": "Various",
+            "warning": "Players like Boscagli (BHA, 65%), Canvot (CRY, 59%), Khusanov (MCI, 59%), and Osula (NEW, 56%) carry very high rotation risks and should be avoided or transferred out if owned."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player_name\": \"Gibbs-White\",\n      \"team\": \"NFO\",\n      \"reasoning\": \"Highest form (11.7) among all players, nailed for starts, and faces Chelsea (A, FDR 3) which is a decent fixture for attacking returns. Offers a strong blend of form, security, and potential.\"\n    },\n    \"differential_pick\": {\n      \"player_name\": \"Casemiro\",\n      \"team\": \"MUN\",\n      \"ownership_percentage\": 3.8,\n      \"reasoning\": \"Boasts excellent form (8.7) for a midfielder at his price point (5.8), with low ownership (3.8%). Faces Liverpool (H, FDR 3), a fixture where he could be involved in defensive actions and set-piece attacks. His 33% rotation risk is manageable compared to other high-form differentials.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Okafor\",\n        \"team\": \"LEE\",\n        \"reasoning\": \"Despite a 48% rotation risk, his form (10.3) is outstanding, and he has the best fixture of the gameweek against Burnley (H, FDR 1). At a price of 5.5, he offers explosive potential for GW35 if he starts.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Gibbs-White\",\n        \"team\": \"NFO\",\n        \"reasoning\": \"Top form (11.7), nailed status, and a reasonable fixture against Chelsea (A, FDR 3). A consistent performer who is a strong long-term hold and a great captaincy option for this week.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Bowen\",\n        \"team\": \"WHU\",\n        \"reasoning\": \"Solid form (8.7) and nailed in West Ham's attack. Faces Brentford (A, FDR 3), a fixture where he has historically performed well. A reliable FWD option with good goal and assist threat.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Shaw\",\n        \"team\": \"MUN\",\n        \"reasoning\": \"Confirmed 0% availability (OUT). Must be transferred out immediately.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"M.Salah\",\n        \"team\": \"LIV\",\n        \"reasoning\": \"Listed as DOUBTFUL with 50% availability due to a hamstring issue. At his high price (14.0) and facing a tough fixture against Man Utd (A, FDR 4), the risk of him not playing or being limited is too high.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Boscagli\",\n        \"team\": \"BHA\",\n        \"reasoning\": \"High rotation risk (65%) and classified as 'heavy_rotation'. His low total points (38) and form (5.7) suggest he's not a valuable asset to hold.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"player_name\": \"M.Salah\",\n        \"team\": \"LIV\",\n        \"warning\": \"DOUBTFUL (50% availability) due to a hamstring issue. Managers should have a strong bench or consider selling given his high price and the tough fixture.\"\n      },\n      {\n        \"player_name\": \"Okafor\",\n        \"team\": \"LEE\",\n        \"warning\": \"Significant rotation risk (48%). While his form and fixture are excellent, there's a high chance he might not start or play a full 90 minutes. Ensure you have bench cover if you bring him in.\"\n      },\n      {\n        \"player_name\": \"Mavropanos\",\n        \"team\": \"WHU\",\n        \"warning\": \"High rotation risk (47%). Despite good form, his minutes are not guaranteed, which could lead to frustration for owners.\"\n      },\n      {\n        \"player_name\": \"Heavy Rotation Players\",\n        \"team\": \"Various\",\n        \"warning\": \"Players like Boscagli (BHA, 65%), Canvot (CRY, 59%), Khusanov (MCI, 59%), and Osula (NEW, 56%) carry very high rotation risks and should be avoided or transferred out if owned.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 35 FPL Analysis: The Nailed vs. The Risky Gem\n\nGameweek 35 presents a fascinating dilemma between highly-performing, nailed-on assets and explosive, yet rotation-prone, differentials. Managers will need to weigh security against potential upside as the season draws to a close.\n\n### Captain Pick: Gibbs-White (NFO)\n\nOur top captaincy choice for Gameweek 35 is **Gibbs-White (NFO)**. He leads the form charts with an impressive 11.7 and is listed as 'nailed' for starts, offering crucial security. While his fixture against Chelsea (A, FDR 3) isn't the easiest, Chelsea's defensive inconsistencies make them vulnerable. Gibbs-White's consistent attacking returns and guaranteed minutes make him a safer and highly promising captaincy option over other high-form players with rotation concerns.\n\n### Differential Pick: Casemiro (MUN)\n\nFor those looking for a low-ownership (<10%) gem, **Casemiro (MUN)** stands out. With just 3.8% ownership, he's in excellent form (8.7) and priced at a reasonable 5.8. Manchester United face Liverpool (H, FDR 3), a fixture that could see Casemiro heavily involved in both defensive duties and set-piece opportunities. His 33% rotation risk is lower than many other high-form differentials, making him a calculated risk with significant upside.\n\n### Transfer Targets In:\n\n1.  **Okafor (LEE)**: Despite a notable 48% rotation risk, Okafor's form (10.3) and the dream fixture against Burnley (H, FDR 1) make him an irresistible punt. At just 5.5, he offers incredible value for a potential explosive haul if he starts. Managers should ensure they have strong bench cover.\n2.  **Gibbs-White (NFO)**: A top-tier option for both the short and long term. His league-leading form (11.7) and nailed status make him a reliable source of points. His fixture against Chelsea (A, FDR 3) is decent, and he's a strong candidate to hold for the remainder of the season.\n3.  **Bowen (WHU)**: A consistent FWD performer with good form (8.7) and a nailed starting spot. West Ham face Brentford (A, FDR 3), a fixture where Bowen has historically delivered. He's a solid, dependable option to bolster your attack.\n\n### Transfer Targets Out:\n\n1.  **Shaw (MUN)**: Confirmed 0% availability (OUT). He must be transferred out immediately to free up funds and a squad spot.\n2.  **M.Salah (LIV)**: Listed as DOUBTFUL with only 50% availability due to a hamstring issue. Given his premium price (14.0) and a tough fixture against Man Utd (A, FDR 4), the risk of him missing out or being limited is too high to justify holding.\n3.  **Boscagli (BHA)**: With a heavy rotation risk of 65% and low overall points, Boscagli is a clear sell. He's unlikely to provide consistent returns and is taking up a valuable squad spot.\n\n### Risk Warnings:\n\n*   **M.Salah (LIV)**: Managers with Salah should be extremely cautious. His 50% availability and hamstring issue make him a significant doubt for GW35. Consider selling or at least having a robust bench plan.\n*   **Okafor (LEE)**: While a top transfer target, his 48% rotation risk is substantial. Be prepared for a potential benching or limited minutes, despite the fantastic fixture.\n*   **Mavropanos (WHU)**: Showing excellent form (10.3) but carries a 47% rotation risk. This makes him a risky defensive pick, even at a low price.\n*   **Heavy Rotation Players**: Boscagli (BHA, 65%), Canvot (CRY, 59%), Khusanov (MCI, 59%), and Osula (NEW, 56%) are all flagged for heavy rotation. Avoid bringing these players in, and consider transferring them out if they are in your squad.",
+      "context_summary": {
+        "top_form_player": "Gibbs-White (11.7)",
+        "most_concerning_availability": "Shaw (0%)",
+        "highest_rotation_risk": "Bayindir (77, bench)"
+      }
+    },
+    "36": {
+      "gw": 36,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Haaland",
+          "team": "N/A",
+          "position": "N/A",
+          "reasoning": "Haaland (FWD, MCI, 14.7m) is the standout captain choice for Gameweek 36. He boasts an impressive 6.4 PPG and a total of 219 points, making him a consistent FPL performer. Manchester City faces Brentford at home (FDR 3), a fixture where Haaland is highly likely to deliver attacking returns. His 95% availability and relatively low rotation risk (27%) further solidify his appeal as a reliable captain."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Gibbs-White",
+          "team": "N/A",
+          "ownership_pct": 0,
+          "reasoning": "Morgan Gibbs-White (MID, NFO, 7.6m) is an excellent differential pick with just 9.2% ownership. He is in phenomenal form, leading all players with a form of 12.3. Despite a home fixture against Newcastle (FDR 3), his recent output suggests he can continue to deliver. With 95% availability and a low rotation risk (27%), he offers high upside for managers looking for a differential."
+        },
+        "transfers_in": [
+          {
+            "name": "Pedro Porro",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Pedro Porro (DEF, TOT, 5.2m) is a top priority transfer target. He has a strong form of 7.3 and faces Leeds at home (FDR 2), which is the easiest fixture of the gameweek. At 5.2m, he offers excellent value for a defender with attacking potential and a good chance of a clean sheet. His 95% availability makes him a reliable pick."
+          },
+          {
+            "name": "Casemiro",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Casemiro (MID, MUN, 5.8m) is a great value pick with a form of 7.0 and low ownership (3.8%). Manchester United travels to Sunderland (FDR 3), a favorable fixture for potential returns. His 95% availability and moderate rotation risk (32%) make him a solid midfield option at a budget-friendly price."
+          },
+          {
+            "name": "Truffert",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Truffert (DEF, BOU, 4.8m) is a budget-friendly defender in good form (6.7). He is 'nailed' for minutes, with 95% availability and no rotation risk. Bournemouth faces Fulham away (FDR 3), a decent fixture for defensive returns. He offers a cheap route into a starting defender with recent FPL points."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Okafor",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Noah Okafor (MID, LEE, 5.5m) must be sold immediately. Despite his good form (8.7), press conference quotes confirm he 'will likely miss the next two games' due to a calf injury. His 0% availability for the upcoming games makes him a dead asset."
+          },
+          {
+            "name": "Watkins",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Ollie Watkins (FWD, AVL, 8.7m) is a high-priority sell due to his 40% availability, making him 'DOUBTFUL'. While he played 90 minutes last game, the official availability percentage is a significant red flag, indicating a high risk of missing Gameweek 36."
+          },
+          {
+            "name": "Doku",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Jeremy Doku (MID, MCI, 6.5m) is another urgent sell. Despite recent praise and good form (7.7), he is listed as 'DOUBTFUL' with only 50% availability. This uncertainty makes him too risky to hold for Gameweek 36, especially with other strong midfield options available."
+          }
+        ],
+        "risk_warnings": [
+          "Noah Okafor (LEE) is confirmed to miss the next two games due to a calf injury. Transfer out immediately.",
+          "Ollie Watkins (AVL) is DOUBTFUL with only 40% availability, despite playing 90 minutes in the last match. Proceed with caution or transfer out.",
+          "Jeremy Doku (MCI) is DOUBTFUL with 50% availability. Consider transferring out due to injury uncertainty.",
+          "Heavy rotation risks for Awoniyi (NFO, 61%), Khusanov (MCI, 58%), and Osula (NEW, 57%). Avoid bringing these players in and consider selling if you own them.",
+          "Other players with significant rotation risk include Šeško (MUN, 52%), Hinshelwood (BHA, 51%), Justin (LEE, 51%), Cherki (MCI, 47%), Kroupi.Jr (BOU, 47%), Lewis-Potter (BRE, 45%), Damsgaard (BRE, 45%), Sels (NFO, 45%), Dewsbury-Hall (EVE, 44%), Gyökeres (ARS, 43%), Saliba (ARS, 43%), Igor Jesus (NFO, 42%), and Jensen (BRE, 42%)."
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"CAPTAIN_PICK\": {\n      \"player_name\": \"Haaland\",\n      \"reasoning\": \"Haaland (FWD, MCI, 14.7m) is the standout captain choice for Gameweek 36. He boasts an impressive 6.4 PPG and a total of 219 points, making him a consistent FPL performer. Manchester City faces Brentford at home (FDR 3), a fixture where Haaland is highly likely to deliver attacking returns. His 95% availability and relatively low rotation risk (27%) further solidify his appeal as a reliable captain.\"\n    },\n    \"DIFFERENTIAL_PICK\": {\n      \"player_name\": \"Gibbs-White\",\n      \"reasoning\": \"Morgan Gibbs-White (MID, NFO, 7.6m) is an excellent differential pick with just 9.2% ownership. He is in phenomenal form, leading all players with a form of 12.3. Despite a home fixture against Newcastle (FDR 3), his recent output suggests he can continue to deliver. With 95% availability and a low rotation risk (27%), he offers high upside for managers looking for a differential.\"\n    },\n    \"TRANSFER_TARGETS_IN\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Pedro Porro\",\n        \"reasoning\": \"Pedro Porro (DEF, TOT, 5.2m) is a top priority transfer target. He has a strong form of 7.3 and faces Leeds at home (FDR 2), which is the easiest fixture of the gameweek. At 5.2m, he offers excellent value for a defender with attacking potential and a good chance of a clean sheet. His 95% availability makes him a reliable pick.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Casemiro\",\n        \"reasoning\": \"Casemiro (MID, MUN, 5.8m) is a great value pick with a form of 7.0 and low ownership (3.8%). Manchester United travels to Sunderland (FDR 3), a favorable fixture for potential returns. His 95% availability and moderate rotation risk (32%) make him a solid midfield option at a budget-friendly price.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Truffert\",\n        \"reasoning\": \"Truffert (DEF, BOU, 4.8m) is a budget-friendly defender in good form (6.7). He is 'nailed' for minutes, with 95% availability and no rotation risk. Bournemouth faces Fulham away (FDR 3), a decent fixture for defensive returns. He offers a cheap route into a starting defender with recent FPL points.\"\n      }\n    ],\n    \"TRANSFER_TARGETS_OUT\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Okafor\",\n        \"reasoning\": \"Noah Okafor (MID, LEE, 5.5m) must be sold immediately. Despite his good form (8.7), press conference quotes confirm he 'will likely miss the next two games' due to a calf injury. His 0% availability for the upcoming games makes him a dead asset.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Watkins\",\n        \"reasoning\": \"Ollie Watkins (FWD, AVL, 8.7m) is a high-priority sell due to his 40% availability, making him 'DOUBTFUL'. While he played 90 minutes last game, the official availability percentage is a significant red flag, indicating a high risk of missing Gameweek 36.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Doku\",\n        \"reasoning\": \"Jeremy Doku (MID, MCI, 6.5m) is another urgent sell. Despite recent praise and good form (7.7), he is listed as 'DOUBTFUL' with only 50% availability. This uncertainty makes him too risky to hold for Gameweek 36, especially with other strong midfield options available.\"\n      }\n    ],\n    \"RISK_WARNINGS\": [\n      \"Noah Okafor (LEE) is confirmed to miss the next two games due to a calf injury. Transfer out immediately.\",\n      \"Ollie Watkins (AVL) is DOUBTFUL with only 40% availability, despite playing 90 minutes in the last match. Proceed with caution or transfer out.\",\n      \"Jeremy Doku (MCI) is DOUBTFUL with 50% availability. Consider transferring out due to injury uncertainty.\",\n      \"Heavy rotation risks for Awoniyi (NFO, 61%), Khusanov (MCI, 58%), and Osula (NEW, 57%). Avoid bringing these players in and consider selling if you own them.\",\n      \"Other players with significant rotation risk include Šeško (MUN, 52%), Hinshelwood (BHA, 51%), Justin (LEE, 51%), Cherki (MCI, 47%), Kroupi.Jr (BOU, 47%), Lewis-Potter (BRE, 45%), Damsgaard (BRE, 45%), Sels (NFO, 45%), Dewsbury-Hall (EVE, 44%), Gyökeres (ARS, 43%), Saliba (ARS, 43%), Igor Jesus (NFO, 42%), and Jensen (BRE, 42%).\"\n    ]\n  }\n}\n```\n\n## Gameweek 36 FPL Analysis: The Expert's View\n\nWelcome to the Gameweek 36 FPL briefing! This week's intelligence dossier highlights some clear opportunities and urgent warnings as the season draws to a close. Let's dive into the actionable recommendations.\n\n### CAPTAIN PICK: Haaland (MCI)\n\n**Erling Haaland (FWD, MCI, 14.7m)** is the undisputed top captain choice for Gameweek 36. With a stellar 6.4 PPG and a total of 219 points, he remains the most reliable FPL asset. Manchester City hosts Brentford at home, a fixture rated with a FPL Difficulty Rating (FDR) of 3, which is favorable for attacking returns. Haaland's 95% availability and low rotation risk of 27% ensure he's a safe bet to start and deliver. While his ownership is high, his consistent output makes him a must-captain for managers looking to maximize their points.\n\n### DIFFERENTIAL PICK: Gibbs-White (NFO)\n\nFor those seeking a low-ownership (<10%) gem, **Morgan Gibbs-White (MID, NFO, 7.6m)** is the player to target. With just 9.2% ownership, he is in sensational form, boasting an incredible 12.3 form rating – the highest among all listed players. Nottingham Forest faces Newcastle at home (FDR 3), a decent fixture where Gibbs-White's recent explosive output could continue. His 95% availability and low rotation risk (27%) make him an exciting differential with significant upside.\n\n### TRANSFER TARGETS IN\n\n1.  **Pedro Porro (DEF, TOT, 5.2m) - Priority 1:** Porro is an excellent defensive acquisition. He's in good form (7.3) and has the most favorable fixture of the gameweek, with Tottenham hosting Leeds (FDR 2). At 5.2m, he offers great value for a defender with attacking threat and a high probability of a clean sheet. His 95% availability is also a plus.\n2.  **Casemiro (MID, MUN, 5.8m) - Priority 2:** The Manchester United midfielder presents a strong case for inclusion. With a form of 7.0 and very low ownership (3.8%), he's a fantastic differential. United travels to Sunderland (FDR 3), a favorable matchup for Casemiro to contribute. His 95% availability and moderate rotation risk (32%) make him a solid, budget-friendly midfield option.\n3.  **Truffert (DEF, BOU, 4.8m) - Priority 3:** For a budget-conscious defensive option, Truffert is ideal. Priced at just 4.8m, he's in good form (6.7) and is listed as 'nailed' for minutes, with 95% availability and no rotation risk. Bournemouth's away trip to Fulham (FDR 3) offers a reasonable chance for defensive returns.\n\n### TRANSFER TARGETS OUT\n\n1.  **Okafor (MID, LEE, 5.5m) - Priority 1:** Noah Okafor is an urgent sell. Despite his good form (8.7), press conference quotes explicitly state he 'will likely miss the next two games' due to a calf injury. His 0% availability for Gameweek 36 makes him a non-playing asset.\n2.  **Watkins (FWD, AVL, 8.7m) - Priority 2:** Ollie Watkins is a high-priority transfer out. He is listed as 'DOUBTFUL' with only 40% availability. While he played 90 minutes in the last match, this low availability percentage is a significant red flag, indicating a high risk of him missing or being limited in Gameweek 36.\n3.  **Doku (MID, MCI, 6.5m) - Priority 3:** Jeremy Doku is another player to offload. Despite his recent praise and good form (7.7), he is 'DOUBTFUL' with only 50% availability. The uncertainty surrounding his fitness makes him too risky to hold, especially with crucial gameweeks ahead.\n\n### RISK WARNINGS\n\n*   **Injury Confirmed:** **Noah Okafor (LEE)** is confirmed to miss the next two games due to a calf injury. Transfer him out immediately.\n*   **Major Doubts:** **Ollie Watkins (AVL)** (40% available) and **Jeremy Doku (MCI)** (50% available) are both listed as DOUBTFUL. Managers should proceed with extreme caution or transfer them out to avoid a blank.\n*   **Heavy Rotation Risks:** Be wary of players with high rotation risks. **Awoniyi (NFO, 61%)**, **Khusanov (MCI, 58%)**, and **Osula (NEW, 57%)** are particularly susceptible to being benched or playing limited minutes.\n*   **General Rotation Concerns:** Other players with significant rotation risk include **Šeško (MUN, 52%)**, **Hinshelwood (BHA, 51%)**, **Justin (LEE, 51%)**, **Cherki (MCI, 47%)**, **Kroupi.Jr (BOU, 47%)**, **Lewis-Potter (BRE, 45%)**, **Damsgaard (BRE, 45%)**, **Sels (NFO, 45%)**, **Dewsbury-Hall (EVE, 44%)**, **Gyökeres (ARS, 43%)**, **Saliba (ARS, 43%)**, **Igor Jesus (NFO, 42%)**, and **Jensen (BRE, 42%)**. Monitor their minutes closely.",
+      "context_summary": {
+        "top_form_player": "Gibbs-White (12.3)",
+        "most_concerning_availability": "Sessegnon (5%)",
+        "highest_rotation_risk": "Ellborg (78, bench)"
+      }
+    },
+    "37": {
+      "gw": 37,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Gabriel",
+          "team": "ARS",
+          "position": "N/A",
+          "reasoning": "Gabriel is the standout captain choice for Gameweek 37 due to Arsenal's highly favorable home fixture against Burnley (FDR 1). He boasts excellent recent form (8.3) and a high PPG (5.6) for a defender. A clean sheet is highly probable, with potential for attacking returns. While his rotation risk is noted at 41%, for such a crucial home game against a weak opponent, key defensive players are expected to feature prominently."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "F.Kadıoğlu",
+          "team": "BHA",
+          "ownership_pct": 1.4,
+          "reasoning": "F.Kadıoğlu presents an excellent differential opportunity with just 1.4% ownership. Priced at 4.5m, he has shown strong recent form (7.3) for a defender. His rotation risk is low (28%), and Brighton faces a decent fixture away to Leeds (FDR 3), offering potential for both defensive and attacking returns."
+        },
+        "transfers_in": [
+          {
+            "name": "Gabriel",
+            "team": "ARS",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "With the best fixture of the gameweek (Burnley H, FDR 1), Gabriel (8.3 form) is a top priority. He offers high potential for clean sheet points and attacking contributions. Despite a 41% rotation risk, his upside for this fixture is immense."
+          },
+          {
+            "name": "Tarkowski",
+            "team": "EVE",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Tarkowski (6.0 form) is a solid defensive option with a favorable home fixture against Sunderland (FDR 2). His low rotation risk (23%) ensures he's a reliable starter, making him a strong candidate for clean sheet points."
+          },
+          {
+            "name": "F.Kadıoğlu",
+            "team": "BHA",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "A budget-friendly defender at 4.5m, F.Kadıoğlu has impressive form (7.3) and a low rotation risk (28%). Brighton's away fixture against Leeds (FDR 3) is decent, offering good value and differential potential."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Casemiro",
+            "team": "MUN",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Despite a press conference quote, the data explicitly states Casemiro is 5% available and OUT for Gameweek 37. He must be sold immediately."
+          },
+          {
+            "name": "Ampadu",
+            "team": "LEE",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Press conference quotes confirm Ethan Ampadu is a 'major doubt' due to illness. Managers should transfer him out to avoid a likely blank."
+          },
+          {
+            "name": "Awoniyi",
+            "team": "NFO",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Awoniyi faces heavy rotation risk (58%) and a tough away fixture against Manchester United (FDR 4). His low PPG (1.2) makes him an unappealing option for Gameweek 37."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "player": "Casemiro (MUN)",
+            "warning": "Despite a press conference quote suggesting availability for his final home match, the official data indicates Casemiro is only 5% available and OUT for Gameweek 37. Managers should prioritize the data and transfer him out."
+          },
+          {
+            "player": "Ampadu (LEE)",
+            "warning": "Ethan Ampadu is a 'major doubt' due to illness. Avoid selecting him in your squad."
+          },
+          {
+            "player": "Heavy Rotation Risks",
+            "warning": "Several players carry significant rotation risk for Gameweek 37, including Awoniyi (58%), De Cuyper (57%), Maguire (55%), Mainoo (55%), Doku (53%), Tel (51%), Hinshelwood (51%), Hill (50%), and Richarlison (49%). Managers should exercise caution, especially with Doku who has high form but also high risk and a tough fixture."
+          },
+          {
+            "player": "Arsenal Attackers/Defenders",
+            "warning": "While Arsenal has the best fixture (Burnley H, FDR 1), key players like Gabriel (41%), Gyökeres (41%), and Saliba (43%) have elevated rotation risks. Although they are strong picks due to the fixture, managers should monitor any further team news."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"gameweek\": 37,\n  \"captain_pick\": {\n    \"player\": \"Gabriel\",\n    \"team\": \"ARS\",\n    \"reasoning\": \"Gabriel is the standout captain choice for Gameweek 37 due to Arsenal's highly favorable home fixture against Burnley (FDR 1). He boasts excellent recent form (8.3) and a high PPG (5.6) for a defender. A clean sheet is highly probable, with potential for attacking returns. While his rotation risk is noted at 41%, for such a crucial home game against a weak opponent, key defensive players are expected to feature prominently.\"\n  },\n  \"differential_pick\": {\n    \"player\": \"F.Kadıoğlu\",\n    \"team\": \"BHA\",\n    \"ownership_percentage\": 1.4,\n    \"reasoning\": \"F.Kadıoğlu presents an excellent differential opportunity with just 1.4% ownership. Priced at 4.5m, he has shown strong recent form (7.3) for a defender. His rotation risk is low (28%), and Brighton faces a decent fixture away to Leeds (FDR 3), offering potential for both defensive and attacking returns.\"\n  },\n  \"transfer_targets_in\": [\n    {\n      \"priority\": 1,\n      \"player\": \"Gabriel\",\n      \"team\": \"ARS\",\n      \"reasoning\": \"With the best fixture of the gameweek (Burnley H, FDR 1), Gabriel (8.3 form) is a top priority. He offers high potential for clean sheet points and attacking contributions. Despite a 41% rotation risk, his upside for this fixture is immense.\"\n    },\n    {\n      \"priority\": 2,\n      \"player\": \"Tarkowski\",\n      \"team\": \"EVE\",\n      \"reasoning\": \"Tarkowski (6.0 form) is a solid defensive option with a favorable home fixture against Sunderland (FDR 2). His low rotation risk (23%) ensures he's a reliable starter, making him a strong candidate for clean sheet points.\"\n    },\n    {\n      \"priority\": 3,\n      \"player\": \"F.Kadıoğlu\",\n      \"team\": \"BHA\",\n      \"reasoning\": \"A budget-friendly defender at 4.5m, F.Kadıoğlu has impressive form (7.3) and a low rotation risk (28%). Brighton's away fixture against Leeds (FDR 3) is decent, offering good value and differential potential.\"\n    }\n  ],\n  \"transfer_targets_out\": [\n    {\n      \"priority\": 1,\n      \"player\": \"Casemiro\",\n      \"team\": \"MUN\",\n      \"reasoning\": \"Despite a press conference quote, the data explicitly states Casemiro is 5% available and OUT for Gameweek 37. He must be sold immediately.\"\n    },\n    {\n      \"priority\": 2,\n      \"player\": \"Ampadu\",\n      \"team\": \"LEE\",\n      \"reasoning\": \"Press conference quotes confirm Ethan Ampadu is a 'major doubt' due to illness. Managers should transfer him out to avoid a likely blank.\"\n    },\n    {\n      \"priority\": 3,\n      \"player\": \"Awoniyi\",\n      \"team\": \"NFO\",\n      \"reasoning\": \"Awoniyi faces heavy rotation risk (58%) and a tough away fixture against Manchester United (FDR 4). His low PPG (1.2) makes him an unappealing option for Gameweek 37.\"\n    }\n  ],\n  \"risk_warnings\": [\n    {\n      \"player\": \"Casemiro (MUN)\",\n      \"warning\": \"Despite a press conference quote suggesting availability for his final home match, the official data indicates Casemiro is only 5% available and OUT for Gameweek 37. Managers should prioritize the data and transfer him out.\"\n    },\n    {\n      \"player\": \"Ampadu (LEE)\",\n      \"warning\": \"Ethan Ampadu is a 'major doubt' due to illness. Avoid selecting him in your squad.\"\n    },\n    {\n      \"player\": \"Heavy Rotation Risks\",\n      \"warning\": \"Several players carry significant rotation risk for Gameweek 37, including Awoniyi (58%), De Cuyper (57%), Maguire (55%), Mainoo (55%), Doku (53%), Tel (51%), Hinshelwood (51%), Hill (50%), and Richarlison (49%). Managers should exercise caution, especially with Doku who has high form but also high risk and a tough fixture.\"\n    },\n    {\n      \"player\": \"Arsenal Attackers/Defenders\",\n      \"warning\": \"While Arsenal has the best fixture (Burnley H, FDR 1), key players like Gabriel (41%), Gyökeres (41%), and Saliba (43%) have elevated rotation risks. Although they are strong picks due to the fixture, managers should monitor any further team news.\"\n    }\n  ]\n}\n```\n\n## Gameweek 37 FPL Analysis: The Penultimate Push\n\nWelcome to Gameweek 37, the penultimate round of the 2025/26 Premier League season! With only two gameweeks remaining, every decision is crucial. Our intelligence dossier highlights key players in form, potential rotation headaches, and critical availability updates to guide your FPL strategy.\n\n### Captain Pick: Gabriel (Arsenal)\n\nOur top captain choice for Gameweek 37 is **Gabriel (ARS)**. Arsenal faces a dream home fixture against Burnley (FDR 1), offering the highest probability of a clean sheet this gameweek. Gabriel comes into this fixture in excellent form (8.3) and boasts a strong PPG of 5.6 for a defender. While his rotation risk is noted at 41%, for such a pivotal home game against a weaker opponent, Arsenal's key defensive players are expected to be integral. His potential for both defensive returns and attacking contributions makes him the standout captaincy option.\n\n### Differential Pick: F.Kadıoğlu (Brighton)\n\nFor managers seeking a low-ownership gem, **F.Kadıoğlu (BHA)** is our differential pick. With a mere 1.4% ownership, the 4.5m defender has been in impressive form (7.3) recently. His rotation risk is a manageable 28%, and Brighton travels to face Leeds (FDR 3), a decent fixture that could yield defensive returns. Kadıoğlu offers excellent budget value and true differential potential for your squad.\n\n### Transfer Targets In:\n\n1.  **Gabriel (ARS)**: (Priority 1) As highlighted for captaincy, Gabriel is a must-have if you don't own him. His top form (8.3) combined with the best fixture (Burnley H, FDR 1) makes him a prime candidate for significant points.\n2.  **Tarkowski (EVE)**: (Priority 2) The Everton defender (6.0 form) offers a reliable option with a favorable home fixture against Sunderland (FDR 2). His low rotation risk (23%) ensures he's a consistent starter, providing a strong foundation for clean sheet points.\n3.  **F.Kadıoğlu (BHA)**: (Priority 3) Our differential pick also makes it onto the transfer-in list. At just 4.5m, his strong form (7.3) and low rotation risk (28%) against Leeds (FDR 3) make him an excellent budget enabler with upside.\n\n### Transfer Targets Out:\n\n1.  **Casemiro (MUN)**: (Priority 1) Despite a press conference quote suggesting availability, the data explicitly states Casemiro is only 5% available and OUT for Gameweek 37. He is a confirmed absentee and must be sold immediately.\n2.  **Ampadu (LEE)**: (Priority 2) Ethan Ampadu is a \"major doubt\" due to illness, as confirmed by press conference quotes. Managers should transfer him out to avoid a likely blank.\n3.  **Awoniyi (NFO)**: (Priority 3) The Nottingham Forest forward faces a heavy rotation risk (58%) and a tough away fixture against Manchester United (FDR 4). His low PPG (1.2) further diminishes his appeal, making him a prime candidate for sale.\n\n### Risk Warnings:\n\n*   **Casemiro (MUN) Contradiction**: Be aware of conflicting information regarding Casemiro. While a press conference quote suggests he is available, the structured data clearly indicates he is 5% available and OUT for Gameweek 37. Prioritize the explicit availability data and transfer him out.\n*   **Ampadu (LEE) Illness**: Ethan Ampadu is a \"major doubt\" due to illness. Do not rely on him for Gameweek 37.\n*   **Heavy Rotation Risks**: A significant number of players carry high rotation risks this gameweek, including Awoniyi (58%), De Cuyper (57%), Maguire (55%), Mainoo (55%), Doku (53%), Tel (51%), Hinshelwood (51%), Hill (50%), and Richarlison (49%). Managers should be extremely cautious when considering these players, especially Doku, who despite high form, faces a tough fixture and high rotation probability.\n*   **Arsenal Attackers/Defenders**: While Arsenal players are highly recommended due to their excellent fixture, key assets like Gabriel (41%), Gyökeres (41%), and Saliba (43%) have elevated rotation risks. Keep an eye on any pre-deadline team news, though their importance in a crucial game should mitigate some of this risk.",
+      "context_summary": {
+        "top_form_player": "Doku (9.0)",
+        "most_concerning_availability": "Andersen (0%)",
+        "highest_rotation_risk": "Ellborg (78, bench)"
+      }
+    },
+    "38": {
+      "gw": 38,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Szoboszlai",
+          "team": "N/A",
+          "position": "N/A",
+          "reasoning": "Dominik Szoboszlai (LIV) is the top captain choice for Gameweek 38. He boasts excellent recent form (8.0), a favourable home fixture against Brentford (FDR 3), and a relatively low rotation risk of 27%. While Haaland (MCI) has a higher overall PPG, Szoboszlai's superior recent form and lower rotation risk make him a more reliable and high-upside option for the final gameweek."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Anderson",
+          "team": "N/A",
+          "ownership_pct": 0,
+          "reasoning": "Morgan Gibbs-White (NFO) - referred to as Anderson in the data - is an outstanding differential pick with just 9.4% ownership. He is in superb form (8.3), is listed as 'nailed' (no rotation risk), and faces Bournemouth at home (FDR 3). His high form, guaranteed minutes, and good fixture make him an excellent low-ownership option to consider."
+        },
+        "transfers_in": [
+          {
+            "name": "Szoboszlai",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "With excellent form (8.0), a favourable home fixture against Brentford (FDR 3), and a manageable rotation risk of 27%, Szoboszlai (LIV) is a prime target to bring in for the final gameweek. He offers high attacking potential."
+          },
+          {
+            "name": "Enzo",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Enzo (CHE) is in strong form (7.7) and has a good away fixture against Sunderland (FDR 3). His rotation risk is low at 29%, making him a reliable midfield option with attacking returns potential."
+          },
+          {
+            "name": "Anderson",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Anderson (NFO) offers exceptional value and form (8.3) at a low price (5.7). He is 'nailed' and has a good home fixture against Bournemouth (FDR 3). He's a great option for managers looking for a high-performing, secure midfielder."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "Awoniyi",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Taiwo Awoniyi (NFO) carries the highest rotation risk (61%) among all listed players, categorised as 'heavy_rotation'. Despite a decent form of 6.3, his extremely low PPG (1.2) and high risk of not starting make him an urgent sell."
+          },
+          {
+            "name": "Osula",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "William Osula (NEW) has a high rotation risk of 56%. While his recent form (8.0) is excellent, this significant risk makes him an unreliable pick for the final gameweek, where guaranteed minutes are crucial."
+          },
+          {
+            "name": "Mainoo",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Kobbie Mainoo (MUN) has a high rotation risk of 54%. Coupled with moderate form (6.0), he is a player to consider selling to free up funds for more secure options in Gameweek 38."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "type": "Rotation Risk",
+            "description": "Several high-ownership and high-form players carry significant rotation risks for the final gameweek. This includes Saka (ARS) at 46%, Haaland (MCI) at 36%, Gabriel (ARS) at 41%, and Saliba (ARS) at 43%. Managers should be prepared for potential benchings or reduced minutes for these key assets."
+          },
+          {
+            "type": "Heavy Rotation",
+            "description": "Forwards Taiwo Awoniyi (NFO) and William Osula (NEW) are flagged with 'heavy_rotation' risks of 61% and 56% respectively. Despite Osula's good recent form, their high likelihood of not starting makes them extremely risky picks for Gameweek 38."
+          },
+          {
+            "type": "General GW38 Rotation",
+            "description": "The final gameweek is notorious for unexpected rotations as teams with nothing left to play for, or those preparing for cup finals, often rest key players. Always check the latest team news and manager comments closer to the deadline."
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player_name\": \"Szoboszlai\",\n      \"reasoning\": \"Dominik Szoboszlai (LIV) is the top captain choice for Gameweek 38. He boasts excellent recent form (8.0), a favourable home fixture against Brentford (FDR 3), and a relatively low rotation risk of 27%. While Haaland (MCI) has a higher overall PPG, Szoboszlai's superior recent form and lower rotation risk make him a more reliable and high-upside option for the final gameweek.\"\n    },\n    \"differential_pick\": {\n      \"player_name\": \"Anderson\",\n      \"reasoning\": \"Morgan Gibbs-White (NFO) - referred to as Anderson in the data - is an outstanding differential pick with just 9.4% ownership. He is in superb form (8.3), is listed as 'nailed' (no rotation risk), and faces Bournemouth at home (FDR 3). His high form, guaranteed minutes, and good fixture make him an excellent low-ownership option to consider.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Szoboszlai\",\n        \"reasoning\": \"With excellent form (8.0), a favourable home fixture against Brentford (FDR 3), and a manageable rotation risk of 27%, Szoboszlai (LIV) is a prime target to bring in for the final gameweek. He offers high attacking potential.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Enzo\",\n        \"reasoning\": \"Enzo (CHE) is in strong form (7.7) and has a good away fixture against Sunderland (FDR 3). His rotation risk is low at 29%, making him a reliable midfield option with attacking returns potential.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Anderson\",\n        \"reasoning\": \"Anderson (NFO) offers exceptional value and form (8.3) at a low price (5.7). He is 'nailed' and has a good home fixture against Bournemouth (FDR 3). He's a great option for managers looking for a high-performing, secure midfielder.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"Awoniyi\",\n        \"reasoning\": \"Taiwo Awoniyi (NFO) carries the highest rotation risk (61%) among all listed players, categorised as 'heavy_rotation'. Despite a decent form of 6.3, his extremely low PPG (1.2) and high risk of not starting make him an urgent sell.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Osula\",\n        \"reasoning\": \"William Osula (NEW) has a high rotation risk of 56%. While his recent form (8.0) is excellent, this significant risk makes him an unreliable pick for the final gameweek, where guaranteed minutes are crucial.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Mainoo\",\n        \"reasoning\": \"Kobbie Mainoo (MUN) has a high rotation risk of 54%. Coupled with moderate form (6.0), he is a player to consider selling to free up funds for more secure options in Gameweek 38.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"type\": \"Rotation Risk\",\n        \"description\": \"Several high-ownership and high-form players carry significant rotation risks for the final gameweek. This includes Saka (ARS) at 46%, Haaland (MCI) at 36%, Gabriel (ARS) at 41%, and Saliba (ARS) at 43%. Managers should be prepared for potential benchings or reduced minutes for these key assets.\"\n      },\n      {\n        \"type\": \"Heavy Rotation\",\n        \"description\": \"Forwards Taiwo Awoniyi (NFO) and William Osula (NEW) are flagged with 'heavy_rotation' risks of 61% and 56% respectively. Despite Osula's good recent form, their high likelihood of not starting makes them extremely risky picks for Gameweek 38.\"\n      },\n      {\n        \"type\": \"General GW38 Rotation\",\n        \"description\": \"The final gameweek is notorious for unexpected rotations as teams with nothing left to play for, or those preparing for cup finals, often rest key players. Always check the latest team news and manager comments closer to the deadline.\"\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 38 FPL Analysis: The Final Push\n\nWelcome to the final gameweek of the 2025/26 Premier League season! With everything on the line, careful consideration of form, fixtures, and crucially, rotation risk, is paramount. Our intelligence dossier provides the insights needed to make those decisive last-minute transfers and captaincy calls.\n\n### CAPTAIN PICK: Szoboszlai (LIV)\n\nOur top captain choice for Gameweek 38 is **Dominik Szoboszlai (LIV)**. The Hungarian midfielder is in scintillating form, boasting an impressive 8.0 in recent weeks. Liverpool faces Brentford at home, a fixture rated with a favourable FDR of 3. Crucially, Szoboszlai's rotation risk stands at a relatively low 27%, offering more security than some other premium options. While Erling Haaland (MCI) always carries a high ceiling, Szoboszlai's superior recent form and lower rotation risk make him a more reliable and high-upside option for the final gameweek.\n\n### DIFFERENTIAL PICK: Anderson (NFO)\n\nFor managers looking for a low-ownership gem, **Morgan Gibbs-White (NFO)**, listed as Anderson in our data, is an outstanding differential pick with just 9.4% ownership. He is in superb form (8.3), is listed as 'nailed' (no rotation risk), and faces Bournemouth at home (FDR 3). His high form, guaranteed minutes, and favourable fixture make him an excellent, under-the-radar option to consider for a strong finish.\n\n### TRANSFER TARGETS IN\n\n1.  **Szoboszlai (LIV) - Priority 1:** With excellent form (8.0), a favourable home fixture against Brentford (FDR 3), and a manageable rotation risk of 27%, Szoboszlai is a prime target to bring in. He offers high attacking potential and a strong chance of starting.\n2.  **Enzo (CHE) - Priority 2:** Enzo (CHE) is in strong form (7.7) and has a good away fixture against Sunderland (FDR 3). His rotation risk is low at 29%, making him a reliable midfield option with attacking returns potential for the final game.\n3.  **Anderson (NFO) - Priority 3:** As highlighted in our differential pick, Anderson (NFO) offers exceptional value and form (8.3) at a low price (5.7). He is 'nailed' and has a good home fixture against Bournemouth (FDR 3). He's a great option for managers looking for a high-performing, secure midfielder.\n\n### TRANSFER TARGETS OUT\n\n1.  **Awoniyi (NFO) - Priority 1:** Taiwo Awoniyi (NFO) carries the highest rotation risk (61%) among all listed players, categorised as 'heavy_rotation'. Despite a decent form of 6.3, his extremely low PPG (1.2) and high risk of not starting make him an urgent sell.\n2.  **Osula (NEW) - Priority 2:** William Osula (NEW) has a high rotation risk of 56%. While his recent form (8.0) is excellent, this significant risk makes him an unreliable pick for the final gameweek, where guaranteed minutes are crucial.\n3.  **Mainoo (MUN) - Priority 3:** Kobbie Mainoo (MUN) has a high rotation risk of 54%. Coupled with moderate form (6.0), he is a player to consider selling to free up funds for more secure options in Gameweek 38.\n\n### RISK WARNINGS\n\n1.  **High Rotation Risk for Key Assets:** Several high-ownership and high-form players carry significant rotation risks for the final gameweek. This includes **Saka (ARS) at 46%**, **Haaland (MCI) at 36%**, **Gabriel (ARS) at 41%**, and **Saliba (ARS) at 43%**. Managers should be prepared for potential benchings or reduced minutes for these key assets.\n2.  **Heavy Rotation for Forwards:** Forwards **Taiwo Awoniyi (NFO)** and **William Osula (NEW)** are flagged with 'heavy_rotation' risks of 61% and 56% respectively. Despite Osula's good recent form, their high likelihood of not starting makes them extremely risky picks for Gameweek 38.\n3.  **General GW38 Rotation:** The final gameweek is notorious for unexpected rotations as teams with nothing left to play for, or those preparing for cup finals, often rest key players. Always check the latest team news and manager comments closer to the deadline to avoid being caught out.",
+      "context_summary": {
+        "top_form_player": "Senesi (8.7)",
+        "most_concerning_availability": "Fofana (0%)",
+        "highest_rotation_risk": "Ellborg (78, bench)"
+      }
     }
   },
   "summary": {
@@ -2967,38 +4022,48 @@
       "GW18: Haaland",
       "GW19: Haaland",
       "GW20: Haaland",
-      "GW21: Schade",
+      "GW21: Thiago",
       "GW22: Bruno G.",
       "GW23: Thiago",
       "GW24: B.Fernandes",
       "GW25: João Pedro",
       "GW26: Haaland",
       "GW27: Haaland",
-      "GW28: Haaland"
+      "GW28: Haaland",
+      "GW29: O'Reilly",
+      "GW30: João Pedro",
+      "GW31: Wilson",
+      "GW32: B.Fernandes",
+      "GW33: N.Williams",
+      "GW34: B.Fernandes",
+      "GW35: Gibbs-White",
+      "GW36: Haaland",
+      "GW37: Gabriel",
+      "GW38: Szoboszlai"
     ],
     "most_recommended_transfers_in": [
+      "João Pedro (9 GWs)",
       "Haaland (8 GWs)",
-      "João Pedro (7 GWs)",
-      "Semenyo (5 GWs)",
+      "Semenyo (6 GWs)",
+      "Senesi (4 GWs)",
+      "Enzo (4 GWs)",
+      "Thiago (4 GWs)",
+      "B.Fernandes (4 GWs)",
       "Guéhi (3 GWs)",
       "Ekitiké (3 GWs)",
-      "Senesi (3 GWs)",
-      "Enzo (3 GWs)",
-      "B.Fernandes (3 GWs)",
-      "Calafiori (2 GWs)",
-      "Cash (2 GWs)"
+      "Gabriel (3 GWs)"
     ],
     "most_recommended_transfers_out": [
-      "Gabriel (4 GWs)",
+      "Gabriel (6 GWs)",
+      "M.Salah (3 GWs)",
+      "Casemiro (3 GWs)",
       "Murillo (3 GWs)",
       "Gabriel Jesus (2 GWs)",
-      "M.Salah (2 GWs)",
+      "J.Timber (2 GWs)",
+      "Saliba (2 GWs)",
       "Gravenberch (2 GWs)",
       "Keane (2 GWs)",
-      "Szoboszlai (2 GWs)",
-      "Casemiro (2 GWs)",
-      "Thiago (2 GWs)",
-      "Gakpo (2 GWs)"
+      "Szoboszlai (2 GWs)"
     ]
   }
 }

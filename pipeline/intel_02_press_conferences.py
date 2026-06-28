@@ -434,7 +434,7 @@ def _build_result(gw: int, url: str, html: str) -> dict:
 # ---------------------------------------------------------------------------
 
 GW_START = 1
-GW_END   = 28
+GW_END   = 38
 
 
 def main():

@@ -54,7 +54,7 @@ MAX_OUTPUT_TOKENS = 65536
 TEMPERATURE      = 0
 
 GW_START = 1
-GW_END   = 28
+GW_END   = 38
 POOL_SIZE = 40   # top-N players by form for LLM context
 
 SEP = "=" * 60
@@ -94,20 +94,35 @@ def get_client():
 
 
 def call_llm(client, system_prompt, user_msg):
-    """Call Gemini 2.5 Flash with system instruction + user message."""
+    """Call Gemini 2.5 Flash with exponential backoff retry on 503/rate-limit errors."""
     from google import genai
     from google.genai import types
 
-    response = client.models.generate_content(
-        model=MODEL_ID,
-        contents=user_msg,
-        config=types.GenerateContentConfig(
-            system_instruction=system_prompt,
-            temperature=TEMPERATURE,
-            max_output_tokens=MAX_OUTPUT_TOKENS,
-        ),
-    )
-    return response.text
+    delays = [5, 15, 30]  # seconds between retries
+    last_err = None
+    for attempt, delay in enumerate([0] + delays):
+        if delay:
+            print(f"  [RETRY] Waiting {delay}s before attempt {attempt + 1}...")
+            time.sleep(delay)
+        try:
+            response = client.models.generate_content(
+                model=MODEL_ID,
+                contents=user_msg,
+                config=types.GenerateContentConfig(
+                    system_instruction=system_prompt,
+                    temperature=TEMPERATURE,
+                    max_output_tokens=MAX_OUTPUT_TOKENS,
+                ),
+            )
+            return response.text
+        except Exception as e:
+            last_err = e
+            err_str = str(e)
+            if "503" in err_str or "UNAVAILABLE" in err_str or "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                print(f"  [WARN] Gemini rate-limit/unavailable (attempt {attempt + 1}): {err_str[:80]}")
+                continue  # retry
+            raise  # non-retriable error — propagate immediately
+    raise last_err
 
 
 # ===========================================================================

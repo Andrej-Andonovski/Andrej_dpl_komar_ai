@@ -1,0 +1,232 @@
+{
+  "trial_id": 5064,
+  "params": {
+    "MODEL_TYPE": "lgbm",
+    "model_n_estimators": 300,
+    "model_max_depth": 4,
+    "model_learning_rate": 0.030160274451529,
+    "model_subsample": 0.931343961077389,
+    "model_colsample": 0.7595435868381625,
+    "xgb_min_child_weight": 8,
+    "lgbm_num_leaves": 31,
+    "lgbm_min_child_samples": 22,
+    "FDR_MULT": 0.009350171805777688,
+    "FDR_MULT_DEF": 0.08491952021891234,
+    "BENCH_BONUS_NORMAL": 0.4522114891754857,
+    "BENCH_BONUS_BB_GW": 7.999938352508516,
+    "CAP_FORM_GATE": 2.4248379745086144,
+    "CAP_FORM_PENALTY": 0.21577022534072327,
+    "OWN_BOOST_GW1": 0.11499700038986885,
+    "CAP_STREAK_LIMIT": 4,
+    "CAP_STREAK_MULT": 0.7232972813396353,
+    "TC_THRESH": 5.7968944187283125,
+    "BB_MIN_GW": 6,
+    "CAP_FDR_MULT": 0.10668770393269526,
+    "CAP_BLANK_PENALTY": 0.6989054904917844,
+    "CAP_BLANK_THRESH": 4
+  },
+  "total": 2169,
+  "penalties": -16,
+  "chips": [
+    "tc1",
+    "bb1",
+    "wc1",
+    "tc2",
+    "bb2",
+    "fh2"
+  ],
+  "elapsed": 222,
+  "status": "ok",
+  "gw_scores": [
+    {
+      "gw": 1,
+      "actual": 85,
+      "chip": null
+    },
+    {
+      "gw": 2,
+      "actual": 54,
+      "chip": null
+    },
+    {
+      "gw": 3,
+      "actual": 67,
+      "chip": null
+    },
+    {
+      "gw": 4,
+      "actual": 95,
+      "chip": null
+    },
+    {
+      "gw": 5,
+      "actual": 56,
+      "chip": null
+    },
+    {
+      "gw": 6,
+      "actual": 101,
+      "chip": "tc1"
+    },
+    {
+      "gw": 7,
+      "actual": 63,
+      "chip": null
+    },
+    {
+      "gw": 8,
+      "actual": 85,
+      "chip": "bb1"
+    },
+    {
+      "gw": 9,
+      "actual": 62,
+      "chip": null
+    },
+    {
+      "gw": 10,
+      "actual": 68,
+      "chip": null
+    },
+    {
+      "gw": 11,
+      "actual": 41,
+      "chip": null
+    },
+    {
+      "gw": 12,
+      "actual": 43,
+      "chip": null
+    },
+    {
+      "gw": 13,
+      "actual": 52,
+      "chip": null
+    },
+    {
+      "gw": 14,
+      "actual": 65,
+      "chip": null
+    },
+    {
+      "gw": 15,
+      "actual": 47,
+      "chip": null
+    },
+    {
+      "gw": 16,
+      "actual": 74,
+      "chip": null
+    },
+    {
+      "gw": 17,
+      "actual": 78,
+      "chip": "wc1"
+    },
+    {
+      "gw": 18,
+      "actual": 44,
+      "chip": null
+    },
+    {
+      "gw": 19,
+      "actual": 40,
+      "chip": null
+    },
+    {
+      "gw": 20,
+      "actual": 34,
+      "chip": "tc2"
+    },
+    {
+      "gw": 21,
+      "actual": 81,
+      "chip": "bb2"
+    },
+    {
+      "gw": 22,
+      "actual": 28,
+      "chip": null
+    },
+    {
+      "gw": 23,
+      "actual": 42,
+      "chip": null
+    },
+    {
+      "gw": 24,
+      "actual": 37,
+      "chip": null
+    },
+    {
+      "gw": 25,
+      "actual": 51,
+      "chip": null
+    },
+    {
+      "gw": 26,
+      "actual": 52,
+      "chip": "fh2"
+    },
+    {
+      "gw": 27,
+      "actual": 34,
+      "chip": null
+    },
+    {
+      "gw": 28,
+      "actual": 34,
+      "chip": null
+    },
+    {
+      "gw": 29,
+      "actual": 81,
+      "chip": null
+    },
+    {
+      "gw": 30,
+      "actual": 47,
+      "chip": null
+    },
+    {
+      "gw": 31,
+      "actual": 59,
+      "chip": null
+    },
+    {
+      "gw": 32,
+      "actual": 54,
+      "chip": null
+    },
+    {
+      "gw": 33,
+      "actual": 60,
+      "chip": null
+    },
+    {
+      "gw": 34,
+      "actual": 41,
+      "chip": null
+    },
+    {
+      "gw": 35,
+      "actual": 45,
+      "chip": null
+    },
+    {
+      "gw": 36,
+      "actual": 62,
+      "chip": null
+    },
+    {
+      "gw": 37,
+      "actual": 70,
+      "chip": null
+    },
+    {
+      "gw": 38,
+      "actual": 37,
+      "chip": null
+    }
+  ]
+}

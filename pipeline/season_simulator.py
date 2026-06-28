@@ -32,7 +32,7 @@ RECS_JSON    = os.path.join(DATA_DIR, "intel", "recommendations.json")
 # ── Constants ─────────────────────────────────────────────────────────────────
 BUDGET         = 100.0
 MAX_CLUB       = 3
-SIM_END_GW     = 28
+SIM_END_GW     = 38
 CHIP_LOCKOUT   = 4
 MAX_HITS       = 1
 FDR_MULT        = 0.028451479772615692   # optuna trial 429 best (1799 pts, 0 pen)
