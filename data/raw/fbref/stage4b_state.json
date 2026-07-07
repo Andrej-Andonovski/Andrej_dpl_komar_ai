@@ -1,0 +1,1742 @@
+{
+  "step1": {
+    "confirmed": [
+      {
+        "vaastav_name": "Abdukodir Khusanov",
+        "fpl_name": "Abdukodir Khusanov",
+        "fpl_id": 406,
+        "fpl_team": "Man City",
+        "fpl_pos": "DEF",
+        "price": 5.4,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 503,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Altay Bayindir",
+        "fpl_name": "Altay Bayındır",
+        "fpl_id": 431,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "GK",
+        "price": 4.7,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 360,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "André Trindade da Costa Neto",
+        "fpl_name": "André Trindade da Costa Neto",
+        "fpl_id": 643,
+        "fpl_team": "Wolves",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2467,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Archie Gray",
+        "fpl_name": "Archie Gray",
+        "fpl_id": 591,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 4.8,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1665,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Carlos Alcaraz Durán",
+        "fpl_name": "Carlos Alcaraz Durán",
+        "fpl_id": 301,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 634,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Chadi Riad Dnanou",
+        "fpl_name": "Chadi Riad Dnanou",
+        "fpl_id": 262,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 90,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Djed Spence",
+        "fpl_name": "Djed Spence",
+        "fpl_id": 573,
+        "fpl_team": "Spurs",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 1741,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Ethan Nwaneri",
+        "fpl_name": "Ethan Nwaneri",
+        "fpl_id": 25,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "MID",
+        "price": 5.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 749,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Felipe Rodrigues da Silva",
+        "fpl_name": "Felipe Rodrigues da Silva",
+        "fpl_id": 511,
+        "fpl_team": "Nott'm Forest",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 671,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Ferdi Kadioglu",
+        "fpl_name": "Ferdi Kadıoğlu",
+        "fpl_id": 148,
+        "fpl_team": "Brighton",
+        "fpl_pos": "DEF",
+        "price": 4.4,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 362,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Filip Jørgensen",
+        "fpl_name": "Filip Jörgensen",
+        "fpl_id": 221,
+        "fpl_team": "Chelsea",
+        "fpl_pos": "GK",
+        "price": 4.3,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 540,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Francisco Evanilson de Lima Barbosa",
+        "fpl_name": "Francisco Evanilson de Lima Barbosa",
+        "fpl_id": 97,
+        "fpl_team": "Bournemouth",
+        "fpl_pos": "FWD",
+        "price": 6.8,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2250,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Harry Amass",
+        "fpl_name": "Harry Amass",
+        "fpl_id": 445,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 324,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Iliman Ndiaye",
+        "fpl_name": "Iliman Ndiaye",
+        "fpl_id": 299,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 6.2,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2325,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Jake O'Brien",
+        "fpl_name": "Jake O'Brien",
+        "fpl_id": 293,
+        "fpl_team": "Everton",
+        "fpl_pos": "DEF",
+        "price": 4.9,
+        "age": 25,
+        "born_year": 2001,
+        "mins_2425": 1437,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Jean-Clair Todibo",
+        "fpl_name": "Jean-Clair Todibo",
+        "fpl_id": 609,
+        "fpl_team": "West Ham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 1815,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Jorge Cuenca Barreno",
+        "fpl_name": "Jorge Cuenca Barreno",
+        "fpl_id": 321,
+        "fpl_team": "Fulham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 345,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Joshua Zirkzee",
+        "fpl_name": "Joshua Zirkzee",
+        "fpl_id": 466,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "FWD",
+        "price": 5.8,
+        "age": 25,
+        "born_year": 2001,
+        "mins_2425": 1159,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Jørgen Strand Larsen",
+        "fpl_name": "Jørgen Strand Larsen",
+        "fpl_id": 654,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "FWD",
+        "price": 6.1,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2537,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Lamare Bogarde",
+        "fpl_name": "Lamare Bogarde",
+        "fpl_id": 44,
+        "fpl_team": "Aston Villa",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 469,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Leny Yoro",
+        "fpl_name": "Leny Yoro",
+        "fpl_id": 444,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.1,
+        "age": 21,
+        "born_year": 2005,
+        "mins_2425": 1085,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Lucas Bergvall",
+        "fpl_name": "Lucas Bergvall",
+        "fpl_id": 586,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": 23,
+        "born_year": 2003,
+        "mins_2425": 1092,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Mads Hermansen",
+        "fpl_name": "Mads Hermansen",
+        "fpl_id": 679,
+        "fpl_team": "West Ham",
+        "fpl_pos": "GK",
+        "price": 4.2,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2385,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Mateus Gonçalo Espanha Fernandes",
+        "fpl_name": "Mateus Gonçalo Espanha Fernandes",
+        "fpl_id": 708,
+        "fpl_team": "West Ham",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2897,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Mathys Tel",
+        "fpl_name": "Mathys Tel",
+        "fpl_id": 584,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 6.2,
+        "age": 21,
+        "born_year": 2005,
+        "mins_2425": 903,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Mats Wieffer",
+        "fpl_name": "Mats Wieffer",
+        "fpl_id": 173,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 4.9,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 832,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Matt O'Riley",
+        "fpl_name": "Matt O'Riley",
+        "fpl_id": 164,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 826,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Matthijs de Ligt",
+        "fpl_name": "Matthijs de Ligt",
+        "fpl_id": 436,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.9,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 2091,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Maxence Lacroix",
+        "fpl_name": "Maxence Lacroix",
+        "fpl_id": 257,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2936,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Michael Kayode",
+        "fpl_name": "Michael Kayode",
+        "fpl_id": 110,
+        "fpl_team": "Brentford",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 465,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Myles Lewis-Skelly",
+        "fpl_name": "Myles Lewis-Skelly",
+        "fpl_id": 10,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1186,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Nico O'Reilly",
+        "fpl_name": "Nico O'Reilly",
+        "fpl_id": 411,
+        "fpl_team": "Man City",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 400,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Ollie Scarles",
+        "fpl_name": "Ollie Scarles",
+        "fpl_id": 608,
+        "fpl_team": "West Ham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 572,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Omar Marmoush",
+        "fpl_name": "Omar Marmoush",
+        "fpl_id": 413,
+        "fpl_team": "Man City",
+        "fpl_pos": "MID",
+        "price": 8.3,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 1057,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Radu Drăgușin",
+        "fpl_name": "Radu Drăgușin",
+        "fpl_id": 572,
+        "fpl_team": "Spurs",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 1241,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Riccardo Calafiori",
+        "fpl_name": "Riccardo Calafiori",
+        "fpl_id": 7,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "DEF",
+        "price": 5.6,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 940,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Sepp van den Berg",
+        "fpl_name": "Sepp van den Berg",
+        "fpl_id": 113,
+        "fpl_team": "Brentford",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 23,
+        "born_year": 2003,
+        "mins_2425": 2551,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Sávio 'Savinho' Moreira de Oliveira",
+        "fpl_name": "Sávio Moreira de Oliveira",
+        "fpl_id": 415,
+        "fpl_team": "Man City",
+        "fpl_pos": "MID",
+        "price": 6.9,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1694,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Tyler Dibling",
+        "fpl_name": "Tyler Dibling",
+        "fpl_id": 707,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 5.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1783,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Yankuba Minteh",
+        "fpl_name": "Yankuba Minteh",
+        "fpl_id": 160,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 1636,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Yehor Yarmoliuk",
+        "fpl_name": "Yehor Yarmoliuk",
+        "fpl_id": 129,
+        "fpl_team": "Brentford",
+        "fpl_pos": "MID",
+        "price": 5.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1267,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Álex Moreno Lopera",
+        "fpl_name": "Álex Moreno Lopera",
+        "fpl_id": 43,
+        "fpl_team": "Aston Villa",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 914,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Mikel Merino",
+        "fpl_name": "Mikel Merino Zazón",
+        "fpl_id": 22,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "MID",
+        "price": 5.4,
+        "age": 30,
+        "born_year": "?",
+        "mins_2425": 1409,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: false positive name-change flag"
+      },
+      {
+        "vaastav_name": "Omari Giraud-Hutchinson",
+        "fpl_name": "Omari Hutchinson",
+        "fpl_id": 693,
+        "fpl_team": "Nott'm Forest",
+        "fpl_pos": "MID",
+        "price": 5.4,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2562,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: false positive name-change flag"
+      },
+      {
+        "vaastav_name": "Patrick Dorgu",
+        "fpl_name": "Patrick Dorgu",
+        "fpl_id": 441,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": 21,
+        "born_year": 2004,
+        "mins_2425": 840,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from unconfirmed: age guard bug, actual born 2004, joined from Lecce Serie A"
+      },
+      {
+        "vaastav_name": "Łukasz Fabiański",
+        "fpl_name": "Lukasz Fabianski",
+        "fpl_id": 738,
+        "fpl_team": "West Ham",
+        "fpl_pos": "GK",
+        "price": 4.5,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1160,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: encoding difference only, same player"
+      }
+    ],
+    "unconfirmed": [
+      {
+        "vaastav_name": "Daichi Kamada",
+        "fpl_name": "Daichi Kamada",
+        "fpl_id": 271,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "MID",
+        "price": 5.0,
+        "age": 30,
+        "born_year": 1996,
+        "mins_2425": 1276,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Dominic Solanke-Mitchell",
+        "fpl_name": "Dominic Solanke-Mitchell",
+        "fpl_id": 596,
+        "fpl_team": "Spurs",
+        "fpl_pos": "FWD",
+        "price": 7.2,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2160,
+        "has_pre_vaastav_pl": true
+      },
+      {
+        "vaastav_name": "Emmanuel Agbadou",
+        "fpl_name": "Emmanuel Agbadou",
+        "fpl_id": 631,
+        "fpl_team": "Wolves",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": 29,
+        "born_year": 1997,
+        "mins_2425": 1410,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Guido Rodríguez",
+        "fpl_name": "Guido Rodríguez",
+        "fpl_id": 618,
+        "fpl_team": "West Ham",
+        "fpl_pos": "MID",
+        "price": 4.8,
+        "age": 32,
+        "born_year": 1994,
+        "mins_2425": 1112,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Marshall Munetsi",
+        "fpl_name": "Marshall Munetsi",
+        "fpl_id": 648,
+        "fpl_team": "Wolves",
+        "fpl_pos": "MID",
+        "price": 5.3,
+        "age": 30,
+        "born_year": 1996,
+        "mins_2425": 1054,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Martin Dúbravka",
+        "fpl_name": "Martin Dúbravka",
+        "fpl_id": 470,
+        "fpl_team": "Burnley",
+        "fpl_pos": "GK",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 900,
+        "has_pre_vaastav_pl": true
+      },
+      {
+        "vaastav_name": "Niclas Füllkrug",
+        "fpl_name": "Niclas Füllkrug",
+        "fpl_id": 625,
+        "fpl_team": "West Ham",
+        "fpl_pos": "FWD",
+        "price": 5.6,
+        "age": 33,
+        "born_year": 1993,
+        "mins_2425": 680,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Nikola Milenković",
+        "fpl_name": "Nikola Milenković",
+        "fpl_id": 505,
+        "fpl_team": "Nott'm Forest",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": 29,
+        "born_year": 1997,
+        "mins_2425": 3330,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Noussair Mazraoui",
+        "fpl_name": "Noussair Mazraoui",
+        "fpl_id": 438,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.9,
+        "age": 29,
+        "born_year": 1997,
+        "mins_2425": 2792,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Rodrigo Martins Gomes",
+        "fpl_name": "Rodrigo Martins Gomes",
+        "fpl_id": 635,
+        "fpl_team": "Wolves",
+        "fpl_pos": "DEF",
+        "price": 4.4,
+        "age": 28,
+        "born_year": 1998,
+        "mins_2425": 560,
+        "has_pre_vaastav_pl": false
+      },
+      {
+        "vaastav_name": "Séamus Coleman",
+        "fpl_name": "Séamus Coleman",
+        "fpl_id": 294,
+        "fpl_team": "Everton",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 179,
+        "has_pre_vaastav_pl": true
+      }
+    ],
+    "flagged": [],
+    "excluded": [
+      "Alex Palmer",
+      "Mitoma Kaoru"
+    ]
+  },
+  "step2": {
+    "scrape_plan": [
+      {
+        "vaastav_name": "Abdukodir Khusanov",
+        "fpl_name": "Abdukodir Khusanov",
+        "fpl_id": 406,
+        "fpl_team": "Man City",
+        "fpl_pos": "DEF",
+        "price": 5.4,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 503,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Altay Bayindir",
+        "fpl_name": "Altay Bayındır",
+        "fpl_id": 431,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "GK",
+        "price": 4.7,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 360,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Super Lig (Fenerbahce) — not in league multipliers"
+      },
+      {
+        "vaastav_name": "André Trindade da Costa Neto",
+        "fpl_name": "André Trindade da Costa Neto",
+        "fpl_id": 643,
+        "fpl_team": "Wolves",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 2467,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Brasileirao — not in league multipliers"
+      },
+      {
+        "vaastav_name": "Archie Gray",
+        "fpl_name": "Archie Gray",
+        "fpl_id": 591,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 4.8,
+        "age": "?",
+        "born_year": 2006,
+        "mins_2425": 1665,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Championship",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "MISS",
+          "MISS"
+        ],
+        "previous_club": "Leeds",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Carlos Alcaraz Durán",
+        "fpl_name": "Carlos Alcaraz Durán",
+        "fpl_id": 301,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 634,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "previous_club": "Juventus",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Chadi Riad Dnanou",
+        "fpl_name": "Chadi Riad Dnanou",
+        "fpl_id": 262,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 90,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Djed Spence",
+        "fpl_name": "Djed Spence",
+        "fpl_id": 573,
+        "fpl_team": "Spurs",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 1741,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Ethan Nwaneri",
+        "fpl_name": "Ethan Nwaneri",
+        "fpl_id": 25,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "MID",
+        "price": 5.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 749,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Felipe Rodrigues da Silva",
+        "fpl_name": "Felipe Rodrigues da Silva",
+        "fpl_id": 511,
+        "fpl_team": "Nott'm Forest",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 671,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Brasileirao (Internacional) — not in league multipliers"
+      },
+      {
+        "vaastav_name": "Ferdi Kadioglu",
+        "fpl_name": "Ferdi Kadıoğlu",
+        "fpl_id": 148,
+        "fpl_team": "Brighton",
+        "fpl_pos": "DEF",
+        "price": 4.4,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 362,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Super Lig (Fenerbahce) — not in league multipliers"
+      },
+      {
+        "vaastav_name": "Filip Jørgensen",
+        "fpl_name": "Filip Jörgensen",
+        "fpl_id": 221,
+        "fpl_team": "Chelsea",
+        "fpl_pos": "GK",
+        "price": 4.3,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 540,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "La Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Francisco Evanilson de Lima Barbosa",
+        "fpl_name": "Francisco Evanilson de Lima Barbosa",
+        "fpl_id": 97,
+        "fpl_team": "Bournemouth",
+        "fpl_pos": "FWD",
+        "price": 6.8,
+        "age": "?",
+        "born_year": 2000,
+        "mins_2425": 2250,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Primeira Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "previous_club": "Porto",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Harry Amass",
+        "fpl_name": "Harry Amass",
+        "fpl_id": 445,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 324,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Iliman Ndiaye",
+        "fpl_name": "Iliman Ndiaye",
+        "fpl_id": 299,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 6.2,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2325,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Jake O'Brien",
+        "fpl_name": "Jake O'Brien",
+        "fpl_id": 293,
+        "fpl_team": "Everton",
+        "fpl_pos": "DEF",
+        "price": 4.9,
+        "age": 25,
+        "born_year": 2001,
+        "mins_2425": 1437,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Jean-Clair Todibo",
+        "fpl_name": "Jean-Clair Todibo",
+        "fpl_id": 609,
+        "fpl_team": "West Ham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 1815,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Jorge Cuenca Barreno",
+        "fpl_name": "Jorge Cuenca Barreno",
+        "fpl_id": 321,
+        "fpl_team": "Fulham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": 1999,
+        "mins_2425": 345,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "La Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "previous_club": "Villarreal",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Joshua Zirkzee",
+        "fpl_name": "Joshua Zirkzee",
+        "fpl_id": 466,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "FWD",
+        "price": 5.8,
+        "age": 25,
+        "born_year": 2001,
+        "mins_2425": 1159,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Jørgen Strand Larsen",
+        "fpl_name": "Jørgen Strand Larsen",
+        "fpl_id": 654,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "FWD",
+        "price": 6.1,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2537,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Eredivisie",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Lamare Bogarde",
+        "fpl_name": "Lamare Bogarde",
+        "fpl_id": 44,
+        "fpl_team": "Aston Villa",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 469,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Leny Yoro",
+        "fpl_name": "Leny Yoro",
+        "fpl_id": 444,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.1,
+        "age": 21,
+        "born_year": 2005,
+        "mins_2425": 1085,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Ligue 1",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Lucas Bergvall",
+        "fpl_name": "Lucas Bergvall",
+        "fpl_id": 586,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 5.2,
+        "age": 23,
+        "born_year": 2003,
+        "mins_2425": 1092,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Allsvenskan — not in league multipliers"
+      },
+      {
+        "vaastav_name": "Mads Hermansen",
+        "fpl_name": "Mads Hermansen",
+        "fpl_id": 679,
+        "fpl_team": "West Ham",
+        "fpl_pos": "GK",
+        "price": 4.2,
+        "age": "?",
+        "born_year": 2000,
+        "mins_2425": 2385,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Championship",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "MISS",
+          "MISS",
+          "MISS"
+        ],
+        "previous_club": "Leicester",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Mateus Gonçalo Espanha Fernandes",
+        "fpl_name": "Mateus Gonçalo Espanha Fernandes",
+        "fpl_id": 708,
+        "fpl_team": "West Ham",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": "?",
+        "born_year": 2004,
+        "mins_2425": 2897,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Primeira Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "previous_club": "Sporting CP",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Mathys Tel",
+        "fpl_name": "Mathys Tel",
+        "fpl_id": 584,
+        "fpl_team": "Spurs",
+        "fpl_pos": "MID",
+        "price": 6.2,
+        "age": 21,
+        "born_year": 2005,
+        "mins_2425": 903,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Bundesliga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Mats Wieffer",
+        "fpl_name": "Mats Wieffer",
+        "fpl_id": 173,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 4.9,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 832,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Eredivisie",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Matt O'Riley",
+        "fpl_name": "Matt O'Riley",
+        "fpl_id": 164,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": "?",
+        "born_year": 2000,
+        "mins_2425": 826,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Scottish Premiership",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "MISS",
+          "MISS",
+          "MISS"
+        ],
+        "previous_club": "Celtic",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Matthijs de Ligt",
+        "fpl_name": "Matthijs de Ligt",
+        "fpl_id": 436,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.9,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 2091,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Bundesliga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Maxence Lacroix",
+        "fpl_name": "Maxence Lacroix",
+        "fpl_id": 257,
+        "fpl_team": "Crystal Palace",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": 26,
+        "born_year": 2000,
+        "mins_2425": 2936,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Bundesliga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Michael Kayode",
+        "fpl_name": "Michael Kayode",
+        "fpl_id": 110,
+        "fpl_team": "Brentford",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 465,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Myles Lewis-Skelly",
+        "fpl_name": "Myles Lewis-Skelly",
+        "fpl_id": 10,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1186,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Nico O'Reilly",
+        "fpl_name": "Nico O'Reilly",
+        "fpl_id": 411,
+        "fpl_team": "Man City",
+        "fpl_pos": "DEF",
+        "price": 5.1,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 400,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Ollie Scarles",
+        "fpl_name": "Ollie Scarles",
+        "fpl_id": 608,
+        "fpl_team": "West Ham",
+        "fpl_pos": "DEF",
+        "price": 4.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 572,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Omar Marmoush",
+        "fpl_name": "Omar Marmoush",
+        "fpl_id": 413,
+        "fpl_team": "Man City",
+        "fpl_pos": "MID",
+        "price": 8.3,
+        "age": 27,
+        "born_year": 1999,
+        "mins_2425": 1057,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Bundesliga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Radu Drăgușin",
+        "fpl_name": "Radu Drăgușin",
+        "fpl_id": 572,
+        "fpl_team": "Spurs",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 1241,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Riccardo Calafiori",
+        "fpl_name": "Riccardo Calafiori",
+        "fpl_id": 7,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "DEF",
+        "price": 5.6,
+        "age": 24,
+        "born_year": 2002,
+        "mins_2425": 940,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Sepp van den Berg",
+        "fpl_name": "Sepp van den Berg",
+        "fpl_id": 113,
+        "fpl_team": "Brentford",
+        "fpl_pos": "DEF",
+        "price": 4.5,
+        "age": 23,
+        "born_year": 2003,
+        "mins_2425": 2551,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Bundesliga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Sávio 'Savinho' Moreira de Oliveira",
+        "fpl_name": "Sávio Moreira de Oliveira",
+        "fpl_id": 415,
+        "fpl_team": "Man City",
+        "fpl_pos": "MID",
+        "price": 6.9,
+        "age": "?",
+        "born_year": 2004,
+        "mins_2425": 1694,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "La Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "previous_club": "Girona",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Tyler Dibling",
+        "fpl_name": "Tyler Dibling",
+        "fpl_id": 707,
+        "fpl_team": "Everton",
+        "fpl_pos": "MID",
+        "price": 5.3,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1783,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "academy player — no foreign league"
+      },
+      {
+        "vaastav_name": "Yankuba Minteh",
+        "fpl_name": "Yankuba Minteh",
+        "fpl_id": 160,
+        "fpl_team": "Brighton",
+        "fpl_pos": "MID",
+        "price": 5.5,
+        "age": 22,
+        "born_year": 2004,
+        "mins_2425": 1636,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "Eredivisie",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Yehor Yarmoliuk",
+        "fpl_name": "Yehor Yarmoliuk",
+        "fpl_id": 129,
+        "fpl_team": "Brentford",
+        "fpl_pos": "MID",
+        "price": 5.0,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1267,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "Ukrainian Premier League — not in league multipliers"
+      },
+      {
+        "vaastav_name": "Álex Moreno Lopera",
+        "fpl_name": "Álex Moreno Lopera",
+        "fpl_id": 43,
+        "fpl_team": "Aston Villa",
+        "fpl_pos": "DEF",
+        "price": 4.0,
+        "age": "?",
+        "born_year": 1993,
+        "mins_2425": 914,
+        "has_pre_vaastav_pl": false,
+        "previous_league": "La Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "previous_club": "Real Betis",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Mikel Merino",
+        "fpl_name": "Mikel Merino Zazón",
+        "fpl_id": 22,
+        "fpl_team": "Arsenal",
+        "fpl_pos": "MID",
+        "price": 5.4,
+        "age": 30,
+        "born_year": 1996,
+        "mins_2425": 1409,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: false positive name-change flag",
+        "previous_league": "La Liga",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT",
+          "MISS"
+        ],
+        "previous_club": "Real Sociedad",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Omari Giraud-Hutchinson",
+        "fpl_name": "Omari Hutchinson",
+        "fpl_id": 693,
+        "fpl_team": "Nott'm Forest",
+        "fpl_pos": "MID",
+        "price": 5.4,
+        "age": "?",
+        "born_year": 2003,
+        "mins_2425": 2562,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: false positive name-change flag",
+        "previous_league": "Championship",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23",
+          "2021-22"
+        ],
+        "cache_status": [
+          "MISS",
+          "MISS",
+          "MISS"
+        ],
+        "previous_club": "Ipswich",
+        "_manual_league": true
+      },
+      {
+        "vaastav_name": "Patrick Dorgu",
+        "fpl_name": "Patrick Dorgu",
+        "fpl_id": 441,
+        "fpl_team": "Man Utd",
+        "fpl_pos": "DEF",
+        "price": 4.2,
+        "age": 21,
+        "born_year": 2004,
+        "mins_2425": 840,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from unconfirmed: age guard bug, actual born 2004, joined from Lecce Serie A",
+        "previous_league": "Serie A",
+        "scrape_status": "scrape",
+        "seasons_to_scrape": [
+          "2023-24",
+          "2022-23"
+        ],
+        "cache_status": [
+          "HIT",
+          "HIT"
+        ],
+        "inferred_from_cache": true
+      },
+      {
+        "vaastav_name": "Łukasz Fabiański",
+        "fpl_name": "Lukasz Fabianski",
+        "fpl_id": 738,
+        "fpl_team": "West Ham",
+        "fpl_pos": "GK",
+        "price": 4.5,
+        "age": "?",
+        "born_year": "?",
+        "mins_2425": 1160,
+        "has_pre_vaastav_pl": false,
+        "_manual_override": "moved from flagged: encoding difference only, same player",
+        "previous_league": "unknown",
+        "scrape_status": "skip",
+        "seasons_to_scrape": [],
+        "cache_status": [],
+        "_skip_reason": "long-term West Ham player — data gap only"
+      }
+    ]
+  },
+  "step3": {
+    "cache_reused": 12,
+    "files_created": 12,
+    "total_rows": 13605,
+    "players_matched": 26,
+    "matches_high": 104,
+    "matches_low": 12,
+    "blocked_fp": 0,
+    "below_thresh": 0
+  }
+}

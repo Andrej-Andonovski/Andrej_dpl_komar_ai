@@ -1,0 +1,2118 @@
+======================================================================
+=== STAGE 4a VERIFICATION REPORT ===
+Generated: 2026-03-09 11:58:04
+======================================================================
+
+PIPELINE SUMMARY:
+  Total FPL players:                    820
+  Players with vaastav history:         457
+  Players new to PL:                    363
+  Confirmed relevant new signings:       63
+  FBref rows scraped (raw):          276
+  FBref rows after false pos removal:   249
+  False positive rows dropped:           27
+  Players skipped (no top league data):   5
+  Duplicate rows removed (dedup):         16
+
+POSITION FILE ROW COUNTS (after dedup):
+  new_signings_gk.csv           26 rows  (13 unique players)
+  new_signings_def.csv          82 rows  (35 unique players)
+  new_signings_mid.csv         103 rows  (48 unique players)
+  new_signings_fwd.csv          41 rows  (20 unique players)
+  TOTAL                        252 rows  (116 unique players)
+
+======================================================================
+SECTION 2 — FULL PLAYER LIST BY POSITION
+======================================================================
+
+=== GOALKEEPERS (13 players) ===
+
+  Player: Anthony Patterson
+    FPL Team:          Sunderland
+    FPL Price:         £4.2m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Anthony Patterson
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Benjamin Lecomte
+    FPL Team:          Fulham
+    FPL Price:         £3.9m
+    Previous League:   Ligue 2
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Benjamin Lecomte
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    Espanyol               Ligue 2                10  1710   8     74   3.89  42.1%   1.0
+    2023-24    Montpellier            Ligue 2                30  2700  10    102   3.40  33.3%   1.0
+    2024-25    Montpellier            Ligue 2                30  2700   1    108   3.60   3.3%   1.0
+
+    Adjusted (PL equivalent, multiplier=N/A):
+      Avg CS rate per season:    26.3%
+      Avg saves per game:        3.63
+
+  Player: Christos Mandas
+    FPL Team:          Bournemouth
+    FPL Price:         £4.0m
+    Previous League:   Serie A
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Christos Mandas
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2023-24    Lazio                  Serie A                 9   721   2     23   2.56  22.2%   1.0
+    2024-25    Lazio                  Serie A                 9   810   4     20   2.22  44.4%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg CS rate per season:    33.3%
+      Avg saves per game:        2.39
+
+  Player: Gianluigi Donnarumma
+    FPL Team:          Man City
+    FPL Price:         £5.6m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Gianluigi Donnarumma
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    Paris Saint-Germain    Ligue 1                38  3409  13    122   3.21  34.2%   1.0
+    2023-24    Paris Saint-Germain    Ligue 1                25  2169  11     91   3.64  44.0%   1.0
+    2024-25    Paris Saint-Germain    Ligue 1                24  2091   4     50   2.08  16.7%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg CS rate per season:    31.6%
+      Avg saves per game:        2.98
+
+  Player: Giorgi Mamardashvili
+    FPL Team:          Liverpool
+    FPL Price:         £4.1m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Giorgi Mamardashvili
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    Valencia               La Liga                38  3420   7    105   2.76  18.4%   1.0
+    2023-24    Valencia               La Liga                37  3284   9    104   2.81  24.3%   1.0
+    2024-25    Valencia               La Liga                34  3060   8     91   2.68  23.5%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg CS rate per season:    22.1%
+      Avg saves per game:        2.75
+
+  Player: Kjell Scherpen
+    FPL Team:          Brighton
+    FPL Price:         £4.0m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Kjell Scherpen
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    Vitesse                Eredivisie             26  2290   8     66   2.54  30.8%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg CS rate per season:    30.8%
+      Avg saves per game:        2.54
+
+  Player: Marco Bizot
+    FPL Team:          Aston Villa
+    FPL Price:         £4.2m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Marco Bizot
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    Brest                  Ligue 1                37  3330   8    124   3.35  21.6%   1.0
+    2023-24    Brest                  Ligue 1                32  2876  11     95   2.97  34.4%   1.0
+    2024-25    Brest                  Ligue 1                32  2880  10     76   2.38  31.2%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg CS rate per season:    29.1%
+      Avg saves per game:        2.90
+
+  Player: Mike Penders
+    FPL Team:          Chelsea
+    FPL Price:         £4.0m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Mike Penders
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2024-25    Genk                   Belgian Pro League     21  1889   5     52   2.48  23.8%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg CS rate per season:    23.8%
+      Avg saves per game:        2.48
+
+  Player: Remi Matthews
+    FPL Team:          Crystal Palace
+    FPL Price:         £3.9m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Remi Matthews
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Robin Roefs
+    FPL Team:          Sunderland
+    FPL Price:         £4.9m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Robin Roefs
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2023-24    NEC Nijmegen           Eredivisie              5   420   1     14   2.80  20.0%   1.0
+    2024-25    NEC Nijmegen           Eredivisie             32  2880  10    113   3.53  31.2%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg CS rate per season:    25.6%
+      Avg saves per game:        3.17
+
+  Player: Senne Lammens
+    FPL Team:          Man Utd
+    FPL Price:         £5.0m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Senne Lammens
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2023-24    Antwerp                Belgian Pro League      9   810   1     34   3.78  11.1%   1.0
+    2024-25    Antwerp                Belgian Pro League     40  3600  10    168   4.20  25.0%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg CS rate per season:    18.1%
+      Avg saves per game:        3.99
+
+  Player: Steven Benda
+    FPL Team:          Fulham
+    FPL Price:         £4.0m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Steven Benda
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Walter Benítez
+    FPL Team:          Crystal Palace
+    FPL Price:         £4.0m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Walter Benítez
+
+    Season     Team                   League               Apps  Mins  CS  Saves   Sv/G    CS%   Rel
+    ---------- ---------------------- -------------------- ---- ----- --- ------ ------ ------ -----
+    2022-23    PSV                    Eredivisie             30  2700  10     71   2.37  33.3%   1.0
+    2023-24    PSV                    Eredivisie             33  2964  17     55   1.67  51.5%   1.0
+    2024-25    PSV                    Eredivisie             34  3015   9     65   1.91  26.5%   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg CS rate per season:    37.1%
+      Avg saves per game:        1.98
+
+=== DEFENDERS (35 players) ===
+
+  Player: Adam Aznou
+    FPL Team:          Everton
+    FPL Price:         £4.2m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Adam Aznou
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Bayern Munich          Bundesliga              2   876    0    0   1   0    0.000    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Adrien Truffert
+    FPL Team:          Bournemouth
+    FPL Price:         £4.6m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Adrien Truffert
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Rennes                 Ligue 1                28  1954    0    6   1   0    0.000    0.230   1.0
+    2023-24    Rennes                 Ligue 1                30  2145    1    2   6   0    0.033    0.066   1.0
+    2024-25    Rennes                 Ligue 1                33  2752    2    2   3   0    0.057    0.057   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.030
+      Avg adj assists per 90:    0.118
+      Avg adj CS rate:           0.0%
+
+  Player: Bafodé Diakité
+    FPL Team:          Bournemouth
+    FPL Price:         £4.2m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Bafodé Diakité
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lille                  Ligue 1                33  2653    3    0   6   0    0.082    0.000   1.0
+    2023-24    Lille                  Ligue 1                21  1696    5    2   4   0    0.221    0.090   1.0
+    2024-25    Lille                  Ligue 1                31  2766    4    1   8   1    0.107    0.025   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.137
+      Avg adj assists per 90:    0.038
+      Avg adj CS rate:           0.0%
+
+  Player: Borna Sosa
+    FPL Team:          Crystal Palace
+    FPL Price:         £4.8m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Borna Sosa
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Stuttgart              Eredivisie             25  1955    2    7   5   0    0.068    0.240   1.0
+    2023-24    Stuttgart              Eredivisie              2   848    0    4   1   0    0.000    0.315   0.5
+    2024-25    Torino                 Eredivisie             19  1181    0    0   0   0    0.000    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.023
+      Avg adj assists per 90:    0.185
+      Avg adj CS rate:           0.0%
+
+  Player: Cristhian Mosquera
+    FPL Team:          Arsenal
+    FPL Price:         £5.3m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Cristhian Mosquera
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Valencia               La Liga                 3   145    0    0   0   0    0.000    0.000   0.5
+    2023-24    Valencia               La Liga                36  3075    0    0   2   0    0.000    0.000   1.0
+    2024-25    Valencia               La Liga                37  3319    1    0   6   0    0.028    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.009
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: David Møller Wolfe
+    FPL Team:          Wolves
+    FPL Price:         £4.2m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  David Møller Wolfe
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    AZ Alkmaar             Eredivisie             34  2374    1    2   4   0    0.030    0.060   1.0
+    2024-25    AZ Alkmaar             Eredivisie             31  2500    2    5   5   1    0.052    0.135   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.041
+      Avg adj assists per 90:    0.098
+      Avg adj CS rate:           0.0%
+
+  Player: Diego Coppola
+    FPL Team:          Brighton
+    FPL Price:         £4.2m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Diego Coppola
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Hellas Verona          Serie A                19  1177    0    0   5   0    0.000    0.000   1.0
+    2023-24    Hellas Verona          Serie A                24  1634    2    0   9   0    0.097    0.000   1.0
+    2024-25    Hellas Verona          Serie A                34  2927    2    0  10   0    0.053    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.050
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Gabriel Gudmundsson
+    FPL Team:          Leeds
+    FPL Price:         £3.8m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Gabriel Gudmundsson
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lille                  Ligue 1                18   838    0    0   3   0    0.000    0.000   0.5
+    2023-24    Lille                  Ligue 1                25  1267    1    0   2   0    0.057    0.000   0.5
+    2024-25    Lille                  Ligue 1                30  1785    2    0   3   0    0.082    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.046
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Giovanni Leoni
+    FPL Team:          Liverpool
+    FPL Price:         £4.9m
+    Previous League:   Serie A
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Giovanni Leoni
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Parma                  Serie A                17  1199    1    0   3   1    0.070    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.070
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Jackson Tchatchoua
+    FPL Team:          Wolves
+    FPL Price:         £4.4m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Jackson Tchatchoua
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Charleroi              Serie A                29  1555    1    2   2   0    0.053    0.106   0.5
+    2023-24    Hellas Verona          Serie A                26  1725    0    2   2   0    0.000    0.088   1.0
+    2024-25    Hellas Verona          Serie A                36  3167    2    3   7   1    0.053    0.079   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.035
+      Avg adj assists per 90:    0.091
+      Avg adj CS rate:           0.0%
+
+  Player: Jaka Bijol
+    FPL Team:          Leeds
+    FPL Price:         £3.9m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Jaka Bijol
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Udinese                Serie A                32  2728    3    2  10   0    0.088    0.062   1.0
+    2023-24    Udinese                Serie A                24  2084    0    0   4   0    0.000    0.000   1.0
+    2024-25    Udinese                Serie A                34  2963    1    0  13   1    0.026    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.038
+      Avg adj assists per 90:    0.021
+      Avg adj CS rate:           0.0%
+
+  Player: Jaydee Canvot
+    FPL Team:          Crystal Palace
+    FPL Price:         £4.5m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Jaydee Canvot
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Toulouse               Ligue 1                18  1106    0    0   2   0    0.000    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Jeremie Frimpong
+    FPL Team:          Liverpool
+    FPL Price:         £5.7m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Jeremie Frimpong
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Leverkusen             Bundesliga             34  2708    8    7   4   0    0.240    0.205   1.0
+    2023-24    Leverkusen             Bundesliga             31  2251    9    7   6   0    0.320    0.249   1.0
+    2024-25    Leverkusen             Bundesliga             33  2314    5    5   4   0    0.169    0.169   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.243
+      Avg adj assists per 90:    0.208
+      Avg adj CS rate:           0.0%
+
+  Player: Joe Anderson
+    FPL Team:          Sunderland
+    FPL Price:         £3.8m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Joe Anderson
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Jorrel Hato
+    FPL Team:          Chelsea
+    FPL Price:         £4.6m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Jorrel Hato
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Ajax                   Eredivisie             11   611    0    0   1   0    0.000    0.000   1.0
+    2023-24    Ajax                   Eredivisie             33  2961    1    2   5   0    0.022    0.045   1.0
+    2024-25    Ajax                   Eredivisie             31  2588    2    6   5   0    0.052    0.158   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.025
+      Avg adj assists per 90:    0.068
+      Avg adj CS rate:           0.0%
+
+  Player: Ladislav Krejcí
+    FPL Team:          Wolves
+    FPL Price:         £4.5m
+    Previous League:   La Liga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Ladislav Krejčí
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Girona                 La Liga                28  2440    2    0   9   0    0.064    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.064
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Luca Netz
+    FPL Team:          Nott'm Forest
+    FPL Price:         £4.5m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Luca Netz
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Gladbach               Bundesliga             20   702    1    3   0   0    0.116    0.338   0.5
+    2023-24    Gladbach               Bundesliga             30  2225    0    4   2   0    0.000    0.142   1.0
+    2024-25    Gladbach               Bundesliga             24   969    0    2   2   0    0.000    0.169   0.5
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.039
+      Avg adj assists per 90:    0.217
+      Avg adj CS rate:           0.0%
+
+  Player: Luka Vušković
+    FPL Team:          Spurs
+    FPL Price:         £3.9m
+    Previous League:   SuperSport HNL
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Luka Vušković
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Westerlo               SuperSport HNL         36  2966    7    2   6   1    0.210    0.060   1.0
+
+    Adjusted (PL equivalent, multiplier=N/A):
+      Avg adj goals per 90:      0.210
+      Avg adj assists per 90:    0.060
+      Avg adj CS rate:           0.0%
+
+  Player: Lutsharel Geertruida
+    FPL Team:          Sunderland
+    FPL Price:         £4.5m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Lutsharel Geertruida
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Feyenoord              Bundesliga             30  2572    3    2   1   0    0.089    0.062   1.0
+    2023-24    Feyenoord              Bundesliga             34  3038    8    5   2   0    0.214    0.134   1.0
+    2024-25    RB Leipzig             Bundesliga             24  1557    1    0   2   0    0.053    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.119
+      Avg adj assists per 90:    0.065
+      Avg adj CS rate:           0.0%
+
+  Player: Malick Thiaw
+    FPL Team:          Newcastle
+    FPL Price:         £5.0m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Malick Thiaw
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Schalke 04             Serie A                 3  1362    0    0   5   0    0.000    0.000   1.0
+    2023-24    Milan                  Serie A                21  1619    0    1   5   1    0.000    0.053   1.0
+    2024-25    Milan                  Serie A                22  1806    0    0   2   0    0.000    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.018
+      Avg adj CS rate:           0.0%
+
+  Player: Mamadou Sarr
+    FPL Team:          Chelsea
+    FPL Price:         £4.5m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Mamadou Sarr
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lyon                   Ligue 1                 1     8    0    0   0   0    0.000    0.000   0.1
+    2023-24    Lyon                   Ligue 1                 1   661    0    0   1   0    0.000    0.000   1.0
+    2024-25    Strasbourg             Ligue 1                27  2365    0    1   4   0    0.000    0.033   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.016
+      Avg adj CS rate:           0.0%
+
+  Player: Maxim De Cuyper
+    FPL Team:          Brighton
+    FPL Price:         £4.3m
+    Previous League:   Belgian Pro League
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Maxim De Cuyper
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Westerlo               Belgian Pro League     33  2949    8    6   5   0    0.178    0.133   1.0
+    2023-24    Club Brugge            Belgian Pro League     37  2756    3   10   5   1    0.074    0.244   1.0
+    2024-25    Club Brugge            Belgian Pro League     37  3081    3    5   4   0    0.067    0.111   1.0
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.106
+      Avg adj assists per 90:    0.163
+      Avg adj CS rate:           0.0%
+
+  Player: Miodrag Pivaš
+    FPL Team:          Newcastle
+    FPL Price:         £3.8m
+    Previous League:   Eredivisie
+    Data Confidence:   low  (partial or no minutes data)
+    FBref Matched As:  Miodrag Pivas
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Willem II              Eredivisie              5    34    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+      Avg adj CS rate:           0.0%
+
+  Player: Nicolò Savona
+    FPL Team:          Nott'm Forest
+    FPL Price:         £4.5m
+    Previous League:   Serie A
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Nicolò Savona
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Juventus               Serie A                28  1724    2    1   5   0    0.088    0.044   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.088
+      Avg adj assists per 90:    0.044
+      Avg adj CS rate:           0.0%
+
+  Player: Nordi Mukiele
+    FPL Team:          Sunderland
+    FPL Price:         £4.5m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Nordi Mukiele
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Paris Saint-Germain    Ligue 1                19  1137    0    3   0   0    0.000    0.197   1.0
+    2023-24    Paris Saint-Germain    Ligue 1                16   796    0    0   2   0    0.000    0.000   0.5
+    2024-25    Leverkusen             Ligue 1                15   899    1    0   4   0    0.082    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.027
+      Avg adj assists per 90:    0.066
+      Avg adj CS rate:           0.0%
+
+  Player: Olivier Boscagli
+    FPL Team:          Brighton
+    FPL Price:         £4.2m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Olivier Boscagli
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    PSV                    Eredivisie              7   219    1    1   0   0    0.307    0.307   0.5
+    2023-24    PSV                    Eredivisie             33  2832    3    3   3   0    0.075    0.075   1.0
+    2024-25    PSV                    Eredivisie             30  2562    1    6   2   0    0.030    0.158   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.137
+      Avg adj assists per 90:    0.180
+      Avg adj CS rate:           0.0%
+
+  Player: Omar Alderete
+    FPL Team:          Sunderland
+    FPL Price:         £4.1m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Omar Alderete
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Getafe                 La Liga                25  2047    1    1   9   0    0.037    0.037   1.0
+    2023-24    Getafe                 La Liga                31  2195    0    1   8   1    0.000    0.037   1.0
+    2024-25    Getafe                 La Liga                34  2971    1    0   8   0    0.028    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.021
+      Avg adj assists per 90:    0.025
+      Avg adj CS rate:           0.0%
+
+  Player: Omar Richards
+    FPL Team:          Nott'm Forest
+    FPL Price:         £4.5m
+    Previous League:   Primeira Liga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Omar Richards
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Rio Ave                Primeira Liga          26  1989    0    1   4   0    0.000    0.039   1.0
+
+    Adjusted (PL equivalent, multiplier=0.78):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.039
+      Avg adj CS rate:           0.0%
+
+  Player: Piero Hincapié
+    FPL Team:          Arsenal
+    FPL Price:         £5.1m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Piero Hincapié
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Leverkusen             Bundesliga             30  2457    1    1  13   3    0.036    0.036   1.0
+    2023-24    Leverkusen             Bundesliga             26  1484    1    2   2   0    0.053    0.107   1.0
+    2024-25    Leverkusen             Bundesliga             32  2670    2    2   8   0    0.062    0.062   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.050
+      Avg adj assists per 90:    0.068
+      Avg adj CS rate:           0.0%
+
+  Player: Quilindschy Hartman
+    FPL Team:          Burnley
+    FPL Price:         £4.0m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Quilindschy Hartman
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Feyenoord              Eredivisie             23  1664    2    4   5   0    0.083    0.165   1.0
+    2023-24    Feyenoord              Eredivisie             26  2070    0    5   3   0    0.000    0.165   1.0
+    2024-25    Feyenoord              Eredivisie             12   645    0    1   0   0    0.000    0.105   0.5
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.028
+      Avg adj assists per 90:    0.145
+      Avg adj CS rate:           0.0%
+
+  Player: Reinildo Mandava
+    FPL Team:          Sunderland
+    FPL Price:         £3.8m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Reinildo Mandava
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Atlético Madrid        La Liga                22  1857    0    0   4   0    0.000    0.000   1.0
+    2023-24    Atlético Madrid        La Liga                16   731    2    1   2   0    0.230    0.110   0.5
+    2024-25    Atlético Madrid        La Liga                19   941    0    0   4   0    0.000    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.077
+      Avg adj assists per 90:    0.037
+      Avg adj CS rate:           0.0%
+
+  Player: Sebastiaan Bornauw
+    FPL Team:          Leeds
+    FPL Price:         £3.8m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Sebastiaan Bornauw
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Wolfsburg              Bundesliga             26  1928    1    0   8   0    0.044    0.000   1.0
+    2023-24    Wolfsburg              Bundesliga             20  1431    0    0   5   0    0.000    0.000   1.0
+    2024-25    Wolfsburg              Bundesliga             15   788    2    1   2   0    0.205    0.098   0.5
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.083
+      Avg adj assists per 90:    0.033
+      Avg adj CS rate:           0.0%
+
+  Player: Shurandy Sambo
+    FPL Team:          Burnley
+    FPL Price:         £4.0m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Shurandy Sambo
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Sparta Rotterdam       Eredivisie             30  2307    2    1   4   2    0.060    0.030   1.0
+    2023-24    PSV                    Eredivisie             11   190    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.060
+      Avg adj assists per 90:    0.030
+      Avg adj CS rate:           0.0%
+
+  Player: Timothée Pembélé
+    FPL Team:          Sunderland
+    FPL Price:         £3.9m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Timothee Pembele
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Paris Saint-Germain    Ligue 1                 5   263    0    1   0   0    0.000    0.279   0.5
+    2024-25    Le Havre               Ligue 1                20  1113    1    0   3   0    0.066    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.033
+      Avg adj assists per 90:    0.139
+      Avg adj CS rate:           0.0%
+
+  Player: Toti Gomes
+    FPL Team:          Wolves
+    FPL Price:         £4.2m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Toti Gomes
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+=== MIDFIELDERS (48 players) ===
+
+  Player: Abdallah Sima
+    FPL Team:          Brighton
+    FPL Price:         £5.4m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Abdallah Sima
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Angers                 Ligue 1                34  1836    5    1   0   0    0.205    0.041   1.0
+    2024-25    Brest                  Ligue 1                27  1238    7    2   2   0    0.418    0.123   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.312
+      Avg adj assists per 90:    0.082
+
+  Player: Adrian Mazilu
+    FPL Team:          Brighton
+    FPL Price:         £4.5m
+    Previous League:   Eredivisie
+    Data Confidence:   low  (partial or no minutes data)
+    FBref Matched As:  Adrian Mazilu
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Vitesse                Eredivisie              3    24    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Alex Tóth
+    FPL Team:          Bournemouth
+    FPL Price:         £4.9m
+    Previous League:   NB I.
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Alex Tóth
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Amine Adli
+    FPL Team:          Bournemouth
+    FPL Price:         £5.4m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Amine Adli
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Leverkusen             Bundesliga             26  1435    5    3   2   2    0.276    0.169   1.0
+    2023-24    Leverkusen             Bundesliga             23   898    4    6   5   0    0.356    0.534   0.5
+    2024-25    Leverkusen             Bundesliga             20   766    2    0   3   0    0.205    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.279
+      Avg adj assists per 90:    0.234
+
+  Player: Andrew Moran
+    FPL Team:          Brighton
+    FPL Price:         £4.5m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Andrew Moran
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Angel Gomes
+    FPL Team:          Wolves
+    FPL Price:         £4.8m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Angel Gomes
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lille                  Ligue 1                36  2816    2    6   8   0    0.049    0.156   1.0
+    2023-24    Lille                  Ligue 1                31  2571    0    8   5   0    0.000    0.230   1.0
+    2024-25    Lille                  Ligue 1                14   736    1    1   1   0    0.098    0.098   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.049
+      Avg adj assists per 90:    0.161
+
+  Player: Anton Stach
+    FPL Team:          Leeds
+    FPL Price:         £4.7m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Anton Stach
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Mainz 05               Bundesliga             30  2070    1    4   4   0    0.036    0.151   1.0
+    2023-24    Hoffenheim             Bundesliga             31  2321    2    3   4   0    0.071    0.107   1.0
+    2024-25    Hoffenheim             Bundesliga             30  2585    1    2   8   0    0.027    0.062   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.044
+      Avg adj assists per 90:    0.107
+
+  Player: Antoni Milambo
+    FPL Team:          Brentford
+    FPL Price:         £5.2m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Antoni Milambo
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Feyenoord              Eredivisie              3    19    0    0   0   0    0.000    0.000   0.1
+    2023-24    Feyenoord              Eredivisie              8   233    1    1   0   0    0.292    0.292   0.5
+    2024-25    Feyenoord              Eredivisie             29  1978    3    5   2   0    0.105    0.172   1.0
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.199
+      Avg adj assists per 90:    0.232
+
+  Player: Charlie Crew
+    FPL Team:          Leeds
+    FPL Price:         £4.5m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Charlie Crew
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Chemsdine Talbi
+    FPL Team:          Sunderland
+    FPL Price:         £4.9m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Chemsdine Talbi
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Club Brugge            Belgian Pro League      2    42    0    0   0   0    0.000    0.000   0.1
+    2023-24    Club Brugge            Belgian Pro League      3    10    0    0   0   0    0.000    0.000   0.1
+    2024-25    Club Brugge            Belgian Pro League     27  1214    5    3   1   0    0.274    0.163   0.5
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.274
+      Avg adj assists per 90:    0.163
+
+  Player: Dan Ndoye
+    FPL Team:          Nott'm Forest
+    FPL Price:         £5.5m
+    Previous League:   Serie A
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Dan Ndoye
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Bologna                Serie A                32  1771    1    1   4   0    0.044    0.044   1.0
+    2024-25    Bologna                Serie A                30  2143    8    4   4   0    0.299    0.150   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.172
+      Avg adj assists per 90:    0.097
+
+  Player: Darko Churlinov
+    FPL Team:          Burnley
+    FPL Price:         £4.9m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Darko Churlinov
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Stuttgart              Bundesliga              1    27    0    0   0   0    0.000    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Dilane Bakwa
+    FPL Team:          Nott'm Forest
+    FPL Price:         £5.9m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Dilane Bakwa
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Strasbourg             Ligue 1                31  2177    3    6   4   1    0.098    0.205   1.0
+    2024-25    Strasbourg             Ligue 1                30  2497    6    8   4   0    0.180    0.238   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.139
+      Avg adj assists per 90:    0.221
+
+  Player: Divine Mukasa
+    FPL Team:          Man City
+    FPL Price:         £4.4m
+    Previous League:   unknown
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Divine Mukasa
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Djiamgone Jocelin Ta Bi
+    FPL Team:          Sunderland
+    FPL Price:         £5.0m
+    Previous League:   Ligat ha'Al
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Djiamgone Jocelin Ta Bi
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Dário Luís Essugo
+    FPL Team:          Chelsea
+    FPL Price:         £4.3m
+    Previous League:   Primeira Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Dario Essugo
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Sporting CP            Primeira Liga           4   200    0    0   0   1    0.000    0.000   0.5
+    2023-24    Sporting CP            Primeira Liga           4  1162    0    0   3   0    0.000    0.000   1.0
+    2024-25    Las Palmas             Primeira Liga          27  1938    1    0  11   2    0.039    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.78):
+      Avg adj goals per 90:      0.013
+      Avg adj assists per 90:    0.000
+
+  Player: Enock Agyei
+    FPL Team:          Burnley
+    FPL Price:         £4.7m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Enock Agyei
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Mechelen               Belgian Pro League      8   334    0    0   0   0    0.000    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Enzo Barrenechea
+    FPL Team:          Aston Villa
+    FPL Price:         £5.0m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Enzo Barrenechea
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Juventus               Serie A                 3   158    0    0   0   0    0.000    0.000   0.5
+    2023-24    Frosinone              Serie A                36  2811    0    1  10   0    0.000    0.026   1.0
+    2024-25    Valencia               Serie A                30  2191    1    2   6   0    0.037    0.074   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.012
+      Avg adj assists per 90:    0.033
+
+  Player: Enzo Le Fée
+    FPL Team:          Sunderland
+    FPL Price:         £5.0m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Enzo Le Fée
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lorient                Ligue 1                35  3028    5    6   5   0    0.123    0.148   1.0
+    2023-24    Rennes                 Ligue 1                25  1527    0    1   3   0    0.000    0.049   1.0
+    2024-25    Roma                   Ligue 1                 6   318    0    0   1   0    0.000    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.041
+      Avg adj assists per 90:    0.066
+
+  Player: Evann Guessand
+    FPL Team:          Crystal Palace
+    FPL Price:         £6.2m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Evann Guessand
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Nantes                 Ligue 1                30  1260    3    2   2   0    0.172    0.115   0.5
+    2023-24    Nice                   Ligue 1                34  1553    6    0   1   0    0.287    0.000   0.5
+    2024-25    Nice                   Ligue 1                33  2565   12    8   2   0    0.344    0.230   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.268
+      Avg adj assists per 90:    0.115
+
+  Player: Fer López González
+    FPL Team:          Wolves
+    FPL Price:         £5.1m
+    Previous League:   La Liga
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Fer López González
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Florian Wirtz
+    FPL Team:          Liverpool
+    FPL Price:         £8.3m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Florian Wirtz
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Leverkusen             Bundesliga             17  1090    1    6   4   0    0.071    0.445   1.0
+    2023-24    Leverkusen             Bundesliga             32  2372   11   11   3   0    0.374    0.374   1.0
+    2024-25    Leverkusen             Bundesliga             31  2351   10   12   3   0    0.338    0.409   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.261
+      Avg adj assists per 90:    0.409
+
+  Player: Garang Kuol
+    FPL Team:          Newcastle
+    FPL Price:         £4.4m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Garang Kuol
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Volendam               Eredivisie             15   680    1    1   1   0    0.098    0.098   0.5
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.098
+      Avg adj assists per 90:    0.098
+
+  Player: Habib Diarra
+    FPL Team:          Sunderland
+    FPL Price:         £5.3m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Habib Diarra
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Strasbourg             Ligue 1                29  1626    3    2   4   0    0.139    0.090   1.0
+    2023-24    Strasbourg             Ligue 1                31  2305    3    1   3   0    0.098    0.033   1.0
+    2024-25    Strasbourg             Ligue 1                30  2352    4    5   6   0    0.123    0.156   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.120
+      Avg adj assists per 90:    0.093
+
+  Player: Ilia Gruev
+    FPL Team:          Leeds
+    FPL Price:         £4.7m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Ilia Gruev
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Werder Bremen          Bundesliga             31  1584    0    0   2   0    0.000    0.000   0.5
+    2023-24    Werder Bremen          Bundesliga              1     4    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Jamie Bynoe-Gittens
+    FPL Team:          Chelsea
+    FPL Price:         £6.0m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Jamie Gittens
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Dortmund               Bundesliga             15   533    3    1   1   0    0.454    0.151   0.5
+    2023-24    Dortmund               Bundesliga             25  1058    1    4   1   0    0.080    0.303   0.5
+    2024-25    Dortmund               Bundesliga             32  1776    8    3   4   0    0.365    0.134   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.300
+      Avg adj assists per 90:    0.196
+
+  Player: Jhon Arias
+    FPL Team:          Wolves
+    FPL Price:         £4.9m
+    Previous League:   Série A
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Jhon Arias
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Kadan Young
+    FPL Team:          Aston Villa
+    FPL Price:         £4.3m
+    Previous League:   Belgian Pro League
+    Data Confidence:   low  (partial or no minutes data)
+    FBref Matched As:  Kadan Young
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Antwerp                Belgian Pro League      7   100    0    1   0   0    0.000    0.666   0.1
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Keiber Lamadrid
+    FPL Team:          West Ham
+    FPL Price:         £5.0m
+    Previous League:   Liga FUTVE Apertura
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Keiber Lamadrid
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Largie Ramazani
+    FPL Team:          Leeds
+    FPL Price:         £4.9m
+    Previous League:   La Liga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Largie Ramazani
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Almería                La Liga                33  1403    3    1   6   0    0.175    0.055   0.5
+    2023-24    Almería                La Liga                29  1555    3    5  11   2    0.156    0.267   0.5
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.166
+      Avg adj assists per 90:    0.161
+
+  Player: Loum Tchaouna
+    FPL Team:          Burnley
+    FPL Price:         £4.9m
+    Previous League:   Serie A
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Loum Tchaouna
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Salernitana            Serie A                33  2100    4    3   4   0    0.150    0.114   1.0
+    2024-25    Lazio                  Serie A                24   660    1    0   4   1    0.123    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.136
+      Avg adj assists per 90:    0.057
+
+  Player: Malcolm Ebiowei
+    FPL Team:          Crystal Palace
+    FPL Price:         £4.5m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Malcolm Ebiowei
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    RWDM                   Belgian Pro League      5   158    0    1   1   0    0.000    0.422   0.5
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.422
+
+  Player: Marcus Edwards
+    FPL Team:          Burnley
+    FPL Price:         £4.7m
+    Previous League:   Primeira Liga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Marcus Edwards
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Sporting CP            Primeira Liga          33  2252    7    5   4   0    0.218    0.156   1.0
+    2023-24    Sporting CP            Primeira Liga          26  1344    4    4   4   1    0.211    0.211   0.5
+    2024-25    Sporting CP            Primeira Liga           6   111    1    0   0   0    0.632    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.78):
+      Avg adj goals per 90:      0.215
+      Avg adj assists per 90:    0.183
+
+  Player: Martín Zubimendi Ibáñez
+    FPL Team:          Arsenal
+    FPL Price:         £5.2m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Martín Zubimendi
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Real Sociedad          La Liga                36  3101    1    3  12   0    0.028    0.083   1.0
+    2023-24    Real Sociedad          La Liga                31  2654    4    1   5   0    0.129    0.028   1.0
+    2024-25    Real Sociedad          La Liga                36  2962    2    1   6   0    0.055    0.028   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.071
+      Avg adj assists per 90:    0.046
+
+  Player: Merlin Röhl
+    FPL Team:          Everton
+    FPL Price:         £5.0m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Merlin Röhl
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Freiburg               Bundesliga              3    57    0    1   0   0    0.000    1.406   0.1
+    2023-24    Freiburg               Bundesliga             24  1477    2    4   3   1    0.107    0.214   1.0
+    2024-25    Freiburg               Bundesliga             19   965    0    1   2   0    0.000    0.080   0.5
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.053
+      Avg adj assists per 90:    0.147
+
+  Player: Nilson Angulo
+    FPL Team:          Sunderland
+    FPL Price:         £5.0m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Nilson Angulo
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Anderlecht             Belgian Pro League      6    29    0    0   2   0    0.000    0.000   0.1
+    2023-24    Anderlecht             Belgian Pro League     14   118    1    0   1   0    0.562    0.000   0.1
+    2024-25    Anderlecht             Belgian Pro League     29  1172    1    3   1   0    0.059    0.170   0.5
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.059
+      Avg adj assists per 90:    0.170
+
+  Player: Noah Okafor
+    FPL Team:          Leeds
+    FPL Price:         £5.5m
+    Previous League:   Serie A
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Noah Okafor
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Milan                  Serie A                28   887    6    2   1   0    0.537    0.176   0.5
+    2024-25    Milan                  Serie A                11   414    1    0   0   0    0.194    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.365
+      Avg adj assists per 90:    0.088
+
+  Player: Noah Sadiki
+    FPL Team:          Sunderland
+    FPL Price:         £4.9m
+    Previous League:   Belgian Pro League
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Noah Sadiki
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Anderlecht             Belgian Pro League     12   405    0    1   2   0    0.000    0.163   0.5
+    2023-24    Union SG               Belgian Pro League     37  1529    0    1   1   0    0.000    0.044   0.5
+    2024-25    Union SG               Belgian Pro League     39  3302    1    3   6   0    0.022    0.059   1.0
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.007
+      Avg adj assists per 90:    0.089
+
+  Player: Pierre Ekwah Elimby
+    FPL Team:          Sunderland
+    FPL Price:         £4.5m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Pierre Ekwah Elimby
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Saint-Étienne          Ligue 1                29  2575    1    0   3   0    0.025    0.000   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.025
+      Avg adj assists per 90:    0.000
+
+  Player: Rayan Cherki
+    FPL Team:          Man City
+    FPL Price:         £6.4m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Rayan Cherki
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lyon                   Ligue 1                34  1872    4    6   3   0    0.156    0.238   1.0
+    2023-24    Lyon                   Ligue 1                33  1719    1    6   0   0    0.041    0.254   0.5
+    2024-25    Lyon                   Ligue 1                30  2041    8   11   3   0    0.287    0.402   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.161
+      Avg adj assists per 90:    0.298
+
+  Player: Romain Faivre
+    FPL Team:          Bournemouth
+    FPL Price:         £4.5m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Romain Faivre
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lorient                Ligue 1                16  1246    5    3   0   0    0.295    0.180   1.0
+    2023-24    Lorient                Ligue 1                17  1453    5    1   1   0    0.254    0.049   1.0
+    2024-25    Brest                  Ligue 1                20   899    3    2   2   0    0.246    0.164   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.265
+      Avg adj assists per 90:    0.131
+
+  Player: Romaine Mundle
+    FPL Team:          Sunderland
+    FPL Price:         £4.9m
+    Previous League:   Belgian Pro League
+    Data Confidence:   low  (partial or no minutes data)
+    FBref Matched As:  Romaine Mundle
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Standard Liège         Belgian Pro League      6   150    0    0   1   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Samuel Chukwueze
+    FPL Team:          Fulham
+    FPL Price:         £5.3m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Samuel Chukwueze
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Villarreal             Serie A                37  2339    6    5   1   0    0.202    0.167   1.0
+    2023-24    Milan                  Serie A                24  1017    1    3   1   0    0.079    0.238   0.5
+    2024-25    Milan                  Serie A                26   925    3    2   0   0    0.255    0.167   0.5
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.179
+      Avg adj assists per 90:    0.191
+
+  Player: Samuel Iling-Junior
+    FPL Team:          Aston Villa
+    FPL Price:         £5.5m
+    Previous League:   Serie A
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Samuel Iling-Junior
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Juventus               Serie A                12   318    1    1   1   0    0.246    0.246   0.1
+    2023-24    Juventus               Serie A                24   810    1    2   1   0    0.097    0.194   0.5
+    2024-25    Bologna                Serie A                 7   118    1    0   0   0    0.669    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.097
+      Avg adj assists per 90:    0.194
+
+  Player: Soungoutou Magassa
+    FPL Team:          West Ham
+    FPL Price:         £5.0m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Soungoutou Magassa
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Monaco                 Ligue 1                 2    82    0    0   0   0    0.000    0.000   0.5
+    2023-24    Monaco                 Ligue 1                21  1346    0    0   7   0    0.000    0.000   1.0
+    2024-25    Monaco                 Ligue 1                21  1025    0    1   5   1    0.000    0.074   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.025
+
+  Player: Sverre Nypan
+    FPL Team:          Man City
+    FPL Price:         £5.0m
+    Previous League:   Eliteserien
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Sverre Nypan
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Tijjani Reijnders
+    FPL Team:          Man City
+    FPL Price:         £5.0m
+    Previous League:   Serie A
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Tijjani Reijnders
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    AZ Alkmaar             Serie A                34  3046    4    6   4   0    0.106    0.158   1.0
+    2023-24    Milan                  Serie A                36  2820    3    3   8   0    0.088    0.088   1.0
+    2024-25    Milan                  Serie A                37  3128   10    4   2   1    0.255    0.106   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.150
+      Avg adj assists per 90:    0.117
+
+  Player: Xavi Simons
+    FPL Team:          Spurs
+    FPL Price:         £6.5m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Xavi Simons
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    PSV                    Bundesliga             34  2803   19    8   2   0    0.543    0.231   1.0
+    2023-24    RB Leipzig             Bundesliga             32  2653    8   11  11   1    0.240    0.329   1.0
+    2024-25    RB Leipzig             Bundesliga             25  2150   10    6   5   0    0.374    0.223   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.386
+      Avg adj assists per 90:    0.261
+
+=== FORWARDS (20 players) ===
+
+  Player: Ahmed Abdullahi
+    FPL Team:          Sunderland
+    FPL Price:         £4.2m
+    Previous League:   Belgian Pro League
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Ahmed Abdullahi
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Gent                   Belgian Pro League      1    29    0    0   0   0    0.000    0.000   0.5
+    2024-25    Gent                   Belgian Pro League      1     1    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Arnaud Kalimuendo
+    FPL Team:          Nott'm Forest
+    FPL Price:         £6.0m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Arnaud Kalimuendo
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Rennes                 Ligue 1                30  1849    7    3   0   0    0.279    0.123   1.0
+    2023-24    Rennes                 Ligue 1                30  2139   10    1   6   0    0.344    0.033   1.0
+    2024-25    Rennes                 Ligue 1                33  2578   17    3   2   0    0.484    0.082   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.369
+      Avg adj assists per 90:    0.079
+
+  Player: Benjamin Sesko
+    FPL Team:          Man Utd
+    FPL Price:         £7.3m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Benjamin Šeško
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    RB Leipzig             Bundesliga             31  1526   14    2   0   0    0.739    0.107   0.5
+    2024-25    RB Leipzig             Bundesliga             33  2380   13    5   2   1    0.436    0.169   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.587
+      Avg adj assists per 90:    0.138
+
+  Player: Brian Brobbey
+    FPL Team:          Sunderland
+    FPL Price:         £5.4m
+    Previous League:   Eredivisie
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Brian Brobbey
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Ajax                   Eredivisie             32  1650   13    3   1   0    0.532    0.120   0.5
+    2023-24    Ajax                   Eredivisie             30  2405   18    8   4   0    0.503    0.225   1.0
+    2024-25    Ajax                   Eredivisie             30  1555    4    3   6   0    0.172    0.128   0.5
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.403
+      Avg adj assists per 90:    0.157
+
+  Player: Charalampos Kostoulas
+    FPL Team:          Brighton
+    FPL Price:         £4.8m
+    Previous League:   Super League 1
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Charalampos Kostoulas
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Christantus Uche
+    FPL Team:          Crystal Palace
+    FPL Price:         £5.5m
+    Previous League:   La Liga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Christantus Uche
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Getafe                 La Liga                33  2486    4    6   8   2    0.129    0.202   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.129
+      Avg adj assists per 90:    0.202
+
+  Player: Hugo Ekitiké
+    FPL Team:          Liverpool
+    FPL Price:         £9.1m
+    Previous League:   Bundesliga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Hugo Ekitike
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Paris Saint-Germain    Bundesliga             25  1155    3    4   0   0    0.205    0.276   0.5
+    2023-24    Eintracht Frankfurt    Bundesliga             14   716    4    2   3   0    0.445    0.223   0.5
+    2024-25    Eintracht Frankfurt    Bundesliga             33  2563   15    8   1   0    0.472    0.249   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.374
+      Avg adj assists per 90:    0.249
+
+  Player: Igor Jesus Maciel da Cruz
+    FPL Team:          Nott'm Forest
+    FPL Price:         £5.8m
+    Previous League:   Série A
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Igor Jesus Maciel da Cruz
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Jonah Kusi-Asare
+    FPL Team:          Fulham
+    FPL Price:         £4.5m
+    Previous League:   Bundesliga
+    Data Confidence:   low  (partial or no minutes data)
+    FBref Matched As:  Jonah Kusi-Asare
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Bayern Munich          Bundesliga              1     3    0    0   0   0    0.000    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+  Player: Junior Kroupi
+    FPL Team:          Bournemouth
+    FPL Price:         £4.7m
+    Previous League:   Ligue 1
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Eli Junior Kroupi
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Lorient                Ligue 1                 1     8    0    0   0   0    0.000    0.000   0.1
+    2023-24    Lorient                Ligue 1                30  1084    5    3   1   0    0.344    0.205   0.5
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.344
+      Avg adj assists per 90:    0.205
+
+  Player: Kaye Furo
+    FPL Team:          Brentford
+    FPL Price:         £4.5m
+    Previous League:   Belgian Pro League
+    Data Confidence:   low  (no top-5 league data)
+    FBref Matched As:  Kaye Furo
+    [NO FBREF DATA — zero stats, data_confidence=low]
+
+  Player: Lorenzo Lucca
+    FPL Team:          Nott'm Forest
+    FPL Price:         £5.5m
+    Previous League:   Serie A
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Lorenzo Lucca
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Ajax                   Serie A                14   150    2    1   1   0    1.056    0.528   0.1
+    2023-24    Udinese                Serie A                37  2592    8    4   6   0    0.246    0.123   1.0
+    2024-25    Udinese                Serie A                33  2353   12    1  10   0    0.405    0.035   1.0
+
+    Adjusted (PL equivalent, multiplier=0.88):
+      Avg adj goals per 90:      0.326
+      Avg adj assists per 90:    0.079
+
+  Player: Lukas Nmecha
+    FPL Team:          Leeds
+    FPL Price:         £5.0m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Lukas Nmecha
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Wolfsburg              Bundesliga             16   899    4    0   3   0    0.356    0.000   1.0
+    2023-24    Wolfsburg              Bundesliga              3    42    1    0   0   0    1.905    0.000   0.1
+    2024-25    Wolfsburg              Bundesliga             19   467    3    0   1   0    0.516    0.000   0.1
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.356
+      Avg adj assists per 90:    0.000
+
+  Player: Nick Woltemade
+    FPL Team:          Newcastle
+    FPL Price:         £6.8m
+    Previous League:   Bundesliga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Nick Woltemade
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Werder Bremen          Bundesliga             30  1189    2    0   1   0    0.134    0.000   0.5
+    2024-25    Stuttgart              Bundesliga             28  1622   12    2   5   1    0.596    0.098   1.0
+
+    Adjusted (PL equivalent, multiplier=0.89):
+      Avg adj goals per 90:      0.365
+      Avg adj assists per 90:    0.049
+
+  Player: Randal Kolo Muani
+    FPL Team:          Spurs
+    FPL Price:         £6.9m
+    Previous League:   Ligue 1
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Randal Kolo Muani
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Eintracht Frankfurt    Ligue 1                32  2631   15   11   6   1    0.418    0.312   1.0
+    2023-24    Eintracht Frankfurt    Ligue 1                 2   153    1    0   0   0    0.484    0.000   1.0
+    2024-25    Juventus               Ligue 1                16  1160    8    1   0   0    0.508    0.066   1.0
+
+    Adjusted (PL equivalent, multiplier=0.82):
+      Avg adj goals per 90:      0.470
+      Avg adj assists per 90:    0.126
+
+  Player: Thierno Barry
+    FPL Team:          Everton
+    FPL Price:         £5.7m
+    Previous League:   La Liga
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Thierno Barry
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Villarreal             La Liga                35  2323   11    4   4   0    0.396    0.138   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.396
+      Avg adj assists per 90:    0.138
+
+  Player: Tolu Arokodare
+    FPL Team:          Wolves
+    FPL Price:         £5.4m
+    Previous League:   Belgian Pro League
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Tolu Arokodare
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Genk                   Belgian Pro League      5   139    1    1   1   0    0.481    0.481   0.5
+    2023-24    Genk                   Belgian Pro League     39  2130   12    2   2   0    0.377    0.059   1.0
+    2024-25    Genk                   Belgian Pro League     40  3061   21    5   2   0    0.459    0.111   1.0
+
+    Adjusted (PL equivalent, multiplier=0.74):
+      Avg adj goals per 90:      0.439
+      Avg adj assists per 90:    0.217
+
+  Player: Valentín Castellanos
+    FPL Team:          West Ham
+    FPL Price:         £5.5m
+    Previous League:   La Liga
+    Data Confidence:   high  (3 seasons of data)
+    FBref Matched As:  Valentín Castellanos
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2022-23    Girona                 La Liga                35  2597   13    0  11   0    0.414    0.000   1.0
+    2023-24    Lazio                  La Liga                35  1682    4    3   2   0    0.185    0.141   0.5
+    2024-25    Lazio                  La Liga                29  2384   10    3   9   1    0.334    0.097   1.0
+
+    Adjusted (PL equivalent, multiplier=0.92):
+      Avg adj goals per 90:      0.311
+      Avg adj assists per 90:    0.079
+
+  Player: Viktor Gyökeres
+    FPL Team:          Arsenal
+    FPL Price:         £8.8m
+    Previous League:   Primeira Liga
+    Data Confidence:   medium  (2 season(s) of data)
+    FBref Matched As:  Viktor Gyökeres
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2023-24    Sporting CP            Primeira Liga          33  2913   29   10   3   0    0.702    0.242   1.0
+    2024-25    Sporting CP            Primeira Liga          33  2804   39    7   4   0    0.975    0.172   1.0
+
+    Adjusted (PL equivalent, multiplier=0.78):
+      Avg adj goals per 90:      0.839
+      Avg adj assists per 90:    0.207
+
+  Player: Zépiqueno Redmond
+    FPL Team:          Aston Villa
+    FPL Price:         £4.5m
+    Previous League:   Eredivisie
+    Data Confidence:   medium  (1 season(s) of data)
+    FBref Matched As:  Zepiqueno Redmond
+
+    Season     Team                   League               Apps  Mins  Gls  Ast  YC  RC  AdjG/90  AdjA/90   Rel
+    ---------- ---------------------- -------------------- ---- ----- ---- ---- --- --- -------- -------- -----
+    2024-25    Feyenoord              Eredivisie              4   158    0    0   0   0    0.000    0.000   0.5
+
+    Adjusted (PL equivalent, multiplier=0.75):
+      Avg adj goals per 90:      0.000
+      Avg adj assists per 90:    0.000
+
+======================================================================
+SECTION 3 — RANKINGS
+======================================================================
+
+TOP 10 BY ADJUSTED GOALS PER 90:
+  Rank  Player                       Pos   Prev League          Adj G/90 Conf     Note
+  ----- ---------------------------- ----- -------------------- -------- -------- ------------------------------
+  1     Viktor Gyökeres              FWD   Primeira Liga           0.975 medium   
+  2     Benjamin Sesko               FWD   Bundesliga              0.739 medium   
+  3     Nick Woltemade               FWD   Bundesliga              0.596 medium   
+  4     Xavi Simons                  MID   Bundesliga              0.543 high     
+  5     Noah Okafor                  MID   Serie A                 0.537 medium   
+  6     Brian Brobbey                FWD   Eredivisie              0.532 high     
+  7     Randal Kolo Muani            FWD   Ligue 1                 0.508 high     
+  8     Arnaud Kalimuendo            FWD   Ligue 1                 0.484 high     
+  9     Tolu Arokodare               FWD   Belgian Pro League      0.481 high     SMALL SAMPLE (139 mins)
+  10    Hugo Ekitiké                 FWD   Bundesliga              0.472 high     
+
+TOP 10 BY ADJUSTED ASSISTS PER 90:
+  Rank  Player                       Pos   Prev League          Adj A/90 Conf    
+  ----- ---------------------------- ----- -------------------- -------- --------
+  1     Amine Adli                   MID   Bundesliga              0.534 high    
+  2     Tolu Arokodare               FWD   Belgian Pro League      0.481 high    
+  3     Florian Wirtz                MID   Bundesliga              0.445 high    
+  4     Malcolm Ebiowei              MID   Belgian Pro League      0.422 medium  
+  5     Rayan Cherki                 MID   Ligue 1                 0.402 high    
+  6     Luca Netz                    DEF   Bundesliga              0.338 high    
+  7     Xavi Simons                  MID   Bundesliga              0.329 high    
+  8     Borna Sosa                   DEF   Eredivisie              0.315 high    
+  9     Randal Kolo Muani            FWD   Ligue 1                 0.312 high    
+  10    Olivier Boscagli             DEF   Eredivisie              0.307 high    
+
+TOP 10 MIDFIELDERS BY ADJUSTED GOAL CONTRIBUTIONS PER 90 (goals + assists):
+  Rank  Player                       Prev League           G+A/90   G/90   A/90 Conf    
+  ----- ---------------------------- -------------------- ------- ------ ------ --------
+  1     Amine Adli                   Bundesliga             0.890  0.356  0.534 high    
+  2     Xavi Simons                  Bundesliga             0.774  0.543  0.231 high    
+  3     Florian Wirtz                Bundesliga             0.748  0.338  0.409 high    
+  4     Noah Okafor                  Serie A                0.713  0.537  0.176 medium  
+  5     Rayan Cherki                 Ligue 1                0.689  0.287  0.402 high    
+  6     Jamie Bynoe-Gittens          Bundesliga             0.605  0.454  0.151 high    
+  7     Antoni Milambo               Eredivisie             0.585  0.292  0.292 medium  
+  8     Evann Guessand               Ligue 1                0.574  0.344  0.230 high    
+  9     Abdallah Sima                Ligue 1                0.541  0.418  0.123 medium  
+  10    Romain Faivre                Ligue 1                0.476  0.295  0.180 high    
+
+TOP 5 DEFENDERS BY CLEAN SHEET RATE:
+  Rank  Player                       Prev League           CS Rate Conf    
+  ----- ---------------------------- -------------------- -------- --------
+
+TOP 5 GOALKEEPERS BY SAVES PER GAME:
+  Rank  Player                       Prev League            Sv/G      CS% Conf    
+  ----- ---------------------------- -------------------- ------ -------- --------
+  1     Senne Lammens                Belgian Pro League     4.20    25.0% medium  
+  2     Benjamin Lecomte             Ligue 2                3.89    42.1% high    
+  3     Gianluigi Donnarumma         Ligue 1                3.64    44.0% high    
+  4     Robin Roefs                  Eredivisie             3.53    31.2% medium  
+  5     Marco Bizot                  Ligue 1                3.35    21.6% high    
+
+BEST VALUE NEW SIGNINGS (adjusted goal contributions per £1m of price):
+  Rank  Player                       Pos    Price  GC/90  GC/90/£m Conf    
+  ----- ---------------------------- ----- ------ ------ --------- --------
+  1     Tolu Arokodare               FWD   £5.4    0.962    0.1781 high    
+  2     Amine Adli                   MID   £5.4    0.890    0.1648 high    
+  3     Olivier Boscagli             DEF   £4.2    0.615    0.1464 high    
+  4     Brian Brobbey                FWD   £5.4    0.727    0.1347 high    
+  5     Viktor Gyökeres              FWD   £8.8    1.147    0.1303 medium  
+  6     Noah Okafor                  MID   £5.5    0.713    0.1296 medium  
+  7     Xavi Simons                  MID   £6.5    0.774    0.1191 high    
+  8     Junior Kroupi                FWD   £4.7    0.549    0.1169 medium  
+  9     Benjamin Sesko               FWD   £7.3    0.845    0.1158 medium  
+  10    Antoni Milambo               MID   £5.2    0.585    0.1125 medium  
+
+======================================================================
+SECTION 4 — DATA QUALITY FLAGS
+======================================================================
+
+HIGH CONFIDENCE PLAYERS (3 seasons, reliability >= 0.5):
+  Player                         Pos   Seasons  Avg Mins
+  ------------------------------ ----- ------- ---------
+  Giorgi Mamardashvili           GK          3      3254
+  Marco Bizot                    GK          3      3028
+  Tijjani Reijnders              MID         3      2998
+  Maxim De Cuyper                DEF         3      2928
+  Martín Zubimendi Ibáñez        MID         3      2905
+  Walter Benítez                 GK          3      2893
+  Jaka Bijol                     DEF         3      2591
+  Gianluigi Donnarumma           GK          3      2556
+  Xavi Simons                    MID         3      2535
+  Jeremie Frimpong               DEF         3      2424
+  Omar Alderete                  DEF         3      2404
+  Lutsharel Geertruida           DEF         3      2389
+  Bafodé Diakité                 DEF         3      2371
+  Benjamin Lecomte               GK          3      2370
+  Anton Stach                    MID         3      2325
+  Adrien Truffert                DEF         3      2283
+  Valentín Castellanos           FWD         3      2221
+  Piero Hincapié                 DEF         3      2203
+  Arnaud Kalimuendo              FWD         3      2188
+  Cristhian Mosquera             DEF         3      2179
+  Jackson Tchatchoua             DEF         3      2149
+  Habib Diarra                   MID         3      2094
+  Jorrel Hato                    DEF         3      2053
+  Angel Gomes                    MID         3      2041
+  Florian Wirtz                  MID         3      1937
+  Diego Coppola                  DEF         3      1912
+  Rayan Cherki                   MID         3      1877
+  Olivier Boscagli               DEF         3      1871
+  Brian Brobbey                  FWD         3      1870
+  Evann Guessand                 MID         3      1792
+  Tolu Arokodare                 FWD         3      1776
+  Noah Sadiki                    MID         3      1745
+  Enzo Barrenechea               MID         3      1720
+  Enzo Le Fée                    MID         3      1624
+  Malick Thiaw                   DEF         3      1595
+  Hugo Ekitiké                   FWD         3      1478
+  Quilindschy Hartman            DEF         3      1459
+  Samuel Chukwueze               MID         3      1427
+  Sebastiaan Bornauw             DEF         3      1382
+  Borna Sosa                     DEF         3      1328
+  Randal Kolo Muani              FWD         3      1314
+  Luca Netz                      DEF         3      1298
+  Gabriel Gudmundsson            DEF         3      1296
+  Romain Faivre                  MID         3      1199
+  Reinildo Mandava               DEF         3      1176
+  Jamie Bynoe-Gittens            MID         3      1122
+  Dário Luís Essugo              MID         3      1100
+  Amine Adli                     MID         3      1033
+  Nordi Mukiele                  DEF         3       944
+  Soungoutou Magassa             MID         3       817
+
+MEDIUM CONFIDENCE (1-2 good seasons or partial minutes):
+  Player                         Pos   Good Seas  Seasons
+  ------------------------------ ----- ---------  ------------------------------
+  Senne Lammens                  GK            2  2023-24, 2024-25
+  Robin Roefs                    GK            2  2023-24, 2024-25
+  Christos Mandas                GK            2  2023-24, 2024-25
+  David Møller Wolfe             DEF           2  2023-24, 2024-25
+  Mamadou Sarr                   DEF           2  2022-23, 2023-24, 2024-25
+  Timothée Pembélé               DEF           2  2022-23, 2024-25
+  Dilane Bakwa                   MID           2  2023-24, 2024-25
+  Marcus Edwards                 MID           2  2022-23, 2023-24, 2024-25
+  Dan Ndoye                      MID           2  2023-24, 2024-25
+  Loum Tchaouna                  MID           2  2023-24, 2024-25
+  Antoni Milambo                 MID           2  2022-23, 2023-24, 2024-25
+  Abdallah Sima                  MID           2  2022-23, 2024-25
+  Merlin Röhl                    MID           2  2022-23, 2023-24, 2024-25
+  Largie Ramazani                MID           2  2022-23, 2023-24
+  Noah Okafor                    MID           2  2023-24, 2024-25
+  Viktor Gyökeres                FWD           2  2023-24, 2024-25
+  Lorenzo Lucca                  FWD           2  2022-23, 2023-24, 2024-25
+  Benjamin Sesko                 FWD           2  2023-24, 2024-25
+  Nick Woltemade                 FWD           2  2023-24, 2024-25
+  Kjell Scherpen                 GK            1  2022-23
+  Mike Penders                   GK            1  2024-25
+  Luka Vušković                  DEF           1  2024-25
+  Ladislav Krejcí                DEF           1  2024-25
+  Shurandy Sambo                 DEF           1  2022-23, 2023-24
+  Omar Richards                  DEF           1  2024-25
+  Nicolò Savona                  DEF           1  2024-25
+  Giovanni Leoni                 DEF           1  2024-25
+  Jaydee Canvot                  DEF           1  2024-25
+  Adam Aznou                     DEF           1  2024-25
+  Pierre Ekwah Elimby            MID           1  2024-25
+  Ilia Gruev                     MID           1  2022-23, 2023-24
+  Chemsdine Talbi                MID           1  2022-23, 2023-24, 2024-25
+  Nilson Angulo                  MID           1  2022-23, 2023-24, 2024-25
+  Samuel Iling-Junior            MID           1  2022-23, 2023-24, 2024-25
+  Garang Kuol                    MID           1  2023-24
+  Enock Agyei                    MID           1  2022-23
+  Malcolm Ebiowei                MID           1  2023-24
+  Darko Churlinov                MID           1  2022-23
+  Christantus Uche               FWD           1  2024-25
+  Thierno Barry                  FWD           1  2024-25
+  Lukas Nmecha                   FWD           1  2022-23, 2023-24, 2024-25
+  Junior Kroupi                  FWD           1  2022-23, 2023-24
+  Zépiqueno Redmond              FWD           1  2024-25
+  Ahmed Abdullahi                FWD           1  2023-24, 2024-25
+
+LOW CONFIDENCE / SMALL SAMPLE WARNINGS (any season < 500 minutes):
+  Player                         Pos   Season       Mins  WARNING
+  ------------------------------ ----- ---------- ------  ----------------------------------------
+  Darko Churlinov                MID   2022-23        27  unreliable per-90 stats — small sample
+  Ahmed Abdullahi                FWD   2023-24        29  unreliable per-90 stats — small sample
+  Soungoutou Magassa             MID   2022-23        82  unreliable per-90 stats — small sample
+  Tolu Arokodare                 FWD   2022-23       139  unreliable per-90 stats — small sample
+  Cristhian Mosquera             DEF   2022-23       145  unreliable per-90 stats — small sample
+  Randal Kolo Muani              FWD   2023-24       153  unreliable per-90 stats — small sample
+  Enzo Barrenechea               MID   2022-23       158  unreliable per-90 stats — small sample
+  Malcolm Ebiowei                MID   2023-24       158  unreliable per-90 stats — small sample
+  Zépiqueno Redmond              FWD   2024-25       158  unreliable per-90 stats — small sample
+  Dário Luís Essugo              MID   2022-23       200  unreliable per-90 stats — small sample
+  Olivier Boscagli               DEF   2022-23       219  unreliable per-90 stats — small sample
+  Antoni Milambo                 MID   2023-24       233  unreliable per-90 stats — small sample
+  Timothée Pembélé               DEF   2022-23       263  unreliable per-90 stats — small sample
+  Enzo Le Fée                    MID   2024-25       318  unreliable per-90 stats — small sample
+  Enock Agyei                    MID   2022-23       334  unreliable per-90 stats — small sample
+  Noah Sadiki                    MID   2022-23       405  unreliable per-90 stats — small sample
+  Noah Okafor                    MID   2024-25       414  unreliable per-90 stats — small sample
+  Robin Roefs                    GK    2023-24       420  unreliable per-90 stats — small sample
+
+PLAYERS WITH ZERO FBREF DATA (skipped — zero-stat rows assigned):
+  Player                         Pos    Reason
+  ------------------------------ -----  --------------------------------------------------
+  Joe Anderson                   DEF    Sunderland youth — no top-5 league history
+  Toti Gomes                     DEF    PL data covered by vaastav — no separate top-5 non-PL stats
+  Remi Matthews                  GK     English GK — Championship only
+  Steven Benda                   GK     Swiss GK — Championship only
+  Charlie Crew                   MID    17yo Welsh youth — no senior top-5 data
+
+  Additional zero-stat players (non-scrapeable league):
+    Alex Tóth                      MID    League: NB I.
+    Kaye Furo                      FWD    League: Belgian Pro League
+    Andrew Moran                   MID    League: unknown
+    Charalampos Kostoulas          FWD    League: Super League 1
+    Sverre Nypan                   MID    League: Eliteserien
+    Divine Mukasa                  MID    League: unknown
+    Igor Jesus Maciel da Cruz      FWD    League: Série A
+    Anthony Patterson              GK     League: unknown
+    Djiamgone Jocelin Ta Bi        MID    League: Ligat ha'Al
+    Keiber Lamadrid                MID    League: Liga FUTVE Apertura
+    Fer López González             MID    League: La Liga
+    Jhon Arias                     MID    League: Série A
+
+FALSE POSITIVE ROWS REMOVED (15 pairs, 27 rows total):
+  FBref Name                     FPL Target                    Reason
+  ------------------------------ ----------------------------  ----------------------------------------
+  Mamadou Sylla                  Mamadou Sarr                  different player — Guinean striker
+  Mamadou Sakho                  Mamadou Sarr                  veteran ex-Liverpool CB
+  Mamadou Sangare                Mamadou Sarr                  Malian CDM
+  Mamadou Traore                 Mamadou Sarr                  Ivorian winger
+  Mouhamadou Sarr                Mamadou Sarr                  different Senegalese player
+  Anderson                       Joe Anderson                  generic single-name Brazilian
+  Anderson Jesus                 Joe Anderson                  Brazilian striker
+  Nito Gomes                     Toti Gomes                    different Portuguese player
+  Vitor Gomes                    Toti Gomes                    different Portuguese player
+  Matheus Reis                   Remi Matthews                 Brazilian LB, not English GK
+  Benjamin Leroy                 Benjamin Lecomte              different Belgian player
+  Steven Baseya                  Steven Benda                  Belgian winger, not Swiss GK
+  Charlie Cresswell              Charlie Crew                  Leeds CB, not Welsh MID
+  Yacine Adli                    Amine Adli                    Algerian MID, not Moroccan winger
+  Giovanni Simeone               Giovanni Leoni                Argentine striker, not Italian CB
+
+FUZZY MATCHES BELOW 95% THAT WERE KEPT (verified same player):
+  FBref Name                   FPL Target                        Conf  Decision
+  ---------------------------- -------------------------------- -----  -----------------------------------
+  Jamie Gittens                Jamie Bynoe-Gittens                81%  KEPT — same player
+  Benjamin Sesko               Benjamin Sesko                     86%  KEPT — same player (accent)
+  Martin Zubimendi             Martin Zubimendi Ibanez            86%  KEPT — same player
+  Dario Essugo                 Dario Luis Essugo                  81%  KEPT — same player
+  Ladislav Krejci              Ladislav Krejci                    93%  KEPT — same player (accent)
+  Eli Junior Kroupi            Junior Kroupi                      87%  KEPT — same player
+  Timothee Pembele             Timothee Pembele                   90%  KEPT — same player (accent)
+  Miodrag Pivas                Miodrag Pivas                      92%  KEPT — same player (accent)
+
+======================================================================
+SECTION 5 — LEAGUE COVERAGE
+======================================================================
+
+  League                 Players Multiplier  Avg Adj G/90  Avg Adj A/90
+  ---------------------- ------- ---------- ------------- -------------
+  Bundesliga                  19       0.89         0.207         0.158
+  La Liga                     12       0.92         0.093         0.051
+  Serie A                     15       0.88         0.110         0.070
+  Ligue 1                     21       0.82         0.135         0.092
+  Eredivisie                  15       0.75         0.089         0.107
+  Primeira Liga                4       0.78         0.268         0.102
+  Scottish Premiership         0       0.65         0.000         0.000
+  Championship                 0       0.72         0.000         0.000
+  Belgian Pro League          13       0.74         0.117         0.127
+
+  Non-scraped leagues (zero-stat rows):
+    Série A                        2 player(s)
+    Ligue 2                        1 player(s)
+    NB I.                          1 player(s)
+    SuperSport HNL                 1 player(s)
+    Super League 1                 1 player(s)
+    Eliteserien                    1 player(s)
+    Ligat ha'Al                    1 player(s)
+    Liga FUTVE Apertura            1 player(s)
+
+======================================================================
+SECTION 6 — FILES SAVED
+======================================================================
+
+  data/raw/fbref/new_signings/new_signings_gk.csv   (26 rows)
+  data/raw/fbref/new_signings/new_signings_def.csv  (82 rows)
+  data/raw/fbref/new_signings/new_signings_mid.csv  (103 rows)
+  data/raw/fbref/new_signings/new_signings_fwd.csv  (41 rows)
+  data/raw/fbref/new_signings/result_extended.csv   (intermediate, all cols)
+  data/raw/fbref/new_signings/verification_report.txt
+
+Stage 4a complete. Ready for Stage 4b.

@@ -1,0 +1,633 @@
+player,nationality,position,team,age,birth_year,minutes_90s,cards_yellow,cards_red,cards_yellow_red,fouls,fouled,offsides,crosses,interceptions,tackles_won,pens_won,pens_conceded,own_goals,matches
+Abraham Tammy,engENG,4.0,Roma,23,1997,34.3,9,0,0,38,49,17,15,5,13,,,0,Matches
+Acerbi Francesco,itITA,2.0,Lazio,33,1988,28.2,2,1,0,18,16,4,3,37,12,,,0,Matches
+Aebischer Michel,chSUI,3.0,Bologna,24,1997,4.9,1,0,0,13,4,0,7,7,5,,,0,Matches
+Afena-Gyan Felix,ghGHA,3.4,Roma,18,2003,7.4,5,1,1,15,24,4,8,3,3,,,0,Matches
+Agudelo Kevin,coCOL,3.4,Spezia,22,1998,13.7,2,1,0,36,24,0,22,7,27,,,0,Matches
+Aina Ola,ngNGA,3.0,Torino,24,1996,16.0,4,0,0,18,28,1,35,29,20,,,0,Matches
+Aké Marley,frFRA,3.5,Juventus,20,2001,0.9,1,0,0,6,2,0,1,1,0,,,0,Matches
+Akpa-Akpro Jean-Daniel,ciCIV,3.0,Lazio,28,1992,3.5,1,0,0,13,8,0,1,2,10,,,0,Matches
+Alberto Luis,esESP,3.0,Lazio,28,1992,26.1,5,0,0,13,27,1,145,13,17,,,0,Matches
+Altare Giorgio,itITA,2.0,Cagliari,22,1998,16.3,5,0,0,35,10,1,27,30,27,,,0,Matches
+Amey Wisdom,itITA,2.0,Bologna,15,2005,0.8,0,0,0,1,2,0,0,3,1,,,0,Matches
+Amian Kelvin,frFRA,2.0,Spezia,23,1998,29.4,9,2,1,36,14,1,24,32,43,,,0,Matches
+Amiri Nadiem,deGER,3.0,Genoa,24,1996,7.6,0,0,0,7,19,1,21,0,4,,,0,Matches
+Ampadu Ethan,wlsWAL,2.4,Venezia,20,2000,25.4,13,2,1,46,27,0,20,53,44,,,0,Matches
+Amrabat Sofyan,maMAR,3.0,Fiorentina,24,1996,10.5,6,0,0,25,15,0,6,6,14,,,0,Matches
+Anderson Felipe,brBRA,4.0,Lazio,28,1993,32.1,2,0,0,43,36,7,87,20,44,,,0,Matches
+Annan Ebenezer,ghGHA,2.0,Bologna,18,2002,0.3,0,0,0,0,0,0,1,1,1,,,0,Matches
+Ansaldi Cristian,arARG,3.0,Torino,34,1986,7.7,2,0,0,13,4,2,56,6,8,,,0,Matches
+Antiste Janis,frFRA,3.5,Spezia,18,2002,8.8,0,0,0,15,6,5,12,3,11,,,0,Matches
+Aramu Mattia,itITA,3.4,Venezia,26,1995,23.3,6,0,0,30,81,7,147,7,14,,,0,Matches
+Arnautović Marko,atAUT,4.0,Bologna,32,1989,29.9,6,0,0,44,22,14,15,7,10,,,0,Matches
+Arslan Tolgay,deGER,3.0,Udinese,30,1990,18.4,9,0,0,28,36,0,33,11,21,,,0,Matches
+Askildsen Kristoffer,noNOR,3.0,Sampdoria,20,2001,8.4,5,0,0,17,14,0,2,15,8,,,1,Matches
+Asllani Kristjan,alALB,3.0,Empoli,19,2002,15.0,2,0,0,13,24,0,29,19,12,,,0,Matches
+Audero Emil,idIDN,1.0,Sampdoria,24,1997,28.4,2,0,0,0,6,0,0,2,1,,,0,Matches
+Augello Tommaso,itITA,2.0,Sampdoria,26,1994,26.6,0,0,0,12,21,1,75,31,21,,,0,Matches
+Aya Ramzi,itITA,2.0,Salernitana,30,1990,1.5,1,0,0,1,0,0,1,0,1,,,0,Matches
+Ayhan Kaan,trTUR,2.0,Sassuolo,26,1994,15.0,2,1,0,13,5,1,2,16,13,,,0,Matches
+Badelj Milan,hrCRO,3.0,Genoa,32,1989,31.6,4,0,0,39,20,0,10,88,40,,,0,Matches
+Bagnolini Nicola,itITA,1.0,Bologna,17,2004,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Bah Issa,luLUX,4.0,Venezia,19,2002,0.1,0,0,0,0,1,0,0,0,0,,,0,Matches
+Bajrami Nedim,alALB,3.0,Empoli,22,1999,22.8,3,0,0,16,14,7,156,4,15,,,0,Matches
+Bakayoko Tiemoué,frFRA,3.0,Milan,26,1994,5.6,3,0,0,12,10,0,2,8,13,,,0,Matches
+Baldanzi Tommaso,itITA,3.0,Empoli,18,2003,0.2,0,0,0,0,0,0,1,0,0,,,0,Matches
+Baldé Keita,snSEN,4.0,Cagliari,26,1995,13.7,2,0,0,28,30,9,7,5,3,,,0,Matches
+Ballo-Touré Fodé,snSEN,2.0,Milan,24,1997,5.0,2,0,0,12,10,1,18,4,14,,,0,Matches
+Bandinelli Filippo,itITA,3.0,Empoli,26,1995,21.7,10,0,0,53,18,5,67,12,24,,,0,Matches
+Bani Mattia,itITA,2.0,Genoa,27,1993,13.5,1,0,0,14,19,0,1,21,13,,,0,Matches
+Barák Antonín,czCZE,3.4,Hellas Verona,26,1994,26.0,4,0,0,27,17,3,14,6,9,,,0,Matches
+Bardi Francesco,itITA,1.0,Bologna,29,1992,2.0,0,0,0,0,1,0,0,0,0,,,0,Matches
+Barella Nicolò,itITA,3.0,Inter,24,1997,32.4,9,0,0,30,52,4,68,19,42,,,0,Matches
+Barrow Musa,gmGAM,3.4,Bologna,22,1998,23.7,0,0,0,10,25,6,111,6,5,,,0,Matches
+Baselli Daniele,itITA,3.0,Torino,29,1992,1.7,0,0,0,3,4,1,4,1,3,,,0,Matches
+Baselli Daniele,itITA,3.0,Cagliari,29,1992,3.2,1,0,0,2,3,0,17,2,5,,,0,Matches
+Bašić Toma,hrCRO,3.0,Lazio,24,1996,10.9,3,0,0,13,6,0,15,4,7,,,0,Matches
+Bastoni Alessandro,itITA,2.0,Inter,22,1999,25.7,4,0,0,30,28,0,29,32,26,,,0,Matches
+Bastoni Simone,itITA,2.4,Spezia,24,1996,25.4,5,1,0,31,35,1,112,31,34,,,0,Matches
+Becão Rodrigo,brBRA,2.0,Udinese,25,1996,34.8,10,0,0,57,45,4,17,43,46,,,0,Matches
+Behrami Valon,chSUI,3.0,Genoa,36,1985,3.5,3,0,0,8,5,0,2,1,1,,,0,Matches
+Belec Vid,siSVN,1.0,Salernitana,31,1990,21.5,1,0,0,1,1,0,0,0,0,,,0,Matches
+Bellanova Raoul,itITA,3.0,Cagliari,21,2000,27.7,3,0,0,10,35,2,97,23,15,,,0,Matches
+Belotti Andrea,itITA,4.0,Torino,27,1993,15.2,1,0,0,26,51,16,13,2,3,,,0,Matches
+Benassi Marco,itITA,2.0,Fiorentina,26,1994,1.8,1,0,0,4,0,0,4,3,0,,,0,Matches
+Benassi Marco,itITA,3.0,Empoli,26,1994,4.2,1,0,0,5,5,0,13,3,3,,,0,Matches
+Benković Filip,hrCRO,2.0,Udinese,24,1997,0.1,0,0,0,1,0,0,0,0,0,,,0,Matches
+Bennacer Ismaël,dzALG,3.0,Milan,23,1997,16.9,7,0,0,25,44,0,23,25,30,,,0,Matches
+Bentancur Rodrigo,uyURU,3.0,Juventus,24,1997,12.8,1,0,0,25,8,0,4,25,19,,,0,Matches
+Berardi Alessandro,itITA,1.0,Hellas Verona,30,1991,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Berardi Domenico,itITA,3.4,Sassuolo,26,1994,31.3,9,0,0,54,76,11,100,30,19,,,0,Matches
+Bereszyński Bartosz,plPOL,2.0,Sampdoria,29,1992,32.7,12,0,0,34,37,0,61,37,38,,,0,Matches
+Berisha Etrit,alALB,1.0,Torino,32,1989,10.0,1,0,0,1,3,0,0,0,0,,,0,Matches
+Bernardeschi Federico,itITA,3.4,Juventus,27,1994,16.4,5,0,0,16,27,4,51,5,9,,,0,Matches
+Bertola Nicolò,itITA,2.0,Spezia,18,2003,0.4,0,0,0,0,0,0,0,3,2,,,0,Matches
+Bessa Daniel,itITA,3.0,Hellas Verona,28,1993,8.5,5,1,1,21,12,2,18,4,2,,,0,Matches
+Beto,gwGNB,4.0,Udinese,23,1998,24.1,1,0,0,52,24,13,3,5,7,,,0,Matches
+Binks Luis,engENG,2.0,Bologna,19,2001,7.2,3,0,0,7,5,0,1,18,4,,,0,Matches
+Biraghi Cristiano,itITA,2.0,Fiorentina,28,1992,35.0,5,1,1,28,38,7,279,21,25,,,1,Matches
+Biraschi Davide,itITA,2.0,Genoa,27,1994,10.3,4,0,0,12,11,0,15,18,15,,,0,Matches
+Bjarkason Bjarki,isISL,3.0,Venezia,21,2000,0.0,0,0,0,0,1,0,0,0,0,,,0,Matches
+Boga Jeremie,ciCIV,3.4,Atalanta,24,1997,8.5,0,0,0,1,18,3,24,1,3,,,0,Matches
+Boga Jeremie,ciCIV,3.0,Sassuolo,24,1997,7.4,0,0,0,1,9,2,7,1,3,,,0,Matches
+Bogdan Luka,hrCRO,2.0,Salernitana,25,1996,4.4,0,0,0,2,1,0,1,7,2,,,0,Matches
+Bohinen Emil,noNOR,3.0,Salernitana,22,1999,7.8,5,0,0,16,13,1,19,10,10,,,0,Matches
+Bonaventura Giacomo,itITA,3.0,Fiorentina,31,1989,25.2,8,1,1,31,49,2,36,15,18,,,0,Matches
+Bonazzoli Federico,itITA,3.5,Salernitana,24,1997,20.7,6,0,0,31,67,6,23,6,13,,,0,Matches
+Bonifazi Kevin,itITA,2.0,Bologna,25,1996,13.4,4,1,1,15,10,0,3,15,15,,,1,Matches
+Bonucci Leonardo,itITA,2.0,Juventus,34,1987,22.3,1,0,0,17,8,1,3,26,5,,,0,Matches
+Bourabia Mehdi,maMAR,3.0,Spezia,29,1991,3.1,0,0,0,6,6,0,4,2,1,,,0,Matches
+Bove Edoardo,itITA,3.0,Roma,19,2002,0.8,0,0,0,1,3,0,2,1,1,,,0,Matches
+Brekalo Josip,hrCRO,3.0,Torino,23,1998,25.4,1,0,0,20,21,5,136,5,4,,,0,Matches
+Bremer Gleison,brBRA,2.0,Torino,24,1997,32.1,7,0,0,66,20,5,1,106,25,,,0,Matches
+Brozović Marcelo,hrCRO,3.0,Inter,28,1992,32.6,7,0,0,44,32,0,23,37,43,,,0,Matches
+Buksa Aleksander,plPOL,4.0,Genoa,18,2003,0.7,0,0,0,2,0,0,0,0,0,,,0,Matches
+Buongiorno Alessandro,itITA,2.0,Torino,22,1999,13.1,5,0,0,27,16,1,6,30,9,,,0,Matches
+Busio Gianluca,usUSA,3.0,Venezia,19,2002,21.7,8,0,0,31,17,0,38,23,29,,,0,Matches
+Cabral Arthur,brBRA,4.0,Fiorentina,23,1998,8.3,1,0,0,16,10,1,2,1,5,,,0,Matches
+Cabral Jovane,cvCPV,4.0,Lazio,23,1998,2.1,0,0,0,5,3,0,2,1,1,,,0,Matches
+Cacace Liberato,nzNZL,2.0,Empoli,20,2000,5.2,1,0,0,9,6,0,11,8,6,,,0,Matches
+Cáceres Martín,uyURU,2.3,Cagliari,34,1987,9.2,3,1,0,7,9,0,12,16,8,,,0,Matches
+Caicedo Felipe,ecECU,4.0,Genoa,32,1988,3.2,1,0,0,6,2,4,0,0,3,,,0,Matches
+Caicedo Felipe,ecECU,3.5,Inter,32,1988,0.3,0,0,0,1,0,0,0,0,0,,,0,Matches
+Calabria Davide,itITA,2.0,Milan,24,1996,23.5,2,0,0,15,28,1,53,23,36,,,0,Matches
+Calafiori Riccardo,itITA,2.0,Genoa,19,2002,0.9,1,0,0,3,0,0,0,2,0,,,0,Matches
+Calafiori Riccardo,itITA,2.0,Roma,19,2002,1.9,2,0,0,4,0,0,3,3,3,,,0,Matches
+Caldara Mattia,itITA,2.0,Venezia,27,1994,30.0,9,0,0,28,22,3,1,63,27,,,0,Matches
+Çalhanoğlu Hakan,trTUR,3.0,Inter,27,1994,27.6,11,0,0,37,26,0,194,25,24,,,0,Matches
+Callejón José,esESP,4.0,Fiorentina,34,1987,14.4,0,0,0,3,17,3,62,3,7,,,0,Matches
+Cambiaso Andrea,itITA,2.4,Genoa,21,2000,19.9,5,1,1,22,16,1,67,20,19,,,0,Matches
+Cancellieri Matteo,itITA,3.0,Hellas Verona,19,2002,2.5,1,0,0,9,4,1,8,1,4,,,0,Matches
+Candreva Antonio,itITA,3.0,Sampdoria,34,1987,34.7,6,1,0,19,48,13,344,31,17,,,0,Matches
+Capezzi Leonardo,itITA,3.0,Salernitana,26,1995,1.9,0,0,0,3,1,0,0,0,2,,,0,Matches
+Caprari Gianluca,itITA,3.4,Hellas Verona,28,1993,30.4,4,0,0,42,74,14,111,4,26,,,0,Matches
+Caputo Francesco,itITA,4.0,Sampdoria,33,1987,31.0,0,0,0,24,38,36,13,2,2,,,0,Matches
+Caputo Francesco,itITA,4.0,Sassuolo,33,1987,1.7,1,0,0,0,3,0,0,0,0,,,0,Matches
+Carboni Andrea,itITA,2.0,Cagliari,20,2001,24.6,6,0,0,18,9,0,24,32,24,,,1,Matches
+Casale Nicolò,itITA,2.3,Hellas Verona,23,1998,28.7,10,0,0,44,24,0,15,51,31,,,0,Matches
+Cassata Francesco,itITA,3.0,Genoa,24,1997,0.1,0,0,0,0,1,0,1,0,0,,,0,Matches
+Castillejo Samu,esESP,3.0,Milan,26,1995,1.4,1,0,0,2,2,0,8,2,2,,,0,Matches
+Castrovilli Gaetano,itITA,3.0,Fiorentina,24,1997,15.5,4,0,0,21,36,1,41,10,16,,,0,Matches
+Cataldi Danilo,itITA,3.0,Lazio,26,1994,19.0,8,0,0,18,19,0,66,17,21,,,0,Matches
+Ceccaroni Pietro,itITA,2.0,Venezia,25,1995,34.7,7,1,0,27,26,0,12,27,30,,,0,Matches
+Ceccherini Federico,itITA,2.0,Hellas Verona,29,1992,26.2,12,1,1,56,25,3,5,51,19,,,0,Matches
+Ceide Emil,noNOR,4.0,Sassuolo,19,2001,0.6,0,0,0,0,0,0,0,0,1,,,0,Matches
+Ceppitelli Luca,itITA,2.0,Cagliari,31,1989,16.1,3,0,0,18,12,1,6,24,12,,,0,Matches
+Ceter Damir,coCOL,4.0,Cagliari,23,1997,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Chabot Julian,deGER,2.0,Sampdoria,23,1998,5.4,5,0,0,10,11,0,1,9,10,,,0,Matches
+Chiellini Giorgio,itITA,2.0,Juventus,36,1984,15.0,2,0,0,15,22,2,1,19,13,,,0,Matches
+Chiesa Federico,itITA,3.5,Juventus,23,1997,9.6,0,0,0,9,16,1,32,4,19,,,0,Matches
+Chiricheș Vlad,roROU,2.0,Sassuolo,31,1989,25.6,4,0,0,28,13,1,0,43,15,,,0,Matches
+Ciervo Riccardo,itITA,3.0,Sampdoria,19,2002,2.5,0,0,0,3,1,0,9,2,4,,,0,Matches
+Cissé Moustapha,gnGUI,4.0,Atalanta,17,2003,0.4,0,0,0,2,1,2,0,0,0,,,0,Matches
+Cittadini Giorgio,itITA,2.0,Atalanta,19,2002,0.0,0,0,0,0,0,0,0,1,0,,,0,Matches
+Colley Ebrima,gmGAM,3.5,Spezia,21,2000,4.4,1,0,0,10,12,2,18,3,2,,,0,Matches
+Colley Omar,gmGAM,2.0,Sampdoria,28,1992,30.5,6,1,0,25,31,1,1,79,36,,,0,Matches
+Consigli Andrea,itITA,1.0,Sassuolo,34,1987,36.9,2,0,0,2,5,0,0,0,0,,,0,Matches
+Conti Andrea,itITA,3.0,Sampdoria,27,1994,2.6,1,0,0,5,4,1,0,5,2,,,0,Matches
+Conti Andrea,itITA,2.3,Milan,27,1994,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Coppola Diego,itITA,2.0,Hellas Verona,17,2003,2.8,0,0,0,2,1,0,0,4,5,,,0,Matches
+Correa Joaquín,arARG,4.0,Inter,26,1994,11.4,2,0,0,15,16,1,1,1,5,,,0,Matches
+Coulibaly Lassana,mlMLI,3.0,Salernitana,25,1996,25.9,3,0,0,34,49,0,14,21,31,,,0,Matches
+Coulibaly Mamadou,snSEN,3.0,Salernitana,22,1999,9.0,1,0,0,15,10,0,8,10,12,,,0,Matches
+Cragno Alessio,itITA,1.0,Cagliari,27,1994,35.0,3,0,0,1,8,0,0,1,3,,,0,Matches
+Criscito Domenico,itITA,2.0,Genoa,34,1986,18.0,4,0,0,21,27,0,51,41,20,,,0,Matches
+Cristante Bryan,itITA,3.0,Roma,26,1995,29.8,9,0,0,39,14,1,14,44,39,,,1,Matches
+Črnigoj Domen,siSVN,3.0,Venezia,25,1995,20.9,3,0,0,26,12,1,30,24,13,,,0,Matches
+Crociata Giovanni,itITA,3.0,Empoli,23,1997,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Cuadrado Juan,coCOL,2.4,Juventus,33,1988,27.6,9,0,0,19,52,1,134,27,23,,,0,Matches
+Cuisance Mickaël,frFRA,3.0,Venezia,21,1999,10.2,2,0,0,12,9,1,18,11,10,,,0,Matches
+Cutrone Patrick,itITA,4.0,Empoli,23,1998,15.6,1,0,0,13,15,20,21,5,2,,,0,Matches
+D'Ambrosio Danilo,itITA,2.0,Inter,32,1988,11.1,2,0,0,13,5,1,8,9,14,,,0,Matches
+Damsgaard Mikkel,dkDEN,3.0,Sampdoria,21,2000,6.4,1,0,0,10,8,0,5,6,14,,,0,Matches
+Danilo,brBRA,2.3,Juventus,30,1991,21.0,6,0,0,19,11,0,13,30,27,,,0,Matches
+Darboe Ebrima,gmGAM,3.0,Roma,20,2001,0.7,0,0,0,1,0,0,0,1,1,,,0,Matches
+Darmian Matteo,itITA,3.0,Inter,31,1989,16.7,4,0,0,23,18,0,37,18,16,,,0,Matches
+Dawidowicz Paweł,plPOL,2.0,Hellas Verona,26,1995,13.3,3,0,0,26,14,0,7,19,17,,,0,Matches
+De Maio Sebastien,frFRA,2.0,Udinese,34,1987,2.0,0,0,0,3,0,0,0,1,1,,,0,Matches
+De Nipoti Tommaso,itITA,4.0,Atalanta,18,2003,0.1,0,0,0,0,0,1,0,0,0,,,0,Matches
+De Sciglio Mattia,itITA,2.0,Juventus,28,1992,13.0,2,1,0,15,7,0,53,8,12,,,0,Matches
+De Silvestri Lorenzo,itITA,2.4,Bologna,33,1988,25.5,7,0,0,29,27,3,56,27,14,,,0,Matches
+Defrel Grégoire,mqMTQ,3.5,Sassuolo,30,1991,15.1,3,0,0,16,18,3,1,4,9,,,0,Matches
+Deiola Alessandro,itITA,3.0,Cagliari,25,1995,23.7,5,0,0,44,21,1,12,28,23,,,0,Matches
+Delli Carri Filippo,itITA,2.0,Salernitana,22,1999,3.7,1,0,0,2,2,0,3,4,4,,,0,Matches
+Demiral Merih,trTUR,2.0,Atalanta,23,1998,21.3,8,0,0,29,16,3,0,57,18,,,0,Matches
+Demme Diego,deGER,3.0,Napoli,29,1991,7.7,4,0,0,28,8,0,7,8,14,,,0,Matches
+Depaoli Fabio,itITA,3.0,Hellas Verona,24,1997,7.8,3,0,0,19,10,4,33,7,6,,,0,Matches
+Depaoli Fabio,itITA,3.0,Sampdoria,24,1997,1.2,1,0,0,8,1,0,3,1,1,,,0,Matches
+Destro Mattia,itITA,4.0,Genoa,30,1991,19.4,4,0,0,40,31,20,2,2,4,,,0,Matches
+Deulofeu Gerard,esESP,3.5,Udinese,27,1994,29.1,9,0,0,25,31,33,165,10,5,,,0,Matches
+Dezi Jacopo,itITA,3.0,Venezia,29,1992,0.2,0,0,0,0,0,0,3,0,0,,,0,Matches
+Di Carmine Samuel,itITA,4.0,Hellas Verona,32,1988,0.4,1,0,0,1,2,0,0,0,0,,,0,Matches
+Di Francesco Federico,itITA,3.5,Empoli,27,1994,15.2,2,0,0,29,27,13,39,9,5,,,0,Matches
+Di Lorenzo Giovanni,itITA,2.0,Napoli,27,1993,31.9,3,0,0,37,46,8,50,35,40,,,0,Matches
+Di Mariano Francesco,itITA,4.0,Venezia,25,1996,0.7,0,0,0,1,1,0,1,0,1,,,0,Matches
+Di Tacchio Francesco,itITA,2.4,Salernitana,31,1990,13.9,3,0,0,24,24,0,7,24,8,,,1,Matches
+Diawara Amadou,gnGUI,3.0,Roma,24,1997,1.9,0,0,0,5,0,0,0,0,2,,,0,Matches
+Díaz Brahim,maMAR,3.0,Milan,21,1999,20.6,4,0,0,22,33,4,12,8,17,,,0,Matches
+Dijks Mitchell,nlNED,2.4,Bologna,28,1993,7.7,2,0,0,10,10,0,28,4,6,,,0,Matches
+Dimarco Federico,itITA,2.3,Inter,23,1997,15.9,1,0,0,15,14,2,152,19,16,,,0,Matches
+Distefano Filippo,itITA,4.0,Fiorentina,17,2003,0.0,0,0,0,0,0,1,0,0,0,,,0,Matches
+Djidji Koffi,ciCIV,2.0,Torino,28,1992,19.3,6,1,1,25,7,1,16,31,29,,,0,Matches
+Djimsiti Berat,alALB,2.0,Atalanta,28,1993,25.1,6,0,0,21,14,1,12,36,24,,,1,Matches
+Domínguez Nicolás,arARG,3.0,Bologna,23,1998,22.4,8,0,0,27,39,0,15,31,46,,,0,Matches
+Drągowski Bartłomiej,plPOL,1.0,Fiorentina,23,1997,6.2,0,1,0,1,0,0,0,1,0,,,0,Matches
+Drăgușin Radu,roROU,2.0,Sampdoria,19,2002,6.9,1,0,0,6,5,1,4,10,2,,,0,Matches
+Drăgușin Radu,roROU,2.0,Salernitana,19,2002,5.4,1,0,0,3,4,0,0,14,4,,,0,Matches
+Dumfries Denzel,nlNED,3.0,Inter,25,1996,22.5,3,0,0,31,37,4,35,10,12,,,0,Matches
+Duncan Alfred,ghGHA,3.0,Fiorentina,28,1993,21.5,3,0,0,22,13,0,46,10,20,,,0,Matches
+Dybala Paulo,arARG,3.5,Juventus,27,1993,22.9,3,0,0,16,48,6,67,9,13,,,0,Matches
+Džeko Edin,baBIH,4.0,Inter,35,1986,27.4,2,0,0,27,39,5,34,4,8,,,0,Matches
+Ebuehi Tyronne,ngNGA,2.0,Venezia,25,1995,12.6,1,1,0,22,4,1,28,17,12,,,0,Matches
+Éderson,brBRA,3.0,Salernitana,22,1999,12.7,5,0,0,18,34,1,5,18,19,,,0,Matches
+Ekdal Albin,seSWE,3.0,Sampdoria,32,1989,18.2,11,1,1,31,40,0,2,30,26,,,0,Matches
+Ekuban Caleb,ghGHA,3.5,Genoa,27,1994,19.1,2,0,0,22,32,2,13,9,11,,,0,Matches
+Elmas Elif,mkMKD,3.0,Napoli,21,1999,18.0,3,0,0,27,30,2,10,7,16,,,0,Matches
+Erlic Martin,hrCRO,2.0,Spezia,23,1998,28.6,5,0,0,28,19,0,2,28,16,,,0,Matches
+Escalante Gonzalo,arARG,3.0,Lazio,28,1993,0.1,0,0,0,0,0,0,0,1,0,,,0,Matches
+Falcinelli Diego,itITA,3.5,Bologna,30,1991,0.7,0,0,0,2,4,0,0,1,2,,,0,Matches
+Falcone Wladimiro,itITA,1.0,Sampdoria,26,1995,9.5,2,0,0,0,1,0,0,1,0,,,0,Matches
+Faragò Paolo,itITA,2.3,Cagliari,28,1993,0.2,0,0,0,0,0,0,0,0,1,,,0,Matches
+Faraoni Davide,itITA,3.0,Hellas Verona,29,1991,28.6,8,1,1,27,34,6,85,23,41,,,0,Matches
+Fares Mohamed,dzALG,2.4,Genoa,25,1996,6.5,2,0,0,10,6,0,24,8,3,,,0,Matches
+Farias Diego,brBRA,4.0,Cagliari,31,1990,0.7,0,0,0,0,0,0,2,0,1,,,0,Matches
+Favilli Andrea,itITA,4.0,Genoa,24,1997,0.4,0,0,0,0,1,1,0,0,1,,,0,Matches
+Fazio Federico,arARG,2.0,Salernitana,34,1987,15.9,3,1,1,16,15,1,7,25,13,,,0,Matches
+Felipe Luiz,itITA,2.0,Lazio,24,1997,27.7,9,1,0,28,17,0,2,33,23,,,0,Matches
+Ferrari Alex,itITA,2.0,Sampdoria,27,1994,18.3,4,0,0,29,24,0,7,39,25,,,0,Matches
+Ferrer Salvador,esESP,2.3,Spezia,23,1998,16.6,3,0,0,13,10,0,43,17,18,,,0,Matches
+Fiamozzi Riccardo,itITA,2.0,Empoli,28,1993,6.9,1,0,0,3,7,0,11,8,5,,,0,Matches
+Fiordilino Luca,itITA,3.0,Venezia,25,1996,7.3,2,0,0,5,10,2,9,10,14,,,0,Matches
+Fiorillo Vincenzo,itITA,1.0,Salernitana,31,1990,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Florenzi Alessandro,itITA,2.3,Milan,30,1991,12.8,2,0,0,10,8,3,56,26,14,,,0,Matches
+Forestieri Fernando,itITA,3.5,Udinese,31,1990,0.6,1,0,0,3,4,0,4,0,0,,,0,Matches
+Forte Francesco,itITA,4.0,Venezia,28,1993,4.7,3,0,0,11,7,2,2,0,2,,,0,Matches
+Frabotta Gianluca,itITA,2.3,Hellas Verona,22,1999,0.2,0,0,0,2,0,0,3,1,0,,,0,Matches
+Frattesi Davide,itITA,3.0,Sassuolo,21,1999,31.7,6,0,0,45,57,0,14,28,14,,,1,Matches
+Frendrup Morten,dkDEN,2.3,Genoa,20,2001,7.7,1,0,0,10,4,0,8,16,25,,,0,Matches
+Freuler Remo,chSUI,3.0,Atalanta,29,1992,26.3,10,0,0,42,28,0,25,36,42,,,1,Matches
+Gabbia Matteo,itITA,2.0,Milan,21,1999,6.0,3,0,0,7,2,0,0,9,4,,,0,Matches
+Gabbiadini Manolo,itITA,3.5,Sampdoria,29,1991,12.7,3,0,0,11,16,6,23,3,4,,,0,Matches
+Gaetano Gianluca,itITA,3.0,Napoli,21,2000,0.2,0,0,0,1,1,0,0,2,1,,,0,Matches
+Gagliano Luca,itITA,4.0,Cagliari,21,2000,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Gagliardini Roberto,itITA,3.0,Inter,27,1994,7.2,2,0,0,24,16,0,5,8,7,,,0,Matches
+Gagliolo Riccardo,seSWE,2.3,Salernitana,31,1990,12.6,2,0,0,8,12,0,15,28,12,,,0,Matches
+Galazzi Nicolas,itITA,3.0,Venezia,20,2000,0.2,0,0,0,2,0,0,3,0,1,,,0,Matches
+Galdames Millán Pablo,clCHI,3.0,Genoa,24,1996,11.4,2,0,0,19,11,3,31,10,12,,,0,Matches
+Gemello Luca,itITA,1.0,Torino,21,2000,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Ghiglione Paolo,itITA,2.4,Genoa,24,1997,6.7,3,0,0,11,4,0,37,12,12,,,0,Matches
+Ghoulam Faouzi,dzALG,2.0,Napoli,30,1991,3.7,1,0,0,4,2,0,25,4,1,,,0,Matches
+Giovinco Sebastian,itITA,3.5,Sampdoria,34,1987,0.4,0,0,0,2,0,0,1,0,0,,,0,Matches
+Giroud Olivier,frFRA,4.0,Milan,34,1986,21.0,4,0,0,31,22,11,4,3,12,,,0,Matches
+Godín Diego,uyURU,2.0,Cagliari,35,1986,9.1,3,0,0,13,3,0,0,14,8,,,0,Matches
+Goldaniga Edoardo,itITA,2.0,Cagliari,27,1993,10.4,3,0,0,22,13,1,13,22,6,,,0,Matches
+Goldaniga Edoardo,itITA,2.0,Sassuolo,27,1993,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Gondo Cedric,ciCIV,4.0,Salernitana,24,1996,7.8,1,0,0,18,32,3,9,3,2,,,0,Matches
+González Nicolás,arARG,4.0,Fiorentina,23,1998,26.2,4,1,1,30,97,5,63,22,15,,,0,Matches
+Gosens Robin,deGER,3.0,Atalanta,27,1994,5.1,2,0,0,4,5,1,5,9,3,,,0,Matches
+Gosens Robin,deGER,2.3,Inter,27,1994,1.9,1,0,0,1,2,2,7,2,1,,,0,Matches
+Grassi Alberto,itITA,3.0,Cagliari,26,1995,24.2,6,1,1,28,60,1,6,65,26,,,0,Matches
+Günter Koray,deGER,2.0,Hellas Verona,26,1994,26.8,10,0,0,42,16,1,0,70,20,,,1,Matches
+Guðmundsson Albert,isISL,3.0,Genoa,24,1997,6.7,3,0,0,14,10,3,41,5,3,,,0,Matches
+Gyasi Emmanuel,ghGHA,3.4,Spezia,27,1994,33.7,10,0,0,48,51,21,23,18,31,,,1,Matches
+Gyömbér Norbert,skSVK,2.0,Salernitana,29,1992,28.5,9,0,0,47,15,0,19,46,35,,,0,Matches
+Haas Nicolas,chSUI,3.0,Empoli,25,1996,11.1,3,0,0,18,11,1,15,9,24,,,0,Matches
+Handanović Samir,siSVN,1.0,Inter,37,1984,37.0,1,0,0,0,4,0,0,0,0,,,0,Matches
+Haps Ridgeciano,srSUR,2.3,Venezia,28,1993,22.8,6,0,0,22,43,2,34,28,19,,,0,Matches
+Harroui Abdou,nlNED,3.0,Sassuolo,23,1998,5.0,2,0,0,13,2,0,7,4,4,,,0,Matches
+Hateboer Hans,nlNED,2.4,Atalanta,27,1994,15.4,2,0,0,18,7,3,39,7,15,,,0,Matches
+Hefti Silvan,chSUI,2.0,Genoa,23,1997,14.3,1,0,0,13,7,0,32,21,30,,,0,Matches
+Henderson Liam,sctSCO,3.0,Empoli,25,1996,22.4,4,0,0,59,22,3,87,9,13,,,0,Matches
+Henrique Dalbert,brBRA,3.0,Cagliari,27,1993,23.1,9,0,0,38,27,4,73,26,24,,,0,Matches
+Henrique Matheus,brBRA,3.0,Sassuolo,23,1997,12.0,3,0,0,18,13,0,12,7,4,,,0,Matches
+Henry Thomas,frFRA,4.0,Venezia,26,1994,23.5,6,1,1,50,69,14,5,2,5,,,2,Matches
+Hernández Theo,frFRA,2.0,Milan,23,1997,30.1,7,2,1,34,74,8,127,22,34,,,0,Matches
+Hernani,brBRA,3.4,Genoa,27,1994,7.6,0,0,0,12,10,2,15,14,8,,,0,Matches
+Heymans Daan,beBEL,3.0,Venezia,22,1999,2.8,4,0,0,8,2,0,3,4,1,,,0,Matches
+Hickey Aaron,sctSCO,2.4,Bologna,19,2002,31.3,7,0,0,38,71,4,51,32,30,,,0,Matches
+Hongla Martin,cmCMR,3.0,Hellas Verona,23,1998,7.2,3,0,0,15,5,0,4,5,8,,,0,Matches
+Hooijdonk Sydney,nlNED,4.0,Bologna,21,2000,0.4,0,0,0,0,0,0,0,0,0,,,0,Matches
+Hristov Petko,bgBUL,2.0,Spezia,22,1999,13.9,3,0,0,8,18,0,1,20,8,,,0,Matches
+Hysaj Elseid,alALB,2.0,Lazio,27,1994,22.5,3,0,0,16,18,2,26,22,32,,,0,Matches
+Ibanez Roger,brBRA,2.0,Roma,22,1998,32.1,9,0,0,47,48,1,3,62,31,,,0,Matches
+Ibrahimović Zlatan,seSWE,4.0,Milan,39,1981,11.3,2,0,0,16,9,19,6,3,0,,,1,Matches
+Igor,brBRA,2.0,Fiorentina,23,1998,24.9,3,0,0,28,5,0,2,30,34,,,0,Matches
+Ikone Jonathan,frFRA,4.0,Fiorentina,23,1998,7.2,1,0,0,6,6,1,9,2,3,,,0,Matches
+Ilić Ivan,rsSRB,3.0,Hellas Verona,20,2001,28.1,5,1,0,45,32,1,38,21,20,,,1,Matches
+Iličić Josip,siSVN,3.4,Atalanta,33,1988,9.3,1,0,0,13,38,1,38,3,6,,,0,Matches
+Immobile Ciro,itITA,4.0,Lazio,31,1990,30.1,4,0,0,36,39,13,13,3,5,,,0,Matches
+Insigne Lorenzo,itITA,3.4,Napoli,30,1991,25.4,2,0,0,20,22,5,89,21,14,,,0,Matches
+Ismajli Ardian,alALB,2.0,Empoli,24,1996,14.1,7,0,0,17,14,0,3,23,9,,,2,Matches
+Izzo Armando,itITA,2.0,Torino,29,1992,5.8,4,0,0,16,12,0,3,19,8,,,0,Matches
+Jajalo Mato,baBIH,3.0,Udinese,33,1988,7.0,2,0,0,12,7,0,4,11,14,,,0,Matches
+Jaroszyński Paweł,plPOL,2.0,Salernitana,26,1994,5.7,2,0,0,7,5,0,19,10,5,,,0,Matches
+Jesus Juan,brBRA,2.0,Napoli,30,1991,14.2,1,0,0,14,2,2,1,9,17,,,1,Matches
+Johnsen Dennis,noNOR,3.5,Venezia,23,1998,16.1,2,0,0,9,12,13,43,5,9,,,0,Matches
+Jorge Kaio,brBRA,4.0,Juventus,19,2002,1.3,0,0,0,4,5,2,1,0,1,,,0,Matches
+Junior Bianchi Flavio,itITA,4.0,Genoa,21,2000,3.5,0,0,0,5,4,0,1,0,2,,,0,Matches
+Junior Traorè Hamed,ciCIV,3.0,Sassuolo,21,2000,19.7,3,0,0,29,32,3,59,11,18,,,0,Matches
+Kalinić Nikola,hrCRO,4.0,Hellas Verona,33,1988,4.5,5,1,1,15,9,2,1,0,0,,,0,Matches
+Kallon Yayah,slSLE,3.4,Genoa,20,2001,7.1,3,0,0,18,13,3,18,1,11,,,0,Matches
+Kalulu Pierre,frFRA,2.0,Milan,21,2000,21.6,4,0,0,18,6,2,22,23,36,,,0,Matches
+Kamenović Dimitrije,rsSRB,2.0,Lazio,21,2000,0.5,0,0,0,1,1,0,0,2,1,,,0,Matches
+Karsdorp Rick,nlNED,2.4,Roma,26,1995,32.0,9,1,1,27,13,0,103,34,37,,,0,Matches
+Kasius Denso,nlNED,3.0,Bologna,18,2002,2.0,0,0,0,1,4,0,7,2,6,,,0,Matches
+Kastanos Grigoris,cyCYP,3.4,Salernitana,23,1998,15.0,4,1,0,27,35,2,51,20,19,,,0,Matches
+Kean Moise,itITA,4.0,Juventus,21,2000,12.2,5,0,0,20,16,12,6,2,4,,,0,Matches
+Kechrida Wajdi,tnTUN,2.4,Salernitana,25,1995,10.6,0,0,0,8,1,1,33,6,6,,,0,Matches
+Keramitsis Dimitrios,grGRE,2.0,Roma,17,2004,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Kessié Franck,ciCIV,3.0,Milan,24,1996,25.6,2,0,0,34,31,1,11,22,23,,,0,Matches
+Kiwior Jakub,plPOL,3.0,Spezia,21,2000,21.8,6,0,0,27,5,2,7,37,29,,,0,Matches
+Kiyine Sofian,maMAR,3.4,Venezia,23,1997,13.8,8,1,0,48,11,0,48,10,14,,,0,Matches
+Kjær Simon,dkDEN,2.0,Milan,32,1989,8.9,2,0,0,20,5,0,1,9,12,,,1,Matches
+Kokorin Aleksandr,ruRUS,3.5,Fiorentina,30,1991,0.6,1,0,0,2,2,0,0,0,1,,,0,Matches
+Kolarov Aleksandar,rsSRB,2.0,Inter,35,1985,0.5,0,0,0,0,1,0,0,1,1,,,0,Matches
+Koopmeiners Teun,nlNED,3.0,Atalanta,23,1998,23.6,4,0,0,36,21,6,98,15,25,,,1,Matches
+Koulibaly Kalidou,snSEN,2.0,Napoli,30,1991,26.7,5,1,0,28,12,0,2,29,24,,,0,Matches
+Kourfalidis Christos,grGRE,3.0,Cagliari,18,2002,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Kovalenko Viktor,uaUKR,3.0,Spezia,25,1996,14.7,4,0,0,15,20,0,24,14,11,,,0,Matches
+Kristoffersen Julian,noNOR,4.0,Salernitana,24,1997,0.1,0,0,0,1,0,1,0,0,0,,,0,Matches
+Krunić Rade,baBIH,3.0,Milan,27,1993,15.7,2,0,0,21,29,1,11,16,17,,,0,Matches
+Kulusevski Dejan,seSWE,3.4,Juventus,21,2000,8.6,1,0,0,29,10,3,8,5,12,,,0,Matches
+Kumbulla Marash,alALB,2.0,Roma,21,2000,11.4,6,0,0,22,11,0,2,15,13,,,0,Matches
+Kyriakopoulos Giorgos,grGRE,2.3,Sassuolo,25,1996,21.9,6,1,0,30,37,3,98,13,14,,,0,Matches
+La Mantia Andrea,itITA,4.0,Empoli,30,1991,5.4,0,0,0,6,7,3,1,1,0,,,0,Matches
+Lammers Sam,nlNED,4.0,Atalanta,24,1997,0.4,0,0,0,2,3,0,0,0,0,,,0,Matches
+Lasagna Kevin,itITA,3.4,Hellas Verona,28,1992,13.2,1,0,0,20,10,12,10,3,5,,,0,Matches
+Lazović Darko,rsSRB,3.0,Hellas Verona,30,1990,30.7,2,0,0,13,8,11,95,21,24,,,0,Matches
+Lazzari Manuel,itITA,2.0,Lazio,27,1993,18.5,3,0,0,18,44,4,55,12,15,,,0,Matches
+Leal Patrick,usUSA,3.0,Venezia,18,2003,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Leão Rafael,ptPOR,3.0,Milan,22,1999,28.9,4,0,0,25,45,8,63,11,9,,,0,Matches
+Leiva Lucas,brBRA,3.0,Lazio,34,1987,18.9,9,0,0,37,17,0,4,30,29,,,0,Matches
+Lezzerini Luca,itITA,1.0,Venezia,26,1995,5.5,2,0,0,0,0,0,0,0,0,,,0,Matches
+Lhassine Kone Ben,ciCIV,3.0,Torino,21,2000,0.9,0,0,0,1,0,0,0,1,3,,,0,Matches
+Ligt Matthijs,nlNED,2.0,Juventus,21,1999,29.7,4,1,1,32,15,2,4,27,19,,,0,Matches
+Lima Anderson,brBRA,3.0,Lazio,21,1999,0.7,1,0,0,2,4,0,1,2,0,,,0,Matches
+Linetty Karol,plPOL,3.0,Torino,26,1995,10.0,2,0,0,30,10,0,8,5,9,,,0,Matches
+Lobotka Stanislav,skSVK,3.0,Napoli,26,1994,18.7,2,0,0,19,35,0,3,13,24,,,0,Matches
+Locatelli Manuel,itITA,3.0,Juventus,23,1998,24.0,6,0,0,42,25,2,8,19,25,,,0,Matches
+Lopez Maxime,frFRA,3.0,Sassuolo,23,1997,32.6,14,0,0,37,31,0,17,44,41,,,0,Matches
+Lovato Matteo,itITA,2.0,Atalanta,21,2000,3.4,1,0,0,5,1,0,3,8,4,,,0,Matches
+Lovato Matteo,itITA,2.0,Cagliari,21,2000,13.8,4,0,0,15,14,0,0,28,16,,,0,Matches
+Lozano Hirving,mxMEX,3.4,Napoli,26,1995,17.9,3,0,0,27,33,14,46,9,21,,,0,Matches
+Luis Palomino José,arARG,2.0,Atalanta,31,1990,29.7,9,0,0,39,17,1,9,97,40,,,0,Matches
+Lukić Saša,rsSRB,3.0,Torino,24,1996,33.1,10,0,0,85,46,1,25,27,34,,,0,Matches
+Luperto Sebastiano,itITA,2.0,Empoli,24,1996,21.8,8,1,1,29,5,1,6,45,16,,,0,Matches
+Lykogiannis Babis,grGRE,2.4,Cagliari,27,1993,20.2,2,0,0,29,14,0,93,31,12,,,0,Matches
+Mäenpää Niki,fiFIN,1.0,Venezia,36,1985,16.5,1,0,0,1,1,0,0,0,0,,,0,Matches
+Maggiore Giulio,itITA,3.0,Spezia,23,1998,31.3,9,0,0,64,67,1,13,31,34,,,0,Matches
+Magnanelli Francesco,itITA,3.0,Sassuolo,36,1984,3.0,1,0,0,10,7,0,0,1,4,,,0,Matches
+Magnani Giangiacomo,itITA,2.0,Hellas Verona,25,1995,5.9,3,1,0,11,9,0,2,10,7,,,0,Matches
+Magnani Giangiacomo,itITA,2.0,Sampdoria,25,1995,2.7,0,0,0,3,1,0,0,5,2,,,0,Matches
+Maignan Mike,frFRA,1.0,Milan,26,1995,32.0,1,0,0,0,6,0,0,1,2,,,0,Matches
+Maitland-Niles Ainsley,engENG,2.4,Roma,23,1997,5.4,0,0,0,6,1,1,25,6,7,,,0,Matches
+Makengo Jean-Victor,frFRA,3.0,Udinese,23,1998,26.1,7,1,1,27,38,1,8,20,23,,,0,Matches
+Maksimović Nikola,rsSRB,2.0,Genoa,29,1991,12.4,2,0,0,10,8,0,2,12,6,,,0,Matches
+Malcuit Kévin,maMAR,2.4,Napoli,30,1991,3.2,3,0,0,8,5,0,12,6,2,,,0,Matches
+Maldini Daniel,itITA,3.0,Milan,19,2001,1.6,1,0,0,4,1,1,1,1,3,,,0,Matches
+Maleh Youssef,maMAR,3.0,Fiorentina,22,1998,11.3,5,0,0,43,19,0,18,7,15,,,0,Matches
+Malinovskyi Ruslan,uaUKR,3.4,Atalanta,28,1993,17.7,10,0,0,39,41,3,102,5,9,,,0,Matches
+Manaj Rey,alALB,4.0,Spezia,24,1997,19.6,9,0,0,54,62,11,6,4,14,,,0,Matches
+Mancini Gianluca,itITA,2.0,Roma,25,1996,32.0,16,1,1,60,15,1,15,38,26,,,0,Matches
+Mancuso Leonardo,itITA,4.0,Empoli,29,1992,4.7,0,0,0,1,2,5,5,1,1,,,0,Matches
+Mandragora Rolando,itITA,3.0,Torino,24,1997,14.7,7,1,1,26,22,1,46,9,11,,,0,Matches
+Manolas Kostas,grGRE,2.0,Napoli,30,1991,3.5,1,0,0,5,0,0,0,3,2,,,0,Matches
+Marchizza Riccardo,itITA,2.0,Empoli,23,1998,15.0,4,0,0,20,3,2,42,10,15,,,1,Matches
+Marco Ferrari Gian,itITA,2.0,Sassuolo,29,1992,34.7,6,1,1,25,37,1,1,44,13,,,0,Matches
+Marfella Davide,itITA,1.0,Napoli,21,1999,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Marí Pablo,esESP,2.0,Udinese,27,1993,14.9,2,1,0,20,4,0,3,22,10,,,0,Matches
+Marin Răzvan,roROU,3.0,Cagliari,25,1996,31.3,6,1,1,37,31,1,127,10,22,,,0,Matches
+Martínez Lautaro,arARG,4.0,Inter,23,1997,25.4,6,0,0,40,46,12,15,17,10,,,0,Matches
+Martínez Quarta Lucas,arARG,2.0,Fiorentina,25,1996,15.9,8,0,0,30,11,0,1,21,23,,,0,Matches
+Marušić Adam,meMNE,2.0,Lazio,28,1992,30.2,6,1,1,26,13,0,30,41,19,,,0,Matches
+Masiello Andrea,itITA,2.0,Genoa,35,1986,5.7,3,0,0,6,4,0,1,14,3,,,0,Matches
+Matějů Aleš,czCZE,2.3,Venezia,25,1996,8.1,3,0,0,13,8,1,22,8,11,,,0,Matches
+Mayoral Borja,esESP,4.0,Roma,24,1997,1.1,0,0,0,0,2,0,2,0,0,,,0,Matches
+Mazzocchi Pasquale,itITA,2.0,Venezia,26,1995,13.8,3,0,0,22,6,0,46,22,8,,,0,Matches
+Mazzocchi Pasquale,itITA,2.4,Salernitana,26,1995,14.1,2,0,0,18,7,1,79,11,19,,,0,Matches
+Mbaye Ibrahima,snSEN,3.0,Bologna,26,1994,1.2,0,0,0,3,1,1,1,1,1,,,0,Matches
+McKennie Weston,usUSA,3.0,Juventus,22,1998,15.2,1,0,0,19,4,0,13,21,11,,,0,Matches
+Medel Gary,clCHI,2.0,Bologna,33,1987,31.4,10,1,1,34,31,1,2,44,25,,,0,Matches
+Melegoni Filippo,itITA,3.0,Genoa,22,1999,10.9,1,0,0,14,20,2,34,12,12,,,0,Matches
+Melo Arthur,brBRA,3.0,Juventus,24,1996,10.7,3,0,0,20,31,0,1,5,13,,,0,Matches
+Meret Alex,itITA,1.0,Napoli,24,1997,6.9,0,0,0,0,5,0,0,0,0,,,0,Matches
+Mert Çetin Yıldırım,trTUR,2.0,Hellas Verona,24,1997,0.5,0,0,0,0,1,0,1,0,0,,,0,Matches
+Mertens Dries,beBEL,3.5,Napoli,34,1987,15.4,2,0,0,26,22,5,22,9,7,,,0,Matches
+Messias Junior,brBRA,3.0,Milan,30,1991,15.9,2,0,0,21,24,3,53,16,19,,,0,Matches
+Michael Kingsley,ngNGA,3.0,Bologna,21,1999,0.8,0,0,0,0,1,0,0,1,1,,,0,Matches
+Mihaila Valentin,roROU,3.5,Atalanta,21,2000,0.8,0,0,0,2,0,0,3,0,1,,,0,Matches
+Mikael,brBRA,4.0,Salernitana,22,1999,1.0,0,0,0,3,2,0,0,0,1,,,0,Matches
+Mikaelsson Hilmir,isISL,4.0,Venezia,17,2004,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Milenković Nikola,rsSRB,2.0,Fiorentina,23,1997,32.5,10,1,1,48,21,0,2,38,34,,,0,Matches
+Milinković-Savić Sergej,rsSRB,3.0,Lazio,26,1995,34.4,6,1,1,56,44,4,45,35,43,,,0,Matches
+Milinković-Savić Vanja,rsSRB,1.0,Torino,24,1997,27.0,3,0,0,2,1,0,0,0,0,,,0,Matches
+Miranchuk Aleksei,ruRUS,3.4,Atalanta,25,1995,8.6,0,0,0,14,19,3,17,0,8,,,0,Matches
+Miretti Fabio,itITA,3.0,Juventus,17,2003,3.6,0,0,0,4,4,0,6,2,2,,,0,Matches
+Mkhitaryan Henrikh,amARM,3.0,Roma,32,1989,27.7,4,1,1,41,51,5,45,22,30,,,0,Matches
+Modolo Marco,itITA,2.0,Venezia,32,1989,4.4,2,0,0,6,3,0,0,4,3,,,0,Matches
+Molina Nahuel,arARG,3.0,Udinese,23,1998,29.3,7,1,1,31,16,1,116,19,25,,,0,Matches
+Molinaro Cristian,itITA,2.0,Venezia,38,1983,6.1,0,0,0,7,8,1,16,5,10,,,0,Matches
+Montipò Lorenzo,itITA,1.0,Hellas Verona,25,1996,34.0,1,0,0,0,4,0,0,1,0,,,0,Matches
+Morata Álvaro,esESP,3.5,Juventus,28,1992,25.6,5,0,0,48,77,20,21,5,11,,,0,Matches
+Moro Raúl,esESP,4.0,Lazio,18,2002,2.2,0,0,0,0,0,0,2,0,3,,,0,Matches
+Motoc Andrei,mdMDA,2.0,Salernitana,19,2002,1.0,0,0,0,0,2,0,0,2,1,,,0,Matches
+Mousset Lys,frFRA,3.4,Salernitana,25,1996,1.8,2,0,0,4,2,1,0,0,0,,,0,Matches
+Mráz Samuel,skSVK,4.0,Spezia,24,1997,0.6,0,0,0,2,0,1,0,0,0,,,0,Matches
+Müldür Mert,trTUR,2.0,Sassuolo,22,1999,22.7,5,0,0,24,15,0,40,26,34,,,0,Matches
+Muriel Luis,coCOL,3.5,Atalanta,30,1991,17.1,1,0,0,14,27,7,76,1,4,,,0,Matches
+Muriqi Vedat,xkKVX,4.0,Lazio,27,1994,2.4,1,0,0,5,9,1,0,0,0,,,0,Matches
+Murru Nicola,itITA,2.0,Sampdoria,26,1994,10.9,5,0,0,22,6,2,23,9,17,,,0,Matches
+Musso Juan,arARG,1.0,Atalanta,27,1994,32.6,1,1,0,3,1,0,0,0,0,,,0,Matches
+Mæhle Joakim,dkDEN,3.0,Atalanta,24,1997,16.3,2,0,0,9,25,1,27,16,11,,,0,Matches
+Nández Nahitan,uyURU,3.0,Cagliari,25,1995,16.9,4,0,0,27,34,12,64,8,20,,,0,Matches
+Nani,ptPOR,3.4,Venezia,34,1986,3.2,1,0,0,2,8,0,13,2,1,,,0,Matches
+Nastasić Matija,rsSRB,2.0,Fiorentina,28,1993,2.4,1,0,0,2,0,0,0,5,0,,,0,Matches
+Nestorovski Ilija,mkMKD,4.0,Udinese,31,1990,2.1,1,0,0,3,7,2,2,0,0,,,0,Matches
+Nguiamba Aurélien,frFRA,3.0,Spezia,22,1999,0.6,1,0,0,1,0,0,0,0,3,,,0,Matches
+Nikolaou Dimitris,grGRE,2.0,Spezia,22,1998,36.0,7,0,0,31,21,0,7,48,26,,,1,Matches
+Nsame Jean-Pierre,cmCMR,4.0,Venezia,28,1993,2.7,0,0,0,6,3,3,1,0,1,,,0,Matches
+Nuytinck Bram,nlNED,2.0,Udinese,31,1990,22.6,2,0,0,16,4,0,6,22,23,,,0,Matches
+Nwankwo Simeon,ngNGA,4.0,Salernitana,29,1992,9.4,0,0,0,13,14,9,1,3,5,,,0,Matches
+Nzola M'Bala,aoANG,4.0,Spezia,24,1996,11.9,2,0,0,31,7,13,5,0,2,,,0,Matches
+Obert Adam,skSVK,2.0,Cagliari,18,2002,3.0,0,0,0,5,0,0,2,4,5,,,0,Matches
+Obi Joel,ngNGA,3.0,Salernitana,30,1991,12.7,4,0,0,32,21,0,25,9,14,,,0,Matches
+Oddei Brian,itITA,4.0,Sassuolo,18,2002,0.1,0,0,0,0,1,0,0,0,0,,,0,Matches
+Odriozola Álvaro,esESP,2.0,Fiorentina,25,1995,19.3,4,1,0,15,12,1,53,8,15,,,0,Matches
+Okaka Stefano,itITA,4.0,Udinese,31,1989,0.2,1,0,0,1,0,1,0,0,0,,,0,Matches
+Okereke David,ngNGA,3.5,Venezia,23,1997,22.8,5,1,0,29,32,9,27,11,9,,,0,Matches
+Oliva Christian,uyURU,3.0,Cagliari,25,1996,0.5,0,0,0,0,0,0,0,0,2,,,0,Matches
+Oliveira Sérgio,ptPOR,3.0,Roma,29,1992,9.9,5,0,0,12,25,0,32,10,18,,,0,Matches
+Orsolini Riccardo,itITA,3.5,Bologna,24,1997,19.8,2,0,0,20,44,13,87,4,13,,,0,Matches
+Osimhen Victor,ngNGA,4.0,Napoli,22,1998,22.0,5,1,0,37,38,19,9,3,6,,,0,Matches
+Ospina David,coCOL,1.0,Napoli,32,1988,31.0,1,0,0,0,7,0,0,1,0,,,0,Matches
+Ounas Adam,dzALG,3.0,Napoli,24,1996,3.6,1,0,0,9,10,0,16,2,1,,,0,Matches
+Padelli Daniele,itITA,1.0,Udinese,35,1985,3.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pafundi Simone,itITA,4.0,Udinese,15,2006,0.3,0,0,0,1,0,0,0,0,0,,,0,Matches
+Palumbo Martin,noNOR,3.0,Juventus,19,2002,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pandev Goran,mkMKD,4.0,Genoa,38,1983,9.4,1,0,0,5,36,6,3,2,0,,,0,Matches
+Pandur Ivor,hrCRO,1.0,Hellas Verona,21,2000,3.0,0,0,0,0,1,0,0,0,0,,,0,Matches
+Parisi Fabiano,itITA,2.0,Empoli,20,2000,16.4,5,0,0,22,28,0,44,23,25,,,0,Matches
+Pašalić Mario,hrCRO,3.4,Atalanta,26,1995,22.2,3,0,0,30,15,6,4,18,13,,,0,Matches
+Patric,esESP,2.0,Lazio,28,1993,18.3,7,1,1,24,7,0,1,13,15,,,1,Matches
+Patrício Rui,ptPOR,1.0,Roma,33,1988,38.0,2,0,0,0,1,0,0,1,0,,,0,Matches
+Pavoletti Leonardo,itITA,4.0,Cagliari,32,1988,16.9,9,0,0,45,28,4,3,3,6,,,0,Matches
+Pedro,esESP,4.0,Lazio,34,1987,22.6,5,0,0,31,39,6,29,6,23,,,0,Matches
+Pedro João,itITA,4.0,Cagliari,29,1992,36.9,9,0,0,68,84,31,14,8,11,,,0,Matches
+Pegolo Gianluca,itITA,1.0,Sassuolo,40,1981,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pellegri Pietro,itITA,4.0,Torino,20,2001,2.4,1,0,0,10,6,4,0,0,1,,,0,Matches
+Pellegri Pietro,itITA,4.0,Milan,20,2001,1.5,0,0,0,7,2,2,0,0,2,,,0,Matches
+Pellegrini Lorenzo,itITA,3.0,Roma,25,1996,25.4,8,1,1,46,49,9,171,24,15,,,0,Matches
+Pellegrini Luca,itITA,2.3,Juventus,22,1999,12.3,6,0,0,23,20,0,54,6,13,,,0,Matches
+Peluso Federico,itITA,2.0,Sassuolo,37,1984,0.1,0,0,0,1,0,0,0,0,1,,,0,Matches
+Pereiro Gastón,uyURU,3.5,Cagliari,26,1995,10.8,1,0,0,15,4,2,41,1,5,,,0,Matches
+Peretz Dor,ilISR,3.0,Venezia,26,1995,6.5,2,0,0,10,8,0,2,8,18,,,0,Matches
+Pereyra Roberto,arARG,3.4,Udinese,30,1991,19.9,10,1,1,33,34,1,24,12,11,,,0,Matches
+Pérez Carles,esESP,3.0,Roma,23,1998,6.2,2,0,0,13,7,0,19,1,3,,,0,Matches
+Pérez Nehuén,arARG,2.0,Udinese,21,2000,18.8,6,0,0,30,9,0,2,21,20,,,0,Matches
+Perin Mattia,itITA,1.0,Juventus,28,1992,4.5,0,0,0,0,1,0,0,0,0,,,0,Matches
+Perišić Ivan,hrCRO,3.0,Inter,32,1989,31.3,4,0,0,29,6,13,148,46,22,,,0,Matches
+Perotti Diego,arARG,3.0,Salernitana,33,1988,3.2,1,0,0,5,10,0,22,2,5,,,0,Matches
+Perrone Mario,itITA,2.0,Salernitana,18,2003,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Pessina Matteo,itITA,3.4,Atalanta,24,1997,16.0,0,0,0,17,35,4,10,12,14,,,0,Matches
+Petagna Andrea,itITA,4.0,Napoli,26,1995,6.5,1,0,0,15,14,2,3,0,2,,,0,Matches
+Pezzella Giuseppe,itITA,2.4,Atalanta,23,1997,11.9,3,0,0,19,30,2,37,9,16,,,0,Matches
+Piątek Krzysztof,plPOL,4.0,Fiorentina,26,1995,8.1,0,0,0,7,16,3,5,2,3,,,0,Matches
+Piccoli Roberto,itITA,4.0,Genoa,20,2001,2.4,0,0,0,3,0,1,1,1,1,,,0,Matches
+Piccoli Roberto,itITA,4.0,Atalanta,20,2001,2.2,0,0,0,0,3,3,0,0,0,,,0,Matches
+Pinamonti Andrea,itITA,4.0,Empoli,22,1999,31.9,4,0,0,32,56,19,29,8,6,,,0,Matches
+Pinsoglio Carlo,itITA,1.0,Juventus,31,1990,0.5,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pinzi Riccardo,itITA,3.0,Udinese,17,2003,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pjaca Marko,hrCRO,3.0,Torino,26,1995,12.8,0,0,0,11,14,2,17,5,4,,,0,Matches
+Pobega Tommaso,itITA,3.0,Torino,22,1999,24.9,11,0,0,75,38,2,18,27,29,,,0,Matches
+Podgoreanu Suf,ilISR,3.0,Spezia,19,2002,1.3,0,0,0,2,2,0,8,1,0,,,0,Matches
+Politano Matteo,itITA,3.4,Napoli,27,1993,18.3,3,0,0,14,28,4,106,13,12,,,0,Matches
+Portanova Manolo,itITA,3.0,Genoa,21,2000,14.7,4,0,0,46,25,4,40,17,30,,,0,Matches
+Praet Dennis,beBEL,3.0,Torino,27,1994,17.1,3,0,0,21,17,3,46,4,10,,,0,Matches
+Praszelik Mateusz,plPOL,3.0,Hellas Verona,20,2000,0.3,0,0,0,2,1,0,0,0,0,,,0,Matches
+Provedel Ivan,itITA,1.0,Spezia,27,1994,30.7,2,0,0,2,4,0,0,2,0,,,1,Matches
+Pulgar Erick,clCHI,3.0,Fiorentina,27,1994,3.8,2,0,0,5,3,0,5,5,6,,,0,Matches
+Pussetto Ignacio,arARG,3.5,Udinese,25,1995,13.4,4,0,0,30,27,9,22,5,10,,,0,Matches
+Pyyhtiä Niklas,fiFIN,3.0,Bologna,17,2003,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Quagliarella Fabio,itITA,4.0,Sampdoria,38,1983,18.5,2,0,0,20,28,15,21,3,2,,,0,Matches
+Rabiot Adrien,frFRA,3.0,Juventus,26,1995,25.4,5,0,0,45,28,4,24,21,44,,,0,Matches
+Radovanović Ivan,rsSRB,2.3,Salernitana,32,1988,11.7,4,0,0,9,10,0,4,6,7,,,0,Matches
+Radu Ionuț,roROU,1.0,Inter,24,1997,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Radu Ștefan,roROU,2.0,Lazio,34,1986,6.2,2,0,0,4,5,0,7,4,6,,,0,Matches
+Radunović Boris,rsSRB,1.0,Cagliari,25,1996,3.0,0,1,0,0,1,0,0,0,0,,,0,Matches
+Raimondo Antonio,itITA,4.0,Bologna,17,2004,0.8,0,0,0,3,0,3,0,0,0,,,0,Matches
+Ramsey Aaron,wlsWAL,3.0,Juventus,30,1990,1.1,0,0,0,2,1,0,0,1,0,,,0,Matches
+Ranieri Luca,itITA,2.3,Salernitana,22,1999,23.4,9,0,0,16,10,2,66,26,23,,,0,Matches
+Ranocchia Andrea,itITA,2.0,Inter,33,1988,3.8,1,0,0,4,2,1,0,4,3,,,0,Matches
+Raspadori Giacomo,itITA,3.4,Sassuolo,21,2000,30.4,9,1,1,29,33,5,62,8,16,,,0,Matches
+Ravaglia Nicola,itITA,1.0,Sampdoria,32,1988,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Rebić Ante,hrCRO,3.5,Milan,27,1993,9.9,2,0,0,18,9,7,29,4,8,,,0,Matches
+Reca Arkadiusz,plPOL,2.3,Spezia,26,1995,19.7,3,0,0,22,13,0,37,31,18,,,0,Matches
+Reina Pepe,esESP,1.0,Lazio,38,1982,15.0,3,0,0,1,1,0,0,0,0,,,0,Matches
+Retsos Panagiotis,grGRE,2.0,Hellas Verona,22,1998,0.6,0,0,0,1,1,0,1,2,0,,,0,Matches
+Reynolds Bryan,usUSA,2.0,Roma,20,2001,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Ribéry Franck,frFRA,3.4,Salernitana,38,1983,15.8,3,1,0,31,38,2,44,2,11,,,0,Matches
+Ricci Samuele,itITA,3.0,Torino,19,2001,8.0,1,0,0,14,14,2,0,14,5,,,0,Matches
+Ricci Samuele,itITA,3.0,Empoli,19,2001,17.0,1,1,0,17,42,0,7,31,18,,,0,Matches
+Rincón Tomás,veVEN,3.0,Torino,33,1988,1.8,2,0,0,5,2,0,1,2,2,,,0,Matches
+Rincón Tomás,veVEN,3.0,Sampdoria,33,1988,13.0,3,0,0,22,31,0,5,17,13,,,0,Matches
+Rodríguez Ricardo,chSUI,2.0,Torino,28,1992,27.5,3,0,0,26,11,0,68,40,20,,,0,Matches
+Rog Marko,hrCRO,3.0,Cagliari,26,1995,3.5,0,0,0,11,14,0,3,1,3,,,0,Matches
+Rogério,brBRA,2.0,Sassuolo,23,1998,19.2,5,0,0,15,34,1,83,20,14,,,0,Matches
+Romagnoli Alessio,itITA,2.0,Milan,26,1995,15.7,4,1,0,17,13,3,1,18,15,,,0,Matches
+Romagnoli Simone,itITA,2.0,Empoli,31,1990,16.6,3,0,0,16,5,0,1,10,13,,,1,Matches
+Romero Luka,arARG,3.0,Lazio,16,2004,0.9,0,0,0,2,3,0,1,1,1,,,0,Matches
+Romero Sergio,arARG,1.0,Venezia,34,1987,16.0,2,0,0,1,0,0,0,1,2,,,0,Matches
+Ronaldo Cristiano,ptPOR,3.5,Juventus,36,1985,0.3,1,0,0,0,1,1,0,0,0,,,0,Matches
+Roon Marten,nlNED,2.4,Atalanta,30,1991,28.3,7,1,1,50,15,0,7,46,41,,,0,Matches
+Rossi Francesco,itITA,1.0,Atalanta,30,1991,0.4,0,0,0,0,0,0,0,0,0,,,0,Matches
+Rovella Nicolò,itITA,3.0,Genoa,19,2001,16.3,5,0,0,26,24,3,110,22,23,,,0,Matches
+Rrahmani Amir,xkKVX,2.0,Napoli,27,1994,32.5,5,0,0,23,23,0,0,19,12,,,0,Matches
+Ruan,brBRA,2.0,Sassuolo,22,1999,2.4,1,0,0,4,8,0,1,2,4,,,0,Matches
+Rugani Daniele,itITA,2.0,Juventus,27,1994,9.8,2,0,0,11,1,0,0,11,4,,,0,Matches
+Ruggeri Matteo,itITA,2.4,Salernitana,19,2002,7.5,1,0,0,1,2,1,30,3,4,,,0,Matches
+Rui Mário,ptPOR,2.0,Napoli,30,1991,33.2,7,0,0,31,60,4,79,38,43,,,0,Matches
+Ruiz Peña Fabián,esESP,3.0,Napoli,25,1996,26.5,2,0,0,21,18,1,17,20,34,,,0,Matches
+Russo Alessandro,itITA,3.0,Salernitana,17,2003,0.3,0,0,0,0,1,0,0,0,0,,,0,Matches
+Sabelli Stefano,itITA,3.0,Genoa,28,1993,3.9,3,0,0,6,8,0,8,3,3,,,0,Matches
+Sabiri Abdelhamid,maMAR,3.4,Sampdoria,24,1996,9.9,3,0,0,21,34,1,14,8,21,,,0,Matches
+Saelemaekers Alexis,beBEL,3.0,Milan,22,1999,20.7,2,0,0,28,37,1,63,15,21,,,0,Matches
+Sala Jacopo,itITA,3.0,Spezia,29,1991,9.8,3,0,0,11,12,1,6,11,12,,,0,Matches
+Salcedo Eddie,itITA,3.4,Spezia,19,2001,4.8,1,0,0,8,6,2,12,0,1,,,0,Matches
+Samardzic Lazar,rsSRB,3.0,Udinese,19,2002,5.4,0,0,0,11,3,0,33,2,9,,,0,Matches
+Samele Luigi,itITA,4.0,Sassuolo,19,2002,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Sanabria Antonio,pyPAR,4.0,Torino,25,1996,20.0,3,0,0,26,34,21,3,2,2,,,0,Matches
+Sánchez Alexis,clCHI,4.0,Inter,32,1988,9.8,0,0,0,11,21,8,36,2,9,,,0,Matches
+Sandro Alex,brBRA,2.0,Juventus,30,1991,19.8,3,0,0,31,34,1,35,27,16,,,1,Matches
+Sansone Nicola,itITA,3.5,Bologna,29,1991,10.0,6,0,0,17,21,6,53,4,6,,,0,Matches
+Santander Federico,pyPAR,4.0,Bologna,30,1991,0.7,1,0,0,2,5,0,1,0,1,,,0,Matches
+Santos Samir,brBRA,2.0,Udinese,26,1994,15.8,5,0,0,33,16,0,11,41,18,,,0,Matches
+Saponara Riccardo,itITA,4.0,Fiorentina,29,1991,14.3,1,0,0,6,23,4,28,1,3,,,0,Matches
+Satalino Giacomo,itITA,1.0,Sassuolo,22,1999,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Satriano Martin,uyURU,4.0,Inter,20,2001,0.4,0,0,0,1,0,0,0,0,0,,,0,Matches
+Scalvini Giorgio,itITA,2.3,Atalanta,17,2003,8.5,1,0,0,15,7,0,3,23,12,,,0,Matches
+Scamacca Gianluca,itITA,4.0,Sassuolo,22,1999,23.8,7,0,0,49,20,10,11,5,13,,,0,Matches
+Schiavone Andrea,itITA,3.0,Salernitana,28,1993,6.3,1,0,0,10,5,0,29,9,8,,,0,Matches
+Schnegg David,atAUT,2.0,Venezia,22,1998,1.6,1,0,0,3,0,1,3,3,0,,,0,Matches
+Schouten Jerdy,nlNED,3.0,Bologna,24,1997,15.5,4,1,1,16,8,0,2,32,17,,,0,Matches
+Seck Demba,snSEN,3.0,Torino,20,2001,1.6,0,0,0,2,2,2,2,0,2,,,0,Matches
+Šemper Adrian,hrCRO,1.0,Genoa,23,1998,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Sensi Stefano,itITA,3.4,Sampdoria,25,1995,8.4,1,0,0,18,24,0,6,6,9,,,0,Matches
+Sensi Stefano,itITA,4.0,Inter,25,1995,1.9,0,0,0,4,5,1,2,0,3,,,0,Matches
+Sepe Luigi,itITA,1.0,Salernitana,30,1991,15.5,2,0,0,0,3,0,0,1,0,,,0,Matches
+Serpe Laurens,itITA,2.0,Genoa,20,2001,0.5,0,0,0,0,0,0,1,0,0,,,0,Matches
+Shaarawy Stephan,itITA,3.0,Roma,28,1992,11.7,1,0,0,8,12,3,18,11,8,,,0,Matches
+Sher Aimar,iqIRQ,3.0,Spezia,18,2002,0.5,0,0,0,0,0,0,0,3,1,,,0,Matches
+Shomurodov Eldor,uzUZB,3.5,Roma,26,1995,8.7,2,0,0,16,6,4,11,2,3,,,0,Matches
+Sidibe Alassane,ciCIV,3.0,Atalanta,19,2002,0.1,0,0,0,0,0,0,0,0,1,,,0,Matches
+Sigurðsson Arnór,isISL,3.5,Venezia,22,1999,2.0,0,0,0,2,1,0,3,1,1,,,0,Matches
+Silva Adrien,ptPOR,3.0,Sampdoria,32,1989,12.0,3,1,0,13,17,0,6,26,12,,,0,Matches
+Silvestri Marco,itITA,1.0,Udinese,30,1991,35.0,1,0,0,1,5,0,0,2,0,,,0,Matches
+Simeone Giovanni,arARG,4.0,Hellas Verona,26,1995,29.5,8,0,0,56,58,34,26,5,16,,,0,Matches
+Simeone Giovanni,arARG,4.0,Cagliari,26,1995,0.1,0,0,0,1,0,0,1,0,0,,,0,Matches
+Singo Wilfried,ciCIV,3.0,Torino,20,2000,29.0,5,1,0,43,59,8,79,22,39,,,0,Matches
+Sirigu Salvatore,itITA,1.0,Genoa,34,1987,37.0,0,0,0,0,3,0,0,1,1,,,1,Matches
+Skiri Østigård Leo,noNOR,2.0,Genoa,21,1999,13.0,4,2,1,15,6,3,0,10,10,,,0,Matches
+Skorupski Łukasz,plPOL,1.0,Bologna,30,1991,36.0,4,0,0,2,6,0,0,0,0,,,0,Matches
+Skov Olsen Andreas,dkDEN,3.0,Bologna,21,1999,8.3,0,0,0,4,15,0,37,3,10,,,0,Matches
+Škriniar Milan,skSVK,2.0,Inter,26,1995,35.0,3,0,0,42,23,2,3,26,28,,,0,Matches
+Smalling Chris,engENG,2.0,Roma,31,1989,23.2,0,0,0,9,17,0,2,25,23,,,1,Matches
+Soppy Brandon,frFRA,3.0,Udinese,19,2002,8.6,4,0,0,23,33,0,13,5,10,,,0,Matches
+Soriano Roberto,itITA,3.0,Bologna,30,1991,29.1,6,2,1,50,47,3,34,23,32,,,0,Matches
+Sottil Riccardo,itITA,4.0,Fiorentina,22,1999,13.8,4,1,1,15,40,7,47,1,5,,,0,Matches
+Soulé Matìas,arARG,3.5,Juventus,18,2003,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Soumaoro Adama,frFRA,2.0,Bologna,29,1992,25.2,6,2,0,24,16,1,2,38,5,,,1,Matches
+Spinazzola Leonardo,itITA,3.0,Roma,28,1993,1.4,1,0,0,1,0,0,4,0,0,,,0,Matches
+Sportiello Marco,itITA,1.0,Atalanta,29,1992,5.0,1,0,0,0,1,0,0,0,0,,,0,Matches
+Stanga Luca,itITA,2.0,Milan,19,2002,0.0,0,0,0,1,0,0,0,0,0,,,0,Matches
+Stivanello Riccardo,itITA,2.0,Bologna,17,2004,0.5,0,0,0,0,1,0,0,0,1,,,0,Matches
+Stojanović Petar,siSVN,2.0,Empoli,25,1995,30.4,11,1,1,45,22,2,69,25,67,,,0,Matches
+Strakosha Thomas,alALB,1.0,Lazio,26,1995,23.0,2,0,0,2,0,0,0,0,0,,,0,Matches
+Strandberg Stefan,noNOR,2.0,Salernitana,31,1990,10.4,2,1,1,8,3,1,4,10,6,,,1,Matches
+Strelec Dávid,skSVK,3.4,Spezia,20,2001,5.6,0,0,0,4,6,2,5,2,4,,,0,Matches
+Strootman Kevin,nlNED,3.0,Cagliari,31,1990,7.1,4,0,0,10,10,0,3,11,5,,,0,Matches
+Stryger Larsen Jens,dkDEN,2.4,Udinese,30,1991,7.6,0,0,0,3,3,1,21,6,2,,,1,Matches
+Štulac Leo,siSVN,3.0,Empoli,26,1994,9.3,1,0,0,7,15,0,28,8,7,,,0,Matches
+Sturaro Stefano,itITA,3.0,Genoa,28,1993,19.6,12,0,0,53,37,4,38,15,25,,,0,Matches
+Success Isaac,ngNGA,4.0,Udinese,25,1996,10.1,1,1,0,24,39,5,6,2,2,,,0,Matches
+Supriaha Vladyslav,uaUKR,4.0,Sampdoria,21,2000,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Sutalo Bosko,hrCRO,2.3,Hellas Verona,21,2000,10.2,0,0,0,12,9,1,10,18,14,,,0,Matches
+Svanberg Mattias,seSWE,3.0,Bologna,22,1999,28.5,7,0,0,36,62,0,51,27,14,,,0,Matches
+Svoboda Michael,atAUT,2.0,Venezia,22,1998,13.7,2,1,0,9,4,0,1,10,18,,,0,Matches
+Szczęsny Wojciech,plPOL,1.0,Juventus,31,1990,33.0,2,0,0,2,4,0,0,0,1,,,0,Matches
+Tameze Adrien,cmCMR,3.0,Hellas Verona,27,1994,28.6,4,0,0,33,34,2,31,54,30,,,0,Matches
+Tătărușanu Ciprian,roROU,1.0,Milan,35,1986,6.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Terracciano Filippo,itITA,2.0,Hellas Verona,18,2003,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Terracciano Pietro,itITA,1.0,Fiorentina,31,1990,31.8,0,0,0,0,4,0,0,1,0,,,0,Matches
+Terzić Aleksa,rsSRB,2.0,Fiorentina,21,1999,3.0,1,0,0,4,2,0,21,5,5,,,0,Matches
+Tessmann Tanner,usUSA,3.0,Venezia,19,2001,7.6,1,1,0,10,8,0,4,4,4,,,0,Matches
+Theate Arthur,beBEL,2.0,Bologna,21,2000,26.9,6,0,0,26,11,1,17,41,21,,,0,Matches
+Thorsby Morten,noNOR,3.0,Sampdoria,25,1996,32.7,10,0,0,81,36,0,0,27,27,,,0,Matches
+Toljan Jeremy,deGER,2.0,Sassuolo,26,1994,15.5,2,0,0,8,7,0,23,15,10,,,0,Matches
+Tolói Rafael,itITA,2.0,Atalanta,30,1990,16.0,6,0,0,27,9,0,11,24,13,,,0,Matches
+Tomiyasu Takehiro,jpJPN,2.0,Bologna,22,1998,0.1,0,0,0,0,0,0,1,1,0,,,0,Matches
+Tomori Fikayo,engENG,2.0,Milan,23,1997,30.2,4,0,0,19,11,0,4,44,42,,,0,Matches
+Tonali Sandro,itITA,3.0,Milan,21,2000,28.9,9,0,0,45,50,3,107,36,37,,,0,Matches
+Tonelli Lorenzo,itITA,2.0,Empoli,31,1990,9.7,4,0,0,9,24,1,1,16,7,,,1,Matches
+Torregrossa Ernesto,veVEN,4.0,Sampdoria,29,1992,1.3,1,0,0,7,7,5,0,0,1,,,0,Matches
+Torreira Lucas,uyURU,3.0,Fiorentina,25,1996,24.4,10,1,1,38,44,2,6,26,27,,,0,Matches
+Touré Abdoulaye,gnGUI,3.0,Genoa,27,1994,4.8,1,0,0,3,9,0,3,5,4,,,0,Matches
+Trimboli Simone,itITA,3.0,Sampdoria,19,2002,0.7,1,0,0,2,0,0,0,2,1,,,0,Matches
+Tuanzebe Axel,cdCOD,2.0,Napoli,23,1997,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Udogie Destiny,itITA,2.4,Udinese,18,2002,27.5,4,0,0,36,34,4,16,25,40,,,0,Matches
+Ullmann Maximilian,atAUT,2.4,Venezia,25,1996,2.7,0,0,0,2,1,0,4,2,0,,,0,Matches
+Urbanski Kacper,plPOL,3.0,Bologna,16,2004,0.5,0,0,0,2,0,0,1,0,2,,,0,Matches
+Vacca Antonio,itITA,3.0,Venezia,31,1990,11.8,5,0,0,21,9,0,0,22,20,,,0,Matches
+Vanheusden Zinho,beBEL,2.0,Genoa,22,1999,11.0,3,0,0,10,10,0,5,24,7,,,1,Matches
+Vásquez Johan,mxMEX,2.0,Genoa,22,1998,25.3,7,0,0,31,26,1,17,45,50,,,0,Matches
+Vavro Denis,skSVK,2.0,Lazio,25,1996,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Vecino Matías,uyURU,3.0,Inter,29,1991,4.2,2,0,0,9,3,0,5,4,5,,,0,Matches
+Veloso Miguel,ptPOR,3.0,Hellas Verona,35,1986,14.9,7,1,1,18,6,0,73,11,14,,,0,Matches
+Venuti Lorenzo,itITA,2.0,Fiorentina,26,1995,17.5,4,0,0,15,32,0,29,5,11,,,1,Matches
+Verde Daniele,itITA,3.4,Spezia,25,1996,21.7,2,0,0,3,15,12,142,17,4,,,0,Matches
+Verdi Simone,itITA,3.5,Torino,29,1992,0.5,0,0,0,1,1,1,3,0,1,,,0,Matches
+Verdi Simone,itITA,3.4,Salernitana,29,1992,9.2,3,0,0,11,20,1,71,3,8,,,0,Matches
+Veretout Jordan,frFRA,3.0,Roma,28,1993,25.8,6,0,0,18,22,1,102,27,25,,,0,Matches
+Vergani Edoardo,itITA,3.0,Salernitana,20,2001,1.1,0,0,0,3,1,1,0,0,2,,,0,Matches
+Verre Valerio,itITA,3.0,Sampdoria,27,1994,4.7,0,0,0,8,10,0,16,0,6,,,0,Matches
+Verre Valerio,itITA,3.0,Empoli,27,1994,3.4,2,1,0,8,3,0,2,2,1,,,0,Matches
+Veseli Freddie,alALB,2.0,Salernitana,28,1992,6.6,3,1,1,7,1,0,4,4,2,,,0,Matches
+Vicario Guglielmo,itITA,1.0,Empoli,24,1996,38.0,1,0,0,1,6,0,0,1,1,,,0,Matches
+Vidal Arturo,clCHI,3.0,Inter,34,1987,8.2,3,0,0,17,10,1,5,7,12,,,0,Matches
+Vieira Ronaldo,gwGNB,3.0,Sampdoria,23,1998,5.5,3,0,0,11,4,0,1,5,6,,,0,Matches
+Vignali Luca,itITA,3.0,Spezia,25,1996,0.9,0,0,0,0,0,1,2,1,1,,,0,Matches
+Vignato Emanuel,itITA,3.0,Bologna,20,2000,6.6,2,0,0,5,3,0,12,3,7,,,0,Matches
+Viña Matías,uyURU,2.3,Roma,23,1997,17.4,2,0,0,9,20,2,34,25,31,,,0,Matches
+Viola Nicolas,itITA,3.0,Bologna,31,1989,1.1,0,0,0,2,2,0,5,0,2,,,0,Matches
+Viti Mattia,itITA,2.0,Empoli,19,2002,16.6,3,1,1,15,12,1,0,30,19,,,1,Matches
+Vlahović Dušan,rsSRB,4.0,Fiorentina,21,2000,20.6,2,0,0,19,49,19,16,1,0,,,0,Matches
+Vlahović Dušan,rsSRB,4.0,Juventus,21,2000,12.0,2,0,0,8,20,12,8,0,0,,,0,Matches
+Vojvoda Mërgim,xkKVX,3.0,Torino,26,1995,22.0,3,0,0,21,9,1,72,22,22,,,0,Matches
+Volpato Cristian,itITA,3.0,Roma,17,2003,0.4,0,0,0,1,1,0,2,0,1,,,0,Matches
+Vrij Stefan,nlNED,2.0,Inter,29,1992,26.8,3,0,0,18,6,0,2,32,30,,,1,Matches
+Walace,brBRA,3.0,Udinese,26,1995,33.0,6,1,0,47,37,1,9,56,48,,,0,Matches
+Walukiewicz Sebastian,plPOL,2.0,Cagliari,21,2000,3.4,1,0,0,4,3,0,1,7,5,,,0,Matches
+Warming Magnus,dkDEN,4.0,Torino,21,2000,0.6,0,0,0,1,0,1,5,0,1,,,0,Matches
+Yeboah Kelvin,itITA,3.5,Genoa,21,2000,9.4,2,0,0,28,30,7,10,1,8,,,0,Matches
+Yepes Gerard,esESP,3.0,Sampdoria,18,2002,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Yoshida Maya,jpJPN,2.0,Sampdoria,32,1988,20.3,2,0,0,20,9,0,5,31,13,,,1,Matches
+Zaccagni Mattia,itITA,3.0,Hellas Verona,26,1995,2.0,0,0,0,1,7,0,10,4,1,,,0,Matches
+Zaccagni Mattia,itITA,4.0,Lazio,26,1995,20.8,6,0,0,29,74,2,41,19,17,,,0,Matches
+Zakaria Denis,chSUI,3.0,Juventus,24,1996,6.6,1,0,0,11,4,0,5,10,7,,,0,Matches
+Zalewski Nicola,plPOL,3.0,Roma,19,2002,8.8,1,0,0,9,20,1,31,16,20,,,0,Matches
+Zambo Anguissa Andre-Frank,cmCMR,3.0,Napoli,25,1995,21.4,5,0,0,38,28,0,9,25,29,,,0,Matches
+Zaniolo Nicolò,itITA,3.5,Roma,22,1999,21.9,12,2,1,52,63,10,67,8,14,,,0,Matches
+Zanoli Alessandro,itITA,2.0,Napoli,20,2000,5.1,2,0,0,9,2,0,4,4,6,,,0,Matches
+Zanotti Mattia,itITA,2.0,Inter,18,2003,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Zapata Duván,coCOL,4.0,Atalanta,30,1991,19.1,3,0,0,30,26,10,25,4,2,,,0,Matches
+Zappa Gabriele,itITA,2.4,Cagliari,21,1999,12.7,4,1,1,16,11,0,25,14,10,,,0,Matches
+Zappacosta Davide,itITA,2.4,Atalanta,29,1992,26.1,6,0,0,32,31,7,86,13,21,,,0,Matches
+Zaza Simone,itITA,4.0,Torino,30,1991,1.4,1,0,0,5,2,2,1,0,2,,,0,Matches
+Zeegelaar Marvin,nlNED,2.3,Udinese,30,1990,7.1,2,0,0,13,4,2,2,11,10,,,0,Matches
+Zieliński Piotr,plPOL,3.0,Napoli,27,1994,23.2,1,0,0,19,28,0,35,8,12,,,0,Matches
+Zima David,czCZE,2.0,Torino,20,2000,14.6,3,0,0,16,5,1,3,23,14,,,0,Matches
+Zoet Jeroen,nlNED,1.0,Spezia,30,1991,7.0,0,0,0,1,3,0,0,0,0,,,0,Matches
+Zortea Nadir,itITA,2.4,Salernitana,22,1999,15.7,3,0,0,14,6,0,84,8,14,,,0,Matches
+Zovko Petar,baBIH,1.0,Spezia,19,2002,0.3,1,0,0,0,1,0,0,0,0,,,0,Matches
+Żurkowski Szymon,plPOL,3.0,Empoli,23,1997,25.6,5,0,0,41,67,0,23,35,33,,,0,Matches
+Đurić Milan,baBIH,4.0,Salernitana,31,1990,24.1,6,0,0,24,45,6,2,3,1,,,0,Matches
+Đuričić Filip,rsSRB,3.0,Sassuolo,29,1992,7.5,1,0,0,10,14,2,0,4,10,,,0,Matches

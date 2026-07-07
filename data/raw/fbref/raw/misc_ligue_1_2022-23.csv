@@ -1,0 +1,607 @@
+player,nationality,position,team,age,birth_year,minutes_90s,cards_yellow,cards_red,cards_yellow_red,fouls,fouled,offsides,crosses,interceptions,tackles_won,pens_won,pens_conceded,own_goals,matches
+Abdelhamid Yunis,maMAR,2.0,Reims,34,1987,37.0,6,0,0,48,27,2,5,62,52,,,0,Matches
+Abdelli Himad,dzALG,3.4,Angers,22,1999,23.7,3,0,0,45,31,1,35,28,36,,,0,Matches
+Abdul Samed Salis,ghGHA,3.0,Lens,22,2000,32.2,6,1,0,71,39,0,10,33,30,,,1,Matches
+Abergel Laurent,frFRA,3.0,Lorient,29,1993,26.0,7,1,1,28,29,0,6,32,49,,,0,Matches
+Abline Matthis,frFRA,4.0,Auxerre,19,2003,9.0,1,0,0,15,11,5,6,1,2,,,0,Matches
+Abline Matthis,frFRA,4.0,Rennes,19,2003,1.2,0,0,0,3,5,1,2,2,1,,,0,Matches
+Aboukhlal Zakaria,maMAR,3.4,Toulouse,22,2000,27.5,4,0,0,41,46,20,30,21,22,,,0,Matches
+Achi Mohamed,frFRA,3.0,Nantes,20,2002,0.4,0,0,0,2,0,0,1,0,1,,,0,Matches
+Adeline Martin,frFRA,3.0,Reims,18,2003,1.2,2,0,0,5,0,0,0,3,3,,,0,Matches
+Agbadou Emmanuel,ciCIV,2.0,Reims,25,1997,26.5,5,3,0,29,6,0,2,31,50,,,1,Matches
+Agoume Lucien,frFRA,3.0,Troyes,20,2002,12.2,5,0,0,30,8,1,9,25,23,,,0,Matches
+Aguilar Ruben,frFRA,2.0,Monaco,29,1993,13.0,3,0,0,15,14,1,39,16,10,,,0,Matches
+Ahmed Amar,seSWE,4.0,Troyes,18,2004,0.2,0,0,0,1,1,0,0,1,1,,,0,Matches
+Aholou Jean-Eudes,ciCIV,3.0,Strasbourg,28,1994,14.4,4,1,0,38,23,1,5,21,20,,,0,Matches
+Ajorque Ludovic,frFRA,4.0,Strasbourg,28,1994,8.6,1,0,0,14,8,1,0,1,4,,,0,Matches
+Akliouche Maghnes,frFRA,3.4,Monaco,20,2002,4.5,3,0,0,7,4,1,10,3,3,,,0,Matches
+Alemdar Doğan,trTUR,1.0,Rennes,19,2002,4.5,1,0,0,0,0,0,0,0,0,,,0,Matches
+Allevinah Jim,gaGAB,3.0,Clermont Foot,27,1995,24.9,2,0,0,22,52,1,64,21,26,,,0,Matches
+Alphonse Mickaël,gpGLP,2.0,Ajaccio,33,1989,15.1,2,1,0,19,15,0,27,33,23,,,1,Matches
+Amadou Ibrahim,frFRA,2.0,Angers,29,1993,4.7,2,0,0,4,3,0,1,10,6,,,0,Matches
+Amraoui Ayoub,maMAR,2.0,Nice,18,2004,3.3,1,0,0,5,2,0,14,3,6,,,0,Matches
+André Benjamin,frFRA,3.0,Lille,31,1990,32.4,12,0,0,57,40,1,13,42,78,,,0,Matches
+Andrić Komnen,rsSRB,4.0,Clermont Foot,27,1995,16.1,4,0,0,17,41,7,3,9,4,,,0,Matches
+Aouar Houssem,dzALG,3.4,Lyon,24,1998,5.8,2,0,0,7,5,0,6,7,5,,,0,Matches
+Aouchiche Adil,frFRA,3.0,Lorient,20,2002,2.8,0,0,0,4,5,0,18,4,2,,,0,Matches
+Appiah Dennis,frFRA,2.3,Nantes,30,1992,8.8,1,0,0,16,1,1,21,11,11,,,0,Matches
+Appuah Stredair,frFRA,4.0,Nantes,18,2004,0.7,0,0,0,0,2,0,2,1,3,,,0,Matches
+Arconte Taïryk,frFRA,4.0,Brest,18,2003,1.4,0,0,0,1,2,1,2,0,1,,,0,Matches
+Arouch Mohamed,frFRA,3.0,Lyon,18,2004,0.0,0,0,0,0,0,0,1,0,1,,,0,Matches
+Assignon Lorenz,tgTOG,2.0,Rennes,22,2000,2.9,3,0,0,4,4,0,4,2,3,,,0,Matches
+Atal Youcef,dzALG,2.3,Nice,26,1996,8.7,1,0,0,9,15,3,41,14,24,,,0,Matches
+Atangana Edoa Valentin,frFRA,3.0,Reims,16,2005,1.9,0,0,0,7,9,2,1,1,2,,,0,Matches
+Autret Mathias,frFRA,3.0,Auxerre,31,1991,14.3,0,0,0,7,4,2,66,8,10,,,0,Matches
+Avinel Cédric,gpGLP,2.0,Ajaccio,35,1986,19.9,2,1,0,12,2,0,0,16,6,,,0,Matches
+Bade Loïc,frFRA,2.0,Rennes,22,2000,1.0,1,0,0,3,1,0,0,2,1,,,0,Matches
+Badiashile Benoît,frFRA,2.0,Monaco,21,2001,9.3,3,0,0,10,4,0,0,17,9,,,0,Matches
+Bailly Eric,ciCIV,2.0,Marseille,28,1994,6.0,1,0,0,10,5,0,0,12,10,,,0,Matches
+Bain Dénys,frFRA,2.0,Auxerre,29,1993,1.4,0,0,0,2,1,0,0,2,3,,,0,Matches
+Baiye Brandon,beBEL,3.0,Clermont Foot,21,2000,0.6,0,0,0,0,0,0,0,0,2,,,0,Matches
+Bakambu Cédric,cdCOD,4.0,Marseille,31,1991,0.7,0,0,0,2,1,0,1,0,1,,,0,Matches
+Balde Thierno,frFRA,2.4,Troyes,20,2002,23.9,1,0,0,8,34,2,35,22,15,,,0,Matches
+Baleba Carlos,cmCMR,3.4,Lille,18,2004,5.3,3,1,0,13,18,0,1,1,11,,,0,Matches
+Balerdi Leonardo,arARG,2.0,Marseille,23,1999,29.3,9,1,0,54,21,0,5,57,40,,,1,Matches
+Balogun Folarin,usUSA,4.0,Reims,21,2001,33.3,5,0,0,38,55,28,23,3,4,,,0,Matches
+Bamba Abdoulaye,ciCIV,2.0,Angers,32,1990,15.2,2,0,0,10,13,4,19,16,12,,,0,Matches
+Bamba Jonathan,ciCIV,3.0,Lille,26,1996,30.9,6,0,0,35,58,12,79,19,16,,,0,Matches
+Barcola Bradley,frFRA,3.5,Lyon,19,2002,16.0,3,0,0,24,7,7,22,19,15,,,0,Matches
+Bard Melvin,frFRA,2.3,Nice,21,2000,27.3,6,0,0,30,20,2,69,59,61,,,0,Matches
+Barkley Ross,engENG,3.4,Nice,28,1993,10.7,1,0,0,14,15,1,45,7,8,,,0,Matches
+Barreto Mickaël,frFRA,3.0,Ajaccio,31,1991,14.7,1,0,0,20,8,0,77,14,22,,,0,Matches
+Bayala Cyrille,bfBFA,3.0,Ajaccio,26,1996,22.3,3,1,0,29,27,7,47,24,36,,,0,Matches
+Begraoui Yanis,maMAR,3.0,Toulouse,21,2001,0.7,0,0,0,0,0,0,0,1,0,,,0,Matches
+Beka Beka Alexis,frFRA,3.0,Nice,21,2001,6.1,2,0,0,11,7,0,18,11,6,,,0,Matches
+Bela Jérémie,aoANG,3.0,Clermont Foot,29,1993,8.3,0,0,0,7,17,0,35,8,4,,,0,Matches
+Belahyane Reda,maMAR,3.0,Nice,18,2004,2.0,0,0,0,5,1,0,0,2,6,,,0,Matches
+Belaïli Youcef,dzALG,3.4,Ajaccio,30,1992,12.8,2,0,0,25,24,4,42,6,10,,,0,Matches
+Belaïli Youcef,dzALG,3.4,Brest,30,1992,4.0,3,0,0,11,8,2,22,1,3,,,0,Matches
+Belkebla Haris,dzALG,3.0,Brest,28,1994,29.5,3,0,0,34,50,0,11,46,46,,,0,Matches
+Bellegarde Jean-Ricner,htHAI,3.4,Strasbourg,24,1998,26.9,5,0,0,36,73,1,125,21,25,,,0,Matches
+Belocian Jeanuël,frFRA,2.0,Rennes,17,2005,5.6,1,0,0,6,1,0,3,5,7,,,0,Matches
+Ben Seghir Eliesse,maMAR,3.5,Monaco,17,2005,11.7,1,0,0,17,33,3,8,3,10,,,0,Matches
+Ben Seghir Salim,frFRA,4.0,Marseille,19,2003,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Ben Yedder Wissam,frFRA,4.0,Monaco,31,1990,23.5,4,0,0,18,21,22,17,4,8,,,0,Matches
+Bentaleb Nabil,dzALG,3.0,Angers,27,1994,27.7,7,1,1,40,54,0,94,39,43,,,0,Matches
+Berg Patrick,noNOR,2.3,Lens,24,1997,0.3,0,0,0,1,0,0,0,1,0,,,0,Matches
+Bergen Mitchell,nlNED,3.4,Reims,22,1999,10.1,1,0,0,9,7,3,59,6,9,,,0,Matches
+Bernard Quentin,frFRA,2.0,Auxerre,33,1989,7.0,0,0,0,6,3,0,15,13,7,,,0,Matches
+Bernardoni Paul,frFRA,1.0,Angers,25,1997,27.0,0,0,0,1,2,0,0,1,1,,,0,Matches
+Bernat Juan,esESP,2.4,Paris Saint-Germain,29,1993,18.3,1,0,0,7,8,0,17,9,17,,,0,Matches
+Berthomier Jason,frFRA,3.0,Clermont Foot,32,1990,0.3,0,0,0,0,0,0,0,0,0,,,0,Matches
+Bilal Touré El,mlMLI,4.0,Reims,20,2001,1.0,0,0,0,3,1,0,0,0,0,,,0,Matches
+Billong Jean-Claude,cmCMR,2.0,Clermont Foot,28,1993,0.3,0,0,0,0,0,0,1,2,0,,,0,Matches
+Birmančević Veljko,rsSRB,3.4,Toulouse,24,1998,4.9,0,0,0,5,8,0,4,4,7,,,0,Matches
+Bizot Marco,nlNED,1.0,Brest,31,1991,37.0,4,0,0,0,4,0,0,0,0,,,0,Matches
+Blanco Rubén,esESP,1.0,Marseille,27,1995,5.5,0,0,0,0,1,0,0,0,0,,,0,Matches
+Blas Ludovic,frFRA,3.4,Nantes,24,1997,31.3,6,0,0,59,62,4,129,18,27,,,0,Matches
+Blažič Miha,siSVN,2.0,Angers,29,1993,22.0,4,0,0,12,16,0,1,18,6,,,1,Matches
+Blázquez Joaquín,arARG,1.0,Brest,21,2001,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Boadu Myron,nlNED,4.0,Monaco,21,2001,3.3,0,0,0,7,3,5,1,0,3,,,0,Matches
+Boateng Jérôme,deGER,2.0,Lyon,33,1988,4.8,0,0,0,1,0,0,1,7,0,,,1,Matches
+Bobichon Antonin,frFRA,3.5,Angers,26,1995,0.2,0,0,0,0,0,0,2,0,0,,,0,Matches
+Boisgard Quentin,frFRA,3.0,Lorient,25,1997,2.0,1,0,0,3,1,0,8,4,2,,,0,Matches
+Borges Neto,brBRA,2.4,Clermont Foot,25,1996,31.5,4,2,1,23,46,5,82,38,45,,,0,Matches
+Boto Kenji-Van,mgMAD,2.4,Auxerre,26,1996,2.0,0,0,0,2,4,0,4,2,2,,,0,Matches
+Botué Kouamé,bfBFA,4.0,Ajaccio,19,2002,2.5,0,0,0,5,6,0,0,0,2,,,0,Matches
+Bouanani Badredine,dzALG,3.5,Nice,17,2004,9.6,0,0,0,9,21,1,47,1,9,,,0,Matches
+Boudaoui Hicham,dzALG,3.0,Nice,22,1999,20.8,5,0,0,30,36,0,23,33,33,,,0,Matches
+Bouebari Franci,frFRA,3.0,Strasbourg,18,2003,0.8,0,0,0,2,0,0,1,1,0,,,0,Matches
+Boufal Sofiane,maMAR,3.4,Angers,28,1993,9.3,3,1,1,19,20,2,40,5,9,,,0,Matches
+Boura Ismaël,kmCOM,2.0,Lens,21,2000,1.0,0,0,0,0,3,0,7,2,3,,,0,Matches
+Bourigeaud Benjamin,frFRA,3.4,Rennes,28,1994,34.1,6,1,1,35,13,2,230,28,26,,,0,Matches
+Brahimi Bilal,dzALG,3.5,Nice,22,2000,8.9,0,0,0,3,8,6,75,4,5,,,0,Matches
+Brassier Lilian,frFRA,2.0,Brest,22,1999,34.4,5,0,0,42,15,0,33,51,30,,,0,Matches
+Bruus Andreas,dkDEN,2.4,Troyes,23,1999,18.1,2,0,0,11,7,2,65,15,7,,,0,Matches
+Bryan Joe,engENG,3.0,Nice,28,1993,2.0,3,0,0,4,3,1,3,1,4,,,0,Matches
+Buksa Adam,plPOL,4.0,Lens,26,1996,1.1,0,0,0,6,1,0,1,0,0,,,0,Matches
+Busi Maxime,beBEL,2.4,Reims,22,1999,11.6,4,0,0,19,6,0,28,16,15,,,0,Matches
+Bułka Marcin,plPOL,1.0,Nice,22,1999,2.0,0,0,0,0,0,0,0,1,0,,,0,Matches
+Cabella Rémy,frFRA,3.0,Lille,32,1990,28.1,3,0,0,25,44,2,161,16,37,,,0,Matches
+Cabot Jimmy,frFRA,3.0,Lens,28,1994,5.7,2,0,0,14,0,1,52,4,12,,,0,Matches
+Cajuste Jens,seSWE,3.0,Reims,22,1999,17.0,8,1,1,34,29,0,8,17,27,,,0,Matches
+Ćaleta-Car Duje,hrCRO,2.0,Marseille,25,1996,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Camara Mahdi,frFRA,3.0,Brest,24,1998,20.2,4,1,0,23,32,0,14,39,37,,,0,Matches
+Camara Mohamed,mlMLI,3.0,Monaco,22,2000,24.4,6,1,0,44,59,0,5,27,43,,,0,Matches
+Camara Ousmane,gnGUI,4.0,Auxerre,20,2001,0.3,1,0,0,2,0,0,2,0,1,,,0,Matches
+Camara Ousmane,mlMLI,2.0,Angers,19,2003,5.8,2,0,0,5,2,0,0,11,6,,,0,Matches
+Camblan Axel,frFRA,4.0,Brest,18,2003,0.8,0,0,0,4,1,0,2,0,2,,,0,Matches
+Capelle Pierrick,frFRA,2.4,Angers,35,1987,15.9,8,0,0,31,6,0,45,15,22,,,0,Matches
+Caqueret Maxence,frFRA,3.0,Lyon,22,2000,30.7,2,0,0,48,31,4,96,38,56,,,0,Matches
+Cardona Irvin,mtMLT,4.0,Brest,24,1997,2.6,0,0,0,5,2,5,1,2,0,,,0,Matches
+Carioca Igor,brBRA,2.3,Lorient,25,1996,5.1,2,1,0,7,5,0,14,4,12,,,0,Matches
+Carvalho Matis,ptPOR,1.0,Montpellier,23,1999,1.5,0,0,0,0,0,0,0,1,0,,,0,Matches
+Castelletto Jean-Charles,cmCMR,2.0,Nantes,27,1995,28.5,3,0,0,28,17,0,13,54,29,,,0,Matches
+Cathline Yoann,frFRA,3.0,Lorient,20,2002,12.1,0,0,0,12,28,1,47,8,12,,,0,Matches
+Caufriez Maximiliano,beBEL,2.0,Clermont Foot,25,1997,24.7,10,1,1,29,35,1,2,28,25,,,0,Matches
+Centonze Fabien,frFRA,2.3,Nantes,26,1996,18.8,4,0,0,15,21,0,67,42,39,,,0,Matches
+Chabrolle Florian,frFRA,3.0,Ajaccio,24,1998,3.7,1,0,0,2,1,0,1,7,5,,,0,Matches
+Chadaille Bitshiabu El,frFRA,2.0,Paris Saint-Germain,17,2005,6.5,2,0,0,4,0,0,0,8,8,,,0,Matches
+Chaïbi Fares,dzALG,3.4,Toulouse,19,2002,26.0,2,0,0,33,22,8,56,15,17,,,0,Matches
+Cham Muhammed,atAUT,3.0,Clermont Foot,21,2000,21.9,2,0,0,17,40,1,74,8,15,,,0,Matches
+Charbonnier Gaëtan,frFRA,4.0,Auxerre,33,1988,2.8,1,0,0,3,1,3,1,0,1,,,0,Matches
+Chardonnet Brendan,frFRA,2.0,Brest,27,1994,27.7,6,0,0,38,28,0,5,59,28,,,1,Matches
+Chavalerin Xavier,frFRA,3.0,Troyes,31,1991,27.0,3,0,0,31,12,2,28,38,49,,,0,Matches
+Chegra Ivane,frFRA,3.0,Ajaccio,18,2004,2.1,0,0,0,3,3,2,4,1,4,,,0,Matches
+Cherki Rayan,frFRA,3.4,Lyon,18,2003,20.8,3,0,0,15,32,4,91,5,8,,,0,Matches
+Cheti Ilyes,dzALG,2.0,Angers,27,1995,2.3,1,0,0,4,1,0,6,4,4,,,0,Matches
+Chevalier Lucas,frFRA,1.0,Lille,20,2001,32.0,1,0,0,0,5,0,0,2,1,,,0,Matches
+Chirivella Pedro,esESP,3.0,Nantes,25,1997,22.5,1,0,0,20,18,0,13,23,24,,,0,Matches
+Chotard Joris,frFRA,3.0,Montpellier,20,2001,27.3,4,0,0,33,19,3,33,39,33,,,0,Matches
+Cimignani Yanis,frFRA,3.0,Ajaccio,20,2002,3.1,0,0,0,5,2,0,10,2,5,,,0,Matches
+Cissé Souleymane,frFRA,2.0,Clermont Foot,19,2002,0.4,0,0,0,2,1,0,0,1,1,,,0,Matches
+Claude-Maurice Alexis,frFRA,3.0,Nice,24,1998,0.7,0,0,0,0,2,0,0,2,3,,,0,Matches
+Claude-Maurice Alexis,frFRA,3.4,Lens,24,1998,6.7,0,0,0,7,16,0,7,2,11,,,0,Matches
+Clauss Jonathan,frFRA,3.0,Marseille,29,1992,28.8,1,0,0,26,11,2,111,33,29,,,0,Matches
+Coco Marcus,frFRA,3.4,Nantes,26,1996,7.1,2,0,0,19,10,3,25,14,14,,,0,Matches
+Coeff Alexandre,frFRA,2.0,Auxerre,30,1992,6.5,0,0,0,3,1,0,5,7,5,,,0,Matches
+Conté Abdu,ptPOR,2.3,Troyes,24,1998,14.6,0,0,0,12,12,4,37,6,20,,,0,Matches
+Corchia Sébastien,frFRA,2.3,Nantes,31,1990,8.7,3,0,0,16,18,1,44,14,6,,,0,Matches
+Costa David,ptPOR,3.4,Lens,21,2001,15.6,2,0,0,13,14,0,51,9,7,,,0,Matches
+Costa Logan,cvCPV,2.0,Toulouse,21,2001,4.6,0,0,0,2,4,0,0,4,4,,,1,Matches
+Costa Nuno,cvCPV,3.5,Auxerre,31,1991,22.3,5,1,1,38,56,5,15,20,23,,,0,Matches
+Costil Benoît,frFRA,1.0,Auxerre,35,1987,19.0,0,0,0,0,0,0,0,0,1,,,0,Matches
+Coutadeur Mathieu,frFRA,3.0,Ajaccio,36,1986,21.6,2,0,0,5,13,0,6,18,15,,,0,Matches
+Cozza Nicolas,frFRA,2.0,Montpellier,23,1999,14.2,3,0,0,8,19,3,14,19,21,,,0,Matches
+Da Silva Damien,frFRA,2.0,Lyon,34,1988,3.8,2,0,0,7,2,0,2,3,7,,,0,Matches
+Dacourt Andréa,frFRA,3.0,Nice,17,2005,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Dagba Colin,frFRA,2.4,Strasbourg,23,1998,10.6,3,0,0,14,6,1,35,17,19,,,0,Matches
+Dallinga Thijs,nlNED,4.0,Toulouse,21,2000,26.1,4,0,0,35,19,22,20,3,7,,,0,Matches
+Daniliuc Flavius,atAUT,2.0,Nice,21,2001,1.0,0,0,0,2,0,0,2,0,0,,,0,Matches
+Danois Kévin,frFRA,3.0,Auxerre,18,2004,0.0,0,0,0,0,0,0,0,0,1,,,0,Matches
+Danso Kevin,atAUT,2.0,Lens,23,1998,35.9,7,1,0,39,57,2,0,28,23,,,0,Matches
+Dante,brBRA,2.0,Nice,38,1983,36.7,6,0,0,37,18,0,2,40,42,,,0,Matches
+Dari Achraf,maMAR,2.0,Brest,23,1999,14.6,1,0,0,13,12,2,1,16,14,,,0,Matches
+David Jonathan,caCAN,3.5,Lille,22,2000,35.2,6,0,0,40,59,23,8,7,18,,,0,Matches
+De Smet Thibault,beBEL,2.0,Reims,24,1998,19.5,2,0,0,25,9,3,48,18,17,,,0,Matches
+Dejaegere Brecht,beBEL,3.0,Toulouse,31,1991,20.1,5,0,0,40,37,2,20,12,23,,,0,Matches
+Del Castillo Romain,frFRA,3.4,Brest,26,1996,15.8,2,0,0,19,24,1,104,11,25,,,0,Matches
+Delaine Thomas,frFRA,3.0,Strasbourg,30,1992,11.9,3,0,0,16,13,0,66,15,13,,,0,Matches
+Delaye Sacha,frFRA,3.0,Montpellier,20,2002,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Delort Andy,dzALG,4.0,Nice,30,1991,8.7,0,0,0,8,9,7,16,1,0,,,0,Matches
+Delort Andy,dzALG,4.0,Nantes,30,1991,5.2,0,0,0,9,4,4,17,0,4,,,0,Matches
+Dembélé Karamoko,engENG,3.5,Brest,19,2003,2.0,0,0,0,5,9,0,13,1,0,,,0,Matches
+Dembélé Moussa,frFRA,4.0,Lyon,26,1996,9.7,1,0,0,17,3,8,2,1,4,,,0,Matches
+Dembélé Siriki,ciCIV,3.0,Auxerre,25,1996,4.1,1,0,0,8,9,0,6,1,5,,,0,Matches
+den Boomen Branco,nlNED,3.0,Toulouse,27,1995,32.1,6,0,0,34,19,2,283,10,40,,,0,Matches
+Descamps Rémy,frFRA,1.0,Nantes,26,1996,1.0,1,0,0,0,0,0,0,0,0,,,0,Matches
+Desler Mikkel,dkDEN,2.0,Toulouse,27,1995,25.1,5,1,1,29,32,6,43,34,44,,,0,Matches
+Diakhon Mamadou,frFRA,4.0,Reims,16,2005,0.2,0,0,0,0,0,0,0,1,0,,,0,Matches
+Diakité Bafodé,frFRA,2.0,Lille,21,2001,29.5,6,0,0,45,13,0,19,17,36,,,1,Matches
+Diakité Ibrahim,gnGUI,2.0,Reims,18,2003,1.5,1,0,0,3,2,0,7,3,3,,,0,Matches
+Diallo Baila,frFRA,2.0,Clermont Foot,21,2001,1.0,0,0,0,3,1,0,5,0,0,,,0,Matches
+Diallo Habib,snSEN,4.0,Strasbourg,27,1995,32.0,4,1,1,38,62,19,7,10,10,,,0,Matches
+Diallo Ismael,ciCIV,2.0,Ajaccio,25,1997,24.2,9,1,0,41,33,1,35,30,32,,,0,Matches
+Diarra Habib,snSEN,3.4,Strasbourg,18,2004,18.1,4,0,0,23,22,0,50,11,16,,,0,Matches
+Diarra Moussa,mlMLI,2.0,Toulouse,21,2000,13.6,0,0,0,19,17,1,14,18,10,,,0,Matches
+Diarra Stéphane,frFRA,3.4,Lorient,23,1998,11.8,1,0,0,7,21,4,15,18,17,,,0,Matches
+Diatta Krépin,snSEN,3.0,Monaco,23,1999,23.0,3,0,0,20,26,10,55,15,19,,,0,Matches
+Diaw Mory,snSEN,1.0,Clermont Foot,29,1993,37.0,0,0,0,0,6,0,0,3,0,,,0,Matches
+Dieng Bamba,snSEN,4.0,Marseille,22,2000,2.2,1,0,0,8,6,1,1,0,4,,,0,Matches
+Dieng Bamba,snSEN,3.5,Lorient,22,2000,8.3,1,0,0,21,31,5,5,1,10,,,0,Matches
+Dingomé Tristan,cmCMR,2.3,Troyes,31,1991,1.1,0,0,0,1,1,0,5,0,2,,,0,Matches
+Diomande Sinaly,ciCIV,2.0,Lyon,21,2001,21.7,2,1,0,23,22,1,2,45,26,,,0,Matches
+Diony Lois,frFRA,4.0,Angers,29,1992,5.6,1,0,0,10,4,3,3,0,0,,,0,Matches
+Diop Edan,frFRA,3.0,Monaco,17,2004,2.5,0,0,0,7,4,0,7,4,8,,,0,Matches
+Diop Sofiane,maMAR,3.4,Nice,22,2000,13.6,1,0,0,8,27,2,46,16,11,,,0,Matches
+Diop Sofiane,maMAR,3.0,Monaco,22,2000,0.7,0,0,0,0,2,1,8,1,0,,,0,Matches
+Diouf Yehvann,snSEN,1.0,Reims,22,1999,31.0,2,0,0,0,10,0,0,1,1,,,0,Matches
+Disasi Axel,frFRA,2.0,Monaco,24,1998,37.0,3,0,0,31,12,0,13,56,18,,,0,Matches
+Djaló Tiago,ptPOR,2.0,Lille,22,2000,22.4,7,0,0,19,18,1,3,21,24,,,1,Matches
+Djiku Alexander,ghGHA,2.0,Strasbourg,27,1994,29.7,8,1,0,40,27,1,6,64,37,,,0,Matches
+Djitte Moussa,snSEN,4.0,Ajaccio,22,1999,1.5,0,0,0,4,3,0,0,0,0,,,0,Matches
+Djoco Ouparine,gwGNB,1.0,Clermont Foot,24,1998,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Do Marcolino Alan,gaGAB,4.0,Rennes,20,2002,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Doku Jeremy,beBEL,3.4,Rennes,20,2002,14.3,0,0,0,17,36,0,24,4,16,,,0,Matches
+Dong Kyliane,frFRA,3.4,Troyes,17,2004,2.4,0,0,0,2,2,3,6,1,1,,,0,Matches
+Dongmo Jordan,cmCMR,3.0,Troyes,21,2001,0.2,0,0,0,0,1,0,0,0,0,,,0,Matches
+Donnarumma Gianluigi,itITA,1.0,Paris Saint-Germain,23,1999,37.9,3,0,0,1,4,0,0,0,0,,,0,Matches
+Dossou Jodel,bjBEN,3.0,Clermont Foot,30,1992,2.9,0,0,0,3,3,3,10,1,4,,,0,Matches
+Doucet Lohann,frFRA,3.0,Nantes,19,2002,1.0,0,0,0,2,0,0,0,2,0,,,0,Matches
+Doucouré Siriné,mlMLI,4.0,Lorient,20,2002,1.5,0,0,0,8,9,0,0,1,2,,,0,Matches
+Doué Désiré,frFRA,3.4,Rennes,17,2005,12.4,5,0,0,37,28,3,30,13,18,,,0,Matches
+Doué Guela,ciCIV,2.0,Rennes,19,2002,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Doukouré Ismaël,frFRA,2.3,Strasbourg,19,2003,25.5,5,0,0,30,27,0,11,26,23,,,0,Matches
+Doumbia Kamory,mlMLI,3.0,Reims,19,2003,12.8,0,0,0,14,6,0,10,13,15,,,0,Matches
+Doumbia Souleyman,ciCIV,2.3,Angers,25,1996,19.9,2,1,0,27,20,3,48,24,33,,,0,Matches
+Dugimont Rémy,frFRA,3.5,Auxerre,36,1986,1.3,1,0,0,5,1,2,0,0,0,,,0,Matches
+Dupé Maxime,frFRA,1.0,Toulouse,29,1993,38.0,2,0,0,1,4,0,0,0,0,,,0,Matches
+Duverne Jean-Kevin,htHAI,2.0,Brest,25,1997,27.9,2,0,0,38,20,4,84,28,41,,,0,Matches
+Ekitike Hugo,frFRA,4.0,Paris Saint-Germain,20,2002,12.8,0,0,0,15,14,7,2,9,4,,,0,Matches
+Elis Alberth,hnHON,3.0,Brest,26,1996,2.9,0,0,0,8,5,1,2,1,2,,,0,Matches
+Embolo Breel,chSUI,4.0,Monaco,25,1997,20.7,3,0,0,50,56,13,3,5,12,,,0,Matches
+Estève Maxime,frFRA,2.0,Montpellier,20,2002,18.3,3,0,0,18,7,0,1,34,15,,,1,Matches
+Fábio,brBRA,2.3,Nantes,32,1990,2.5,1,1,0,3,1,0,6,3,1,,,0,Matches
+Fadiga Noah,snSEN,2.0,Brest,22,1999,14.5,2,0,0,21,18,1,9,27,21,,,0,Matches
+Faes Wout,beBEL,2.0,Reims,24,1998,3.0,2,0,0,2,3,0,0,6,1,,,1,Matches
+Faivre Romain,frFRA,3.0,Lorient,24,1998,13.8,0,0,0,12,35,1,26,0,7,,,0,Matches
+Faivre Romain,frFRA,3.0,Lyon,24,1998,3.3,0,0,0,7,4,0,18,0,3,,,0,Matches
+Fall Fallou,snSEN,2.0,Reims,18,2004,0.4,1,0,0,1,1,0,0,0,0,,,0,Matches
+Fayad Khalil,frFRA,3.0,Montpellier,18,2004,8.0,1,1,0,17,16,0,10,9,15,,,0,Matches
+Faye Cheikh,snSEN,2.0,Montpellier,23,1999,0.4,0,0,0,0,1,0,0,1,0,,,0,Matches
+Ferri Jordan,frFRA,3.0,Montpellier,30,1992,30.4,7,1,1,47,61,1,31,22,39,,,0,Matches
+Fila Karol,plPOL,2.0,Strasbourg,24,1998,0.5,0,0,0,0,0,0,3,1,0,,,0,Matches
+Flips Alexis,frFRA,2.4,Reims,22,2000,22.0,3,1,0,23,23,2,142,22,29,,,0,Matches
+Fofana Seko,ciCIV,3.0,Lens,27,1995,34.1,2,0,0,23,44,3,54,20,14,,,0,Matches
+Fofana Yahia,ciCIV,1.0,Angers,21,2000,11.0,2,0,0,0,1,0,0,1,0,,,0,Matches
+Fofana Youssouf,frFRA,3.0,Monaco,23,1999,34.3,4,2,1,50,39,2,8,54,42,,,1,Matches
+Foket Thomas,beBEL,2.0,Reims,27,1994,22.0,0,0,0,27,22,3,55,28,25,,,0,Matches
+Fonte José,ptPOR,2.0,Lille,38,1983,28.8,7,0,0,26,9,0,3,22,17,,,1,Matches
+Fortes Steven,cvCPV,2.0,Lens,30,1992,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Frankowski Przemysław,plPOL,3.0,Lens,27,1995,31.5,4,0,0,34,17,6,255,33,55,,,0,Matches
+Fulgini Angelo,frFRA,3.4,Lens,25,1996,9.5,0,0,0,11,30,0,63,8,9,,,0,Matches
+Gallon Gauthier,frFRA,1.0,Troyes,29,1993,29.6,3,1,0,2,5,0,0,1,2,,,0,Matches
+Gameiro Kévin,frFRA,4.0,Strasbourg,35,1987,23.3,1,1,0,15,15,4,20,9,9,,,0,Matches
+Ganago Ignatius,cmCMR,3.5,Nantes,23,1999,16.9,0,0,0,15,32,8,24,3,7,,,0,Matches
+Ganago Ignatius,cmCMR,3.5,Lens,23,1999,0.7,0,0,0,1,0,1,0,0,0,,,0,Matches
+Gastien Johan,frFRA,3.0,Clermont Foot,34,1988,28.9,7,0,0,18,32,0,67,36,37,,,0,Matches
+Genreau Denis,auAUS,3.0,Toulouse,23,1999,7.3,3,0,0,9,4,3,17,7,14,,,0,Matches
+Germain Valère,frFRA,3.5,Montpellier,32,1990,7.6,1,1,0,10,4,2,6,6,11,,,0,Matches
+Gerson,brBRA,3.0,Marseille,25,1997,4.6,1,0,0,16,16,1,3,2,5,,,0,Matches
+Gharbi Ismaël,tnTUN,3.0,Paris Saint-Germain,18,2004,0.6,1,0,0,3,4,0,0,3,0,,,0,Matches
+Ghoulam Faouzi,dzALG,2.0,Angers,31,1991,5.3,0,0,0,4,5,2,37,3,1,,,0,Matches
+Gigot Samuel,frFRA,2.0,Marseille,28,1993,20.9,5,2,1,44,14,1,0,46,23,,,0,Matches
+Girotto Andrei,brBRA,2.3,Nantes,30,1992,35.0,7,0,0,53,35,1,9,68,75,,,0,Matches
+Golovin Aleksandr,ruRUS,3.0,Monaco,26,1996,27.4,5,0,0,37,23,6,112,34,36,,,0,Matches
+Gomes André,ptPOR,3.0,Lille,29,1993,18.1,6,0,0,49,17,1,11,10,19,,,0,Matches
+Gomes Angel,engENG,3.0,Lille,21,2000,31.3,8,0,0,53,49,0,49,12,18,,,0,Matches
+Gonalons Maxime,frFRA,3.0,Clermont Foot,33,1989,16.1,3,0,0,22,22,0,3,18,33,,,0,Matches
+Gonzalez Oumar,cmCMR,2.0,Ajaccio,24,1998,28.6,10,0,0,45,43,3,3,51,29,,,0,Matches
+Gouiri Amine,dzALG,3.4,Nice,22,2000,2.5,0,0,0,2,2,0,7,0,1,,,0,Matches
+Gouiri Amine,dzALG,3.5,Rennes,22,2000,28.0,4,0,0,39,18,8,13,13,26,,,0,Matches
+Gradit Jonathan,frFRA,2.0,Lens,29,1992,31.4,7,0,0,31,38,0,15,37,42,,,0,Matches
+Gravillon Andrew,gpGLP,2.0,Reims,24,1998,11.5,3,0,0,19,14,0,16,20,6,,,0,Matches
+Grbić Adrian,atAUT,3.5,Lorient,25,1996,0.3,0,0,0,3,0,0,0,0,0,,,0,Matches
+Gudmundsson Gabriel,seSWE,2.3,Lille,23,1999,9.3,3,0,0,17,21,3,33,11,11,,,0,Matches
+Gueguin Axel,frFRA,4.0,Montpellier,17,2005,0.3,0,0,0,0,0,0,1,0,0,,,0,Matches
+Guendouzi Mattéo,frFRA,3.0,Marseille,23,1999,23.4,3,0,0,25,37,1,22,21,19,,,1,Matches
+Guessand Evann,ciCIV,3.4,Nantes,21,2001,14.0,2,0,0,31,20,6,31,9,17,,,0,Matches
+Gueye Pape,snSEN,3.0,Marseille,23,1999,5.5,1,0,0,10,12,1,3,7,7,,,0,Matches
+Guilbert Frederic,frFRA,2.4,Strasbourg,27,1994,16.2,3,0,0,27,19,0,55,43,30,,,0,Matches
+Guirassy Serhou,gnGUI,4.0,Rennes,26,1996,0.3,0,0,0,0,0,0,0,0,0,,,0,Matches
+Guitane Rafik,frFRA,3.5,Reims,23,1999,0.0,0,0,0,1,0,0,0,0,0,,,0,Matches
+Gusto Malo,frFRA,2.3,Lyon,19,2003,17.7,1,0,0,20,24,2,115,24,29,,,1,Matches
+Hadjam Jaouen,dzALG,2.3,Nantes,19,2003,8.9,1,0,0,9,12,0,28,12,21,,,1,Matches
+Haïdara Massadio,mlMLI,2.3,Lens,29,1992,18.6,5,0,0,20,26,4,25,34,15,,,0,Matches
+Hakimi Achraf,maMAR,2.4,Paris Saint-Germain,23,1998,22.8,7,2,1,29,19,5,42,16,37,,,0,Matches
+Hamdi Mathis,frFRA,2.0,Troyes,18,2003,0.8,0,0,0,1,1,0,3,1,0,,,0,Matches
+Hamed Touré Ben,ciCIV,4.0,Ajaccio,18,2003,2.3,0,0,0,7,5,0,0,1,4,,,0,Matches
+Hamouma Romain,frFRA,4.0,Ajaccio,35,1987,12.0,5,2,2,18,15,4,55,2,4,,,0,Matches
+Hamulic Saïd,baBIH,4.0,Toulouse,21,2000,1.2,1,0,0,2,1,1,1,0,0,,,0,Matches
+Harit Amine,maMAR,3.4,Marseille,25,1997,5.7,1,0,0,2,13,2,16,2,4,,,0,Matches
+Healey Rhys,wlsWAL,4.0,Toulouse,27,1994,0.7,1,0,0,0,0,0,0,0,0,,,0,Matches
+Hein Gauthier,frFRA,3.0,Auxerre,25,1996,20.8,1,0,0,21,14,2,100,5,21,,,0,Matches
+Henrique,brBRA,2.3,Lyon,28,1994,4.0,0,0,0,5,11,1,4,5,5,,,0,Matches
+Hérelle Christophe,mqMTQ,2.0,Brest,29,1992,11.8,2,0,0,13,14,0,2,18,6,,,1,Matches
+Holm Noah,noNOR,4.0,Reims,21,2001,2.2,1,0,0,6,9,1,0,0,3,,,0,Matches
+Honorat Franck,frFRA,3.4,Brest,25,1996,28.2,1,0,0,23,18,9,211,19,26,,,0,Matches
+Hountondji Cédric,bjBEN,2.0,Angers,28,1994,34.4,7,0,0,42,11,0,2,60,38,,,2,Matches
+Housni Ilyes,frFRA,4.0,Paris Saint-Germain,17,2005,0.1,0,0,0,0,1,0,0,0,1,,,0,Matches
+Hunou Adrien,frFRA,3.4,Angers,28,1994,24.8,2,0,0,15,44,5,16,7,21,,,0,Matches
+Idrissy Mounaim,frFRA,4.0,Ajaccio,23,1999,27.7,10,0,0,82,80,23,21,13,21,,,0,Matches
+Ilie Rareş,roROU,3.0,Nice,19,2003,1.6,0,0,0,0,0,1,1,1,3,,,0,Matches
+Innocent Bonke,ngNGA,3.0,Lorient,26,1996,13.1,5,0,0,38,10,0,0,25,20,,,0,Matches
+Ismaily,brBRA,2.3,Lille,32,1990,19.8,0,0,0,14,22,2,15,20,18,,,0,Matches
+Ito Junya,jpJPN,3.4,Reims,29,1993,32.4,3,1,0,20,41,31,200,8,20,,,0,Matches
+Jakobs Ismail,snSEN,2.4,Monaco,22,1999,12.4,3,0,0,14,10,1,60,9,6,,,0,Matches
+Jakoliš Marin,hrCRO,3.5,Angers,25,1996,0.3,0,0,0,1,0,0,2,0,1,,,0,Matches
+Jardim Léo,brBRA,1.0,Lille,27,1995,6.0,0,0,0,1,0,0,0,0,0,,,0,Matches
+Javier Suárez Luis,coCOL,4.0,Marseille,24,1997,3.3,1,0,0,6,5,0,0,3,1,,,0,Matches
+Jean Dany,htHAI,3.0,Strasbourg,19,2002,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Jeanvier Julian,gnGUI,2.0,Auxerre,30,1992,19.6,5,1,1,26,10,0,2,25,18,,,0,Matches
+Jeffinho,brBRA,3.4,Lyon,22,1999,5.0,1,0,0,8,10,0,3,1,4,,,0,Matches
+Joly Paul,frFRA,2.0,Auxerre,22,2000,9.6,2,0,0,7,9,0,36,21,23,,,0,Matches
+Jubal,brBRA,2.0,Auxerre,28,1993,35.7,7,0,0,38,24,4,4,47,26,,,0,Matches
+Jullien Christopher,frFRA,2.0,Montpellier,29,1993,29.9,5,0,0,33,6,3,0,40,28,,,0,Matches
+Junior Kroupi Eli,frFRA,4.0,Lorient,16,2006,0.1,0,0,0,0,1,0,0,1,0,,,0,Matches
+Kaboré Issa,bfBFA,3.0,Marseille,21,2001,11.4,1,0,0,24,19,2,46,9,18,,,0,Matches
+Kader Bamba Abdoul,frFRA,3.0,Nantes,28,1994,0.9,0,1,0,3,2,1,3,0,0,,,0,Matches
+Kakuta Gaël,cdCOD,3.5,Lens,31,1991,0.2,0,0,0,0,1,0,1,0,0,,,0,Matches
+Kalimuendo Arnaud,frFRA,4.0,Rennes,20,2002,20.5,0,0,0,15,24,7,14,2,8,,,0,Matches
+Kalulu Gedeon,cdCOD,2.3,Lorient,24,1997,27.1,6,0,0,30,18,2,28,25,35,,,0,Matches
+Kalumba Justin-Noël,frFRA,2.0,Angers,17,2004,6.1,0,0,0,3,9,0,13,4,4,,,0,Matches
+Kamanzi Warren,noNOR,2.3,Toulouse,21,2000,7.4,1,0,0,7,7,0,6,8,10,,,0,Matches
+Kamara Bingourou,snSEN,1.0,Montpellier,25,1996,4.5,1,0,0,1,1,0,0,0,0,,,0,Matches
+Kandil Nordine,frFRA,3.0,Strasbourg,20,2001,1.1,0,0,0,1,3,0,4,1,2,,,0,Matches
+Kari Ayman,frFRA,3.0,Lorient,17,2004,1.1,0,0,0,1,5,1,0,2,0,,,0,Matches
+Keben Biakolo Kévin,cmCMR,2.3,Toulouse,18,2004,4.0,1,0,0,2,5,0,6,4,2,,,0,Matches
+Keita Check,frFRA,2.0,Reims,19,2003,7.6,1,0,0,6,7,1,0,3,8,,,0,Matches
+Khaoui Saîf-Eddine,tnTUN,3.0,Clermont Foot,27,1995,22.5,4,0,0,25,37,7,58,32,28,,,0,Matches
+Khazri Wahbi,tnTUN,3.4,Montpellier,31,1991,18.2,5,1,0,20,36,13,39,8,15,,,0,Matches
+Khelifa Anthony,dzALG,2.0,Ajaccio,16,2005,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Kimpembe Presnel,frFRA,2.0,Paris Saint-Germain,26,1995,8.1,3,0,0,22,9,1,0,11,9,,,0,Matches
+Koeberlé Samuel,frFRA,3.0,Reims,17,2004,0.0,0,0,0,0,0,0,1,0,0,,,0,Matches
+Kohon Rudy,frFRA,2.0,Troyes,18,2004,0.7,0,0,0,0,0,0,0,1,3,,,0,Matches
+Kolašinac Sead,baBIH,2.3,Marseille,29,1993,24.6,3,0,0,40,15,4,20,41,34,,,0,Matches
+Konaté Cheick,mlMLI,2.0,Clermont Foot,18,2004,6.4,2,0,0,9,4,0,4,13,13,,,0,Matches
+Koné Ibrahima,mlMLI,4.0,Lorient,23,1999,17.5,3,0,0,30,24,14,1,3,15,,,0,Matches
+Koné Youssouf,mlMLI,2.0,Ajaccio,27,1995,10.2,4,0,0,14,17,0,28,11,21,,,0,Matches
+Kouamé Rominigue,mlMLI,3.0,Troyes,25,1996,29.6,9,0,0,52,48,0,4,47,27,,,0,Matches
+Kouyaté Boubakar,mlMLI,2.0,Montpellier,25,1997,14.0,5,0,0,21,15,0,1,31,19,,,0,Matches
+Kumbedi Sael,frFRA,2.3,Lyon,17,2005,14.7,8,0,0,37,21,4,32,11,28,,,0,Matches
+Kyei Grejohn,frFRA,4.0,Clermont Foot,26,1995,24.8,3,0,0,59,42,15,7,7,6,,,0,Matches
+Labeau Lascary Rémy,gpGLP,3.0,Lens,19,2003,1.4,0,0,0,4,0,0,3,1,3,,,0,Matches
+Laborde Gaëtan,frFRA,4.0,Nice,28,1994,27.8,0,0,0,27,28,7,70,9,27,,,0,Matches
+Laborde Gaëtan,frFRA,4.0,Rennes,28,1994,2.8,0,0,0,0,1,0,3,0,1,,,0,Matches
+Lacazette Alexandre,frFRA,4.0,Lyon,31,1991,32.5,3,0,0,64,56,15,35,13,22,,,0,Matches
+Laçi Qazim,alALB,3.0,Ajaccio,26,1996,2.4,0,0,0,2,2,1,9,2,4,,,0,Matches
+Lafont Alban,ciCIV,1.0,Nantes,23,1999,37.0,2,1,1,1,3,0,0,0,0,,,0,Matches
+Lala Kenny,mgMAD,2.0,Brest,30,1991,15.7,4,0,0,18,16,1,63,21,18,,,0,Matches
+Lamine Bayo Mohamed,gnGUI,4.0,Lille,24,1998,7.2,1,0,0,13,4,6,2,0,3,,,0,Matches
+Laporte Julien,frFRA,2.0,Lorient,28,1993,18.4,1,0,0,10,17,1,0,18,17,,,1,Matches
+Larouci Yasser,dzALG,2.4,Troyes,21,2001,20.0,1,0,0,12,31,3,50,26,13,,,1,Matches
+Lauriente Armand,frFRA,3.4,Lorient,23,1998,3.0,0,0,0,2,5,1,6,4,7,,,0,Matches
+Le Bris Théo,frFRA,2.4,Lorient,19,2002,16.1,0,0,0,5,3,0,13,19,20,,,0,Matches
+Le Cardinal Julien,frFRA,2.4,Lens,24,1997,1.8,0,0,0,5,2,0,10,2,4,,,0,Matches
+Le Douaron Jérémy,frFRA,3.4,Brest,24,1998,23.0,1,0,0,33,36,10,35,12,10,,,0,Matches
+Le Fée Enzo,frFRA,3.0,Lorient,22,2000,33.6,5,0,0,42,63,2,136,30,64,,,0,Matches
+Le Goff Vincent,frFRA,2.0,Lorient,32,1989,37.0,1,0,0,19,19,3,38,38,32,,,0,Matches
+Le Marchand Maxime,frFRA,2.0,Strasbourg,32,1989,22.4,6,1,1,31,10,0,11,36,23,,,0,Matches
+Lebas Paolo,frFRA,3.0,Ajaccio,19,2003,0.6,0,0,0,3,0,0,0,0,1,,,0,Matches
+Leca Jean-Louis,frFRA,1.0,Lens,36,1985,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Lecomte Benjamin,frFRA,1.0,Montpellier,31,1991,19.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Lees-Melou Pierre,frFRA,3.0,Brest,29,1993,30.7,10,1,0,43,46,1,40,51,55,,,0,Matches
+Lemaréchal Félix,frFRA,3.0,Brest,18,2003,3.2,2,0,0,6,0,0,7,1,5,,,0,Matches
+Lemina Mario,gaGAB,3.0,Nice,28,1993,9.3,1,1,0,13,5,0,2,12,20,,,0,Matches
+Léon Donovan,gfGUF,1.0,Auxerre,29,1992,2.0,0,0,0,0,1,0,0,0,0,,,0,Matches
+Lepenant Johann,frFRA,3.0,Lyon,19,2002,21.5,4,0,0,35,24,0,10,26,35,,,0,Matches
+Leroy Benjamin,frFRA,1.0,Ajaccio,33,1989,31.1,1,0,0,0,4,0,0,1,0,,,0,Matches
+Leroy Léo,frFRA,3.0,Montpellier,22,2000,13.2,7,0,0,37,19,1,9,15,38,,,0,Matches
+Letellier Alexandre,frFRA,1.0,Paris Saint-Germain,31,1990,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Levine Ruan,brBRA,4.0,Ajaccio,23,1999,0.3,0,0,0,2,1,0,0,1,2,,,0,Matches
+Liénard Dimitri,frFRA,2.4,Strasbourg,34,1988,17.1,4,0,0,16,15,3,124,15,35,,,0,Matches
+Lis Mateusz,plPOL,1.0,Troyes,25,1997,8.3,1,0,0,1,3,0,0,0,0,,,0,Matches
+Locko Bradley,frFRA,2.4,Reims,20,2002,11.8,3,1,0,10,9,2,13,19,16,,,0,Matches
+Locko Bradley,frFRA,2.0,Brest,20,2002,3.0,0,0,0,0,2,0,6,3,2,,,0,Matches
+Lopes Anthony,ptPOR,1.0,Lyon,31,1990,31.3,2,1,0,2,6,0,0,3,0,,,0,Matches
+Lopes Rony,ptPOR,3.4,Troyes,26,1995,26.1,2,0,0,19,32,1,108,9,13,,,0,Matches
+López Pau,esESP,1.0,Marseille,27,1994,32.5,3,0,0,2,6,0,0,0,0,,,0,Matches
+Lopy Dion,snSEN,3.0,Reims,20,2002,15.3,6,2,1,32,25,0,6,23,25,,,0,Matches
+Lotomba Jordan,chSUI,2.3,Nice,23,1998,27.3,4,0,0,25,31,0,48,31,36,,,0,Matches
+Lovren Dejan,hrCRO,2.0,Lyon,33,1989,16.2,2,0,0,11,14,0,6,26,18,,,0,Matches
+Lucas Jean,brBRA,3.0,Monaco,24,1998,3.2,0,0,0,4,4,1,1,4,5,,,0,Matches
+Lukeba Castello,frFRA,2.0,Lyon,19,2002,33.2,9,1,1,38,21,1,3,74,24,,,1,Matches
+M'Changama Youssouf,kmCOM,3.0,Auxerre,31,1990,12.0,1,0,0,12,18,0,34,12,11,,,0,Matches
+Machado Deiver,coCOL,3.0,Lens,28,1993,24.3,5,1,0,42,46,6,61,20,28,,,0,Matches
+Magassa Soungoutou,frFRA,3.0,Monaco,18,2003,0.9,0,0,0,2,1,0,0,1,1,,,0,Matches
+Magnetti Hugo,frFRA,3.0,Brest,24,1998,18.8,2,0,0,17,26,0,20,22,29,,,0,Matches
+Magnin Yohann,frFRA,3.0,Clermont Foot,25,1997,26.7,6,0,0,48,48,3,14,24,55,,,0,Matches
+Majer Lovro,hrCRO,3.0,Rennes,24,1998,18.5,3,0,0,48,30,3,66,19,22,,,0,Matches
+Makengo Jean-Victor,frFRA,3.0,Lorient,24,1998,11.8,2,1,1,18,27,0,1,9,9,,,0,Matches
+Makouana Béni,cgCGO,3.0,Montpellier,19,2002,2.2,1,0,0,3,1,0,6,0,0,,,0,Matches
+Malinovskyi Ruslan,uaUKR,3.4,Marseille,29,1993,13.6,4,0,0,29,18,1,38,3,13,,,0,Matches
+Mandanda Steve,frFRA,1.0,Rennes,37,1985,33.5,1,0,0,2,3,0,0,0,0,,,0,Matches
+Mangani Thomas,frFRA,3.0,Ajaccio,35,1987,14.8,4,1,0,25,12,0,79,21,18,,,0,Matches
+Mannone Vito,itITA,1.0,Lorient,34,1988,17.9,1,0,0,0,1,0,0,0,0,,,0,Matches
+Maolida Myziane,kmCOM,3.0,Reims,23,1999,2.6,0,0,0,5,1,1,4,2,3,,,0,Matches
+Maouassa Faitout,frFRA,2.4,Montpellier,24,1998,21.4,0,0,0,35,31,2,82,17,35,,,0,Matches
+Marchetti Vincent,frFRA,3.0,Ajaccio,25,1997,27.2,7,0,0,29,37,1,6,19,26,,,0,Matches
+Maripán Guillermo,clCHI,2.0,Monaco,28,1994,24.0,6,1,1,26,7,0,1,35,27,,,1,Matches
+Marquinhos,brBRA,2.0,Paris Saint-Germain,28,1994,30.2,4,0,0,14,10,0,1,23,28,,,1,Matches
+Martin Jonas,frFRA,3.0,Lille,32,1990,3.1,2,0,0,9,6,0,3,7,7,,,0,Matches
+Martins Gelson,ptPOR,3.0,Monaco,27,1995,3.8,0,0,0,6,4,2,6,1,8,,,0,Matches
+Massengo Han-Noah,frFRA,3.0,Auxerre,21,2001,12.4,3,0,0,17,23,1,2,12,13,,,0,Matches
+Massolin Yanis,frFRA,3.0,Clermont Foot,19,2002,0.7,0,0,0,0,1,0,0,2,1,,,0,Matches
+Matazo Eliot,beBEL,3.0,Monaco,20,2002,13.1,2,0,0,18,12,0,2,15,12,,,0,Matches
+Matsima Chrislain,frFRA,2.0,Lorient,20,2002,2.5,0,0,0,0,1,0,0,1,1,,,0,Matches
+Matsima Chrislain,frFRA,2.0,Monaco,20,2002,5.0,0,0,0,4,2,0,2,9,6,,,0,Matches
+Mattéo Bahoya Jean,frFRA,4.0,Angers,17,2005,3.0,0,0,0,3,7,0,2,0,3,,,0,Matches
+Matusiwa Azor,nlNED,3.0,Reims,24,1998,27.6,4,0,0,42,32,0,4,43,45,,,0,Matches
+Maurer Aïman,maMAR,3.0,Clermont Foot,17,2004,5.6,0,0,0,5,15,2,19,3,1,,,0,Matches
+Mavididi Stephy,engENG,3.4,Montpellier,24,1998,14.3,1,1,0,20,18,3,10,4,18,,,0,Matches
+Mawissa Christian,frFRA,2.0,Toulouse,17,2005,1.1,1,0,0,2,2,0,1,2,0,,,0,Matches
+Mayembo Fernand,cgCGO,2.0,Ajaccio,26,1996,7.9,1,0,0,9,15,0,0,9,4,,,0,Matches
+Mazou-Sacko Derek,frFRA,3.0,Troyes,17,2004,0.2,0,0,0,2,0,0,0,1,0,,,0,Matches
+Mbappé Kylian,frFRA,4.0,Paris Saint-Germain,23,1998,31.3,6,0,0,19,40,33,48,6,4,,,0,Matches
+Mbemba Chancel,cdCOD,2.0,Marseille,27,1994,31.7,2,0,0,19,19,0,40,44,28,,,0,Matches
+Mbock Hianga'a,frFRA,3.0,Brest,22,1999,0.2,0,0,0,1,0,0,1,0,0,,,0,Matches
+Mbock Jason,frFRA,4.0,Angers,22,1999,0.3,0,0,0,0,0,1,4,0,0,,,0,Matches
+Mbuku Nathanael,cdCOD,3.0,Reims,20,2002,0.7,0,0,0,0,7,0,1,0,1,,,0,Matches
+Medina Facundo,arARG,2.0,Lens,23,1999,30.9,7,0,0,34,18,0,21,22,19,,,0,Matches
+Meïté Bamo,ciCIV,2.0,Lorient,20,2001,16.7,5,0,0,16,12,1,0,18,11,,,0,Matches
+Melali Farid,dzALG,2.3,Angers,25,1997,9.0,1,0,0,13,15,2,17,8,13,,,0,Matches
+Meling Birger,noNOR,2.0,Rennes,27,1994,13.4,3,1,0,20,16,1,19,22,18,,,0,Matches
+Mendes Nuno,ptPOR,2.4,Paris Saint-Germain,20,2002,17.2,2,0,0,25,34,5,31,17,32,,,0,Matches
+Mendes Pedro,ptPOR,2.0,Montpellier,31,1990,0.1,0,0,0,0,1,0,0,0,0,,,0,Matches
+Mendes Thiago,brBRA,2.4,Lyon,30,1992,22.9,3,0,0,23,24,0,6,45,27,,,0,Matches
+Mendy Antoine,snSEN,2.3,Nice,18,2004,5.8,0,0,0,9,3,2,13,2,13,,,0,Matches
+Mendy Arial,snSEN,3.0,Clermont Foot,27,1994,2.5,0,0,0,1,7,1,10,3,2,,,0,Matches
+Mendy Batista,frFRA,2.4,Angers,22,2000,31.8,8,1,1,66,42,1,9,17,34,,,0,Matches
+Mensah Gideon,ghGHA,2.3,Auxerre,24,1998,25.1,5,0,0,28,18,1,66,35,46,,,0,Matches
+Merlin Quentin,frFRA,2.3,Nantes,20,2002,19.9,2,0,0,11,14,1,113,25,18,,,0,Matches
+Messi Lionel,arARG,3.5,Paris Saint-Germain,35,1987,31.5,0,0,0,8,36,6,92,2,18,,,0,Matches
+Messoussa Amine,dzALG,4.0,Lille,17,2004,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Milik Arkadiusz,plPOL,4.0,Marseille,28,1994,1.4,1,0,0,4,1,1,0,0,1,,,0,Matches
+Minamino Takumi,jpJPN,3.4,Monaco,27,1995,8.0,2,0,0,20,11,4,30,5,9,,,0,Matches
+Moffi Terem,ngNGA,4.0,Nice,23,1999,14.8,2,0,0,13,10,5,2,1,7,,,0,Matches
+Moffi Terem,ngNGA,4.0,Lorient,23,1999,15.4,1,0,0,17,17,4,3,3,6,,,0,Matches
+Mohamed Mostafa,egEGY,4.0,Nantes,24,1997,21.5,1,0,0,43,28,13,10,10,13,,,0,Matches
+Mollet Florent,frFRA,3.0,Nantes,30,1991,12.1,3,0,0,18,20,3,76,8,6,,,0,Matches
+Moreno Marlos,coCOL,3.5,Troyes,25,1996,0.1,0,0,0,1,1,0,0,0,2,,,0,Matches
+Mothiba Lebo,zaRSA,4.0,Strasbourg,26,1996,4.8,0,0,0,12,12,0,4,0,0,,,0,Matches
+Mounié Steve,bjBEN,4.0,Brest,27,1994,18.4,2,0,0,37,25,10,11,4,5,,,0,Matches
+Moussiti-Oko Bevic,cgCGO,4.0,Ajaccio,27,1995,7.8,1,0,0,18,22,2,4,2,1,,,0,Matches
+Moutoussamy Samuel,cdCOD,3.0,Nantes,25,1996,26.7,8,0,0,33,15,0,9,21,35,,,0,Matches
+Mughe François,cmCMR,4.0,Marseille,18,2004,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Mukiele Nordi,frFRA,2.4,Paris Saint-Germain,24,1997,12.6,0,0,0,16,14,2,16,12,23,,,0,Matches
+Munetsi Marshall,zwZIM,3.0,Reims,26,1996,30.0,6,0,0,64,39,2,23,24,27,,,0,Matches
+Mvogo Yvon,chSUI,1.0,Lorient,28,1994,20.1,0,0,0,0,3,0,0,2,0,,,0,Matches
+N'Goumou Nathan,cmCMR,3.0,Toulouse,22,2000,1.0,0,0,0,0,0,0,1,2,2,,,0,Matches
+Ndayishimiye Youssouf,biBDI,2.3,Nice,23,1998,6.3,2,0,0,5,4,0,2,10,10,,,0,Matches
+Ndiaga Yade Papa,mrMTN,2.4,Troyes,22,2000,6.3,1,1,0,15,10,2,31,7,5,,,0,Matches
+Neymar,brBRA,3.4,Paris Saint-Germain,30,1992,17.2,6,1,1,25,65,5,56,3,14,,,0,Matches
+Niane Ibrahima,snSEN,4.0,Angers,23,1999,12.6,4,0,0,12,27,2,8,1,2,,,0,Matches
+Niang M'Baye,snSEN,4.0,Auxerre,27,1994,16.5,2,2,0,43,42,8,8,1,9,,,0,Matches
+Nicolaisen Rasmus,dkDEN,2.0,Toulouse,25,1997,33.3,7,1,1,30,28,1,0,46,25,,,1,Matches
+Nordin Arnaud,frFRA,3.4,Montpellier,24,1998,26.7,4,0,0,21,82,4,47,13,15,,,0,Matches
+Nouri Riad,frFRA,3.0,Ajaccio,37,1985,18.8,3,0,0,16,15,7,85,13,12,,,0,Matches
+Nübel Alexander,deGER,1.0,Monaco,25,1996,38.0,2,0,0,0,1,0,0,1,0,,,0,Matches
+Nyamsi Gerzino,cmCMR,2.0,Strasbourg,25,1997,17.5,4,1,0,36,2,0,2,10,20,,,0,Matches
+Odobert Wilson,frFRA,3.0,Troyes,17,2004,19.6,0,0,0,8,16,2,34,14,12,,,0,Matches
+Ogier Florent,frFRA,2.0,Clermont Foot,33,1989,18.9,4,0,0,15,8,0,3,17,16,,,0,Matches
+Omari Warmed,kmCOM,2.0,Rennes,22,2000,15.1,2,1,0,8,6,3,0,17,12,,,0,Matches
+Omlin Jonas,chSUI,1.0,Montpellier,28,1994,13.0,1,1,0,1,3,0,0,0,1,,,0,Matches
+Onaiwu Ado,jpJPN,3.5,Toulouse,26,1995,12.0,0,0,0,15,15,3,5,2,6,,,0,Matches
+Onana Jean,cmCMR,2.4,Lens,22,2000,9.0,3,0,0,7,10,2,3,17,16,,,0,Matches
+Openda Loïs,beBEL,4.0,Lens,22,2000,28.0,2,0,0,42,47,22,31,2,9,,,0,Matches
+Ouattara Dango,bfBFA,3.4,Lorient,20,2002,17.2,3,1,1,15,43,2,34,17,29,,,0,Matches
+Ould Khaled Zinédine,frFRA,3.0,Angers,22,2000,0.6,0,0,0,1,0,0,0,1,1,,,0,Matches
+Ounahi Azzedine,maMAR,3.0,Marseille,22,2000,1.3,0,0,0,1,3,0,0,0,1,,,0,Matches
+Ounahi Azzedine,maMAR,3.0,Angers,22,2000,12.5,1,0,0,11,24,1,18,15,8,,,0,Matches
+Ounas Adam,dzALG,3.0,Lille,25,1996,11.8,2,0,0,15,28,2,74,7,9,,,0,Matches
+Palaversa Ante,hrCRO,3.0,Troyes,22,2000,0.3,0,0,0,0,0,0,2,1,1,,,0,Matches
+Pallois Nicolas,frFRA,2.0,Nantes,34,1987,24.6,4,1,1,19,6,1,7,30,45,,,1,Matches
+Palmer-Brown Erik,usUSA,2.0,Troyes,25,1997,35.5,5,0,0,29,11,1,2,25,26,,,0,Matches
+Paquetá Lucas,brBRA,3.0,Lyon,24,1997,1.8,0,0,0,2,3,0,2,0,4,,,0,Matches
+Paredes Leandro,arARG,3.0,Paris Saint-Germain,28,1994,0.6,0,0,0,0,1,0,0,1,1,,,0,Matches
+Payet Dimitri,frFRA,3.0,Marseille,35,1987,9.3,0,0,0,5,19,2,58,0,5,,,0,Matches
+Pellenard Théo,frFRA,2.0,Auxerre,28,1994,1.1,0,0,0,1,0,0,1,2,0,,,0,Matches
+Pembele Timothee,frFRA,2.4,Paris Saint-Germain,19,2002,2.9,0,0,0,0,1,0,4,4,5,,,0,Matches
+Pentz Patrick,atAUT,1.0,Reims,25,1997,7.0,1,0,0,0,2,0,0,0,0,,,0,Matches
+Pépé Nicolas,ciCIV,3.5,Nice,27,1995,16.6,2,0,0,13,33,6,42,2,13,,,0,Matches
+Pereira Brayann,frFRA,2.0,Auxerre,19,2003,2.0,0,0,0,1,4,0,9,2,5,,,0,Matches
+Pereira Danilo,ptPOR,2.3,Paris Saint-Germain,30,1991,26.8,3,0,0,17,14,1,3,35,17,,,0,Matches
+Pereira Lage Mathias,ptPOR,3.4,Brest,25,1996,14.0,2,0,0,24,27,1,37,15,8,,,0,Matches
+Perrin Gaëtan,frFRA,3.4,Auxerre,26,1996,15.5,1,0,0,18,22,4,31,9,9,,,0,Matches
+Perrin Lucas,frFRA,2.0,Strasbourg,23,1998,19.6,4,0,0,24,18,0,8,35,25,,,0,Matches
+Pierre-Gabriel Ronaël,frFRA,2.4,Strasbourg,24,1998,7.3,3,0,0,12,8,2,19,7,18,,,0,Matches
+Ponceau Julien,frFRA,3.0,Lorient,21,2000,18.4,1,0,0,21,25,4,12,14,18,,,0,Matches
+Poręba Łukasz,plPOL,3.0,Lens,22,2000,2.9,1,0,0,9,2,0,6,4,4,,,0,Matches
+Porozo Jackson,ecECU,2.0,Troyes,21,2000,18.0,3,0,0,29,19,1,3,29,20,,,0,Matches
+Prcić Sanjin,baBIH,3.0,Strasbourg,28,1993,18.1,3,1,0,16,19,1,28,24,13,,,0,Matches
+Puch-Herrantz Mehdi,frFRA,3.0,Ajaccio,18,2004,0.5,0,0,0,1,1,0,1,3,2,,,0,Matches
+Quilichini Ghjuvanni,frFRA,1.0,Ajaccio,19,2002,0.9,0,0,0,0,0,0,0,0,0,,,0,Matches
+Radu Ionuț,roROU,1.0,Auxerre,25,1997,17.0,0,0,0,1,0,0,0,0,0,,,0,Matches
+Ramet Simon,frFRA,3.0,Lille,19,2003,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Rami Adil,frFRA,2.0,Troyes,36,1985,17.7,2,0,0,10,14,1,5,22,14,,,0,Matches
+Ramos Sergio,esESP,2.0,Paris Saint-Germain,36,1986,30.0,3,1,0,36,24,4,13,29,25,,,0,Matches
+Ramsey Aaron,wlsWAL,3.0,Nice,31,1990,17.6,3,0,0,23,19,3,59,18,29,,,0,Matches
+Raolisoa Lilian,frFRA,2.3,Angers,22,2000,1.9,0,0,0,1,3,0,10,3,9,,,0,Matches
+Rashani Elba,xkKVX,3.0,Clermont Foot,29,1993,24.0,3,0,0,34,30,4,57,18,27,,,0,Matches
+Ratão Rafael,brBRA,3.5,Toulouse,26,1995,20.6,2,0,0,28,33,2,53,18,35,,,0,Matches
+Raveloson Rayan,mgMAD,2.3,Auxerre,25,1997,27.0,0,0,0,21,35,1,37,35,26,,,1,Matches
+Reine-Adélaïde Jeff,frFRA,3.0,Troyes,24,1998,2.6,0,0,0,2,5,0,0,1,2,,,0,Matches
+Reine-Adélaïde Jeff,frFRA,3.0,Lyon,24,1998,3.7,1,0,0,7,4,0,13,6,5,,,0,Matches
+Ribeiro Alexsandro,brBRA,2.0,Lille,22,1999,17.9,4,0,0,18,20,2,5,25,18,,,0,Matches
+Riou Rémy,frFRA,1.0,Lyon,34,1987,6.7,0,0,0,0,0,0,0,0,1,,,0,Matches
+Ripart Renaud,frFRA,3.5,Troyes,29,1993,14.7,4,0,0,25,25,6,22,8,25,,,0,Matches
+Rodon Joe,wlsWAL,2.0,Rennes,24,1997,15.7,2,1,0,11,18,0,1,9,8,,,0,Matches
+Rongier Valentin,frFRA,3.0,Marseille,27,1994,33.7,8,0,0,52,29,0,8,55,60,,,0,Matches
+Rosario Pablo,doDOM,2.4,Nice,25,1997,19.6,6,0,0,18,14,0,11,19,27,,,0,Matches
+Rouault Anthony,frFRA,2.0,Toulouse,21,2001,36.8,4,1,1,21,17,1,0,51,35,,,1,Matches
+Ruiz Kays,frFRA,3.0,Auxerre,19,2002,0.7,1,0,0,2,3,0,0,3,1,,,0,Matches
+Ruiz Peña Fabián,esESP,3.0,Paris Saint-Germain,26,1996,21.0,0,0,0,19,13,4,12,18,31,,,0,Matches
+Šabanović Halid,baBIH,2.3,Angers,22,1999,7.1,1,1,0,10,2,1,9,8,7,,,0,Matches
+Sacko Falaye,mlMLI,2.0,Montpellier,27,1995,28.7,3,0,0,26,19,5,35,32,23,,,1,Matches
+Saïd Wesley,frFRA,4.0,Lens,27,1995,7.2,2,0,0,20,1,1,5,1,1,,,0,Matches
+Sainte-Luce Théo,frFRA,2.0,Montpellier,23,1998,5.9,0,0,0,13,1,0,10,10,9,,,0,Matches
+Sakhi Hamza,frFRA,3.0,Auxerre,26,1996,18.4,1,0,0,12,21,5,92,24,21,,,0,Matches
+Sakho Mamadou,frFRA,2.0,Montpellier,32,1990,8.5,2,0,0,6,5,0,0,9,4,,,0,Matches
+Salah Ibrahim,maMAR,4.0,Rennes,20,2001,2.5,0,0,0,2,1,2,8,2,1,,,0,Matches
+Salama Amine,frFRA,3.5,Angers,22,2000,13.9,1,0,0,7,9,6,12,9,9,,,0,Matches
+Salmier Yoann,gfGUF,2.0,Troyes,29,1992,29.4,5,1,0,29,28,0,6,38,35,,,0,Matches
+Samba Baldé Mama,gwGNB,3.5,Troyes,26,1995,29.6,6,2,1,40,46,22,14,10,23,,,0,Matches
+Samba Brice,frFRA,1.0,Lens,28,1994,37.0,3,0,0,0,6,0,0,0,0,,,0,Matches
+Sanches Renato,ptPOR,3.0,Paris Saint-Germain,24,1997,8.0,1,0,0,22,10,0,5,6,1,,,0,Matches
+Sánchez Alexis,clCHI,3.5,Marseille,33,1988,29.8,3,0,0,44,46,28,36,5,19,,,0,Matches
+Sanson Morgan,frFRA,3.0,Strasbourg,27,1994,15.8,1,0,0,21,34,0,37,21,25,,,0,Matches
+Santamaria Baptiste,frFRA,3.0,Rennes,27,1995,20.1,2,0,0,24,20,1,7,19,24,,,0,Matches
+Sarabia Pablo,esESP,3.5,Paris Saint-Germain,30,1992,4.1,1,0,0,4,5,2,16,1,4,,,0,Matches
+Sarr Amin,seSWE,4.0,Lyon,21,2001,6.0,0,0,0,14,4,1,5,0,6,,,0,Matches
+Sarr Malang,frFRA,2.0,Monaco,23,1999,8.0,3,0,0,10,4,0,1,14,3,,,0,Matches
+Sarr Mamadou,snSEN,2.0,Lyon,16,2005,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Savanier Téji,frFRA,3.0,Montpellier,30,1991,28.3,4,3,0,55,95,0,236,28,32,,,0,Matches
+Schmeichel Kasper,dkDEN,1.0,Nice,35,1986,36.0,0,0,0,0,0,0,0,1,0,,,0,Matches
+Seidu Alidu,ghGHA,2.0,Clermont Foot,22,2000,27.3,10,1,0,32,70,1,22,53,33,,,0,Matches
+Sels Matz,beBEL,1.0,Strasbourg,30,1992,38.0,2,0,0,0,3,0,0,4,2,,,0,Matches
+Senaya Marvin,tgTOG,2.3,Strasbourg,21,2001,0.1,0,0,0,0,0,0,1,0,0,,,0,Matches
+Sierhuis Kaj,nlNED,4.0,Reims,24,1998,2.4,0,0,0,5,6,0,6,1,3,,,0,Matches
+Sierro Vincent,chSUI,3.0,Toulouse,26,1995,7.4,3,0,0,18,9,0,25,5,14,,,0,Matches
+Silva Caio Henrique Oliveira,brBRA,2.0,Monaco,25,1997,32.2,3,0,0,15,25,1,173,25,53,,,1,Matches
+Sima Abdallah,snSEN,4.0,Angers,21,2001,20.4,0,0,0,32,25,12,16,3,11,,,1,Matches
+Simon Moses,ngNGA,3.4,Nantes,27,1995,26.1,3,0,0,11,32,4,144,10,9,,,0,Matches
+Sinayoko Lassine,mlMLI,3.4,Auxerre,22,1999,17.4,2,1,1,31,22,5,30,18,16,,,0,Matches
+Sissoko Ibrahima,mlMLI,3.0,Strasbourg,24,1997,14.6,1,0,0,40,16,2,10,11,23,,,0,Matches
+Sissoko Moussa,frFRA,3.0,Nantes,32,1989,21.3,3,0,0,29,14,3,24,14,19,,,0,Matches
+Skyttä Naatan,fiFIN,3.0,Toulouse,20,2002,0.3,0,0,0,0,1,0,0,1,1,,,0,Matches
+Slimani Islam,dzALG,4.0,Brest,34,1988,11.0,5,0,0,18,14,10,9,1,3,,,0,Matches
+Sobol Eduard,uaUKR,2.4,Strasbourg,27,1995,9.7,2,0,0,10,17,2,21,7,11,,,0,Matches
+Soler Carlos,esESP,3.0,Paris Saint-Germain,25,1997,13.2,0,0,0,19,14,0,22,4,12,,,0,Matches
+Sollacaro François-Joseph,frFRA,1.0,Ajaccio,28,1994,6.0,1,0,0,0,0,0,0,0,0,,,0,Matches
+Sotoca Florian,frFRA,3.4,Lens,31,1990,33.9,4,0,0,37,45,9,102,27,22,,,0,Matches
+Soumano Moussa,frFRA,4.0,Ajaccio,17,2005,5.5,3,0,0,10,5,3,1,0,2,,,0,Matches
+Souquet Arnaud,frFRA,2.0,Montpellier,30,1992,4.0,1,0,0,7,8,1,7,4,15,,,0,Matches
+Spadanuda Kevin,chSUI,3.0,Ajaccio,25,1997,11.8,3,0,0,20,20,1,5,13,18,,,0,Matches
+Spence Djed,engENG,2.0,Rennes,21,2000,6.4,0,0,0,7,9,0,4,4,6,,,0,Matches
+Spierings Stijn,nlNED,3.0,Toulouse,26,1996,34.7,6,0,0,55,49,0,22,50,66,,,0,Matches
+Stengs Calvin,nlNED,3.4,Nice,23,1998,2.4,0,0,0,5,6,0,3,0,1,,,0,Matches
+Strata Tony,roROU,3.0,Ajaccio,17,2004,1.5,1,0,0,3,1,0,0,1,3,,,0,Matches
+Suazo Gabriel,clCHI,2.0,Toulouse,24,1997,14.0,1,0,0,17,11,1,15,19,24,,,0,Matches
+Sulemana Kamaldeen,ghGHA,3.4,Rennes,20,2002,3.6,1,0,0,4,6,1,10,4,4,,,0,Matches
+Suzuki Yuito,jpJPN,3.5,Strasbourg,20,2001,0.4,0,0,0,1,2,0,0,0,0,,,0,Matches
+Sylla Issiaga,gnGUI,2.0,Montpellier,28,1994,14.5,0,0,0,8,9,2,36,33,18,,,0,Matches
+Sylla Issiaga,gnGUI,2.0,Toulouse,28,1994,15.2,3,0,0,24,18,1,41,34,15,,,0,Matches
+Tagliafico Nicolás,arARG,2.3,Lyon,29,1992,33.2,5,0,0,40,59,2,67,51,53,,,0,Matches
+Taibi Waniss,frFRA,3.0,Angers,20,2002,2.1,1,0,0,3,0,0,1,2,5,,,0,Matches
+Tait Flavien,frFRA,3.0,Rennes,29,1993,18.7,2,0,0,25,29,0,8,20,17,,,0,Matches
+Talbi Montassar,tnTUN,2.0,Lorient,24,1998,38.0,0,0,0,16,25,0,2,37,28,,,0,Matches
+Tamas Thibault,frFRA,2.0,Montpellier,21,2001,0.1,0,0,0,2,0,0,1,1,0,,,0,Matches
+Tardieu Florian,frFRA,3.0,Troyes,30,1992,11.2,2,0,0,11,20,0,44,20,19,,,0,Matches
+Tavares Nuno,ptPOR,3.0,Marseille,22,2000,26.1,6,1,0,37,38,6,97,15,29,,,0,Matches
+Tchato Enzo,cmCMR,2.0,Montpellier,19,2002,12.2,1,0,0,13,7,2,39,7,15,,,0,Matches
+Terrier Martin,frFRA,3.4,Rennes,25,1997,14.7,0,0,0,12,24,6,13,11,11,,,0,Matches
+Tetê,brBRA,3.5,Lyon,22,2000,12.3,3,0,0,10,19,5,42,12,10,,,0,Matches
+Theate Arthur,beBEL,2.0,Rennes,22,2000,34.7,5,0,0,24,14,0,1,24,21,,,1,Matches
+Thioub Sada,snSEN,2.3,Angers,27,1995,11.8,3,0,0,14,6,0,38,7,10,,,0,Matches
+Thomasson Adrien,frFRA,3.4,Strasbourg,28,1993,10.4,2,0,0,16,20,4,10,3,10,,,0,Matches
+Thomasson Adrien,frFRA,3.4,Lens,28,1993,14.2,1,0,0,21,18,5,13,4,18,,,0,Matches
+Thuram Khéphren,frFRA,3.0,Nice,21,2001,28.3,3,0,0,31,19,3,26,36,29,,,0,Matches
+Tibidi Alexis,frFRA,3.0,Troyes,18,2003,0.8,0,0,0,0,1,0,0,0,1,,,0,Matches
+Todibo Jean-Clair,frFRA,2.0,Nice,22,1999,31.9,4,2,1,21,15,1,5,35,49,,,0,Matches
+Toko Ekambi Karl,cmCMR,3.4,Rennes,29,1992,10.8,0,0,0,7,8,8,6,9,2,,,0,Matches
+Toko Ekambi Karl,cmCMR,3.5,Lyon,29,1992,15.0,1,0,0,8,9,2,26,9,9,,,0,Matches
+Tolisso Corentin,frFRA,3.0,Lyon,27,1994,22.6,3,0,0,28,38,0,39,24,27,,,0,Matches
+Touré Birama,mlMLI,3.0,Auxerre,30,1992,37.8,3,0,0,49,22,0,13,66,48,,,0,Matches
+Touré Mo,auAUS,4.0,Reims,18,2004,0.3,0,0,0,1,0,1,0,0,0,,,0,Matches
+Touré Souleymane,frFRA,2.0,Marseille,19,2003,0.8,1,0,0,2,0,0,0,0,1,,,0,Matches
+Touré Souleymane,frFRA,2.0,Auxerre,19,2003,17.6,5,1,1,20,13,0,1,23,15,,,0,Matches
+Touzghar Yoann,tnTUN,4.0,Ajaccio,35,1986,5.0,0,1,0,5,6,3,2,0,2,,,0,Matches
+Traore Charles,mlMLI,2.0,Nantes,30,1992,5.4,2,0,0,6,13,1,6,10,5,,,1,Matches
+Traoré Hamari,mlMLI,2.0,Rennes,30,1992,28.1,5,0,0,33,6,3,63,33,31,,,0,Matches
+Trinker Théo,frFRA,3.0,Nice,21,2001,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Truffert Adrien,frFRA,2.0,Rennes,20,2001,21.7,1,0,0,20,25,3,34,19,38,,,0,Matches
+Tsingaras Theocharis,grGRE,3.0,Toulouse,21,2000,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Ugbo Ike,caCAN,3.5,Troyes,23,1998,9.9,0,0,0,12,10,4,0,2,2,,,0,Matches
+Ugochukwu Lesley,frFRA,3.0,Rennes,18,2004,14.8,3,1,0,29,12,0,2,18,18,,,0,Matches
+Ünder Cengiz,trTUR,3.0,Marseille,25,1997,27.7,3,0,0,29,31,8,160,17,20,,,0,Matches
+Uronen Jere,fiFIN,2.0,Brest,28,1994,3.3,0,0,0,3,7,0,13,6,5,,,0,Matches
+Valery Yan,tnTUN,2.0,Angers,23,1999,27.7,3,0,0,46,20,1,80,33,40,,,0,Matches
+Vanderson,brBRA,2.3,Monaco,21,2001,24.6,4,1,1,36,18,3,99,44,53,,,0,Matches
+Veretout Jordan,frFRA,3.0,Marseille,29,1993,31.8,4,0,0,35,24,2,82,32,36,,,1,Matches
+Verratti Marco,itITA,3.0,Paris Saint-Germain,29,1992,24.4,10,1,0,35,53,0,7,25,51,,,0,Matches
+Victor João,brBRA,2.0,Nantes,24,1998,9.4,5,0,0,9,12,0,8,15,12,,,1,Matches
+Vidal Clément,frFRA,2.0,Ajaccio,22,2000,21.1,5,1,0,22,19,1,3,26,14,,,0,Matches
+Virginius Alan,frFRA,4.0,Lille,19,2003,2.9,1,0,0,6,2,2,2,1,2,,,0,Matches
+Viti Mattia,itITA,2.0,Nice,20,2002,7.0,0,0,0,3,5,0,0,9,4,,,0,Matches
+Vitinha,ptPOR,4.0,Marseille,22,2000,5.2,0,0,0,7,8,3,1,2,7,,,0,Matches
+Vitinha,ptPOR,3.0,Paris Saint-Germain,22,2000,27.2,3,0,0,31,19,0,13,25,27,,,0,Matches
+Volland Kevin,deGER,3.5,Monaco,30,1992,7.1,1,0,0,20,13,7,8,1,4,,,0,Matches
+Wahi Elye,frFRA,4.0,Montpellier,19,2003,27.9,8,1,0,31,39,25,21,3,3,,,0,Matches
+Weah Timothy,usUSA,2.3,Lille,22,2000,19.4,2,0,0,17,18,4,52,21,15,,,0,Matches
+Wieteska Mateusz,plPOL,2.0,Clermont Foot,25,1997,34.6,7,1,0,29,30,0,1,53,22,,,0,Matches
+Wooh Christopher,cmCMR,2.0,Rennes,20,2001,11.2,4,0,0,17,10,0,1,6,11,,,0,Matches
+Wooh Christopher,cmCMR,2.0,Lens,20,2001,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Xeka,ptPOR,3.0,Rennes,27,1994,6.1,1,0,0,13,11,0,0,4,3,,,0,Matches
+Yazıcı Yusuf,trTUR,3.0,Lille,25,1997,2.2,0,0,0,4,1,0,9,0,0,,,0,Matches
+Yongwa Darlin,cmCMR,2.4,Lorient,21,2000,8.7,2,0,0,12,17,3,19,5,10,,,0,Matches
+Yoro Leny,frFRA,2.3,Lille,16,2005,8.5,0,0,0,5,5,0,0,19,6,,,0,Matches
+Youssouf Mohamed,kmCOM,2.0,Ajaccio,34,1988,27.3,5,1,0,40,37,0,90,63,49,,,1,Matches
+Zaïre-Emery Warren,frFRA,3.0,Paris Saint-Germain,16,2006,10.3,1,0,0,9,5,2,4,13,11,,,0,Matches
+Zandén Oliver,seSWE,3.0,Toulouse,20,2001,1.6,0,0,0,3,6,0,6,1,0,,,0,Matches
+Zedadka Akim,dzALG,2.4,Auxerre,27,1995,17.8,5,0,0,24,28,0,40,23,24,,,0,Matches
+Zedadka Akim,dzALG,2.3,Lille,27,1995,3.9,1,0,0,5,8,1,7,2,1,,,0,Matches
+Zeffane Mehdi,dzALG,2.4,Clermont Foot,30,1992,7.3,1,0,0,4,3,1,21,18,8,,,0,Matches
+Zeneli Arber,xkKVX,3.4,Reims,27,1995,11.1,0,0,0,7,12,3,51,2,3,,,0,Matches
+Zeze Nathan,frFRA,2.0,Nantes,17,2005,0.7,0,0,0,0,1,0,0,0,3,,,0,Matches
+Zhegrova Edon,xkKVX,3.0,Lille,23,1999,11.7,1,0,0,11,15,2,73,2,11,,,0,Matches
+Zoukrou Tanguy,frFRA,2.0,Troyes,19,2003,5.7,0,0,0,5,1,0,1,2,8,,,0,Matches

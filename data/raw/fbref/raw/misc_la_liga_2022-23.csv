@@ -1,0 +1,597 @@
+player,nationality,position,team,age,birth_year,minutes_90s,cards_yellow,cards_red,cards_yellow_red,fouls,fouled,offsides,crosses,interceptions,tackles_won,pens_won,pens_conceded,own_goals,matches
+Abner,brBRA,2.0,Real Betis,22,2000,6.7,2,0,0,8,2,0,13,8,9,,,0,Matches
+Aceves Álvaro,esESP,1.0,Valladolid,19,2003,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Acuña Marcos,arARG,2.0,Sevilla,30,1991,21.2,10,3,0,29,34,1,141,24,40,,,0,Matches
+Agirrezabala Julen,esESP,1.0,Athletic Club,21,2000,7.5,0,0,0,0,0,0,0,0,0,,,0,Matches
+Aguado Álvaro,esESP,3.0,Valladolid,26,1996,21.0,4,0,0,14,33,0,57,13,13,,,0,Matches
+Aidoo Joseph,ghGHA,2.0,Celta Vigo,26,1995,34.7,6,1,1,18,18,1,3,28,35,,,0,Matches
+Akieme Sergio,esESP,2.0,Almería,24,1997,25.5,5,0,0,20,18,0,70,13,15,,,0,Matches
+Akinsola Babatunde,ngNGA,3.0,Valladolid,19,2003,0.1,0,0,0,0,1,0,0,0,1,,,0,Matches
+Akouokou Paul,ciCIV,2.4,Real Betis,24,1997,5.0,3,0,0,7,4,0,0,12,8,,,0,Matches
+Alaba David,atAUT,2.0,Real Madrid,30,1992,20.4,3,0,0,9,3,0,27,13,11,,,0,Matches
+Alarcón Ángel,esESP,4.0,Barcelona,18,2004,0.3,0,0,0,2,1,0,1,0,0,,,0,Matches
+Alarcón Tomás,clCHI,3.0,Cádiz,23,1999,2.5,2,1,1,4,3,0,6,2,2,,,0,Matches
+Alba Jordi,esESP,2.0,Barcelona,33,1989,15.8,6,1,1,11,4,10,90,12,17,,,0,Matches
+Albiol Raúl,esESP,2.0,Villarreal,36,1985,23.5,6,0,0,17,13,1,1,14,18,,,0,Matches
+Alcaraz Rubén,esESP,3.0,Cádiz,31,1991,22.7,11,1,1,45,33,0,44,19,32,,,0,Matches
+Alderete Omar,pyPAR,2.0,Getafe,25,1996,22.7,9,0,0,35,10,0,7,27,18,,,0,Matches
+Alejo Iván,esESP,3.0,Cádiz,27,1995,14.6,13,1,1,39,44,2,108,4,22,,,0,Matches
+Aleñá Carles,esESP,3.4,Getafe,24,1998,23.5,12,1,1,60,50,3,43,4,12,,,0,Matches
+Alfaro Alejandro,esESP,3.0,Elche,20,2002,0.2,0,0,0,2,0,0,0,0,0,,,0,Matches
+Algobia Ángel,esESP,3.0,Getafe,23,1999,12.6,3,0,0,31,10,0,12,4,12,,,0,Matches
+Ali Cho Mohamed,frFRA,3.5,Real Sociedad,18,2004,6.5,1,0,0,11,12,3,30,1,10,,,0,Matches
+Almeida Domingos André Ribeiro,ptPOR,3.0,Valencia,22,2000,28.2,3,0,0,31,40,1,128,21,42,,,0,Matches
+Alonso Marcos,esESP,2.0,Barcelona,31,1990,13.0,3,0,0,10,8,0,23,9,10,,,0,Matches
+Álvarez Carlos,esESP,3.0,Sevilla,18,2003,0.1,1,0,0,1,0,0,0,0,1,,,0,Matches
+Álvarez Gastón,uyURU,2.0,Getafe,22,2000,16.7,7,1,0,27,12,0,23,15,29,,,0,Matches
+Álvarez Yeray,esESP,2.0,Athletic Club,27,1995,25.9,7,1,0,22,22,1,9,47,25,,,0,Matches
+Amallah Selim,maMAR,3.4,Valladolid,25,1996,3.0,2,1,0,10,8,1,2,5,8,,,0,Matches
+Amath,snSEN,3.4,Mallorca,26,1996,13.6,2,1,0,34,24,7,16,4,17,,,0,Matches
+Amavi Jordan,frFRA,2.0,Getafe,28,1994,2.2,2,1,1,3,2,1,6,3,2,,,0,Matches
+André Marcos,brBRA,4.0,Valencia,25,1996,5.0,2,1,0,8,12,1,1,0,1,,,0,Matches
+Angileri Fabrizio,arARG,2.0,Getafe,28,1994,6.5,2,1,0,7,1,0,12,7,9,,,0,Matches
+Antoni Gayá Josep,esESP,2.0,Mallorca,22,2000,1.1,0,0,0,0,0,0,0,1,0,,,0,Matches
+Antonio José,esESP,3.0,Cádiz,18,2004,0.5,0,0,0,0,4,0,1,0,1,,,0,Matches
+Anuar,maMAR,3.4,Valladolid,27,1995,2.3,1,0,0,3,6,1,1,3,4,,,0,Matches
+Arambarri Mauro,uyURU,3.0,Getafe,26,1995,11.0,5,1,1,21,11,0,43,15,6,,,1,Matches
+Araújo Ronald,uyURU,2.0,Barcelona,23,1999,20.0,5,1,0,16,17,1,5,11,18,,,1,Matches
+Ares Adu,esESP,3.0,Athletic Club,20,2001,0.9,0,0,0,2,8,0,8,2,2,,,0,Matches
+Arribas Sergio,esESP,3.0,Real Madrid,20,2001,0.2,0,0,0,0,0,0,1,0,0,,,0,Matches
+Arroyo Roberto,esESP,4.0,Valladolid,18,2003,0.2,0,0,0,0,0,0,1,0,1,,,0,Matches
+Artero Ricard,esESP,3.0,Girona,19,2003,1.5,0,0,0,2,1,0,0,2,3,,,0,Matches
+Arzamendia Santiago,pyPAR,2.3,Cádiz,24,1998,5.4,0,0,0,4,2,1,14,2,8,,,0,Matches
+Asenjo Sergio,esESP,1.0,Valladolid,33,1989,10.0,0,0,0,0,4,0,0,0,0,,,0,Matches
+Asensio Marco,esESP,3.5,Real Madrid,26,1996,16.0,1,0,0,10,16,4,82,5,10,,,0,Matches
+Aspas Iago,esESP,4.0,Celta Vigo,34,1987,31.9,6,0,0,16,59,12,47,7,5,,,0,Matches
+Aubameyang Pierre-Emerick,gaGAB,3.5,Barcelona,33,1989,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Augustinsson Ludwig,seSWE,2.0,Mallorca,28,1994,1.5,0,0,0,1,1,0,6,1,1,,,0,Matches
+Ávila Ezequiel,arARG,3.5,Osasuna,28,1994,19.0,7,1,0,25,35,14,80,9,5,,,0,Matches
+Baba Iddrisu,ghGHA,3.0,Mallorca,26,1996,18.9,5,0,0,31,30,0,1,11,17,,,0,Matches
+Babić Srđan,rsSRB,2.0,Almería,26,1996,33.3,5,0,0,24,9,2,2,27,19,,,0,Matches
+Bade Loïc,frFRA,2.0,Sevilla,22,2000,16.1,4,0,0,13,4,0,4,22,21,,,0,Matches
+Badía Édgar,esESP,1.0,Elche,30,1992,36.0,2,0,0,1,6,0,0,0,0,,,0,Matches
+Baena Alex,esESP,3.4,Villarreal,21,2001,21.6,13,1,1,58,56,3,28,7,17,,,0,Matches
+Balde Alejandro,esESP,2.0,Barcelona,18,2003,27.5,4,0,0,26,29,5,67,12,32,,,0,Matches
+Balenziaga Mikel,esESP,2.0,Athletic Club,34,1988,1.3,0,0,0,3,0,0,3,1,4,,,0,Matches
+Balliu Iván,alALB,2.0,Rayo Vallecano,30,1992,35.9,6,0,0,42,34,7,105,24,30,,,2,Matches
+Baptistão Léo,brBRA,3.5,Almería,29,1992,19.2,7,0,0,30,23,10,18,18,20,,,0,Matches
+Bare Keidi,alALB,3.0,Espanyol,24,1997,5.6,0,0,0,10,13,0,6,11,7,,,0,Matches
+Barja Kike,esESP,3.5,Osasuna,25,1997,14.6,1,0,0,18,15,7,111,5,10,,,0,Matches
+Barrenetxea Ander,esESP,2.3,Real Sociedad,20,2001,9.8,4,0,0,23,14,0,13,5,15,,,0,Matches
+Barrios Pablo,esESP,3.0,Atlético Madrid,19,2003,8.0,4,0,0,7,12,0,7,8,11,,,0,Matches
+Battaglia Rodrigo,arARG,3.0,Mallorca,31,1991,7.6,5,0,0,11,11,0,1,5,6,,,0,Matches
+Bebé,cvCPV,3.5,Rayo Vallecano,32,1990,0.7,1,0,0,2,2,0,16,0,0,,,0,Matches
+Bellerín Héctor,esESP,2.0,Barcelona,27,1995,1.6,0,0,0,2,0,0,3,3,0,,,0,Matches
+Beltrán Fran,esESP,3.0,Celta Vigo,23,1999,31.7,4,0,0,26,16,2,51,53,22,,,0,Matches
+Benito Iker,esESP,3.0,Osasuna,19,2002,2.0,0,0,0,2,2,1,6,2,3,,,0,Matches
+Benzema Karim,frFRA,4.0,Real Madrid,34,1987,22.6,1,0,0,10,6,22,3,1,5,,,0,Matches
+Berchiche Yuri,esESP,2.0,Athletic Club,32,1990,26.7,9,1,1,31,33,5,67,36,33,,,0,Matches
+Berenguer Álex,esESP,3.0,Athletic Club,27,1995,25.5,2,0,0,48,26,19,164,10,35,,,0,Matches
+Bigas Pedro,esESP,2.0,Elche,31,1990,22.4,4,2,0,16,16,0,6,33,20,,,0,Matches
+Bilal Touré El,mlMLI,4.0,Almería,20,2001,14.0,0,0,0,25,7,13,4,3,3,,,0,Matches
+Blanco Antonio,esESP,3.0,Cádiz,22,2000,1.8,0,0,0,2,1,0,0,1,4,,,0,Matches
+Blanco Lautaro,arARG,2.3,Elche,23,1999,9.7,2,0,0,7,2,2,86,2,10,,,0,Matches
+Bongonda Theo,cdCOD,3.0,Cádiz,26,1995,21.5,2,0,0,15,37,6,67,6,21,,,0,Matches
+Bounou Yassine,maMAR,1.0,Sevilla,31,1991,23.9,2,0,0,0,1,0,0,2,1,,,0,Matches
+Boyé Lucas,arARG,4.0,Elche,26,1996,27.4,7,1,0,61,45,14,16,14,16,,,0,Matches
+Braithwaite Martin,dkDEN,3.5,Espanyol,31,1991,27.3,5,1,0,21,42,13,20,6,3,,,0,Matches
+Brašanac Darko,rsSRB,3.0,Osasuna,30,1992,11.6,5,0,0,16,14,3,7,12,20,,,0,Matches
+Bravo Claudio,clCHI,1.0,Real Betis,39,1983,12.0,2,0,0,0,0,0,0,2,0,,,0,Matches
+Budimir Ante,hrCRO,4.0,Osasuna,31,1991,20.0,5,0,0,48,23,12,3,5,8,,,0,Matches
+Bueno Manu,esESP,3.0,Sevilla,18,2004,1.7,0,0,0,1,2,0,0,1,4,,,0,Matches
+Bueno Santiago,uyURU,2.0,Girona,23,1998,33.4,7,1,1,36,36,2,3,35,37,,,0,Matches
+Busquets Sergio,esESP,3.0,Barcelona,34,1988,26.0,8,1,1,32,40,0,7,29,27,,,0,Matches
+Cabrera Leandro,uyURU,2.0,Espanyol,31,1991,29.7,10,2,1,29,20,1,15,42,25,,,1,Matches
+Cala,esESP,2.0,Cádiz,32,1989,1.5,0,0,0,1,5,0,0,1,1,,,0,Matches
+Calero Fernando,esESP,2.3,Espanyol,26,1995,17.9,6,0,0,22,9,1,4,15,31,,,0,Matches
+Callens Alexander,pePER,2.0,Girona,30,1992,1.3,1,0,0,3,1,0,0,1,3,,,0,Matches
+Camavinga Eduardo,frFRA,2.4,Real Madrid,19,2002,22.3,6,0,0,39,69,3,6,19,49,,,0,Matches
+Camello Sergio,esESP,4.0,Rayo Vallecano,21,2001,26.7,1,0,0,12,18,11,5,2,9,,,0,Matches
+Canales Sergio,esESP,3.0,Real Betis,31,1991,26.7,4,2,1,9,29,4,129,13,13,,,0,Matches
+Capa Ander,esESP,2.0,Athletic Club,30,1992,1.2,1,0,0,4,0,0,4,0,1,,,0,Matches
+Capoue Étienne,frFRA,3.0,Villarreal,34,1988,21.7,4,0,0,18,41,0,9,19,11,,,0,Matches
+Carcelen Isaac,esESP,2.0,Cádiz,29,1993,24.4,4,3,0,16,26,2,73,20,51,,,0,Matches
+Carlos Juan,esESP,1.0,Girona,34,1988,10.0,0,0,0,0,0,0,0,1,0,,,0,Matches
+Carlos Lazo José,esESP,3.0,Almería,26,1996,0.2,0,0,0,1,1,0,0,0,0,,,0,Matches
+Carlos Lazo José,esESP,3.0,Espanyol,26,1996,1.8,0,0,0,2,5,0,4,3,3,,,0,Matches
+Carmona,esESP,2.4,Elche,20,2002,6.5,5,1,1,19,7,2,12,7,9,,,0,Matches
+Carmona,esESP,2.0,Sevilla,20,2002,5.9,6,1,1,14,6,0,11,7,12,,,0,Matches
+Carrasco Yannick,beBEL,2.3,Atlético Madrid,28,1993,25.7,2,0,0,24,21,6,106,12,15,,,0,Matches
+Carvajal Dani,esESP,2.0,Real Madrid,30,1992,19.8,8,1,1,22,15,5,49,16,19,,,0,Matches
+Carvalho William,ptPOR,3.0,Real Betis,30,1992,27.1,6,1,0,29,38,2,5,17,23,,,0,Matches
+Casemiro,brBRA,3.0,Real Madrid,30,1992,0.1,0,0,0,1,0,0,0,0,0,,,0,Matches
+Castellanos Valentín,arARG,4.0,Girona,23,1998,28.9,11,0,0,43,45,30,10,7,6,,,0,Matches
+Castillejo Samu,esESP,3.5,Valencia,27,1995,15.1,7,0,0,32,40,7,86,8,13,,,0,Matches
+Catena,esESP,2.0,Rayo Vallecano,27,1994,34.5,14,1,1,32,15,3,1,26,15,,,0,Matches
+Cavani Edinson,uyURU,4.0,Valencia,35,1987,16.1,6,0,0,18,8,15,3,2,4,,,0,Matches
+Ceballos Dani,esESP,3.0,Real Madrid,25,1996,17.4,8,0,0,17,41,1,18,27,31,,,0,Matches
+Centelles Álex,esESP,2.3,Almería,24,1997,12.5,0,1,0,7,5,0,46,10,13,,,0,Matches
+Cervi Franco,arARG,3.0,Celta Vigo,28,1994,21.0,2,1,0,27,42,2,115,37,47,,,0,Matches
+Chavarría Pep,esESP,3.0,Rayo Vallecano,24,1998,4.1,1,0,0,11,4,1,13,2,4,,,0,Matches
+Cheikh Diop Pape,snSEN,3.0,Elche,24,1997,0.4,1,1,0,3,0,0,0,0,0,,,0,Matches
+Christensen Andreas,dkDEN,2.0,Barcelona,26,1996,19.6,2,0,0,18,7,0,1,20,15,,,1,Matches
+Chukwueze Samuel,ngNGA,3.5,Villarreal,23,1999,26.0,1,0,0,19,34,11,28,12,12,,,0,Matches
+Chumi,esESP,2.0,Almería,23,1999,16.5,5,0,0,10,3,0,8,15,15,,,0,Matches
+Chust Víctor,esESP,2.0,Cádiz,22,2000,10.7,3,0,0,11,4,1,0,11,7,,,0,Matches
+Ciss Pathé,snSEN,3.0,Rayo Vallecano,28,1994,14.2,4,0,0,38,13,1,3,22,30,,,1,Matches
+Clerc Carlos,esESP,2.3,Elche,30,1992,29.3,5,0,0,32,31,2,91,27,52,,,0,Matches
+Collado Álex,esESP,3.0,Elche,23,1999,8.0,1,0,0,9,10,1,18,2,15,,,0,Matches
+Collado Diego,esESP,3.5,Villarreal,21,2001,0.1,0,0,0,0,0,0,2,1,0,,,0,Matches
+Cömert Eray,chSUI,2.0,Valencia,24,1998,18.6,5,1,0,22,11,1,1,29,22,,,0,Matches
+Comesaña Santi,esESP,3.0,Rayo Vallecano,25,1996,27.2,6,0,0,49,28,4,17,33,45,,,0,Matches
+Copete,esESP,2.0,Mallorca,22,1999,24.5,7,1,0,47,24,2,8,42,29,,,0,Matches
+Coquelin Francis,frFRA,3.0,Villarreal,31,1991,8.3,2,0,0,11,7,0,5,9,12,,,0,Matches
+Corona Jesús,mxMEX,3.0,Sevilla,29,1993,1.2,0,0,0,2,5,1,3,2,0,,,0,Matches
+Correa Ángel,arARG,3.5,Atlético Madrid,27,1995,16.2,3,1,0,19,20,14,23,9,7,,,0,Matches
+Correia Thierry,ptPOR,2.0,Valencia,23,1999,22.3,5,0,0,40,44,1,85,25,51,,,0,Matches
+Costa Jaume,esESP,2.0,Mallorca,34,1988,28.9,10,0,0,44,34,7,76,24,34,,,0,Matches
+Costa Samu,ptPOR,3.0,Almería,21,2000,22.1,5,0,0,51,45,4,8,35,34,,,0,Matches
+Courtois Thibaut,beBEL,1.0,Real Madrid,30,1992,31.0,0,0,0,0,3,0,0,3,0,,,0,Matches
+Couto Yan,brBRA,2.4,Girona,20,2002,12.9,3,0,0,13,15,2,65,7,18,,,0,Matches
+Cruz Armada Juan,esESP,2.0,Osasuna,30,1992,22.9,7,0,0,17,9,1,35,14,16,,,0,Matches
+Cruz Juan,esESP,3.0,Real Betis,22,2000,2.0,1,0,0,4,2,1,6,0,0,,,0,Matches
+Cuenca Jorge,esESP,2.0,Villarreal,22,1999,5.6,1,0,0,4,1,0,1,6,6,,,0,Matches
+Cufré Braian,arARG,2.4,Mallorca,25,1996,2.4,0,0,0,5,3,2,1,2,2,,,0,Matches
+Cunha Matheus,brBRA,3.4,Atlético Madrid,23,1999,4.2,2,0,0,7,6,1,3,2,1,,,0,Matches
+Curro,esESP,3.5,Almería,26,1996,0.5,1,0,0,1,0,0,1,0,0,,,0,Matches
+Danjuma Arnaut,nlNED,4.0,Villarreal,25,1997,5.3,0,0,0,2,7,3,6,0,3,,,0,Matches
+Darder Sergi,esESP,3.0,Espanyol,28,1993,36.9,4,0,0,31,78,2,183,25,36,,,0,Matches
+De Paul Rodrigo,arARG,3.0,Atlético Madrid,28,1994,21.4,5,0,0,33,49,0,47,7,21,,,0,Matches
+Del Moral Alberto,esESP,3.0,Villarreal,22,2000,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Delaney Thomas,dkDEN,3.0,Sevilla,30,1991,3.4,3,0,0,4,5,1,4,3,2,,,0,Matches
+Delgado Fran,esESP,2.0,Real Betis,21,2001,0.1,0,0,0,0,0,0,1,0,0,,,0,Matches
+Dembélé Ousmane,frFRA,4.0,Barcelona,25,1997,15.7,4,0,0,16,19,5,105,0,12,,,0,Matches
+Diakhaby Mouctar,gnGUI,2.0,Valencia,25,1996,27.2,7,1,1,23,13,4,2,19,16,,,0,Matches
+Diarra Mamady,mlMLI,3.0,Cádiz,22,2000,0.7,0,0,0,1,1,0,0,0,1,,,0,Matches
+Diarra Youba,mlMLI,3.0,Cádiz,24,1998,1.1,2,0,0,3,0,0,0,1,0,,,0,Matches
+Dimitrievski Stole,mkMKD,1.0,Rayo Vallecano,28,1993,36.9,4,0,0,0,3,0,0,1,0,,,0,Matches
+Djené,tgTOG,2.0,Getafe,30,1991,31.6,10,1,0,50,37,1,25,39,28,,,0,Matches
+Dmitrović Marko,rsSRB,1.0,Sevilla,30,1992,14.1,1,0,0,0,1,0,0,0,0,,,0,Matches
+Doherty Matt,ieIRL,2.3,Atlético Madrid,30,1992,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Dolberg Kasper,dkDEN,4.0,Sevilla,24,1997,2.2,0,0,0,2,4,0,0,0,0,,,0,Matches
+Dominguez Carlos,esESP,2.0,Celta Vigo,21,2001,1.2,0,0,0,0,0,0,0,0,1,,,0,Matches
+Donald John,esESP,2.4,Elche,21,2000,12.1,3,1,0,23,8,0,0,14,11,,,0,Matches
+Duarte Domingos,ptPOR,2.0,Getafe,27,1995,29.5,11,1,1,32,21,2,0,40,19,,,1,Matches
+Durán Pablo,esESP,4.0,Celta Vigo,21,2001,0.4,0,0,0,1,0,1,1,1,0,,,0,Matches
+Duro Hugo,esESP,4.0,Valencia,22,1999,15.4,5,0,0,20,35,3,2,1,11,,,0,Matches
+Eguaras Íñigo,esESP,3.0,Almería,30,1992,10.7,6,0,0,7,8,0,3,7,8,,,0,Matches
+Elustondo Aritz,esESP,2.0,Real Sociedad,28,1994,16.1,5,1,0,21,9,1,8,20,17,,,0,Matches
+Ely Rodrigo,brBRA,2.0,Almería,28,1993,35.1,10,1,1,25,14,2,4,30,21,,,1,Matches
+Embarba Adri,esESP,3.5,Almería,30,1992,16.4,5,1,1,23,30,9,127,8,26,,,0,Matches
+Embarba Adri,esESP,3.5,Espanyol,30,1992,0.4,0,0,0,1,1,0,1,0,0,,,0,Matches
+En-Nesyri Youssef,maMAR,4.0,Sevilla,25,1997,18.5,4,0,0,10,11,21,3,4,6,,,0,Matches
+Escalante Gonzalo,arARG,3.0,Cádiz,29,1993,12.5,4,0,0,14,17,0,4,17,24,,,0,Matches
+Escudero Sergio,esESP,2.3,Valladolid,32,1989,16.0,3,0,0,19,19,1,56,26,19,,,0,Matches
+Espino Alfonso,uyURU,2.0,Cádiz,30,1992,34.7,7,0,0,49,36,3,110,43,54,,,0,Matches
+Espinosa Bernardo,coCOL,2.0,Girona,33,1989,13.6,5,0,0,12,10,0,0,14,3,,,0,Matches
+Expósito Edu,esESP,3.0,Espanyol,25,1996,12.9,3,1,0,14,29,0,48,12,21,,,0,Matches
+Ezequiel Fernández Nicolás,arARG,2.4,Elche,22,2000,5.7,2,0,0,11,8,3,32,4,13,,,1,Matches
+Ezzalzouli Abde,maMAR,3.5,Osasuna,20,2001,16.7,4,2,1,27,34,2,76,4,21,,,0,Matches
+Falcao Radamel,coCOL,4.0,Rayo Vallecano,36,1986,6.8,4,0,0,15,14,12,0,2,4,,,0,Matches
+Fali,esESP,2.3,Cádiz,28,1993,19.0,6,0,0,16,18,1,2,13,20,,,0,Matches
+Fall Mamadou,snSEN,2.0,Villarreal,19,2002,0.3,0,0,0,1,0,0,1,0,0,,,0,Matches
+Fati Ansu,esESP,4.0,Barcelona,19,2002,15.5,3,0,0,18,13,10,10,5,9,,,0,Matches
+Feddal Zouhair,maMAR,2.0,Valladolid,33,1989,4.2,1,0,0,4,2,0,1,6,3,,,0,Matches
+Fekir Nabil,frFRA,3.0,Real Betis,29,1993,10.7,4,1,0,20,36,7,46,1,5,,,0,Matches
+Felipe,brBRA,2.0,Atlético Madrid,33,1989,2.2,0,0,0,4,3,0,0,0,2,,,0,Matches
+Felipe Luiz,itITA,2.0,Real Betis,25,1997,19.6,3,3,0,10,10,0,2,27,23,,,0,Matches
+Félix João,ptPOR,3.5,Atlético Madrid,22,1999,7.2,5,0,0,16,23,3,8,4,7,,,0,Matches
+Femenía Kiko,esESP,2.0,Villarreal,31,1991,12.6,0,0,0,6,8,0,31,21,11,,,0,Matches
+Fernández Aitor,esESP,1.0,Osasuna,31,1991,21.0,1,0,0,0,0,0,0,2,1,,,0,Matches
+Fernández Álex,esESP,3.4,Cádiz,29,1992,17.5,0,0,0,7,14,0,36,8,8,,,0,Matches
+Fernández Álvaro,esESP,1.0,Espanyol,24,1998,11.0,1,0,0,0,3,0,0,0,0,,,0,Matches
+Fernández Carlos,esESP,4.0,Real Sociedad,26,1996,7.0,6,0,0,17,15,9,0,1,4,,,0,Matches
+Fernández Federico,arARG,2.0,Elche,33,1989,1.0,0,0,0,0,0,0,0,2,1,,,0,Matches
+Fernández Joaquín,esESP,2.0,Valladolid,26,1996,24.0,4,0,0,16,11,3,1,28,28,,,1,Matches
+Fernández Valery,esESP,2.4,Girona,22,1999,10.7,1,0,0,6,16,4,23,10,6,,,0,Matches
+Fernando,esESP,1.0,Almería,32,1990,36.5,3,0,0,0,5,0,0,1,0,,,0,Matches
+Fernando,brBRA,2.4,Sevilla,35,1987,17.5,3,1,0,17,9,0,2,24,21,,,1,Matches
+Fidel,esESP,3.4,Elche,32,1989,19.0,5,0,0,11,19,9,58,6,9,,,0,Matches
+Foulquier Dimitri,frFRA,2.0,Valencia,29,1993,19.3,4,0,0,28,14,1,86,14,19,,,0,Matches
+Foyth Juan,arARG,2.0,Villarreal,24,1998,21.8,6,0,0,40,9,0,10,19,46,,,0,Matches
+Fresneda Iván,esESP,2.3,Valladolid,17,2004,19.4,3,0,0,13,25,0,59,14,35,,,0,Matches
+Galán Javi,esESP,2.0,Celta Vigo,27,1994,35.1,6,0,0,50,73,8,162,37,73,,,0,Matches
+Galarreta Iñigo Ruiz,esESP,3.0,Mallorca,28,1993,27.2,12,0,0,60,45,0,53,27,35,,,0,Matches
+García Aleix,esESP,3.0,Girona,25,1997,26.0,1,0,0,13,30,1,180,30,20,,,0,Matches
+García Álvaro,esESP,3.0,Rayo Vallecano,29,1992,31.9,7,0,0,36,33,12,159,34,29,,,0,Matches
+García Borja,esESP,3.4,Girona,31,1990,7.5,1,0,0,4,20,3,17,5,4,,,0,Matches
+García Carlos,esESP,2.0,Cádiz,22,2000,0.3,0,0,0,0,0,0,0,0,0,,,0,Matches
+García Dani,esESP,3.0,Athletic Club,32,1990,16.5,6,0,0,33,14,0,5,19,24,,,0,Matches
+García David,esESP,2.0,Osasuna,28,1994,29.8,8,1,0,54,15,0,2,48,18,,,0,Matches
+García Eric,esESP,2.3,Barcelona,21,2001,15.7,3,0,0,18,8,0,0,17,17,,,0,Matches
+Garcia Fran,esESP,2.0,Rayo Vallecano,22,1999,37.9,1,0,0,23,26,3,156,45,54,,,0,Matches
+García Joan,esESP,1.0,Espanyol,21,2001,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+García Raúl,esESP,3.4,Athletic Club,36,1986,10.7,4,0,0,14,19,8,13,6,8,,,0,Matches
+García Rubén,esESP,3.4,Osasuna,29,1993,12.9,2,0,0,14,17,1,79,10,11,,,0,Matches
+García Unai,esESP,2.0,Osasuna,30,1992,19.0,6,1,0,22,4,0,3,19,13,,,0,Matches
+Garreta Felix,esESP,2.0,Real Betis,18,2004,1.0,0,0,0,2,1,0,0,1,0,,,0,Matches
+Garrido Aleix,esESP,3.0,Barcelona,18,2004,0.1,0,0,0,0,0,0,1,0,1,,,0,Matches
+Gassama Sékou,snSEN,4.0,Valladolid,27,1995,0.4,0,0,0,1,0,0,0,0,0,,,0,Matches
+Gavi,esESP,3.4,Barcelona,17,2004,28.1,10,0,0,74,72,9,39,19,33,,,0,Matches
+Gazzaniga Paulo,arARG,1.0,Girona,30,1992,28.0,4,0,0,0,6,0,0,0,0,,,0,Matches
+Gil Bryan,esESP,3.0,Sevilla,21,2001,10.2,4,0,0,18,21,3,29,8,10,,,0,Matches
+Gil David,esESP,1.0,Cádiz,28,1994,4.0,0,0,0,0,1,0,0,0,0,,,0,Matches
+Gil Óscar,esESP,2.0,Espanyol,25,1997,28.4,14,0,0,53,38,0,37,35,38,,,0,Matches
+Giménez Álvaro,esESP,3.5,Cádiz,31,1991,0.2,0,0,0,1,1,1,0,0,0,,,0,Matches
+Gómez Dani,esESP,4.0,Espanyol,24,1998,1.0,2,0,0,3,2,4,2,1,1,,,0,Matches
+Gómez Maxi,uyURU,4.0,Valencia,25,1996,1.2,0,0,0,4,3,1,0,0,0,,,0,Matches
+Gómez Moi,esESP,3.0,Osasuna,28,1994,27.3,5,0,0,14,26,1,115,10,16,,,0,Matches
+Gómez Papu,arARG,3.0,Sevilla,34,1988,11.8,4,0,0,5,21,2,37,4,2,,,0,Matches
+Gómez Sergi,esESP,2.0,Espanyol,30,1992,26.0,1,2,0,9,8,0,3,30,17,,,0,Matches
+Gomis Antonio,esESP,1.0,Atlético Madrid,19,2003,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+González Diego,esESP,2.0,Elche,27,1995,10.6,4,0,0,17,5,0,1,7,8,,,0,Matches
+González Édgar,esESP,2.0,Real Betis,25,1997,19.7,8,2,2,23,12,1,0,20,17,,,0,Matches
+González Giovanni,uyURU,2.3,Mallorca,27,1994,10.3,5,0,0,16,17,1,20,7,8,,,0,Matches
+González Nicolás,esESP,3.0,Valencia,20,2002,15.6,2,0,0,33,13,0,3,17,14,,,1,Matches
+González Roberto,esESP,3.0,Real Betis,21,2001,0.6,1,0,0,1,4,0,5,1,0,,,0,Matches
+Gorosabel Andoni,esESP,2.0,Real Sociedad,25,1996,19.0,3,0,0,25,17,0,41,17,27,,,0,Matches
+Gragera José,esESP,2.4,Espanyol,21,2000,5.1,2,0,0,14,6,0,0,7,10,,,0,Matches
+Grbić Ivo,hrCRO,1.0,Atlético Madrid,26,1996,10.2,3,0,0,1,1,0,0,0,0,,,0,Matches
+Greif Dominik,skSVK,1.0,Mallorca,25,1997,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Grenier Clément,frFRA,3.0,Mallorca,31,1991,8.0,7,0,0,22,12,0,36,6,8,,,0,Matches
+Griezmann Antoine,frFRA,3.5,Atlético Madrid,31,1991,31.8,2,0,0,22,41,11,129,23,33,,,0,Matches
+Guardado Andrés,mxMEX,3.0,Real Betis,35,1986,15.3,7,0,0,16,10,0,8,22,26,,,0,Matches
+Guardiola Sergi,esESP,4.0,Valladolid,31,1991,5.6,1,0,0,14,9,4,4,2,9,,,0,Matches
+Guardiola Sergi,esESP,4.0,Cádiz,31,1991,12.9,2,0,0,7,21,11,14,3,6,,,0,Matches
+Gudelj Nemanja,rsSRB,2.3,Sevilla,30,1991,30.9,8,0,0,25,21,1,4,31,34,,,0,Matches
+Guerra Javier,esESP,3.0,Valencia,19,2003,6.7,0,0,0,13,7,0,8,11,13,,,0,Matches
+Guevara Ander,esESP,3.0,Real Sociedad,25,1997,2.5,2,0,0,5,3,0,0,2,2,,,0,Matches
+Gueye Pape,snSEN,3.0,Sevilla,23,1999,13.0,6,3,2,30,34,1,18,23,22,,,0,Matches
+Guillamón Hugo,esESP,3.0,Valencia,22,2000,18.1,5,0,0,35,34,0,33,19,14,,,1,Matches
+Gumbau Gerard,esESP,3.0,Elche,27,1994,30.4,11,0,0,50,21,2,162,26,26,,,0,Matches
+Guruzeta Gorka,esESP,4.0,Athletic Club,25,1996,15.8,2,0,0,27,13,17,4,4,21,,,0,Matches
+Guti Raúl,esESP,3.0,Elche,25,1996,12.4,1,0,0,8,22,1,9,8,11,,,0,Matches
+Gutiérrez Miguel,esESP,2.3,Girona,21,2001,26.6,6,0,0,24,24,3,103,19,25,,,0,Matches
+Haddadi Munir,maMAR,3.4,Getafe,26,1995,12.8,4,0,0,14,34,13,69,10,8,,,0,Matches
+Hadzikadunic Dennis,baBIH,2.0,Mallorca,24,1998,6.8,1,0,0,6,1,0,0,3,6,,,0,Matches
+Hassan Haissem,frFRA,3.0,Villarreal,20,2002,0.6,0,0,0,0,1,0,0,1,0,,,0,Matches
+Hazard Eden,beBEL,4.0,Real Madrid,31,1991,2.2,0,0,0,2,9,0,0,1,0,,,0,Matches
+Henrique Luiz,brBRA,3.0,Real Betis,21,2001,20.1,6,0,0,25,39,5,31,14,33,,,0,Matches
+Hermoso Mario,esESP,2.0,Atlético Madrid,27,1995,23.4,7,2,2,27,13,2,16,19,15,,,0,Matches
+Hernández Javi,esESP,2.0,Girona,24,1998,12.4,3,0,0,9,21,1,16,9,13,,,0,Matches
+Hernández Aridane,esESP,2.0,Osasuna,33,1989,19.9,1,0,0,14,12,0,0,26,15,,,1,Matches
+Hernández Luis,esESP,2.0,Cádiz,33,1989,35.0,8,1,1,27,7,2,18,32,20,,,0,Matches
+Hernández Mario,esESP,2.0,Rayo Vallecano,23,1999,1.1,1,0,0,1,1,0,1,2,2,,,0,Matches
+Herrando Jorge,esESP,2.0,Osasuna,21,2001,0.3,0,1,0,1,0,0,0,0,0,,,0,Matches
+Herrera Ander,esESP,3.0,Athletic Club,32,1989,7.7,4,1,0,21,11,0,7,8,11,,,0,Matches
+Herrera Sergio,esESP,1.0,Osasuna,29,1993,17.0,3,0,0,1,4,0,0,1,1,,,1,Matches
+Herrera Yangel,veVEN,3.0,Girona,24,1998,10.7,4,0,0,34,21,3,19,4,9,,,0,Matches
+Hilali Omar,maMAR,2.0,Espanyol,18,2003,1.0,1,0,0,0,2,0,2,1,2,,,0,Matches
+Hongla Martin,cmCMR,2.3,Valladolid,24,1998,14.5,7,2,1,21,3,2,6,11,12,,,0,Matches
+Ibáñez Pablo,esESP,3.0,Osasuna,23,1998,11.8,1,0,0,22,16,4,6,7,14,,,0,Matches
+Iglesias,esESP,2.0,Getafe,24,1998,23.8,7,0,0,44,21,2,86,24,36,,,0,Matches
+Iglesias Borja,esESP,4.0,Real Betis,29,1993,26.3,2,1,0,38,51,20,2,1,5,,,0,Matches
+Illarramendi Asier,esESP,3.0,Real Sociedad,32,1990,12.0,5,0,0,25,13,0,6,18,16,,,0,Matches
+Isak Alexander,seSWE,4.0,Real Sociedad,22,1999,1.7,0,0,0,1,0,0,2,0,1,,,0,Matches
+Isco,esESP,3.4,Sevilla,30,1992,8.9,5,0,0,11,34,6,19,9,9,,,0,Matches
+Iturralde Diego,esESP,2.0,Sevilla,19,2003,0.5,1,0,0,2,1,0,1,0,0,,,0,Matches
+Jackson Nicolas,snSEN,4.0,Villarreal,21,2001,17.8,6,1,1,32,26,13,5,2,11,,,0,Matches
+Januzaj Adnan,beBEL,3.0,Sevilla,27,1995,0.5,0,0,0,1,2,0,1,1,0,,,0,Matches
+Javier Suárez Luis,coCOL,4.0,Almería,24,1997,16.6,4,1,0,36,23,6,14,5,10,,,0,Matches
+Joaquín,esESP,3.0,Real Betis,41,1981,5.5,2,0,0,1,8,1,31,3,4,,,0,Matches
+Jong Frenkie,nlNED,3.0,Barcelona,25,1997,28.2,3,0,0,33,34,1,36,34,26,,,0,Matches
+Jordán Joan,esESP,3.0,Sevilla,28,1994,17.7,8,0,0,32,10,0,8,16,18,,,0,Matches
+Josan,esESP,2.3,Elche,32,1989,12.0,3,0,0,10,18,5,48,7,19,,,0,Matches
+José Willian,brBRA,4.0,Real Betis,30,1991,8.1,1,0,0,9,6,3,4,1,6,,,0,Matches
+Joselu,esESP,4.0,Espanyol,32,1990,33.2,2,0,0,25,69,26,18,8,11,,,0,Matches
+Juanmi,esESP,3.0,Real Betis,29,1993,10.3,3,0,0,15,21,15,0,4,10,,,0,Matches
+Juanpe,esESP,2.0,Girona,31,1991,15.8,3,0,0,11,2,0,3,9,13,,,0,Matches
+Junior Lago,ciCIV,3.5,Mallorca,31,1990,0.6,0,0,0,3,1,0,2,0,0,,,0,Matches
+Júnior Vinicius,brBRA,4.0,Real Madrid,22,2000,31.4,10,1,0,47,122,23,67,6,23,,,0,Matches
+Jørgensen Filip,dkDEN,1.0,Villarreal,20,2002,2.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Kadewere Tino,zwZIM,3.5,Mallorca,26,1996,6.0,1,0,0,6,3,5,7,2,3,,,0,Matches
+Kaiky,brBRA,2.0,Almería,18,2004,6.5,5,0,0,7,3,0,1,9,5,,,0,Matches
+Kang-in Lee,krKOR,3.4,Mallorca,21,2001,31.4,10,0,0,51,61,2,200,12,25,,,0,Matches
+Karrikaburu Jon,esESP,4.0,Real Sociedad,19,2002,1.0,1,0,0,3,4,3,1,0,0,,,0,Matches
+Kenedy,brBRA,4.0,Valladolid,26,1996,3.1,3,0,0,9,2,0,5,1,2,,,0,Matches
+Kessié Franck,ciCIV,3.0,Barcelona,25,1996,11.0,4,0,0,17,16,3,5,12,10,,,0,Matches
+Kiké,esESP,4.0,Osasuna,32,1989,11.3,5,0,0,26,26,6,6,1,3,,,0,Matches
+Kluivert Justin,nlNED,3.5,Valencia,23,1999,16.1,4,0,0,24,19,10,64,6,13,,,0,Matches
+Koke,esESP,3.0,Atlético Madrid,30,1992,28.3,4,0,0,20,27,1,23,19,38,,,0,Matches
+Koleosho Luca,itITA,3.0,Espanyol,17,2004,0.7,0,0,0,1,0,1,3,0,2,,,0,Matches
+Kondogbia Geoffrey,cfCTA,3.0,Atlético Madrid,29,1993,11.2,5,0,0,17,19,2,0,27,22,,,0,Matches
+Koundé Jules,frFRA,2.0,Barcelona,23,1998,27.0,2,0,0,22,12,2,35,20,25,,,1,Matches
+Kroos Toni,deGER,3.0,Real Madrid,32,1990,23.9,2,1,1,28,36,0,122,24,33,,,0,Matches
+Kubo Takefusa,jpJPN,3.5,Real Sociedad,21,2001,27.1,3,0,0,35,48,21,72,8,28,,,0,Matches
+la Hoz César,esESP,3.0,Almería,30,1992,18.6,6,0,0,21,12,0,3,14,19,,,0,Matches
+la Torre Luca,usUSA,3.0,Celta Vigo,24,1998,16.5,6,0,0,33,12,4,21,10,18,,,0,Matches
+Lamela Érik,arARG,3.4,Sevilla,30,1992,20.5,10,1,1,54,21,8,32,8,28,,,0,Matches
+Larin Cyle,caCAN,4.0,Valladolid,27,1995,16.3,4,0,0,23,25,29,5,0,3,,,0,Matches
+Latasa Juanmi,esESP,4.0,Getafe,21,2001,5.0,2,0,0,21,11,1,2,1,4,,,0,Matches
+Lato Toni,esESP,2.3,Valencia,24,1997,10.2,1,0,0,12,9,4,32,6,11,,,0,Matches
+Lázaro,brBRA,3.5,Almería,20,2002,8.0,1,0,0,7,12,3,9,3,3,,,0,Matches
+Le Normand Robin,esESP,2.0,Real Sociedad,25,1996,31.1,6,0,0,45,30,2,1,32,24,,,1,Matches
+Lecomte Benjamin,frFRA,1.0,Espanyol,31,1991,10.0,1,1,0,1,0,0,0,0,0,,,1,Matches
+Ledesma Jeremías,arARG,1.0,Cádiz,29,1993,34.0,2,0,0,1,7,0,0,2,2,,,0,Matches
+Lejeune Florian,frFRA,2.0,Rayo Vallecano,31,1991,28.5,6,3,1,23,9,5,9,15,18,,,1,Matches
+Lekue Iñigo,esESP,2.0,Athletic Club,29,1993,14.7,1,0,0,15,6,1,43,14,17,,,0,Matches
+Lemar Thomas,frFRA,3.0,Atlético Madrid,26,1995,13.9,1,0,0,7,17,2,44,7,18,,,0,Matches
+León Sergio,esESP,4.0,Valladolid,33,1989,14.8,0,1,0,8,22,20,9,0,4,,,0,Matches
+Lewandowski Robert,plPOL,4.0,Barcelona,33,1988,31.6,4,1,1,39,46,22,20,2,11,,,0,Matches
+Lino Samuel,brBRA,3.5,Valencia,22,1999,32.1,4,0,0,35,60,15,80,18,43,,,0,Matches
+Lirola Pol,esESP,2.0,Elche,24,1997,7.0,1,0,0,4,3,0,32,6,6,,,0,Matches
+Llabrés Javier,esESP,3.0,Mallorca,19,2002,0.2,0,0,0,0,0,2,0,0,0,,,0,Matches
+Llorente Marcos,esESP,3.0,Atlético Madrid,27,1995,18.9,5,0,0,30,13,3,44,17,16,,,0,Matches
+Lo Celso Giovani,arARG,3.4,Villarreal,26,1996,12.5,3,0,0,15,31,4,31,7,26,,,0,Matches
+López David,esESP,2.3,Girona,32,1989,18.4,5,0,0,16,16,3,0,15,18,,,0,Matches
+López Diego,esESP,1.0,Rayo Vallecano,40,1981,1.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+López Diego,esESP,3.0,Valencia,20,2002,5.0,0,0,0,6,7,1,12,4,2,,,0,Matches
+López Unai,esESP,3.0,Rayo Vallecano,26,1995,13.9,2,0,0,22,18,2,54,16,20,,,0,Matches
+Lozano Anthony,hnHON,4.0,Cádiz,29,1993,16.0,6,0,0,43,35,8,7,3,4,,,0,Matches
+Lozano Pol,esESP,3.0,Espanyol,22,1999,0.2,1,0,0,1,0,0,1,0,0,,,0,Matches
+Luis Gayà José,esESP,2.0,Valencia,27,1995,30.1,4,0,0,13,27,7,211,23,51,,,0,Matches
+Luis Morales José,esESP,4.0,Villarreal,35,1987,13.5,2,0,0,6,10,11,12,2,6,,,0,Matches
+Lunin Andriy,uaUKR,1.0,Real Madrid,23,1999,7.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Mabil Awer,auAUS,3.0,Cádiz,26,1995,1.8,0,0,0,0,3,0,9,0,0,,,0,Matches
+Machís Darwin,veVEN,3.4,Valladolid,29,1993,6.7,1,0,0,10,12,2,37,3,2,,,0,Matches
+Maffeo Pablo,esESP,2.0,Mallorca,25,1997,33.1,6,1,0,32,45,5,124,27,48,,,0,Matches
+Magallán Lisandro,arARG,2.0,Elche,28,1993,10.0,0,1,0,15,5,0,1,13,13,,,0,Matches
+Magunazelaia Jon,esESP,3.0,Real Sociedad,21,2001,0.7,0,0,0,1,1,0,2,0,0,,,0,Matches
+Maksimović Nemanja,rsSRB,3.0,Getafe,27,1995,22.8,3,0,0,25,8,0,9,38,31,,,0,Matches
+Mallo Hugo,esESP,2.0,Celta Vigo,31,1991,24.0,6,1,1,44,23,6,66,24,29,,,0,Matches
+Malsa Mickael,mqMTQ,3.0,Valladolid,26,1995,0.8,0,0,0,2,0,0,0,2,2,,,0,Matches
+Mamardashvili Giorgi,geGEO,1.0,Valencia,21,2000,38.0,3,0,0,1,3,0,0,1,0,,,0,Matches
+Mandava Reinildo,mzMOZ,2.0,Atlético Madrid,28,1994,20.6,4,0,0,32,30,0,16,28,43,,,0,Matches
+Mandi Aïssa,dzALG,2.0,Villarreal,30,1991,16.2,1,0,0,16,10,4,2,20,9,,,0,Matches
+Marcão,brBRA,2.0,Sevilla,26,1996,4.2,2,0,0,5,6,0,0,5,2,,,0,Matches
+Marchesín Agustín,arARG,1.0,Celta Vigo,34,1988,19.0,2,0,0,0,4,0,0,0,0,,,0,Matches
+Marcos Óscar,esESP,2.0,Athletic Club,33,1989,31.3,7,0,0,43,16,2,129,28,36,,,1,Matches
+Marí Alberto,esESP,4.0,Valencia,21,2001,1.0,1,0,0,3,2,2,0,0,0,,,0,Matches
+Mari José,esESP,3.0,Cádiz,34,1987,4.4,4,0,0,6,7,0,1,5,6,,,0,Matches
+María Giménez José,uyURU,2.0,Atlético Madrid,27,1995,26.9,9,0,0,19,8,0,0,23,25,,,1,Matches
+Mariano,doDOM,4.0,Real Madrid,28,1993,1.7,2,0,0,3,0,1,0,0,0,,,0,Matches
+Marín Pablo,esESP,3.0,Real Sociedad,19,2003,4.0,1,0,0,12,2,0,2,4,6,,,0,Matches
+Mariño Diego,esESP,1.0,Almería,32,1990,0.5,0,0,0,0,0,0,0,0,0,,,0,Matches
+Martí Roger,esESP,3.5,Elche,31,1991,7.3,2,0,0,16,11,4,5,1,2,,,0,Matches
+Martí Roger,esESP,4.0,Cádiz,31,1991,7.1,1,0,0,26,15,8,0,3,5,,,0,Matches
+Martin Ander,esESP,3.0,Real Sociedad,21,2000,0.5,0,0,0,2,0,0,4,0,2,,,0,Matches
+Martín Andrés,esESP,3.0,Rayo Vallecano,23,1999,2.3,1,0,0,5,2,0,11,1,2,,,0,Matches
+Martín Carlos,esESP,3.5,Atlético Madrid,20,2002,0.3,1,0,0,2,0,1,2,1,2,,,0,Matches
+Martín Iván,esESP,3.0,Girona,23,1999,17.6,2,0,0,18,13,3,18,10,8,,,0,Matches
+Martinez Arnau,esESP,2.0,Girona,19,2003,30.4,11,0,0,36,67,6,60,25,44,,,0,Matches
+Martínez Iñigo,esESP,2.0,Athletic Club,31,1991,14.9,1,0,0,13,10,3,5,16,8,,,0,Matches
+Martínez Roger,esESP,3.0,Espanyol,18,2004,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Mascarell Omar,gqEQG,2.4,Elche,29,1993,27.2,6,0,0,21,17,0,24,43,26,,,0,Matches
+Masip Jordi,esESP,1.0,Valladolid,33,1989,27.9,4,0,0,0,5,0,0,1,0,,,0,Matches
+Mata Jaime,esESP,3.5,Getafe,33,1988,4.9,5,0,0,17,7,4,9,3,8,,,0,Matches
+Mayoral Borja,esESP,4.0,Getafe,25,1997,30.7,4,0,0,16,38,12,37,3,4,,,0,Matches
+Mbaye Mamadou,snSEN,2.0,Cádiz,24,1998,8.4,2,0,0,6,2,4,0,10,8,,,0,Matches
+Medrano Fernando,esESP,2.0,Celta Vigo,22,2000,0.1,0,0,0,1,0,0,0,1,1,,,0,Matches
+Melero Gonzalo,esESP,3.0,Almería,28,1994,20.6,5,0,0,24,30,3,2,7,17,,,0,Matches
+Memphis,nlNED,4.0,Atlético Madrid,28,1994,3.0,1,0,0,2,6,0,5,0,0,,,0,Matches
+Memphis,nlNED,4.0,Barcelona,28,1994,1.3,0,0,0,2,2,1,4,0,1,,,0,Matches
+Mendes Houboulang,gwGNB,2.0,Almería,24,1998,9.8,2,0,0,13,4,0,31,6,11,,,0,Matches
+Méndez Brais,esESP,3.0,Real Sociedad,25,1997,26.7,6,0,0,60,54,2,127,14,34,,,0,Matches
+Méndez Diego,esESP,3.0,Rayo Vallecano,18,2003,0.0,0,0,0,0,0,0,0,1,0,,,0,Matches
+Mendy Ferland,frFRA,2.0,Real Madrid,27,1995,15.0,2,0,0,4,18,0,7,13,11,,,0,Matches
+Meré Jorge,esESP,2.0,Cádiz,25,1997,6.7,0,0,0,1,3,0,0,5,7,,,0,Matches
+Merino Mikel,esESP,3.0,Real Sociedad,26,1996,27.7,5,1,0,74,47,4,25,20,49,,,0,Matches
+Mesa Roque,esESP,3.0,Valladolid,33,1989,18.0,11,1,1,38,25,1,12,13,17,,,0,Matches
+Militão Éder,brBRA,2.0,Real Madrid,24,1998,30.0,4,0,0,35,38,1,12,41,30,,,0,Matches
+Milla Luis,esESP,3.0,Getafe,27,1994,20.6,6,1,1,28,22,1,76,32,30,,,0,Matches
+Milla Pere,esESP,3.5,Elche,29,1992,20.5,7,0,0,19,44,13,14,8,22,,,0,Matches
+Milovanović Marko,rsSRB,4.0,Almería,18,2003,0.2,1,0,0,2,0,0,0,0,0,,,0,Matches
+Mingueza Óscar,esESP,2.0,Celta Vigo,23,1999,14.3,2,0,0,19,8,1,29,11,21,,,0,Matches
+Mir Rafa,esESP,4.0,Sevilla,25,1997,14.4,1,0,0,22,10,18,5,4,2,,,0,Matches
+Miranda Juan,esESP,2.0,Real Betis,22,2000,16.4,1,1,0,15,20,1,73,20,17,,,0,Matches
+Mitrović Stefan,rsSRB,2.0,Getafe,32,1990,18.7,5,0,0,13,3,0,0,17,6,,,0,Matches
+Modrić Luka,hrCRO,3.0,Real Madrid,36,1985,19.4,7,0,0,21,16,3,62,12,12,,,0,Matches
+Mojica Johan,coCOL,2.0,Villarreal,29,1992,7.1,0,0,0,3,14,0,40,5,9,,,0,Matches
+Mojica Johan,coCOL,2.3,Elche,29,1992,3.0,2,0,0,4,3,0,13,4,2,,,0,Matches
+Molina Nahuel,arARG,2.0,Atlético Madrid,24,1998,31.9,7,1,0,22,16,3,120,17,44,,,0,Matches
+Moncayola Jon,esESP,2.4,Osasuna,24,1998,27.2,6,0,0,35,17,3,77,18,40,,,0,Matches
+Monchu,esESP,3.0,Valladolid,22,1999,22.6,10,0,0,45,28,1,75,17,32,,,0,Matches
+Montes César,mxMEX,2.0,Espanyol,25,1997,17.7,6,0,0,17,6,1,1,14,8,,,0,Matches
+Montiel Gonzalo,arARG,2.0,Sevilla,25,1997,16.9,8,1,0,16,9,10,38,19,15,,,0,Matches
+Montoya Martín,esESP,2.0,Real Betis,31,1991,5.0,1,0,0,4,6,0,10,8,7,,,0,Matches
+Morata Álvaro,esESP,4.0,Atlético Madrid,29,1992,21.1,4,0,0,39,56,26,5,0,11,,,0,Matches
+Morcillo Jon,esESP,3.0,Athletic Club,23,1998,0.8,0,0,0,1,1,0,6,1,1,,,0,Matches
+Moreno Alberto,esESP,2.0,Villarreal,30,1992,14.4,7,0,0,26,9,3,36,21,18,,,0,Matches
+Moreno Álex,esESP,2.0,Real Betis,29,1993,15.0,1,0,0,17,17,1,26,17,21,,,0,Matches
+Moreno Diego,esESP,2.0,Osasuna,21,2001,7.1,1,0,0,3,4,1,20,5,4,,,0,Matches
+Moreno Gerard,esESP,4.0,Villarreal,30,1992,13.7,4,0,0,11,14,13,8,5,6,,,0,Matches
+Morente Tete,esESP,3.4,Elche,25,1996,23.0,5,0,0,32,21,12,100,26,21,,,0,Matches
+Moriba Ilaix,gnGUI,3.0,Valencia,19,2003,11.2,6,2,1,32,33,0,4,4,18,,,0,Matches
+Morlanes Manu,esESP,3.0,Villarreal,23,1999,1.8,0,1,0,1,1,0,0,1,2,,,0,Matches
+Morlanes Manu,esESP,3.0,Mallorca,23,1999,7.8,3,0,0,6,8,0,2,5,9,,,0,Matches
+Morón Loren,esESP,4.0,Real Betis,28,1993,0.2,1,0,0,2,0,0,0,0,2,,,0,Matches
+Mosquera Cristhian,esESP,2.0,Valencia,18,2004,1.6,0,0,0,0,1,0,1,1,2,,,0,Matches
+Mumin Abdul,ghGHA,2.0,Rayo Vallecano,24,1998,10.2,2,0,0,7,8,0,2,9,9,,,0,Matches
+Muniain Iker,esESP,3.0,Athletic Club,29,1992,18.8,2,0,0,13,62,1,114,5,15,,,0,Matches
+Muñoz Aihen,esESP,2.0,Real Sociedad,24,1997,19.5,2,0,0,29,16,0,54,9,24,,,0,Matches
+Muñoz Iker,esESP,3.0,Osasuna,19,2002,2.8,0,0,0,5,4,0,0,3,0,,,0,Matches
+Muñoz Pablo,esESP,3.0,Rayo Vallecano,18,2003,0.1,0,0,0,2,1,0,0,0,0,,,0,Matches
+Muriqi Vedat,xkKVX,4.0,Mallorca,28,1994,32.6,6,1,0,60,39,29,11,13,7,,,0,Matches
+Musah Yunus,usUSA,3.0,Valencia,19,2002,23.4,10,1,0,42,42,3,40,13,36,,,0,Matches
+Mwepu Francisco,zmZAM,4.0,Cádiz,22,2000,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Nacho,esESP,2.0,Real Madrid,32,1990,18.2,7,0,0,17,14,3,13,19,16,,,1,Matches
+Narváez Juanjo,coCOL,3.0,Valladolid,27,1995,1.6,0,0,0,1,9,1,1,0,1,,,0,Matches
+Nastasić Matija,rsSRB,2.0,Mallorca,29,1993,10.1,3,0,0,12,0,1,1,17,8,,,0,Matches
+Navarro Roberto,esESP,3.0,Real Sociedad,20,2002,3.9,2,0,0,8,6,5,15,2,4,,,0,Matches
+Navas Jesús,esESP,2.3,Sevilla,36,1985,22.0,5,0,0,7,33,6,133,19,13,,,1,Matches
+Negredo Álvaro,esESP,4.0,Cádiz,36,1985,8.4,0,0,0,5,8,7,2,0,4,,,0,Matches
+Nianzou Tanguy,frFRA,2.0,Sevilla,20,2002,15.2,1,1,0,13,14,1,1,14,14,,,0,Matches
+Ñíguez Saúl,esESP,2.4,Atlético Madrid,27,1994,12.2,8,0,0,34,5,2,15,13,27,,,0,Matches
+Niño Fernando,esESP,4.0,Villarreal,21,2000,0.2,0,0,0,1,0,0,0,0,0,,,0,Matches
+Nteka Randy,aoANG,3.5,Elche,24,1997,8.1,1,0,0,21,17,3,0,4,10,,,0,Matches
+Nteka Randy,aoANG,3.5,Rayo Vallecano,24,1997,1.3,0,1,0,4,5,0,0,2,2,,,0,Matches
+Núñez Unai,esESP,2.0,Celta Vigo,25,1997,35.0,8,0,0,25,31,1,3,69,32,,,1,Matches
+Oblak Jan,siSVN,1.0,Atlético Madrid,29,1993,27.7,1,0,0,0,3,0,0,0,0,,,0,Matches
+Ocampo Brian,uyURU,3.0,Cádiz,23,1999,12.4,2,0,0,32,27,1,34,3,16,,,0,Matches
+Ocampos Lucas,arARG,3.4,Sevilla,28,1994,12.9,7,0,0,15,24,6,26,7,14,,,0,Matches
+Odriozola Álvaro,esESP,2.0,Real Madrid,26,1995,0.4,0,0,0,0,2,0,3,0,0,,,0,Matches
+Olasagasti,esESP,3.0,Real Sociedad,21,2000,0.7,0,0,0,1,4,0,0,0,3,,,0,Matches
+Olaza Lucas,uyURU,2.0,Valladolid,28,1994,16.6,3,0,0,12,19,2,71,16,16,,,0,Matches
+Oliván Brian,esESP,2.0,Espanyol,28,1994,26.7,7,0,0,32,15,3,143,23,27,,,0,Matches
+Oliveira Rosa Lucas,brBRA,2.3,Valladolid,22,2000,10.3,3,0,0,19,11,1,37,15,18,,,0,Matches
+Oroz Aimar,esESP,3.4,Osasuna,20,2001,22.4,6,0,0,36,61,2,6,25,14,,,0,Matches
+Ortiz Pedro,esESP,3.0,Sevilla,21,2000,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Oyarzabal Mikel,esESP,3.5,Real Sociedad,25,1997,13.5,1,0,0,15,16,12,28,3,8,,,0,Matches
+Özkacar Cenk,trTUR,2.0,Valencia,21,2000,15.2,1,0,0,7,10,0,3,11,20,,,0,Matches
+Pacheco Fernando,esESP,1.0,Almería,30,1992,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Pacheco Fernando,esESP,1.0,Espanyol,30,1992,16.0,0,0,0,0,4,0,0,1,0,,,0,Matches
+Pacheco Jon,esESP,2.0,Real Sociedad,21,2001,13.3,2,0,0,18,10,1,0,12,10,,,0,Matches
+Paciência Gonçalo,ptPOR,4.0,Celta Vigo,27,1994,7.4,2,1,0,19,17,0,6,0,6,,,0,Matches
+Palacios Helibelton,coCOL,2.3,Elche,29,1993,21.3,6,0,0,30,19,0,18,20,20,,,0,Matches
+Palazón Camacho Isaac,esESP,3.0,Rayo Vallecano,27,1994,32.9,4,0,0,37,104,9,191,19,30,,,0,Matches
+Paredes Aitor,esESP,2.0,Athletic Club,22,2000,9.5,3,0,0,12,2,0,2,13,7,,,1,Matches
+Parejo Daniel,esESP,3.0,Villarreal,33,1989,36.5,6,0,0,30,75,0,142,29,37,,,0,Matches
+Parra Gutierrez Moises,esESP,3.0,Getafe,20,2002,0.1,0,0,0,0,0,0,0,0,0,,,0,Matches
+Parra Raúl,esESP,2.0,Cádiz,22,1999,3.4,1,0,0,6,3,0,6,0,2,,,0,Matches
+Pascu,esESP,4.0,Villarreal,19,2003,0.1,0,0,0,1,0,0,0,0,0,,,0,Matches
+Pastore Javier,arARG,3.0,Elche,33,1989,0.1,0,0,0,1,0,0,0,0,0,,,0,Matches
+Paulista Gabriel,brBRA,2.0,Valencia,31,1990,16.7,4,2,1,12,11,0,0,31,9,,,0,Matches
+Pedraza Alfonso,esESP,2.0,Villarreal,26,1996,18.1,5,0,0,21,15,2,76,17,26,,,0,Matches
+Pedri,esESP,3.0,Barcelona,19,2002,22.0,2,0,0,8,43,4,27,13,21,,,0,Matches
+Pedrosa Adrià,esESP,2.0,Espanyol,24,1998,2.5,0,0,0,3,4,1,9,5,1,,,0,Matches
+Peña Iñaki,esESP,1.0,Barcelona,23,1999,0.8,0,0,0,0,0,0,0,0,0,,,0,Matches
+Peña Rubén,esESP,2.3,Osasuna,31,1991,14.2,2,1,0,27,14,0,54,18,22,,,0,Matches
+Perea Alberto,esESP,3.0,Cádiz,31,1990,0.5,0,0,0,0,2,0,1,0,0,,,0,Matches
+Pérez Ayoze,esESP,3.4,Real Betis,29,1993,15.4,3,0,0,31,29,2,7,14,18,,,0,Matches
+Pérez Carles,esESP,3.4,Celta Vigo,24,1998,23.8,5,0,0,35,37,9,38,6,23,,,0,Matches
+Perez Francisco,esESP,3.0,Valencia,19,2002,1.6,2,0,0,4,3,3,8,0,1,,,0,Matches
+Pérez Kike,esESP,3.0,Valladolid,25,1997,25.6,9,0,0,57,57,4,57,21,35,,,0,Matches
+Pérez Lucas,esESP,4.0,Cádiz,33,1988,7.0,3,0,0,6,4,7,41,1,2,,,0,Matches
+Pérez Luis,esESP,2.3,Valladolid,27,1995,13.5,2,0,0,12,16,4,54,16,24,,,0,Matches
+Pezzella Germán,arARG,2.0,Real Betis,31,1991,27.9,4,3,0,27,17,1,2,46,28,,,0,Matches
+Pierre-Gabriel Ronaël,frFRA,2.0,Espanyol,24,1998,2.6,2,1,1,4,4,0,10,9,8,,,0,Matches
+Pino Yeremi,esESP,3.4,Villarreal,19,2002,27.2,8,0,0,65,53,18,21,15,36,,,0,Matches
+Piqué Gerard,esESP,2.0,Barcelona,35,1987,4.3,2,1,0,7,2,0,0,2,4,,,0,Matches
+Plano Óscar,esESP,3.4,Valladolid,31,1991,22.6,3,0,0,23,50,7,23,27,26,,,0,Matches
+Plata Gonzalo,ecECU,3.5,Valladolid,21,2000,25.6,1,0,0,22,41,4,55,12,35,,,0,Matches
+Ponce Ezequiel,arARG,3.5,Elche,25,1997,12.5,2,1,0,32,10,8,1,1,6,,,0,Matches
+Portillo Francisco,esESP,3.0,Almería,32,1990,8.0,1,0,0,2,3,2,13,7,6,,,0,Matches
+Portu,esESP,2.4,Getafe,30,1992,19.7,7,1,1,25,25,10,91,20,21,,,0,Matches
+Pozo José,esESP,3.0,Rayo Vallecano,26,1996,1.0,0,0,0,2,4,0,4,1,2,,,0,Matches
+Pozo Manuel,esESP,4.0,Valladolid,20,2001,0.2,0,0,0,0,0,0,1,2,0,,,0,Matches
+Pozo Pozo Alejandro,esESP,2.3,Almería,23,1999,20.9,2,0,0,15,14,1,70,24,18,,,0,Matches
+Prats Abdón,esESP,4.0,Mallorca,29,1992,4.6,1,0,0,5,6,2,0,0,0,,,0,Matches
+Puado Javi,esESP,3.4,Espanyol,24,1998,26.0,4,0,0,16,26,4,36,10,11,,,0,Matches
+Puigmal Arnau,esESP,3.0,Almería,21,2001,8.5,4,0,0,10,15,2,18,11,13,,,0,Matches
+Quina Domingos,ptPOR,3.0,Elche,22,1999,3.1,3,1,1,5,11,0,7,2,2,,,0,Matches
+Quintanilla Rubén,esESP,3.0,Mallorca,20,2002,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Raillo Antonio,esESP,2.0,Mallorca,30,1991,30.7,11,1,0,42,21,5,0,31,21,,,0,Matches
+Rajković Predrag,rsSRB,1.0,Mallorca,26,1995,36.0,3,0,0,1,3,0,0,0,0,,,0,Matches
+Rakitić Ivan,hrCRO,3.0,Sevilla,34,1988,19.9,3,1,0,16,27,2,75,24,23,,,0,Matches
+Ramazani Largie,beBEL,3.5,Almería,21,2001,15.6,6,0,0,31,15,12,20,15,9,,,0,Matches
+Ramos Chris,esESP,4.0,Cádiz,25,1997,7.9,2,0,0,21,12,0,6,1,9,,,0,Matches
+Raphinha,brBRA,4.0,Barcelona,25,1996,23.0,9,0,0,22,37,15,173,15,19,,,0,Matches
+Reguilón Sergio,esESP,2.0,Atlético Madrid,25,1996,3.4,3,1,1,4,6,1,9,2,5,,,0,Matches
+Reina Pepe,esESP,1.0,Villarreal,39,1982,22.0,2,0,0,0,1,0,0,1,0,,,0,Matches
+Reinier,brBRA,3.4,Girona,20,2002,7.2,1,1,0,4,15,2,2,5,10,,,0,Matches
+Rekik Karim,nlNED,2.0,Sevilla,27,1994,13.1,2,0,0,19,5,0,1,10,5,,,1,Matches
+Remiro Álex,esESP,1.0,Real Sociedad,27,1995,38.0,1,0,0,0,4,0,0,0,0,,,0,Matches
+Revuelta Montero Alejandro,esESP,2.0,Getafe,22,2000,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Riad Chadi,maMAR,2.0,Barcelona,19,2003,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Ribaudo Nico,esESP,3.4,Espanyol,21,2001,13.9,4,0,0,24,33,3,45,6,11,,,0,Matches
+Rico Diego,esESP,2.0,Real Sociedad,29,1993,18.3,3,0,0,27,26,2,56,19,21,,,0,Matches
+Riquelme Rodrigo,esESP,3.4,Girona,22,2000,24.2,1,0,0,27,36,5,78,12,8,,,0,Matches
+Roberto Sergi,esESP,2.3,Barcelona,30,1992,14.5,3,0,0,19,12,2,25,11,15,,,0,Matches
+Robertone Lucas,arARG,3.0,Almería,25,1997,31.6,7,0,0,33,88,3,138,44,29,,,0,Matches
+Roca Joel,esESP,4.0,Girona,17,2005,0.9,1,0,0,2,2,0,0,0,2,,,0,Matches
+Roco Enzo,clCHI,2.0,Elche,29,1992,18.4,7,1,1,34,10,0,1,17,13,,,0,Matches
+Rodri,esESP,3.0,Real Betis,22,2000,17.8,0,0,0,6,39,2,45,11,12,,,0,Matches
+Rodríguez Álvaro,uyURU,4.0,Real Madrid,18,2004,0.9,0,0,0,3,0,3,0,0,1,,,0,Matches
+Rodríguez Ángel,esESP,4.0,Mallorca,35,1987,4.4,1,0,0,9,6,2,2,1,1,,,0,Matches
+Rodríguez Arnaiz Óscar,esESP,3.0,Celta Vigo,24,1998,19.7,6,0,0,22,26,2,83,24,24,,,0,Matches
+Rodríguez Dani,esESP,3.0,Mallorca,34,1988,23.3,8,0,0,49,33,4,32,20,22,,,0,Matches
+Rodríguez Guido,arARG,3.0,Real Betis,28,1994,31.9,8,0,0,45,62,1,9,39,72,,,1,Matches
+Rodríguez Miguel,esESP,3.5,Celta Vigo,19,2003,2.8,0,0,0,6,8,1,13,1,5,,,0,Matches
+Rodrygo,brBRA,4.0,Real Madrid,21,2001,26.4,4,0,0,18,49,10,22,7,10,,,0,Matches
+Román Leo,esESP,1.0,Mallorca,22,2000,1.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Romero Iván,esESP,4.0,Sevilla,21,2001,0.1,1,0,0,1,1,0,0,0,0,,,0,Matches
+Romeu Oriol,esESP,3.0,Girona,30,1991,32.8,10,1,1,58,33,0,14,35,39,,,0,Matches
+Rubén,esESP,2.4,Espanyol,21,2001,9.9,1,0,0,18,7,0,48,17,16,,,0,Matches
+Rüdiger Antonio,deGER,2.0,Real Madrid,29,1993,26.8,1,0,0,12,7,2,5,19,18,,,0,Matches
+Ruibal Aitor,esESP,2.3,Real Betis,26,1996,16.2,4,1,0,20,17,2,31,24,30,,,0,Matches
+Ruiz Víctor,esESP,2.0,Real Betis,33,1989,6.2,0,0,0,4,2,1,0,6,3,,,0,Matches
+Rulli Gerónimo,arARG,1.0,Villarreal,30,1992,14.0,1,0,0,0,1,0,0,1,0,,,0,Matches
+Russo Franco,arARG,2.0,Mallorca,27,1994,1.6,0,0,0,0,2,0,0,3,1,,,0,Matches
+Sabaly Youssouf,snSEN,2.0,Real Betis,29,1993,18.7,2,0,0,20,32,2,17,16,22,,,0,Matches
+Sadiq Umar,ngNGA,4.0,Almería,25,1997,2.7,1,0,0,9,2,7,0,0,0,,,0,Matches
+Sadiq Umar,ngNGA,4.0,Real Sociedad,25,1997,0.9,0,0,0,3,1,4,0,0,1,,,0,Matches
+Sáiz Samuel,esESP,3.0,Girona,31,1991,2.7,1,0,0,3,4,2,7,0,2,,,0,Matches
+Salas Kike,esESP,2.0,Sevilla,20,2002,4.1,1,1,0,4,1,0,0,5,1,,,0,Matches
+Salvi,esESP,3.0,Rayo Vallecano,31,1991,5.4,2,0,0,8,10,2,38,2,8,,,0,Matches
+San Emeterio Fede,esESP,3.0,Cádiz,25,1997,20.5,14,0,0,56,22,0,3,17,22,,,0,Matches
+Sancet Oihan,esESP,3.0,Athletic Club,22,2000,28.1,6,1,0,41,54,2,17,4,15,,,0,Matches
+Sánchez Antonio,esESP,2.4,Mallorca,25,1997,12.0,5,0,0,26,15,0,33,22,8,,,0,Matches
+Sánchez Iván,esESP,3.4,Valladolid,29,1992,12.8,0,0,0,9,43,1,38,8,14,,,0,Matches
+Sánchez Javi,esESP,2.0,Valladolid,25,1997,26.6,11,0,0,34,9,0,5,48,25,,,0,Matches
+Sánchez Manu,esESP,2.0,Osasuna,21,2000,23.6,3,0,0,26,10,2,71,15,35,,,0,Matches
+Saveljich Esteban,meMNE,2.0,Rayo Vallecano,31,1991,0.0,1,0,0,0,0,0,0,0,0,,,0,Matches
+Savić Stefan,meMNE,2.0,Atlético Madrid,31,1991,21.6,4,2,0,31,8,1,1,33,27,,,0,Matches
+Seferović Haris,chSUI,4.0,Celta Vigo,30,1992,9.9,3,0,0,4,7,14,21,1,2,,,0,Matches
+Seoane Jaime,esESP,3.0,Getafe,25,1997,3.6,1,0,0,6,4,0,2,1,4,,,0,Matches
+Silva David,esESP,3.4,Real Sociedad,36,1986,21.5,3,0,0,30,33,3,20,15,20,,,0,Matches
+Silva Rui,ptPOR,1.0,Real Betis,28,1994,26.0,2,0,0,0,2,0,0,0,2,,,0,Matches
+Simo,esESP,2.0,Espanyol,17,2005,1.6,0,0,0,2,0,0,0,0,1,,,0,Matches
+Simón Unai,esESP,1.0,Athletic Club,25,1997,30.5,2,0,0,0,1,0,1,0,1,,,0,Matches
+Sobrino Rubén,esESP,3.4,Cádiz,30,1992,27.4,11,0,0,50,54,8,13,24,38,,,0,Matches
+Sola Alex,esESP,2.0,Real Sociedad,23,1999,3.9,1,0,0,3,8,0,12,7,9,,,0,Matches
+Solari Augusto,arARG,3.0,Celta Vigo,30,1992,2.9,0,0,0,9,4,0,3,5,6,,,0,Matches
+Soler Carlos,esESP,3.0,Valencia,25,1997,2.7,0,0,0,2,4,0,16,0,0,,,0,Matches
+Soria David,esESP,1.0,Getafe,29,1993,38.0,2,0,0,1,3,0,0,1,0,,,0,Matches
+Sotelo Hugo,esESP,3.0,Celta Vigo,18,2003,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Sousa Dyego,ptPOR,4.0,Almería,32,1989,5.9,1,0,0,10,12,4,1,1,6,,,0,Matches
+Souza Vinicius,brBRA,3.0,Espanyol,23,1999,27.0,10,1,1,65,38,0,4,49,66,,,0,Matches
+Strand Larsen Jørgen,noNOR,4.0,Celta Vigo,22,2000,18.9,4,0,0,34,43,12,6,3,7,,,0,Matches
+Stuani Cristhian,uyURU,4.0,Girona,35,1986,12.1,8,0,0,40,22,6,4,2,7,,,0,Matches
+Suárez Damián,uyURU,2.3,Getafe,34,1988,21.6,7,0,0,43,17,2,77,15,31,,,0,Matches
+Suárez Denis,esESP,3.0,Espanyol,28,1994,10.5,2,0,0,16,14,1,39,6,20,,,0,Matches
+Suárez Mario,esESP,3.0,Rayo Vallecano,35,1987,0.1,0,1,0,0,0,0,0,0,0,,,0,Matches
+Suso,esESP,3.4,Sevilla,28,1993,11.8,1,0,0,13,19,7,78,2,10,,,0,Matches
+Swedberg Williot,seSWE,3.5,Celta Vigo,18,2004,0.6,1,0,0,1,1,0,0,0,1,,,0,Matches
+Sørloth Alexander,noNOR,4.0,Real Sociedad,26,1995,26.5,4,0,0,32,16,17,9,2,9,,,0,Matches
+Tapia Renato,pePER,2.4,Celta Vigo,27,1995,16.1,8,1,1,29,16,0,11,20,29,,,0,Matches
+Tchouaméni Aurélien,frFRA,3.0,Real Madrid,22,2000,23.5,2,0,0,35,35,0,13,50,38,,,0,Matches
+Telles Alex,brBRA,2.3,Sevilla,29,1992,15.9,6,0,0,23,14,1,76,21,14,,,0,Matches
+ter Stegen Marc-André,deGER,1.0,Barcelona,30,1992,37.2,0,0,0,0,2,0,0,0,0,,,0,Matches
+Terrats Ramón,esESP,3.0,Villarreal,21,2000,9.1,1,0,0,14,18,0,16,8,10,,,0,Matches
+Terrats Ramón,esESP,3.0,Girona,21,2000,2.4,0,0,0,3,3,0,2,3,3,,,0,Matches
+Tomás Raúl,esESP,4.0,Rayo Vallecano,27,1994,8.9,2,0,0,21,23,20,8,0,2,,,0,Matches
+Torre Pablo,esESP,4.0,Barcelona,19,2003,1.6,0,0,0,4,3,0,8,2,1,,,0,Matches
+Torres David,esESP,2.0,Valladolid,19,2003,4.3,1,0,0,3,2,0,1,2,2,,,0,Matches
+Torres Ferrán,esESP,4.0,Barcelona,22,2000,15.5,5,1,0,17,25,8,60,2,7,,,0,Matches
+Torres Óliver,esESP,3.0,Sevilla,27,1994,23.7,2,0,0,28,44,7,59,11,21,,,0,Matches
+Torres Pau,esESP,2.0,Villarreal,25,1997,33.9,10,0,0,19,17,0,4,14,24,,,1,Matches
+Torres Roberto,esESP,3.0,Osasuna,33,1989,0.1,0,0,0,0,0,0,2,0,0,,,0,Matches
+Torró Lucas,esESP,3.0,Osasuna,28,1994,27.5,10,0,0,63,31,0,2,41,29,,,0,Matches
+Touaizi Nabil,maMAR,3.0,Espanyol,21,2001,0.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Trejo Óscar,arARG,3.4,Rayo Vallecano,34,1988,23.8,9,0,0,77,65,5,33,10,33,,,0,Matches
+Trigueros Manu,esESP,3.0,Villarreal,30,1991,9.2,2,1,0,13,10,1,4,4,14,,,0,Matches
+Tsyhankov Viktor,uaUKR,3.0,Girona,24,1997,16.5,0,0,0,8,21,2,55,7,8,,,0,Matches
+Turrientes Beñat,esESP,3.0,Real Sociedad,20,2002,1.2,0,0,0,2,1,0,4,0,3,,,0,Matches
+Ünal Enes,trTUR,4.0,Getafe,25,1997,33.0,6,0,0,61,77,27,17,6,14,,,0,Matches
+Ureña Oscar,doDOM,3.0,Girona,19,2003,1.1,0,0,0,2,1,0,4,1,2,,,0,Matches
+Valentín Óscar,esESP,3.0,Rayo Vallecano,27,1994,28.4,11,0,0,75,50,1,4,46,56,,,0,Matches
+Valjent Martin,skSVK,2.0,Mallorca,26,1995,29.5,8,0,0,33,11,1,6,31,26,,,0,Matches
+Vallejo Jesús,esESP,2.0,Real Madrid,25,1997,0.2,0,0,0,0,0,0,0,0,0,,,0,Matches
+Vallejo Manu,esESP,3.4,Girona,25,1997,2.3,0,0,0,1,6,1,7,0,1,,,0,Matches
+Valverde Federico,uyURU,3.4,Real Madrid,24,1998,27.8,2,0,0,11,15,5,28,16,20,,,0,Matches
+Vazquez Jesus,esESP,2.0,Valencia,19,2003,3.4,1,0,0,4,5,0,11,1,8,,,0,Matches
+Vázquez Kevin,esESP,2.3,Celta Vigo,29,1993,4.9,2,0,0,8,5,1,7,1,9,,,0,Matches
+Vázquez Lucas,esESP,2.0,Real Madrid,31,1991,12.7,2,0,0,23,16,3,42,6,23,,,0,Matches
+Veiga Gabriel,esESP,3.0,Celta Vigo,20,2002,25.5,6,1,0,42,41,4,27,21,21,,,0,Matches
+Vencedor Paris Unai,esESP,3.0,Athletic Club,21,2000,2.1,2,0,0,12,2,0,2,1,1,,,0,Matches
+Verdú Gonzalo,esESP,2.0,Elche,33,1988,7.8,1,2,0,10,5,0,0,10,5,,,1,Matches
+Vesga Mikel,esESP,3.0,Athletic Club,29,1993,28.6,5,0,0,43,21,0,11,35,37,,,1,Matches
+Vidal Aleix,esESP,3.4,Espanyol,32,1989,11.4,10,1,1,23,17,1,40,13,5,,,0,Matches
+Vidal Nacho,esESP,2.0,Osasuna,27,1995,13.9,4,0,0,28,17,0,31,19,14,,,0,Matches
+Villa Toni,esESP,3.0,Valladolid,27,1995,1.0,0,0,0,0,1,1,5,0,1,,,0,Matches
+Villa Toni,esESP,3.0,Girona,27,1995,9.9,2,0,0,12,18,7,27,8,18,,,0,Matches
+Villalibre Asier,esESP,4.0,Athletic Club,24,1997,1.1,0,0,0,3,1,0,0,0,0,,,0,Matches
+Villar Gonzalo,esESP,3.0,Getafe,24,1998,5.1,5,0,0,20,12,0,6,6,5,,,0,Matches
+Villar Iván,esESP,1.0,Celta Vigo,25,1997,19.0,0,0,0,0,2,0,0,0,0,,,0,Matches
+Vivian Daniel,esESP,2.0,Athletic Club,23,1999,26.4,7,1,0,39,21,2,6,24,33,,,0,Matches
+Weissman Shon,ilISR,4.0,Valladolid,26,1996,8.3,1,0,0,5,8,7,2,1,1,,,0,Matches
+Werner Axel,arARG,1.0,Elche,26,1996,2.0,0,0,0,0,0,0,0,0,0,,,0,Matches
+Williams Iñaki,ghGHA,3.5,Athletic Club,28,1994,31.5,2,0,0,30,31,23,95,7,16,,,0,Matches
+Williams Nico,esESP,3.0,Athletic Club,20,2002,29.5,3,0,0,23,35,14,173,8,15,,,0,Matches
+Witsel Axel,beBEL,2.3,Atlético Madrid,33,1989,25.1,2,1,0,20,15,0,2,24,24,,,0,Matches
+Yamal Lamine,esESP,3.5,Barcelona,15,2007,0.1,0,0,0,0,0,0,1,0,0,,,0,Matches
+Yamiq Jawad,maMAR,2.0,Valladolid,30,1992,17.9,1,1,0,13,9,1,0,41,11,,,0,Matches
+Zaldúa Joseba,esESP,2.0,Cádiz,30,1992,7.1,4,0,0,11,4,2,12,11,6,,,0,Matches
+Zarraga Oier,esESP,3.0,Athletic Club,23,1999,9.5,5,0,0,17,12,0,29,9,11,,,0,Matches
+Zubeldia Igor,esESP,2.0,Real Sociedad,25,1997,28.2,11,0,0,44,10,1,3,20,18,,,1,Matches
+Zubimendi Martín,esESP,3.0,Real Sociedad,23,1999,34.5,12,0,0,50,31,1,4,39,32,,,0,Matches

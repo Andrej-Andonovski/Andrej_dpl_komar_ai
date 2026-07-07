@@ -5,7 +5,6 @@ __pycache__/
 .env
 
 # Large data files
-data/raw/
 data/intel/archive/
 data/intel/random_search_full/trial_*.json
 data/intel/random_search_full/trial_*_sim.json

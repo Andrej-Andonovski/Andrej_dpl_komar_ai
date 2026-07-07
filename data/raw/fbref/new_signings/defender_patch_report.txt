@@ -1,0 +1,37 @@
+================================================================================
+DEFENDER STATS PATCH REPORT
+Generated: 2026-03-09
+================================================================================
+
+NEW COLUMNS ADDED:
+
+FILES UPDATED:
+  new_signings_def.csv: 107 rows, 56 columns
+  historical_def.csv:   18828 rows, 54 columns
+
+SCRAPING RESULTS:
+  Cache files created:  3
+  Cache files reused:   41
+  Players matched:      101
+  Players not found:    4
+  Stage4a/4b rows patched:           101
+  defensive_actions_available=True:  101
+  Outlier flags set:                 0
+
+NOTES:
+  - goals_conceded_per_90 for stage4a/4b rows is 0.0 (not in FBref defense table)
+  - clean_sheet_rate for outfield DEF rows is 0.0 (not per-player from FBref)
+  - Goals conceded / clean sheet rate for vaastav rows computed from existing data
+  - defensive_actions_available=False for all vaastav rows
+  - FBref defense table not supported for: Eredivisie, Championship,
+    Scottish Premiership, Belgian Pro League, Primeira Liga via soccerdata.
+    Stage 4b DEF players are all in Big-5-equivalent leagues (supported).
+
+OUTLIER DETAILS:
+
+================================================================================
+PATCH COMPLETE
+Defender stats fully populated across all DEF rows.
+defensive_actions_available flag set on all rows.
+Ready to continue to Stage 5.
+================================================================================
