@@ -1,0 +1,883 @@
+﻿======================================================================
+  FPL Season Simulator — GW1 to GW38
+  RULES_MODE=legacy | CHIP_STRATEGY=legacy | out=season_simulation.json
+======================================================================
+
+[LOAD] Loading data...
+  [RECS] recommendations.json: 38 GWs loaded
+  Players: 841 | DGW GWs in range: [26, 33, 36]
+  Blank GWs in range: [31, 34] | Chip strategy: legacy
+  Availability data: 38 GWs loaded
+
+[LOAD] Building historical team form lookup (Intel 08)...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+
+[TRAIN] Initial models from all 6-season historical data...
+  Training GW1 models on all 6-season historical data:
+    GK: 4421 rows
+    DEF: 18828 rows
+    MID: 22132 rows
+    FWD: 5663 rows
+
+----------------------------------------------------------------------
+  GW 1  |  FT: 1  |  Bank: 0.0m
+  [GW1 pool] 841 players | exact=340 partial=66 pos_avg=435
+  [GW1 TEAM FORM] Loaded 2024-25 averages for 17 teams
+  [AVAIL] GW1: 24 players penalized
+    OUT/SUSP: Fernando de Jesus, Martínez Romero, García, Barkley, Samuels Colwill, Badiashile Mukinayi, Lavia, Mudryk, Jackson, Kamada +4
+    DOUBTFUL: Chalobah, Fofana, Adarabioyo, Branthwaite, Mykolenko, Patterson, Armstrong, Martínez, Mazraoui, Ferreira da Silva
+  [BENCH-INTEL] GW1 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Sels(£4.6m,f3=3.9), Owen(£4.5m,f3=5.1), Neil(£4.8m,f3=4.5), McNeil(£5.5m,f3=4.5)
+  [CAP] GW1 candidates:
+    1. Haaland (FWD) raw:16.8 adj:21.3 form3:5.9 home:0.0  <- SELECTED
+    2. Borges Fernandes (MID) raw:14.0 adj:16.0 form3:4.7 home:1.0
+    3. Semenyo (MID) raw:12.4 adj:14.4 form3:4.2 home:0.0
+  [CAP] GW1 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-1 actuals (w=2)...
+    GK: 4421 rows
+    DEF: 18828 rows
+    MID: 22132 rows
+    FWD: 5663 rows
+  Predicted: 116.7 | Actual: 88 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 93.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 2  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW2 top attack: [(13, 6.0), (12, 4.0), (16, 3.0)] | top defence: [(1, 1.0), (2, 1.0), (6, 1.0)]
+  [AVAIL] GW2: 57 players penalized
+    OUT/SUSP: Saka, Merino Zazón, Soler Barreto, Kluivert, Cook, Gannon-Doak, Kayode, Hickey, Milambo, Freitas Gouveia Carvalho +21
+    DOUBTFUL: White, Havertz, Simplício Rocha, Cucurella Saseta, James, Samuels Colwill, Almeida de Oliveira Gonçalves, Bynoe-Gittens, Lavia, Lacroix +16
+  [BENCH-INTEL] GW2 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Raya Martín(£5.5m,f3=10.0), Ballard(£4.5m,f3=17.0), Calafiori(£5.5m,f3=13.0), Reijnders(£5.5m,f3=10.0)
+  [CAP] GW2 candidates:
+    1. Haaland (FWD) raw:14.2 adj:17.7 form3:13.0 home:1.0  <- SELECTED
+    2. Semenyo (MID) raw:11.7 adj:13.4 form3:15.0 home:1.0
+    3. Borges Fernandes (MID) raw:12.6 adj:8.3 form3:2.0 home:0.0
+  [CAP] GW2 -> Haaland selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-2 actuals (w=3)...
+    GK: 4503 rows
+    DEF: 19061 rows
+    MID: 22447 rows
+    FWD: 5738 rows
+  Predicted: 122.7 | Actual: 58 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 93.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 3  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW3 top attack: [(12, 3.5), (1, 3.0), (13, 3.0)] | top defence: [(1, 1.0), (8, 1.0), (9, 1.0)]
+  [AVAIL] GW3: 22 players penalized
+    OUT/SUSP: Soler Barreto, Kluivert, Cook, Coleman, Alcaraz Durán
+    DOUBTFUL: Senesi Barón, Hill, Gannon-Doak, Almeida de Oliveira Gonçalves, Grealish, Becker, Bradley, Chiesa, Wataru, Bajčetić Maquieira +7
+  [BENCH-INTEL] GW3 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Vicario(£5.0m,f3=9.0), Calafiori(£5.5m,f3=13.0), Cullen(£5.0m,f3=9.0), Anthony(£5.5m,f3=7.5)
+  [CAP] GW3 candidates:
+    1. Junqueira de Jesus (FWD) raw:10.8 adj:13.5 form3:8.5 home:1.0  <- SELECTED
+    2. Semenyo (MID) raw:11.9 adj:13.5 form3:10.5 home:0.0
+    3. Borges Fernandes (MID) raw:12.5 adj:8.4 form3:2.0 home:1.0
+  [CAP] GW3 -> Junqueira de Jesus selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-3 actuals (w=4)...
+    GK: 4585 rows
+    DEF: 19297 rows
+    MID: 22766 rows
+    FWD: 5813 rows
+  Predicted: 113.1 | Actual: 77 | Cap: Junqueira de Jesus | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 94.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 4  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW4 top attack: [(12, 2.6666666666666665), (13, 2.6666666666666665), (7, 2.3333333333333335)] | top defence: [(1, 1.0), (8, 1.0), (9, 1.0)]
+  [AVAIL] GW4: 64 players penalized
+    OUT/SUSP: Saliba, White, Saka, García, Barkley, Kamara, Onana, Maghoma, Samuels Colwill, Palmer +14
+    DOUBTFUL: Havertz, Fernando de Jesus, Hincapié, Cash, Sancho, Lindelöf, Smith, Cook, Ünal, Schade +30
+  [BENCH-INTEL] GW4 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Vicario(£5.0m,f3=7.0), Senesi Barón(£4.5m,f3=8.3), Chalobah(£5.0m,f3=9.0), Guéhi(£4.5m,f3=7.7)
+  [CAP] GW4 candidates:
+    1. Haaland (FWD) raw:13.5 adj:16.9 form3:8.0 home:1.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:11.1 adj:13.9 form3:8.7 home:0.0
+    3. Semenyo (MID) raw:11.7 adj:13.5 form3:7.7 home:1.0
+  [CAP] GW4 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-4 actuals (w=5)...
+    GK: 4671 rows
+    DEF: 19542 rows
+    MID: 23094 rows
+    FWD: 5894 rows
+  Predicted: 122.7 | Actual: 93 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 94.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 5  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW5 top attack: [(7, 3.0), (1, 2.6666666666666665), (13, 2.0)] | top defence: [(1, 1.0), (3, 1.0), (8, 1.0)]
+  [AVAIL] GW5: 45 players penalized
+    OUT/SUSP: White, Saka, Tielemans, Lindelöf, Smith, Ünal, Samuels Colwill, Palmer, Mudryk, Luís Essugo +16
+    DOUBTFUL: Saliba, Merino Zazón, Gyökeres, Christie, Diakité, Badiashile Mukinayi, Almeida de Oliveira Gonçalves, Lavia, Guiu Paz, Garnacho Ferreyra +9
+  [BENCH-INTEL] GW5 | BB target: GW8 (score: 31.23) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:31.23
+  [BENCH-INTEL] Recommended bench: Pickford(£5.5m,f3=7.3), Senesi Barón(£4.6m,f3=8.7), Caicedo Corozo(£5.5m,f3=8.0), Chalobah(£5.1m,f3=8.0)
+  [CHIP-CHECK] GW5 | chips_used: [] | dgw: False
+  [CAP] GW5 candidates:
+    1. Haaland (FWD) raw:13.8 adj:16.9 form3:8.0 home:0.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:11.3 adj:14.0 form3:10.3 home:0.0
+    3. Semenyo (MID) raw:11.4 adj:12.9 form3:7.0 home:0.0
+  [CAP] GW5 -> Haaland selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-5 actuals (w=6)...
+    GK: 4757 rows
+    DEF: 19787 rows
+    MID: 23422 rows
+    FWD: 5976 rows
+  Predicted: 120.0 | Actual: 56 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 95.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 6  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW6 top attack: [(13, 2.3333333333333335), (6, 1.6666666666666667), (7, 1.6666666666666667)] | top defence: [(8, 1.0), (13, 1.0), (15, 1.0)]
+  [AVAIL] GW6: 41 players penalized
+    OUT/SUSP: Hincapié, Tielemans, Barkley, Onana, Lynch Sánchez, Samuels Colwill, Badiashile Mukinayi, Fofana, Adarabioyo, Lavia +15
+    DOUBTFUL: Saka, Martínez Romero, Smith, Cook, Ünal, Nelson, Acheampong, Palmer, Guiu Paz, Santos Lopes de Macedo +6
+  [BENCH-INTEL] GW6 | BB target: GW8 (score: 32.68) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:32.68, GW9:32.22
+  [BENCH-INTEL] Recommended bench: Roefs(£4.5m,f3=6.7), Guéhi(£4.7m,f3=9.3), Senesi Barón(£4.7m,f3=8.7), Chalobah(£5.1m,f3=8.0)
+  [CHIP-CHECK] GW6 | chips_used: [] | dgw: False
+  [CAP] GW6 candidates:
+    1. Haaland (FWD) raw:13.8 adj:17.6 form3:10.3 home:1.0  <- SELECTED
+    2. Semenyo (MID) raw:10.4 adj:12.2 form3:6.7 home:1.0
+    3. Borges Fernandes (MID) raw:10.4 adj:11.9 form3:7.3 home:0.0
+  [CAP] GW6 -> Haaland selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-6 actuals (w=7)...
+    GK: 4843 rows
+    DEF: 20032 rows
+    MID: 23751 rows
+    FWD: 6058 rows
+  Predicted: 116.7 | Actual: 102 | Cap: Haaland [TC1] | Hits: 0
+  FT next GW: 1 | Bank: 1.4m | Squad val: 94.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 7  |  FT: 1  |  Bank: 1.4m
+  [TEAM FORM] GW7 top attack: [(13, 3.0), (1, 2.0), (5, 2.0)] | top defence: [(8, 1.0), (15, 1.0), (13, 0.6666666666666666)]
+  [AVAIL] GW7: 28 players penalized
+    OUT/SUSP: Chalobah, Mudryk, Dewsbury-Hall, Becker, Chiesa, Leoni, Aït-Nouri, Khusanov, Marmoush, Cherki +1
+    DOUBTFUL: dos Santos Magalhães, Samuels Colwill, Fofana, Adarabioyo, Palmer, Caicedo Corozo, Nascimento dos Santos, Luís Essugo, Junqueira de Jesus, Delap +7
+  [BENCH-INTEL] GW7 | BB target: GW8 (score: 30.56) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:30.56, GW9:29.37, GW10:29.77
+  [BENCH-INTEL] Recommended bench: Roefs(£4.5m,f3=7.3), Alderete(£4.0m,f3=10.0), Zubimendi Ibáñez(£5.5m,f3=6.7), Guéhi(£4.7m,f3=6.7)
+  [CHIP-CHECK] GW7 | chips_used: ['tc1'] | dgw: False
+  [CAP] GW7 candidates:
+    1. Haaland (FWD) raw:12.8 adj:16.0 form3:12.7 home:0.0  <- SELECTED
+    2. Semenyo (MID) raw:8.8 adj:10.1 form3:8.3 home:0.0
+    3. Guéhi (DEF) raw:10.1 adj:7.6 form3:6.7 home:0.0
+  [CAP] GW7 -> Haaland selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-7 actuals (w=8)...
+    GK: 4929 rows
+    DEF: 20277 rows
+    MID: 24081 rows
+    FWD: 6140 rows
+  Predicted: 86.0 | Actual: 65 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 95.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 8  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW8 top attack: [(13, 2.6666666666666665), (2, 2.0), (6, 2.0)] | top defence: [(8, 1.0), (15, 1.0), (4, 0.6666666666666666)]
+  [AVAIL] GW8: 58 players penalized
+    OUT/SUSP: Tielemans, Palmer, Mudryk, Kporha, Doucouré, Dewsbury-Hall, Gomes Betuncal, Grealish, Robinson, Lukić +5
+    DOUBTFUL: White, Zubimendi Ibáñez, Hincapié, Mings, Senesi Barón, Smith, Soler Barreto, Brooks, Ünal, Hickey +33
+  [BENCH-INTEL] GW8 | BB target: GW8 (score: 24.48) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW8:24.48, GW9:24.35, GW10:23.99, GW11:23.98
+  [BENCH-INTEL] Recommended bench: Roefs(£4.6m,f3=4.7), Alderete(£4.1m,f3=7.0), Burn(£5.0m,f3=6.7), Stach(£5.0m,f3=6.3)
+  [CHIP-CHECK] GW8 | chips_used: ['tc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW8
+  [CAP] GW8 candidates:
+    1. Haaland (FWD) raw:11.6 adj:14.6 form3:11.0 home:1.0  <- SELECTED
+    2. Semenyo (MID) raw:8.5 adj:9.7 form3:10.0 home:1.0
+    3. dos Santos Magalhães (DEF) raw:7.9 adj:5.9 form3:8.0 home:0.0
+  [CAP] GW8 -> Haaland selected (streak: 5 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-8 actuals (w=9)...
+    GK: 5015 rows
+    DEF: 20523 rows
+    MID: 24412 rows
+    FWD: 6222 rows
+  Predicted: 74.1 | Actual: 77 | Cap: Haaland [BB1] | Hits: 0
+  FT next GW: 1 | Bank: 0.8m | Squad val: 95.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 9  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW9 top attack: [(13, 3.0), (2, 2.3333333333333335), (6, 2.0)] | top defence: [(1, 0.6666666666666666), (7, 0.6666666666666666), (8, 0.6666666666666666)]
+  [AVAIL] GW9: 37 players penalized
+    OUT/SUSP: de Lima Barbosa, Gusto, Fernández, Junqueira de Jesus, Riad Dnanou, Kporha, Doucouré, Patterson, Frimpong, Gravenberch +5
+    DOUBTFUL: dos Santos Magalhães, Hincapié, Mings, Milambo, Nunes Fernandes Gomes, Maghoma, Dasilva, Samuels Colwill, Badiashile Mukinayi, Palmer +12
+  [CHIP-CHECK] GW9 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW9 candidates:
+    1. Haaland (FWD) raw:11.7 adj:14.5 form3:12.3 home:0.0  <- SELECTED
+    2. Semenyo (MID) raw:7.3 adj:8.4 form3:9.7 home:0.0
+    3. Nascimento Rodrigues (FWD) raw:6.6 adj:8.3 form3:7.7 home:1.0
+  [CAP] GW9 -> Haaland selected (streak: 6 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-9 actuals (w=10)...
+    GK: 5101 rows
+    DEF: 20769 rows
+    MID: 24744 rows
+    FWD: 6304 rows
+  Predicted: 69.0 | Actual: 66 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 3.1m | Squad val: 93.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 10  |  FT: 1  |  Bank: 3.1m
+  [TEAM FORM] GW10 top attack: [(14, 2.6666666666666665), (3, 2.0), (4, 2.0)] | top defence: [(1, 1.0), (13, 1.0), (14, 1.0)]
+  [AVAIL] GW10: 46 players penalized
+    OUT/SUSP: Saliba, Martinelli Silva, Tielemans, Buendía Stati, Nunes Fernandes Gomes, Mudryk, Richards, Riad Dnanou, Kporha, Doucouré +13
+    DOUBTFUL: Calafiori, Rice, García, Elliott, de Lima Barbosa, Arthur, Milambo, Dasilva, Samuels Colwill, Badiashile Mukinayi +13
+  [CHIP-CHECK] GW10 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW10 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW10 candidates:
+    1. Haaland (FWD) raw:11.8 adj:11.1 form3:7.7 home:1.0  <- SELECTED
+    2. Semenyo (MID) raw:9.1 adj:10.5 form3:8.3 home:1.0
+    3. van de Ven (DEF) raw:6.3 adj:4.7 form3:8.3 home:1.0
+  [CAP] GW10 -> Haaland selected (streak: 7 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-10 actuals (w=11)...
+    GK: 5187 rows
+    DEF: 21016 rows
+    MID: 25076 rows
+    FWD: 6386 rows
+  Predicted: 73.5 | Actual: 72 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.7m | Squad val: 95.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 11  |  FT: 1  |  Bank: 1.7m
+  [TEAM FORM] GW11 top attack: [(14, 2.6666666666666665), (6, 2.3333333333333335), (4, 2.0)] | top defence: [(1, 1.0), (13, 1.0), (6, 0.6666666666666666)]
+  [AVAIL] GW11: 47 players penalized
+    OUT/SUSP: Martinelli Silva, Gyökeres, Mings, Samuels Colwill, Badiashile Mukinayi, Palmer, Lavia, Mudryk, Luís Essugo, Kporha +10
+    DOUBTFUL: Arrizabalaga Revuelta, Zubimendi Ibáñez, Fernando de Jesus, García, Tielemans, Buendía Stati, Elliott, Akinmboni, Adams, Jiménez Sánchez +17
+  [CHIP-CHECK] GW11 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW11 candidates:
+    1. Haaland (FWD) raw:12.3 adj:15.4 form3:9.3 home:1.0  <- SELECTED
+    2. dos Santos Magalhães (DEF) raw:7.2 adj:5.4 form3:11.0 home:0.0
+    3. Semenyo (MID) raw:6.5 adj:4.3 form3:3.0 home:1.0
+  [CAP] GW11 -> Haaland selected (streak: 8 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-11 actuals (w=12)...
+    GK: 5273 rows
+    DEF: 21265 rows
+    MID: 25410 rows
+    FWD: 6469 rows
+  Predicted: 65.4 | Actual: 42 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 2.2m | Squad val: 94.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 12  |  FT: 1  |  Bank: 2.2m
+  [TEAM FORM] GW12 top attack: [(14, 2.6666666666666665), (5, 2.0), (13, 2.0)] | top defence: [(8, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [AVAIL] GW12: 41 players penalized
+    OUT/SUSP: dos Santos Magalhães, Calafiori, Ajer, Nunes Fernandes Gomes, Samuels Colwill, Lavia, Mudryk, Luís Essugo, Mateta, Robinson +6
+    DOUBTFUL: Timber, Fernando de Jesus, Mings, Bogarde, Smith, Kluivert, Adams, Gannon-Doak, Milambo, Freitas Gouveia Carvalho +15
+  [CHIP-CHECK] GW12 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW12 blank penalty on Haaland (capped last GW, scored 4.0pts)
+  [CAP] GW12 candidates:
+    1. Nascimento Rodrigues (FWD) raw:5.9 adj:7.3 form3:6.7 home:0.0  <- SELECTED
+    2. Haaland (FWD) raw:9.6 adj:5.2 form3:6.3 home:0.0
+    3. Semenyo (MID) raw:6.5 adj:4.3 form3:1.7 home:0.0
+  [CAP] GW12 -> Nascimento Rodrigues selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-12 actuals (w=13)...
+    GK: 5360 rows
+    DEF: 21514 rows
+    MID: 25746 rows
+    FWD: 6552 rows
+  Predicted: 60.4 | Actual: 29 | Cap: Nascimento Rodrigues | Hits: 0
+  FT next GW: 1 | Bank: 3.8m | Squad val: 93.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 13  |  FT: 1  |  Bank: 3.8m
+  [TEAM FORM] GW13 top attack: [(1, 2.6666666666666665), (16, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(7, 1.0), (8, 1.0), (13, 1.0)]
+  [AVAIL] GW13: 27 players penalized
+    OUT/SUSP: dos Santos Magalhães, Kluivert, Christie, Gannon-Doak, Milambo, Freitas Gouveia Carvalho, Dasilva, Samuels Colwill, Lavia, Mudryk +4
+    DOUBTFUL: Gyökeres, Nunes Fernandes Gomes, Richards, Maguire, Sesko, Zinchenko, Costa dos Santos, Aina, Gibbs-White, Wood +3
+  [CHIP-CHECK] GW13 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW13 blank penalty on Nascimento Rodrigues (capped last GW, scored 4.0pts)
+  [CAP] GW13 candidates:
+    1. Haaland (FWD) raw:7.5 adj:5.4 form3:6.3 home:1.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:4.9 adj:3.5 form3:5.7 home:1.0
+    3. Borges Fernandes (MID) raw:5.2 adj:3.4 form3:4.0 home:0.0
+  [CAP] GW13 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-13 actuals (w=14)...
+    GK: 5447 rows
+    DEF: 21763 rows
+    MID: 26082 rows
+    FWD: 6635 rows
+  Predicted: 56.2 | Actual: 50 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 2.7m | Squad val: 94.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 14  |  FT: 1  |  Bank: 2.7m
+  [TEAM FORM] GW14 top attack: [(1, 2.3333333333333335), (2, 2.3333333333333335), (5, 2.3333333333333335)] | top defence: [(2, 0.6666666666666666), (5, 0.6666666666666666), (6, 0.6666666666666666)]
+  [AVAIL] GW14: 36 players penalized
+    OUT/SUSP: Milambo, Freitas Gouveia Carvalho, Dasilva, Samuels Colwill, Lavia, Mudryk, Luís Essugo
+    DOUBTFUL: dos Santos Magalhães, Saliba, Trossard, Havertz, Fernando de Jesus, Gyökeres, Barkley, Nelson, Nascimento Rodrigues, James +19
+  [CHIP-CHECK] GW14 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW14 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW14 candidates:
+    1. Borges Fernandes (MID) raw:7.0 adj:4.7 form3:6.0 home:1.0  <- SELECTED
+    2. Muñoz Mejía (DEF) raw:5.4 adj:4.1 form3:7.0 home:0.0
+    3. Junqueira de Jesus (FWD) raw:4.9 adj:3.5 form3:3.0 home:0.0
+  [CAP] GW14 -> Borges Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-14 actuals (w=15)...
+    GK: 5535 rows
+    DEF: 22012 rows
+    MID: 26420 rows
+    FWD: 6718 rows
+  Predicted: 48.9 | Actual: 71 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 5 | Bank: 2.4m | Squad val: 95.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 15  |  FT: 5  |  Bank: 2.4m
+  [TEAM FORM] GW15 top attack: [(13, 2.6666666666666665), (15, 2.6666666666666665), (1, 2.3333333333333335)] | top defence: [(5, 0.6666666666666666), (8, 0.6666666666666666), (9, 0.6666666666666666)]
+  [AVAIL] GW15: 51 players penalized
+    OUT/SUSP: dos Santos Magalhães, Havertz, Mings, Barkley, Christie, Gannon-Doak, Milambo, Freitas Gouveia Carvalho, Dasilva, Samuels Colwill +15
+    DOUBTFUL: Calafiori, Rice, Mosquera, Martínez Romero, Senesi Barón, Brooks, Milosavljevic, Nascimento Rodrigues, Acheampong, Gueye +16
+  [CHIP-CHECK] GW15 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW15 blank penalty on Borges Fernandes (capped last GW, scored 4.0pts)
+  [CAP] GW15 candidates:
+    1. Haaland (FWD) raw:6.9 adj:5.0 form3:6.0 home:1.0  <- SELECTED
+    2. Woltemade (FWD) raw:5.4 adj:4.0 form3:4.7 home:1.0
+    3. Kudus (MID) raw:5.7 adj:3.7 form3:5.7 home:1.0
+  [CAP] GW15 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-15 actuals (w=16)...
+    GK: 5623 rows
+    DEF: 22262 rows
+    MID: 26758 rows
+    FWD: 6801 rows
+  Predicted: 58.5 | Actual: 45 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 97.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 16  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW16 top attack: [(13, 3.6666666666666665), (11, 2.6666666666666665), (15, 2.6666666666666665)] | top defence: [(12, 1.0), (4, 0.6666666666666666), (6, 0.6666666666666666)]
+  [AVAIL] GW16: 67 players penalized
+    OUT/SUSP: Calafiori, Mings, Barkley, Adams, Christie, Cook, Gannon-Doak, Milosavljevic, Samuels Colwill, Caicedo Corozo +24
+    DOUBTFUL: dos Santos Magalhães, Saliba, Timber, Trossard, Rice, Havertz, Mosquera, Dowman, Cucurella Saseta, Fernández +23
+  [CHIP-CHECK] GW16 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW16 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW16 candidates:
+    1. Borges Fernandes (MID) raw:7.2 adj:8.3 form3:11.0 home:1.0  <- SELECTED
+    2. Guéhi (DEF) raw:4.7 adj:3.5 form3:7.3 home:0.0
+    3. Kudus (MID) raw:5.2 adj:3.4 form3:6.0 home:0.0
+  [CAP] GW16 -> Borges Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-16 actuals (w=17)...
+    GK: 5711 rows
+    DEF: 22513 rows
+    MID: 27096 rows
+    FWD: 6884 rows
+  Predicted: 55.1 | Actual: 63 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 1.7m | Squad val: 96.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 17  |  FT: 1  |  Bank: 1.7m
+  [TEAM FORM] GW17 top attack: [(13, 4.0), (14, 3.0), (2, 2.6666666666666665)] | top defence: [(12, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [AVAIL] GW17: 48 players penalized
+    OUT/SUSP: Mings, Torres, Barkley, Elliott, Cook, Gannon-Doak, Samuels Colwill, Lavia, Mudryk, Luís Essugo +19
+    DOUBTFUL: dos Santos Magalhães, White, Havertz, Sancho, Adams, Caicedo Corozo, Sarr, Kamada, Bassey, Iwobi +9
+  [CHIP-CHECK] GW17 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW17 candidates:
+    1. Borges Fernandes (MID) raw:12.8 adj:14.5 form3:11.7 home:0.0  <- SELECTED
+    2. Haaland (FWD) raw:10.6 adj:13.4 form3:9.7 home:1.0
+    3. Guéhi (DEF) raw:9.1 adj:6.9 form3:7.7 home:1.0
+  [CAP] GW17 -> Borges Fernandes selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-17 actuals (w=18)...
+    GK: 5799 rows
+    DEF: 22768 rows
+    MID: 27440 rows
+    FWD: 6967 rows
+  Predicted: 103.2 | Actual: 66 | Cap: Borges Fernandes [WC1] | Hits: 0
+  FT next GW: 2 | Bank: 0.3m | Squad val: 97.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 18  |  FT: 2  |  Bank: 0.3m
+  [TEAM FORM] GW18 top attack: [(13, 4.0), (14, 3.0), (11, 2.6666666666666665)] | top defence: [(13, 1.0), (1, 0.6666666666666666), (4, 0.6666666666666666)]
+  [AVAIL] GW18: 14 players penalized
+    OUT/SUSP: Mings, Torres, Barkley, Elliott, Iwobi, Sessegnon, Muniz Carvalho, Chukwueze
+    DOUBTFUL: dos Santos Magalhães, Havertz, Wilson, Stones, Doku, Hernandez Cascante
+  [CHIP-CHECK] GW18 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW18 blank penalty on Borges Fernandes (capped last GW, scored 1.0pts)
+  [CAP] GW18 candidates:
+    1. Haaland (FWD) raw:11.2 adj:14.0 form3:10.3 home:0.0  <- SELECTED
+    2. Ekitiké (FWD) raw:5.9 adj:7.5 form3:11.7 home:1.0
+    3. Calvert-Lewin (FWD) raw:5.1 adj:6.4 form3:9.3 home:0.0
+  [CAP] GW18 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-18 actuals (w=19)...
+    GK: 5887 rows
+    DEF: 23025 rows
+    MID: 27787 rows
+    FWD: 7050 rows
+  Predicted: 64.4 | Actual: 43 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 98.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 19  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW19 top attack: [(13, 3.6666666666666665), (2, 2.0), (5, 2.0)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [AVAIL] GW19: 8 players penalized
+    OUT/SUSP: Calafiori, Rice, Mosquera, Dowman
+    DOUBTFUL: Timber, White, Havertz, Nascimento Rodrigues
+  [CHIP-CHECK] GW19 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CHIP] GW19 FH1 NOT force-used — GW19 is not a DGW, wasting FH1
+  [CHIP] GW19 complete — FH1 wasted (not a DGW, better to waste than misuse)
+  [CAP] GW19 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW19 candidates:
+    1. Ekitiké (FWD) raw:6.8 adj:8.6 form3:9.0 home:1.0  <- SELECTED
+    2. Haaland (FWD) raw:7.9 adj:7.5 form3:10.3 home:0.0
+    3. Semenyo (MID) raw:6.1 adj:7.0 form3:8.3 home:0.0
+  [CAP] GW19 -> Ekitiké selected (streak: 1 consecutive)
+  [INTEL-CAP] GW19 override: Ekitiké -> Haaland (adj: 8.5 -> 9.8)
+  [RETRAIN] History (w=1.0) + GW1-19 actuals (w=20)...
+    GK: 5975 rows
+    DEF: 23282 rows
+    MID: 28137 rows
+    FWD: 7135 rows
+  Predicted: 63.0 | Actual: 32 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 98.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 20  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW20 top attack: [(13, 2.3333333333333335), (1, 2.0), (2, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [AVAIL] GW20: 71 players penalized
+    OUT/SUSP: Rice, Onana, Christie, Cook, Jensen, Caicedo Corozo, Lavia, Mudryk, Luís Essugo, Hato +28
+    DOUBTFUL: Calafiori, Mosquera, Mings, Torres, Barkley, Dennis, Forster, Milambo, Freitas Gouveia Carvalho, Dasilva +23
+  [BENCH-INTEL] GW20 | BB target: GW21 (score: 30.66) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW20:29.33, GW21:30.66, GW22:28.88, GW23:29.80
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.5m,f3=7.7), Garner(£5.0m,f3=8.3), Collins(£4.9m,f3=7.0), Tarkowski(£5.5m,f3=6.7)
+  [CHIP-CHECK] GW20 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW20 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW20 candidates:
+    1. Garner (MID) raw:7.3 adj:8.4 form3:8.3 home:1.0  <- SELECTED
+    2. Calvert-Lewin (FWD) raw:5.7 adj:7.2 form3:7.3 home:1.0
+    3. Semenyo (MID) raw:5.9 adj:6.8 form3:8.0 home:1.0
+  [CAP] GW20 -> Garner selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-20 actuals (w=21)...
+    GK: 6066 rows
+    DEF: 23541 rows
+    MID: 28491 rows
+    FWD: 7221 rows
+  Predicted: 59.3 | Actual: 45 | Cap: Garner | Hits: 0
+  FT next GW: 1 | Bank: 4.3m | Squad val: 94.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 21  |  FT: 1  |  Bank: 4.3m
+  [TEAM FORM] GW21 top attack: [(1, 2.6666666666666665), (5, 2.3333333333333335), (2, 2.0)] | top defence: [(18, 1.0), (5, 0.6666666666666666), (9, 0.6666666666666666)]
+  [AVAIL] GW21: 8 players penalized
+    OUT/SUSP: Ekitiké
+    DOUBTFUL: Calafiori, Mosquera, Dowman, Salah, Wataru, Isak, Leoni
+  [BENCH-INTEL] GW21 | BB target: GW21 (score: 29.70) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW21:29.70, GW22:28.68, GW23:29.52, GW24:28.00
+  [BENCH-INTEL] Recommended bench: Pickford(£5.5m,f3=5.7), Garner(£5.1m,f3=8.3), Collins(£4.9m,f3=7.7), van de Ven(£4.5m,f3=8.0)
+  [CHIP-CHECK] GW21 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW21 blank penalty on Garner (capped last GW, scored 4.0pts)
+  [CAP] GW21 candidates:
+    1. Garner (MID) raw:8.2 adj:7.3 form3:8.3 home:1.0  <- SELECTED
+    2. Haaland (FWD) raw:5.6 adj:4.0 form3:2.0 home:1.0
+    3. Semenyo (MID) raw:5.7 adj:3.8 form3:5.0 home:1.0
+  [CAP] GW21 -> Garner selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-21 actuals (w=22)...
+    GK: 6157 rows
+    DEF: 23802 rows
+    MID: 28847 rows
+    FWD: 7308 rows
+  Predicted: 63.7 | Actual: 62 | Cap: Garner [TC2] | Hits: 0
+  FT next GW: 1 | Bank: 3.2m | Squad val: 95.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 22  |  FT: 1  |  Bank: 3.2m
+  [TEAM FORM] GW22 top attack: [(15, 3.0), (1, 2.3333333333333335), (5, 2.3333333333333335)] | top defence: [(5, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [AVAIL] GW22: 41 players penalized
+    OUT/SUSP: Nunes Fernandes Gomes, Kporha, Doucouré, Kamada, Mateta, Nketiah, Cardines, Dewsbury-Hall, Keane, Alcaraz Durán +11
+    DOUBTFUL: Calafiori, Mosquera, Dowman, Hincapié, Martínez Romero, Kamara, Milambo, Freitas Gouveia Carvalho, Henderson, Onyeka +10
+  [BENCH-INTEL] GW22 | BB target: GW23 (score: 31.77) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW22:31.25, GW23:31.77, GW24:30.86, GW25:31.51
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.5m,f3=7.0), Collins(£4.9m,f3=10.7), Garner(£5.1m,f3=8.7), Ayari(£4.8m,f3=7.0)
+  [CHIP-CHECK] GW22 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW22 candidates:
+    1. Garner (MID) raw:7.9 adj:9.0 form3:8.7 home:0.0  <- SELECTED
+    2. Ayari (MID) raw:6.1 adj:7.0 form3:7.0 home:1.0
+    3. Haaland (FWD) raw:9.8 adj:7.0 form3:3.3 home:0.0
+  [CAP] GW22 -> Garner selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-22 actuals (w=23)...
+    GK: 6248 rows
+    DEF: 24064 rows
+    MID: 29205 rows
+    FWD: 7396 rows
+  Predicted: 67.1 | Actual: 38 | Cap: Garner | Hits: 0
+  FT next GW: 1 | Bank: 3.2m | Squad val: 95.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 23  |  FT: 1  |  Bank: 3.2m
+  [TEAM FORM] GW23 top attack: [(5, 2.3333333333333335), (15, 2.0), (4, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (5, 0.6666666666666666), (13, 0.6666666666666666)]
+  [AVAIL] GW23: 58 players penalized
+    OUT/SUSP: Samuels Colwill, Adarabioyo, Lavia, Mudryk, Luís Essugo, Kporha, Doucouré, Kamada, Mateta, Nketiah +18
+    DOUBTFUL: Dowman, Martínez Romero, Bailey, McGinn, Barkley, Kamara, da Rocha dos Santos, Dennis, Soler Barreto, Kluivert +20
+  [BENCH-INTEL] GW23 | BB target: GW23 (score: 25.05) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW23:25.05, GW24:24.41, GW25:25.05, GW26:24.93
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.6m,f3=5.3), Collins(£5.0m,f3=8.0), Thiaw(£5.1m,f3=8.3), Aaronson(£5.4m,f3=8.0)
+  [CHIP-CHECK] GW23 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW23
+  [CAP] GW23 blank penalty on Garner (capped last GW, scored 4.0pts)
+  [CAP] GW23 candidates:
+    1. Haaland (FWD) raw:7.0 adj:5.1 form3:3.3 home:1.0  <- SELECTED
+    2. Thiaw (DEF) raw:6.7 adj:5.0 form3:8.3 home:1.0
+    3. dos Santos Magalhães (DEF) raw:6.4 adj:4.8 form3:7.7 home:1.0
+  [CAP] GW23 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-23 actuals (w=24)...
+    GK: 6340 rows
+    DEF: 24326 rows
+    MID: 29566 rows
+    FWD: 7484 rows
+  Predicted: 62.9 | Actual: 49 | Cap: Haaland [BB2] | Hits: 0
+  FT next GW: 1 | Bank: 1.0m | Squad val: 97.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 24  |  FT: 1  |  Bank: 1.0m
+  [TEAM FORM] GW24 top attack: [(14, 2.3333333333333335), (4, 2.0), (7, 2.0)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (7, 0.6666666666666666)]
+  [AVAIL] GW24: 63 players penalized
+    OUT/SUSP: Dennis, Soler Barreto, Kluivert, Tavernier, Adams, Gannon-Doak, Samuels Colwill, Adarabioyo, Lavia, Mudryk +27
+    DOUBTFUL: Dowman, García, Tielemans, McGinn, Kamara, Watkins, da Rocha dos Santos, Mateta, Alcaraz Durán, Iroegbunam +16
+  [CHIP-CHECK] GW24 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW24 blank penalty on Haaland (capped last GW, scored 1.0pts)
+  [CAP] GW24 candidates:
+    1. Calvert-Lewin (FWD) raw:4.3 adj:3.1 form3:4.0 home:1.0  <- SELECTED
+    2. Garner (MID) raw:4.9 adj:3.2 form3:4.0 home:0.0
+    3. Ekitiké (FWD) raw:4.1 adj:3.0 form3:1.0 home:1.0
+  [CAP] GW24 -> Calvert-Lewin selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-24 actuals (w=25)...
+    GK: 6433 rows
+    DEF: 24589 rows
+    MID: 29931 rows
+    FWD: 7574 rows
+  Predicted: 50.4 | Actual: 59 | Cap: Calvert-Lewin | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 98.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 25  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW25 top attack: [(7, 2.6666666666666665), (14, 2.6666666666666665), (12, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [AVAIL] GW25: 24 players penalized
+    OUT/SUSP: da Rocha dos Santos, Schade, Milambo, Freitas Gouveia Carvalho, Doucouré, Wharton, Nketiah, Lukić, Muniz Carvalho
+    DOUBTFUL: Saka, Merino Zazón, Dowman, Brooks, Collins, Mateta, Grealish, Gvardiol, dos Santos Gato Alves Dias, Stones +5
+  [CHIP-CHECK] GW25 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW25 blank penalty on Calvert-Lewin (capped last GW, scored 2.0pts)
+  [CAP] GW25 candidates:
+    1. Junqueira de Jesus (FWD) raw:6.8 adj:8.6 form3:10.0 home:0.0  <- SELECTED
+    2. dos Santos Magalhães (DEF) raw:9.5 adj:4.1 form3:5.7 home:1.0
+    3. Semenyo (MID) raw:5.6 adj:3.7 form3:5.7 home:0.0
+  [CAP] GW25 -> Junqueira de Jesus selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-25 actuals (w=26)...
+    GK: 6527 rows
+    DEF: 24854 rows
+    MID: 30298 rows
+    FWD: 7665 rows
+  Predicted: 61.6 | Actual: 51 | Cap: Junqueira de Jesus | Hits: 0
+  FT next GW: 1 | Bank: 8.3m | Squad val: 90.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 26  |  FT: 1  |  Bank: 8.3m
+  [TEAM FORM] GW26 top attack: [(7, 3.0), (1, 2.6666666666666665), (14, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (11, 0.6666666666666666), (13, 0.6666666666666666)]
+  [DGW] GW26: 81 players boosted x2.0
+  [AVAIL] GW26: 23 players penalized
+    OUT/SUSP: García, Tielemans, McGinn, Kamara, Doucouré, Nketiah, Frimpong, Bradley, Szoboszlai, Gvardiol +6
+    DOUBTFUL: Mateta, Gomez, Bajčetić Maquieira, Danns, Isak, Leoni, Sadiki
+  [CHIP-CHECK] GW26 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CHIP] GW26 FH triggered naturally — DGW with only 2 DGW squad players
+  [CAP] GW26 candidates:
+    1. Junqueira de Jesus (FWD) raw:6.3 adj:8.0 form3:10.0 home:1.0  <- SELECTED
+    2. Palmer (MID) raw:5.5 adj:6.4 form3:7.3 home:1.0
+    3. dos Santos Magalhães (DEF) raw:14.3 adj:6.2 form3:5.0 home:0.0
+  [CAP] GW26 -> Junqueira de Jesus selected (streak: 2 consecutive)
+  [INTEL-CAP] GW26 override: Junqueira de Jesus -> Haaland (adj: 7.9 -> 8.8)
+  [RETRAIN] History (w=1.0) + GW1-26 actuals (w=27)...
+    GK: 6621 rows
+    DEF: 25119 rows
+    MID: 30665 rows
+    FWD: 7756 rows
+  Predicted: 83.6 | Actual: 74 | Cap: Haaland [FH2] | Hits: 0
+  FT next GW: 2 | Bank: 8.3m | Squad val: 91.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 27  |  FT: 2  |  Bank: 8.3m
+  [TEAM FORM] GW27 top attack: [(1, 3.3333333333333335), (7, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(1, 1.0), (6, 0.6666666666666666), (13, 0.6666666666666666)]
+  [AVAIL] GW27: 40 players penalized
+    OUT/SUSP: Bizot, Elliott, Soler Barreto, Kluivert, Gannon-Doak, Nelson, Schade, Milambo, Freitas Gouveia Carvalho, Lacroix +11
+    DOUBTFUL: Saka, Trossard, Havertz, Cash, Akinmboni, Tavernier, Kroupi, Henderson, Nascimento Rodrigues, Riad Dnanou +9
+  [CHIP-CHECK] GW27 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW27 candidates:
+    1. Palmer (MID) raw:9.6 adj:11.3 form3:11.3 home:1.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:7.3 adj:9.3 form3:9.3 home:1.0
+    3. dos Santos Magalhães (DEF) raw:6.5 adj:4.9 form3:7.0 home:0.0
+  [CAP] GW27 -> Palmer selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-27 actuals (w=28)...
+    GK: 6715 rows
+    DEF: 25384 rows
+    MID: 31032 rows
+    FWD: 7848 rows
+  Predicted: 62.8 | Actual: 40 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 4.5m | Squad val: 95.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 28  |  FT: 1  |  Bank: 4.5m
+  [TEAM FORM] GW28 top attack: [(1, 3.3333333333333335), (13, 2.3333333333333335), (7, 2.0)] | top defence: [(19, 1.0), (1, 0.6666666666666666), (6, 0.6666666666666666)]
+  [AVAIL] GW28: 57 players penalized
+    OUT/SUSP: Saka, Merino Zazón, Soler Barreto, Kluivert, Cook, Gannon-Doak, Kayode, Hickey, Milambo, Freitas Gouveia Carvalho +21
+    DOUBTFUL: White, Havertz, Simplício Rocha, Cucurella Saseta, James, Samuels Colwill, Almeida de Oliveira Gonçalves, Bynoe-Gittens, Lavia, Lacroix +16
+  [CHIP-CHECK] GW28 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW28 blank penalty on Palmer (capped last GW, scored 3.0pts)
+  [CAP] GW28 candidates:
+    1. van Dijk (DEF) raw:7.7 adj:5.9 form3:9.3 home:1.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:4.7 adj:5.8 form3:8.3 home:0.0
+    3. Rice (MID) raw:5.0 adj:5.8 form3:7.7 home:1.0
+  [CAP] GW28 -> van Dijk selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-28 actuals (w=29)...
+    GK: 6809 rows
+    DEF: 25650 rows
+    MID: 31399 rows
+    FWD: 7940 rows
+  Predicted: 58.2 | Actual: 61 | Cap: van Dijk | Hits: 0
+  FT next GW: 1 | Bank: 1.7m | Squad val: 98.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 29  |  FT: 1  |  Bank: 1.7m
+  [TEAM FORM] GW29 top attack: [(1, 3.0), (12, 2.0), (13, 2.0)] | top defence: [(20, 1.0), (6, 0.6666666666666666), (7, 0.6666666666666666)]
+  [AVAIL] GW29: 35 players penalized
+    OUT/SUSP: Havertz, Fernando de Jesus, Zabarnyi, Smith, Ünal, Gusto, Mudryk, Jackson, Guiu Paz, Ndiaye +15
+    DOUBTFUL: Saka, Soler Barreto, Lynch Sánchez, Fofana, Lavia, Tete, Wilson, Isak, Santana de Moraes, Ugarte Ribeiro
+  [CHIP-CHECK] GW29 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW29 candidates:
+    1. Sesko (FWD) raw:6.4 adj:8.0 form3:8.0 home:0.0  <- SELECTED
+    2. Rice (MID) raw:5.8 adj:6.6 form3:7.7 home:0.0
+    3. van Dijk (DEF) raw:8.3 adj:6.3 form3:11.7 home:0.0
+  [CAP] GW29 -> Sesko selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-29 actuals (w=30)...
+    GK: 6903 rows
+    DEF: 25916 rows
+    MID: 31767 rows
+    FWD: 8032 rows
+  Predicted: 59.9 | Actual: 60 | Cap: Sesko | Hits: 0
+  FT next GW: 1 | Bank: 2.2m | Squad val: 97.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 30  |  FT: 1  |  Bank: 2.2m
+  [TEAM FORM] GW30 top attack: [(1, 2.3333333333333335), (12, 2.0), (7, 1.6666666666666667)] | top defence: [(20, 1.0), (4, 0.6666666666666666), (10, 0.6666666666666666)]
+  [AVAIL] GW30: 47 players penalized
+    OUT/SUSP: Merino Zazón, Tielemans, Kamara, Soler Barreto, Kluivert, Cook, Lomba Neto, Doucouré, Nketiah, Coleman +7
+    DOUBTFUL: Trossard, Cash, García, McGinn, Elliott, Sancho, Senesi Barón, Hill, Gannon-Doak, Almeida de Oliveira Gonçalves +20
+  [CHIP-CHECK] GW30 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW30 candidates:
+    1. Junqueira de Jesus (FWD) raw:4.9 adj:6.2 form3:9.3 home:1.0  <- SELECTED
+    2. dos Santos Magalhães (DEF) raw:6.5 adj:4.9 form3:7.3 home:1.0
+    3. Rice (MID) raw:5.9 adj:3.9 form3:4.0 home:1.0
+  [CAP] GW30 -> Junqueira de Jesus selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-30 actuals (w=31)...
+    GK: 6997 rows
+    DEF: 26182 rows
+    MID: 32137 rows
+    FWD: 8124 rows
+  Predicted: 56.2 | Actual: 39 | Cap: Junqueira de Jesus | Hits: 0
+  FT next GW: 1 | Bank: 1.9m | Squad val: 98.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 31  |  FT: 1  |  Bank: 1.9m
+  [TEAM FORM] GW31 top attack: [(5, 2.0), (12, 2.0), (14, 2.0)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (9, 0.6666666666666666)]
+  [AVAIL] GW31: 35 players penalized
+    OUT/SUSP: Milambo, Freitas Gouveia Carvalho, Dasilva, Smith Rowe, Santos Lopes de Macedo, Bradley, Wataru, Bajčetić Maquieira, Isak, Leoni +5
+    DOUBTFUL: Cash, Tielemans, Buendía Stati, Kamara, Henry, Hickey, Janelt, Branthwaite, Tarkowski, Tete +10
+  [CHIP-CHECK] GW31 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW31 blank penalty on Junqueira de Jesus (capped last GW, scored 2.0pts)
+  [CAP] GW31 candidates:
+    1. Garner (MID) raw:5.1 adj:5.9 form3:6.7 home:1.0  <- SELECTED
+    2. Borges Fernandes (MID) raw:5.4 adj:6.2 form3:10.3 home:0.0
+    3. dos Santos Magalhães (DEF) raw:7.4 adj:5.6 form3:9.7 home:0.0
+  [CAP] GW31 -> Garner selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-31 actuals (w=32)...
+    GK: 7078 rows
+    DEF: 26395 rows
+    MID: 32433 rows
+    FWD: 8198 rows
+  Predicted: 59.6 | Actual: 54 | Cap: Garner | Hits: 0
+  FT next GW: 1 | Bank: 2.4m | Squad val: 97.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 32  |  FT: 1  |  Bank: 2.4m
+  [TEAM FORM] GW32 top attack: [(20, 2.0), (1, 1.6666666666666667), (9, 1.6666666666666667)] | top defence: [(9, 1.0), (11, 1.0), (1, 0.6666666666666666)]
+  [AVAIL] GW32: 54 players penalized
+    OUT/SUSP: Eze, da Rocha dos Santos, Ajer, Henry, Damsgaard, Milambo, Freitas Gouveia Carvalho, Jörgensen, James, Chalobah +10
+    DOUBTFUL: dos Santos Magalhães, Calafiori, Timber, Saka, Trossard, Rice, Merino Zazón, Hincapié, Kamara, Sancho +24
+  [CHIP-CHECK] GW32 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW32 candidates:
+    1. Borges Fernandes (MID) raw:7.6 adj:8.8 form3:10.3 home:1.0  <- SELECTED
+    2. Junqueira de Jesus (FWD) raw:5.8 adj:7.1 form3:7.7 home:1.0
+    3. Garner (MID) raw:5.1 adj:5.9 form3:6.7 home:0.0
+  [CAP] GW32 -> Borges Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-32 actuals (w=33)...
+    GK: 7173 rows
+    DEF: 26663 rows
+    MID: 32804 rows
+    FWD: 8290 rows
+  Predicted: 58.4 | Actual: 40 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 1.8m | Squad val: 98.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 33  |  FT: 1  |  Bank: 1.8m
+  [TEAM FORM] GW33 top attack: [(13, 2.0), (6, 1.6666666666666667), (8, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (6, 0.6666666666666666), (9, 0.6666666666666666)]
+  [DGW] GW33: 254 players boosted x2.0
+  [AVAIL] GW33: 48 players penalized
+    OUT/SUSP: Saka, Kluivert, Freitas Gouveia Carvalho, Dasilva, Doucouré, Nketiah, Guessand, Alcaraz Durán, Tete, Santos Lopes de Macedo +15
+    DOUBTFUL: Calafiori, Timber, Merino Zazón, Martínez Romero, Kamara, Sancho, Lacroix, Wharton, Mateta, Grealish +13
+  [CHIP-CHECK] GW33 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW33 blank penalty on Borges Fernandes (capped last GW, scored 4.0pts)
+  [CAP] GW33 candidates:
+    1. Junqueira de Jesus (FWD) raw:9.9 adj:7.0 form3:2.0 home:0.0  <- SELECTED
+    2. Borges Fernandes (MID) raw:6.2 adj:5.4 form3:9.0 home:0.0
+    3. Calvert-Lewin (FWD) raw:6.1 adj:4.3 form3:1.3 home:0.0
+  [CAP] GW33 -> Junqueira de Jesus selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-33 actuals (w=34)...
+    GK: 7269 rows
+    DEF: 26931 rows
+    MID: 33177 rows
+    FWD: 8382 rows
+  Predicted: 75.6 | Actual: 61 | Cap: Junqueira de Jesus | Hits: 1
+  FT next GW: 1 | Bank: 3.2m | Squad val: 96.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 34  |  FT: 1  |  Bank: 3.2m
+  [TEAM FORM] GW34 top attack: [(6, 3.0), (4, 2.6666666666666665), (16, 2.6666666666666665)] | top defence: [(5, 0.6666666666666666), (6, 0.6666666666666666), (8, 0.6666666666666666)]
+  [AVAIL] GW34: 25 players penalized
+    OUT/SUSP: Timber, Merino Zazón, Henry, Henderson, Janelt, Dasilva, Gomes Betuncal, Grealish, Tete, Santos Lopes de Macedo +7
+    DOUBTFUL: Calafiori, Saka, Kamara, Clyne, Nketiah, Guessand, Branthwaite, Woodman
+  [CHIP-CHECK] GW34 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW34 blank penalty on Junqueira de Jesus (capped last GW, scored 0.0pts)
+  [CAP] GW34 candidates:
+    1. Borges Fernandes (MID) raw:6.3 adj:7.2 form3:7.7 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:5.8 adj:7.3 form3:9.0 home:0.0
+    3. Rogers (MID) raw:5.5 adj:6.4 form3:6.7 home:0.0
+  [CAP] GW34 -> Borges Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-34 actuals (w=35)...
+    GK: 7335 rows
+    DEF: 27122 rows
+    MID: 33434 rows
+    FWD: 8450 rows
+  Predicted: 61.3 | Actual: 33 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 3.9m | Squad val: 96.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 35  |  FT: 1  |  Bank: 3.9m
+  [TEAM FORM] GW35 top attack: [(6, 3.0), (16, 3.0), (4, 2.6666666666666665)] | top defence: [(19, 1.0), (6, 0.6666666666666666), (10, 0.6666666666666666)]
+  [AVAIL] GW35: 38 players penalized
+    OUT/SUSP: Timber, Merino Zazón, Havertz, Onana, Henry, Milambo, Freitas Gouveia Carvalho, Almeida de Oliveira Gonçalves, Becker, Gvardiol +5
+    DOUBTFUL: Rice, Zubimendi Ibáñez, Kamara, Cook, Henderson, Janelt, Jörgensen, James, Samuels Colwill, Bynoe-Gittens +13
+  [CHIP-CHECK] GW35 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW35 candidates:
+    1. Gibbs-White (MID) raw:6.9 adj:7.9 form3:11.7 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:4.8 adj:6.0 form3:6.7 home:1.0
+    3. Truffert (DEF) raw:6.5 adj:4.9 form3:7.0 home:1.0
+  [CAP] GW35 -> Gibbs-White selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-35 actuals (w=36)...
+    GK: 7432 rows
+    DEF: 27391 rows
+    MID: 33807 rows
+    FWD: 8543 rows
+  Predicted: 61.3 | Actual: 49 | Cap: Gibbs-White | Hits: 0
+  FT next GW: 1 | Bank: 0.7m | Squad val: 99.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 36  |  FT: 1  |  Bank: 0.7m
+  [TEAM FORM] GW36 top attack: [(16, 3.6666666666666665), (11, 3.0), (13, 3.0)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (5, 0.6666666666666666)]
+  [DGW] GW36: 82 players boosted x2.0
+  [AVAIL] GW36: 41 players penalized
+    OUT/SUSP: Henry, Milambo, Freitas Gouveia Carvalho, Sosa, Doucouré, Nketiah, Guessand, Gueye, Iwobi, Sessegnon +2
+    DOUBTFUL: Timber, Merino Zazón, McGinn, Kamara, Onana, Watkins, Jiménez Sánchez, Janelt, Branthwaite, Iroegbunam +19
+  [CHIP-CHECK] GW36 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW36 blank penalty on Gibbs-White (capped last GW, scored 4.0pts)
+  [CAP] GW36 candidates:
+    1. Gibbs-White (MID) raw:6.4 adj:5.6 form3:12.3 home:1.0  <- SELECTED
+    2. Borges Fernandes (MID) raw:7.5 adj:5.0 form3:5.3 home:0.0
+    3. Rogers (MID) raw:6.0 adj:4.0 form3:4.0 home:0.0
+  [CAP] GW36 -> Gibbs-White selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-36 actuals (w=37)...
+    GK: 7529 rows
+    DEF: 27661 rows
+    MID: 34185 rows
+    FWD: 8636 rows
+  Predicted: 68.4 | Actual: 59 | Cap: Gibbs-White | Hits: 0
+  FT next GW: 1 | Bank: 0.8m | Squad val: 99.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 37  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW37 top attack: [(13, 4.0), (6, 3.0), (11, 2.6666666666666665)] | top defence: [(1, 1.0), (4, 1.0), (16, 1.0)]
+  [AVAIL] GW37: 16 players penalized
+    OUT/SUSP: Doucouré, Nketiah, Andersen, Iwobi, Sessegnon, Casimiro, Ugarte Ribeiro, Sesko, Ballard
+    DOUBTFUL: Sosa, Branthwaite, Coleman, Gueye, Grealish, O'Reilly, Hernandez Cascante
+  [CHIP-CHECK] GW37 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW37 blank penalty on Gibbs-White (capped last GW, scored 0.0pts)
+  [CAP] GW37 candidates:
+    1. Calvert-Lewin (FWD) raw:5.4 adj:6.7 form3:7.0 home:1.0  <- SELECTED
+    2. dos Santos Magalhães (DEF) raw:7.3 adj:5.6 form3:8.3 home:1.0
+    3. Borges Fernandes (MID) raw:6.4 adj:4.2 form3:4.3 home:1.0
+  [CAP] GW37 -> Calvert-Lewin selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-37 actuals (w=38)...
+    GK: 7626 rows
+    DEF: 27931 rows
+    MID: 34564 rows
+    FWD: 8730 rows
+  Predicted: 59.7 | Actual: 95 | Cap: Calvert-Lewin | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 99.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 38  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW38 top attack: [(13, 3.3333333333333335), (2, 2.3333333333333335), (15, 2.3333333333333335)] | top defence: [(1, 1.0), (4, 1.0), (6, 0.6666666666666666)]
+  [AVAIL] GW38: 284 players penalized
+    OUT/SUSP: Hein, Kiwior, White, Kacurri, Ferreira Vieira, Nwaneri, Kabia, Sambi Lokonga, Gauci, Marschall +246
+    DOUBTFUL: Timber, Kamara, da Rocha dos Santos, Jiménez Sánchez, Bynoe-Gittens, Branthwaite, Gueye, Grealish, Kusi-Asare, Frimpong +9
+  [CHIP-CHECK] GW38 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW38 candidates:
+    1. Calvert-Lewin (FWD) raw:5.5 adj:6.8 form3:6.7 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:5.1 adj:6.2 form3:8.3 home:0.0
+    3. dos Santos Magalhães (DEF) raw:7.5 adj:5.6 form3:7.7 home:0.0
+  [CAP] GW38 -> Calvert-Lewin selected (streak: 2 consecutive)
+  Predicted: 59.1 | Actual: 72 | Cap: Calvert-Lewin | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 100.3m
+  [SAVED]
+
+======================================================================
+  SIMULATION COMPLETE
+  Total actual pts:    2236
+  Total predicted:     2778.9
+  Total penalties:     -4
+  Chips used:          ['tc1', 'bb1', 'wc1', 'tc2', 'bb2', 'fh2']
+======================================================================

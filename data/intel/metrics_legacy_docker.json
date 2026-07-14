@@ -1,0 +1,314 @@
+{
+  "source": {
+    "rules_mode": "legacy",
+    "chip_strategy": "legacy",
+    "has_history": true
+  },
+  "totals": {
+    "actual": 2236,
+    "predicted": 2778.9,
+    "penalties": -4,
+    "gw_mean": 58.84,
+    "gw_std": 17.9,
+    "n_gws": 38
+  },
+  "transfers": {
+    "total": 39,
+    "hit_pts": 4,
+    "hit_gws": [
+      33
+    ],
+    "buybacks_within_6": 5,
+    "short_holds_within_2": 8,
+    "ft_at_deadline_hist": {
+      "1": 27,
+      "2": 7,
+      "5": 1
+    },
+    "payoff_window_gws": 4,
+    "payoff_mode": "in_minus_out",
+    "payoff_per_transfer_gw": [
+      {
+        "gw": 6,
+        "n": 2,
+        "delta": -32.0,
+        "hit_pts": 0,
+        "complete": false
+      },
+      {
+        "gw": 7,
+        "n": 1,
+        "delta": 14.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 8,
+        "n": 1,
+        "delta": -9.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 9,
+        "n": 1,
+        "delta": -12.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 10,
+        "n": 1,
+        "delta": 3.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 11,
+        "n": 1,
+        "delta": -4.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 12,
+        "n": 1,
+        "delta": 13.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 13,
+        "n": 1,
+        "delta": 11.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 14,
+        "n": 1,
+        "delta": -5.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 15,
+        "n": 5,
+        "delta": -33.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 16,
+        "n": 1,
+        "delta": 17.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 18,
+        "n": 2,
+        "delta": 5.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 19,
+        "n": 1,
+        "delta": 14.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 20,
+        "n": 1,
+        "delta": -6.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 21,
+        "n": 1,
+        "delta": 6.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 22,
+        "n": 1,
+        "delta": 17.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 23,
+        "n": 1,
+        "delta": 11.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 24,
+        "n": 1,
+        "delta": -3.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 25,
+        "n": 1,
+        "delta": 5.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 27,
+        "n": 2,
+        "delta": 1.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 28,
+        "n": 1,
+        "delta": 9.0,
+        "hit_pts": 0,
+        "complete": false
+      },
+      {
+        "gw": 29,
+        "n": 1,
+        "delta": -16.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 30,
+        "n": 1,
+        "delta": -3.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 31,
+        "n": 1,
+        "delta": 20.0,
+        "hit_pts": 0,
+        "complete": false
+      },
+      {
+        "gw": 32,
+        "n": 1,
+        "delta": 2.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 33,
+        "n": 2,
+        "delta": 7.0,
+        "hit_pts": 4,
+        "complete": false
+      },
+      {
+        "gw": 34,
+        "n": 1,
+        "delta": 27.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 35,
+        "n": 1,
+        "delta": 20.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 36,
+        "n": 1,
+        "delta": 6.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 37,
+        "n": 1,
+        "delta": 5.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 38,
+        "n": 1,
+        "delta": 11.0,
+        "hit_pts": 0,
+        "complete": true
+      }
+    ],
+    "net_delta_mean": 3.13,
+    "net_delta_positive_pct": 67.7,
+    "partial_windows": 4,
+    "hit_roi": [
+      {
+        "gw": 33,
+        "roi": 3.0
+      }
+    ]
+  },
+  "captain": {
+    "avg_actual": 5.37,
+    "zero_gws": [
+      33,
+      36
+    ],
+    "zero_rate_pct": 5.3,
+    "regret_vs_best_xi_mean": 7.34,
+    "note": "regret uses post-auto-sub XI; vice not modelled in legacy"
+  },
+  "chips": [
+    {
+      "chip": "tc1",
+      "gw": 6,
+      "gw_actual": 102,
+      "tc_extra_pts": 16.0
+    },
+    {
+      "chip": "bb1",
+      "gw": 8,
+      "gw_actual": 77,
+      "bench_pts_gained": 2.0
+    },
+    {
+      "chip": "wc1",
+      "gw": 17,
+      "gw_actual": 66
+    },
+    {
+      "chip": "tc2",
+      "gw": 21,
+      "gw_actual": 62,
+      "tc_extra_pts": 6.0
+    },
+    {
+      "chip": "bb2",
+      "gw": 23,
+      "gw_actual": 49,
+      "bench_pts_gained": 2.0
+    },
+    {
+      "chip": "fh2",
+      "gw": 26,
+      "gw_actual": 74
+    }
+  ],
+  "bench": {
+    "avg_pts_wasted_per_gw": 4.86,
+    "auto_subs": 24,
+    "auto_sub_pts_rescued": 82.0
+  },
+  "prediction": {
+    "xi_mae_mean": 3.901,
+    "caveat": "legacy predicted_pts include loyalty/bench-bonus inflation"
+  }
+}

@@ -19,3 +19,6 @@ models/*.pkl
 # OS
 .DS_Store
 Thumbs.db
+
+# vaastav repo downloads (re-fetchable via pipeline/build_season_inputs.py)
+data/raw/vaastav_repo/

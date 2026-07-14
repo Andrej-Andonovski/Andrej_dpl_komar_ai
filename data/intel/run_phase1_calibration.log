@@ -1,0 +1,206 @@
+﻿[LOAD] data...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+[LOAD] DGWs: [26, 33, 36]
+    GK: 4421 rows
+    DEF: 18828 rows
+    MID: 22132 rows
+    FWD: 5663 rows
+  GW2: done (6 offsets)
+    GK: 4503 rows
+    DEF: 19061 rows
+    MID: 22447 rows
+    FWD: 5738 rows
+  GW3: done (6 offsets)
+    GK: 4585 rows
+    DEF: 19297 rows
+    MID: 22766 rows
+    FWD: 5813 rows
+  GW4: done (6 offsets)
+    GK: 4671 rows
+    DEF: 19542 rows
+    MID: 23094 rows
+    FWD: 5894 rows
+  GW5: done (6 offsets)
+    GK: 4757 rows
+    DEF: 19787 rows
+    MID: 23422 rows
+    FWD: 5976 rows
+  GW6: done (6 offsets)
+    GK: 4843 rows
+    DEF: 20032 rows
+    MID: 23751 rows
+    FWD: 6058 rows
+  GW7: done (6 offsets)
+    GK: 4929 rows
+    DEF: 20277 rows
+    MID: 24081 rows
+    FWD: 6140 rows
+  GW8: done (6 offsets)
+    GK: 5015 rows
+    DEF: 20523 rows
+    MID: 24412 rows
+    FWD: 6222 rows
+  GW9: done (6 offsets)
+    GK: 5101 rows
+    DEF: 20769 rows
+    MID: 24744 rows
+    FWD: 6304 rows
+  GW10: done (6 offsets)
+    GK: 5187 rows
+    DEF: 21016 rows
+    MID: 25076 rows
+    FWD: 6386 rows
+  GW11: done (6 offsets)
+    GK: 5273 rows
+    DEF: 21265 rows
+    MID: 25410 rows
+    FWD: 6469 rows
+  GW12: done (6 offsets)
+    GK: 5360 rows
+    DEF: 21514 rows
+    MID: 25746 rows
+    FWD: 6552 rows
+  GW13: done (6 offsets)
+    GK: 5447 rows
+    DEF: 21763 rows
+    MID: 26082 rows
+    FWD: 6635 rows
+  GW14: done (6 offsets)
+    GK: 5535 rows
+    DEF: 22012 rows
+    MID: 26420 rows
+    FWD: 6718 rows
+  GW15: done (6 offsets)
+    GK: 5623 rows
+    DEF: 22262 rows
+    MID: 26758 rows
+    FWD: 6801 rows
+  GW16: done (6 offsets)
+    GK: 5711 rows
+    DEF: 22513 rows
+    MID: 27096 rows
+    FWD: 6884 rows
+  GW17: done (6 offsets)
+    GK: 5799 rows
+    DEF: 22768 rows
+    MID: 27440 rows
+    FWD: 6967 rows
+  GW18: done (6 offsets)
+    GK: 5887 rows
+    DEF: 23025 rows
+    MID: 27787 rows
+    FWD: 7050 rows
+  GW19: done (6 offsets)
+    GK: 5975 rows
+    DEF: 23282 rows
+    MID: 28137 rows
+    FWD: 7135 rows
+  GW20: done (6 offsets)
+    GK: 6066 rows
+    DEF: 23541 rows
+    MID: 28491 rows
+    FWD: 7221 rows
+  GW21: done (6 offsets)
+    GK: 6157 rows
+    DEF: 23802 rows
+    MID: 28847 rows
+    FWD: 7308 rows
+  GW22: done (6 offsets)
+    GK: 6248 rows
+    DEF: 24064 rows
+    MID: 29205 rows
+    FWD: 7396 rows
+  GW23: done (6 offsets)
+    GK: 6340 rows
+    DEF: 24326 rows
+    MID: 29566 rows
+    FWD: 7484 rows
+  GW24: done (6 offsets)
+    GK: 6433 rows
+    DEF: 24589 rows
+    MID: 29931 rows
+    FWD: 7574 rows
+  GW25: done (6 offsets)
+    GK: 6527 rows
+    DEF: 24854 rows
+    MID: 30298 rows
+    FWD: 7665 rows
+  GW26: done (6 offsets)
+    GK: 6621 rows
+    DEF: 25119 rows
+    MID: 30665 rows
+    FWD: 7756 rows
+  GW27: done (6 offsets)
+    GK: 6715 rows
+    DEF: 25384 rows
+    MID: 31032 rows
+    FWD: 7848 rows
+  GW28: done (6 offsets)
+    GK: 6809 rows
+    DEF: 25650 rows
+    MID: 31399 rows
+    FWD: 7940 rows
+  GW29: done (6 offsets)
+    GK: 6903 rows
+    DEF: 25916 rows
+    MID: 31767 rows
+    FWD: 8032 rows
+  GW30: done (6 offsets)
+    GK: 6997 rows
+    DEF: 26182 rows
+    MID: 32137 rows
+    FWD: 8124 rows
+  GW31: done (6 offsets)
+    GK: 7078 rows
+    DEF: 26395 rows
+    MID: 32433 rows
+    FWD: 8198 rows
+  GW32: done (6 offsets)
+    GK: 7173 rows
+    DEF: 26663 rows
+    MID: 32804 rows
+    FWD: 8290 rows
+  GW33: done (6 offsets)
+    GK: 7269 rows
+    DEF: 26931 rows
+    MID: 33177 rows
+    FWD: 8382 rows
+  GW34: done (5 offsets)
+    GK: 7335 rows
+    DEF: 27122 rows
+    MID: 33434 rows
+    FWD: 8450 rows
+  GW35: done (4 offsets)
+    GK: 7432 rows
+    DEF: 27391 rows
+    MID: 33807 rows
+    FWD: 8543 rows
+  GW36: done (3 offsets)
+    GK: 7529 rows
+    DEF: 27661 rows
+    MID: 34185 rows
+    FWD: 8636 rows
+  GW37: done (2 offsets)
+    GK: 7626 rows
+    DEF: 27931 rows
+    MID: 34564 rows
+    FWD: 8730 rows
+  GW38: done (1 offsets)
+
+============================================================================
+  PHASE 1 CALIBRATION — MAE by horizon distance
+============================================================================
+   h  n_played  MAE_played  MAE_top60  spearman blank_viol  n_dgw
+   0     11062       2.044      2.843     0.716          0    417
+   1     10750       2.055      2.862     0.697          0    417
+   2     10448       2.071      2.941     0.676          0    417
+   3     10143       2.092      2.990     0.655          0    417
+   4      9838       2.116      3.104     0.639          0    417
+   5      9528       2.128      3.079     0.632          0    417
+----------------------------------------------------------------------------
+  sim-style baseline (h=0): MAE_played 2.040 | MAE_top60 2.863
+  matrix h=0 vs baseline:   PASS (exit gate: matrix must not be materially worse)
+  q90 coverage (h<=2 pooled per offset): h0=0.8359 (target ~0.90)
+  phi buckets (h<=1): {'0.00-0.70': 1.766, '0.70-0.85': 2.057, '0.85-1.01': 2.1007} — gate: low-phi MAE > high-phi MAE
+============================================================================
+  saved -> data/intel/phase1_calibration.json

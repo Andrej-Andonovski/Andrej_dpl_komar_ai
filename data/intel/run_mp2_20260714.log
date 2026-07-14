@@ -1,0 +1,556 @@
+﻿======================================================================
+  FPL Season Simulator — GW1 to GW38
+  RULES_MODE=corrected | CHIP_STRATEGY=legacy | OPTIMIZER=mp | out=season_simulation_corrected_mp.json
+======================================================================
+
+[LOAD] Loading data...
+  [RECS] recommendations.json: 38 GWs loaded
+  Players: 841 | DGW GWs in range: [26, 33, 36]
+  Blank GWs in range: [31, 34] | Chip strategy: legacy
+  Availability data: 38 GWs loaded
+
+[LOAD] Building historical team form lookup (Intel 08)...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+
+[TRAIN] Initial models from all 6-season historical data...
+  Training GW1 models on all 6-season historical data:
+    GK: 4421 rows
+    DEF: 18828 rows
+    MID: 22132 rows
+    FWD: 5663 rows
+
+----------------------------------------------------------------------
+  GW 1  |  FT: 1  |  Bank: 0.0m
+  [GW1 pool] 841 players | exact=340 partial=66 pos_avg=435
+  [GW1 TEAM FORM] Loaded 2024-25 averages for 17 teams
+  [BENCH-INTEL] GW1 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Sels(£4.6m,f3=3.9), Owen(£4.5m,f3=5.1), Neil(£4.8m,f3=4.5), McNeil(£5.5m,f3=4.5)
+  [MILP] solver: HiGHS
+  [RETRAIN] History (w=1.0) + GW1-1 actuals (w=2)...
+    GK: 4421 rows
+    DEF: 18828 rows
+    MID: 22132 rows
+    FWD: 5663 rows
+  Predicted: 134.8 | Actual: 88 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 93.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 2  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW2 top attack: [(13, 6.0), (12, 4.0), (16, 3.0)] | top defence: [(1, 1.0), (2, 1.0), (6, 1.0)]
+  [BENCH-INTEL] GW2 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Raya Martín(£5.5m,f3=10.0), Ballard(£4.5m,f3=17.0), Calafiori(£5.5m,f3=13.0), Reijnders(£5.5m,f3=10.0)
+  [RETRAIN] History (w=1.0) + GW1-2 actuals (w=3)...
+    GK: 4503 rows
+    DEF: 19061 rows
+    MID: 22447 rows
+    FWD: 5738 rows
+  Predicted: 47.3 | Actual: 46 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.9m | Squad val: 91.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 3  |  FT: 1  |  Bank: 1.9m
+  [TEAM FORM] GW3 top attack: [(12, 3.5), (1, 3.0), (13, 3.0)] | top defence: [(1, 1.0), (8, 1.0), (9, 1.0)]
+  [BENCH-INTEL] GW3 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Vicario(£5.0m,f3=9.0), Calafiori(£5.5m,f3=13.0), Cullen(£5.0m,f3=9.0), Anthony(£5.5m,f3=7.5)
+  [RETRAIN] History (w=1.0) + GW1-3 actuals (w=4)...
+    GK: 4585 rows
+    DEF: 19297 rows
+    MID: 22766 rows
+    FWD: 5813 rows
+  Predicted: 41.3 | Actual: 60 | Cap: Johnson | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 93.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 4  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW4 top attack: [(12, 2.6666666666666665), (13, 2.6666666666666665), (7, 2.3333333333333335)] | top defence: [(1, 1.0), (8, 1.0), (9, 1.0)]
+  [BENCH-INTEL] GW4 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Vicario(£5.0m,f3=7.0), Senesi Barón(£4.5m,f3=8.3), Chalobah(£5.0m,f3=9.0), Guéhi(£4.5m,f3=7.7)
+  [RETRAIN] History (w=1.0) + GW1-4 actuals (w=5)...
+    GK: 4671 rows
+    DEF: 19542 rows
+    MID: 23094 rows
+    FWD: 5894 rows
+  Predicted: 42.3 | Actual: 66 | Cap: Timber | Hits: 0
+  FT next GW: 1 | Bank: 0.8m | Squad val: 93.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 5  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW5 top attack: [(7, 3.0), (1, 2.6666666666666665), (13, 2.0)] | top defence: [(1, 1.0), (3, 1.0), (8, 1.0)]
+  [BENCH-INTEL] GW5 | BB target: GW8 (score: 31.23) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:31.23
+  [BENCH-INTEL] Recommended bench: Pickford(£5.5m,f3=7.3), Senesi Barón(£4.6m,f3=8.7), Caicedo Corozo(£5.5m,f3=8.0), Chalobah(£5.1m,f3=8.0)
+  [CHIP-CHECK] GW5 | chips_used: [] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-5 actuals (w=6)...
+    GK: 4757 rows
+    DEF: 19787 rows
+    MID: 23422 rows
+    FWD: 5976 rows
+  Predicted: 56.5 | Actual: 61 | Cap: Haaland [TC1] | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 93.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 6  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW6 top attack: [(13, 2.3333333333333335), (6, 1.6666666666666667), (7, 1.6666666666666667)] | top defence: [(8, 1.0), (13, 1.0), (15, 1.0)]
+  [BENCH-INTEL] GW6 | BB target: GW8 (score: 32.68) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:32.68, GW9:32.22
+  [BENCH-INTEL] Recommended bench: Roefs(£4.5m,f3=6.7), Guéhi(£4.7m,f3=9.3), Senesi Barón(£4.7m,f3=8.7), Chalobah(£5.1m,f3=8.0)
+  [CHIP-CHECK] GW6 | chips_used: ['tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-6 actuals (w=7)...
+    GK: 4843 rows
+    DEF: 20032 rows
+    MID: 23751 rows
+    FWD: 6058 rows
+  Predicted: 49.0 | Actual: 67 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.9m | Squad val: 93.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 7  |  FT: 1  |  Bank: 0.9m
+  [TEAM FORM] GW7 top attack: [(13, 3.0), (1, 2.0), (5, 2.0)] | top defence: [(8, 1.0), (15, 1.0), (13, 0.6666666666666666)]
+  [BENCH-INTEL] GW7 | BB target: GW8 (score: 30.56) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:30.56, GW9:29.37, GW10:29.77
+  [BENCH-INTEL] Recommended bench: Roefs(£4.5m,f3=7.3), Alderete(£4.0m,f3=10.0), Zubimendi Ibáñez(£5.5m,f3=6.7), Guéhi(£4.7m,f3=6.7)
+  [CHIP-CHECK] GW7 | chips_used: ['tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-7 actuals (w=8)...
+    GK: 4929 rows
+    DEF: 20277 rows
+    MID: 24081 rows
+    FWD: 6140 rows
+  Predicted: 49.4 | Actual: 74 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 94.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 8  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW8 top attack: [(13, 2.6666666666666665), (2, 2.0), (6, 2.0)] | top defence: [(8, 1.0), (15, 1.0), (4, 0.6666666666666666)]
+  [BENCH-INTEL] GW8 | BB target: GW8 (score: 24.48) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW8:24.48, GW9:24.35, GW10:23.99, GW11:23.98
+  [BENCH-INTEL] Recommended bench: Roefs(£4.6m,f3=4.7), Alderete(£4.1m,f3=7.0), Burn(£5.0m,f3=6.7), Stach(£5.0m,f3=6.3)
+  [CHIP-CHECK] GW8 | chips_used: ['tc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW8
+  [RETRAIN] History (w=1.0) + GW1-8 actuals (w=9)...
+    GK: 5015 rows
+    DEF: 20523 rows
+    MID: 24412 rows
+    FWD: 6222 rows
+  Predicted: 48.2 | Actual: 67 | Cap: Haaland [BB1] | Hits: 0
+  FT next GW: 1 | Bank: -0.0m | Squad val: 94.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 9  |  FT: 1  |  Bank: -0.0m
+  [TEAM FORM] GW9 top attack: [(13, 3.0), (2, 2.3333333333333335), (6, 2.0)] | top defence: [(1, 0.6666666666666666), (7, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW9 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-9 actuals (w=10)...
+    GK: 5101 rows
+    DEF: 20769 rows
+    MID: 24744 rows
+    FWD: 6304 rows
+  Predicted: 51.6 | Actual: 67 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.0m | Squad val: 93.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 10  |  FT: 1  |  Bank: 1.0m
+  [TEAM FORM] GW10 top attack: [(14, 2.6666666666666665), (3, 2.0), (4, 2.0)] | top defence: [(1, 1.0), (13, 1.0), (14, 1.0)]
+  [CHIP-CHECK] GW10 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-10 actuals (w=11)...
+    GK: 5187 rows
+    DEF: 21016 rows
+    MID: 25076 rows
+    FWD: 6386 rows
+  Predicted: 53.5 | Actual: 56 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: -0.0m | Squad val: 95.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 11  |  FT: 1  |  Bank: -0.0m
+  [TEAM FORM] GW11 top attack: [(14, 2.6666666666666665), (6, 2.3333333333333335), (4, 2.0)] | top defence: [(1, 1.0), (13, 1.0), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW11 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-11 actuals (w=12)...
+    GK: 5273 rows
+    DEF: 21265 rows
+    MID: 25410 rows
+    FWD: 6469 rows
+  Predicted: 52.0 | Actual: 36 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.8m | Squad val: 94.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 12  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW12 top attack: [(14, 2.6666666666666665), (5, 2.0), (13, 2.0)] | top defence: [(8, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [CHIP-CHECK] GW12 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-12 actuals (w=13)...
+    GK: 5360 rows
+    DEF: 21514 rows
+    MID: 25746 rows
+    FWD: 6552 rows
+  Predicted: 50.1 | Actual: 49 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.6m | Squad val: 93.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 13  |  FT: 1  |  Bank: 1.6m
+  [TEAM FORM] GW13 top attack: [(1, 2.6666666666666665), (16, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(7, 1.0), (8, 1.0), (13, 1.0)]
+  [CHIP-CHECK] GW13 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-13 actuals (w=14)...
+    GK: 5447 rows
+    DEF: 21763 rows
+    MID: 26082 rows
+    FWD: 6635 rows
+  Predicted: 46.3 | Actual: 47 | Cap: van de Ven | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 94.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 14  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW14 top attack: [(1, 2.3333333333333335), (2, 2.3333333333333335), (5, 2.3333333333333335)] | top defence: [(2, 0.6666666666666666), (5, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW14 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-14 actuals (w=15)...
+    GK: 5535 rows
+    DEF: 22012 rows
+    MID: 26420 rows
+    FWD: 6718 rows
+  Predicted: 42.4 | Actual: 36 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 5 | Bank: 0.7m | Squad val: 94.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 15  |  FT: 5  |  Bank: 0.7m
+  [TEAM FORM] GW15 top attack: [(13, 2.6666666666666665), (15, 2.6666666666666665), (1, 2.3333333333333335)] | top defence: [(5, 0.6666666666666666), (8, 0.6666666666666666), (9, 0.6666666666666666)]
+  [CHIP-CHECK] GW15 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-15 actuals (w=16)...
+    GK: 5623 rows
+    DEF: 22262 rows
+    MID: 26758 rows
+    FWD: 6801 rows
+  Predicted: 50.4 | Actual: 44 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 94.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 16  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW16 top attack: [(13, 3.6666666666666665), (11, 2.6666666666666665), (15, 2.6666666666666665)] | top defence: [(12, 1.0), (4, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW16 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-16 actuals (w=17)...
+    GK: 5711 rows
+    DEF: 22513 rows
+    MID: 27096 rows
+    FWD: 6884 rows
+  Predicted: 45.6 | Actual: 68 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 0.9m | Squad val: 94.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 17  |  FT: 1  |  Bank: 0.9m
+  [TEAM FORM] GW17 top attack: [(13, 4.0), (14, 3.0), (2, 2.6666666666666665)] | top defence: [(12, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [CHIP-CHECK] GW17 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-17 actuals (w=18)...
+    GK: 5799 rows
+    DEF: 22768 rows
+    MID: 27440 rows
+    FWD: 6967 rows
+  Predicted: 56.0 | Actual: 62 | Cap: Borges Fernandes [WC1] | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 95.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 18  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW18 top attack: [(13, 4.0), (14, 3.0), (11, 2.6666666666666665)] | top defence: [(13, 1.0), (1, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW18 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-18 actuals (w=19)...
+    GK: 5887 rows
+    DEF: 23025 rows
+    MID: 27787 rows
+    FWD: 7050 rows
+  Predicted: 55.8 | Actual: 28 | Cap: Haaland | Hits: 1
+  FT next GW: 1 | Bank: -0.0m | Squad val: 95.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 19  |  FT: 1  |  Bank: -0.0m
+  [TEAM FORM] GW19 top attack: [(13, 3.6666666666666665), (2, 2.0), (5, 2.0)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW19 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CHIP] GW19 FH1 NOT force-used — GW19 is not a DGW, wasting FH1
+  [CHIP] GW19 complete — FH1 wasted (not a DGW, better to waste than misuse)
+  [RETRAIN] History (w=1.0) + GW1-19 actuals (w=20)...
+    GK: 5975 rows
+    DEF: 23282 rows
+    MID: 28137 rows
+    FWD: 7135 rows
+  Predicted: 47.6 | Actual: 43 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 95.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 20  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW20 top attack: [(13, 2.3333333333333335), (1, 2.0), (2, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [BENCH-INTEL] GW20 | BB target: GW21 (score: 30.66) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW20:29.33, GW21:30.66, GW22:28.88, GW23:29.80
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.5m,f3=7.7), Garner(£5.0m,f3=8.3), Collins(£4.9m,f3=7.0), Tarkowski(£5.5m,f3=6.7)
+  [CHIP-CHECK] GW20 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-20 actuals (w=21)...
+    GK: 6066 rows
+    DEF: 23541 rows
+    MID: 28491 rows
+    FWD: 7221 rows
+  Predicted: 47.8 | Actual: 53 | Cap: Watkins | Hits: 1
+  FT next GW: 1 | Bank: 0.3m | Squad val: 95.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 21  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW21 top attack: [(1, 2.6666666666666665), (5, 2.3333333333333335), (2, 2.0)] | top defence: [(18, 1.0), (5, 0.6666666666666666), (9, 0.6666666666666666)]
+  [BENCH-INTEL] GW21 | BB target: GW21 (score: 29.70) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW21:29.70, GW22:28.68, GW23:29.52, GW24:28.00
+  [BENCH-INTEL] Recommended bench: Pickford(£5.5m,f3=5.7), Garner(£5.1m,f3=8.3), Collins(£4.9m,f3=7.7), van de Ven(£4.5m,f3=8.0)
+  [CHIP-CHECK] GW21 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-21 actuals (w=22)...
+    GK: 6157 rows
+    DEF: 23802 rows
+    MID: 28847 rows
+    FWD: 7308 rows
+  Predicted: 51.7 | Actual: 72 | Cap: Nascimento Rodrigues [TC2] | Hits: 0
+  FT next GW: 1 | Bank: 8.4m | Squad val: 87.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 22  |  FT: 1  |  Bank: 8.4m
+  [TEAM FORM] GW22 top attack: [(15, 3.0), (1, 2.3333333333333335), (5, 2.3333333333333335)] | top defence: [(5, 1.0), (13, 1.0), (1, 0.6666666666666666)]
+  [BENCH-INTEL] GW22 | BB target: GW23 (score: 31.77) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW22:31.25, GW23:31.77, GW24:30.86, GW25:31.51
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.5m,f3=7.0), Collins(£4.9m,f3=10.7), Garner(£5.1m,f3=8.7), Ayari(£4.8m,f3=7.0)
+  [CHIP-CHECK] GW22 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-22 actuals (w=23)...
+    GK: 6248 rows
+    DEF: 24064 rows
+    MID: 29205 rows
+    FWD: 7396 rows
+  Predicted: 51.1 | Actual: 30 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.9m | Squad val: 94.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 23  |  FT: 1  |  Bank: 1.9m
+  [TEAM FORM] GW23 top attack: [(5, 2.3333333333333335), (15, 2.0), (4, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (5, 0.6666666666666666), (13, 0.6666666666666666)]
+  [BENCH-INTEL] GW23 | BB target: GW23 (score: 25.05) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW23:25.05, GW24:24.41, GW25:25.05, GW26:24.93
+  [BENCH-INTEL] Recommended bench: Kelleher(£4.6m,f3=5.3), Collins(£5.0m,f3=8.0), Thiaw(£5.1m,f3=8.3), Aaronson(£5.4m,f3=8.0)
+  [CHIP-CHECK] GW23 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW23
+  [RETRAIN] History (w=1.0) + GW1-23 actuals (w=24)...
+    GK: 6340 rows
+    DEF: 24326 rows
+    MID: 29566 rows
+    FWD: 7484 rows
+  Predicted: 47.3 | Actual: 36 | Cap: Haaland [BB2] | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 95.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 24  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW24 top attack: [(14, 2.3333333333333335), (4, 2.0), (7, 2.0)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-CHECK] GW24 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-24 actuals (w=25)...
+    GK: 6433 rows
+    DEF: 24589 rows
+    MID: 29931 rows
+    FWD: 7574 rows
+  Predicted: 43.6 | Actual: 21 | Cap: Nascimento Rodrigues | Hits: 0
+  FT next GW: 1 | Bank: 9.7m | Squad val: 86.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 25  |  FT: 1  |  Bank: 9.7m
+  [TEAM FORM] GW25 top attack: [(7, 2.6666666666666665), (14, 2.6666666666666665), (12, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-CHECK] GW25 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-25 actuals (w=26)...
+    GK: 6527 rows
+    DEF: 24854 rows
+    MID: 30298 rows
+    FWD: 7665 rows
+  Predicted: 43.5 | Actual: 46 | Cap: dos Santos Magalhães | Hits: 0
+  FT next GW: 1 | Bank: 7.2m | Squad val: 88.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 26  |  FT: 1  |  Bank: 7.2m
+  [TEAM FORM] GW26 top attack: [(7, 3.0), (1, 2.6666666666666665), (14, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (11, 0.6666666666666666), (13, 0.6666666666666666)]
+  [CHIP-CHECK] GW26 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CHIP] GW26 FH triggered naturally — DGW with only 1 DGW squad players
+  [RETRAIN] History (w=1.0) + GW1-26 actuals (w=27)...
+    GK: 6621 rows
+    DEF: 25119 rows
+    MID: 30665 rows
+    FWD: 7756 rows
+  Predicted: 72.5 | Actual: 68 | Cap: dos Santos Magalhães [FH2] | Hits: 0
+  FT next GW: 2 | Bank: 7.2m | Squad val: 87.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 27  |  FT: 2  |  Bank: 7.2m
+  [TEAM FORM] GW27 top attack: [(1, 3.3333333333333335), (7, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(1, 1.0), (6, 0.6666666666666666), (13, 0.6666666666666666)]
+  [CHIP-CHECK] GW27 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-27 actuals (w=28)...
+    GK: 6715 rows
+    DEF: 25384 rows
+    MID: 31032 rows
+    FWD: 7848 rows
+  Predicted: 49.0 | Actual: 41 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 0.9m | Squad val: 93.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 28  |  FT: 1  |  Bank: 0.9m
+  [TEAM FORM] GW28 top attack: [(1, 3.3333333333333335), (13, 2.3333333333333335), (7, 2.0)] | top defence: [(19, 1.0), (1, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW28 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-28 actuals (w=29)...
+    GK: 6809 rows
+    DEF: 25650 rows
+    MID: 31399 rows
+    FWD: 7940 rows
+  Predicted: 45.9 | Actual: 50 | Cap: van Dijk | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 94.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 29  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW29 top attack: [(1, 3.0), (12, 2.0), (13, 2.0)] | top defence: [(20, 1.0), (6, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-CHECK] GW29 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-29 actuals (w=30)...
+    GK: 6903 rows
+    DEF: 25916 rows
+    MID: 31767 rows
+    FWD: 8032 rows
+  Predicted: 48.0 | Actual: 61 | Cap: van Dijk | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 94.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 30  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW30 top attack: [(1, 2.3333333333333335), (12, 2.0), (7, 1.6666666666666667)] | top defence: [(20, 1.0), (4, 0.6666666666666666), (10, 0.6666666666666666)]
+  [CHIP-CHECK] GW30 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-30 actuals (w=31)...
+    GK: 6997 rows
+    DEF: 26182 rows
+    MID: 32137 rows
+    FWD: 8124 rows
+  Predicted: 44.4 | Actual: 46 | Cap: Rice | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 94.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 31  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW31 top attack: [(5, 2.0), (12, 2.0), (14, 2.0)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (9, 0.6666666666666666)]
+  [CHIP-CHECK] GW31 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-31 actuals (w=32)...
+    GK: 7078 rows
+    DEF: 26395 rows
+    MID: 32433 rows
+    FWD: 8198 rows
+  Predicted: 49.2 | Actual: 57 | Cap: Junqueira de Jesus [WC2] | Hits: 0
+  FT next GW: 2 | Bank: -0.0m | Squad val: 95.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 32  |  FT: 2  |  Bank: -0.0m
+  [TEAM FORM] GW32 top attack: [(20, 2.0), (1, 1.6666666666666667), (9, 1.6666666666666667)] | top defence: [(9, 1.0), (11, 1.0), (1, 0.6666666666666666)]
+  [CHIP-CHECK] GW32 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-32 actuals (w=33)...
+    GK: 7173 rows
+    DEF: 26663 rows
+    MID: 32804 rows
+    FWD: 8290 rows
+  Predicted: 52.6 | Actual: 68 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 95.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 33  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW33 top attack: [(13, 2.0), (6, 1.6666666666666667), (8, 1.6666666666666667)] | top defence: [(1, 0.6666666666666666), (6, 0.6666666666666666), (9, 0.6666666666666666)]
+  [CHIP-CHECK] GW33 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: True
+  [RETRAIN] History (w=1.0) + GW1-33 actuals (w=34)...
+    GK: 7269 rows
+    DEF: 26931 rows
+    MID: 33177 rows
+    FWD: 8382 rows
+  Predicted: 65.3 | Actual: 95 | Cap: Junqueira de Jesus | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 95.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 34  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW34 top attack: [(6, 3.0), (4, 2.6666666666666665), (16, 2.6666666666666665)] | top defence: [(5, 0.6666666666666666), (6, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW34 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-34 actuals (w=35)...
+    GK: 7335 rows
+    DEF: 27122 rows
+    MID: 33434 rows
+    FWD: 8450 rows
+  Predicted: 40.9 | Actual: 51 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 95.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 35  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW35 top attack: [(6, 3.0), (16, 3.0), (4, 2.6666666666666665)] | top defence: [(19, 1.0), (6, 0.6666666666666666), (10, 0.6666666666666666)]
+  [CHIP-CHECK] GW35 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-35 actuals (w=36)...
+    GK: 7432 rows
+    DEF: 27391 rows
+    MID: 33807 rows
+    FWD: 8543 rows
+  Predicted: 53.1 | Actual: 47 | Cap: Gibbs-White | Hits: 0
+  FT next GW: 1 | Bank: 0.5m | Squad val: 95.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 36  |  FT: 1  |  Bank: 0.5m
+  [TEAM FORM] GW36 top attack: [(16, 3.6666666666666665), (11, 3.0), (13, 3.0)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW36 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: True
+  [RETRAIN] History (w=1.0) + GW1-36 actuals (w=37)...
+    GK: 7529 rows
+    DEF: 27661 rows
+    MID: 34185 rows
+    FWD: 8636 rows
+  Predicted: 55.4 | Actual: 42 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 1.3m | Squad val: 94.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 37  |  FT: 1  |  Bank: 1.3m
+  [TEAM FORM] GW37 top attack: [(13, 4.0), (6, 3.0), (11, 2.6666666666666665)] | top defence: [(1, 1.0), (4, 1.0), (16, 1.0)]
+  [CHIP-CHECK] GW37 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: False
+  [RETRAIN] History (w=1.0) + GW1-37 actuals (w=38)...
+    GK: 7626 rows
+    DEF: 27931 rows
+    MID: 34564 rows
+    FWD: 8730 rows
+  Predicted: 45.4 | Actual: 55 | Cap: Tarkowski | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 95.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 38  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW38 top attack: [(13, 3.3333333333333335), (2, 2.3333333333333335), (15, 2.3333333333333335)] | top defence: [(1, 1.0), (4, 1.0), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW38 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1', 'wc2'] | dgw: False
+  Predicted: 45.3 | Actual: 66 | Cap: Borges Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 2.0m | Squad val: 93.8m
+  [SAVED]
+
+======================================================================
+  SIMULATION COMPLETE
+  Total actual pts:    2070
+  Total predicted:     1972.0
+  Total penalties:     -8
+  Chips used:          ['tc1', 'bb1', 'wc1', 'tc2', 'bb2', 'fh2', 'wc2']
+======================================================================

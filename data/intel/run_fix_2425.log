@@ -1,0 +1,550 @@
+﻿======================================================================
+  FPL Season Simulator — GW1 to GW38
+  SEASON=2024-25 | RULES_MODE=corrected | CHIP_STRATEGY=v2 | OPTIMIZER=mp | out=season_simulation_corrected_mp_2024-25.json
+======================================================================
+
+[LOAD] Loading data...
+  [TRAIN-CUT] train_gk.csv: 4421 -> 3664 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_def.csv: 18828 -> 15639 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_mid.csv: 22132 -> 18126 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_fwd.csv: 5663 -> 4840 rows (seasons < 2024-25)
+  [AVAIL] intel data is 2025-26-only — disabled for 2024-25
+  [RECS] intel data is 2025-26-only — disabled for 2024-25
+  Players: 784 | DGW GWs in range: [24, 25, 32, 33]
+  Blank GWs in range: [15, 29, 34] | Chip strategy: v2
+  Availability data: 0 GWs loaded
+
+[LOAD] Building historical team form lookup (Intel 08)...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+
+[TRAIN] Initial models from all 6-season historical data...
+  Training GW1 models on all 6-season historical data:
+    GK: 3664 rows
+    DEF: 15639 rows
+    MID: 18126 rows
+    FWD: 4840 rows
+
+----------------------------------------------------------------------
+  GW 1  |  FT: 1  |  Bank: 0.0m
+  [GW1 pool] 784 players | exact=383 partial=42 pos_avg=359
+  [GW1 TEAM FORM] disabled for 2024-25 (id mapping is 2025-26-specific) — league-average prior
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP] solver: HiGHS
+  [MILP-H] plan ahead: GW5:5t | chips: bb1@GW5 | ft_plan {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+  [RETRAIN] History (w=1.0) + GW1-1 actuals (w=2)...
+    GK: 3664 rows
+    DEF: 15639 rows
+    MID: 18126 rows
+    FWD: 4840 rows
+  Predicted: 135.8 | Actual: 84 | Cap: M.Salah | Hits: 0
+  FT next GW: 2 | Bank: 0.0m | Squad val: 100.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 2  |  FT: 2  |  Bank: 0.0m
+  [TEAM FORM] GW2 top attack: [(5, 3.0), (1, 2.0), (2, 2.0)] | top defence: [(1, 1.0), (2, 1.0), (5, 1.0)]
+  [MILP-H] plan ahead: GW3:1t, GW4:1t, GW5:1t, GW6:1t | chips: tc1@GW5, bb1@GW6 | ft_plan {2: 2, 3: 1, 4: 1, 5: 1, 6: 1}
+  [RETRAIN] History (w=1.0) + GW1-2 actuals (w=3)...
+    GK: 3731 rows
+    DEF: 15844 rows
+    MID: 18409 rows
+    FWD: 4912 rows
+  Predicted: 53.4 | Actual: 83 | Cap: Palmer | Hits: 1
+  FT next GW: 1 | Bank: 0.0m | Squad val: 100.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 3  |  FT: 1  |  Bank: 0.0m
+  [TEAM FORM] GW3 top attack: [(6, 3.0), (13, 3.0), (5, 2.5)] | top defence: [(1, 1.0), (2, 1.0), (12, 1.0)]
+  [CHIP-GUARD] WC held — only 3 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW4:1t, GW6:2t, GW7:1t | chips: tc1@GW6, bb1@GW7 | ft_plan {3: 1, 4: 1, 5: 1, 6: 2, 7: 1}
+  [RETRAIN] History (w=1.0) + GW1-3 actuals (w=4)...
+    GK: 3800 rows
+    DEF: 16054 rows
+    MID: 18705 rows
+    FWD: 4985 rows
+  Predicted: 52.5 | Actual: 51 | Cap: Saka | Hits: 2
+  FT next GW: 1 | Bank: 1.0m | Squad val: 99.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 4  |  FT: 1  |  Bank: 1.0m
+  [TEAM FORM] GW4 top attack: [(13, 3.0), (6, 2.3333333333333335), (12, 2.3333333333333335)] | top defence: [(2, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 1 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW5:1t, GW6:1t, GW7:1t, GW8:1t | chips: tc1@GW6, bb1@GW8 | ft_plan {4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  [RETRAIN] History (w=1.0) + GW1-4 actuals (w=5)...
+    GK: 3869 rows
+    DEF: 16269 rows
+    MID: 19007 rows
+    FWD: 5058 rows
+  Predicted: 51.9 | Actual: 40 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 1.9m | Squad val: 99.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 5  |  FT: 1  |  Bank: 1.9m
+  [TEAM FORM] GW5 top attack: [(13, 3.0), (6, 2.6666666666666665), (2, 2.0)] | top defence: [(2, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW6:1t, GW8:2t, GW9:1t | chips: bb1@GW8, tc1@GW9 | ft_plan {5: 1, 6: 1, 7: 1, 8: 2, 9: 1}
+  [RETRAIN] History (w=1.0) + GW1-5 actuals (w=6)...
+    GK: 3939 rows
+    DEF: 16484 rows
+    MID: 19310 rows
+    FWD: 5131 rows
+  Predicted: 57.6 | Actual: 79 | Cap: Haaland | Hits: 2
+  FT next GW: 1 | Bank: 0.2m | Squad val: 101.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 6  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW6 top attack: [(2, 3.0), (13, 2.3333333333333335), (12, 2.0)] | top defence: [(12, 1.0), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW7:1t, GW9:2t, GW10:1t | chips: tc1@GW9, bb1@GW10 | ft_plan {6: 1, 7: 1, 8: 1, 9: 2, 10: 1}
+  [RETRAIN] History (w=1.0) + GW1-6 actuals (w=7)...
+    GK: 4009 rows
+    DEF: 16702 rows
+    MID: 19613 rows
+    FWD: 5204 rows
+  Predicted: 60.9 | Actual: 33 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 101.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 7  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW7 top attack: [(2, 3.0), (6, 2.6666666666666665), (1, 2.0)] | top defence: [(6, 0.6666666666666666), (9, 0.6666666666666666), (12, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW8:1t, GW9:1t, GW10:1t, GW11:1t | chips: tc1@GW9, bb1@GW10 | ft_plan {7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  [RETRAIN] History (w=1.0) + GW1-7 actuals (w=8)...
+    GK: 4079 rows
+    DEF: 16921 rows
+    MID: 19916 rows
+    FWD: 5278 rows
+  Predicted: 57.4 | Actual: 63 | Cap: Haaland | Hits: 1
+  FT next GW: 1 | Bank: 0.2m | Squad val: 101.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 8  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW8 top attack: [(1, 2.6666666666666665), (6, 2.6666666666666665), (18, 2.6666666666666665)] | top defence: [(7, 0.6666666666666666), (8, 0.6666666666666666), (12, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW9:1t, GW10:1t, GW12:2t | chips: tc1@GW9, bb1@GW12 | ft_plan {8: 1, 9: 1, 10: 1, 11: 1, 12: 2}
+  [RETRAIN] History (w=1.0) + GW1-8 actuals (w=9)...
+    GK: 4149 rows
+    DEF: 17140 rows
+    MID: 20220 rows
+    FWD: 5352 rows
+  Predicted: 49.8 | Actual: 33 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 101.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 9  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW9 top attack: [(18, 2.6666666666666665), (4, 2.3333333333333335), (1, 2.0)] | top defence: [(8, 0.6666666666666666), (1, 0.3333333333333333), (2, 0.3333333333333333)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW10:2t/-4, GW11:1t, GW12:1t, GW13:1t | chips: tc1@GW10, bb1@GW13 | ft_plan {9: 1, 10: 1, 11: 1, 12: 1, 13: 1}
+  [RETRAIN] History (w=1.0) + GW1-9 actuals (w=10)...
+    GK: 4221 rows
+    DEF: 17360 rows
+    MID: 20524 rows
+    FWD: 5426 rows
+  Predicted: 52.7 | Actual: 71 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 1.6m | Squad val: 100.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 10  |  FT: 1  |  Bank: 1.6m
+  [TEAM FORM] GW10 top attack: [(4, 3.0), (19, 2.6666666666666665), (13, 2.0)] | top defence: [(2, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 3 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW11:1t, GW12:1t, GW13:1t, GW14:1t | chips: tc1@GW10, bb1@GW14 | ft_plan {10: 1, 11: 1, 12: 1, 13: 1, 14: 1}
+  [RETRAIN] History (w=1.0) + GW1-10 actuals (w=11)...
+    GK: 4293 rows
+    DEF: 17581 rows
+    MID: 20831 rows
+    FWD: 5500 rows
+  Predicted: 62.9 | Actual: 57 | Cap: M.Salah [TC1] | Hits: 1
+  FT next GW: 1 | Bank: 1.7m | Squad val: 100.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 11  |  FT: 1  |  Bank: 1.7m
+  [TEAM FORM] GW11 top attack: [(16, 2.3333333333333335), (18, 2.3333333333333335), (12, 2.0)] | top defence: [(3, 1.0), (2, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW12:1t, GW13:1t, GW14:1t, GW15:9t | chips: bb1@GW14, fh1@GW15 | ft_plan {11: 1, 12: 1, 13: 1, 14: 1, 15: 1}
+  [RETRAIN] History (w=1.0) + GW1-11 actuals (w=12)...
+    GK: 4365 rows
+    DEF: 17804 rows
+    MID: 21139 rows
+    FWD: 5575 rows
+  Predicted: 51.1 | Actual: 63 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.5m | Squad val: 101.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 12  |  FT: 1  |  Bank: 1.5m
+  [TEAM FORM] GW12 top attack: [(4, 2.3333333333333335), (16, 2.3333333333333335), (10, 2.0)] | top defence: [(2, 0.6666666666666666), (3, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 3 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW14:2t, GW15:8t, GW16:2t | chips: bb1@GW14, fh1@GW15 | ft_plan {12: 1, 13: 1, 14: 2, 15: 1, 16: 2}
+  [RETRAIN] History (w=1.0) + GW1-12 actuals (w=13)...
+    GK: 4437 rows
+    DEF: 18030 rows
+    MID: 21450 rows
+    FWD: 5650 rows
+  Predicted: 52.4 | Actual: 52 | Cap: M.Salah | Hits: 1
+  FT next GW: 1 | Bank: 0.8m | Squad val: 102.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 13  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW13 top attack: [(18, 3.0), (20, 2.6666666666666665), (12, 2.3333333333333335)] | top defence: [(8, 1.0), (4, 0.6666666666666666), (19, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW14:1t, GW15:10t, GW16:2t, GW17:1t | chips: bb1@GW14, fh1@GW15 | ft_plan {13: 1, 14: 1, 15: 1, 16: 2, 17: 1}
+  [RETRAIN] History (w=1.0) + GW1-13 actuals (w=14)...
+    GK: 4509 rows
+    DEF: 18259 rows
+    MID: 21764 rows
+    FWD: 5725 rows
+  Predicted: 57.2 | Actual: 82 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 102.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 14  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW14 top attack: [(1, 3.0), (20, 2.6666666666666665), (3, 2.3333333333333335)] | top defence: [(6, 0.6666666666666666), (8, 0.6666666666666666), (12, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW15:2t, GW16:4t, GW18:2t | chips: wc1@GW14, bb1@GW16 | ft_plan {14: 1, 15: 5, 16: 4, 17: 1, 18: 2}
+  [RETRAIN] History (w=1.0) + GW1-14 actuals (w=15)...
+    GK: 4581 rows
+    DEF: 18490 rows
+    MID: 22079 rows
+    FWD: 5800 rows
+  Predicted: 58.0 | Actual: 61 | Cap: Saka [WC1] | Hits: 0
+  FT next GW: 2 | Bank: 0.3m | Squad val: 102.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 15  |  FT: 2  |  Bank: 0.3m
+  [TEAM FORM] GW15 top attack: [(1, 3.3333333333333335), (2, 3.0), (6, 3.0)] | top defence: [(6, 1.0), (1, 0.6666666666666666), (8, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW16:1t, GW17:1t, GW18:1t, GW19:1t | chips: bb1@GW16 | ft_plan {15: 2, 16: 1, 17: 1, 18: 1, 19: 1}
+  [RETRAIN] History (w=1.0) + GW1-15 actuals (w=16)...
+    GK: 4646 rows
+    DEF: 18700 rows
+    MID: 22367 rows
+    FWD: 5867 rows
+  Predicted: 47.3 | Actual: 51 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 2.4m | Squad val: 100.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 16  |  FT: 1  |  Bank: 2.4m
+  [TEAM FORM] GW16 top attack: [(6, 3.6666666666666665), (4, 3.0), (1, 2.6666666666666665)] | top defence: [(2, 0.6666666666666666), (6, 0.6666666666666666), (8, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW17:1t, GW18:1t, GW19:1t, GW20:8t | chips: bb1@GW16, wc2@GW20 | ft_plan {16: 1, 17: 1, 18: 1, 19: 1, 20: 1}
+  [RETRAIN] History (w=1.0) + GW1-16 actuals (w=17)...
+    GK: 4718 rows
+    DEF: 18934 rows
+    MID: 22686 rows
+    FWD: 5943 rows
+  Predicted: 57.2 | Actual: 57 | Cap: Palmer [BB1] | Hits: 1
+  FT next GW: 1 | Bank: 0.3m | Squad val: 103.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 17  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW17 top attack: [(6, 3.6666666666666665), (15, 3.0), (18, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW18:1t, GW19:1t, GW20:8t, GW21:5t | chips: wc2@GW20 | ft_plan {17: 1, 18: 1, 19: 1, 20: 1, 21: 5}
+  [RETRAIN] History (w=1.0) + GW1-17 actuals (w=18)...
+    GK: 4790 rows
+    DEF: 19168 rows
+    MID: 23005 rows
+    FWD: 6019 rows
+  Predicted: 55.8 | Actual: 57 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 0.9m | Squad val: 103.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 18  |  FT: 1  |  Bank: 0.9m
+  [TEAM FORM] GW18 top attack: [(12, 3.6666666666666665), (18, 3.6666666666666665), (15, 3.3333333333333335)] | top defence: [(2, 1.0), (8, 1.0), (1, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW19:1t, GW20:6t, GW21:3t, GW22:3t | chips: wc2@GW20 | ft_plan {18: 1, 19: 1, 20: 1, 21: 5, 22: 3}
+  [RETRAIN] History (w=1.0) + GW1-18 actuals (w=19)...
+    GK: 4863 rows
+    DEF: 19405 rows
+    MID: 23324 rows
+    FWD: 6095 rows
+  Predicted: 56.5 | Actual: 72 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 103.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 19  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW19 top attack: [(12, 3.6666666666666665), (15, 3.6666666666666665), (18, 2.6666666666666665)] | top defence: [(1, 1.0), (3, 1.0), (6, 1.0)]
+  [MILP-H] plan ahead: GW20:8t, GW21:2t, GW22:2t, GW23:3t | chips: wc2@GW20 | ft_plan {19: 1, 20: 1, 21: 5, 22: 4, 23: 3}
+  [RETRAIN] History (w=1.0) + GW1-19 actuals (w=20)...
+    GK: 4936 rows
+    DEF: 19644 rows
+    MID: 23643 rows
+    FWD: 6173 rows
+  Predicted: 57.9 | Actual: 93 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 103.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 20  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW20 top attack: [(12, 4.666666666666667), (1, 3.0), (15, 3.0)] | top defence: [(15, 1.0), (16, 1.0), (1, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 2 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW21:1t, GW22:1t, GW23:1t, GW24:1t | chips: tc2@GW24 | ft_plan {20: 1, 21: 1, 22: 1, 23: 1, 24: 1}
+  [RETRAIN] History (w=1.0) + GW1-20 actuals (w=21)...
+    GK: 5009 rows
+    DEF: 19884 rows
+    MID: 23963 rows
+    FWD: 6251 rows
+  Predicted: 60.6 | Actual: 78 | Cap: Palmer | Hits: 1
+  FT next GW: 1 | Bank: 1.3m | Squad val: 103.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 21  |  FT: 1  |  Bank: 1.3m
+  [TEAM FORM] GW21 top attack: [(12, 3.3333333333333335), (15, 2.3333333333333335), (4, 2.0)] | top defence: [(16, 1.0), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW22:1t, GW23:1t, GW24:1t, GW25:1t | chips: tc2@GW24, bb2@GW25 | ft_plan {21: 1, 22: 1, 23: 1, 24: 1, 25: 1}
+  [RETRAIN] History (w=1.0) + GW1-21 actuals (w=22)...
+    GK: 5084 rows
+    DEF: 20130 rows
+    MID: 24286 rows
+    FWD: 6331 rows
+  Predicted: 58.3 | Actual: 34 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 104.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 22  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW22 top attack: [(4, 2.6666666666666665), (12, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(13, 1.0), (15, 0.6666666666666666), (16, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW24:2t, GW25:1t, GW26:1t | chips: tc2@GW24, bb2@GW25 | ft_plan {22: 1, 23: 1, 24: 2, 25: 1, 26: 1}
+  [RETRAIN] History (w=1.0) + GW1-22 actuals (w=23)...
+    GK: 5160 rows
+    DEF: 20377 rows
+    MID: 24612 rows
+    FWD: 6411 rows
+  Predicted: 58.6 | Actual: 43 | Cap: M.Salah | Hits: 1
+  FT next GW: 1 | Bank: 0.0m | Squad val: 105.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 23  |  FT: 1  |  Bank: 0.0m
+  [TEAM FORM] GW23 top attack: [(13, 3.6666666666666665), (3, 2.3333333333333335), (4, 2.3333333333333335)] | top defence: [(13, 1.0), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW24:2t/-4, GW25:1t, GW26:1t, GW27:1t | chips: tc2@GW24, bb2@GW25 | ft_plan {23: 1, 24: 1, 25: 1, 26: 1, 27: 1}
+  [RETRAIN] History (w=1.0) + GW1-23 actuals (w=24)...
+    GK: 5237 rows
+    DEF: 20627 rows
+    MID: 24940 rows
+    FWD: 6492 rows
+  Predicted: 60.3 | Actual: 55 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 104.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 24  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW24 top attack: [(3, 3.6666666666666665), (13, 3.6666666666666665), (12, 2.3333333333333335)] | top defence: [(2, 0.6666666666666666), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW25:1t, GW26:1t, GW28:2t | chips: tc2@GW24, bb2@GW25 | ft_plan {24: 1, 25: 1, 26: 1, 27: 1, 28: 2}
+  [RETRAIN] History (w=1.0) + GW1-24 actuals (w=25)...
+    GK: 5316 rows
+    DEF: 20879 rows
+    MID: 25270 rows
+    FWD: 6573 rows
+  Predicted: 106.7 | Actual: 153 | Cap: M.Salah [TC2] | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 105.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 25  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW25 top attack: [(12, 3.3333333333333335), (13, 3.3333333333333335), (3, 3.0)] | top defence: [(8, 1.0), (12, 1.0), (4, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 1 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW26:1t, GW27:1t, GW28:1t, GW29:11t | chips: bb2@GW25, fh2@GW29 | ft_plan {25: 1, 26: 1, 27: 1, 28: 1, 29: 1}
+  [RETRAIN] History (w=1.0) + GW1-25 actuals (w=26)...
+    GK: 5396 rows
+    DEF: 21137 rows
+    MID: 25609 rows
+    FWD: 6655 rows
+  Predicted: 76.1 | Actual: 114 | Cap: M.Salah [BB2] | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 105.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 26  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW26 top attack: [(12, 4.0), (8, 3.0), (1, 2.6666666666666665)] | top defence: [(12, 1.0), (1, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW27:2t, GW28:1t, GW29:10t, GW30:2t | chips: fh2@GW29 | ft_plan {26: 1, 27: 2, 28: 1, 29: 1, 30: 2}
+  [RETRAIN] History (w=1.0) + GW1-26 actuals (w=27)...
+    GK: 5477 rows
+    DEF: 21396 rows
+    MID: 25948 rows
+    FWD: 6739 rows
+  Predicted: 66.5 | Actual: 70 | Cap: M.Salah | Hits: 0
+  FT next GW: 2 | Bank: 0.6m | Squad val: 104.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 27  |  FT: 2  |  Bank: 0.6m
+  [TEAM FORM] GW27 top attack: [(8, 3.3333333333333335), (12, 3.3333333333333335), (16, 3.3333333333333335)] | top defence: [(12, 1.0), (4, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW28:1t, GW29:11t, GW30:2t, GW31:1t | chips: fh2@GW29 | ft_plan {27: 2, 28: 1, 29: 1, 30: 2, 31: 1}
+  [RETRAIN] History (w=1.0) + GW1-27 actuals (w=28)...
+    GK: 5558 rows
+    DEF: 21655 rows
+    MID: 26287 rows
+    FWD: 6824 rows
+  Predicted: 62.0 | Actual: 50 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.7m | Squad val: 104.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 28  |  FT: 1  |  Bank: 0.7m
+  [TEAM FORM] GW28 top attack: [(5, 3.0), (12, 2.6666666666666665), (2, 2.0)] | top defence: [(4, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW29:11t, GW30:2t, GW31:1t, GW32:1t | chips: fh2@GW29 | ft_plan {28: 1, 29: 1, 30: 2, 31: 1, 32: 1}
+  [RETRAIN] History (w=1.0) + GW1-28 actuals (w=29)...
+    GK: 5640 rows
+    DEF: 21916 rows
+    MID: 26627 rows
+    FWD: 6910 rows
+  Predicted: 60.9 | Actual: 67 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 105.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 29  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW29 top attack: [(5, 2.6666666666666665), (12, 2.3333333333333335), (6, 2.0)] | top defence: [(4, 0.6666666666666666), (6, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW30:3t/-4, GW33:3t | chips: fh2@GW29 | ft_plan {29: 1, 30: 2, 31: 1, 32: 2, 33: 3}
+  [RETRAIN] History (w=1.0) + GW1-29 actuals (w=30)...
+    GK: 5705 rows
+    DEF: 22127 rows
+    MID: 26900 rows
+    FWD: 6984 rows
+  Predicted: 55.0 | Actual: 67 | Cap: Wood [FH2] | Hits: 0
+  FT next GW: 2 | Bank: 0.2m | Squad val: 105.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 30  |  FT: 2  |  Bank: 0.2m
+  [TEAM FORM] GW30 top attack: [(12, 2.3333333333333335), (7, 2.0), (14, 2.0)] | top defence: [(16, 1.0), (1, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW31:1t, GW33:1t, GW34:2t | chips: none | ft_plan {30: 2, 31: 1, 32: 1, 33: 2, 34: 2}
+  [RETRAIN] History (w=1.0) + GW1-30 actuals (w=31)...
+    GK: 5787 rows
+    DEF: 22389 rows
+    MID: 27241 rows
+    FWD: 7070 rows
+  Predicted: 66.6 | Actual: 41 | Cap: M.Salah | Hits: 2
+  FT next GW: 1 | Bank: 2.6m | Squad val: 102.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 31  |  FT: 1  |  Bank: 2.6m
+  [TEAM FORM] GW31 top attack: [(7, 2.0), (12, 2.0), (16, 2.0)] | top defence: [(16, 1.0), (1, 0.6666666666666666), (2, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW33:1t, GW34:3t/-4, GW35:1t | chips: none | ft_plan {31: 1, 32: 1, 33: 2, 34: 2, 35: 1}
+  [RETRAIN] History (w=1.0) + GW1-31 actuals (w=32)...
+    GK: 5869 rows
+    DEF: 22651 rows
+    MID: 27583 rows
+    FWD: 7156 rows
+  Predicted: 55.4 | Actual: 56 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 3.7m | Squad val: 101.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 32  |  FT: 1  |  Bank: 3.7m
+  [TEAM FORM] GW32 top attack: [(2, 2.0), (9, 2.0), (12, 2.0)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 1 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW33:1t, GW34:3t/-8, GW35:1t, GW36:1t | chips: none | ft_plan {32: 1, 33: 1, 34: 1, 35: 1, 36: 1}
+  [RETRAIN] History (w=1.0) + GW1-32 actuals (w=33)...
+    GK: 5951 rows
+    DEF: 22915 rows
+    MID: 27928 rows
+    FWD: 7243 rows
+  Predicted: 75.5 | Actual: 85 | Cap: M.Salah | Hits: 1
+  FT next GW: 1 | Bank: 2.2m | Squad val: 103.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 33  |  FT: 1  |  Bank: 2.2m
+  [TEAM FORM] GW33 top attack: [(15, 4.333333333333333), (2, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-GUARD] WC held — only 0 squad players below replacement (< 4)
+  [MILP-H] plan ahead: GW34:4t/-8, GW35:1t, GW36:1t, GW37:1t | chips: none | ft_plan {33: 1, 34: 2, 35: 1, 36: 1, 37: 1}
+  [RETRAIN] History (w=1.0) + GW1-33 actuals (w=34)...
+    GK: 6033 rows
+    DEF: 23180 rows
+    MID: 28273 rows
+    FWD: 7330 rows
+  Predicted: 82.4 | Actual: 67 | Cap: Marmoush | Hits: 1
+  FT next GW: 1 | Bank: 0.3m | Squad val: 105.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 34  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW34 top attack: [(15, 4.0), (2, 3.0), (13, 3.0)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (8, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW35:3t, GW36:2t, GW37:2t, GW38:1t | chips: wc2@GW34 | ft_plan {34: 1, 35: 5, 36: 3, 37: 2, 38: 1}
+  [RETRAIN] History (w=1.0) + GW1-34 actuals (w=35)...
+    GK: 6097 rows
+    DEF: 23394 rows
+    MID: 28549 rows
+    FWD: 7405 rows
+  Predicted: 63.5 | Actual: 77 | Cap: M.Salah [WC2] | Hits: 0
+  FT next GW: 2 | Bank: 0.3m | Squad val: 104.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 35  |  FT: 2  |  Bank: 0.3m
+  [TEAM FORM] GW35 top attack: [(15, 4.0), (2, 3.0), (13, 3.0)] | top defence: [(3, 1.0), (1, 0.6666666666666666), (8, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW36:1t, GW37:1t, GW38:1t | chips: none | ft_plan {35: 2, 36: 1, 37: 1, 38: 1}
+  [RETRAIN] History (w=1.0) + GW1-35 actuals (w=36)...
+    GK: 6179 rows
+    DEF: 23660 rows
+    MID: 28895 rows
+    FWD: 7492 rows
+  Predicted: 60.2 | Actual: 38 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.5m | Squad val: 104.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 36  |  FT: 1  |  Bank: 0.5m
+  [TEAM FORM] GW36 top attack: [(13, 3.3333333333333335), (4, 3.0), (1, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW37:1t, GW38:1t | chips: none | ft_plan {36: 1, 37: 1, 38: 1}
+  [RETRAIN] History (w=1.0) + GW1-36 actuals (w=37)...
+    GK: 6261 rows
+    DEF: 23926 rows
+    MID: 29241 rows
+    FWD: 7579 rows
+  Predicted: 57.9 | Actual: 55 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.5m | Squad val: 104.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 37  |  FT: 1  |  Bank: 0.5m
+  [TEAM FORM] GW37 top attack: [(1, 3.0), (12, 2.3333333333333335), (2, 2.0)] | top defence: [(7, 1.0), (13, 1.0), (2, 0.6666666666666666)]
+  [MILP-H] plan ahead: GW38:1t | chips: none | ft_plan {37: 1, 38: 1}
+  [RETRAIN] History (w=1.0) + GW1-37 actuals (w=38)...
+    GK: 6343 rows
+    DEF: 24192 rows
+    MID: 29587 rows
+    FWD: 7666 rows
+  Predicted: 57.8 | Actual: 35 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 104.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 38  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW38 top attack: [(7, 2.3333333333333335), (8, 2.3333333333333335), (4, 2.0)] | top defence: [(2, 1.0), (13, 1.0), (5, 0.6666666666666666)]
+  [MILP-H] plan ahead: hold | chips: none | ft_plan {38: 1}
+  Predicted: 58.2 | Actual: 43 | Cap: Wood | Hits: 0
+  FT next GW: 1 | Bank: 3.2m | Squad val: 101.9m
+  [SAVED]
+
+======================================================================
+  SIMULATION COMPLETE
+  Total actual pts:    2410
+  Total predicted:     2370.8
+  Total penalties:     -60
+  Chips used:          ['tc1', 'wc1', 'bb1', 'tc2', 'bb2', 'fh2', 'wc2']
+======================================================================

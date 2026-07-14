@@ -1,0 +1,91 @@
+{
+  "start": 2,
+  "end": 38,
+  "topn": 60,
+  "offsets": {
+    "0": {
+      "n_played": 11062,
+      "mae_played": 2.0442,
+      "mae_top60": 2.8435,
+      "spearman": 0.7162,
+      "mae_ratio_vs_h0": 1.0,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": 0.8359,
+      "phi_bucket_mae": {
+        "0.00-0.70": 1.766,
+        "0.70-0.85": 2.057,
+        "0.85-1.01": 2.1007
+      }
+    },
+    "1": {
+      "n_played": 10750,
+      "mae_played": 2.0553,
+      "mae_top60": 2.8619,
+      "spearman": 0.6966,
+      "mae_ratio_vs_h0": 1.0054,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": 0.8348,
+      "phi_bucket_mae": {
+        "0.00-0.70": 1.7846,
+        "0.70-0.85": 2.0868,
+        "0.85-1.01": 2.1027
+      }
+    },
+    "2": {
+      "n_played": 10448,
+      "mae_played": 2.0711,
+      "mae_top60": 2.9412,
+      "spearman": 0.6756,
+      "mae_ratio_vs_h0": 1.0132,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": 0.8288,
+      "phi_bucket_mae": {}
+    },
+    "3": {
+      "n_played": 10143,
+      "mae_played": 2.0919,
+      "mae_top60": 2.9898,
+      "spearman": 0.6547,
+      "mae_ratio_vs_h0": 1.0234,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": null,
+      "phi_bucket_mae": {}
+    },
+    "4": {
+      "n_played": 9838,
+      "mae_played": 2.116,
+      "mae_top60": 3.1043,
+      "spearman": 0.6387,
+      "mae_ratio_vs_h0": 1.0351,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": null,
+      "phi_bucket_mae": {}
+    },
+    "5": {
+      "n_played": 9528,
+      "mae_played": 2.128,
+      "mae_top60": 3.0794,
+      "spearman": 0.6318,
+      "mae_ratio_vs_h0": 1.041,
+      "blank_violations": 0,
+      "n_blank_cells": 417,
+      "n_dgw_cells": 417,
+      "q90_coverage": null,
+      "phi_bucket_mae": {}
+    }
+  },
+  "simstyle_baseline_h0": {
+    "mae_played": 2.04,
+    "mae_top60": 2.863
+  }
+}

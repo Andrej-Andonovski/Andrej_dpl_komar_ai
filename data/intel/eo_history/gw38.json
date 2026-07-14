@@ -1,0 +1,8411 @@
+{
+  "generated_at": "2026-07-14T08:15:44.212116+00:00",
+  "source": "https://livefpl.us",
+  "cohort_primary": "top10k",
+  "gw": 38,
+  "gw_basis": "current",
+  "enriched": true,
+  "n_players": 840,
+  "players": {
+    "291": {
+      "eo": 0.0492,
+      "eo_top10k": 0.0492,
+      "eo_elite": 0.037,
+      "web_name": "Tarkowski",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 5.8,
+      "eo_overall": 0.126
+    },
+    "84": {
+      "eo": 0.3345,
+      "eo_top10k": 0.3345,
+      "eo_elite": 0.389,
+      "web_name": "Tavernier",
+      "team": "BOU",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.042
+    },
+    "171": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sarmiento",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "668": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Xhaka",
+      "team": "SUN",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.032
+    },
+    "170": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Milner",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "141": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rushworth",
+      "team": "BHA",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "6": {
+      "eo": 0.1628,
+      "eo_top10k": 0.1628,
+      "eo_elite": 0.148,
+      "web_name": "Saliba",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 6.3,
+      "eo_overall": 0.171
+    },
+    "190": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Ekdal",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.006999999999999999
+    },
+    "101": {
+      "eo": 0.0124,
+      "eo_top10k": 0.0124,
+      "eo_elite": 0.018,
+      "web_name": "Kelleher",
+      "team": "BRE",
+      "position": "GK",
+      "price": 4.8,
+      "eo_overall": 0.12
+    },
+    "440": {
+      "eo": 0.0025,
+      "eo_top10k": 0.0025,
+      "eo_elite": 0.004,
+      "web_name": "Dalot",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.038
+    },
+    "518": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jota",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "532": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hume",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.003
+    },
+    "618": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "G.Rodriguez",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "535": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cirkin",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "333": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Godo",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "752": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Golambeckis",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "787": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chambers",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "542": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Seelt",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "240": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nkunku",
+      "team": "CHE",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.001
+    },
+    "79": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mepham",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "820": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McMahon-Brown",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "409": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Stones",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.006
+    },
+    "267": {
+      "eo": 0.0181,
+      "eo_top10k": 0.0181,
+      "eo_elite": 0.011,
+      "web_name": "Sarr",
+      "team": "CRY",
+      "position": "MID",
+      "price": 6.4,
+      "eo_overall": 0.055999999999999994
+    },
+    "522": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yates",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "619": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "L.Guilherme",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "45": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sousa",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "303": {
+      "eo": 0.0042,
+      "eo_top10k": 0.0042,
+      "eo_elite": 0.001,
+      "web_name": "Garner",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.036000000000000004
+    },
+    "502": {
+      "eo": 0.0011,
+      "eo_top10k": 0.0011,
+      "eo_elite": 0.003,
+      "web_name": "Sels",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.6,
+      "eo_overall": 0.05
+    },
+    "65": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Redmond",
+      "team": "AVL",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.003
+    },
+    "552": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sadiki",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "741": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gray",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "304": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Iroegbunam",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "344": {
+      "eo": 0.0132,
+      "eo_top10k": 0.0132,
+      "eo_elite": 0.015,
+      "web_name": "Bijol",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.013000000000000001
+    },
+    "243": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "George",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.001
+    },
+    "454": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Antony",
+      "team": "MUN",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.001
+    },
+    "515": {
+      "eo": 0.0695,
+      "eo_top10k": 0.0695,
+      "eo_elite": 0.041,
+      "web_name": "Gibbs-White",
+      "team": "NFO",
+      "position": "MID",
+      "price": 7.6,
+      "eo_overall": 0.092
+    },
+    "737": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kusi-Asare",
+      "team": "FUL",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "14": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kacurri",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "394": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McConnell",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "334": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Harris",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "694": {
+      "eo": 0.0273,
+      "eo_top10k": 0.0273,
+      "eo_elite": 0.022,
+      "web_name": "Mukiele",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.087
+    },
+    "180": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tzimas",
+      "team": "BHA",
+      "position": "FWD",
+      "price": 5.2,
+      "eo_overall": 0.001
+    },
+    "622": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Orford",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "669": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ndoye",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.006999999999999999
+    },
+    "761": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Simmonds",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "341": {
+      "eo": 0.1541,
+      "eo_top10k": 0.1541,
+      "eo_elite": 0.108,
+      "web_name": "Darlow",
+      "team": "LEE",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.069
+    },
+    "324": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Iwobi",
+      "team": "FUL",
+      "position": "MID",
+      "price": 6.1,
+      "eo_overall": 0.011000000000000001
+    },
+    "702": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Burrowes",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "122": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Milambo",
+      "team": "BRE",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.0
+    },
+    "489": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Murphy",
+      "team": "NEW",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.006
+    },
+    "804": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Souza",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "33": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "M.Bizot",
+      "team": "AVL",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.004
+    },
+    "68": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dennis",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.006999999999999999
+    },
+    "126": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jensen",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "185": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hladký",
+      "team": "BUR",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "404": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Akanji",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.003
+    },
+    "431": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bayindir",
+      "team": "MUN",
+      "position": "GK",
+      "price": 4.7,
+      "eo_overall": 0.003
+    },
+    "827": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Thwaites",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "311": {
+      "eo": 0.0041,
+      "eo_top10k": 0.0041,
+      "eo_elite": 0.002,
+      "web_name": "Beto",
+      "team": "EVE",
+      "position": "FWD",
+      "price": 5.1,
+      "eo_overall": 0.033
+    },
+    "321": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Cuenca",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "217": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Foster",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.006999999999999999
+    },
+    "655": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fábio Silva",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.002
+    },
+    "421": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Rodrigo",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.005
+    },
+    "813": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Angulo",
+      "team": "SUN",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "8": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.006,
+      "web_name": "J.Timber",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 6.0,
+      "eo_overall": 0.152
+    },
+    "212": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Adewumi",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "480": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lascelles",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "448": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Malacia",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.006
+    },
+    "178": {
+      "eo": 0.136,
+      "eo_top10k": 0.136,
+      "eo_elite": 0.259,
+      "web_name": "Welbeck",
+      "team": "BHA",
+      "position": "FWD",
+      "price": 6.3,
+      "eo_overall": 0.084
+    },
+    "460": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Collyer",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "816": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Angel",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.6,
+      "eo_overall": 0.0
+    },
+    "246": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Andrey Santos",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.003
+    },
+    "206": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Edwards",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "373": {
+      "eo": 0.1272,
+      "eo_top10k": 0.1272,
+      "eo_elite": 0.087,
+      "web_name": "Virgil",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 6.1,
+      "eo_overall": 0.315
+    },
+    "520": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "O'Brien",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "407": {
+      "eo": 0.0081,
+      "eo_top10k": 0.0081,
+      "eo_elite": 0.007,
+      "web_name": "Matheus N.",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.3,
+      "eo_overall": 0.028999999999999998
+    },
+    "245": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mudryk",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "664": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lecomte",
+      "team": "FUL",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.006999999999999999
+    },
+    "146": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Dunk",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.01
+    },
+    "774": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jenson Jones",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "832": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ndiaye",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "248": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Paez",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "347": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gudmundsson",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.025
+    },
+    "645": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fer López",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.0
+    },
+    "118": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Meghoma",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "345": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bornauw",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.001
+    },
+    "287": {
+      "eo": 0.0088,
+      "eo_top10k": 0.0088,
+      "eo_elite": 0.006,
+      "web_name": "Pickford",
+      "team": "EVE",
+      "position": "GK",
+      "price": 5.6,
+      "eo_overall": 0.13
+    },
+    "767": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rawlings",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "322": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Tete",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.002
+    },
+    "667": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Aznou",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "194": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jordan",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "402": {
+      "eo": 0.0024,
+      "eo_top10k": 0.0024,
+      "eo_elite": 0.005,
+      "web_name": "Aït-Nouri",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.7,
+      "eo_overall": 0.040999999999999995
+    },
+    "682": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Møller Wolfe",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "398": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Danns",
+      "team": "LIV",
+      "position": "FWD",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "452": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Amad",
+      "team": "MUN",
+      "position": "MID",
+      "price": 6.2,
+      "eo_overall": 0.013000000000000001
+    },
+    "681": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Šeško",
+      "team": "MUN",
+      "position": "FWD",
+      "price": 7.2,
+      "eo_overall": 0.046
+    },
+    "678": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Masuaku",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.005
+    },
+    "211": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "A.Ramsey",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.013999999999999999
+    },
+    "755": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lacey",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "340": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cairns",
+      "team": "LEE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "818": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Wilson",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "438": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mazraoui",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.003
+    },
+    "810": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bentt",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "15": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nichols",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.002
+    },
+    "561": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mayenda",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 5.1,
+      "eo_overall": 0.005
+    },
+    "167": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Baleba",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.015
+    },
+    "410": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lewis",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.012
+    },
+    "153": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Webster",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "348": {
+      "eo": 0.0021,
+      "eo_top10k": 0.0021,
+      "eo_elite": 0.003,
+      "web_name": "Rodon",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.03
+    },
+    "635": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "R.Gomes",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "565": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Vicario",
+      "team": "TOT",
+      "position": "GK",
+      "price": 4.7,
+      "eo_overall": 0.047
+    },
+    "4": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Setford",
+      "team": "ARS",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "131": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Konak",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "317": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.008,
+      "web_name": "Andersen",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.027999999999999997
+    },
+    "81": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kluivert",
+      "team": "BOU",
+      "position": "MID",
+      "price": 6.9,
+      "eo_overall": 0.006
+    },
+    "778": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sutherland",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "840": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mheuka",
+      "team": "CHE",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "575": {
+      "eo": 0.0079,
+      "eo_top10k": 0.0079,
+      "eo_elite": 0.012,
+      "web_name": "Van de Ven",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.17600000000000002
+    },
+    "123": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Carvalho",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.6,
+      "eo_overall": 0.001
+    },
+    "93": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "H.Traorè",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.003
+    },
+    "756": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "DaCosta",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "203": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Boateng",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.0
+    },
+    "583": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kulusevski",
+      "team": "TOT",
+      "position": "MID",
+      "price": 6.4,
+      "eo_overall": 0.0
+    },
+    "378": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nallo",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.009000000000000001
+    },
+    "468": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Wheatley",
+      "team": "MUN",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "286": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Marsh",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.003
+    },
+    "680": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Broja",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 5.2,
+      "eo_overall": 0.001
+    },
+    "683": {
+      "eo": 0.0014,
+      "eo_top10k": 0.0014,
+      "eo_elite": 0.002,
+      "web_name": "Alderete",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.049
+    },
+    "110": {
+      "eo": 0.0006,
+      "eo_top10k": 0.0006,
+      "eo_elite": 0.0,
+      "web_name": "Kayode",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.01
+    },
+    "254": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Benitez",
+      "team": "CRY",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "691": {
+      "eo": 0.5591,
+      "eo_top10k": 0.5591,
+      "eo_elite": 0.485,
+      "web_name": "Calvert-Lewin",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 5.8,
+      "eo_overall": 0.13699999999999998
+    },
+    "294": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Coleman",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "738": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fabianski",
+      "team": "WHU",
+      "position": "GK",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "270": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hughes",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "35": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Marschall",
+      "team": "AVL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "34": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gauci",
+      "team": "AVL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "268": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Doucouré",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "715": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "John",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.003
+    },
+    "750": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rowswell",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "223": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Slonina",
+      "team": "CHE",
+      "position": "GK",
+      "price": 3.8,
+      "eo_overall": 0.001
+    },
+    "563": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Luís Hemir",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "293": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "O'Brien",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.006999999999999999
+    },
+    "676": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ugochukwu",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "150": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lamptey",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "568": {
+      "eo": 0.087,
+      "eo_top10k": 0.087,
+      "eo_elite": 0.114,
+      "web_name": "Pedro Porro",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.11699999999999999
+    },
+    "400": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ortega Moreno",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.7,
+      "eo_overall": 0.002
+    },
+    "388": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "C.Jones",
+      "team": "LIV",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.001
+    },
+    "75": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Akinmboni",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "453": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Garnacho",
+      "team": "CHE",
+      "position": "MID",
+      "price": 6.4,
+      "eo_overall": 0.004
+    },
+    "434": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Heaton",
+      "team": "MUN",
+      "position": "GK",
+      "price": 3.8,
+      "eo_overall": 0.006
+    },
+    "684": {
+      "eo": 0.0114,
+      "eo_top10k": 0.0114,
+      "eo_elite": 0.023,
+      "web_name": "Thiaw",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.047
+    },
+    "783": {
+      "eo": 0.352,
+      "eo_top10k": 0.352,
+      "eo_elite": 0.232,
+      "web_name": "Groß",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.03
+    },
+    "795": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Howell",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "225": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.001,
+      "web_name": "James",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 5.6,
+      "eo_overall": 0.06
+    },
+    "94": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sadi",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "718": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "S.Magassa",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "230": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Fofana",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.004
+    },
+    "803": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sharman-Lowe",
+      "team": "CHE",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "30": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Havertz",
+      "team": "ARS",
+      "position": "FWD",
+      "price": 7.3,
+      "eo_overall": 0.006999999999999999
+    },
+    "588": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Odobert",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.0
+    },
+    "812": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ellborg",
+      "team": "SUN",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "366": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.001,
+      "web_name": "A.Becker",
+      "team": "LIV",
+      "position": "GK",
+      "price": 5.4,
+      "eo_overall": 0.051
+    },
+    "70": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Paulsen",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "308": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Heath",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "677": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Guessand",
+      "team": "CRY",
+      "position": "MID",
+      "price": 6.2,
+      "eo_overall": 0.0
+    },
+    "491": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tonali",
+      "team": "NEW",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.01
+    },
+    "526": {
+      "eo": 0.0022,
+      "eo_top10k": 0.0022,
+      "eo_elite": 0.002,
+      "web_name": "Igor Jesus",
+      "team": "NFO",
+      "position": "FWD",
+      "price": 5.9,
+      "eo_overall": 0.024
+    },
+    "278": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Rak-Sakyi",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "585": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bentancur",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.002
+    },
+    "326": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Adama",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.001
+    },
+    "354": {
+      "eo": 0.0051,
+      "eo_top10k": 0.0051,
+      "eo_elite": 0.003,
+      "web_name": "Ampadu",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.006
+    },
+    "760": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lucky",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "108": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ajer",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.002
+    },
+    "693": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hutchinson",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.001
+    },
+    "162": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gruda",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "754": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "George Hemmings",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "357": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ramazani",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "650": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chirewa",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "643": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "André",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.001
+    },
+    "828": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Brooks",
+      "team": "WOL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "749": {
+      "eo": 0.0045,
+      "eo_top10k": 0.0045,
+      "eo_elite": 0.005,
+      "web_name": "Mané",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 4.2,
+      "eo_overall": 0.013999999999999999
+    },
+    "85": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Adams",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.003
+    },
+    "393": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bajcetic",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.2,
+      "eo_overall": 0.002
+    },
+    "74": {
+      "eo": 0.0474,
+      "eo_top10k": 0.0474,
+      "eo_elite": 0.022,
+      "web_name": "Truffert",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.053
+    },
+    "582": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kudus",
+      "team": "TOT",
+      "position": "MID",
+      "price": 6.4,
+      "eo_overall": 0.091
+    },
+    "701": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rowe",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "815": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.001,
+      "web_name": "Disasi",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.002
+    },
+    "766": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Olagunju",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "797": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Furo",
+      "team": "BRE",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "584": {
+      "eo": 0.0065,
+      "eo_top10k": 0.0065,
+      "eo_elite": 0.008,
+      "web_name": "Tel",
+      "team": "TOT",
+      "position": "MID",
+      "price": 6.2,
+      "eo_overall": 0.005
+    },
+    "277": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ebiowei",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "328": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sessegnon",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.001
+    },
+    "525": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Wood",
+      "team": "NFO",
+      "position": "FWD",
+      "price": 7.1,
+      "eo_overall": 0.047
+    },
+    "805": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lucca",
+      "team": "NFO",
+      "position": "FWD",
+      "price": 5.3,
+      "eo_overall": 0.0
+    },
+    "742": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McAidoo",
+      "team": "MCI",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "202": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bruun Larsen",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.0
+    },
+    "83": {
+      "eo": 0.011,
+      "eo_top10k": 0.011,
+      "eo_elite": 0.026,
+      "web_name": "O.Dango",
+      "team": "BRE",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.016
+    },
+    "229": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "B.Badiashile",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "753": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ruddy",
+      "team": "NEW",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "419": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Grealish",
+      "team": "EVE",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.055999999999999994
+    },
+    "593": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "P.M.Sarr",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.01
+    },
+    "652": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gonzalez",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.012
+    },
+    "566": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Austin",
+      "team": "TOT",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "32": {
+      "eo": 0.0015,
+      "eo_top10k": 0.0015,
+      "eo_elite": 0.002,
+      "web_name": "Martinez",
+      "team": "AVL",
+      "position": "GK",
+      "price": 5.0,
+      "eo_overall": 0.044000000000000004
+    },
+    "415": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Savinho",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.9,
+      "eo_overall": 0.004
+    },
+    "633": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "H.Bueno",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "441": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Dorgu",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.024
+    },
+    "98": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Enes Ünal",
+      "team": "BOU",
+      "position": "FWD",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "43": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alex Moreno",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.015
+    },
+    "719": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lindelöf",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "579": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Son",
+      "team": "TOT",
+      "position": "MID",
+      "price": 8.5,
+      "eo_overall": 0.001
+    },
+    "66": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Neto",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "239": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gittens",
+      "team": "CHE",
+      "position": "MID",
+      "price": 6.0,
+      "eo_overall": 0.001
+    },
+    "745": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Byfield",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "697": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Adli",
+      "team": "BOU",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.002
+    },
+    "237": {
+      "eo": 0.0808,
+      "eo_top10k": 0.0808,
+      "eo_elite": 0.113,
+      "web_name": "Enzo",
+      "team": "CHE",
+      "position": "MID",
+      "price": 6.5,
+      "eo_overall": 0.12300000000000001
+    },
+    "127": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nunes",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "700": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.0,
+      "web_name": "Dowman",
+      "team": "ARS",
+      "position": "MID",
+      "price": 4.2,
+      "eo_overall": 0.009000000000000001
+    },
+    "183": {
+      "eo": 0.001,
+      "eo_top10k": 0.001,
+      "eo_elite": 0.001,
+      "web_name": "Weiss",
+      "team": "BUR",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.002
+    },
+    "424": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bobb",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.002
+    },
+    "392": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Endo",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "446": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fredricson",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.002
+    },
+    "560": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Isidor",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 5.0,
+      "eo_overall": 0.013000000000000001
+    },
+    "331": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cairney",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "833": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Eboué",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "747": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mayers",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "56": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Barrenechea",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "562": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Abdullahi",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 4.2,
+      "eo_overall": 0.004
+    },
+    "589": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Solomon",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "617": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cornet",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "54": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McGinn",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.006999999999999999
+    },
+    "692": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Leoni",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "335": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "King",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.016
+    },
+    "506": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Murillo",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.018000000000000002
+    },
+    "524": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Stamenic",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "704": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Onyango",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "547": {
+      "eo": 0.0064,
+      "eo_top10k": 0.0064,
+      "eo_elite": 0.005,
+      "web_name": "E.Le Fée",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.016
+    },
+    "198": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tuanzebe",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.009000000000000001
+    },
+    "428": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nypan",
+      "team": "MCI",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "779": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Graham",
+      "team": "EVE",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "770": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ridgeon",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "819": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Shield",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "342": {
+      "eo": 0.0006,
+      "eo_top10k": 0.0006,
+      "eo_elite": 0.003,
+      "web_name": "Bogle",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.004
+    },
+    "789": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Merrick",
+      "team": "CHE",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "145": {
+      "eo": 0.0007,
+      "eo_top10k": 0.0007,
+      "eo_elite": 0.001,
+      "web_name": "De Cuyper",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.017
+    },
+    "386": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Mac Allister",
+      "team": "LIV",
+      "position": "MID",
+      "price": 6.1,
+      "eo_overall": 0.018000000000000002
+    },
+    "177": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Moran",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "517": {
+      "eo": 0.0744,
+      "eo_top10k": 0.0744,
+      "eo_elite": 0.029,
+      "web_name": "Anderson",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.7,
+      "eo_overall": 0.094
+    },
+    "696": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kalimuendo",
+      "team": "NFO",
+      "position": "FWD",
+      "price": 6.0,
+      "eo_overall": 0.001
+    },
+    "21": {
+      "eo": 0.0522,
+      "eo_top10k": 0.0522,
+      "eo_elite": 0.039,
+      "web_name": "Rice",
+      "team": "ARS",
+      "position": "MID",
+      "price": 7.2,
+      "eo_overall": 0.233
+    },
+    "295": {
+      "eo": 0.0446,
+      "eo_top10k": 0.0446,
+      "eo_elite": 0.048,
+      "web_name": "Keane",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.031
+    },
+    "332": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lukić",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "330": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Berge",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "748": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dasilva",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "296": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Patterson",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "156": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tasker",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "641": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pond",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.009000000000000001
+    },
+    "40": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mings",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.006
+    },
+    "809": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Abbey",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "800": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jocelin.T",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "620": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Earthy",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "464": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Moorhouse",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "640": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pedro Lima",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.004
+    },
+    "255": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Matthews",
+      "team": "CRY",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "377": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tsimikas",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "99": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Adu-Adjei",
+      "team": "BOU",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "49": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bailey",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.001
+    },
+    "425": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Echeverri",
+      "team": "MCI",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "204": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Churlinov",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "169": {
+      "eo": 0.0015,
+      "eo_top10k": 0.0015,
+      "eo_elite": 0.003,
+      "web_name": "Gomez",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.004
+    },
+    "279": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "M.França",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "37": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Digne",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.015
+    },
+    "316": {
+      "eo": 0.0022,
+      "eo_top10k": 0.0022,
+      "eo_elite": 0.001,
+      "web_name": "Robinson",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.009000000000000001
+    },
+    "437": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Martinez",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.004
+    },
+    "551": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rigg",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "5": {
+      "eo": 0.8899,
+      "eo_top10k": 0.8899,
+      "eo_elite": 0.851,
+      "web_name": "Gabriel",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 7.3,
+      "eo_overall": 0.45399999999999996
+    },
+    "163": {
+      "eo": 0.076,
+      "eo_top10k": 0.076,
+      "eo_elite": 0.147,
+      "web_name": "Hinshelwood",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.016
+    },
+    "19": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "Martinelli",
+      "team": "ARS",
+      "position": "MID",
+      "price": 6.8,
+      "eo_overall": 0.009000000000000001
+    },
+    "119": {
+      "eo": 0.0062,
+      "eo_top10k": 0.0062,
+      "eo_elite": 0.024,
+      "web_name": "Mbeumo",
+      "team": "MUN",
+      "position": "MID",
+      "price": 8.3,
+      "eo_overall": 0.15
+    },
+    "325": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Smith Rowe",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.005
+    },
+    "299": {
+      "eo": 0.059,
+      "eo_top10k": 0.059,
+      "eo_elite": 0.112,
+      "web_name": "Ndiaye",
+      "team": "EVE",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.047
+    },
+    "706": {
+      "eo": 0.0236,
+      "eo_top10k": 0.0236,
+      "eo_elite": 0.025,
+      "web_name": "Justin",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.023
+    },
+    "436": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "De Ligt",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.018000000000000002
+    },
+    "174": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yalcouye",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "186": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Roberts",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "236": {
+      "eo": 0.0008,
+      "eo_top10k": 0.0008,
+      "eo_elite": 0.002,
+      "web_name": "Neto",
+      "team": "CHE",
+      "position": "MID",
+      "price": 7.0,
+      "eo_overall": 0.039
+    },
+    "269": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Esse",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "781": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Carroll",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "261": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.001,
+      "web_name": "Richards",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.022000000000000002
+    },
+    "232": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tosin",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.003
+    },
+    "478": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Trippier",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.013999999999999999
+    },
+    "175": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Knight",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "172": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Watson",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "29": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sambi",
+      "team": "ARS",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "24": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nørgaard",
+      "team": "ARS",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.001
+    },
+    "609": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Todibo",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "614": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ward-Prowse",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.002
+    },
+    "576": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Phillips",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "746": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Morrison",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "757": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hollingshead",
+      "team": "AVL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "259": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sosa",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.001
+    },
+    "46": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yasin",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "711": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Harriman-Annous",
+      "team": "ARS",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "176": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mazilu",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "323": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Amissah",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.001
+    },
+    "775": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tutierov",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "654": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Strand Larsen",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 5.8,
+      "eo_overall": 0.013999999999999999
+    },
+    "596": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.0,
+      "web_name": "Solanke",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 7.1,
+      "eo_overall": 0.011000000000000001
+    },
+    "777": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ojinnaka",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "689": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Seung soo",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.005
+    },
+    "444": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yoro",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.012
+    },
+    "740": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mfuni",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.0
+    },
+    "258": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Mitchell",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.023
+    },
+    "465": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Højlund",
+      "team": "MUN",
+      "position": "FWD",
+      "price": 6.3,
+      "eo_overall": 0.003
+    },
+    "665": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Perri",
+      "team": "LEE",
+      "position": "GK",
+      "price": 4.4,
+      "eo_overall": 0.003
+    },
+    "320": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Diop",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "531": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ballard",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.024
+    },
+    "603": {
+      "eo": 0.0039,
+      "eo_top10k": 0.0039,
+      "eo_elite": 0.013,
+      "web_name": "Diouf",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.024
+    },
+    "679": {
+      "eo": 0.0046,
+      "eo_top10k": 0.0046,
+      "eo_elite": 0.013,
+      "web_name": "Hermansen",
+      "team": "WHU",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.01
+    },
+    "496": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kuol",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "790": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Williams-Barnett",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "290": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Branthwaite",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 5.3,
+      "eo_overall": 0.003
+    },
+    "166": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ayari",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.004
+    },
+    "651": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Edozie",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.004
+    },
+    "26": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Zubimendi",
+      "team": "ARS",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.027000000000000003
+    },
+    "764": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Heskey",
+      "team": "MCI",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "607": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "N.Aguerd",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "494": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Willock",
+      "team": "NEW",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "621": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Irving",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "529": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Moore",
+      "team": "SUN",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "50": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Buendía",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.004
+    },
+    "461": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fitzgerald",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "549": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Neil",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "314": {
+      "eo": 0.0035,
+      "eo_top10k": 0.0035,
+      "eo_elite": 0.003,
+      "web_name": "Leno",
+      "team": "FUL",
+      "position": "GK",
+      "price": 5.0,
+      "eo_overall": 0.023
+    },
+    "557": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "H.Jones",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "192": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hartman",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.006
+    },
+    "427": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.001,
+      "web_name": "Reijnders",
+      "team": "MCI",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.08900000000000001
+    },
+    "456": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sancho",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.002
+    },
+    "264": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Holding",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "55": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Barkley",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.001
+    },
+    "772": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alabi",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "574": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Udogie",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "546": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Aleksić",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "16": {
+      "eo": 0.2777,
+      "eo_top10k": 0.2777,
+      "eo_elite": 0.186,
+      "web_name": "Saka",
+      "team": "ARS",
+      "position": "MID",
+      "price": 10.0,
+      "eo_overall": 0.11599999999999999
+    },
+    "129": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yarmoliuk",
+      "team": "BRE",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "367": {
+      "eo": 0.0009,
+      "eo_top10k": 0.0009,
+      "eo_elite": 0.0,
+      "web_name": "Mamardashvili",
+      "team": "LIV",
+      "position": "GK",
+      "price": 4.1,
+      "eo_overall": 0.006999999999999999
+    },
+    "13": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Clarke",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.005
+    },
+    "553": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Talbi",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.002
+    },
+    "511": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Morato",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "381": {
+      "eo": 0.3484,
+      "eo_top10k": 0.3484,
+      "eo_elite": 0.697,
+      "web_name": "M.Salah",
+      "team": "LIV",
+      "position": "MID",
+      "price": 14.0,
+      "eo_overall": 0.152
+    },
+    "157": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Mitoma",
+      "team": "BHA",
+      "position": "MID",
+      "price": 6.1,
+      "eo_overall": 0.019
+    },
+    "9": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kiwior",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "102": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Balcombe",
+      "team": "BRE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "369": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Woodman",
+      "team": "LIV",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "67": {
+      "eo": 0.0232,
+      "eo_top10k": 0.0232,
+      "eo_elite": 0.017,
+      "web_name": "Petrović",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.6,
+      "eo_overall": 0.052000000000000005
+    },
+    "581": {
+      "eo": 0.0012,
+      "eo_top10k": 0.0012,
+      "eo_elite": 0.001,
+      "web_name": "Maddison",
+      "team": "TOT",
+      "position": "MID",
+      "price": 6.8,
+      "eo_overall": 0.003
+    },
+    "219": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Obafemi",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "403": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Gvardiol",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.8,
+      "eo_overall": 0.032
+    },
+    "608": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Scarles",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "7": {
+      "eo": 0.0024,
+      "eo_top10k": 0.0024,
+      "eo_elite": 0.003,
+      "web_name": "Calafiori",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.6,
+      "eo_overall": 0.06
+    },
+    "628": {
+      "eo": 0.0019,
+      "eo_top10k": 0.0019,
+      "eo_elite": 0.011,
+      "web_name": "José Sá",
+      "team": "WOL",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.011000000000000001
+    },
+    "595": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Olusesi",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "455": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mount",
+      "team": "MUN",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.003
+    },
+    "509": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "David Carmo",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "504": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Turner",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "519": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dominguez",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "830": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Wright",
+      "team": "LIV",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "728": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Röhl",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "490": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Joelinton",
+      "team": "NEW",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.003
+    },
+    "210": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Tchaouna",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "513": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Abbott",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "256": {
+      "eo": 0.0272,
+      "eo_top10k": 0.0272,
+      "eo_elite": 0.062,
+      "web_name": "Muñoz",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 5.9,
+      "eo_overall": 0.092
+    },
+    "538": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Johnson",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "572": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dragusin",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "721": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Milosavljević",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "426": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McAtee",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "260": {
+      "eo": 0.0833,
+      "eo_top10k": 0.0833,
+      "eo_elite": 0.028,
+      "web_name": "Guéhi",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.1,
+      "eo_overall": 0.326
+    },
+    "661": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.01,
+      "web_name": "Ekitiké",
+      "team": "LIV",
+      "position": "FWD",
+      "price": 9.0,
+      "eo_overall": 0.157
+    },
+    "222": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Penders",
+      "team": "CHE",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "659": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Walker-Peters",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.003
+    },
+    "751": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Akhamrich",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "284": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nketiah",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 5.4,
+      "eo_overall": 0.003
+    },
+    "133": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Peart-Harris",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "319": {
+      "eo": 0.0006,
+      "eo_top10k": 0.0006,
+      "eo_elite": 0.001,
+      "web_name": "Castagne",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "80": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Soler",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "23": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fábio Vieira",
+      "team": "ARS",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "578": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Vuskovic",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "758": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mohamadou Kanté",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "247": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "D.Essugo",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "327": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Andreas",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.001
+    },
+    "282": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Umeh",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "164": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "O'Riley",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.003
+    },
+    "825": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Herrick",
+      "team": "WHU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "486": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Elanga",
+      "team": "NEW",
+      "position": "MID",
+      "price": 6.5,
+      "eo_overall": 0.026000000000000002
+    },
+    "106": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Collins",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.024
+    },
+    "47": {
+      "eo": 0.0279,
+      "eo_top10k": 0.0279,
+      "eo_elite": 0.024,
+      "web_name": "Rogers",
+      "team": "AVL",
+      "position": "MID",
+      "price": 7.3,
+      "eo_overall": 0.20199999999999999
+    },
+    "646": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "J.Gomes",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.003
+    },
+    "629": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bentley",
+      "team": "WOL",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.005
+    },
+    "592": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Moore",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "227": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Colwill",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.7,
+      "eo_overall": 0.002
+    },
+    "492": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Antoñito C.",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "358": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tanaka",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.002
+    },
+    "87": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Christie",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "364": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mateo Joseph",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "433": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Harrison",
+      "team": "MUN",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "273": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Wharton",
+      "team": "CRY",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.006999999999999999
+    },
+    "463": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kone",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "59": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Onana",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.006
+    },
+    "672": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hato",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.002
+    },
+    "442": {
+      "eo": 0.0087,
+      "eo_top10k": 0.0087,
+      "eo_elite": 0.009,
+      "web_name": "Maguire",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.017
+    },
+    "57": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dobbin",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "514": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Boly",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.003
+    },
+    "794": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alleyne",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.0
+    },
+    "418": {
+      "eo": 0.0297,
+      "eo_top10k": 0.0297,
+      "eo_elite": 0.029,
+      "web_name": "Doku",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.5,
+      "eo_overall": 0.066
+    },
+    "695": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tchatchoua",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "710": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Patterson",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "688": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Wright",
+      "team": "AVL",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.006
+    },
+    "479": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Krafth",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "423": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "N.Gonzalez",
+      "team": "MCI",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.001
+    },
+    "451": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rashford",
+      "team": "MUN",
+      "position": "MID",
+      "price": 7.0,
+      "eo_overall": 0.0
+    },
+    "114": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Arthur",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "530": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nna Noukeu",
+      "team": "SUN",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "577": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Takai",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "759": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Salmon",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "429": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Phillips",
+      "team": "MCI",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "312": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Y.Chermiti",
+      "team": "EVE",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "234": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Anselmino",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "213": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Banel",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "598": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lankshear",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "705": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Campbell",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "735": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Traoré",
+      "team": "SUN",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.0
+    },
+    "571": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Davies",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "466": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Zirkzee",
+      "team": "MUN",
+      "position": "FWD",
+      "price": 5.8,
+      "eo_overall": 0.004
+    },
+    "384": {
+      "eo": 0.0128,
+      "eo_top10k": 0.0128,
+      "eo_elite": 0.017,
+      "web_name": "Gakpo",
+      "team": "LIV",
+      "position": "MID",
+      "price": 7.3,
+      "eo_overall": 0.055999999999999994
+    },
+    "11": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "White",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.1,
+      "eo_overall": 0.005
+    },
+    "523": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Da Silva Moreira",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "71": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Zabarnyi",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "613": {
+      "eo": 0.0012,
+      "eo_top10k": 0.0012,
+      "eo_elite": 0.0,
+      "web_name": "Souček",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.7,
+      "eo_overall": 0.005
+    },
+    "77": {
+      "eo": 0.3762,
+      "eo_top10k": 0.3762,
+      "eo_elite": 0.455,
+      "web_name": "Hill",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.07400000000000001
+    },
+    "811": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kyerematen",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "604": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Emerson",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "533": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alese",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "368": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Pécsi",
+      "team": "LIV",
+      "position": "GK",
+      "price": 3.8,
+      "eo_overall": 0.009000000000000001
+    },
+    "31": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "G.Jesus",
+      "team": "ARS",
+      "position": "FWD",
+      "price": 6.4,
+      "eo_overall": 0.004
+    },
+    "97": {
+      "eo": 0.0031,
+      "eo_top10k": 0.0031,
+      "eo_elite": 0.006,
+      "web_name": "Evanilson",
+      "team": "BOU",
+      "position": "FWD",
+      "price": 6.6,
+      "eo_overall": 0.024
+    },
+    "708": {
+      "eo": 0.0025,
+      "eo_top10k": 0.0025,
+      "eo_elite": 0.001,
+      "web_name": "M.Fernandes",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.006
+    },
+    "469": {
+      "eo": 0.0027,
+      "eo_top10k": 0.0027,
+      "eo_elite": 0.003,
+      "web_name": "Pope",
+      "team": "NEW",
+      "position": "GK",
+      "price": 5.0,
+      "eo_overall": 0.045
+    },
+    "155": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Slater",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "226": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.001,
+      "web_name": "Chalobah",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.08800000000000001
+    },
+    "17": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Ødegaard",
+      "team": "ARS",
+      "position": "MID",
+      "price": 7.8,
+      "eo_overall": 0.017
+    },
+    "300": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McNeil",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.001
+    },
+    "599": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Scarlett",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 4.3,
+      "eo_overall": 0.005
+    },
+    "471": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gillespie",
+      "team": "NEW",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "713": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "A.Jimenez",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "611": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Casey",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "151": {
+      "eo": 0.3713,
+      "eo_top10k": 0.3713,
+      "eo_elite": 0.379,
+      "web_name": "Van Hecke",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.7,
+      "eo_overall": 0.107
+    },
+    "632": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Doherty",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "385": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chiesa",
+      "team": "LIV",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.003
+    },
+    "722": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Florentino",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "362": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Piroe",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.003
+    },
+    "773": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Benamar",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "615": {
+      "eo": 0.0189,
+      "eo_top10k": 0.0189,
+      "eo_elite": 0.024,
+      "web_name": "Summerville",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.016
+    },
+    "459": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ugarte",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "351": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gnonto",
+      "team": "LEE",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.001
+    },
+    "541": {
+      "eo": 0.0012,
+      "eo_top10k": 0.0012,
+      "eo_elite": 0.002,
+      "web_name": "Reinildo",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.03
+    },
+    "771": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fletcher",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "420": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gündoğan",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.001
+    },
+    "450": {
+      "eo": 0.0182,
+      "eo_top10k": 0.0182,
+      "eo_elite": 0.015,
+      "web_name": "Cunha",
+      "team": "MUN",
+      "position": "MID",
+      "price": 8.1,
+      "eo_overall": 0.087
+    },
+    "72": {
+      "eo": 0.295,
+      "eo_top10k": 0.295,
+      "eo_elite": 0.196,
+      "web_name": "Senesi",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.22
+    },
+    "413": {
+      "eo": 0.0982,
+      "eo_top10k": 0.0982,
+      "eo_elite": 0.212,
+      "web_name": "Marmoush",
+      "team": "MCI",
+      "position": "MID",
+      "price": 8.3,
+      "eo_overall": 0.028999999999999998
+    },
+    "707": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dibling",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.0
+    },
+    "201": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Benson",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "412": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Vitor Reis",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "182": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "Trafford",
+      "team": "MCI",
+      "position": "GK",
+      "price": 4.5,
+      "eo_overall": 0.009000000000000001
+    },
+    "195": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Lucas Pires",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.003
+    },
+    "663": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Arias",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "208": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Koleosho",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "487": {
+      "eo": 0.0014,
+      "eo_top10k": 0.0014,
+      "eo_elite": 0.0,
+      "web_name": "Barnes",
+      "team": "NEW",
+      "position": "MID",
+      "price": 6.1,
+      "eo_overall": 0.013000000000000001
+    },
+    "587": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bissouma",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.0
+    },
+    "307": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ebere",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "457": {
+      "eo": 0.0019,
+      "eo_top10k": 0.0019,
+      "eo_elite": 0.001,
+      "web_name": "Casemiro",
+      "team": "MUN",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.038
+    },
+    "527": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Awoniyi",
+      "team": "NFO",
+      "position": "FWD",
+      "price": 5.2,
+      "eo_overall": 0.004
+    },
+    "241": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Caicedo",
+      "team": "CHE",
+      "position": "MID",
+      "price": 5.7,
+      "eo_overall": 0.071
+    },
+    "51": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Iling Jr",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.0
+    },
+    "95": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Silcott-Duberry",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "318": {
+      "eo": 0.002,
+      "eo_top10k": 0.002,
+      "eo_elite": 0.0,
+      "web_name": "Bassey",
+      "team": "FUL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.008
+    },
+    "411": {
+      "eo": 0.3783,
+      "eo_top10k": 0.3783,
+      "eo_elite": 0.265,
+      "web_name": "O'Reilly",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.3,
+      "eo_overall": 0.192
+    },
+    "823": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Stephenson",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "298": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Welch",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.001
+    },
+    "503": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "C.Miguel",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "233": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Acheampong",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.018000000000000002
+    },
+    "272": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lerma",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "359": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Crew",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "798": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Imray",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "39": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Maatsen",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.005
+    },
+    "220": {
+      "eo": 0.0054,
+      "eo_top10k": 0.0054,
+      "eo_elite": 0.011,
+      "web_name": "Sánchez",
+      "team": "CHE",
+      "position": "GK",
+      "price": 4.8,
+      "eo_overall": 0.10300000000000001
+    },
+    "837": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lienou",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "507": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Aina",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.7,
+      "eo_overall": 0.021
+    },
+    "472": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Odysseas",
+      "team": "NEW",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "559": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Triantis",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "556": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ekwah",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "467": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Obi",
+      "team": "MUN",
+      "position": "FWD",
+      "price": 4.2,
+      "eo_overall": 0.013999999999999999
+    },
+    "686": {
+      "eo": 0.0033,
+      "eo_top10k": 0.0033,
+      "eo_elite": 0.007,
+      "web_name": "Ngumoha",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.013999999999999999
+    },
+    "736": {
+      "eo": 0.0096,
+      "eo_top10k": 0.0096,
+      "eo_elite": 0.008,
+      "web_name": "Donnarumma",
+      "team": "MCI",
+      "position": "GK",
+      "price": 5.6,
+      "eo_overall": 0.09300000000000001
+    },
+    "356": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gruev",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "336": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Reed",
+      "team": "FUL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "89": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Philip",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "159": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "March",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.0
+    },
+    "675": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gunn",
+      "team": "NFO",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.011000000000000001
+    },
+    "470": {
+      "eo": 0.0285,
+      "eo_top10k": 0.0285,
+      "eo_elite": 0.061,
+      "web_name": "Dúbravka",
+      "team": "BUR",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.257
+    },
+    "540": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pembele",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "100": {
+      "eo": 0.0533,
+      "eo_top10k": 0.0533,
+      "eo_elite": 0.058,
+      "web_name": "Kroupi.Jr",
+      "team": "BOU",
+      "position": "FWD",
+      "price": 4.7,
+      "eo_overall": 0.076
+    },
+    "329": {
+      "eo": 0.0615,
+      "eo_top10k": 0.0615,
+      "eo_elite": 0.076,
+      "web_name": "Wilson",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.174
+    },
+    "124": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Henderson",
+      "team": "BRE",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.003
+    },
+    "558": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Matete",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "187": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "Walker",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.012
+    },
+    "257": {
+      "eo": 0.0354,
+      "eo_top10k": 0.0354,
+      "eo_elite": 0.055,
+      "web_name": "Lacroix",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.071
+    },
+    "63": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Young",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.005
+    },
+    "105": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Valdimarsson",
+      "team": "BRE",
+      "position": "GK",
+      "price": 3.8,
+      "eo_overall": 0.01
+    },
+    "534": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Anderson",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.003
+    },
+    "36": {
+      "eo": 0.0011,
+      "eo_top10k": 0.0011,
+      "eo_elite": 0.005,
+      "web_name": "Cash",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.6,
+      "eo_overall": 0.07400000000000001
+    },
+    "597": {
+      "eo": 0.1278,
+      "eo_top10k": 0.1278,
+      "eo_elite": 0.139,
+      "web_name": "Richarlison",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 6.5,
+      "eo_overall": 0.087
+    },
+    "191": {
+      "eo": 0.0038,
+      "eo_top10k": 0.0038,
+      "eo_elite": 0.006,
+      "web_name": "Estève",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.07
+    },
+    "289": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tyrer",
+      "team": "EVE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "143": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Boscagli",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "550": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Poveda",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.0
+    },
+    "250": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Delap",
+      "team": "CHE",
+      "position": "FWD",
+      "price": 6.2,
+      "eo_overall": 0.009000000000000001
+    },
+    "555": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Browne",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "251": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "N.Jackson",
+      "team": "CHE",
+      "position": "FWD",
+      "price": 6.5,
+      "eo_overall": 0.001
+    },
+    "796": {
+      "eo": 0.0014,
+      "eo_top10k": 0.0014,
+      "eo_elite": 0.0,
+      "web_name": "Gallagher",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.002
+    },
+    "200": {
+      "eo": 0.0222,
+      "eo_top10k": 0.0222,
+      "eo_elite": 0.023,
+      "web_name": "Anthony",
+      "team": "BUR",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.024
+    },
+    "130": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Donovan",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "352": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Harrison",
+      "team": "LEE",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.0
+    },
+    "624": {
+      "eo": 0.791,
+      "eo_top10k": 0.791,
+      "eo_elite": 0.909,
+      "web_name": "Bowen",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 7.8,
+      "eo_overall": 0.175
+    },
+    "343": {
+      "eo": 0.0164,
+      "eo_top10k": 0.0164,
+      "eo_elite": 0.02,
+      "web_name": "Struijk",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.019
+    },
+    "397": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Darwin",
+      "team": "LIV",
+      "position": "FWD",
+      "price": 6.5,
+      "eo_overall": 0.001
+    },
+    "458": {
+      "eo": 0.0008,
+      "eo_top10k": 0.0008,
+      "eo_elite": 0.001,
+      "web_name": "Mainoo",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.013999999999999999
+    },
+    "814": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Netz",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "374": {
+      "eo": 0.0014,
+      "eo_top10k": 0.0014,
+      "eo_elite": 0.003,
+      "web_name": "Konaté",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.038
+    },
+    "765": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Shahar",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "834": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kavuma-McQueen",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "380": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ramsay",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.003
+    },
+    "660": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Stach",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.017
+    },
+    "58": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kamara",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.002
+    },
+    "44": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bogarde",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.005
+    },
+    "338": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Muniz",
+      "team": "FUL",
+      "position": "FWD",
+      "price": 5.3,
+      "eo_overall": 0.006999999999999999
+    },
+    "762": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Drakes-Thomas",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "484": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Targett",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "313": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sherif",
+      "team": "EVE",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "739": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mukasa",
+      "team": "MCI",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "408": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rúben",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.5,
+      "eo_overall": 0.031
+    },
+    "586": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bergvall",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.002
+    },
+    "637": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Toti",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "644": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bellegarde",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.0
+    },
+    "724": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Geertruida",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "493": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Longstaff",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.002
+    },
+    "671": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Wilson",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 5.8,
+      "eo_overall": 0.006
+    },
+    "103": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cox",
+      "team": "BRE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "763": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gray",
+      "team": "MCI",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "743": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Emenalo",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "498": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "White",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "111": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pinnock",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "488": {
+      "eo": 0.0605,
+      "eo_top10k": 0.0605,
+      "eo_elite": 0.045,
+      "web_name": "Bruno G.",
+      "team": "NEW",
+      "position": "MID",
+      "price": 6.9,
+      "eo_overall": 0.065
+    },
+    "288": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Travers",
+      "team": "EVE",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "443": {
+      "eo": 0.0017,
+      "eo_top10k": 0.0017,
+      "eo_elite": 0.002,
+      "web_name": "Shaw",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.011000000000000001
+    },
+    "115": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fredrick",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "78": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Araujo",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.005
+    },
+    "807": {
+      "eo": 0.0304,
+      "eo_top10k": 0.0304,
+      "eo_elite": 0.024,
+      "web_name": "Rayan",
+      "team": "BOU",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.023
+    },
+    "505": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Milenković",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 5.1,
+      "eo_overall": 0.033
+    },
+    "42": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "A.García",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "482": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ashby",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "116": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hickey",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.003
+    },
+    "387": {
+      "eo": 0.1931,
+      "eo_top10k": 0.1931,
+      "eo_elite": 0.12,
+      "web_name": "Szoboszlai",
+      "team": "LIV",
+      "position": "MID",
+      "price": 7.1,
+      "eo_overall": 0.151
+    },
+    "274": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Agbinone",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "690": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cardines",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.003
+    },
+    "147": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Estupiñan",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "365": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nmecha",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 5.0,
+      "eo_overall": 0.005
+    },
+    "86": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Brooks",
+      "team": "BOU",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.002
+    },
+    "112": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Roerslev",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "475": {
+      "eo": 0.0014,
+      "eo_top10k": 0.0014,
+      "eo_elite": 0.0,
+      "web_name": "Botman",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.005
+    },
+    "1": {
+      "eo": 0.2951,
+      "eo_top10k": 0.2951,
+      "eo_elite": 0.245,
+      "web_name": "Raya",
+      "team": "ARS",
+      "position": "GK",
+      "price": 6.2,
+      "eo_overall": 0.364
+    },
+    "196": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sambo",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "567": {
+      "eo": 0.0029,
+      "eo_top10k": 0.0029,
+      "eo_elite": 0.004,
+      "web_name": "Kinsky",
+      "team": "TOT",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.019
+    },
+    "733": {
+      "eo": 0.0038,
+      "eo_top10k": 0.0038,
+      "eo_elite": 0.001,
+      "web_name": "Lammens",
+      "team": "MUN",
+      "position": "GK",
+      "price": 5.1,
+      "eo_overall": 0.036000000000000004
+    },
+    "512": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "O.Richards",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "197": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sonne",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "96": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Winterburn",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "785": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pablo",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "630": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "King",
+      "team": "EVE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.012
+    },
+    "406": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Khusanov",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.4,
+      "eo_overall": 0.006999999999999999
+    },
+    "544": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Diarra",
+      "team": "SUN",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.001
+    },
+    "780": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Casey",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "714": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Woltemade",
+      "team": "NEW",
+      "position": "FWD",
+      "price": 6.7,
+      "eo_overall": 0.065
+    },
+    "647": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Guedes",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.0
+    },
+    "648": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Munetsi",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.0
+    },
+    "134": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Trevitt",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "370": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.003,
+      "web_name": "Frimpong",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 5.7,
+      "eo_overall": 0.049
+    },
+    "594": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Min-hyeok",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "306": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bates",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "449": {
+      "eo": 1.3719,
+      "eo_top10k": 1.3719,
+      "eo_elite": 1.136,
+      "web_name": "B.Fernandes",
+      "team": "MUN",
+      "position": "MID",
+      "price": 10.4,
+      "eo_overall": 0.48
+    },
+    "473": {
+      "eo": 0.0018,
+      "eo_top10k": 0.0018,
+      "eo_elite": 0.002,
+      "web_name": "Hall",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 5.3,
+      "eo_overall": 0.033
+    },
+    "199": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Worrall",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "92": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Faivre",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "709": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Krejčí",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "38": {
+      "eo": 0.001,
+      "eo_top10k": 0.001,
+      "eo_elite": 0.001,
+      "web_name": "Konsa",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.07
+    },
+    "784": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Brierley",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "181": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kostoulas",
+      "team": "BHA",
+      "position": "FWD",
+      "price": 4.8,
+      "eo_overall": 0.003
+    },
+    "292": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mykolenko",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.006999999999999999
+    },
+    "600": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Areola",
+      "team": "WHU",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.019
+    },
+    "382": {
+      "eo": 0.0036,
+      "eo_top10k": 0.0036,
+      "eo_elite": 0.011,
+      "web_name": "Wirtz",
+      "team": "LIV",
+      "position": "MID",
+      "price": 8.3,
+      "eo_overall": 0.085
+    },
+    "41": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pau",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "612": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "L.Paquetá",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.01
+    },
+    "353": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "James",
+      "team": "LEE",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.001
+    },
+    "791": {
+      "eo": 0.007,
+      "eo_top10k": 0.007,
+      "eo_elite": 0.015,
+      "web_name": "Taty",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 5.5,
+      "eo_overall": 0.003
+    },
+    "656": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kalajdžić",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "69": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McKenna",
+      "team": "BOU",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "602": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hegyi",
+      "team": "WHU",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.002
+    },
+    "168": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Buonanotte",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.6,
+      "eo_overall": 0.001
+    },
+    "674": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ramsdale",
+      "team": "NEW",
+      "position": "GK",
+      "price": 4.8,
+      "eo_overall": 0.006999999999999999
+    },
+    "355": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Greenwood",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "430": {
+      "eo": 0.76,
+      "eo_top10k": 0.76,
+      "eo_elite": 0.424,
+      "web_name": "Haaland",
+      "team": "MCI",
+      "position": "FWD",
+      "price": 14.7,
+      "eo_overall": 0.625
+    },
+    "726": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kolo Muani",
+      "team": "TOT",
+      "position": "FWD",
+      "price": 6.9,
+      "eo_overall": 0.004
+    },
+    "417": {
+      "eo": 0.145,
+      "eo_top10k": 0.145,
+      "eo_elite": 0.13,
+      "web_name": "Cherki",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.5,
+      "eo_overall": 0.174
+    },
+    "545": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Roberts",
+      "team": "SUN",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "22": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Merino",
+      "team": "ARS",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.006999999999999999
+    },
+    "266": {
+      "eo": 0.0158,
+      "eo_top10k": 0.0158,
+      "eo_elite": 0.032,
+      "web_name": "Eze",
+      "team": "ARS",
+      "position": "MID",
+      "price": 7.3,
+      "eo_overall": 0.087
+    },
+    "252": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Marc Guiu",
+      "team": "CHE",
+      "position": "FWD",
+      "price": 4.0,
+      "eo_overall": 0.052000000000000005
+    },
+    "25": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nwaneri",
+      "team": "ARS",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "653": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hodge",
+      "team": "WOL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "839": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cresswell",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "135": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Wissa",
+      "team": "NEW",
+      "position": "FWD",
+      "price": 7.3,
+      "eo_overall": 0.006
+    },
+    "109": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Henry",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "238": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Estêvão",
+      "team": "CHE",
+      "position": "MID",
+      "price": 6.4,
+      "eo_overall": 0.017
+    },
+    "606": {
+      "eo": 0.0456,
+      "eo_top10k": 0.0456,
+      "eo_elite": 0.058,
+      "web_name": "Mavropanos",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.026000000000000002
+    },
+    "610": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.002,
+      "web_name": "Wan-Bissaka",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.043
+    },
+    "445": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Amass",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "528": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Patterson",
+      "team": "SUN",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "548": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mundle",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "2": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Arrizabalaga",
+      "team": "ARS",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.004
+    },
+    "209": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Laurent",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "52": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Ramsey",
+      "team": "NEW",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.003
+    },
+    "591": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gray",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.001
+    },
+    "414": {
+      "eo": 0.0348,
+      "eo_top10k": 0.0348,
+      "eo_elite": 0.111,
+      "web_name": "Foden",
+      "team": "MCI",
+      "position": "MID",
+      "price": 8.0,
+      "eo_overall": 0.078
+    },
+    "371": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Kerkez",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 5.6,
+      "eo_overall": 0.028999999999999998
+    },
+    "422": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kovačić",
+      "team": "MCI",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.0
+    },
+    "543": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Adingra",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.003
+    },
+    "309": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Metcalfe",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "221": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jörgensen",
+      "team": "CHE",
+      "position": "GK",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "302": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gana",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.001
+    },
+    "666": {
+      "eo": 0.1578,
+      "eo_top10k": 0.1578,
+      "eo_elite": 0.276,
+      "web_name": "Gyökeres",
+      "team": "ARS",
+      "position": "FWD",
+      "price": 9.1,
+      "eo_overall": 0.16399999999999998
+    },
+    "376": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gomez",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.002
+    },
+    "788": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kukonki",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "536": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hjelde",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "627": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Johnstone",
+      "team": "WOL",
+      "position": "GK",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "128": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Onyeka",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "673": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "J.Palhinha",
+      "team": "TOT",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.009000000000000001
+    },
+    "698": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.0,
+      "web_name": "Okafor",
+      "team": "LEE",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.009000000000000001
+    },
+    "782": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Forster",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "401": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bettinelli",
+      "team": "MCI",
+      "position": "GK",
+      "price": 3.8,
+      "eo_overall": 0.004
+    },
+    "64": {
+      "eo": 0.0219,
+      "eo_top10k": 0.0219,
+      "eo_elite": 0.01,
+      "web_name": "Watkins",
+      "team": "AVL",
+      "position": "FWD",
+      "price": 8.7,
+      "eo_overall": 0.13
+    },
+    "214": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Trésor",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "806": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mandas",
+      "team": "BOU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "173": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.002,
+      "web_name": "Wieffer",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.003
+    },
+    "481": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "A.Murphy",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.006999999999999999
+    },
+    "539": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "O'Nien",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "462": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "J.Fletcher",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "662": {
+      "eo": 0.0096,
+      "eo_top10k": 0.0096,
+      "eo_elite": 0.008,
+      "web_name": "Mosquera",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.3,
+      "eo_overall": 0.003
+    },
+    "361": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gyabi",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "573": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.001,
+      "web_name": "Spence",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.009000000000000001
+    },
+    "670": {
+      "eo": 0.0066,
+      "eo_top10k": 0.0066,
+      "eo_elite": 0.01,
+      "web_name": "Roefs",
+      "team": "SUN",
+      "position": "GK",
+      "price": 4.8,
+      "eo_overall": 0.08
+    },
+    "138": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Steele",
+      "team": "BHA",
+      "position": "GK",
+      "price": 4.2,
+      "eo_overall": 0.002
+    },
+    "631": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Agbadou",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "27": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nelson",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.001
+    },
+    "224": {
+      "eo": 0.0064,
+      "eo_top10k": 0.0064,
+      "eo_elite": 0.005,
+      "web_name": "Cucurella",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 6.1,
+      "eo_overall": 0.146
+    },
+    "483": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pivas",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.004
+    },
+    "383": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Luis Díaz",
+      "team": "LIV",
+      "position": "MID",
+      "price": 8.0,
+      "eo_overall": 0.0
+    },
+    "625": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Füllkrug",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 5.6,
+      "eo_overall": 0.006
+    },
+    "253": {
+      "eo": 0.012,
+      "eo_top10k": 0.012,
+      "eo_elite": 0.026,
+      "web_name": "Henderson",
+      "team": "CRY",
+      "position": "GK",
+      "price": 5.1,
+      "eo_overall": 0.09
+    },
+    "107": {
+      "eo": 0.0011,
+      "eo_top10k": 0.0011,
+      "eo_elite": 0.003,
+      "web_name": "Lewis-Potter",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.015
+    },
+    "829": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Derry",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "390": {
+      "eo": 0.0008,
+      "eo_top10k": 0.0008,
+      "eo_elite": 0.0,
+      "web_name": "Gravenberch",
+      "team": "LIV",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.037000000000000005
+    },
+    "723": {
+      "eo": 0.0035,
+      "eo_top10k": 0.0035,
+      "eo_elite": 0.007,
+      "web_name": "Canvot",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.005
+    },
+    "188": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Delcroix",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "242": {
+      "eo": 0.1433,
+      "eo_top10k": 0.1433,
+      "eo_elite": 0.144,
+      "web_name": "Dewsbury-Hall",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.079
+    },
+    "88": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cook",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "215": {
+      "eo": 0.0225,
+      "eo_top10k": 0.0225,
+      "eo_elite": 0.031,
+      "web_name": "Flemming",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 5.3,
+      "eo_overall": 0.008
+    },
+    "432": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Onana",
+      "team": "MUN",
+      "position": "GK",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "474": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Schär",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.011000000000000001
+    },
+    "831": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gracey",
+      "team": "WOL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "3": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hein",
+      "team": "ARS",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.002
+    },
+    "590": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bryan",
+      "team": "TOT",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "703": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Proctor",
+      "team": "AVL",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.006
+    },
+    "205": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cullen",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.008
+    },
+    "729": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cuiabano",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "154": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Cashin",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "231": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "M.Sarr",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "48": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tielemans",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.006999999999999999
+    },
+    "642": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Hee Chan",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.001
+    },
+    "104": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Eyestone",
+      "team": "BRE",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "537": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Huggins",
+      "team": "SUN",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "835": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Whitehall",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "776": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Pimlott",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "140": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McGill",
+      "team": "BHA",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.003
+    },
+    "720": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tolu",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 5.1,
+      "eo_overall": 0.001
+    },
+    "28": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kabia",
+      "team": "ARS",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "685": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Diakité",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.003
+    },
+    "699": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Douglas Luiz",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "90": {
+      "eo": 0.0106,
+      "eo_top10k": 0.0106,
+      "eo_elite": 0.01,
+      "web_name": "Scott",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.021
+    },
+    "732": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Uche",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 5.5,
+      "eo_overall": 0.001
+    },
+    "216": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Amdouni",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "360": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gelhardt",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "297": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dixon",
+      "team": "EVE",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "554": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ba",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "802": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lamadrid",
+      "team": "WHU",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "639": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Meupiyou",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "727": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chukwueze",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.3,
+      "eo_overall": 0.001
+    },
+    "799": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Stevens",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "638": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hoever",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.008
+    },
+    "497": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "L.Miley",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.017
+    },
+    "149": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Igor",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "379": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "R.Williams",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.005
+    },
+    "395": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Morton",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "817": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Armstrong",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 5.1,
+      "eo_overall": 0.001
+    },
+    "179": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ferguson",
+      "team": "BHA",
+      "position": "FWD",
+      "price": 5.5,
+      "eo_overall": 0.0
+    },
+    "836": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sinclair",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "658": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Fraser",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 4.2,
+      "eo_overall": 0.017
+    },
+    "405": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Aké",
+      "team": "MCI",
+      "position": "DEF",
+      "price": 5.2,
+      "eo_overall": 0.006
+    },
+    "349": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Schmidt",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "657": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chiwome",
+      "team": "WOL",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.0
+    },
+    "281": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rodney",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "447": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Heaven",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.026000000000000002
+    },
+    "389": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Elliott",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.002
+    },
+    "477": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Livramento",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.018000000000000002
+    },
+    "516": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hudson-Odoi",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.7,
+      "eo_overall": 0.006
+    },
+    "315": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Benda",
+      "team": "FUL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "439": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "D.Leon",
+      "team": "MUN",
+      "position": "DEF",
+      "price": 4.1,
+      "eo_overall": 0.001
+    },
+    "249": {
+      "eo": 0.2892,
+      "eo_top10k": 0.2892,
+      "eo_elite": 0.261,
+      "web_name": "João Pedro",
+      "team": "CHE",
+      "position": "FWD",
+      "price": 7.4,
+      "eo_overall": 0.348
+    },
+    "161": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Enciso",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "76": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bevan",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.002
+    },
+    "476": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Burn",
+      "team": "NEW",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.036000000000000004
+    },
+    "731": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kevin",
+      "team": "FUL",
+      "position": "MID",
+      "price": 5.7,
+      "eo_overall": 0.001
+    },
+    "649": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "B.Traore",
+      "team": "WOL",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "623": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Potts",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.005
+    },
+    "495": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Hayden",
+      "team": "NEW",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "808": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Abraham",
+      "team": "AVL",
+      "position": "FWD",
+      "price": 5.7,
+      "eo_overall": 0.002
+    },
+    "207": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Hannibal",
+      "team": "BUR",
+      "position": "MID",
+      "price": 4.7,
+      "eo_overall": 0.001
+    },
+    "82": {
+      "eo": 0.4417,
+      "eo_top10k": 0.4417,
+      "eo_elite": 0.296,
+      "web_name": "Semenyo",
+      "team": "MCI",
+      "position": "MID",
+      "price": 8.0,
+      "eo_overall": 0.462
+    },
+    "826": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Owen",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "346": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Byram",
+      "team": "LEE",
+      "position": "DEF",
+      "price": 3.7,
+      "eo_overall": 0.004
+    },
+    "10": {
+      "eo": 0.0193,
+      "eo_top10k": 0.0193,
+      "eo_elite": 0.029,
+      "web_name": "Lewis-Skelly",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.019
+    },
+    "276": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Devenny",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.011000000000000001
+    },
+    "121": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.0,
+      "web_name": "Damsgaard",
+      "team": "BRE",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.008
+    },
+    "521": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sangaré",
+      "team": "NFO",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "244": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Lavia",
+      "team": "CHE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "152": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Veltman",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "605": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kilman",
+      "team": "WHU",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "399": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ederson M.",
+      "team": "MCI",
+      "position": "GK",
+      "price": 5.3,
+      "eo_overall": 0.008
+    },
+    "435": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Mee",
+      "team": "MUN",
+      "position": "GK",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "744": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Oriola",
+      "team": "BHA",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "137": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Morgan",
+      "team": "BRE",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.003
+    },
+    "730": {
+      "eo": 0.0017,
+      "eo_top10k": 0.0017,
+      "eo_elite": 0.003,
+      "web_name": "Brobbey",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 5.3,
+      "eo_overall": 0.009000000000000001
+    },
+    "337": {
+      "eo": 0.0003,
+      "eo_top10k": 0.0003,
+      "eo_elite": 0.001,
+      "web_name": "Raúl",
+      "team": "FUL",
+      "position": "FWD",
+      "price": 5.9,
+      "eo_overall": 0.018000000000000002
+    },
+    "821": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Whittaker",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "508": {
+      "eo": 0.0034,
+      "eo_top10k": 0.0034,
+      "eo_elite": 0.004,
+      "web_name": "N.Williams",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.042
+    },
+    "305": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Armstrong",
+      "team": "EVE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "228": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.002,
+      "web_name": "Gusto",
+      "team": "CHE",
+      "position": "DEF",
+      "price": 4.8,
+      "eo_overall": 0.017
+    },
+    "725": {
+      "eo": 0.0012,
+      "eo_top10k": 0.0012,
+      "eo_elite": 0.002,
+      "web_name": "Hincapie",
+      "team": "ARS",
+      "position": "DEF",
+      "price": 5.1,
+      "eo_overall": 0.009000000000000001
+    },
+    "391": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Gannon-Doak",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.8,
+      "eo_overall": 0.0
+    },
+    "310": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Barry",
+      "team": "EVE",
+      "position": "FWD",
+      "price": 5.7,
+      "eo_overall": 0.008
+    },
+    "125": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Janelt",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "510": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jair Cunha",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.001
+    },
+    "822": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jones",
+      "team": "SUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "339": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Meslier",
+      "team": "LEE",
+      "position": "GK",
+      "price": 4.1,
+      "eo_overall": 0.003
+    },
+    "53": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Malen",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.1,
+      "eo_overall": 0.004
+    },
+    "564": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rusyn",
+      "team": "SUN",
+      "position": "FWD",
+      "price": 4.4,
+      "eo_overall": 0.001
+    },
+    "283": {
+      "eo": 0.0016,
+      "eo_top10k": 0.0016,
+      "eo_elite": 0.001,
+      "web_name": "Mateta",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 7.6,
+      "eo_overall": 0.081
+    },
+    "61": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dendoncker",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "117": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ji-soo",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "499": {
+      "eo": 0.0004,
+      "eo_top10k": 0.0004,
+      "eo_elite": 0.001,
+      "web_name": "Isak",
+      "team": "LIV",
+      "position": "FWD",
+      "price": 10.3,
+      "eo_overall": 0.038
+    },
+    "263": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Clyne",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 3.8,
+      "eo_overall": 0.005
+    },
+    "375": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bradley",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.001
+    },
+    "687": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Rees-Dottin",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.002
+    },
+    "62": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Jimoh-Aloba",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.001
+    },
+    "416": {
+      "eo": 0.0012,
+      "eo_top10k": 0.0012,
+      "eo_elite": 0.003,
+      "web_name": "Bernardo",
+      "team": "MCI",
+      "position": "MID",
+      "price": 6.2,
+      "eo_overall": 0.006999999999999999
+    },
+    "193": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Humphreys",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 3.9,
+      "eo_overall": 0.001
+    },
+    "570": {
+      "eo": 0.0038,
+      "eo_top10k": 0.0038,
+      "eo_elite": 0.007,
+      "web_name": "Danso",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.002
+    },
+    "824": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McManus",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "372": {
+      "eo": 0.0023,
+      "eo_top10k": 0.0023,
+      "eo_elite": 0.008,
+      "web_name": "Robertson",
+      "team": "LIV",
+      "position": "DEF",
+      "price": 5.7,
+      "eo_overall": 0.012
+    },
+    "136": {
+      "eo": 0.211,
+      "eo_top10k": 0.211,
+      "eo_elite": 0.258,
+      "web_name": "Thiago",
+      "team": "BRE",
+      "position": "FWD",
+      "price": 7.2,
+      "eo_overall": 0.302
+    },
+    "271": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kamada",
+      "team": "CRY",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.001
+    },
+    "768": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Leon Routh",
+      "team": "AVL",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "363": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bamford",
+      "team": "LEE",
+      "position": "FWD",
+      "price": 4.9,
+      "eo_overall": 0.003
+    },
+    "616": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Álvarez",
+      "team": "WHU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "734": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bakwa",
+      "team": "NFO",
+      "position": "MID",
+      "price": 5.9,
+      "eo_overall": 0.0
+    },
+    "265": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Kporha",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "91": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sinisterra",
+      "team": "BOU",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "144": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Coppola",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.2,
+      "eo_overall": 0.0
+    },
+    "60": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Broggio",
+      "team": "AVL",
+      "position": "MID",
+      "price": 4.4,
+      "eo_overall": 0.002
+    },
+    "184": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Green",
+      "team": "BUR",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.002
+    },
+    "793": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "King",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "132": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Maghoma",
+      "team": "BRE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "20": {
+      "eo": 0.0209,
+      "eo_top10k": 0.0209,
+      "eo_elite": 0.034,
+      "web_name": "Trossard",
+      "team": "ARS",
+      "position": "MID",
+      "price": 6.6,
+      "eo_overall": 0.018000000000000002
+    },
+    "218": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Barnes",
+      "team": "BUR",
+      "position": "FWD",
+      "price": 4.2,
+      "eo_overall": 0.012
+    },
+    "634": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.001,
+      "web_name": "Mosquera",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.3,
+      "eo_overall": 0.001
+    },
+    "350": {
+      "eo": 0.0007,
+      "eo_top10k": 0.0007,
+      "eo_elite": 0.0,
+      "web_name": "Aaronson",
+      "team": "LEE",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.008
+    },
+    "636": {
+      "eo": 0.0002,
+      "eo_top10k": 0.0002,
+      "eo_elite": 0.0,
+      "web_name": "S.Bueno",
+      "team": "WOL",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.002
+    },
+    "189": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Dodgson",
+      "team": "BUR",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "275": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ahamada",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.0
+    },
+    "712": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Yeremy",
+      "team": "CRY",
+      "position": "MID",
+      "price": 5.8,
+      "eo_overall": 0.002
+    },
+    "142": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Scherpen",
+      "team": "BHA",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "148": {
+      "eo": 0.0236,
+      "eo_top10k": 0.0236,
+      "eo_elite": 0.045,
+      "web_name": "F.Kadıoğlu",
+      "team": "BHA",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.013999999999999999
+    },
+    "485": {
+      "eo": 0.0008,
+      "eo_top10k": 0.0008,
+      "eo_elite": 0.006,
+      "web_name": "Gordon",
+      "team": "NEW",
+      "position": "MID",
+      "price": 7.2,
+      "eo_overall": 0.031
+    },
+    "18": {
+      "eo": 0.0009,
+      "eo_top10k": 0.0009,
+      "eo_elite": 0.001,
+      "web_name": "Madueke",
+      "team": "ARS",
+      "position": "MID",
+      "price": 6.8,
+      "eo_overall": 0.008
+    },
+    "113": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.0,
+      "web_name": "Van den Berg",
+      "team": "BRE",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.01
+    },
+    "285": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Édouard",
+      "team": "CRY",
+      "position": "FWD",
+      "price": 5.0,
+      "eo_overall": 0.002
+    },
+    "601": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Foderingham",
+      "team": "WHU",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.002
+    },
+    "12": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Zinchenko",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.9,
+      "eo_overall": 0.002
+    },
+    "501": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Neave",
+      "team": "NEW",
+      "position": "FWD",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "158": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.0,
+      "web_name": "Georginio",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.6,
+      "eo_overall": 0.003
+    },
+    "569": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Romero",
+      "team": "TOT",
+      "position": "DEF",
+      "price": 5.0,
+      "eo_overall": 0.028999999999999998
+    },
+    "120": {
+      "eo": 0.0005,
+      "eo_top10k": 0.0005,
+      "eo_elite": 0.003,
+      "web_name": "Schade",
+      "team": "BRE",
+      "position": "MID",
+      "price": 6.8,
+      "eo_overall": 0.013000000000000001
+    },
+    "716": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Savona",
+      "team": "NFO",
+      "position": "DEF",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "301": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alcaraz",
+      "team": "EVE",
+      "position": "MID",
+      "price": 5.2,
+      "eo_overall": 0.001
+    },
+    "792": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Alysson",
+      "team": "AVL",
+      "position": "MID",
+      "price": 5.0,
+      "eo_overall": 0.0
+    },
+    "139": {
+      "eo": 0.4457,
+      "eo_top10k": 0.4457,
+      "eo_elite": 0.469,
+      "web_name": "Verbruggen",
+      "team": "BHA",
+      "position": "GK",
+      "price": 4.6,
+      "eo_overall": 0.09300000000000001
+    },
+    "262": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chadi Riad",
+      "team": "CRY",
+      "position": "DEF",
+      "price": 4.0,
+      "eo_overall": 0.001
+    },
+    "165": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Sima",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.4,
+      "eo_overall": 0.0
+    },
+    "786": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "McNally",
+      "team": "FUL",
+      "position": "GK",
+      "price": 4.0,
+      "eo_overall": 0.0
+    },
+    "500": {
+      "eo": 0.0194,
+      "eo_top10k": 0.0194,
+      "eo_elite": 0.015,
+      "web_name": "Osula",
+      "team": "NEW",
+      "position": "FWD",
+      "price": 5.5,
+      "eo_overall": 0.021
+    },
+    "717": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Xavi",
+      "team": "TOT",
+      "position": "MID",
+      "price": 6.3,
+      "eo_overall": 0.011000000000000001
+    },
+    "769": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Bendito Mantato",
+      "team": "MUN",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "396": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Nyoni",
+      "team": "LIV",
+      "position": "MID",
+      "price": 4.3,
+      "eo_overall": 0.003
+    },
+    "838": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Chadwick",
+      "team": "LEE",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "580": {
+      "eo": 0.0001,
+      "eo_top10k": 0.0001,
+      "eo_elite": 0.002,
+      "web_name": "Johnson",
+      "team": "CRY",
+      "position": "MID",
+      "price": 6.5,
+      "eo_overall": 0.024
+    },
+    "73": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Smith",
+      "team": "BOU",
+      "position": "DEF",
+      "price": 4.4,
+      "eo_overall": 0.002
+    },
+    "626": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Marshall",
+      "team": "WHU",
+      "position": "FWD",
+      "price": 4.3,
+      "eo_overall": 0.005
+    },
+    "235": {
+      "eo": 0.0717,
+      "eo_top10k": 0.0717,
+      "eo_elite": 0.121,
+      "web_name": "Palmer",
+      "team": "CHE",
+      "position": "MID",
+      "price": 10.3,
+      "eo_overall": 0.126
+    },
+    "280": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Ozoh",
+      "team": "CRY",
+      "position": "MID",
+      "price": 4.5,
+      "eo_overall": 0.0
+    },
+    "801": {
+      "eo": 0.0,
+      "eo_top10k": 0.0,
+      "eo_elite": 0.0,
+      "web_name": "Tóth.A",
+      "team": "BOU",
+      "position": "MID",
+      "price": 4.9,
+      "eo_overall": 0.0
+    },
+    "160": {
+      "eo": 0.0126,
+      "eo_top10k": 0.0126,
+      "eo_elite": 0.014,
+      "web_name": "Minteh",
+      "team": "BHA",
+      "position": "MID",
+      "price": 5.5,
+      "eo_overall": 0.025
+    }
+  }
+}

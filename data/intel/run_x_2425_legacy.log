@@ -1,0 +1,763 @@
+﻿======================================================================
+  FPL Season Simulator — GW1 to GW38
+  SEASON=2024-25 | RULES_MODE=corrected | CHIP_STRATEGY=legacy | OPTIMIZER=legacy | out=season_simulation_corrected_2024-25.json
+======================================================================
+
+[LOAD] Loading data...
+  [TRAIN-CUT] train_gk.csv: 4421 -> 3664 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_def.csv: 18828 -> 15639 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_mid.csv: 22132 -> 18126 rows (seasons < 2024-25)
+  [TRAIN-CUT] train_fwd.csv: 5663 -> 4840 rows (seasons < 2024-25)
+  [AVAIL] intel data is 2025-26-only — disabled for 2024-25
+  [RECS] intel data is 2025-26-only — disabled for 2024-25
+  Players: 784 | DGW GWs in range: [24, 25, 32, 33]
+  Blank GWs in range: [15, 29, 34] | Chip strategy: legacy
+  Availability data: 0 GWs loaded
+
+[LOAD] Building historical team form lookup (Intel 08)...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+
+[TRAIN] Initial models from all 6-season historical data...
+  Training GW1 models on all 6-season historical data:
+    GK: 3664 rows
+    DEF: 15639 rows
+    MID: 18126 rows
+    FWD: 4840 rows
+
+----------------------------------------------------------------------
+  GW 1  |  FT: 1  |  Bank: 0.0m
+  [GW1 pool] 784 players | exact=383 partial=42 pos_avg=359
+  [GW1 TEAM FORM] disabled for 2024-25 (id mapping is 2025-26-specific) — league-average prior
+  [BENCH-INTEL] GW1 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Palmer(£4.5m,f3=8.1), White(£4.5m,f3=4.5), Schär(£5.5m,f3=3.6), Edouard(£5.5m,f3=3.9)
+  [CAP] GW1 candidates:
+    1. M.Salah (MID) raw:17.1 adj:19.8 form3:6.9 home:0.0  <- SELECTED
+    2. Isak (FWD) raw:13.5 adj:17.2 form3:5.8 home:1.0
+    3. Mbeumo (MID) raw:12.8 adj:14.7 form3:5.5 home:1.0
+  [CAP] GW1 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-1 actuals (w=2)...
+    GK: 3664 rows
+    DEF: 15639 rows
+    MID: 18126 rows
+    FWD: 4840 rows
+  Predicted: 117.4 | Actual: 80 | Cap: M.Salah | Hits: 0
+  FT next GW: 2 | Bank: 0.5m | Squad val: 99.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 2  |  FT: 2  |  Bank: 0.5m
+  [TEAM FORM] GW2 top attack: [(5, 3.0), (1, 2.0), (2, 2.0)] | top defence: [(1, 1.0), (2, 1.0), (5, 1.0)]
+  [BENCH-INTEL] GW2 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Pope(£5.0m,f3=9.0), Welbeck(£5.5m,f3=12.0), Kovačić(£5.5m,f3=11.0), Onana(£5.0m,f3=10.0)
+  [CAP] GW2 candidates:
+    1. M.Salah (MID) raw:14.2 adj:16.4 form3:14.0 home:1.0  <- SELECTED
+    2. Mbeumo (MID) raw:12.1 adj:13.6 form3:9.0 home:0.0
+    3. Wood (FWD) raw:10.3 adj:13.1 form3:9.0 home:0.0
+  [CAP] GW2 -> M.Salah selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-2 actuals (w=3)...
+    GK: 3731 rows
+    DEF: 15844 rows
+    MID: 18409 rows
+    FWD: 4912 rows
+  Predicted: 120.0 | Actual: 68 | Cap: M.Salah | Hits: 0
+  FT next GW: 3 | Bank: 0.5m | Squad val: 99.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 3  |  FT: 3  |  Bank: 0.5m
+  [TEAM FORM] GW3 top attack: [(6, 3.0), (13, 3.0), (5, 2.5)] | top defence: [(1, 1.0), (2, 1.0), (12, 1.0)]
+  [BENCH-INTEL] GW3 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Raya(£5.5m,f3=9.0), Welbeck(£5.5m,f3=10.5), Romero(£5.0m,f3=8.0), Pedro Porro(£5.5m,f3=7.5)
+  [CAP] GW3 candidates:
+    1. M.Salah (MID) raw:14.2 adj:16.3 form3:12.0 home:0.0  <- SELECTED
+    2. Palmer (MID) raw:11.4 adj:13.2 form3:9.5 home:1.0
+    3. Isak (FWD) raw:12.3 adj:8.9 form3:3.5 home:1.0
+  [CAP] GW3 -> M.Salah selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-3 actuals (w=4)...
+    GK: 3800 rows
+    DEF: 16054 rows
+    MID: 18705 rows
+    FWD: 4985 rows
+  Predicted: 122.7 | Actual: 88 | Cap: M.Salah | Hits: 0
+  FT next GW: 4 | Bank: 0.5m | Squad val: 99.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 4  |  FT: 4  |  Bank: 0.5m
+  [TEAM FORM] GW4 top attack: [(13, 3.0), (6, 2.3333333333333335), (12, 2.3333333333333335)] | top defence: [(2, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [BENCH-INTEL] GW4 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: A.Becker(£5.5m,f3=7.0), Semenyo(£5.5m,f3=6.3), Onana(£5.0m,f3=6.7), Romero(£5.1m,f3=5.7)
+  [CAP] GW4 candidates:
+    1. M.Salah (MID) raw:13.9 adj:15.8 form3:13.7 home:1.0  <- SELECTED
+    2. Mbeumo (MID) raw:11.9 adj:13.5 form3:8.0 home:0.0
+    3. Palmer (MID) raw:11.7 adj:13.5 form3:8.3 home:0.0
+  [CAP] GW4 -> M.Salah selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-4 actuals (w=5)...
+    GK: 3869 rows
+    DEF: 16269 rows
+    MID: 19007 rows
+    FWD: 5058 rows
+  Predicted: 120.0 | Actual: 50 | Cap: M.Salah | Hits: 0
+  FT next GW: 5 | Bank: 0.5m | Squad val: 99.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 5  |  FT: 5  |  Bank: 0.5m
+  [TEAM FORM] GW5 top attack: [(13, 3.0), (6, 2.6666666666666665), (2, 2.0)] | top defence: [(2, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [BENCH-INTEL] GW5 | BB target: GW8 (score: 25.39) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:25.39
+  [BENCH-INTEL] Recommended bench: Raya(£5.5m,f3=7.0), McNeil(£5.4m,f3=6.7), Aina(£4.4m,f3=6.3), Romero(£5.1m,f3=5.7)
+  [CHIP-CHECK] GW5 | chips_used: [] | dgw: False
+  [CAP] GW5 blank penalty on M.Salah (capped last GW, scored 2.0pts)
+  [CAP] GW5 candidates:
+    1. Watkins (FWD) raw:11.0 adj:13.7 form3:6.7 home:1.0  <- SELECTED
+    2. Palmer (MID) raw:11.3 adj:13.1 form3:8.7 home:0.0
+    3. M.Salah (MID) raw:13.4 adj:11.7 form3:9.7 home:1.0
+  [CAP] GW5 -> Watkins selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-5 actuals (w=6)...
+    GK: 3939 rows
+    DEF: 16484 rows
+    MID: 19310 rows
+    FWD: 5131 rows
+  Predicted: 122.7 | Actual: 57 | Cap: Watkins | Hits: 0
+  FT next GW: 5 | Bank: 0.5m | Squad val: 99.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 6  |  FT: 5  |  Bank: 0.5m
+  [TEAM FORM] GW6 top attack: [(2, 3.0), (13, 2.3333333333333335), (12, 2.0)] | top defence: [(12, 1.0), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [BENCH-INTEL] GW6 | BB target: GW9 (score: 27.93) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:27.49, GW9:27.93
+  [BENCH-INTEL] Recommended bench: Sánchez(£4.6m,f3=9.0), Dalot(£5.0m,f3=7.0), McNeil(£5.4m,f3=6.7), Mario Jr.(£5.0m,f3=5.3)
+  [CHIP-CHECK] GW6 | chips_used: [] | dgw: False
+  [CAP] GW6 candidates:
+    1. M.Salah (MID) raw:13.2 adj:15.1 form3:8.3 home:0.0  <- SELECTED
+    2. Mbeumo (MID) raw:9.8 adj:11.4 form3:8.0 home:1.0
+    3. Watkins (FWD) raw:8.7 adj:11.0 form3:8.0 home:0.0
+  [CAP] GW6 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-6 actuals (w=7)...
+    GK: 4009 rows
+    DEF: 16702 rows
+    MID: 19613 rows
+    FWD: 5204 rows
+  Predicted: 113.1 | Actual: 89 | Cap: M.Salah [TC1] | Hits: 0
+  FT next GW: 3 | Bank: 1.1m | Squad val: 99.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 7  |  FT: 3  |  Bank: 1.1m
+  [TEAM FORM] GW7 top attack: [(2, 3.0), (6, 2.6666666666666665), (1, 2.0)] | top defence: [(6, 0.6666666666666666), (9, 0.6666666666666666), (12, 0.6666666666666666)]
+  [BENCH-INTEL] GW7 | BB target: GW10 (score: 31.78) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:30.95, GW9:31.14, GW10:31.78
+  [BENCH-INTEL] Recommended bench: Sánchez(£4.7m,f3=9.0), McNeil(£5.5m,f3=9.7), Dalot(£5.0m,f3=6.7), Rogers(£5.2m,f3=6.3)
+  [CHIP-CHECK] GW7 | chips_used: ['tc1'] | dgw: False
+  [CAP] GW7 candidates:
+    1. Palmer (MID) raw:10.5 adj:12.0 form3:12.0 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:8.1 adj:10.2 form3:10.0 home:1.0
+    3. M.Salah (MID) raw:12.0 adj:7.9 form3:6.0 home:0.0
+  [CAP] GW7 -> Palmer selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-7 actuals (w=8)...
+    GK: 4079 rows
+    DEF: 16921 rows
+    MID: 19916 rows
+    FWD: 5278 rows
+  Predicted: 92.4 | Actual: 53 | Cap: Palmer | Hits: 0
+  FT next GW: 2 | Bank: 2.3m | Squad val: 98.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 8  |  FT: 2  |  Bank: 2.3m
+  [TEAM FORM] GW8 top attack: [(1, 2.6666666666666665), (6, 2.6666666666666665), (18, 2.6666666666666665)] | top defence: [(7, 0.6666666666666666), (8, 0.6666666666666666), (12, 0.6666666666666666)]
+  [BENCH-INTEL] GW8 | BB target: GW8 (score: 27.71) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW8:27.71, GW9:26.93, GW10:27.66, GW11:26.93
+  [BENCH-INTEL] Recommended bench: Pickford(£4.8m,f3=6.3), Justin(£4.5m,f3=8.0), Rogers(£5.3m,f3=6.7), Konaté(£5.2m,f3=7.0)
+  [CHIP-CHECK] GW8 | chips_used: ['tc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW8
+  [CAP] GW8 candidates:
+    1. Mbeumo (MID) raw:8.2 adj:9.4 form3:8.3 home:0.0  <- SELECTED
+    2. Rogers (MID) raw:8.1 adj:9.3 form3:6.7 home:0.0
+    3. Palmer (MID) raw:6.5 adj:7.3 form3:13.0 home:0.0
+  [CAP] GW8 -> Mbeumo selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-8 actuals (w=9)...
+    GK: 4149 rows
+    DEF: 17140 rows
+    MID: 20220 rows
+    FWD: 5352 rows
+  Predicted: 79.7 | Actual: 60 | Cap: Mbeumo [BB1] | Hits: 0
+  FT next GW: 1 | Bank: 3.5m | Squad val: 97.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 9  |  FT: 1  |  Bank: 3.5m
+  [TEAM FORM] GW9 top attack: [(18, 2.6666666666666665), (4, 2.3333333333333335), (1, 2.0)] | top defence: [(8, 0.6666666666666666), (1, 0.3333333333333333), (2, 0.3333333333333333)]
+  [CHIP-CHECK] GW9 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW9 blank penalty on Mbeumo (capped last GW, scored 2.0pts)
+  [CAP] GW9 candidates:
+    1. Palmer (MID) raw:8.7 adj:10.0 form3:11.0 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:7.3 adj:9.1 form3:7.0 home:1.0
+    3. M.Salah (MID) raw:5.4 adj:6.1 form3:8.3 home:0.0
+  [CAP] GW9 -> Palmer selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-9 actuals (w=10)...
+    GK: 4221 rows
+    DEF: 17360 rows
+    MID: 20524 rows
+    FWD: 5426 rows
+  Predicted: 66.8 | Actual: 85 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 2.3m | Squad val: 99.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 10  |  FT: 1  |  Bank: 2.3m
+  [TEAM FORM] GW10 top attack: [(4, 3.0), (19, 2.6666666666666665), (13, 2.0)] | top defence: [(2, 0.6666666666666666), (3, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW10 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW10 candidates:
+    1. M.Salah (MID) raw:10.1 adj:11.6 form3:8.3 home:1.0  <- SELECTED
+    2. Wood (FWD) raw:6.7 adj:8.4 form3:9.3 home:1.0
+    3. Mbeumo (MID) raw:7.2 adj:8.3 form3:8.3 home:0.0
+  [CAP] GW10 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-10 actuals (w=11)...
+    GK: 4293 rows
+    DEF: 17581 rows
+    MID: 20831 rows
+    FWD: 5500 rows
+  Predicted: 75.7 | Actual: 49 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 5.2m | Squad val: 97.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 11  |  FT: 1  |  Bank: 5.2m
+  [TEAM FORM] GW11 top attack: [(16, 2.3333333333333335), (18, 2.3333333333333335), (12, 2.0)] | top defence: [(3, 1.0), (2, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW11 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW11 candidates:
+    1. M.Salah (MID) raw:9.4 adj:10.8 form3:10.3 home:1.0  <- SELECTED
+    2. Mbeumo (MID) raw:7.1 adj:8.2 form3:6.7 home:1.0
+    3. Wood (FWD) raw:6.1 adj:7.5 form3:9.0 home:1.0
+  [CAP] GW11 -> M.Salah selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-11 actuals (w=12)...
+    GK: 4365 rows
+    DEF: 17804 rows
+    MID: 21139 rows
+    FWD: 5575 rows
+  Predicted: 63.0 | Actual: 62 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.6m | Squad val: 101.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 12  |  FT: 1  |  Bank: 1.6m
+  [TEAM FORM] GW12 top attack: [(4, 2.3333333333333335), (16, 2.3333333333333335), (10, 2.0)] | top defence: [(2, 0.6666666666666666), (3, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW12 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW12 candidates:
+    1. M.Salah (MID) raw:10.3 adj:12.1 form3:11.0 home:0.0  <- SELECTED
+    2. Mbeumo (MID) raw:5.8 adj:6.7 form3:7.7 home:0.0
+    3. Palmer (MID) raw:7.4 adj:5.0 form3:5.0 home:0.0
+  [CAP] GW12 -> M.Salah selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-12 actuals (w=13)...
+    GK: 4437 rows
+    DEF: 18030 rows
+    MID: 21450 rows
+    FWD: 5650 rows
+  Predicted: 62.2 | Actual: 66 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: -0.0m | Squad val: 102.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 13  |  FT: 1  |  Bank: -0.0m
+  [TEAM FORM] GW13 top attack: [(18, 3.0), (20, 2.6666666666666665), (12, 2.3333333333333335)] | top defence: [(8, 1.0), (4, 0.6666666666666666), (19, 0.6666666666666666)]
+  [CHIP-CHECK] GW13 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW13 candidates:
+    1. M.Salah (MID) raw:10.0 adj:11.4 form3:12.0 home:1.0  <- SELECTED
+    2. Cunha (FWD) raw:6.7 adj:8.4 form3:11.3 home:1.0
+    3. Mbeumo (MID) raw:8.0 adj:5.4 form3:3.7 home:1.0
+  [CAP] GW13 -> M.Salah selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-13 actuals (w=14)...
+    GK: 4509 rows
+    DEF: 18259 rows
+    MID: 21764 rows
+    FWD: 5725 rows
+  Predicted: 64.2 | Actual: 59 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 2.2m | Squad val: 100.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 14  |  FT: 1  |  Bank: 2.2m
+  [TEAM FORM] GW14 top attack: [(1, 3.0), (20, 2.6666666666666665), (3, 2.3333333333333335)] | top defence: [(6, 0.6666666666666666), (8, 0.6666666666666666), (12, 0.6666666666666666)]
+  [CHIP-CHECK] GW14 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW14 candidates:
+    1. N.Jackson (FWD) raw:8.3 adj:10.5 form3:6.7 home:0.0  <- SELECTED
+    2. M.Salah (MID) raw:8.6 adj:9.7 form3:13.3 home:0.0
+    3. Saka (MID) raw:8.3 adj:9.6 form3:11.0 home:1.0
+  [CAP] GW14 -> N.Jackson selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-14 actuals (w=15)...
+    GK: 4581 rows
+    DEF: 18490 rows
+    MID: 22079 rows
+    FWD: 5800 rows
+  Predicted: 63.5 | Actual: 49 | Cap: N.Jackson | Hits: 0
+  FT next GW: 1 | Bank: 1.9m | Squad val: 101.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 15  |  FT: 1  |  Bank: 1.9m
+  [TEAM FORM] GW15 top attack: [(1, 3.3333333333333335), (2, 3.0), (6, 3.0)] | top defence: [(6, 1.0), (1, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW15 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW15 blank penalty on N.Jackson (capped last GW, scored 0.0pts)
+  [CAP] GW15 candidates:
+    1. M.Salah (MID) raw:11.9 adj:13.7 form3:14.7 home:0.0  <- SELECTED
+    2. Saka (MID) raw:8.1 adj:9.3 form3:11.3 home:0.0
+    3. Cunha (FWD) raw:6.1 adj:7.6 form3:6.7 home:0.0
+  [CAP] GW15 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-15 actuals (w=16)...
+    GK: 4646 rows
+    DEF: 18700 rows
+    MID: 22367 rows
+    FWD: 5867 rows
+  Predicted: 63.7 | Actual: 38 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.7m | Squad val: 101.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 16  |  FT: 1  |  Bank: 1.7m
+  [TEAM FORM] GW16 top attack: [(6, 3.6666666666666665), (4, 3.0), (1, 2.6666666666666665)] | top defence: [(2, 0.6666666666666666), (6, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW16 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW16 blank penalty on M.Salah (capped last GW, scored 0pts)
+  [CAP] GW16 candidates:
+    1. Palmer (MID) raw:10.0 adj:11.5 form3:13.0 home:1.0  <- SELECTED
+    2. M.Salah (MID) raw:13.0 adj:11.3 form3:14.7 home:1.0
+    3. Saka (MID) raw:8.9 adj:10.2 form3:7.7 home:1.0
+  [CAP] GW16 -> Palmer selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-16 actuals (w=17)...
+    GK: 4718 rows
+    DEF: 18934 rows
+    MID: 22686 rows
+    FWD: 5943 rows
+  Predicted: 67.8 | Actual: 65 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 103.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 17  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW17 top attack: [(6, 3.6666666666666665), (15, 3.0), (18, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW17 | chips_used: ['bb1', 'tc1'] | dgw: False
+  [CAP] GW17 blank penalty on Palmer (capped last GW, scored 3.0pts)
+  [CAP] GW17 candidates:
+    1. M.Salah (MID) raw:14.8 adj:17.0 form3:12.0 home:0.0  <- SELECTED
+    2. Mbeumo (MID) raw:10.4 adj:11.9 form3:8.0 home:1.0
+    3. Palmer (MID) raw:11.7 adj:10.1 form3:9.3 home:0.0
+  [CAP] GW17 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-17 actuals (w=18)...
+    GK: 4790 rows
+    DEF: 19168 rows
+    MID: 23005 rows
+    FWD: 6019 rows
+  Predicted: 110.6 | Actual: 70 | Cap: M.Salah [WC1] | Hits: 0
+  FT next GW: 2 | Bank: 0.0m | Squad val: 104.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 18  |  FT: 2  |  Bank: 0.0m
+  [TEAM FORM] GW18 top attack: [(12, 3.6666666666666665), (18, 3.6666666666666665), (15, 3.3333333333333335)] | top defence: [(2, 1.0), (8, 1.0), (1, 0.6666666666666666)]
+  [CHIP-CHECK] GW18 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW18 candidates:
+    1. M.Salah (MID) raw:10.4 adj:12.2 form3:14.7 home:1.0  <- SELECTED
+    2. Palmer (MID) raw:7.1 adj:8.1 form3:8.0 home:1.0
+    3. Mbeumo (MID) raw:6.2 adj:7.1 form3:8.0 home:0.0
+  [CAP] GW18 -> M.Salah selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-18 actuals (w=19)...
+    GK: 4863 rows
+    DEF: 19405 rows
+    MID: 23324 rows
+    FWD: 6095 rows
+  Predicted: 68.4 | Actual: 74 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 103.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 19  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW19 top attack: [(12, 3.6666666666666665), (15, 3.6666666666666665), (18, 2.6666666666666665)] | top defence: [(1, 1.0), (3, 1.0), (6, 1.0)]
+  [CHIP-CHECK] GW19 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CHIP] GW19 FH1 NOT force-used — GW19 is not a DGW, wasting FH1
+  [CHIP] GW19 complete — FH1 wasted (not a DGW, better to waste than misuse)
+  [CAP] GW19 candidates:
+    1. M.Salah (MID) raw:13.0 adj:15.1 form3:11.7 home:0.0  <- SELECTED
+    2. Cunha (FWD) raw:6.4 adj:8.0 form3:10.0 home:0.0
+    3. J.Murphy (MID) raw:5.1 adj:5.9 form3:10.7 home:0.0
+  [CAP] GW19 -> M.Salah selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-19 actuals (w=20)...
+    GK: 4936 rows
+    DEF: 19644 rows
+    MID: 23643 rows
+    FWD: 6173 rows
+  Predicted: 69.1 | Actual: 75 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 104.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 20  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW20 top attack: [(12, 4.666666666666667), (1, 3.0), (15, 3.0)] | top defence: [(15, 1.0), (16, 1.0), (1, 0.6666666666666666)]
+  [BENCH-INTEL] GW20 | BB target: GW23 (score: 32.47) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW20:32.28, GW21:30.81, GW22:32.27, GW23:32.47
+  [BENCH-INTEL] Recommended bench: Sels(£4.8m,f3=7.0), Aina(£5.1m,f3=9.7), Rogers(£5.5m,f3=9.0), Hall(£4.7m,f3=8.3)
+  [CHIP-CHECK] GW20 | chips_used: ['bb1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW20 candidates:
+    1. M.Salah (MID) raw:10.1 adj:11.8 form3:15.3 home:1.0  <- SELECTED
+    2. Cunha (FWD) raw:5.5 adj:6.8 form3:7.3 home:1.0
+    3. J.Murphy (MID) raw:5.4 adj:6.2 form3:7.3 home:0.0
+  [CAP] GW20 -> M.Salah selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-20 actuals (w=21)...
+    GK: 5009 rows
+    DEF: 19884 rows
+    MID: 23963 rows
+    FWD: 6251 rows
+  Predicted: 81.6 | Actual: 85 | Cap: M.Salah [TC2] | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 104.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 21  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW21 top attack: [(12, 3.3333333333333335), (15, 2.3333333333333335), (4, 2.0)] | top defence: [(16, 1.0), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [BENCH-INTEL] GW21 | BB target: GW22 (score: 26.87) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW21:25.01, GW22:26.87, GW23:26.21, GW24:25.67
+  [BENCH-INTEL] Recommended bench: Sels(£4.9m,f3=7.7), Aina(£5.2m,f3=6.7), Kerkez(£4.7m,f3=6.3), Hall(£4.8m,f3=6.7)
+  [CHIP-CHECK] GW21 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW21 candidates:
+    1. M.Salah (MID) raw:12.8 adj:14.6 form3:10.7 home:0.0  <- SELECTED
+    2. Palmer (MID) raw:8.4 adj:9.7 form3:7.3 home:1.0
+    3. Mbeumo (MID) raw:6.0 adj:6.9 form3:9.7 home:1.0
+  [CAP] GW21 -> M.Salah selected (streak: 5 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-21 actuals (w=22)...
+    GK: 5084 rows
+    DEF: 20130 rows
+    MID: 24286 rows
+    FWD: 6331 rows
+  Predicted: 70.8 | Actual: 42 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 2.1m | Squad val: 102.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 22  |  FT: 1  |  Bank: 2.1m
+  [TEAM FORM] GW22 top attack: [(4, 2.6666666666666665), (12, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(13, 1.0), (15, 0.6666666666666666), (16, 0.6666666666666666)]
+  [BENCH-INTEL] GW22 | BB target: GW22 (score: 25.06) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW22:25.06, GW23:24.89, GW24:24.53, GW25:24.36
+  [BENCH-INTEL] Recommended bench: Sels(£4.9m,f3=6.0), Amad(£5.4m,f3=10.3), Hall(£4.9m,f3=6.7), Guéhi(£4.5m,f3=5.7)
+  [CHIP-CHECK] GW22 | chips_used: ['bb1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW22
+  [CAP] GW22 blank penalty on M.Salah (capped last GW, scored 2.0pts)
+  [CAP] GW22 candidates:
+    1. Wood (FWD) raw:10.5 adj:13.4 form3:9.7 home:1.0  <- SELECTED
+    2. Isak (FWD) raw:7.7 adj:9.6 form3:10.0 home:1.0
+    3. Palmer (MID) raw:7.8 adj:9.0 form3:7.3 home:1.0
+  [CAP] GW22 -> Wood selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-22 actuals (w=23)...
+    GK: 5160 rows
+    DEF: 20377 rows
+    MID: 24612 rows
+    FWD: 6411 rows
+  Predicted: 72.5 | Actual: 55 | Cap: Wood [BB2] | Hits: 0
+  FT next GW: 1 | Bank: 0.8m | Squad val: 104.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 23  |  FT: 1  |  Bank: 0.8m
+  [TEAM FORM] GW23 top attack: [(13, 3.6666666666666665), (3, 2.3333333333333335), (4, 2.3333333333333335)] | top defence: [(13, 1.0), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-CHECK] GW23 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW23 candidates:
+    1. Palmer (MID) raw:7.8 adj:8.9 form3:7.3 home:0.0  <- SELECTED
+    2. Wood (FWD) raw:6.4 adj:8.0 form3:9.7 home:0.0
+    3. M.Salah (MID) raw:11.2 adj:7.4 form3:4.0 home:1.0
+  [CAP] GW23 -> Palmer selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-23 actuals (w=24)...
+    GK: 5237 rows
+    DEF: 20627 rows
+    MID: 24940 rows
+    FWD: 6492 rows
+  Predicted: 68.3 | Actual: 54 | Cap: Palmer | Hits: 0
+  FT next GW: 1 | Bank: 1.2m | Squad val: 103.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 24  |  FT: 1  |  Bank: 1.2m
+  [TEAM FORM] GW24 top attack: [(3, 3.6666666666666665), (13, 3.6666666666666665), (12, 2.3333333333333335)] | top defence: [(2, 0.6666666666666666), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [DGW] GW24: 69 players boosted x2.0
+  [CHIP-CHECK] GW24 | chips_used: ['bb1', 'bb2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CHIP] GW24 FH triggered naturally — DGW with only 1 DGW squad players
+  [CAP] GW24 blank penalty on Palmer (capped last GW, scored 2.0pts)
+  [CAP] GW24 candidates:
+    1. M.Salah (MID) raw:19.7 adj:13.0 form3:4.3 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:6.5 adj:8.1 form3:7.0 home:0.0
+    3. Wood (FWD) raw:6.4 adj:8.0 form3:7.7 home:1.0
+  [CAP] GW24 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-24 actuals (w=25)...
+    GK: 5316 rows
+    DEF: 20879 rows
+    MID: 25270 rows
+    FWD: 6573 rows
+  Predicted: 91.3 | Actual: 120 | Cap: M.Salah [FH2] | Hits: 0
+  FT next GW: 2 | Bank: 1.2m | Squad val: 103.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 25  |  FT: 2  |  Bank: 1.2m
+  [TEAM FORM] GW25 top attack: [(12, 3.3333333333333335), (13, 3.3333333333333335), (3, 3.0)] | top defence: [(8, 1.0), (12, 1.0), (4, 0.6666666666666666)]
+  [DGW] GW25: 77 players boosted x2.0
+  [CHIP-CHECK] GW25 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW25 candidates:
+    1. M.Salah (MID) raw:20.0 adj:23.0 form3:13.3 home:1.0  <- SELECTED
+    2. Wood (FWD) raw:6.8 adj:8.5 form3:10.3 home:0.0
+    3. Alexander-Arnold (DEF) raw:11.1 adj:8.3 form3:7.7 home:1.0
+  [CAP] GW25 -> M.Salah selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-25 actuals (w=26)...
+    GK: 5396 rows
+    DEF: 21137 rows
+    MID: 25609 rows
+    FWD: 6655 rows
+  Predicted: 90.1 | Actual: 105 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.8m | Squad val: 102.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 26  |  FT: 1  |  Bank: 1.8m
+  [TEAM FORM] GW26 top attack: [(12, 4.0), (8, 3.0), (1, 2.6666666666666665)] | top defence: [(12, 1.0), (1, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW26 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW26 candidates:
+    1. M.Salah (MID) raw:14.8 adj:16.8 form3:19.0 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:7.9 adj:9.9 form3:7.0 home:1.0
+    3. Wood (FWD) raw:7.5 adj:9.3 form3:9.3 home:0.0
+  [CAP] GW26 -> M.Salah selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-26 actuals (w=27)...
+    GK: 5477 rows
+    DEF: 21396 rows
+    MID: 25948 rows
+    FWD: 6739 rows
+  Predicted: 76.3 | Actual: 73 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 103.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 27  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW27 top attack: [(8, 3.3333333333333335), (12, 3.3333333333333335), (16, 3.3333333333333335)] | top defence: [(12, 1.0), (4, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW27 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW27 candidates:
+    1. M.Salah (MID) raw:14.5 adj:16.5 form3:21.0 home:1.0  <- SELECTED
+    2. Cunha (FWD) raw:7.2 adj:9.0 form3:8.3 home:1.0
+    3. Wood (FWD) raw:6.3 adj:7.7 form3:10.3 home:1.0
+  [CAP] GW27 -> M.Salah selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-27 actuals (w=28)...
+    GK: 5558 rows
+    DEF: 21655 rows
+    MID: 26287 rows
+    FWD: 6824 rows
+  Predicted: 72.2 | Actual: 59 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.5m | Squad val: 103.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 28  |  FT: 1  |  Bank: 0.5m
+  [TEAM FORM] GW28 top attack: [(5, 3.0), (12, 2.6666666666666665), (2, 2.0)] | top defence: [(4, 1.0), (12, 1.0), (1, 0.6666666666666666)]
+  [CHIP-CHECK] GW28 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW28 candidates:
+    1. M.Salah (MID) raw:13.1 adj:15.4 form3:13.3 home:1.0  <- SELECTED
+    2. Cunha (FWD) raw:6.6 adj:8.2 form3:6.7 home:1.0
+    3. Watkins (FWD) raw:5.8 adj:7.2 form3:7.3 home:0.0
+  [CAP] GW28 -> M.Salah selected (streak: 5 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-28 actuals (w=29)...
+    GK: 5640 rows
+    DEF: 21916 rows
+    MID: 26627 rows
+    FWD: 6910 rows
+  Predicted: 72.2 | Actual: 57 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 104.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 29  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW29 top attack: [(5, 2.6666666666666665), (12, 2.3333333333333335), (6, 2.0)] | top defence: [(4, 0.6666666666666666), (6, 0.6666666666666666), (7, 0.6666666666666666)]
+  [CHIP-CHECK] GW29 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW29 candidates:
+    1. M.Salah (MID) raw:17.2 adj:19.8 form3:11.7 home:0.0  <- SELECTED
+    2. Mbeumo (MID) raw:5.3 adj:6.1 form3:7.0 home:0.0
+    3. Wood (FWD) raw:8.1 adj:5.9 form3:3.0 home:0.0
+  [CAP] GW29 -> M.Salah selected (streak: 6 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-29 actuals (w=30)...
+    GK: 5705 rows
+    DEF: 22127 rows
+    MID: 26900 rows
+    FWD: 6984 rows
+  Predicted: 74.3 | Actual: 15 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.6m | Squad val: 102.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 30  |  FT: 1  |  Bank: 1.6m
+  [TEAM FORM] GW30 top attack: [(12, 2.3333333333333335), (7, 2.0), (14, 2.0)] | top defence: [(16, 1.0), (1, 0.6666666666666666), (6, 0.6666666666666666)]
+  [CHIP-CHECK] GW30 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW30 blank penalty on M.Salah (capped last GW, scored 0pts)
+  [CAP] GW30 candidates:
+    1. M.Salah (MID) raw:17.6 adj:15.3 form3:11.7 home:1.0  <- SELECTED
+    2. I.Sarr (MID) raw:6.4 adj:7.6 form3:9.7 home:0.0
+    3. Wood (FWD) raw:7.6 adj:5.5 form3:2.0 home:1.0
+  [CAP] GW30 -> M.Salah selected (streak: 7 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-30 actuals (w=31)...
+    GK: 5787 rows
+    DEF: 22389 rows
+    MID: 27241 rows
+    FWD: 7070 rows
+  Predicted: 75.0 | Actual: 42 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 1.1m | Squad val: 103.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 31  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW31 top attack: [(7, 2.0), (12, 2.0), (16, 2.0)] | top defence: [(16, 1.0), (1, 0.6666666666666666), (2, 0.6666666666666666)]
+  [CHIP-CHECK] GW31 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW31 blank penalty on M.Salah (capped last GW, scored 3.0pts)
+  [CAP] GW31 candidates:
+    1. M.Salah (MID) raw:13.3 adj:11.6 form3:8.0 home:0.0  <- SELECTED
+    2. Isak (FWD) raw:7.3 adj:5.3 form3:3.3 home:0.0
+    3. I.Sarr (MID) raw:4.3 adj:5.0 form3:9.3 home:1.0
+  [CAP] GW31 -> M.Salah selected (streak: 8 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-31 actuals (w=32)...
+    GK: 5869 rows
+    DEF: 22651 rows
+    MID: 27583 rows
+    FWD: 7156 rows
+  Predicted: 64.1 | Actual: 30 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 103.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 32  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW32 top attack: [(2, 2.0), (9, 2.0), (12, 2.0)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [DGW] GW32: 69 players boosted x2.0
+  [CHIP-CHECK] GW32 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW32 blank penalty on M.Salah (capped last GW, scored 2.0pts)
+  [CAP] GW32 candidates:
+    1. M.Salah (MID) raw:13.8 adj:12.1 form3:6.7 home:1.0  <- SELECTED
+    2. Isak (FWD) raw:13.8 adj:9.9 form3:4.0 home:1.0
+    3. I.Sarr (MID) raw:8.6 adj:5.6 form3:5.0 home:0.0
+  [CAP] GW32 -> M.Salah selected (streak: 9 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-32 actuals (w=33)...
+    GK: 5951 rows
+    DEF: 22915 rows
+    MID: 27928 rows
+    FWD: 7243 rows
+  Predicted: 77.3 | Actual: 89 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 2.5m | Squad val: 101.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 33  |  FT: 1  |  Bank: 2.5m
+  [TEAM FORM] GW33 top attack: [(15, 4.333333333333333), (2, 2.6666666666666665), (13, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (6, 0.6666666666666666)]
+  [DGW] GW33: 152 players boosted x2.0
+  [CHIP-CHECK] GW33 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW33 candidates:
+    1. M.Salah (MID) raw:13.1 adj:7.9 form3:3.7 home:0.0  <- SELECTED
+    2. Isak (FWD) raw:5.5 adj:6.9 form3:7.0 home:0.0
+    3. I.Sarr (MID) raw:9.2 adj:6.1 form3:3.7 home:1.0
+  [CAP] GW33 -> M.Salah selected (streak: 10 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-33 actuals (w=34)...
+    GK: 6033 rows
+    DEF: 23180 rows
+    MID: 28273 rows
+    FWD: 7330 rows
+  Predicted: 85.9 | Actual: 54 | Cap: M.Salah | Hits: 1
+  FT next GW: 1 | Bank: 0.6m | Squad val: 102.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 34  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW34 top attack: [(15, 4.0), (2, 3.0), (13, 3.0)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW34 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW34 blank penalty on M.Salah (capped last GW, scored 3.0pts)
+  [CAP] GW34 candidates:
+    1. Isak (FWD) raw:9.4 adj:6.8 form3:5.0 home:1.0  <- SELECTED
+    2. Mbeumo (MID) raw:5.6 adj:6.4 form3:7.7 home:0.0
+    3. M.Salah (MID) raw:12.0 adj:5.5 form3:3.7 home:1.0
+  [CAP] GW34 -> Isak selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-34 actuals (w=35)...
+    GK: 6097 rows
+    DEF: 23394 rows
+    MID: 28549 rows
+    FWD: 7405 rows
+  Predicted: 72.8 | Actual: 64 | Cap: Isak | Hits: 0
+  FT next GW: 1 | Bank: 1.3m | Squad val: 102.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 35  |  FT: 1  |  Bank: 1.3m
+  [TEAM FORM] GW35 top attack: [(15, 4.0), (2, 3.0), (13, 3.0)] | top defence: [(3, 1.0), (1, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW35 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW35 candidates:
+    1. Mbeumo (MID) raw:6.2 adj:7.2 form3:7.3 home:1.0  <- SELECTED
+    2. M.Salah (MID) raw:10.1 adj:6.6 form3:5.7 home:0.0
+    3. Isak (FWD) raw:6.8 adj:4.9 form3:6.3 home:0.0
+  [CAP] GW35 -> Mbeumo selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-35 actuals (w=36)...
+    GK: 6179 rows
+    DEF: 23660 rows
+    MID: 28895 rows
+    FWD: 7492 rows
+  Predicted: 66.4 | Actual: 46 | Cap: Mbeumo | Hits: 0
+  FT next GW: 1 | Bank: 1.2m | Squad val: 102.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 36  |  FT: 1  |  Bank: 1.2m
+  [TEAM FORM] GW36 top attack: [(13, 3.3333333333333335), (4, 3.0), (1, 2.6666666666666665)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW36 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW36 candidates:
+    1. Mbeumo (MID) raw:6.7 adj:7.8 form3:8.3 home:0.0  <- SELECTED
+    2. M.Salah (MID) raw:10.0 adj:6.5 form3:4.3 home:1.0
+    3. Isak (FWD) raw:8.6 adj:6.2 form3:5.7 home:1.0
+  [CAP] GW36 -> Mbeumo selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-36 actuals (w=37)...
+    GK: 6261 rows
+    DEF: 23926 rows
+    MID: 29241 rows
+    FWD: 7579 rows
+  Predicted: 70.9 | Actual: 47 | Cap: Mbeumo | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 103.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 37  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW37 top attack: [(1, 3.0), (12, 2.3333333333333335), (2, 2.0)] | top defence: [(7, 1.0), (13, 1.0), (2, 0.6666666666666666)]
+  [CHIP-CHECK] GW37 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW37 candidates:
+    1. M.Salah (MID) raw:10.9 adj:7.2 form3:4.0 home:0.0  <- SELECTED
+    2. Wood (FWD) raw:7.6 adj:5.5 form3:4.0 home:0.0
+    3. Isak (FWD) raw:6.8 adj:4.8 form3:5.7 home:0.0
+  [CAP] GW37 -> M.Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-37 actuals (w=38)...
+    GK: 6343 rows
+    DEF: 24192 rows
+    MID: 29587 rows
+    FWD: 7666 rows
+  Predicted: 66.9 | Actual: 35 | Cap: M.Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.7m | Squad val: 103.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 38  |  FT: 1  |  Bank: 0.7m
+  [TEAM FORM] GW38 top attack: [(7, 2.3333333333333335), (8, 2.3333333333333335), (4, 2.0)] | top defence: [(2, 1.0), (13, 1.0), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW38 | chips_used: ['bb1', 'bb2', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW38 blank penalty on M.Salah (capped last GW, scored 2.0pts)
+  [CAP] GW38 candidates:
+    1. Wood (FWD) raw:8.3 adj:6.0 form3:4.0 home:1.0  <- SELECTED
+    2. Ødegaard (MID) raw:6.5 adj:4.3 form3:6.3 home:0.0
+    3. Isak (FWD) raw:5.9 adj:4.2 form3:3.7 home:1.0
+  [CAP] GW38 -> Wood selected (streak: 1 consecutive)
+  Predicted: 66.4 | Actual: 50 | Cap: Wood | Hits: 0
+  FT next GW: 1 | Bank: 3.0m | Squad val: 100.4m
+  [SAVED]
+
+======================================================================
+  SIMULATION COMPLETE
+  Total actual pts:    2359
+  Total predicted:     3078.4
+  Total penalties:     -4
+  Chips used:          ['tc1', 'bb1', 'wc1', 'tc2', 'bb2', 'fh2']
+======================================================================

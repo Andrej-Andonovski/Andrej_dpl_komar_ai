@@ -1,0 +1,394 @@
+{
+  "source": {
+    "rules_mode": "corrected",
+    "chip_strategy": "legacy",
+    "has_history": true
+  },
+  "totals": {
+    "actual": 2156,
+    "predicted": 2076.4,
+    "penalties": -64,
+    "gw_mean": 56.74,
+    "gw_std": 16.68,
+    "n_gws": 38
+  },
+  "transfers": {
+    "total": 58,
+    "hit_pts": 64,
+    "hit_gws": [
+      3,
+      5,
+      13,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      25,
+      29,
+      30
+    ],
+    "buybacks_within_6": 17,
+    "short_holds_within_2": 19,
+    "ft_at_deadline_hist": {
+      "1": 28,
+      "2": 4,
+      "3": 1,
+      "5": 1
+    },
+    "payoff_window_gws": 4,
+    "payoff_mode": "in_minus_out",
+    "payoff_per_transfer_gw": [
+      {
+        "gw": 2,
+        "n": 1,
+        "delta": -14.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 3,
+        "n": 3,
+        "delta": -2.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 4,
+        "n": 1,
+        "delta": -5.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 5,
+        "n": 2,
+        "delta": 21.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 6,
+        "n": 1,
+        "delta": 10.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 7,
+        "n": 1,
+        "delta": -4.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 8,
+        "n": 1,
+        "delta": 9.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 9,
+        "n": 1,
+        "delta": -16.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 10,
+        "n": 1,
+        "delta": -12.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 11,
+        "n": 1,
+        "delta": 6.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 12,
+        "n": 1,
+        "delta": 3.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 13,
+        "n": 2,
+        "delta": 6.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 14,
+        "n": 1,
+        "delta": -2.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 15,
+        "n": 5,
+        "delta": 14.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 16,
+        "n": 2,
+        "delta": -32.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 18,
+        "n": 3,
+        "delta": -7.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 19,
+        "n": 2,
+        "delta": 19.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 20,
+        "n": 2,
+        "delta": 12.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 21,
+        "n": 2,
+        "delta": 10.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 22,
+        "n": 2,
+        "delta": -1.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 23,
+        "n": 2,
+        "delta": 8.0,
+        "hit_pts": 4,
+        "complete": true
+      },
+      {
+        "gw": 24,
+        "n": 1,
+        "delta": -7.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 25,
+        "n": 3,
+        "delta": 28.0,
+        "hit_pts": 8,
+        "complete": true
+      },
+      {
+        "gw": 27,
+        "n": 2,
+        "delta": -12.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 28,
+        "n": 1,
+        "delta": -17.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 29,
+        "n": 3,
+        "delta": 22.0,
+        "hit_pts": 8,
+        "complete": false
+      },
+      {
+        "gw": 30,
+        "n": 3,
+        "delta": 47.0,
+        "hit_pts": 8,
+        "complete": false
+      },
+      {
+        "gw": 31,
+        "n": 1,
+        "delta": -5.0,
+        "hit_pts": 0,
+        "complete": false
+      },
+      {
+        "gw": 32,
+        "n": 1,
+        "delta": 3.0,
+        "hit_pts": 0,
+        "complete": false
+      },
+      {
+        "gw": 35,
+        "n": 3,
+        "delta": 11.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 36,
+        "n": 1,
+        "delta": 1.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 37,
+        "n": 1,
+        "delta": -4.0,
+        "hit_pts": 0,
+        "complete": true
+      },
+      {
+        "gw": 38,
+        "n": 1,
+        "delta": 1.0,
+        "hit_pts": 0,
+        "complete": true
+      }
+    ],
+    "net_delta_mean": 0.82,
+    "net_delta_positive_pct": 54.5,
+    "partial_windows": 4,
+    "hit_roi": [
+      {
+        "gw": 3,
+        "roi": -6.0
+      },
+      {
+        "gw": 5,
+        "roi": 17.0
+      },
+      {
+        "gw": 13,
+        "roi": 2.0
+      },
+      {
+        "gw": 16,
+        "roi": -36.0
+      },
+      {
+        "gw": 18,
+        "roi": -11.0
+      },
+      {
+        "gw": 19,
+        "roi": 15.0
+      },
+      {
+        "gw": 20,
+        "roi": 8.0
+      },
+      {
+        "gw": 21,
+        "roi": 6.0
+      },
+      {
+        "gw": 22,
+        "roi": -5.0
+      },
+      {
+        "gw": 23,
+        "roi": 4.0
+      },
+      {
+        "gw": 25,
+        "roi": 20.0
+      },
+      {
+        "gw": 29,
+        "roi": 14.0
+      },
+      {
+        "gw": 30,
+        "roi": 39.0
+      }
+    ]
+  },
+  "captain": {
+    "avg_actual": 4.82,
+    "zero_gws": [
+      28,
+      33
+    ],
+    "zero_rate_pct": 5.3,
+    "regret_vs_best_xi_mean": 7.05,
+    "note": "regret uses post-auto-sub XI; vice not modelled in legacy"
+  },
+  "chips": [
+    {
+      "chip": "tc1",
+      "gw": 5,
+      "gw_actual": 52,
+      "tc_extra_pts": 9.0
+    },
+    {
+      "chip": "bb1",
+      "gw": 8,
+      "gw_actual": 96,
+      "bench_pts_gained": 25.0
+    },
+    {
+      "chip": "wc1",
+      "gw": 17,
+      "gw_actual": 61
+    },
+    {
+      "chip": "tc2",
+      "gw": 21,
+      "gw_actual": 71,
+      "tc_extra_pts": 12.0
+    },
+    {
+      "chip": "bb2",
+      "gw": 23,
+      "gw_actual": 51,
+      "bench_pts_gained": 16.0
+    },
+    {
+      "chip": "fh2",
+      "gw": 26,
+      "gw_actual": 69
+    },
+    {
+      "chip": "wc2",
+      "gw": 34,
+      "gw_actual": 58
+    }
+  ],
+  "bench": {
+    "avg_pts_wasted_per_gw": 11.08,
+    "auto_subs": 14,
+    "auto_sub_pts_rescued": 76.0
+  },
+  "prediction": {
+    "xi_mae_mean": 3.209,
+    "caveat": "legacy predicted_pts include loyalty/bench-bonus inflation"
+  }
+}

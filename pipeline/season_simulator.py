@@ -1,7 +1,7 @@
 """
 pipeline/season_simulator.py
-Fully standalone GW1-28 FPL season simulator.
-No imports from other pipeline files.
+Fully standalone GW1-38 FPL season simulator.
+Only pipeline import: fpl_rules (pure rule accounting, stdlib-only).
 """
 import os, json, random, warnings, sys
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -13,6 +13,22 @@ import xgboost as xgb
 import lightgbm as lgb
 from pulp import (LpProblem, LpMaximize, LpVariable, lpSum,
                   LpBinary, LpInteger, LpStatus, PULP_CBC_CMD)
+
+# Phase 0 (docs/optimizer_redesign.md §9): pure FPL rule accounting
+try:
+    from pipeline.fpl_rules import sell_value, next_free_transfers
+except ImportError:
+    from fpl_rules import sell_value, next_free_transfers
+
+# Phase 2/3: prediction matrix + MILP core (OPTIMIZER="mp" path)
+try:
+    from pipeline import prediction_matrix as pmx
+    from pipeline.milp_core import (solve_gw as milp_solve_gw,
+                                    solve_horizon as milp_solve_horizon)
+except ImportError:
+    import prediction_matrix as pmx
+    from milp_core import (solve_gw as milp_solve_gw,
+                           solve_horizon as milp_solve_horizon)
 
 warnings.filterwarnings("ignore")
 random.seed(42)
@@ -32,7 +48,7 @@ RECS_JSON    = os.path.join(DATA_DIR, "intel", "recommendations.json")
 # ── Constants ─────────────────────────────────────────────────────────────────
 BUDGET         = 100.0
 MAX_CLUB       = 3
-SIM_END_GW     = 38
+SIM_END_GW     = int(os.environ.get("SIM_END_GW", "38"))
 CHIP_LOCKOUT   = 4
 MAX_HITS       = 1
 FDR_MULT        = 0.028451479772615692   # optuna trial 429 best (1799 pts, 0 pen)
@@ -77,6 +93,95 @@ LOOKAHEAD_GWS      = 3     # how many GWs ahead to evaluate for BB window
 BB_MIN_GW          = 8   # optuna trial 429 best
 BB_MAX_GW_SET1     = 19    # Set 1 BB must fire by GW19
 BB_MAX_GW_SET2     = 38    # Set 2 BB must fire by GW38
+
+# ── Chip Strategy v2 — rolling-horizon, calendar-agnostic ─────────────────────
+# See docs/chip_strategy_redesign.md. No hardcoded GWs beyond the FPL set
+# boundaries (Set 1 = GW1-19, Set 2 = GW20-38). "legacy" keeps the old
+# GW17/18/19 force policy — retained for the thesis ablation.
+CHIP_STRATEGY   = os.environ.get("CHIP_STRATEGY", "v2")   # "v2" | "legacy"
+if CHIP_STRATEGY not in ("v2", "legacy"):
+    raise ValueError(f"CHIP_STRATEGY must be 'v2' or 'legacy', got {CHIP_STRATEGY!r}")
+
+# ── Rules mode — Phase 0 fair baseline (docs/optimizer_redesign.md §9) ────────
+# "legacy"    — original accounting: sells at full market value, budget
+#               relaxation on ILP infeasibility, FT bank capped at 2 pre-GW15.
+#               Reproduces the 2468 production run unchanged.
+# "corrected" — real FPL rules: 50% sell-on profit via a purchase-price
+#               ledger, no budget relaxation (infeasible ⇒ raise), FT bank
+#               1..5 from GW1. This is the FAIR BASELINE for the redesign.
+RULES_MODE = os.environ.get("RULES_MODE", "legacy")
+if RULES_MODE not in ("legacy", "corrected"):
+    raise ValueError(f"RULES_MODE must be 'legacy' or 'corrected', got {RULES_MODE!r}")
+if RULES_MODE != "legacy":
+    # never overwrite the production season_simulation.json
+    OUTPUT_JSON = OUTPUT_JSON.replace(".json", f"_{RULES_MODE}.json")
+
+# One-off FT rule events {gw: ft_granted}. {15: 5} mirrors the real 2025-26
+# mid-season grant that legacy hardcoded inside next_ft. Config, not code.
+RULE_EVENTS_FT = {15: 5}
+
+# ── Optimizer selection — Phase 2 (docs/optimizer_redesign.md §9) ─────────────
+# "legacy" — original predict_pool adjustment chain + run_ilp + post-hoc
+#            captain heuristics. Unchanged behaviour.
+# "mp"     — prediction-matrix predictions (per-fixture DGW sums, blank
+#            zeros) + milp_core (bench EV, captain+vice in-ILP). No loyalty
+#            bonus, no bench bonus, no FDR post-multipliers, no caps, no
+#            ownership boost, no GW1 blending, no captain streak/blank gates.
+OPTIMIZER = os.environ.get("OPTIMIZER", "legacy")
+if OPTIMIZER not in ("legacy", "mp"):
+    raise ValueError(f"OPTIMIZER must be 'legacy' or 'mp', got {OPTIMIZER!r}")
+if OPTIMIZER == "mp":
+    if RULES_MODE != "corrected":
+        raise ValueError("OPTIMIZER=mp requires RULES_MODE=corrected "
+                         "(blueprint §5: correct rules throughout)")
+    OUTPUT_JSON = OUTPUT_JSON.replace(".json", "_mp.json")
+
+# Phase 3: planning horizon for the mp optimizer (1 = Phase 2 behaviour).
+# H-sweep is a Phase 6 ablation; 5 is the blueprint default backed by the
+# Phase 1 decay measurement.
+MP_HORIZON = int(os.environ.get("MP_HORIZON", "5"))
+
+# Phase 4: chip decision source for the mp optimizer.
+# "model"  — chips are variables inside the horizon MILP (blueprint §4.7)
+# "legacy" — external decide_chip scheduler (Phase 3 behaviour, ablation)
+MP_CHIPS = os.environ.get("MP_CHIPS", "model")
+if MP_CHIPS not in ("model", "legacy"):
+    raise ValueError(f"MP_CHIPS must be 'model' or 'legacy', got {MP_CHIPS!r}")
+# WC squad-state gate: fire only when this many owned players sit below
+# their position's replacement level (interpretable; Phase 6 sweep candidate)
+MP_WC_BELOW = int(os.environ.get("MP_WC_BELOW", "4"))
+
+# ── Cross-season backtests (fixing stage, docs/phase4_report.md) ─────────────
+# SIM_SEASON picks the season to simulate. Default "2025-26" = original
+# inputs + intel. Other seasons: inputs from data/raw/seasons/<S>/
+# (pipeline/build_season_inputs.py), NO intel data, no GW15 FT event,
+# training restricted to seasons strictly before SIM_SEASON (no leakage),
+# corrected rules mandatory. Chip/FT rules are applied uniformly (2025-26
+# ruleset) — the cross-season test measures CALENDAR generalization, not
+# historical rule replay.
+SIM_SEASON = os.environ.get("SIM_SEASON", "2025-26")
+if SIM_SEASON != "2025-26":
+    if RULES_MODE != "corrected":
+        raise ValueError("cross-season runs require RULES_MODE=corrected")
+    _sdir = os.path.join(DATA_DIR, "raw", "seasons", SIM_SEASON)
+    if not os.path.exists(_sdir):
+        raise FileNotFoundError(f"{_sdir} — run build_season_inputs.py first")
+    HIST_CSV     = os.path.join(_sdir, "player_history.csv")
+    PLAYERS_CSV  = os.path.join(_sdir, "players_raw.csv")
+    FIXTURES_CSV = os.path.join(_sdir, "fixtures_raw.csv")
+    RULE_EVENTS_FT = {}              # the GW15 grant was a 2025-26 event
+    OUTPUT_JSON = OUTPUT_JSON.replace(".json", f"_{SIM_SEASON}.json")
+
+# GW1 feature snapshot = the season before SIM_SEASON
+_sy = int(SIM_SEASON[:4])
+SNAPSHOT_SEASON = f"{_sy - 1}-{str(_sy)[2:]}"    # 2025-26 -> "2024-25"
+CHIP_LOOKAHEAD  = 4      # GWs of forward planning (near candidate window)
+SPACING_GAP     = 4      # min GWs between the two reset chips (WC <-> FH)
+WC_HORIZON      = 5      # GWs over which a wildcard rebuild gain is summed
+CHIP_BAR_BB     = 14.0   # bench must project >= this to fire BB (balanced)
+CHIP_BAR_FH     = 16.0   # FH temp XI must beat current squad XI by >= this
+CHIP_BAR_WC     = 20.0   # WC rebuild gain over WC_HORIZON must be >= this
+# TC keeps the legacy natural trigger: adj >= TC_THRESH, form >= TC_FORM_MIN
 
 CAP_MULT = {1: 0.0, 2: 0.75, 3: 1.15, 4: 1.25}   # by element_type
 
@@ -232,6 +337,15 @@ def load_training_data():
         df = pd.read_csv(path)
         df = df.rename(columns=_COL_ALIAS)
         df = df.loc[:, ~df.columns.duplicated()]   # drop duplicate cols
+        # walk-forward hygiene across seasons: train ONLY on seasons strictly
+        # before SIM_SEASON ("YYYY-YY" strings compare correctly). No-op for
+        # 2025-26 (training files end at 2024-25).
+        if "season" in df.columns:
+            n0 = len(df)
+            df = df[df["season"] < SIM_SEASON]
+            if len(df) < n0:
+                print(f"  [TRAIN-CUT] {fname}: {n0} -> {len(df)} rows "
+                      f"(seasons < {SIM_SEASON})")
         train_dfs[pos] = df
     return train_dfs
 
@@ -252,6 +366,9 @@ def _norm(s):
 
 def load_availability():
     """Load intel_03 availability.json → {gw_str: gw_data}."""
+    if SIM_SEASON != "2025-26":
+        print(f"  [AVAIL] intel data is 2025-26-only — disabled for {SIM_SEASON}")
+        return {}
     if not os.path.exists(AVAIL_JSON):
         print("  [AVAIL] availability.json not found — skipping intel penalties")
         return {}
@@ -262,6 +379,9 @@ def load_availability():
 
 def load_recommendations():
     """Load intel_05 recommendations.json → {gw_str: gw_data}."""
+    if SIM_SEASON != "2025-26":
+        print(f"  [RECS] intel data is 2025-26-only — disabled for {SIM_SEASON}")
+        return {}
     if not os.path.exists(RECS_JSON):
         print("  [RECS] recommendations.json not found — captain override disabled")
         return {}
@@ -685,9 +805,15 @@ def build_opponent_lookup(fixtures_csv_path, team_form_lookup):
 
 def build_gw1_team_form(players_df):
     """
-    For GW1, use 2024-25 season averages from team_form.csv as team form prior.
+    For GW1, use prior-season averages from team_form.csv as team form prior.
     Returns {team_id: {team_goals_last3, team_cs_rate_last3}}
     """
+    if SIM_SEASON != "2025-26":
+        # teams_raw.csv maps names to 2025-26 team ids — wrong for other
+        # seasons; fall back to the league-average prior
+        print(f"  [GW1 TEAM FORM] disabled for {SIM_SEASON} (id mapping is "
+              "2025-26-specific) — league-average prior")
+        return {}
     team_form_path = os.path.join(DATA_DIR, "processed", "team_form.csv")
     if not os.path.exists(team_form_path):
         print("  [WARN] team_form.csv not found — using league-average GW1 team form")
@@ -695,7 +821,7 @@ def build_gw1_team_form(players_df):
 
     df = pd.read_csv(team_form_path)
     if "season" in df.columns:
-        df = df[df["season"] == "2024-25"]
+        df = df[df["season"] == SNAPSHOT_SEASON]
     if df.empty:
         return {}
 
@@ -738,7 +864,7 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
     # Position averages from 2024-25 (fallback)
     pos_avgs = {}
     for pos, df in train_dfs.items():
-        df25 = df[df["season"] == "2024-25"] if "season" in df.columns else df
+        df25 = df[df["season"] == SNAPSHOT_SEASON] if "season" in df.columns else df
         if df25.empty:
             df25 = df
         avail = [c for c in FEAT_COLS if c in df25.columns]
@@ -747,7 +873,7 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
     # Name index from 2024-25: norm_name -> feature dict
     name_idx = {}
     for pos, df in train_dfs.items():
-        df25 = df[df["season"] == "2024-25"] if "season" in df.columns else df
+        df25 = df[df["season"] == SNAPSHOT_SEASON] if "season" in df.columns else df
         if df25.empty or "name" not in df25.columns:
             continue
         feat_avail = [c for c in FEAT_COLS if c in df25.columns]
@@ -1228,13 +1354,15 @@ def apply_bonus_adjustment(pool, bonus_lookup, gw):
 
 
 def run_ilp(pool, current_squad_ids, available_budget, free_transfers,
-            is_wildcard=False, is_freehit=False, gw=1):
+            is_wildcard=False, is_freehit=False, gw=1, allow_fail=False):
     players = [p for p in pool if p.get("price", 0) > 0]
     n   = len(players)
     idx = list(range(n))
 
     pred  = [p["pred"]         for p in players]
-    price = [p["price"]        for p in players]
+    # corrected mode: owned players carry ilp_price = sell value, so the
+    # budget identity  Σ_new mp ≤ bank + Σ_sold sv  holds exactly (§5)
+    price = [p.get("ilp_price", p["price"]) for p in players]
     pos   = [p["element_type"] for p in players]
     team  = [p["team"]         for p in players]
     pid   = [p["player_id"]    for p in players]
@@ -1242,7 +1370,9 @@ def run_ilp(pool, current_squad_ids, available_budget, free_transfers,
 
     no_transfers = (is_wildcard or is_freehit or gw == 1)
 
-    for attempt in range(5):
+    # corrected mode: exactly one attempt — never spend phantom money
+    n_attempts = 1 if RULES_MODE == "corrected" else 5
+    for attempt in range(n_attempts):
         budget_limit = available_budget + 0.5 * attempt
         prob = LpProblem(f"fpl_gw{gw}_a{attempt}", LpMaximize)
 
@@ -1320,7 +1450,11 @@ def run_ilp(pool, current_squad_ids, available_budget, free_transfers,
                 "transfers_in": in_pids, "transfers_out": out_pids, "hits": n_hits,
             }
 
-    print(f"  [WARN] ILP infeasible at GW{gw} after 5 attempts")
+    if RULES_MODE == "corrected" and not allow_fail:
+        raise RuntimeError(
+            f"ILP infeasible at GW{gw} with budget {available_budget:.1f}m — "
+            "corrected mode never relaxes the budget; investigate inputs")
+    print(f"  [WARN] ILP infeasible at GW{gw} after {n_attempts} attempts")
     return None
 
 
@@ -1406,7 +1540,7 @@ def _best_cap_stats(squad_pool, home_lookup, gw, loyalty_strip=0.0):
 
 def decide_chip(gw, chips_used, pool, current_squad_ids,
                 dgw_gws, gw_teams, bench_pred_history, home_lookup,
-                bb_target_gw=None):
+                bb_target_gw=None, loyalty_strip=None):
     if gw <= CHIP_LOCKOUT:
         return None
 
@@ -1416,7 +1550,9 @@ def decide_chip(gw, chips_used, pool, current_squad_ids,
 
     squad_pool = [p for p in pool if p["player_id"] in current_squad_ids]
 
-    lb = loyalty_bonus(gw)   # loyalty inflation to strip for chip-quality checks
+    # loyalty inflation to strip for chip-quality checks (0 in mp mode —
+    # matrix predictions carry no loyalty)
+    lb = loyalty_bonus(gw) if loyalty_strip is None else loyalty_strip
 
     # Diagnostic: log chip state each GW
     print(f"  [CHIP-CHECK] GW{gw} | chips_used: {sorted(chips_used)} | dgw: {gw in dgw_gws}")
@@ -1505,10 +1641,277 @@ def decide_chip(gw, chips_used, pool, current_squad_ids,
     return None
 
 
+# ── Chip Logic v2 — rolling-horizon, calendar-agnostic ───────────────────────
+# docs/chip_strategy_redesign.md — decides WHEN from fixtures + squad state,
+# never from hardcoded gameweek numbers.
+
+def compute_blank_gws(gw_teams, max_gw=None):
+    """GWs where at least one team has no fixture (a blank for that team)."""
+    if max_gw is None:
+        max_gw = SIM_END_GW
+    all_teams = set()
+    for teams in gw_teams.values():
+        all_teams.update(teams.keys())
+    return {g for g in range(1, max_gw + 1)
+            if any(gw_teams.get(g, {}).get(t, 0) == 0 for t in all_teams)}
+
+
+def build_lookahead_pool(pool, g, cur_gw, squad_ids,
+                         fdr_lookup, home_lookup, gw_teams, lb,
+                         bonus_strip=None):
+    """
+    Approximate the player pool under GW `g`'s fixture context (same trick as
+    get_bench_intel's lookahead): copy current preds, swap fdr/home, zero
+    blank teams, boost doubles. Current preds are de-inflated first — bench
+    intel bonuses stripped, the CURRENT GW's DGW boost undone (so it isn't
+    applied twice), and squad loyalty removed so chip-quality checks compare
+    raw model signal (matches _best_cap_stats' loyalty_strip convention).
+    Model preds are NOT re-run — fixture-count effects (x2 / x0) dominate
+    chip value and are exact; form drift is absorbed by weekly re-planning.
+    """
+    cur_teams = gw_teams.get(cur_gw, {})
+    fut_teams = gw_teams.get(g, {})
+    out = []
+    for p in pool:
+        q    = dict(p)
+        team = q.get("team")
+        pred = q.get("pred", 0.0)
+        if bonus_strip:
+            pred -= bonus_strip.get(q["player_id"], 0.0)
+        if cur_teams.get(team, 0) >= 2:
+            pred /= DGW_PRED_MULT              # undo current-GW DGW boost (approx)
+        if q["player_id"] in squad_ids:
+            pred = max(0.0, pred - lb)         # strip loyalty inflation
+        n_fix = fut_teams.get(team, 0)
+        q["fdr"]      = float(fdr_lookup.get((team, g), 3.0))
+        q["was_home"] = float(home_lookup.get((team, g), 0))
+        if n_fix == 0:
+            pred = 0.0                         # blank — no fixture, no points
+        elif n_fix >= 2:
+            pred = min(PRED_CAP, pred * DGW_PRED_MULT)
+        q["pred"]  = max(0.0, pred)
+        q["n_fix"] = n_fix
+        out.append(q)
+    return out
+
+
+def _xi_greedy(players):
+    """
+    Best legal XI (1 GK, 3-5 DEF, 2-5 MID, 1-3 FWD, 11 total) by pred,
+    greedy: fill position minima with the best of each, then top-up with the
+    best remaining outfielders within position maxima.
+    Returns (xi_players, xi_pred_total).
+    """
+    by_pos = {"GK": [], "DEF": [], "MID": [], "FWD": []}
+    for p in players:
+        pos = p.get("pos", "MID")
+        if pos in by_pos:
+            by_pos[pos].append(p)
+    for lst in by_pos.values():
+        lst.sort(key=lambda q: -q.get("pred", 0.0))
+    xi   = by_pos["GK"][:1] + by_pos["DEF"][:3] + by_pos["MID"][:2] + by_pos["FWD"][:1]
+    fill = by_pos["DEF"][3:5] + by_pos["MID"][2:5] + by_pos["FWD"][1:3]
+    fill.sort(key=lambda q: -q.get("pred", 0.0))
+    xi  += fill[:11 - len(xi)]
+    return xi, sum(p.get("pred", 0.0) for p in xi)
+
+
+def _best_feasible_assignment(V, reset_used_gws):
+    """
+    Assign chips to distinct GWs maximizing total value.
+    Constraints: one chip per GW; an assigned FH/WC must sit >= SPACING_GAP
+    GWs from every already-used or co-assigned reset chip. A chip may go
+    unplaced (value 0) when placement is infeasible or worthless.
+    Search space is tiny (<=3 chips x top-8 GWs) — brute force.
+    """
+    import itertools
+    chips = [c for c in V if V[c]]
+    if not chips:
+        return {}
+    options = {}
+    for c in chips:
+        top = sorted(V[c].items(), key=lambda kv: -kv[1])[:8]
+        options[c] = top + [(None, 0.0)]
+    best_plan, best_val = {}, -1.0
+    for combo in itertools.product(*(options[c] for c in chips)):
+        gws = [g for g, _ in combo if g is not None]
+        if len(gws) != len(set(gws)):
+            continue
+        ok, resets = True, list(reset_used_gws)
+        for c, (g, _) in zip(chips, combo):
+            if g is not None and c in ("wc", "fh"):
+                if any(abs(g - r) < SPACING_GAP for r in resets):
+                    ok = False
+                    break
+                resets.append(g)
+        if not ok:
+            continue
+        total = sum(v for _, v in combo)
+        if total > best_val:
+            best_val  = total
+            best_plan = {c: g for c, (g, _) in zip(chips, combo) if g is not None}
+    return best_plan
+
+
+def decide_chip_v2(gw, chips_used, chip_gw_map, pool, current_squad_ids,
+                   free_transfers, available_budget,
+                   dgw_gws, gw_teams, blank_gws,
+                   fdr_lookup, home_lookup, bench_bonus_map=None,
+                   loyalty_strip=None):
+    """
+    Rolling-horizon chip scheduler. Each GW:
+      1. Candidate weeks = near lookahead ∪ ALL known double/blank GWs left in
+         the set (fixture calendar is announced ahead — schedule knowledge,
+         not result leakage). This lets the planner RESERVE BB/FH for a known
+         far event instead of burning them on a mediocre near week.
+      2. Value BB/TC/FH per candidate week (FH only on event weeks — never
+         burn it on a normal week; its value is budget-true via the same FH
+         ILP the sim would actually run).
+      3. Assign chips to weeks maximizing total value under constraints
+         (one chip/GW, WC<->FH spacing); fire only THIS GW's assignment and
+         only if it clears its bar — or unconditionally under deadline
+         pressure (use-it-or-lose-it picks best remaining week by value).
+      4. WC is squad-state-driven, not event-driven: evaluated rolling at the
+         current GW ("how much do the next WC_HORIZON GWs gain if I rebuild
+         NOW?", budget-true via the WC ILP) and fires when the gain clears
+         the bar and reset spacing allows.
+    """
+    if gw <= CHIP_LOCKOUT:
+        return None
+
+    set_id  = 1 if gw <= 19 else 2
+    set_end = 19 if set_id == 1 else SIM_END_GW
+    remaining = [c for c in ("wc", "fh", "bb", "tc")
+                 if f"{c}{set_id}" not in chips_used]
+    if not remaining:
+        return None
+
+    lb = loyalty_bonus(gw) if loyalty_strip is None else loyalty_strip
+
+    # GWs already holding a reset chip (spacing applies across set boundary too)
+    reset_used_gws = [g for c, g in chip_gw_map.items() if c[:2] in ("wc", "fh")]
+
+    # ── 1. Candidate weeks: near lookahead ∪ known event weeks in the set ──
+    horizon_end = min(set_end, gw + CHIP_LOOKAHEAD)
+    if set_end - gw <= CHIP_LOOKAHEAD:
+        horizon_end = set_end
+    event_gws     = {g for g in range(gw, set_end + 1)
+                     if g in dgw_gws or g in blank_gws}
+    candidate_gws = sorted(set(range(gw, horizon_end + 1)) | event_gws)
+
+    lp_memo = {}
+    def lp(g):
+        if g not in lp_memo:
+            lp_memo[g] = build_lookahead_pool(
+                pool, g, gw, current_squad_ids,
+                fdr_lookup, home_lookup, gw_teams, lb,
+                bonus_strip=bench_bonus_map)
+        return lp_memo[g]
+
+    def squad_of(pool_g):
+        return [p for p in pool_g if p["player_id"] in current_squad_ids]
+
+    # ── 2. Value matrix for BB / TC / FH ────────────────────────────────────
+    V = {c: {} for c in remaining if c != "wc"}
+    for g in candidate_gws:
+        pool_g  = lp(g)
+        squad_g = squad_of(pool_g)
+
+        if "bb" in V:
+            _, xi_pred = _xi_greedy(squad_g)
+            V["bb"][g] = sum(p["pred"] for p in squad_g) - xi_pred
+
+        if "tc" in V:
+            best_adj, best_form3, _ = _best_cap_stats(squad_g, home_lookup, g)
+            if best_form3 >= TC_FORM_MIN:
+                V["tc"][g] = best_adj
+
+        if "fh" in V and (g in dgw_gws or g in blank_gws):
+            res = run_ilp(pool_g, current_squad_ids, available_budget,
+                          15, is_wildcard=False, is_freehit=True, gw=g,
+                          allow_fail=True)
+            if res is not None:
+                by_pid = {p["player_id"]: p for p in pool_g}
+                temp_xi_pred   = sum(by_pid.get(p, {}).get("pred", 0.0)
+                                     for p in res["xi"])
+                _, cur_xi_pred = _xi_greedy(squad_g)
+                V["fh"][g] = temp_xi_pred - cur_xi_pred
+
+    # ── 3. Assignment + commit rule ─────────────────────────────────────────
+    plan   = _best_feasible_assignment(V, reset_used_gws)
+    # Deadline pressure: no more spare weeks than unused chips — every
+    # remaining week must fire per plan regardless of the value bar.
+    forced = (set_end - gw + 1) <= len(remaining)
+    bars   = {"bb": CHIP_BAR_BB, "tc": TC_THRESH, "fh": CHIP_BAR_FH}
+
+    plan_str = ", ".join(f"{c}->GW{g}" for c, g in sorted(plan.items())) or "none"
+    print(f"  [CHIP-V2] GW{gw} | remaining: {remaining} | plan: {plan_str}"
+          f"{' | DEADLINE' if forced else ''}")
+
+    chip_here = next((c for c, g in plan.items() if g == gw), None)
+    if chip_here is not None:
+        val = V[chip_here].get(gw, 0.0)
+        if forced or val >= bars[chip_here]:
+            print(f"  [CHIP-V2] firing {chip_here}{set_id} — value {val:.1f} "
+                  f"(bar {bars[chip_here]:.1f}"
+                  f"{', forced' if val < bars[chip_here] else ''})")
+            return f"{chip_here}{set_id}"
+        print(f"  [CHIP-V2] holding {chip_here} — value {val:.1f} < bar "
+              f"{bars[chip_here]:.1f}")
+
+    # ── 4. Wildcard: rolling evaluation at the current GW ───────────────────
+    if "wc" in remaining:
+        planned_fh  = plan.get("fh")
+        near_resets = [g for g in reset_used_gws +
+                       ([planned_fh] if planned_fh is not None else [])
+                       if abs(gw - g) < SPACING_GAP]
+        if near_resets:
+            print(f"  [CHIP-V2] WC blocked — reset chip within "
+                  f"{SPACING_GAP} GWs (at {near_resets})")
+            return None
+
+        pool_now  = lp(gw)
+        squad_now = squad_of(pool_now)
+        res = run_ilp(pool_now, current_squad_ids, available_budget,
+                      15, is_wildcard=True, is_freehit=False, gw=gw,
+                      allow_fail=True)
+        if res is not None:
+            reset_ids = set(res["squad"])
+            gain = 0.0
+            for k in range(gw, min(set_end, gw + WC_HORIZON - 1) + 1):
+                pool_k = lp(k)
+                _, reset_pred = _xi_greedy(
+                    [p for p in pool_k if p["player_id"] in reset_ids])
+                _, cur_pred = _xi_greedy(squad_of(pool_k))
+                gain += reset_pred - cur_pred
+            # Hits we'd otherwise pay fixing the squad with normal transfers
+            pos_preds = defaultdict(list)
+            for p in pool_now:
+                pos_preds[p["pos"]].append(p["pred"])
+            pos_mean = {ps: float(np.mean(v)) for ps, v in pos_preds.items()}
+            below = sum(1 for p in squad_now
+                        if p["pred"] < pos_mean.get(p["pos"], 0.0))
+            gain += 4.0 * max(0, below - free_transfers)
+
+            print(f"  [CHIP-V2] WC rolling value: {gain:.1f} "
+                  f"(bar {CHIP_BAR_WC:.1f})")
+            if forced or gain >= CHIP_BAR_WC:
+                print(f"  [CHIP-V2] firing wc{set_id}"
+                      f"{' (forced)' if gain < CHIP_BAR_WC else ''}")
+                return f"wc{set_id}"
+
+    return None
+
+
 # ── Free Transfer Updates ─────────────────────────────────────────────────────
 
 def next_ft(gw, ft_start, used, is_wc, is_fh):
     """Compute free transfers for next GW after completing gw."""
+    if RULES_MODE == "corrected":
+        # Real 2025-26 rules: +1/week, bank 1..5 from GW1, chips consume
+        # nothing. One-off grants live in RULE_EVENTS_FT, not in code.
+        return next_free_transfers(gw, ft_start, used, is_wc, is_fh,
+                                   ft_cap=5, ft_events=RULE_EVENTS_FT)
     actual_used = 0 if (is_wc or is_fh or gw == 1) else used
     remaining   = max(0, ft_start - actual_used)
     next_gw     = gw + 1
@@ -1520,12 +1923,19 @@ def next_ft(gw, ft_start, used, is_wc, is_fh):
 
 # ── Score Computation ─────────────────────────────────────────────────────────
 
-def compute_score(xi_pids, bench_pids, captain_pid, chip, gw_actuals, penalty_pts):
+def compute_score(xi_pids, bench_pids, captain_pid, chip, gw_actuals,
+                  penalty_pts, vice_pid=None):
     cap_mult = 3 if chip in ("tc1", "tc2") else 2
+    # Real FPL rule: if the captain doesn't play, the vice gets the armband
+    # (legacy calls pass no vice — behaviour unchanged there).
+    eff_cap = captain_pid
+    if (vice_pid is not None and
+            gw_actuals.get(captain_pid, {}).get("minutes", 0) == 0):
+        eff_cap = vice_pid
     total = 0
     for pid in xi_pids:
         pts = gw_actuals.get(pid, {}).get("total_points", 0)
-        total += pts * cap_mult if pid == captain_pid else pts
+        total += pts * cap_mult if pid == eff_cap else pts
     if chip in ("bb1", "bb2"):
         for pid in bench_pids:
             total += gw_actuals.get(pid, {}).get("total_points", 0)
@@ -1536,17 +1946,23 @@ def compute_score(xi_pids, bench_pids, captain_pid, chip, gw_actuals, penalty_pt
 
 def run_simulation():
     print("=" * 70)
-    print("  FPL Season Simulator — GW1 to GW28")
+    print(f"  FPL Season Simulator — GW1 to GW{SIM_END_GW}")
+    print(f"  SEASON={SIM_SEASON} | RULES_MODE={RULES_MODE} | "
+          f"CHIP_STRATEGY={CHIP_STRATEGY} | OPTIMIZER={OPTIMIZER} | "
+          f"out={os.path.basename(OUTPUT_JSON)}")
     print("=" * 70)
 
     print("\n[LOAD] Loading data...")
     hist_lookup                          = load_player_history()
     players_df                           = load_players_raw()
     fdr_lookup, home_lookup, dgw_gws, gw_teams = load_fixtures()
+    blank_gws                            = compute_blank_gws(gw_teams)
+    fixture_list = pmx.load_fixture_list(FIXTURES_CSV) if OPTIMIZER == "mp" else None
     train_dfs                            = load_training_data()
     avail_gws                            = load_availability()
     recs_gws                             = load_recommendations()
     print(f"  Players: {len(players_df)} | DGW GWs in range: {sorted(g for g in dgw_gws if g <= SIM_END_GW)}")
+    print(f"  Blank GWs in range: {sorted(g for g in blank_gws if g <= SIM_END_GW)} | Chip strategy: {CHIP_STRATEGY}")
     print(f"  Availability data: {len(avail_gws)} GWs loaded")
 
     print("\n[LOAD] Building historical team form lookup (Intel 08)...")
@@ -1560,11 +1976,12 @@ def run_simulation():
 
     # Weight for 2025-26 rows relative to historical rows.
     # Increases each GW so current-season signal dominates progressively.
-    # GW2: 3x, GW10: 11x, GW28: 29x  (formula: 1 + completed_gws)
+    # GW2: 3x, GW10: 11x, GW38: 39x  (formula: 1 + completed_gws)
     CURRENT_SEASON_BASE_WEIGHT = 1  # historical weight = 1.0 always
 
     # State
     current_squad    = set()
+    purchase_price   = {}    # pid -> £m paid (corrected-mode sell ledger)
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
@@ -1584,6 +2001,12 @@ def run_simulation():
 
     log = {
         "generated_at":     datetime.now().isoformat(),
+        "rules_mode":       RULES_MODE,
+        "chip_strategy":    CHIP_STRATEGY,
+        "optimizer":        OPTIMIZER,
+        "mp_horizon":       MP_HORIZON,
+        "mp_chips":         MP_CHIPS,
+        "season":           SIM_SEASON,
         "total_actual_pts": 0,
         "total_predicted_pts": 0,
         "total_penalties":  0,
@@ -1623,31 +2046,59 @@ def run_simulation():
         # ── Update available budget ─────────────────────────────────────────
         if gw == 1:
             available_budget = BUDGET
+        elif RULES_MODE == "corrected":
+            # Real FPL budget: bank + squad SELL value (50% profit rule).
+            # Owned players also get ilp_price = sell value so the ILP's
+            # budget constraint matches the transfer cash identity exactly.
+            sv_total = 0.0
+            for pid in current_squad:
+                p  = pool_by_pid.get(pid)
+                mp = p.get("price", 0.0) if p else 0.0
+                sv = sell_value(purchase_price.get(pid, mp), mp)
+                if p is not None:
+                    p["ilp_price"] = sv
+                sv_total += sv
+            available_budget = bank + sv_total
         else:
             squad_val = sum(pool_by_pid.get(pid, {}).get("price", 0.0)
                             for pid in current_squad)
             available_budget = bank + squad_val
 
-        # ── Fix 3: pre-detect WC17 force to apply loyalty override ─────────
-        wc17_force    = (gw == 17 and "wc1" not in chips_used)
+        # ── Fix 3 (legacy only): pre-detect WC17 force for loyalty override ─
+        wc17_force    = (CHIP_STRATEGY == "legacy"
+                         and gw == 17 and "wc1" not in chips_used)
         loyalty_ovr   = WC17_LOYALTY if wc17_force else None
 
         # ── Predict ─────────────────────────────────────────────────────────
-        pool = predict_pool(pool, models, gw, current_squad,
-                            gw1_preds=gw1_preds, loyalty_override=loyalty_ovr)
-
-        # ── DGW boost: players with 2 fixtures in this GW play twice ─────────
-        if gw in dgw_gws:
-            n_dgw = 0
+        mp_rows = None
+        if OPTIMIZER == "mp":
+            # Phase 2: matrix predictions — per-fixture DGW sums, hard blank
+            # zeros, availability tiers baked into mu. No loyalty/ownership/
+            # caps/blending; pool preds mirror mu for chip logic + auto-subs.
+            mp_matrix = pmx.build_matrix(
+                pool, models, fixture_list, gw, MP_HORIZON,
+                hist_lookup=hist_lookup, avail_gws=avail_gws,
+                purchase_price=purchase_price)
+            mp_rows = mp_matrix[gw]
             for p in pool:
-                if gw_teams.get(gw, {}).get(p["team"], 0) >= 2:
-                    p["pred"] = min(PRED_CAP, p["pred"] * DGW_PRED_MULT)
-                    n_dgw += 1
-            if n_dgw > 0:
-                print(f"  [DGW] GW{gw}: {n_dgw} players boosted x{DGW_PRED_MULT}")
+                p["pred"] = mp_rows.get(p["player_id"], {}).get("mu", 0.0)
+        else:
+            pool = predict_pool(pool, models, gw, current_squad,
+                                gw1_preds=gw1_preds, loyalty_override=loyalty_ovr)
+
+            # ── DGW boost: players with 2 fixtures this GW play twice ────────
+            if gw in dgw_gws:
+                n_dgw = 0
+                for p in pool:
+                    if gw_teams.get(gw, {}).get(p["team"], 0) >= 2:
+                        p["pred"] = min(PRED_CAP, p["pred"] * DGW_PRED_MULT)
+                        n_dgw += 1
+                if n_dgw > 0:
+                    print(f"  [DGW] GW{gw}: {n_dgw} players boosted x{DGW_PRED_MULT}")
 
         # ── Availability penalties (intel_03 tier data) ─────────────────────
-        pool, _ = apply_availability_penalties(pool, avail_gws, gw)
+        if OPTIMIZER != "mp":       # matrix already applies tier multipliers
+            pool, _ = apply_availability_penalties(pool, avail_gws, gw)
         pool_by_pid = {p["player_id"]: p for p in pool}
 
         # Save GW1 predictions for early-season blending
@@ -1657,31 +2108,52 @@ def run_simulation():
         # ── Intel 07: bench intelligence and BB targeting ────────────────────
         bb1_used    = "bb1" in chips_used
         bb2_used    = "bb2" in chips_used
-        bench_intel = get_bench_intel(
-            pool, gw, chips_used, bb1_used, bb2_used,
-            fdr_lookup=fdr_lookup,
-            home_lookup=home_lookup
-        )
+        if OPTIMIZER == "mp" and MP_CHIPS == "model":
+            # BB targeting is inside the MILP — intel_07 not needed
+            bench_intel = {"bench_candidates": {}, "bb_target_gw": None,
+                           "recommended_bench": [], "is_bb_target_gw": False}
+        else:
+            bench_intel = get_bench_intel(
+                pool, gw, chips_used, bb1_used, bb2_used,
+                fdr_lookup=fdr_lookup,
+                home_lookup=home_lookup
+            )
 
-        # Apply bench candidate bonus to predictions
-        for p in pool:
-            bpid = p["player_id"]
-            if bpid in bench_intel["bench_candidates"]:
-                p["pred"] += bench_intel["bench_candidates"][bpid]
+        # Apply bench candidate bonus to predictions (legacy only — the mp
+        # objective prices the bench directly via its EV term)
+        if OPTIMIZER != "mp":
+            for p in pool:
+                bpid = p["player_id"]
+                if bpid in bench_intel["bench_candidates"]:
+                    p["pred"] += bench_intel["bench_candidates"][bpid]
 
         pool_by_pid = {p["player_id"]: p for p in pool}  # refresh after bonuses
 
         # ── Chip decision ───────────────────────────────────────────────────
-        chip = decide_chip(gw, chips_used, pool, current_squad,
-                           dgw_gws, gw_teams, bench_pred_hist, home_lookup,
-                           bb_target_gw=bench_intel.get("bb_target_gw"))
+        if OPTIMIZER == "mp" and MP_CHIPS == "model":
+            chip = None          # decided inside the horizon MILP below
+        elif CHIP_STRATEGY == "v2":
+            chip_gw_map = {c["chip"]: c["gw"] for c in log["chips_used"]}
+            chip = decide_chip_v2(gw, chips_used, chip_gw_map, pool,
+                                  current_squad, free_transfers,
+                                  available_budget, dgw_gws, gw_teams,
+                                  blank_gws, fdr_lookup, home_lookup,
+                                  bench_bonus_map=({} if OPTIMIZER == "mp"
+                                                   else bench_intel["bench_candidates"]),
+                                  loyalty_strip=(0.0 if OPTIMIZER == "mp" else None))
+        else:
+            chip = decide_chip(gw, chips_used, pool, current_squad,
+                               dgw_gws, gw_teams, bench_pred_hist, home_lookup,
+                               bb_target_gw=bench_intel.get("bb_target_gw"),
+                               loyalty_strip=(0.0 if OPTIMIZER == "mp" else None))
         is_wc = chip in ("wc1", "wc2")
         is_fh = chip in ("fh1", "fh2")
         is_tc = chip in ("tc1", "tc2")
         is_bb = chip in ("bb1", "bb2")
 
-        # GW19 end-of-window diagnostic: confirm FH1 fate
-        if gw == 19 and "fh1" not in chips_used and chip != "fh1":
+        # GW19 end-of-window diagnostic (legacy): confirm FH1 fate
+        if (CHIP_STRATEGY == "legacy" and gw == 19
+                and "fh1" not in chips_used and chip != "fh1"):
             print(f"  [CHIP] GW19 complete — FH1 wasted (not a DGW, better to waste than misuse)")
 
         if is_fh:
@@ -1691,8 +2163,109 @@ def run_simulation():
         ft_ilp = 15 if (gw == 1 or is_wc or is_fh) else free_transfers
 
         # ── ILP ─────────────────────────────────────────────────────────────
-        result = run_ilp(pool, current_squad, available_budget,
-                         ft_ilp, is_wc, is_fh, gw)
+        vice_id = None
+        if OPTIMIZER == "mp":
+            def _plan_print(plan):
+                nxt = [f"GW{g}:{len(w['transfers_in'])}t"
+                       f"{'/-' + str(w['hits'] * 4) if w['hits'] else ''}"
+                       for g, w in sorted(plan["weeks"].items())
+                       if g > gw and w["transfers_in"]]
+                chips_str = ", ".join(f"{k}@GW{g}" for g, k in
+                                      sorted(plan.get("chips", {}).items()))
+                print(f"  [MILP-H] plan ahead: {', '.join(nxt) or 'hold'}"
+                      f" | chips: {chips_str or 'none'}"
+                      f" | ft_plan {plan['ft_plan']}")
+
+            if MP_CHIPS == "model" and MP_HORIZON > 1:
+                # Phase 4: chips decided inside the MILP.
+                # Scarcity guards (phase4_report.md fix): cold-start lockout,
+                # BB/TC held for known far doubles, WC gated on squad state —
+                # >= MP_WC_BELOW owned players under their position's
+                # replacement level (25th pct of top-40 mu, from the matrix),
+                # or the set deadline inside the horizon.
+                horizon_end = min(gw + MP_HORIZON - 1, SIM_END_GW)
+                mrows_t = mp_matrix[gw]
+                repl = {}
+                for et in (1, 2, 3, 4):
+                    mus = sorted((r["mu"] for r in mrows_t.values()
+                                  if r["element_type"] == et),
+                                 reverse=True)[:40]
+                    repl[et] = float(np.percentile(mus, 25)) if mus else 0.0
+                best_mu = {}
+                for rows2 in mp_matrix.values():
+                    for pid2, r2 in rows2.items():
+                        if pid2 in current_squad:
+                            best_mu[pid2] = max(best_mu.get(pid2, 0.0),
+                                                r2["mu"])
+                below = sum(
+                    1 for pid2 in current_squad
+                    if best_mu.get(pid2, 0.0) <
+                    repl.get(mrows_t.get(pid2, {}).get("element_type", 3),
+                             0.0))
+                set_end = 19 if gw <= 19 else SIM_END_GW
+                wc_ok = below >= MP_WC_BELOW or set_end <= horizon_end
+                if not wc_ok:
+                    print(f"  [CHIP-GUARD] WC held — only {below} squad "
+                          f"players below replacement (< {MP_WC_BELOW})")
+                chip_state = {
+                    "used": set(chips_used),
+                    "reset_gws": [cc["gw"] for cc in log["chips_used"]
+                                  if cc["chip"][:2] in ("wc", "fh")],
+                    "far_dgw": {
+                        1: any(horizon_end < d <= 19 for d in dgw_gws),
+                        2: any(horizon_end < d <= SIM_END_GW and d >= 20
+                               for d in dgw_gws),
+                    },
+                    "lockout_until": CHIP_LOCKOUT,
+                    "wc_ok": wc_ok,
+                }
+                try:
+                    plan = milp_solve_horizon(
+                        mp_matrix, current_squad,
+                        BUDGET if gw == 1 else bank,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        chip_state=chip_state)
+                except RuntimeError as e:
+                    print(f"  [MILP-H] chipped solve failed ({e}) — "
+                          f"retrying without chips")
+                    plan = milp_solve_horizon(
+                        mp_matrix, current_squad,
+                        BUDGET if gw == 1 else bank,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT)
+                chip  = plan["chips"].get(gw)
+                is_wc = chip in ("wc1", "wc2")
+                is_fh = chip in ("fh1", "fh2")
+                is_tc = chip in ("tc1", "tc2")
+                is_bb = chip in ("bb1", "bb2")
+                if is_fh:
+                    pre_fh_squad = set(current_squad)
+                    bank_pre_fh  = bank
+                result = plan["weeks"][gw]
+                _plan_print(plan)
+            elif is_fh or MP_HORIZON <= 1:
+                # FH squad reverts — horizon planning is moot for it
+                result = milp_solve_gw(mp_rows, current_squad,
+                                       available_budget, ft_ilp, gw,
+                                       is_wildcard=is_wc, is_freehit=is_fh)
+            else:
+                try:
+                    plan = milp_solve_horizon(
+                        mp_matrix, current_squad,
+                        BUDGET if gw == 1 else bank,
+                        free_transfers, gw,
+                        is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT)
+                    result = plan["weeks"][gw]
+                    _plan_print(plan)
+                except RuntimeError as e:
+                    # fallback ladder (blueprint §7.3): horizon -> H=1
+                    print(f"  [MILP-H] horizon failed ({e}) — "
+                          f"falling back to H=1")
+                    result = milp_solve_gw(mp_rows, current_squad,
+                                           available_budget, ft_ilp, gw,
+                                           is_wildcard=is_wc, is_freehit=False)
+        else:
+            result = run_ilp(pool, current_squad, available_budget,
+                             ft_ilp, is_wc, is_fh, gw)
         if result is None:
             print(f"  [ERROR] ILP failed GW{gw}, skipping.")
             continue
@@ -1704,17 +2277,48 @@ def run_simulation():
         n_hits     = result["hits"]
 
         # ── Captain ─────────────────────────────────────────────────────────
-        captain_id = select_captain(xi_pids, pool_by_pid, cap_streak, last_cap_pid,
-                                    captain_history, gw, last_cap_actual=last_cap_actual)
-        # Intel_05 override (0.5 adj-pt threshold, post-ILP, no squad effect)
-        captain_id, cap_source = apply_intel_captain_override(
-            captain_id, xi_pids, pool_by_pid, recs_gws, gw)
+        if OPTIMIZER == "mp":
+            # in-MILP captain/vice (kappa = pi*[(1-theta)mu + theta*q90]) —
+            # no streak/blank/form heuristics, no intel_05 override
+            captain_id, vice_id, cap_source = (result["captain"],
+                                               result["vice"], "milp")
+        else:
+            captain_id = select_captain(xi_pids, pool_by_pid, cap_streak, last_cap_pid,
+                                        captain_history, gw, last_cap_actual=last_cap_actual)
+            # Intel_05 override (0.5 adj-pt threshold, post-ILP, no squad effect)
+            captain_id, cap_source = apply_intel_captain_override(
+                captain_id, xi_pids, pool_by_pid, recs_gws, gw)
 
         # ── Update bank from transfers ───────────────────────────────────────
         if gw == 1:
             squad_cost = sum(pool_by_pid.get(p, {}).get("price", 0.0)
                              for p in result["squad"])
             bank = BUDGET - squad_cost
+            if RULES_MODE == "corrected":
+                # ledger init: GW1 squad bought at market price
+                purchase_price.clear()
+                purchase_price.update({
+                    p: pool_by_pid.get(p, {}).get("price", 0.0)
+                    for p in result["squad"]
+                })
+        elif RULES_MODE == "corrected":
+            # Sells credit SELL value (50% profit rule); buys debit market.
+            # Same formula covers normal weeks and WC/FH: run_ilp returns
+            # t_in/t_out as the squad diff on chip weeks too.
+            _mp  = lambda p: pool_by_pid.get(p, {}).get("price", 0.0)
+            sell = sum(sell_value(purchase_price.get(p, _mp(p)), _mp(p))
+                       for p in t_out_pids)
+            buy  = sum(_mp(p) for p in t_in_pids)
+            bank += sell - buy
+            if bank < -1e-6:
+                raise RuntimeError(f"GW{gw}: bank negative ({bank:.2f}m) — "
+                                   "sell-value accounting violated")
+            if not is_fh:
+                # FH squad is temporary: ledger untouched, bank reverts below
+                for p in t_out_pids:
+                    purchase_price.pop(p, None)
+                for p in t_in_pids:
+                    purchase_price[p] = _mp(p)
         elif not (is_wc or is_fh):
             sell = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_out_pids)
             buy  = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_in_pids)
@@ -1746,7 +2350,8 @@ def run_simulation():
 
         # ── Score ────────────────────────────────────────────────────────────
         actual_total    = compute_score(xi_final, bench_final, captain_id,
-                                        chip, gw_actuals, penalty_pts)
+                                        chip, gw_actuals, penalty_pts,
+                                        vice_pid=vice_id)
         pred_total      = sum(pool_by_pid.get(p, {}).get("pred", 0) for p in xi_pids)
         if is_tc:
             pred_total += pool_by_pid.get(captain_id, {}).get("pred", 0)
@@ -1800,7 +2405,7 @@ def run_simulation():
 
         # ── Retrain ─────────────────────────────────────────────────────────
         if gw < SIM_END_GW:
-            # current-season weight grows each GW: GW1->2x, GW10->11x, GW28->29x
+            # current-season weight grows each GW: GW1->2x, GW10->11x, GW38->39x
             cs_weight = CURRENT_SEASON_BASE_WEIGHT + gw
             print(f"  [RETRAIN] History (w=1.0) + GW1-{gw} actuals (w={cs_weight})...")
             retrain_rows = build_retrain_rows(
@@ -1864,6 +2469,9 @@ def run_simulation():
             "xi":             xi_entries,
             "bench":          bench_entries,
             "captain_id":     captain_id,
+            "vice_id":        vice_id,
+            "vice_name":      (pool_by_pid.get(vice_id, {}).get("web_name")
+                               if vice_id else None),
             "captain_source": cap_source,
             "captain": {
                 "player_id":  captain_id,

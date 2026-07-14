@@ -1,0 +1,866 @@
+id,web_name,first_name,second_name,element_type,position,team,selected_by_percent,price,now_cost
+1,Balogun,Folarin,Balogun,4,FWD,1,0.2,4.5,45
+2,Cédric,Cédric,Alves Soares,2,DEF,1,0.5,4.0,40
+3,M.Elneny,Mohamed,Elneny,3,MID,1,0.1,4.5,45
+4,Fábio Vieira,Fábio,Ferreira Vieira,3,MID,1,0.1,5.5,55
+5,Gabriel,Gabriel,dos Santos Magalhães,2,DEF,1,28.3,5.0,50
+6,Havertz,Kai,Havertz,3,MID,1,11.9,7.5,75
+8,G.Jesus,Gabriel,Fernando de Jesus,4,FWD,1,2.6,8.0,80
+9,Jorginho,Jorge Luiz,Frello Filho,3,MID,1,0.2,5.5,55
+10,Kiwior,Jakub,Kiwior,2,DEF,1,0.6,4.5,45
+11,Marquinhos,Marcus,Oliveira Alencar,3,MID,1,0.0,4.5,45
+12,Martinelli,Gabriel,Martinelli Silva,3,MID,1,4.2,8.0,80
+13,Nketiah,Eddie,Nketiah,4,FWD,1,3.1,5.5,55
+14,Ødegaard,Martin,Ødegaard,3,MID,1,18.0,8.5,85
+15,Thomas,Thomas,Partey,3,MID,1,0.1,5.0,50
+16,Pepe,Nicolas,Pépé,3,MID,1,0.0,5.0,50
+17,Ramsdale,Aaron,Ramsdale,1,GK,1,5.4,5.0,50
+18,Rúnarsson,Rúnar Alex,Rúnarsson,1,GK,1,0.1,4.0,40
+19,Saka,Bukayo,Saka,3,MID,1,49.2,8.5,85
+20,Saliba,William,Saliba,2,DEF,1,39.1,5.0,50
+22,Smith Rowe,Emile,Smith Rowe,3,MID,1,0.1,5.5,55
+24,Tierney,Kieran,Tierney,2,DEF,1,0.1,4.5,45
+25,Tomiyasu,Takehiro,Tomiyasu,2,DEF,1,0.5,4.5,45
+26,Trossard,Leandro,Trossard,3,MID,1,3.6,7.0,70
+29,White,Benjamin,White,2,DEF,1,23.3,5.5,55
+30,Xhaka,Granit,Xhaka,3,MID,1,0.0,6.0,60
+31,Zinchenko,Oleksandr,Zinchenko,2,DEF,1,5.1,5.0,50
+113,Raya,David,Raya Martin,1,GK,1,11.7,5.0,50
+540,Rice,Declan,Rice,3,MID,1,6.2,5.5,55
+578,Nelson,Reiss,Nelson,3,MID,1,0.0,5.0,50
+585,J.Timber,Jurriën,Timber,2,DEF,1,0.4,5.0,50
+646,Hein,Karl,Hein,1,GK,1,0.1,4.0,40
+735,Sagoe,Charles,Sagoe,3,MID,1,0.0,4.5,45
+736,Walters,Reuell,Walters,2,DEF,1,0.0,4.0,40
+737,Ibrahim,Bradley,Ibrahim,3,MID,1,0.0,4.5,45
+764,Lewis-Skelly,Myles,Lewis-Skelly,3,MID,1,0.0,4.5,45
+772,Nwaneri,Ethan,Nwaneri,3,MID,1,0.0,4.5,45
+815,Bandeira,Mauro,Bandeira,3,MID,1,0.0,4.5,45
+817,Sweet,James,Sweet,2,DEF,1,0.0,4.0,40
+32,Alex Moreno,Alexandre,Moreno Lopera,2,DEF,2,1.1,5.0,50
+34,Bailey,Leon,Bailey,3,MID,2,3.1,5.5,55
+35,Buendia,Emiliano,Buendía Stati,3,MID,2,0.0,6.0,60
+36,Cash,Matty,Cash,2,DEF,2,9.9,4.5,45
+37,Chambers,Calum,Chambers,2,DEF,2,2.2,4.0,40
+38,Coutinho,Philippe,Coutinho Correia,3,MID,2,0.2,6.0,60
+39,Davis,Keinan,Davis,4,FWD,2,0.1,5.0,50
+40,Dendoncker,Leander,Dendoncker,3,MID,2,0.0,5.0,50
+41,Diego Carlos,Diego Carlos,Santos Silva,2,DEF,2,0.5,4.5,45
+42,Digne,Lucas,Digne,2,DEF,2,3.1,4.5,45
+43,Douglas Luiz,Douglas Luiz,Soares de Paulo,3,MID,2,4.8,5.5,55
+44,Duran,Jhon,Durán,4,FWD,2,0.2,5.0,50
+45,Hause,Kortney,Hause,2,DEF,2,0.2,4.0,40
+46,Iroegbunam,Tim,Iroegbunam,3,MID,2,0.0,4.5,45
+47,Kamara,Boubacar,Kamara,3,MID,2,0.1,5.0,50
+48,Konsa,Ezri,Konsa Ngoyo,2,DEF,2,2.2,4.5,45
+49,Martinez,Emiliano,Martínez Romero,1,GK,2,10.5,5.0,50
+50,McGinn,John,McGinn,3,MID,2,0.9,5.5,55
+51,Mings,Tyrone,Mings,2,DEF,2,1.0,4.5,45
+53,Olsen,Robin,Olsen,1,GK,2,0.6,4.0,40
+54,Philogene,Jaden,Philogene-Bidace,3,MID,2,0.0,4.5,45
+55,J.Ramsey,Jacob,Ramsey,3,MID,2,0.1,6.0,60
+56,Sanson,Morgan,Sanson,3,MID,2,0.0,4.5,45
+57,Sinisalo,Viljami,Sinisalo,1,GK,2,0.0,4.0,40
+58,Tielemans,Youri,Tielemans,3,MID,2,0.4,6.0,60
+59,Bertrand Traoré,Bertrand,Traoré,3,MID,2,0.0,5.0,50
+60,Watkins,Ollie,Watkins,4,FWD,2,35.9,8.0,80
+61,Wesley,Wesley,Moraes Ferreira da Silva,4,FWD,2,0.0,5.0,50
+584,Pau,Pau,Torres,2,DEF,2,2.8,4.5,45
+599,Diaby,Moussa,Diaby,3,MID,2,5.8,6.5,65
+618,Kellyman,Omari,Kellyman,3,MID,2,0.0,4.5,45
+670,Marschall,Filip,Marschall,1,GK,2,0.0,4.0,40
+672,Zaniolo,Nicolò,Zaniolo,3,MID,2,0.0,5.5,55
+686,Zych,Oliwier,Zych,1,GK,2,0.0,4.0,40
+699,Lenglet,Clément,Lenglet,2,DEF,2,0.2,4.5,45
+765,Proctor,Sam,Proctor,1,GK,2,0.0,4.0,40
+767,O'Reilly,Tommi,O'Reilly,3,MID,2,0.0,4.5,45
+778,Wright,James,Wright,1,GK,2,0.0,4.0,40
+793,Kesler-Hayden,Kaine,Kesler-Hayden,2,DEF,2,0.0,4.0,40
+803,Rogers,Morgan,Rogers,3,MID,2,0.0,5.0,50
+818,Gauci,Joe,Gauci,1,GK,2,0.0,4.0,40
+854,Munroe,Finley,Munroe,2,DEF,2,0.0,4.0,40
+865,Young,Kadan,Young,3,MID,2,0.0,4.5,45
+866,Emery,Lander,Emery,1,GK,2,0.0,4.0,40
+62,Anthony,Jaidon,Anthony,3,MID,3,0.0,5.0,50
+63,Billing,Philip,Billing,3,MID,3,0.3,5.5,55
+64,Brooks,David,Brooks,3,MID,3,0.0,5.0,50
+65,Christie,Ryan,Christie,3,MID,3,0.1,5.0,50
+66,L.Cook,Lewis,Cook,3,MID,3,0.1,5.0,50
+67,Siriki,Siriki,Dembélé,3,MID,3,0.0,4.5,45
+68,Fredericks,Ryan,Fredericks,2,DEF,3,0.0,4.5,45
+69,Hill,James,Hill,2,DEF,3,0.1,4.0,40
+70,Kelly,Lloyd,Kelly,2,DEF,3,0.1,4.5,45
+71,Kilkenny,Gavin,Kilkenny,3,MID,3,0.1,4.5,45
+72,Kluivert,Justin,Kluivert,3,MID,3,0.7,5.0,50
+73,Lowe,Jamal,Lowe,3,MID,3,0.0,5.0,50
+74,Marcondes,Emiliano,Marcondes,3,MID,3,0.0,4.5,45
+75,Mepham,Chris,Mepham,2,DEF,3,0.1,4.5,45
+76,Moore,Kieffer,Moore,4,FWD,3,0.2,5.0,50
+77,Neto,Norberto,Murara Neto,1,GK,3,4.2,4.5,45
+78,O.Dango,Dango,Ouattara,3,MID,3,0.0,5.0,50
+79,Pearson,Ben,Pearson,3,MID,3,0.0,4.5,45
+80,Randolph,Darren,Randolph,1,GK,3,0.4,4.0,40
+81,Rothwell,Joe,Rothwell,3,MID,3,0.0,5.0,50
+82,Semenyo,Antoine,Semenyo,4,FWD,3,2.0,4.5,45
+83,Senesi,Marcos,Senesi,2,DEF,3,2.4,4.5,45
+84,Smith,Adam,Smith,2,DEF,3,0.5,4.5,45
+85,Solanke,Dominic,Solanke,4,FWD,3,17.8,6.5,65
+86,Tavernier,Marcus,Tavernier,3,MID,3,0.3,5.5,55
+87,Hamed Traorè,Hamed,Traorè,3,MID,3,0.0,5.0,50
+88,Travers,Mark,Travers,1,GK,3,0.3,4.0,40
+89,Zabarnyi,Illia,Zabarnyi,2,DEF,3,1.9,4.5,45
+595,Kerkez,Milos,Kerkez,2,DEF,3,0.3,4.5,45
+607,Radu,Ionuț,Radu,1,GK,3,0.1,4.5,45
+619,Greenwood,Ben,Greenwood,2,DEF,3,0.1,4.0,40
+643,Aarons,Max,Aarons,2,DEF,3,0.1,4.5,45
+644,Scott,Alex,Scott,3,MID,3,0.0,5.0,50
+673,Adams,Tyler,Adams,3,MID,3,0.0,5.0,50
+705,Sinisterra,Luis,Sinisterra,3,MID,3,0.0,5.5,55
+799,Faivre,Romain,Faivre,3,MID,3,0.0,5.0,50
+802,Kinsey,Max,Kinsey,2,DEF,3,0.0,4.0,40
+804,Enes Ünal,Enes,Ünal,4,FWD,3,0.0,5.0,50
+811,Sadi,Dominic,Sadi,3,MID,3,0.0,4.5,45
+849,Dacosta Gonzalez,Michael,Dacosta Gonzalez,3,MID,3,0.0,4.5,45
+855,McKenna,Callan,McKenna,1,GK,3,0.0,4.0,40
+90,Ajer,Kristoffer,Ajer,2,DEF,4,0.7,4.5,45
+91,Balcombe,Ellery,Balcombe,1,GK,4,0.2,4.0,40
+92,Baptiste,Shandon,Baptiste,3,MID,4,0.7,4.5,45
+93,Bech,Mads,Bech Sørensen,2,DEF,4,0.1,4.0,40
+94,Bidstrup,Mads,Bidstrup,3,MID,4,0.0,4.5,45
+95,Canós,Sergi,Canós Tenés,3,MID,4,0.0,5.0,50
+96,Collins,Nathan,Collins,2,DEF,4,0.8,4.5,45
+97,Cox,Matthew,Cox,1,GK,4,0.0,4.0,40
+98,Damsgaard,Mikkel,Damsgaard,3,MID,4,0.0,5.0,50
+99,Dasilva,Josh,Dasilva,3,MID,4,0.0,5.0,50
+100,Dervişoğlu,Halil,Dervişoğlu,4,FWD,4,0.0,4.5,45
+101,Flekken,Mark,Flekken,1,GK,4,4.5,4.5,45
+102,Goode,Charlie,Goode,2,DEF,4,0.1,4.0,40
+103,Henry,Rico,Henry,2,DEF,4,0.8,4.5,45
+104,Hickey,Aaron,Hickey,2,DEF,4,0.1,4.5,45
+105,Janelt,Vitaly,Janelt,3,MID,4,0.1,5.5,55
+106,Jensen,Mathias,Jensen,3,MID,4,0.7,5.5,55
+107,Lewis-Potter,Keane,Lewis-Potter,3,MID,4,0.1,5.0,50
+108,Mbeumo,Bryan,Mbeumo,3,MID,4,6.7,6.5,65
+109,Mee,Ben,Mee,2,DEF,4,1.1,5.0,50
+110,Nørgaard,Christian,Nørgaard,3,MID,4,0.1,5.5,55
+111,Onyeka,Frank,Onyeka,3,MID,4,0.0,5.0,50
+112,Pinnock,Ethan,Pinnock,2,DEF,4,1.4,4.5,45
+114,Roerslev,Mads,Roerslev Rasmussen,2,DEF,4,0.4,4.5,45
+115,Schade,Kevin,Schade,3,MID,4,0.1,5.5,55
+116,Strakosha,Thomas,Strakosha,1,GK,4,1.2,4.0,40
+117,Toney,Ivan,Toney,4,FWD,4,3.7,8.0,80
+118,Trevitt,Ryan,Trevitt,3,MID,4,0.0,4.5,45
+119,Wissa,Yoane,Wissa,4,FWD,4,5.1,6.0,60
+120,Yarmoliuk,Yegor,Yarmoliuk,3,MID,4,0.7,4.5,45
+121,Zanka,Mathias,Jorgensen,2,DEF,4,0.3,4.5,45
+258,Maupay,Neal,Maupay,4,FWD,4,0.9,5.0,50
+508,Reguilón,Sergio,Reguilón,2,DEF,4,3.0,4.5,45
+620,Olakigbe,Michael,Olakigbe,3,MID,4,0.0,4.5,45
+684,Brierley,Ethan,Brierley,3,MID,4,0.0,4.5,45
+701,Ghoddos,Saman,Ghoddos,3,MID,4,0.0,4.5,45
+725,Kim Ji-Soo,Ji-Soo,Kim,2,DEF,4,0.0,4.0,40
+733,Adedokun,Valintino,Adedokun,2,DEF,4,0.0,4.0,40
+744,Peart-Harris,Myles,Peart-Harris,3,MID,4,0.0,4.5,45
+752,Angelini,Vincent,Angelini,1,GK,4,0.0,4.0,40
+789,Valdimarsson,Hákon,Valdimarsson,1,GK,4,0.0,4.0,40
+797,Fredrick,Benjamin,Fredrick,2,DEF,4,0.0,4.0,40
+834,Arthur,Benjamin,Arthur,2,DEF,4,0.0,4.0,40
+864,Konak,Yunus,Konak,3,MID,4,0.0,4.5,45
+122,Adingra,Simon,Adingra,3,MID,5,0.6,5.0,50
+123,Alzate,Steven,Alzate,3,MID,5,0.0,4.5,45
+124,Ayari,Yasin,Ayari,3,MID,5,0.0,4.5,45
+125,Buonanotte,Facundo,Buonanotte,3,MID,5,0.1,5.0,50
+127,Connolly,Aaron,Connolly,4,FWD,5,0.0,4.5,45
+128,Dahoud,Mahmoud,Dahoud,3,MID,5,0.1,5.0,50
+129,Dunk,Lewis,Dunk,2,DEF,5,5.3,5.0,50
+130,Enciso,Julio,Enciso,3,MID,5,0.4,5.5,55
+131,Estupiñan,Pervis,Estupiñán,2,DEF,5,14.5,5.0,50
+132,Ferguson,Evan,Ferguson,4,FWD,5,3.5,6.0,60
+133,Gilmour,Billy,Gilmour,3,MID,5,0.2,5.0,50
+134,Gross,Pascal,Groß,3,MID,5,4.1,6.5,65
+135,João Pedro,João Pedro,Junqueira de Jesus,4,FWD,5,6.1,5.5,55
+136,Karbownik,Michał,Karbownik,2,DEF,5,0.0,4.0,40
+137,Kozłowski,Kacper,Kozłowski,3,MID,5,0.0,4.5,45
+138,Lallana,Adam,Lallana,3,MID,5,0.0,5.0,50
+139,Lamptey,Tariq,Lamptey,2,DEF,5,3.6,4.0,40
+140,March,Solly,March,3,MID,5,2.0,6.5,65
+141,McGill,Tom,McGill,1,GK,5,0.2,4.0,40
+142,Milner,James,Milner,3,MID,5,0.1,5.0,50
+143,Mitoma,Kaoru,Mitoma,3,MID,5,11.8,6.5,65
+144,Moder,Jakub,Moder,3,MID,5,0.1,4.5,45
+146,Sarmiento,Jeremy,Sarmiento Morante,3,MID,5,0.0,4.5,45
+147,Scherpen,Kjell,Scherpen,1,GK,5,0.0,4.0,40
+148,Steele,Jason,Steele,1,GK,5,1.7,4.5,45
+149,Undav,Deniz,Undav,4,FWD,5,0.0,5.5,55
+150,Van Hecke,Jan Paul,van Hecke,2,DEF,5,2.1,4.0,40
+151,Veltman,Joël,Veltman,2,DEF,5,0.6,4.5,45
+152,Verbruggen,Bart,Verbruggen,1,GK,5,1.2,4.5,45
+153,Webster,Adam,Webster,2,DEF,5,0.3,4.5,45
+154,Welbeck,Danny,Welbeck,4,FWD,5,1.0,6.0,60
+155,Zeqiri,Andi,Zeqiri,4,FWD,5,0.4,4.5,45
+606,Igor,Igor Julio,dos Santos de Paulo,2,DEF,5,0.2,4.5,45
+621,Hinshelwood,Jack,Hinshelwood,3,MID,5,0.0,4.5,45
+690,Baleba,Carlos,Baleba,3,MID,5,0.0,4.5,45
+700,Ansu Fati,Anssumane,Fati Vieira,3,MID,5,0.4,6.5,65
+741,O’Mahony,Mark,O’Mahony,4,FWD,5,0.0,4.5,45
+742,Baker-Boaitey,Benicio,Baker-Boaitey,3,MID,5,0.0,4.5,45
+746,Jackson,Ben,Jackson,2,DEF,5,0.0,4.0,40
+747,Duffus,Joshua,Duffus,3,MID,5,0.0,4.5,45
+753,Kavanagh,Leigh,Kavanagh,2,DEF,5,0.0,4.0,40
+755,Barrington,Luca,Barrington,3,MID,5,0.0,4.5,45
+786,Peupion,Cameron,Peupion,3,MID,5,0.0,4.5,45
+816,Barco,Valentín,Barco,2,DEF,5,0.0,4.0,40
+843,Chouchane,Samy,Chouchane,3,MID,5,0.0,4.5,45
+845,Offiah,Odeluga,Offiah,2,DEF,5,0.0,4.0,40
+861,Atom,Noël,Atom,2,DEF,5,0.0,4.0,40
+156,Agyei,Enock,Agyei,3,MID,6,0.4,4.5,45
+157,Al-Dakhil,Ameen,Al-Dakhil,2,DEF,6,1.2,4.0,40
+158,Bastien,Samuel,Bastien,3,MID,6,0.0,5.0,50
+159,Benson,Manuel Benson,Hedilazio,3,MID,6,0.1,5.5,55
+160,Beyer,Jordan,Beyer,2,DEF,6,0.8,4.0,40
+161,Brownhill,Josh,Brownhill,3,MID,6,0.2,5.0,50
+162,Churlinov,Darko,Churlinov,3,MID,6,0.0,4.5,45
+163,Cork,Jack,Cork,3,MID,6,0.0,5.0,50
+164,Costelloe,Dara,Costelloe,3,MID,6,0.0,4.5,45
+165,Cullen,Josh,Cullen,3,MID,6,0.1,5.0,50
+166,Egan-Riley,CJ,Egan-Riley,2,DEF,6,0.1,4.0,40
+167,Ekdal,Hjalmar,Ekdal,2,DEF,6,0.2,4.0,40
+168,Foster,Lyle,Foster,4,FWD,6,0.4,5.0,50
+169,Franchi,Denis,Franchi,1,GK,6,0.1,4.0,40
+170,Gudmundsson,Jóhann Berg,Gudmundsson,3,MID,6,0.0,5.0,50
+171,McNally,Luke,McNally,2,DEF,6,0.0,4.0,40
+172,Muric,Arijanet,Muric,1,GK,6,0.6,4.5,45
+173,O'Shea,Dara,O'Shea,2,DEF,6,0.3,4.5,45
+174,Obafemi,Michael,Obafemi,4,FWD,6,0.0,5.0,50
+175,Peacock-Farrell,Bailey,Peacock-Farrell,1,GK,6,0.0,4.0,40
+176,Roberts,Connor,Roberts,2,DEF,6,0.1,4.5,45
+177,Rodriguez,Jay,Rodriguez,4,FWD,6,0.2,5.5,55
+178,Taylor,Charlie,Taylor,2,DEF,6,2.7,4.0,40
+179,Thomas,Bobby,Thomas,2,DEF,6,0.0,4.0,40
+180,Twine,Scott,Twine,3,MID,6,0.0,5.0,50
+181,Vigouroux,Lawrence,Vigouroux,1,GK,6,0.2,4.0,40
+182,Vitinho,Victor,da Silva,2,DEF,6,0.2,4.5,45
+183,Weghorst,Wout,Weghorst,4,FWD,6,0.0,5.5,55
+184,Zaroury,Anass,Zaroury,3,MID,6,0.0,5.0,50
+200,D.D.Fofana,David Datro,Fofana,4,FWD,6,0.2,5.0,50
+475,Berge,Sander,Berge,3,MID,6,0.1,5.0,50
+594,Amdouni,Zeki,Amdouni,4,FWD,6,0.2,5.5,55
+596,Trafford,James,Trafford,1,GK,6,0.9,4.5,45
+600,Redmond,Nathan,Redmond,3,MID,6,0.0,5.0,50
+605,Koleosho,Luca,Koleosho,3,MID,6,0.0,5.0,50
+608,Bruun Larsen,Jacob,Bruun Larsen,3,MID,6,0.1,5.0,50
+622,Dodgson,Owen,Dodgson,2,DEF,6,0.0,4.0,40
+660,Odobert,Wilson,Odobert,3,MID,6,0.1,5.0,50
+674,Delcroix,Hannes,Delcroix,2,DEF,6,0.1,4.0,40
+675,A.Ramsey,Aaron,Ramsey,3,MID,6,0.0,5.0,50
+694,Massengo,Han-Noah,Massengo,3,MID,6,0.0,5.0,50
+706,M.Trésor,Mike,Trésor,3,MID,6,0.0,5.5,55
+805,Assignon,Lorenz,Assignon,2,DEF,6,0.2,4.0,40
+806,Estève,Maxime,Esteve,2,DEF,6,0.0,4.0,40
+126,Caicedo,Moisés,Caicedo Corozo,3,MID,7,1.2,5.0,50
+145,Sanchez,Robert,Sánchez,1,GK,7,2.2,4.5,45
+185,Ampadu,Ethan,Ampadu,2,DEF,7,0.0,4.0,40
+186,Andrey,Andrey,Nascimento dos Santos,3,MID,7,0.1,4.5,45
+187,Arrizabalaga,Kepa,Arrizabalaga,1,GK,7,0.2,5.0,50
+188,Aubameyang,Pierre-Emerick,Aubameyang,4,FWD,7,0.0,6.5,65
+189,Azpilicueta,César,Azpilicueta,2,DEF,7,0.0,4.5,45
+190,Baba,Abdul Rahman,Baba,2,DEF,7,0.0,4.0,40
+191,B.Badiashile,Benoît,Badiashile,2,DEF,7,0.3,4.5,45
+192,Bettinelli,Marcus,Bettinelli,1,GK,7,0.0,4.0,40
+194,Chalobah,Trevoh,Chalobah,2,DEF,7,2.0,4.5,45
+195,Chilwell,Ben,Chilwell,2,DEF,7,4.7,5.5,55
+196,Chukwuemeka,Carney,Chukwuemeka,3,MID,7,1.0,4.5,45
+197,Colwill,Levi,Colwill,2,DEF,7,2.1,4.5,45
+198,Cucurella,Marc,Cucurella Saseta,2,DEF,7,3.7,5.0,50
+199,Enzo,Enzo,Fernández,3,MID,7,1.9,5.0,50
+201,W.Fofana,Wesley,Fofana,2,DEF,7,0.0,4.5,45
+202,Gallagher,Conor,Gallagher,3,MID,7,1.7,5.5,55
+203,Gusto,Malo,Gusto,2,DEF,7,8.2,4.0,40
+206,James,Reece,James,2,DEF,7,2.7,5.5,55
+207,Lukaku,Romelu,Lukaku Bolingoli,4,FWD,7,0.3,7.0,70
+208,Madueke,Noni,Madueke,3,MID,7,1.2,5.5,55
+210,Mudryk,Mykhailo,Mudryk,3,MID,7,0.9,6.5,65
+211,N.Jackson,Nicolas,Jackson,4,FWD,7,17.9,7.0,70
+212,Nkunku,Christopher,Nkunku,4,FWD,7,1.0,7.5,75
+213,Pulisic,Christian,Pulisic,3,MID,7,0.0,5.5,55
+214,M.Sarr,Malang,Sarr,2,DEF,7,0.1,4.5,45
+215,Slonina,Gabriel,Słonina,1,GK,7,0.0,4.0,40
+216,Sterling,Raheem,Sterling,3,MID,7,4.8,7.0,70
+217,T.Silva,Thiago,Emiliano da Silva,2,DEF,7,4.5,5.0,50
+218,Ziyech,Hakim,Ziyech,3,MID,7,0.1,5.5,55
+362,Palmer,Cole,Palmer,3,MID,7,51.3,5.0,50
+589,Ângelo,Ângelo Gabriel,Borges Damaceno,3,MID,7,0.0,5.0,50
+609,Maatsen,Ian,Maatsen,3,MID,7,0.0,5.5,55
+611,Disasi,Axel,Disasi,2,DEF,7,3.4,5.0,50
+613,Ugochukwu,Lesley,Ugochukwu,3,MID,7,0.1,4.5,45
+623,Burstow,Mason,Burstow,4,FWD,7,0.1,4.5,45
+659,Bergström,Lucas,Bergström,1,GK,7,0.0,4.0,40
+667,Lavia,Roméo,Lavia,3,MID,7,0.0,5.0,50
+671,Humphreys,Bashir,Humphreys,2,DEF,7,0.0,4.0,40
+677,Deivid,Deivid Washington,de Souza Eugênio,4,FWD,7,0.1,4.5,45
+680,Beach,Eddie,Beach,1,GK,7,0.0,4.0,40
+681,Diego Moreira,Diego Manuel Jadon,da Silva Moreira,3,MID,7,0.0,4.5,45
+687,Petrović,Đorđe,Petrović,1,GK,7,8.4,4.5,45
+716,Gilchrist,Alfie,Gilchrist,2,DEF,7,0.1,4.0,40
+717,Stutter,Ronnie,Stutter,4,FWD,7,0.0,4.5,45
+718,Matos,Alex,Matos,3,MID,7,0.0,4.5,45
+723,Brooking,Josh,Brooking,2,DEF,7,0.0,4.0,40
+758,Castledine,Leo,Castledine,3,MID,7,0.0,4.5,45
+791,Casadei,Cesare,Casadei,3,MID,7,0.0,4.5,45
+819,Samuels-Smith,Ishé,Samuels-Smith,2,DEF,7,0.0,4.0,40
+820,Harrison,Ollie,Harrison,3,MID,7,0.0,4.5,45
+830,Tauriainen,Jimi,Tauriainen,3,MID,7,0.0,4.5,45
+838,Acheampong,Josh,Acheampong,2,DEF,7,0.0,4.0,40
+847,Sharman-Lowe,Teddy,Sharman-Lowe,1,GK,7,0.0,4.0,40
+851,George,Tyrique,George,4,FWD,7,0.0,4.5,45
+852,Dyer,Kiano,Dyer,3,MID,7,0.0,4.5,45
+858,Curd,Ted,Curd,1,GK,7,0.0,4.0,40
+859,Sturge,Zak,Sturge,2,DEF,7,0.0,4.0,40
+7,Holding,Rob,Holding,2,DEF,8,0.1,4.5,45
+219,Ahamada,Naouirou,Ahamada,3,MID,8,0.4,4.5,45
+220,Andersen,Joachim,Andersen,2,DEF,8,14.1,4.5,45
+221,J.Ayew,Jordan,Ayew,3,MID,8,0.3,5.5,55
+222,Clyne,Nathaniel,Clyne,2,DEF,8,0.2,4.5,45
+223,C.Doucouré,Cheick,Doucouré,3,MID,8,0.0,5.0,50
+224,Ebiowei,Malcolm,Ebiowei,3,MID,8,0.0,4.5,45
+225,Edouard,Odsonne,Edouard,4,FWD,8,1.3,5.5,55
+226,Eze,Eberechi,Eze,3,MID,8,5.4,6.5,65
+227,Guaita,Vicente,Guaita,1,GK,8,0.2,4.5,45
+228,Guéhi,Marc,Guéhi,2,DEF,8,1.3,4.5,45
+229,Hughes,Will,Hughes,3,MID,8,0.0,5.0,50
+230,Johnstone,Sam,Johnstone,1,GK,8,1.3,4.5,45
+231,Lerma,Jefferson,Lerma Solís,3,MID,8,0.1,5.0,50
+232,Mateta,Jean-Philippe,Mateta,4,FWD,8,7.3,5.0,50
+233,Matthews,Remi,Matthews,1,GK,8,0.1,4.0,40
+234,Mitchell,Tyrick,Mitchell,2,DEF,8,4.7,4.5,45
+235,O'Brien,Jake,O'Brien,2,DEF,8,0.0,4.0,40
+236,Olise,Michael,Olise,3,MID,8,5.3,6.0,60
+237,Plange,Luke,Plange,4,FWD,8,0.0,4.5,45
+238,C.Richards,Chris,Richards,2,DEF,8,1.5,4.0,40
+239,Riedewald,Jairo,Riedewald,3,MID,8,0.1,4.5,45
+240,Schlupp,Jeffrey,Schlupp,3,MID,8,0.1,5.0,50
+241,Tomkins,James,Tomkins,2,DEF,8,0.4,4.0,40
+242,Ward,Joel,Ward,2,DEF,8,0.2,4.5,45
+243,Whitworth,Joe,Whitworth,1,GK,8,0.9,4.0,40
+385,Henderson,Dean,Henderson,1,GK,8,1.7,4.5,45
+615,Matheus França,Matheus,França de Oliveira,3,MID,8,0.0,5.0,50
+657,Rak-Sakyi,Jesurun,Rak-Sakyi,3,MID,8,0.0,4.5,45
+658,Gordon,John-Kymani,Gordon,4,FWD,8,0.0,4.5,45
+720,Ola-Adebomi,Ademola,Ola-Adebomi,4,FWD,8,0.0,4.5,45
+721,Ozoh,David,Ozoh,3,MID,8,0.0,4.5,45
+724,Raymond,Jadan,Raymond,3,MID,8,0.0,4.5,45
+763,Adaramola,Tayo,Adaramola,2,DEF,8,0.0,4.0,40
+792,Muñoz,Daniel,Muñoz,2,DEF,8,0.6,4.5,45
+807,Wharton,Adam,Wharton,3,MID,8,0.0,5.0,50
+821,Umeh-Chibueze,Franco,Umeh-Chibueze,4,FWD,8,0.0,4.5,45
+825,Rodney,Kaden,Rodney,3,MID,8,0.0,4.5,45
+842,Mathurin,Roshaun,Mathurin,3,MID,8,0.0,4.5,45
+244,André Gomes,André,Tavares Gomes,3,MID,9,0.1,4.5,45
+245,Branthwaite,Jarrad,Branthwaite,2,DEF,9,10.8,4.0,40
+246,Calvert-Lewin,Dominic,Calvert-Lewin,4,FWD,9,1.0,6.0,60
+247,Coleman,Seamus,Coleman,2,DEF,9,0.1,4.5,45
+248,Dele,Dele,Alli,3,MID,9,0.0,5.0,50
+249,A.Doucoure,Abdoulaye,Doucouré,3,MID,9,0.5,5.5,55
+250,Garner,James,Garner,3,MID,9,0.1,5.0,50
+251,Gbamin,Jean-Philippe,Gbamin,3,MID,9,0.0,4.5,45
+252,Godfrey,Ben,Godfrey,2,DEF,9,0.2,4.5,45
+253,Gray,Demarai,Gray,3,MID,9,0.1,5.5,55
+254,Gana,Idrissa,Gueye,3,MID,9,0.1,5.0,50
+257,Keane,Michael,Keane,2,DEF,9,0.2,4.5,45
+259,McNeil,Dwight,McNeil,3,MID,9,0.3,5.5,55
+260,Mykolenko,Vitalii,Mykolenko,2,DEF,9,2.6,4.5,45
+261,Onana,Amadou,Onana,3,MID,9,0.2,5.0,50
+262,Patterson,Nathan,Patterson,2,DEF,9,0.1,4.5,45
+263,Pickford,Jordan,Pickford,1,GK,9,16.3,4.5,45
+264,Simms,Ellis,Simms,4,FWD,9,0.0,4.5,45
+265,Tarkowski,James,Tarkowski,2,DEF,9,5.4,4.5,45
+266,J.Virginia,João,Neves Virgínia,1,GK,9,0.4,4.0,40
+579,Lonergan,Andy,Lonergan,1,GK,9,0.1,4.0,40
+588,Young,Ashley,Young,2,DEF,9,0.4,4.5,45
+601,Danjuma,Arnaut,Danjuma Groeneveld,3,MID,9,0.1,5.5,55
+624,Dobbin,Lewis,Dobbin,3,MID,9,0.0,4.5,45
+645,Y. Chermiti,Youssef,Ramalho Chermiti,4,FWD,9,0.1,5.0,50
+649,Cannon,Thomas,Cannon,4,FWD,9,0.0,4.5,45
+650,Onyango,Tyler,Onyango,3,MID,9,0.0,4.5,45
+661,Harrison,Jack,Harrison,3,MID,9,0.1,5.5,55
+691,Beto,Norberto Bercique,Gomes Betuncal,4,FWD,9,0.1,6.0,60
+719,Hunt,Mackenzie,Hunt,3,MID,9,0.0,4.5,45
+760,Metcalfe,Jenson,Metcalfe,3,MID,9,0.0,4.5,45
+761,Campbell,Elijah,Campbell,2,DEF,9,0.0,4.0,40
+841,Warrington,Lewis,Warrington,3,MID,9,0.0,4.5,45
+863,Crellin,Billy,Crellin,1,GK,9,0.0,4.0,40
+193,Broja,Armando,Broja,4,FWD,10,0.2,5.0,50
+256,Iwobi,Alex,Iwobi,3,MID,10,0.4,5.5,55
+267,Andreas,Andreas,Hoelgebaum Pereira,3,MID,10,0.9,5.5,55
+268,Cairney,Tom,Cairney,3,MID,10,0.0,5.0,50
+269,I.Cavaleiro,Ivan,Neves Abreu Cavaleiro,3,MID,10,0.0,5.0,50
+270,De Cordova-Reid,Bobby,De Cordova-Reid,3,MID,10,0.1,5.5,55
+271,Diop,Issa,Diop,2,DEF,10,0.4,4.5,45
+272,Francois,Tyrese,Francois,3,MID,10,0.0,4.5,45
+273,Knockaert,Anthony,Knockaert,3,MID,10,0.0,4.5,45
+274,Kongolo,Terence,Kongolo,2,DEF,10,0.1,4.0,40
+275,Leno,Bernd,Leno,1,GK,10,14.6,4.5,45
+276,Lukić,Saša,Lukić,3,MID,10,0.3,4.5,45
+277,Mbabu,Kevin,Mbabu,2,DEF,10,0.2,4.0,40
+278,Mitrović,Aleksandar,Mitrović,4,FWD,10,0.6,7.5,75
+279,Muniz,Rodrigo,Muniz Carvalho,4,FWD,10,4.4,4.5,45
+280,J.Palhinha,João,Palhinha Gonçalves,3,MID,10,0.3,5.0,50
+281,Ream,Tim,Ream,2,DEF,10,0.6,4.5,45
+282,Reed,Harrison,Reed,3,MID,10,0.3,5.0,50
+283,Robinson,Antonee,Robinson,2,DEF,10,4.0,4.5,45
+284,Rodák,Marek,Rodák,1,GK,10,0.3,4.0,40
+285,Tete,Kenny,Tete,2,DEF,10,0.3,4.5,45
+286,Tosin,Tosin,Adarabioyo,2,DEF,10,0.2,4.5,45
+287,Vinícius,Carlos Vinícius,Alves Morais,4,FWD,10,0.9,5.0,50
+288,Wilson,Harry,Wilson,3,MID,10,0.2,5.5,55
+558,Raúl,Raúl,Jiménez,4,FWD,10,0.6,5.5,55
+591,Willian,Willian,Borges da Silva,3,MID,10,0.4,5.5,55
+610,Bassey,Calvin,Bassey,2,DEF,10,0.4,4.5,45
+625,De Fougerolles,Luc,De Fougerolles,2,DEF,10,0.1,4.0,40
+651,Stansfield,Jay,Stansfield,4,FWD,10,0.0,4.5,45
+652,Dibley-Dias,Matthew,Dibley-Dias,3,MID,10,0.0,4.5,45
+662,Adama,Adama,Traoré,3,MID,10,0.0,5.0,50
+683,Harris,Luke,Harris,3,MID,10,0.0,4.5,45
+688,Castagne,Timothy,Castagne,2,DEF,10,1.6,4.5,45
+692,Benda,Steven,Benda,1,GK,10,0.0,4.0,40
+707,Ballo-Touré,Fodé,Ballo-Touré,2,DEF,10,0.1,4.5,45
+732,Tanton,Devan,Tanton,2,DEF,10,0.0,4.0,40
+796,Sekularac,Kristian,Sekularac,3,MID,10,0.0,4.5,45
+810,King,Joshua,King,3,MID,10,0.0,4.5,45
+289,Adrián,Adrián,San Miguel del Castillo,1,GK,11,0.2,4.0,40
+290,Alexander-Arnold,Trent,Alexander-Arnold,2,DEF,11,10.3,8.0,80
+291,A.Becker,Alisson,Ramses Becker,1,GK,11,9.7,5.5,55
+292,Bajcetic,Stefan,Bajcetic,3,MID,11,0.0,5.0,50
+293,Darwin,Darwin,Núñez Ribeiro,4,FWD,11,11.7,7.5,75
+294,Diogo J.,Diogo,Teixeira da Silva,3,MID,11,1.7,8.0,80
+295,Elliott,Harvey,Elliott,3,MID,11,0.4,5.0,50
+296,Fabinho,Fabio Henrique,Tavares,3,MID,11,0.0,5.0,50
+297,Gakpo,Cody,Gakpo,4,FWD,11,3.1,7.5,75
+298,Gomez,Joe,Gomez,2,DEF,11,1.3,4.5,45
+299,Henderson,Jordan,Henderson,3,MID,11,0.0,5.0,50
+300,Jones,Curtis,Jones,3,MID,11,0.1,5.0,50
+301,Kelleher,Caoimhin,Kelleher,1,GK,11,3.9,4.0,40
+302,Konaté,Ibrahima,Konaté,2,DEF,11,2.0,5.0,50
+303,Luis Díaz,Luis,Díaz,3,MID,11,10.0,7.5,75
+304,Mac Allister,Alexis,Mac Allister,3,MID,11,3.9,6.0,60
+305,Matip,Joel,Matip,2,DEF,11,0.3,5.0,50
+306,Phillips,Nathaniel,Phillips,2,DEF,11,0.1,4.0,40
+307,Robertson,Andrew,Robertson,2,DEF,11,4.2,6.5,65
+308,Salah,Mohamed,Salah,3,MID,11,24.0,12.5,125
+309,Szoboszlai,Dominik,Szoboszlai,3,MID,11,3.3,7.0,70
+310,Thiago,Thiago,Alcántara do Nascimento,3,MID,11,0.1,5.0,50
+311,Tsimikas,Konstantinos,Tsimikas,2,DEF,11,1.1,4.5,45
+312,Van den Berg,Sepp,van den Berg,2,DEF,11,0.0,4.0,40
+313,Virgil,Virgil,van Dijk,2,DEF,11,17.7,6.0,60
+626,Quansah,Jarell,Quansah,2,DEF,11,0.5,4.0,40
+627,Clark,Bobby,Clark,3,MID,11,0.0,4.5,45
+628,Doak,Ben,Doak,3,MID,11,0.0,4.5,45
+629,McConnell,James,McConnell,3,MID,11,0.0,4.5,45
+668,Endo,Wataru,Endo,3,MID,11,0.1,5.5,55
+708,Gravenberch,Ryan,Gravenberch,3,MID,11,0.1,5.0,50
+726,Chambers,Luke,Chambers,2,DEF,11,0.0,4.0,40
+728,Scanlon,Callum,Scanlon,2,DEF,11,0.0,4.0,40
+743,Nyoni,Treymaurice,Nyoni,3,MID,11,0.0,4.5,45
+756,Pitaluga,Marcelo,de Araújo Pitaluga Filho,1,GK,11,0.0,4.0,40
+757,Bradley,Conor,Bradley,2,DEF,11,2.1,4.0,40
+782,Beck,Owen,Beck,2,DEF,11,0.0,4.5,45
+783,Gordon,Kaide,Gordon,3,MID,11,0.0,4.5,45
+812,Koumas,Lewis,Koumas,4,FWD,11,0.0,4.5,45
+813,Mrozek,Fabian,Mrozek,1,GK,11,0.0,4.0,40
+824,Danns,Jayden,Danns,4,FWD,11,0.0,4.5,45
+837,Nallo,Amara,Nallo,2,DEF,11,0.0,4.0,40
+21,Sambi,Albert,Sambi Lokonga,3,MID,12,0.0,5.0,50
+52,Nakamba,Marvelous,Nakamba,3,MID,12,0.4,4.5,45
+314,Adebayo,Elijah,Adebayo,4,FWD,12,1.0,5.0,50
+315,Andersen,Mads Juel,Andersen,2,DEF,12,0.5,4.0,40
+316,Bell,Amari'i,Bell,2,DEF,12,2.2,4.0,40
+317,Berry,Luke,Berry,3,MID,12,0.0,5.0,50
+318,Burke,Reece,Burke,2,DEF,12,0.2,4.0,40
+319,Campbell,Allan,Campbell,3,MID,12,0.0,5.0,50
+320,Clark,Jordan,Clark,3,MID,12,0.0,5.0,50
+321,Doughty,Alfie,Doughty,2,DEF,12,6.2,4.5,45
+322,Freeman,Luke,Freeman,3,MID,12,0.0,5.0,50
+323,Macey,Matt,Macey,1,GK,12,0.2,4.0,40
+324,McAtee,John,McAtee,4,FWD,12,0.4,4.5,45
+325,Mendes,Carlos,Mendes Gomes,3,MID,12,0.0,4.5,45
+326,Morris,Carlton,Morris,4,FWD,12,4.3,5.5,55
+327,Muskwe,Admiral,Muskwe,4,FWD,12,0.1,4.5,45
+328,Ogbene,Chiedozie,Ogbene,4,FWD,12,0.1,5.0,50
+329,Onyedinma,Fred,Onyedinma,3,MID,12,0.0,5.0,50
+330,Osho,Gabriel,Osho,2,DEF,12,0.1,4.5,45
+331,Pepple,Aribim,Pepple,4,FWD,12,0.0,4.5,45
+332,Pereira,Dion,Pereira,3,MID,12,0.0,4.5,45
+333,Potts,Dan,Potts,2,DEF,12,0.1,4.0,40
+334,Rea,Glen,Rea,3,MID,12,0.0,4.5,45
+335,Shea,James,Shea,1,GK,12,0.1,4.5,45
+336,Taylor,Joe,Taylor,4,FWD,12,0.1,4.5,45
+337,Thorpe,Elliot,Thorpe,3,MID,12,0.0,4.5,45
+338,Walton,Jack,Walton,1,GK,12,0.0,4.0,40
+339,Watson,Louie,Watson,3,MID,12,0.1,4.5,45
+340,Woodrow,Cauley,Woodrow,4,FWD,12,0.6,4.5,45
+393,Mengi,Teden,Mengi,2,DEF,12,1.5,4.0,40
+553,Giles,Ryan,Giles,2,DEF,12,0.1,4.5,45
+575,Lockyer,Tom,Lockyer,2,DEF,12,0.1,4.5,45
+582,Mpanzu,Pelly Ruddock,Mpanzu,3,MID,12,0.0,5.0,50
+586,Chong,Tahith,Chong,3,MID,12,0.2,5.0,50
+602,Kaboré,Issa,Kaboré,2,DEF,12,1.9,4.0,40
+614,Kaminski,Thomas,Kaminski,1,GK,12,0.7,4.5,45
+630,Barkley,Ross,Barkley,3,MID,12,0.9,5.0,50
+631,Brown,Jacob,Brown,4,FWD,12,0.1,5.0,50
+648,Francis-Clarke,Aidan,Francis-Clarke,2,DEF,12,0.0,4.0,40
+665,Krul,Tim,Krul,1,GK,12,0.1,4.5,45
+682,Johnson,Joseph,Johnson,2,DEF,12,0.0,4.0,40
+727,Townsend,Andros,Townsend,3,MID,12,0.1,5.0,50
+729,Luker,Jayden,Luker,3,MID,12,0.0,4.5,45
+734,Nelson,Zack,Nelson,3,MID,12,0.0,4.5,45
+798,Hashioka,Daiki,Hashioka,2,DEF,12,0.0,4.0,40
+831,Piesold,Axel,Piesold,3,MID,12,0.0,4.5,45
+839,Martins,Dominic,Dos Santos Martins,3,MID,12,0.0,4.5,45
+844,Chigozie,Christian,Chigozie,2,DEF,12,0.0,4.0,40
+848,Harris,Taylan,Harris,4,FWD,12,0.0,4.5,45
+341,Akanji,Manuel,Akanji,2,DEF,13,5.6,5.0,50
+342,Aké,Nathan,Aké,2,DEF,13,5.2,5.0,50
+343,J.Alvarez,Julián,Álvarez,4,FWD,13,15.4,6.5,65
+344,Bernardo,Bernardo,Veiga de Carvalho e Silva,3,MID,13,2.9,6.5,65
+345,Bobb,Oscar,Bobb,3,MID,13,0.1,4.5,45
+346,Cancelo,João,Cancelo,2,DEF,13,1.0,6.0,60
+347,Carson,Scott,Carson,1,GK,13,0.1,4.0,40
+348,Charles,Shea,Charles,3,MID,13,0.0,4.5,45
+349,De Bruyne,Kevin,De Bruyne,3,MID,13,16.6,10.5,105
+350,Rúben,Rúben,Gato Alves Dias,2,DEF,13,7.2,5.5,55
+352,Ederson M.,Ederson,Santana de Moraes,1,GK,13,13.1,5.5,55
+353,Foden,Phil,Foden,3,MID,13,43.3,7.5,75
+354,Grealish,Jack,Grealish,3,MID,13,1.5,7.5,75
+355,Haaland,Erling,Haaland,4,FWD,13,73.6,14.0,140
+356,Kovačić,Mateo,Kovačić,3,MID,13,0.3,5.0,50
+357,Laporte,Aymeric,Laporte,2,DEF,13,0.1,5.0,50
+358,R.Lewis,Rico,Lewis,2,DEF,13,0.4,4.5,45
+359,Mahrez,Riyad,Mahrez,3,MID,13,0.0,7.5,75
+361,Ortega Moreno,Stefan,Ortega Moreno,1,GK,13,2.3,4.0,40
+363,Perrone,Máximo,Perrone,3,MID,13,0.0,4.5,45
+365,Rodrigo,Rodrigo,Hernandez,3,MID,13,6.1,5.5,55
+366,Sergio Gómez,Sergio,Gómez,2,DEF,13,1.0,4.0,40
+367,Steffen,Zack,Steffen,1,GK,13,0.1,4.0,40
+368,Stones,John,Stones,2,DEF,13,3.1,5.5,55
+369,Walker,Kyle,Walker,2,DEF,13,15.1,5.0,50
+566,Matheus N.,Matheus Luiz,Nunes,3,MID,13,0.1,5.0,50
+616,Gvardiol,Joško,Gvardiol,2,DEF,13,18.1,5.0,50
+678,Doku,Jérémy,Doku,3,MID,13,1.9,6.5,65
+762,Susoho,Mahamadou,Susoho,3,MID,13,0.0,4.5,45
+771,Hamilton,Micah,Hamilton,3,MID,13,0.0,4.5,45
+814,Wright,Jacob,Wright,3,MID,13,0.0,4.5,45
+209,Mount,Mason,Mount,3,MID,14,0.8,7.0,70
+370,Alex Telles,Alex,Telles,2,DEF,14,0.0,4.5,45
+371,Amad,Amad,Diallo,3,MID,14,0.1,4.5,45
+372,Antony,Antony Matheus,dos Santos,3,MID,14,0.6,7.0,70
+373,B.Fernandes,Bruno,Borges Fernandes,3,MID,14,14.6,8.5,85
+374,B.Williams,Brandon,Williams,2,DEF,14,0.1,4.0,40
+375,Bailly,Eric,Bailly,2,DEF,14,0.1,4.0,40
+376,Casemiro,Carlos Henrique,Casimiro,3,MID,14,1.9,5.5,55
+377,Dalot,Diogo,Dalot Teixeira,2,DEF,14,7.4,5.0,50
+379,Eriksen,Christian,Eriksen,3,MID,14,0.4,6.0,60
+380,Fernandez,Álvaro,Fernández Carreras,2,DEF,14,0.1,4.0,40
+381,Fred,Frederico,Rodrigues de Paula Santos,3,MID,14,0.0,5.0,50
+382,Garnacho,Alejandro,Garnacho,3,MID,14,9.8,5.0,50
+383,Hannibal,Hannibal,Mejbri,3,MID,14,0.1,4.5,45
+384,Heaton,Tom,Heaton,1,GK,14,0.1,4.0,40
+386,Lindelof,Victor,Lindelöf,2,DEF,14,0.2,4.5,45
+387,Maguire,Harry,Maguire,2,DEF,14,1.3,4.5,45
+388,Mainoo,Kobbie,Mainoo,3,MID,14,0.9,4.5,45
+389,Malacia,Tyrell,Malacia,2,DEF,14,0.0,4.5,45
+390,Martial,Anthony,Martial,4,FWD,14,0.3,6.5,65
+391,Martinez,Lisandro,Martínez,2,DEF,14,2.1,5.0,50
+392,McTominay,Scott,McTominay,3,MID,14,0.8,5.0,50
+394,Pellistri,Facundo,Pellistri Rebollo,3,MID,14,0.1,4.5,45
+395,R.Varane,Raphaël,Varane,2,DEF,14,2.1,5.0,50
+396,Rashford,Marcus,Rashford,3,MID,14,9.5,9.0,90
+397,Sancho,Jadon,Sancho,3,MID,14,0.4,7.0,70
+398,Shaw,Luke,Shaw,2,DEF,14,2.7,5.5,55
+399,Shoretire,Shola,Shoretire,4,FWD,14,0.2,4.5,45
+400,Van de Beek,Donny,van de Beek,3,MID,14,0.0,5.0,50
+401,Wan-Bissaka,Aaron,Wan-Bissaka,2,DEF,14,2.0,4.5,45
+597,Onana,André,Onana,1,GK,14,15.5,5.0,50
+617,Højlund,Rasmus,Højlund,4,FWD,14,5.6,7.0,70
+632,Forson,Omari,Forson,3,MID,14,0.0,4.5,45
+669,Vítek,Radek,Vítek,1,GK,14,0.0,4.0,40
+685,Gore,Daniel,Gore,3,MID,14,0.0,4.5,45
+695,Altay,Altay,Bayindir,1,GK,14,0.1,4.0,40
+703,Evans,Jonny,Evans,2,DEF,14,0.6,4.0,40
+709,Amrabat,Sofyan,Amrabat,3,MID,14,0.1,5.0,50
+748,Hugill,Joe,Hugill,4,FWD,14,0.0,4.5,45
+766,Kambwala,Willy,Kambwala,2,DEF,14,0.1,4.0,40
+768,Bennett,Rhys,Bennett,2,DEF,14,0.0,4.0,40
+826,Collyer,Toby,Collyer,3,MID,14,0.0,4.5,45
+833,Ogunneye,Habeeb,Ogunneye,2,DEF,14,0.0,4.0,40
+835,Mee,Dermot,Mee,1,GK,14,0.0,4.0,40
+846,Amass,Harry,Amass,2,DEF,14,0.0,4.0,40
+850,Wheatley,Ethan,Wheatley,4,FWD,14,0.0,4.5,45
+856,Jackson,Louis,Jackson,2,DEF,14,0.0,4.0,40
+204,Hall,Lewis,Hall,2,DEF,15,0.6,4.5,45
+402,Almirón,Miguel,Almirón Rejala,3,MID,15,2.7,6.5,65
+403,Anderson,Elliot,Anderson,3,MID,15,1.8,4.5,45
+404,Ashby,Harrison,Ashby,2,DEF,15,0.0,4.0,40
+405,Botman,Sven,Botman,2,DEF,15,4.3,4.5,45
+406,Bruno G.,Bruno,Guimarães Rodriguez Moura,3,MID,15,3.3,6.0,60
+407,Burn,Dan,Burn,2,DEF,15,12.7,4.5,45
+408,Darlow,Karl,Darlow,1,GK,15,0.0,4.0,40
+409,Dubravka,Martin,Dubravka,1,GK,15,8.7,4.0,40
+410,Fraser,Ryan,Fraser,3,MID,15,0.0,5.0,50
+411,Gillespie,Mark,Gillespie,1,GK,15,0.1,4.0,40
+412,Gordon,Anthony,Gordon,3,MID,15,20.6,5.5,55
+413,Hayden,Isaac,Hayden,3,MID,15,0.0,4.5,45
+414,Hendrick,Jeff,Hendrick,3,MID,15,0.0,4.5,45
+415,Isak,Alexander,Isak,4,FWD,15,41.0,7.5,75
+416,Joelinton,Joelinton Cássio,Apolinário de Lira,3,MID,15,0.4,6.0,60
+417,Krafth,Emil,Krafth,2,DEF,15,0.1,4.5,45
+418,Kuol,Garang,Kuol,3,MID,15,0.0,4.5,45
+419,Lascelles,Jamaal,Lascelles,2,DEF,15,1.9,4.0,40
+420,J.Lewis,Jamal,Lewis,2,DEF,15,0.0,4.0,40
+421,Longstaff,Sean,Longstaff,3,MID,15,0.4,5.0,50
+422,Manquillo,Javier,Manquillo Gaitán,2,DEF,15,0.0,4.0,40
+423,J.Murphy,Jacob,Murphy,3,MID,15,0.2,5.0,50
+424,Pope,Nick,Pope,1,GK,15,4.8,5.5,55
+425,Ritchie,Matt,Ritchie,3,MID,15,0.2,4.5,45
+426,Saint-Maximin,Allan,Saint-Maximin,3,MID,15,0.0,6.0,60
+427,Schär,Fabian,Schär,2,DEF,15,7.3,5.0,50
+428,Targett,Matt,Targett,2,DEF,15,0.1,4.5,45
+429,Tonali,Sandro,Tonali,3,MID,15,1.0,5.5,55
+430,Trippier,Kieran,Trippier,2,DEF,15,21.2,6.5,65
+431,Watts,Kell,Watts,2,DEF,15,0.0,4.0,40
+432,Willock,Joe,Willock,3,MID,15,0.1,5.5,55
+433,Wilson,Callum,Wilson,4,FWD,15,3.0,8.0,80
+580,Karius,Loris,Karius,1,GK,15,0.2,4.0,40
+581,Dummett,Paul,Dummett,2,DEF,15,0.3,4.0,40
+603,Barnes,Harvey,Barnes,3,MID,15,1.2,6.5,65
+633,Livramento,Tino,Livramento,2,DEF,15,1.1,4.5,45
+634,A.Murphy,Alex,Murphy,2,DEF,15,0.4,4.0,40
+635,Miley,Lewis,Miley,3,MID,15,0.1,4.5,45
+738,Diallo,Amadou,Diallo,3,MID,15,0.0,4.5,45
+739,Parkinson,Ben,Parkinson,4,FWD,15,0.0,4.5,45
+745,Ndiweni,Michael,Ndiweni,4,FWD,15,0.0,4.5,45
+794,White,Joe,White,3,MID,15,0.0,4.5,45
+795,Hernes,Travis,Hernes,3,MID,15,0.0,4.5,45
+23,Tavares,Nuno,Varela Tavares,2,DEF,16,0.2,4.0,40
+28,Turner,Matt,Turner,1,GK,16,8.6,4.0,40
+205,Hudson-Odoi,Callum,Hudson-Odoi,3,MID,16,0.8,5.0,50
+378,Elanga,Anthony,Elanga,3,MID,16,1.1,5.0,50
+434,B.Aguilera,Brandon,Aguilera Zamora,3,MID,16,0.0,4.5,45
+435,Arter,Harry,Arter,3,MID,16,0.1,4.5,45
+436,Aurier,Serge,Aurier,2,DEF,16,0.6,4.5,45
+437,Awoniyi,Taiwo,Awoniyi,4,FWD,16,1.3,6.5,65
+438,Biancone,Giulian,Biancone,2,DEF,16,0.1,4.0,40
+439,Boly,Willy,Boly,2,DEF,16,0.5,4.5,45
+440,Bowler,Josh,Bowler,3,MID,16,0.0,4.5,45
+441,Cook,Steve,Cook,2,DEF,16,0.0,4.5,45
+442,Danilo,Danilo,dos Santos de Oliveira,3,MID,16,0.1,5.5,55
+443,Dennis,Emmanuel,Dennis,4,FWD,16,0.1,5.0,50
+444,Dräger,Mohamed,Dräger,2,DEF,16,0.0,4.0,40
+445,Felipe,Felipe Augusto,de Almeida Monteiro,2,DEF,16,0.0,4.5,45
+446,Freuler,Remo,Freuler,3,MID,16,0.0,5.0,50
+447,Gibbs-White,Morgan,Gibbs-White,3,MID,16,2.1,6.0,60
+448,Hennessey,Wayne,Hennessey,1,GK,16,0.2,4.0,40
+449,Horvath,Ethan,Horvath,1,GK,16,0.1,4.5,45
+451,Kouyaté,Cheikhou,Kouyaté,3,MID,16,0.0,5.0,50
+452,Laryea,Richie,Laryea,2,DEF,16,0.0,4.5,45
+453,Mangala,Orel,Mangala,3,MID,16,0.0,5.0,50
+454,Mbe Soh,Loïc,Mbe Soh,2,DEF,16,0.0,4.0,40
+455,McKenna,Scott,McKenna,2,DEF,16,0.1,4.5,45
+456,Mighten,Alex,Mighten,3,MID,16,0.0,4.5,45
+457,Niakhaté,Moussa,Niakhaté,2,DEF,16,0.1,4.5,45
+458,O'Brien,Lewis,O'Brien,3,MID,16,0.0,5.0,50
+459,Ojeda,Braian,Ojeda Rodríguez,3,MID,16,0.0,4.5,45
+460,Panzo,Jonathan,Panzo,2,DEF,16,0.1,4.0,40
+461,O.Richards,Omar,Richards,2,DEF,16,0.0,4.5,45
+462,G.Scarpa,Gustavo Henrique,Furtado Scarpa,3,MID,16,0.0,4.5,45
+463,J.Shelvey,Jonjo,Shelvey,3,MID,16,0.0,5.0,50
+464,Surridge,Sam,Surridge,4,FWD,16,0.1,4.5,45
+465,Toffolo,Harry,Toffolo,2,DEF,16,0.1,4.5,45
+466,Ui-jo,Hwang,Ui-jo,4,FWD,16,0.2,4.5,45
+467,Williams,Neco,Williams,2,DEF,16,0.2,4.5,45
+468,Wood,Chris,Wood,4,FWD,16,1.7,5.0,50
+469,Worrall,Joe,Worrall,2,DEF,16,0.1,4.5,45
+470,Yates,Ryan,Yates,3,MID,16,0.0,5.0,50
+604,Aina,Olu,Aina,2,DEF,16,0.3,4.5,45
+636,G.Shelvey,George,Shelvey,1,GK,16,0.0,4.0,40
+637,Powell,Josh,Powell,2,DEF,16,0.2,4.0,40
+679,G.Montiel,Gonzalo,Montiel,2,DEF,16,0.1,4.5,45
+696,Murillo,Murillo,Santiago Costa dos Santos,2,DEF,16,0.3,4.5,45
+710,Odysseas,Odysseas,Vlachodimos,1,GK,16,0.1,4.5,45
+711,Omobamidele,Andrew,Omobamidele,2,DEF,16,0.0,4.5,45
+712,Dominguez,Nicolás,Domínguez,3,MID,16,0.0,5.0,50
+713,Sangaré,Ibrahim,Sangaré,3,MID,16,0.0,5.0,50
+714,Origi,Divock,Origi,4,FWD,16,0.1,5.0,50
+779,McDonnell,Jamie,McDonnell,3,MID,16,0.0,4.5,45
+780,Osong,Detlef Esapa,Osong,4,FWD,16,0.0,4.5,45
+781,Gardner,Joe,Gardner,4,FWD,16,0.0,4.5,45
+801,Reyna,Giovanni,Reyna,3,MID,16,0.0,5.0,50
+808,Sels,Matz,Sels,1,GK,16,0.2,4.5,45
+809,Ribeiro,Rodrigo,Duarte Ribeiro,4,FWD,16,0.0,4.5,45
+27,Trusty,Auston,Trusty,2,DEF,17,1.8,4.0,40
+33,Archer,Cameron,Archer,4,FWD,17,3.4,4.5,45
+255,Holgate,Mason,Holgate,2,DEF,17,0.4,4.0,40
+360,McAtee,James,McAtee,3,MID,17,0.4,4.5,45
+471,Ahmedhodžić,Anel,Ahmedhodžić,2,DEF,17,0.2,4.5,45
+472,Amissah,Jordan,Amissah,1,GK,17,0.3,4.0,40
+473,Baldock,George,Baldock,2,DEF,17,4.0,4.0,40
+474,Basham,Chris,Basham,2,DEF,17,0.3,4.0,40
+476,Bogle,Jayden,Bogle,2,DEF,17,0.1,4.5,45
+477,Brewster,Rhian,Brewster,4,FWD,17,0.0,5.0,50
+478,Coulibaly,Ismaila,Coulibaly,3,MID,17,0.0,4.5,45
+479,A.Davies,Adam,Davies,1,GK,17,0.2,4.0,40
+480,Egan,John,Egan,2,DEF,17,0.1,4.5,45
+481,Fleck,John,Fleck,3,MID,17,0.0,5.0,50
+482,Foderingham,Wes,Foderingham,1,GK,17,0.3,4.5,45
+483,Jebbison,Daniel,Jebbison,4,FWD,17,0.0,5.0,50
+484,Lowe,Max,Lowe,2,DEF,17,0.0,4.5,45
+485,McBurnie,Oliver,McBurnie,4,FWD,17,0.1,5.5,55
+486,Ndiaye,Iliman,Ndiaye,4,FWD,17,0.0,5.5,55
+487,Norrington-Davies,Rhys,Norrington-Davies,2,DEF,17,0.1,4.0,40
+488,Norwood,Oliver,Norwood,3,MID,17,0.0,5.0,50
+489,Osborn,Ben,Osborn,3,MID,17,0.0,5.0,50
+490,Osula,William,Osula,4,FWD,17,0.8,4.5,45
+576,Robinson,Jack,Robinson,2,DEF,17,0.1,4.5,45
+587,Slimane,Anis,Slimane,3,MID,17,0.0,5.0,50
+592,Larouci,Yasser,Larouci,2,DEF,17,0.0,4.5,45
+593,T.Bénie,Bénie,Traoré,4,FWD,17,0.0,5.5,55
+638,Vini Souza,Vini,de Souza Costa,3,MID,17,0.0,5.0,50
+653,Seriki,Femi,Seriki,2,DEF,17,0.1,4.0,40
+654,Marsh,Louie,Marsh,4,FWD,17,0.0,4.5,45
+655,Brooks,Andre,Brooks,3,MID,17,0.0,4.5,45
+656,Hackford,Antwoine,Hackford,4,FWD,17,0.1,4.5,45
+663,Hamer,Gustavo,Hamer,3,MID,17,0.2,5.0,50
+666,T.Davies,Tom,Davies,3,MID,17,0.0,5.0,50
+693,Thomas,Luke,Thomas,2,DEF,17,0.0,4.0,40
+730,Oné,Ryan,Oné,3,MID,17,0.0,4.5,45
+731,Buyabu,Jili,Buyabu,2,DEF,17,0.0,4.0,40
+759,Peck,Sydie,Peck,3,MID,17,0.0,4.5,45
+775,Brereton Díaz,Ben,Brereton,3,MID,17,0.2,5.0,50
+790,Grbić,Ivo,Grbic,1,GK,17,0.0,4.5,45
+822,Blacker,Billy,Blacker,4,FWD,17,0.0,4.5,45
+823,Arblaster,Oliver,Arblaster,3,MID,17,0.0,4.5,45
+827,Sasnauskas,Dovydas,Sasnauskas,2,DEF,17,0.0,4.0,40
+828,Curtis,Sam,Curtis,2,DEF,17,0.0,4.0,40
+857,Hampson,Owen,Hampson,3,MID,17,0.0,4.5,45
+450,Johnson,Brennan,Johnson,3,MID,18,2.0,6.0,60
+491,Austin,Brandon,Austin,1,GK,18,0.2,4.0,40
+492,Bentancur,Rodrigo,Bentancur,3,MID,18,0.0,5.5,55
+493,Bissouma,Yves,Bissouma,3,MID,18,0.3,5.0,50
+494,Bryan,Bryan,Gil Salvatierra,3,MID,18,0.0,5.0,50
+495,Davies,Ben,Davies,2,DEF,18,0.4,4.5,45
+496,Dier,Eric,Dier,2,DEF,18,0.3,4.5,45
+497,E.Royal,Emerson,Leite de Souza Junior,2,DEF,18,0.8,4.5,45
+498,Forster,Fraser,Forster,1,GK,18,1.6,4.0,40
+499,Højbjerg,Pierre-Emile,Højbjerg,3,MID,18,0.3,5.5,55
+500,Kane,Harry,Kane,4,FWD,18,0.6,12.5,125
+501,Kulusevski,Dejan,Kulusevski,3,MID,18,2.1,7.0,70
+502,Lloris,Hugo,Lloris,1,GK,18,0.5,5.0,50
+503,Lo Celso,Giovani,Lo Celso,3,MID,18,0.1,5.0,50
+504,Maddison,James,Maddison,3,MID,18,10.0,7.5,75
+505,Ndombele,Tanguy,Ndombélé Alvaro,3,MID,18,0.2,4.5,45
+506,Pedro Porro,Pedro,Porro,2,DEF,18,22.4,5.0,50
+507,Perišić,Ivan,Perišić,2,DEF,18,0.7,5.0,50
+509,Richarlison,Richarlison,de Andrade,3,MID,18,2.5,7.0,70
+510,Rodon,Joe,Rodon,2,DEF,18,0.1,4.0,40
+511,Romero,Cristian,Romero,2,DEF,18,12.2,4.5,45
+512,Sánchez,Davinson,Sánchez,2,DEF,18,0.1,4.5,45
+513,Sarr,Pape Matar,Sarr,3,MID,18,1.6,4.5,45
+514,Sessegnon,Ryan,Sessegnon,2,DEF,18,0.0,4.5,45
+515,Skipp,Oliver,Skipp,3,MID,18,0.1,5.0,50
+516,Son,Son,Heung-min,3,MID,18,34.4,9.0,90
+517,Spence,Djed,Spence,2,DEF,18,0.2,4.0,40
+518,Tanganga,Japhet,Tanganga,2,DEF,18,0.3,4.0,40
+519,Udogie,Destiny,Udogie,2,DEF,18,5.2,4.5,45
+520,Vicario,Guglielmo,Vicario,1,GK,18,9.4,5.0,50
+521,Whiteman,Alfie,Whiteman,1,GK,18,0.2,4.0,40
+583,Solomon,Manor,Solomon,3,MID,18,0.1,5.5,55
+639,Van de Ven,Micky,van de Ven,2,DEF,18,3.7,4.5,45
+640,Scarlett,Dane,Scarlett,4,FWD,18,0.1,4.5,45
+641,Veliz,Alejo,Véliz,4,FWD,18,0.1,5.5,55
+702,Phillips,Ashley,Phillips,2,DEF,18,0.1,4.0,40
+722,Donley,Jamie,Donley,4,FWD,18,0.1,4.5,45
+740,Dorrington,Alfie,Dorrington,2,DEF,18,0.0,4.0,40
+754,Yago Santiago,Yago,de Santiago Alonso,3,MID,18,0.0,4.5,45
+776,Werner,Timo,Werner,4,FWD,18,0.5,6.5,65
+777,Drăgușin,Radu,Dragusin,2,DEF,18,0.1,4.5,45
+860,Moore,Mikey,Moore,3,MID,18,0.0,4.5,45
+862,Hall,Tyrese,Hall,3,MID,18,0.0,4.5,45
+364,Phillips,Kalvin,Phillips,3,MID,19,0.0,5.0,50
+522,N.Aguerd,Nayef,Aguerd,2,DEF,19,0.5,4.5,45
+523,Antonio,Michail,Antonio,4,FWD,19,1.9,6.0,60
+524,Areola,Alphonse,Areola,1,GK,19,22.3,4.0,40
+525,Benrahma,Saïd,Benrahma,3,MID,19,0.3,6.0,60
+526,Bowen,Jarrod,Bowen,3,MID,19,12.1,7.0,70
+527,Cornet,Maxwel,Cornet,3,MID,19,0.1,5.5,55
+528,Coufal,Vladimír,Coufal,2,DEF,19,2.0,4.5,45
+529,Coventry,Conor,Coventry,3,MID,19,0.1,4.5,45
+530,Cresswell,Aaron,Cresswell,2,DEF,19,0.3,4.5,45
+531,Downes,Flynn,Downes,3,MID,19,0.0,5.0,50
+532,Emerson,Emerson,Palmieri dos Santos,2,DEF,19,1.9,4.5,45
+533,Fabianski,Lukasz,Fabianski,1,GK,19,1.3,4.5,45
+534,P.Fornals,Pablo,Fornals Malla,3,MID,19,0.0,5.0,50
+535,Ings,Danny,Ings,4,FWD,19,0.6,6.0,60
+536,Johnson,Ben,Johnson,2,DEF,19,0.1,4.5,45
+537,Kehrer,Thilo,Kehrer,2,DEF,19,0.1,4.5,45
+538,Mubama,Divin,Mubama,4,FWD,19,4.5,4.5,45
+539,L.Paquetá,Lucas,Tolentino Coelho de Lima,3,MID,19,1.4,6.0,60
+541,Scamacca,Gianluca,Scamacca,4,FWD,19,0.0,6.0,60
+542,Souček,Tomáš,Souček,3,MID,19,0.8,5.0,50
+543,Vlašić,Nikola,Vlašić,3,MID,19,0.0,4.5,45
+544,Zouma,Kurt,Zouma,2,DEF,19,1.5,4.5,45
+577,Ogbonna,Angelo,Ogbonna,2,DEF,19,0.1,4.5,45
+642,Álvarez,Edson,Álvarez Velázquez,3,MID,19,0.2,5.0,50
+647,Anang,Joseph,Anang,1,GK,19,0.1,4.0,40
+664,Ward-Prowse,James,Ward-Prowse,3,MID,19,5.3,6.0,60
+676,Mavropanos,Konstantinos,Mavropanos,2,DEF,19,0.1,4.5,45
+689,Kudus,Mohammed,Kudus,3,MID,19,3.0,6.5,65
+773,Orford,Lewis,Orford,3,MID,19,0.0,4.5,45
+774,Casey,Kaelan,Casey,2,DEF,19,0.0,4.0,40
+784,Scarles,Oliver,Scarles,2,DEF,19,0.0,4.0,40
+785,Marshall,Callum,Marshall,4,FWD,19,0.0,4.5,45
+829,Earthy,George,Earthy,3,MID,19,0.0,4.5,45
+351,Doyle,Tommy,Doyle,3,MID,20,0.1,4.5,45
+545,Aït-Nouri,Rayan,Aït-Nouri,2,DEF,20,3.9,4.5,45
+546,Bentley,Daniel,Bentley,1,GK,20,0.8,4.0,40
+547,Bolla,Bendegúz,Bolla,2,DEF,20,0.3,4.0,40
+548,H.Bueno,Hugo,Bueno López,2,DEF,20,0.1,4.5,45
+549,Chiquinho,Francisco Jorge,Tomás Oliveira,3,MID,20,0.0,4.5,45
+550,Cundle,Luke,Cundle,3,MID,20,0.0,4.5,45
+551,Dawson,Craig,Dawson,2,DEF,20,0.4,4.5,45
+552,Fábio Silva,Fábio,Silva,4,FWD,20,0.2,5.5,55
+554,Guedes,Gonçalo Manuel,Ganchinho Guedes,3,MID,20,0.0,5.5,55
+555,Hodge,Joe,Hodge,3,MID,20,0.0,4.5,45
+556,Hoever,Ki-Jana,Hoever,2,DEF,20,0.0,4.0,40
+557,Hee Chan,Hwang,Hee-chan,3,MID,20,1.8,5.5,55
+559,João Gomes,João Victor,Gomes da Silva,3,MID,20,0.1,5.0,50
+560,J.Otto,Jonathan,Castro Otto,2,DEF,20,0.0,4.5,45
+561,Jordão,Bruno,Cavaco Jordão,3,MID,20,0.2,4.5,45
+562,Kalajdžić,Sasa,Kalajdzic,4,FWD,20,0.1,5.0,50
+563,Kilman,Max,Kilman,2,DEF,20,1.7,4.5,45
+564,King,Tom,King,1,GK,20,0.6,4.0,40
+565,Mario Jr.,Mario,Lemina,3,MID,20,0.1,5.0,50
+567,Neto,Pedro,Lomba Neto,3,MID,20,1.3,5.5,55
+568,Podence,Daniel,Castelo Podence,3,MID,20,0.0,5.5,55
+569,José Sá,José,Malheiro de Sá,1,GK,20,2.0,5.0,50
+570,Sarabia,Pablo,Sarabia,3,MID,20,0.5,5.0,50
+571,Šarkić,Matija,Šarkić,1,GK,20,0.2,4.0,40
+572,N.Semedo,Nélson,Cabral Semedo,2,DEF,20,0.6,4.5,45
+573,Toti,Toti António,Gomes,2,DEF,20,0.3,4.5,45
+574,Boubacar Traore,Boubacar,Traoré,3,MID,20,0.3,4.5,45
+590,Cunha,Matheus,Santos Carneiro Da Cunha,4,FWD,20,2.4,5.5,55
+598,Doherty,Matt,Doherty,2,DEF,20,0.2,4.5,45
+697,S.Bueno,Santiago,Bueno,2,DEF,20,0.0,4.5,45
+698,González,Enso,González,3,MID,20,0.0,5.0,50
+704,Fraser,Nathan,Fraser,4,FWD,20,0.1,4.5,45
+715,Bellegarde,Jean-Ricner,Bellegarde,3,MID,20,0.0,5.0,50
+749,Whittingham,Matthew,Whittingham,3,MID,20,0.0,4.5,45
+750,Chirewa,Tawanda,Chirewa,3,MID,20,0.0,4.5,45
+751,Hubner,Justin,Hubner,2,DEF,20,0.0,4.0,40
+769,Hesketh,Owen,Hesketh,3,MID,20,0.0,4.5,45
+770,Barnett,Ty,Barnett,3,MID,20,0.0,4.5,45
+787,Griffiths,Harvey,Griffiths,3,MID,20,0.0,4.5,45
+788,Mosquera,Yerson,Mosquera,2,DEF,20,0.0,4.0,40
+800,N.Lemina,Noha,Lemina,3,MID,20,0.0,5.0,50
+832,Okoduwa,Wesley,Okoduwa,2,DEF,20,0.0,4.0,40
+836,Chiwome,Leon,Chiwome,4,FWD,20,0.0,4.5,45
+840,Holman,Fletcher,Holman,4,FWD,20,0.0,4.5,45
+853,Ojinnaka,Temple,Ojinnaka,3,MID,20,0.0,4.5,45

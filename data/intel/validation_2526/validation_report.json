@@ -1,0 +1,523 @@
+{
+  "generated_at": "2026-07-07T14:46:42.858353+00:00",
+  "purpose": "off-season validation of scraper v2 steps 1-2 against archived 2025-26 content",
+  "gameweeks": {
+    "19": {
+      "date": "2025-12-30",
+      "sources": {
+        "guardian": {
+          "mode": "content-api historical query",
+          "articles": 0,
+          "claims": 0,
+          "clubs": [],
+          "unresolved": []
+        },
+        "ffs_teamnews": {
+          "mode": "wp-rest deadline-window query",
+          "editions": 2,
+          "titles": [
+            "FPL Gameweek 19 team news: Tuesday’s injury updates + Rice blow",
+            "FPL Gameweek 19 team news: Monday’s live injury updates"
+          ],
+          "claims": 112,
+          "clubs": [
+            "ARS",
+            "AVL",
+            "BHA",
+            "BOU",
+            "BRE",
+            "BUR",
+            "CHE",
+            "EVE",
+            "LEE",
+            "MUN",
+            "NEW",
+            "NFO",
+            "TOT",
+            "WHU",
+            "WOL"
+          ],
+          "unmatched_headers": [
+            "KEY GAMEWEEK 19 INJURY NEWS FROM MONDAY",
+            "KEY GAMEWEEK 19 INJURY NEWS FROM TUESDAY"
+          ],
+          "llm_gap_clubs": [],
+          "unresolved": [
+            "Brennan Johnson (TOT)",
+            "Antoine Semenyo (BOU)",
+            "Evann Guessand (AVL)",
+            "Igor Julio (WHU)"
+          ]
+        },
+        "ffs_injuries": {
+          "mode": "wayback",
+          "snapshot": "http://web.archive.org/web/20251218130053id_/https://www.fantasyfootballscout.co.uk/fantasy-football-injuries",
+          "distance_days": 12,
+          "note": "nearest snapshot ±12d from deadline — too stale for this GW, skipped"
+        },
+        "sportsgambler": {
+          "mode": "wayback",
+          "snapshot": "http://web.archive.org/web/20251209173620id_/https://www.sportsgambler.com/injuries/football/england-premier-league/",
+          "distance_days": 21,
+          "note": "nearest snapshot ±21d from deadline — too stale for this GW, skipped"
+        },
+        "knocksandbans": {
+          "mode": "wayback",
+          "snapshot": null,
+          "note": "no snapshot available near this date"
+        }
+      },
+      "blind_clubs": {
+        "Newcastle": {
+          "claims": 9,
+          "players": [
+            "Anthony Elanga (out)",
+            "Dan Burn (out)",
+            "Emil Krafth (out)",
+            "Kieran Trippier (available)",
+            "Nick Pope (available)",
+            "Sven Botman (available)",
+            "Tino Livramento (out)",
+            "Will Osula (out)",
+            "Yoane Wissa (available)"
+          ]
+        },
+        "Tottenham": {
+          "claims": 10,
+          "players": [
+            "Brennan Johnson (unknown)",
+            "Cristian Romero (suspended)",
+            "Dejan Kulusevski (out)",
+            "Destiny Udogie (out)",
+            "Dominic Solanke (out)",
+            "James Maddison (out)",
+            "Lucas Bergvall (unknown)",
+            "Pape Matar Sarr (suspended)",
+            "Xavi Simons (suspended)",
+            "Yves Bissouma (suspended)"
+          ]
+        },
+        "West Ham": {
+          "claims": 4,
+          "players": [
+            "Aaron Wan-Bissaka (doubtful)",
+            "Callum Wilson (doubtful)",
+            "El Hadji Malick Diouf (doubtful)",
+            "Igor Julio (unknown)"
+          ]
+        },
+        "Wolves": {
+          "claims": 10,
+          "players": [
+            "Andre (out)",
+            "Emmanuel Agbadou (unknown)",
+            "Jean-Ricner Bellegarde (unknown)",
+            "Leon Chiwome (unknown)",
+            "Marshall Munetsi (unknown)",
+            "Rodrigo Gomes (unknown)",
+            "Santiago Bueno (unknown)",
+            "Tawanda Chirewa (unknown)",
+            "Toti Gomes (unknown)",
+            "Yerson Mosquera (unknown)"
+          ]
+        },
+        "Brighton": {
+          "claims": 7,
+          "players": [
+            "Adam Webster (available)",
+            "Carlos Baleba (available)",
+            "Danny Welbeck (available)",
+            "Kaoru Mitoma (available)",
+            "Solly March (unknown)",
+            "Stefanos Tzimas (available)",
+            "Yankuba Minteh (unknown)"
+          ]
+        },
+        "Leeds": {
+          "claims": 3,
+          "players": [
+            "Daniel James (doubtful)",
+            "Joe Rodon (out)",
+            "Sean Longstaff (doubtful)"
+          ]
+        },
+        "Burnley": {
+          "claims": 8,
+          "players": [
+            "Axel Tuanzebe (unknown)",
+            "Connor Roberts (unknown)",
+            "Joe Worrall (out)",
+            "Jordan Beyer (unknown)",
+            "Josh Cullen (unknown)",
+            "Lyle Foster, Hannibal Mejbri (unknown)",
+            "Maxime Esteve (available)",
+            "Zeki Amdouni (unknown)"
+          ]
+        }
+      },
+      "coverage": {
+        "clubs_covered": 15,
+        "missing": [
+          "Crystal Palace",
+          "Fulham",
+          "Liverpool",
+          "Manchester City",
+          "Sunderland"
+        ],
+        "per_club": {
+          "Arsenal": {
+            "claims": 9,
+            "conflicts": 0
+          },
+          "Aston Villa": {
+            "claims": 7,
+            "conflicts": 0
+          },
+          "Bournemouth": {
+            "claims": 5,
+            "conflicts": 0
+          },
+          "Brentford": {
+            "claims": 6,
+            "conflicts": 0
+          },
+          "Brighton": {
+            "claims": 7,
+            "conflicts": 0
+          },
+          "Burnley": {
+            "claims": 8,
+            "conflicts": 0
+          },
+          "Chelsea": {
+            "claims": 9,
+            "conflicts": 0
+          },
+          "Everton": {
+            "claims": 6,
+            "conflicts": 0
+          },
+          "Leeds": {
+            "claims": 3,
+            "conflicts": 0
+          },
+          "Manchester United": {
+            "claims": 7,
+            "conflicts": 0
+          },
+          "Newcastle": {
+            "claims": 9,
+            "conflicts": 0
+          },
+          "Nottingham Forest": {
+            "claims": 6,
+            "conflicts": 0
+          },
+          "Tottenham": {
+            "claims": 10,
+            "conflicts": 0
+          },
+          "West Ham": {
+            "claims": 4,
+            "conflicts": 0
+          },
+          "Wolves": {
+            "claims": 10,
+            "conflicts": 0
+          }
+        }
+      },
+      "n_claims": 112,
+      "n_players": 106,
+      "conflicts": []
+    },
+    "31": {
+      "date": "2026-03-20",
+      "sources": {
+        "guardian": {
+          "mode": "content-api historical query",
+          "articles": 1,
+          "claims": 73,
+          "clubs": [
+            "ARS",
+            "AVL",
+            "BHA",
+            "BRE",
+            "BUR",
+            "CHE",
+            "EVE",
+            "FUL",
+            "LEE",
+            "LIV",
+            "MCI",
+            "NEW",
+            "NFO",
+            "SUN",
+            "TOT",
+            "WHU"
+          ],
+          "unresolved": []
+        },
+        "ffs_teamnews": {
+          "mode": "wp-rest deadline-window query",
+          "editions": 3,
+          "titles": [
+            "FPL Gameweek 31 team news: Friday’s live injury updates",
+            "FPL Gameweek 31 team news: Thursday’s injury updates",
+            "FPL Gameweek 31 team news: Weds’ injury updates"
+          ],
+          "claims": 85,
+          "clubs": [
+            "AVL",
+            "BHA",
+            "BOU",
+            "BRE",
+            "BUR",
+            "CHE",
+            "EVE",
+            "FUL",
+            "LEE",
+            "LIV",
+            "MUN",
+            "NEW",
+            "NFO",
+            "SUN",
+            "TOT",
+            "WHU"
+          ],
+          "unmatched_headers": [
+            "FRIDAY’S PRESS CONFERENCE TIMES",
+            "KEY GAMEWEEK 31 TEAM NEWS FROM FRIDAY",
+            "KEY GAMEWEEK 31 TEAM NEWS FROM THURSDAY"
+          ],
+          "llm_gap_clubs": [],
+          "unresolved": []
+        },
+        "ffs_injuries": {
+          "mode": "wayback",
+          "snapshot": "http://web.archive.org/web/20260312001155id_/https://www.fantasyfootballscout.co.uk/fantasy-football-injuries",
+          "distance_days": 8,
+          "note": "nearest snapshot ±8d from deadline — too stale for this GW, skipped"
+        },
+        "sportsgambler": {
+          "mode": "wayback",
+          "snapshot": "http://web.archive.org/web/20260201030322id_/https://www.sportsgambler.com/injuries/football/england-premier-league/",
+          "distance_days": 47,
+          "note": "nearest snapshot ±47d from deadline — too stale for this GW, skipped"
+        },
+        "knocksandbans": {
+          "mode": "wayback",
+          "snapshot": "http://web.archive.org/web/20260214125308id_/https://www.knocksandbans.com/",
+          "distance_days": 34,
+          "note": "nearest snapshot ±34d from deadline — too stale for this GW, skipped"
+        }
+      },
+      "blind_clubs": {
+        "Newcastle": {
+          "claims": 5,
+          "players": [
+            "Guimarães (available, conflict)",
+            "Krafth (out)",
+            "Miley (available, conflict)",
+            "Schär (available, conflict)",
+            "Tonali (out)"
+          ]
+        },
+        "Tottenham": {
+          "claims": 10,
+          "players": [
+            "Bentancur (out)",
+            "Bergvall (out)",
+            "Bissouma (out)",
+            "Davies (out)",
+            "Dominic Solanke (available)",
+            "Joao Palhinha (unknown)",
+            "Kudus (out)",
+            "Kulusevski (out)",
+            "Maddison (out)",
+            "Odobert (out)"
+          ]
+        },
+        "West Ham": {
+          "claims": 3,
+          "players": [
+            "Fabianski (doubtful)",
+            "Scarles (out)",
+            "Summerville (out)"
+          ]
+        },
+        "Wolves": {
+          "claims": 0,
+          "players": []
+        },
+        "Brighton": {
+          "claims": 5,
+          "players": [
+            "Diego Gomez (unknown)",
+            "Kaoru Mitoma (out)",
+            "Tzimas (unknown)",
+            "Webster (unknown)",
+            "Yankuba Minteh (unknown)"
+          ]
+        },
+        "Leeds": {
+          "claims": 2,
+          "players": [
+            "Gudmundsson (suspended)",
+            "Okafor (doubtful)"
+          ]
+        },
+        "Burnley": {
+          "claims": 6,
+          "players": [
+            "Amdouni (available, conflict)",
+            "Beyer (out)",
+            "Cullen (out)",
+            "Mike Tresor (available)",
+            "Roberts (available, conflict)",
+            "Tuanzebe (out)"
+          ]
+        }
+      },
+      "coverage": {
+        "clubs_covered": 18,
+        "missing": [
+          "Crystal Palace",
+          "Wolves"
+        ],
+        "per_club": {
+          "Arsenal": {
+            "claims": 1,
+            "conflicts": 0
+          },
+          "Aston Villa": {
+            "claims": 4,
+            "conflicts": 0
+          },
+          "Bournemouth": {
+            "claims": 4,
+            "conflicts": 0
+          },
+          "Brentford": {
+            "claims": 7,
+            "conflicts": 0
+          },
+          "Brighton": {
+            "claims": 5,
+            "conflicts": 0
+          },
+          "Burnley": {
+            "claims": 6,
+            "conflicts": 2
+          },
+          "Chelsea": {
+            "claims": 9,
+            "conflicts": 0
+          },
+          "Everton": {
+            "claims": 5,
+            "conflicts": 0
+          },
+          "Fulham": {
+            "claims": 3,
+            "conflicts": 0
+          },
+          "Leeds": {
+            "claims": 2,
+            "conflicts": 0
+          },
+          "Liverpool": {
+            "claims": 9,
+            "conflicts": 1
+          },
+          "Manchester City": {
+            "claims": 1,
+            "conflicts": 0
+          },
+          "Manchester United": {
+            "claims": 6,
+            "conflicts": 0
+          },
+          "Newcastle": {
+            "claims": 5,
+            "conflicts": 3
+          },
+          "Nottingham Forest": {
+            "claims": 6,
+            "conflicts": 0
+          },
+          "Sunderland": {
+            "claims": 9,
+            "conflicts": 0
+          },
+          "Tottenham": {
+            "claims": 10,
+            "conflicts": 0
+          },
+          "West Ham": {
+            "claims": 3,
+            "conflicts": 0
+          }
+        }
+      },
+      "n_claims": 158,
+      "n_players": 95,
+      "conflicts": [
+        {
+          "player": "Salah",
+          "club_id": 12,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        },
+        {
+          "player": "Roberts",
+          "club_id": 3,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        },
+        {
+          "player": "Amdouni",
+          "club_id": 3,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        },
+        {
+          "player": "Guimarães",
+          "club_id": 15,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        },
+        {
+          "player": "Miley",
+          "club_id": 15,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        },
+        {
+          "player": "Schär",
+          "club_id": 15,
+          "score": 50,
+          "sources": [
+            "ffs_teamnews",
+            "guardian"
+          ]
+        }
+      ]
+    }
+  }
+}

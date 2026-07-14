@@ -1,0 +1,773 @@
+﻿======================================================================
+  FPL Season Simulator — GW1 to GW38
+  SEASON=2023-24 | RULES_MODE=corrected | CHIP_STRATEGY=legacy | OPTIMIZER=legacy | out=season_simulation_corrected_2023-24.json
+======================================================================
+
+[LOAD] Loading data...
+  [TRAIN-CUT] train_gk.csv: 4421 -> 2917 rows (seasons < 2023-24)
+  [TRAIN-CUT] train_def.csv: 18828 -> 12440 rows (seasons < 2023-24)
+  [TRAIN-CUT] train_mid.csv: 22132 -> 14379 rows (seasons < 2023-24)
+  [TRAIN-CUT] train_fwd.csv: 5663 -> 3917 rows (seasons < 2023-24)
+  [AVAIL] intel data is 2025-26-only — disabled for 2023-24
+  [RECS] intel data is 2025-26-only — disabled for 2023-24
+  Players: 865 | DGW GWs in range: [7, 25, 28, 34, 35, 37]
+  Blank GWs in range: [2, 17, 18, 26, 29, 34] | Chip strategy: legacy
+  Availability data: 0 GWs loaded
+
+[LOAD] Building historical team form lookup (Intel 08)...
+  [HIST TEAM FORM] Loaded 4374 team-GW entries from vaastav
+
+[TRAIN] Initial models from all 6-season historical data...
+  Training GW1 models on all 6-season historical data:
+    GK: 2917 rows
+    DEF: 12440 rows
+    MID: 14379 rows
+    FWD: 3917 rows
+
+----------------------------------------------------------------------
+  GW 1  |  FT: 1  |  Bank: 0.0m
+  [GW1 pool] 865 players | exact=379 partial=53 pos_avg=433
+  [GW1 TEAM FORM] disabled for 2023-24 (id mapping is 2025-26-specific) — league-average prior
+  [BENCH-INTEL] GW1 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Pope(£5.5m,f3=4.4), Saliba(£5.0m,f3=4.3), Gabriel(£5.0m,f3=3.8), Schär(£5.0m,f3=4.1)
+  [CAP] GW1 candidates:
+    1. Haaland (FWD) raw:16.8 adj:21.1 form3:8.2 home:0.0  <- SELECTED
+    2. Saka (MID) raw:14.0 adj:16.2 form3:5.0 home:1.0
+    3. Foden (MID) raw:11.6 adj:13.4 form3:5.4 home:0.0
+  [CAP] GW1 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-1 actuals (w=2)...
+    GK: 2917 rows
+    DEF: 12440 rows
+    MID: 14379 rows
+    FWD: 3917 rows
+  Predicted: 122.5 | Actual: 71 | Cap: Haaland | Hits: 0
+  FT next GW: 2 | Bank: 3.0m | Squad val: 97.0m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 2  |  FT: 2  |  Bank: 3.0m
+  [TEAM FORM] GW2 top attack: [(15, 5.0), (5, 4.0), (13, 3.0)] | top defence: [(1, 1.0), (4, 1.0), (5, 1.0)]
+  [BENCH-INTEL] GW2 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Leno(£4.5m,f3=12.0), R.Varane(£5.0m,f3=14.0), Rodrigo(£5.5m,f3=13.0), Wan-Bissaka(£4.5m,f3=12.0)
+  [CAP] GW2 candidates:
+    1. Haaland (FWD) raw:14.0 adj:17.5 form3:13.0 home:1.0  <- SELECTED
+    2. Saka (MID) raw:12.6 adj:14.6 form3:10.0 home:0.0
+    3. Isak (FWD) raw:11.0 adj:13.5 form3:13.0 home:0.0
+  [CAP] GW2 -> Haaland selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-2 actuals (w=3)...
+    GK: 2986 rows
+    DEF: 12637 rows
+    MID: 14635 rows
+    FWD: 3990 rows
+  Predicted: 120.0 | Actual: 51 | Cap: Haaland | Hits: 0
+  FT next GW: 3 | Bank: 3.0m | Squad val: 97.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 3  |  FT: 3  |  Bank: 3.0m
+  [TEAM FORM] GW3 top attack: [(5, 4.0), (2, 2.5), (4, 2.5)] | top defence: [(1, 1.0), (4, 1.0), (13, 1.0)]
+  [BENCH-INTEL] GW3 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Leno(£4.5m,f3=7.0), Estupiñan(£5.1m,f3=9.0), R.Varane(£5.0m,f3=7.5), Saliba(£5.1m,f3=6.5)
+  [CAP] GW3 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW3 candidates:
+    1. Isak (FWD) raw:11.0 adj:13.6 form3:7.5 home:1.0  <- SELECTED
+    2. Haaland (FWD) raw:13.6 adj:13.0 form3:7.5 home:0.0
+    3. Saka (MID) raw:12.6 adj:8.4 form3:6.5 home:1.0
+  [CAP] GW3 -> Isak selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-3 actuals (w=4)...
+    GK: 3067 rows
+    DEF: 12859 rows
+    MID: 14929 rows
+    FWD: 4078 rows
+  Predicted: 122.7 | Actual: 34 | Cap: Isak | Hits: 0
+  FT next GW: 4 | Bank: 3.0m | Squad val: 97.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 4  |  FT: 4  |  Bank: 3.0m
+  [TEAM FORM] GW4 top attack: [(5, 3.0), (2, 2.6666666666666665), (19, 2.3333333333333335)] | top defence: [(4, 1.0), (1, 0.6666666666666666), (10, 0.6666666666666666)]
+  [BENCH-INTEL] GW4 | BB target: GW8 (score: 0.00) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: 
+  [BENCH-INTEL] Recommended bench: Vicario(£5.0m,f3=6.3), Andersen(£4.5m,f3=7.3), Cash(£4.5m,f3=7.3), Estupiñan(£5.2m,f3=6.3)
+  [CAP] GW4 blank penalty on Isak (capped last GW, scored 2.0pts)
+  [CAP] GW4 candidates:
+    1. Saka (MID) raw:12.5 adj:14.4 form3:7.0 home:1.0  <- SELECTED
+    2. Haaland (FWD) raw:13.5 adj:9.8 form3:6.3 home:1.0
+    3. Foden (MID) raw:11.6 adj:7.7 form3:5.3 home:1.0
+  [CAP] GW4 -> Saka selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-4 actuals (w=5)...
+    GK: 3151 rows
+    DEF: 13088 rows
+    MID: 15229 rows
+    FWD: 4168 rows
+  Predicted: 120.0 | Actual: 65 | Cap: Saka | Hits: 0
+  FT next GW: 5 | Bank: 3.0m | Squad val: 97.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 5  |  FT: 5  |  Bank: 3.0m
+  [TEAM FORM] GW5 top attack: [(5, 2.6666666666666665), (13, 2.6666666666666665), (18, 2.6666666666666665)] | top defence: [(4, 0.6666666666666666), (18, 0.6666666666666666), (19, 0.6666666666666666)]
+  [BENCH-INTEL] GW5 | BB target: GW8 (score: 27.59) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:27.59
+  [BENCH-INTEL] Recommended bench: Vicario(£5.1m,f3=6.7), Cash(£4.6m,f3=7.3), Udogie(£4.6m,f3=7.3), Neto(£5.5m,f3=6.3)
+  [CHIP-CHECK] GW5 | chips_used: [] | dgw: False
+  [CAP] GW5 blank penalty on Saka (capped last GW, scored 4.0pts)
+  [CAP] GW5 candidates:
+    1. Haaland (FWD) raw:14.6 adj:18.2 form3:8.7 home:0.0  <- SELECTED
+    2. Son (MID) raw:11.2 adj:13.0 form3:8.7 home:1.0
+    3. Isak (FWD) raw:10.9 adj:7.9 form3:2.0 home:1.0
+  [CAP] GW5 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-5 actuals (w=6)...
+    GK: 3236 rows
+    DEF: 13320 rows
+    MID: 15537 rows
+    FWD: 4260 rows
+  Predicted: 120.0 | Actual: 51 | Cap: Haaland | Hits: 0
+  FT next GW: 5 | Bank: 3.0m | Squad val: 97.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 6  |  FT: 5  |  Bank: 3.0m
+  [TEAM FORM] GW6 top attack: [(13, 3.3333333333333335), (18, 3.0), (5, 2.3333333333333335)] | top defence: [(5, 0.6666666666666666), (7, 0.6666666666666666), (9, 0.6666666666666666)]
+  [BENCH-INTEL] GW6 | BB target: GW8 (score: 27.11) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:27.11, GW9:26.35
+  [BENCH-INTEL] Recommended bench: Sanchez(£4.5m,f3=6.0), Neto(£5.5m,f3=7.3), Edouard(£5.5m,f3=7.7), Gusto(£4.2m,f3=7.3)
+  [CHIP-CHECK] GW6 | chips_used: [] | dgw: False
+  [CAP] GW6 candidates:
+    1. Haaland (FWD) raw:14.8 adj:18.7 form3:10.0 home:1.0  <- SELECTED
+    2. Son (MID) raw:7.8 adj:8.8 form3:8.3 home:0.0
+    3. Saka (MID) raw:10.4 adj:6.9 form3:6.0 home:1.0
+  [CAP] GW6 -> Haaland selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-6 actuals (w=7)...
+    GK: 3321 rows
+    DEF: 13552 rows
+    MID: 15846 rows
+    FWD: 4352 rows
+  Predicted: 109.0 | Actual: 95 | Cap: Haaland [TC1] | Hits: 0
+  FT next GW: 1 | Bank: 3.4m | Squad val: 97.1m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 7  |  FT: 1  |  Bank: 3.4m
+  [TEAM FORM] GW7 top attack: [(13, 3.3333333333333335), (15, 3.3333333333333335), (18, 3.0)] | top defence: [(5, 0.6666666666666666), (7, 0.6666666666666666), (10, 0.6666666666666666)]
+  [DGW] GW7: 93 players boosted x2.0
+  [BENCH-INTEL] GW7 | BB target: GW10 (score: 25.63) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:25.33, GW9:25.56, GW10:25.63
+  [BENCH-INTEL] Recommended bench: Sanchez(£4.6m,f3=5.3), Neto(£5.5m,f3=8.0), Burn(£4.5m,f3=6.0), Jensen(£5.4m,f3=6.7)
+  [CHIP-CHECK] GW7 | chips_used: ['tc1'] | dgw: True
+  [CHIP] GW7 FH triggered naturally — DGW with only 1 DGW squad players
+  [CAP] GW7 candidates:
+    1. Haaland (FWD) raw:11.1 adj:14.0 form3:10.7 home:0.0  <- SELECTED
+    2. Saka (MID) raw:10.3 adj:11.9 form3:7.7 home:0.0
+    3. Son (MID) raw:7.5 adj:8.5 form3:12.0 home:1.0
+  [CAP] GW7 -> Haaland selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-7 actuals (w=8)...
+    GK: 3406 rows
+    DEF: 13785 rows
+    MID: 16156 rows
+    FWD: 4446 rows
+  Predicted: 90.4 | Actual: 88 | Cap: Haaland [FH1] | Hits: 0
+  FT next GW: 2 | Bank: 3.4m | Squad val: 97.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 8  |  FT: 2  |  Bank: 3.4m
+  [TEAM FORM] GW8 top attack: [(15, 3.6666666666666665), (2, 3.0), (1, 2.0)] | top defence: [(7, 1.0), (10, 1.0), (15, 1.0)]
+  [BENCH-INTEL] GW8 | BB target: GW10 (score: 31.37) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW8:30.60, GW9:30.27, GW10:31.37, GW11:29.95
+  [BENCH-INTEL] Recommended bench: Sanchez(£4.6m,f3=7.0), Burn(£4.5m,f3=8.0), White(£5.5m,f3=8.3), Andersen(£4.7m,f3=7.3)
+  [CHIP-CHECK] GW8 | chips_used: ['fh1', 'tc1'] | dgw: False
+  [CAP] GW8 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW8 candidates:
+    1. Watkins (FWD) raw:8.6 adj:10.9 form3:12.3 home:0.0  <- SELECTED
+    2. Son (MID) raw:8.4 adj:9.8 form3:7.7 home:0.0
+    3. Saka (MID) raw:7.9 adj:8.9 form3:9.3 home:1.0
+  [CAP] GW8 -> Watkins selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-8 actuals (w=9)...
+    GK: 3491 rows
+    DEF: 14020 rows
+    MID: 16467 rows
+    FWD: 4540 rows
+  Predicted: 78.6 | Actual: 64 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 2.8m | Squad val: 98.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 9  |  FT: 1  |  Bank: 2.8m
+  [TEAM FORM] GW9 top attack: [(15, 4.0), (2, 2.3333333333333335), (9, 2.3333333333333335)] | top defence: [(8, 1.0), (1, 0.6666666666666666), (4, 0.6666666666666666)]
+  [BENCH-INTEL] GW9 | BB target: GW12 (score: 35.02) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW9:33.52, GW10:34.27, GW11:34.48, GW12:35.02
+  [BENCH-INTEL] Recommended bench: Johnstone(£4.5m,f3=8.7), White(£5.5m,f3=9.0), Andersen(£4.8m,f3=9.0), Jensen(£5.4m,f3=8.3)
+  [CHIP-CHECK] GW9 | chips_used: ['fh1', 'tc1'] | dgw: False
+  [CAP] GW9 candidates:
+    1. Watkins (FWD) raw:7.9 adj:10.0 form3:12.3 home:1.0  <- SELECTED
+    2. Son (MID) raw:8.0 adj:9.3 form3:8.0 home:1.0
+    3. Saka (MID) raw:7.0 adj:8.0 form3:7.3 home:0.0
+  [CAP] GW9 -> Watkins selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-9 actuals (w=10)...
+    GK: 3576 rows
+    DEF: 14257 rows
+    MID: 16781 rows
+    FWD: 4634 rows
+  Predicted: 78.0 | Actual: 64 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 1.8m | Squad val: 99.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 10  |  FT: 1  |  Bank: 1.8m
+  [TEAM FORM] GW10 top attack: [(2, 3.3333333333333335), (15, 2.6666666666666665), (1, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (7, 0.6666666666666666)]
+  [BENCH-INTEL] GW10 | BB target: GW12 (score: 29.67) | is_target: False | bonus: 2.7pts
+  [BENCH-INTEL] Lookahead scores: GW10:29.27, GW11:29.44, GW12:29.67, GW13:28.97
+  [BENCH-INTEL] Recommended bench: Johnstone(£4.5m,f3=6.3), Douglas Luiz(£5.4m,f3=8.3), Van de Ven(£4.6m,f3=7.7), Andersen(£4.9m,f3=7.0)
+  [CHIP-CHECK] GW10 | chips_used: ['fh1', 'tc1'] | dgw: False
+  [CAP] GW10 candidates:
+    1. Watkins (FWD) raw:10.0 adj:12.7 form3:13.0 home:1.0  <- SELECTED
+    2. Son (MID) raw:7.8 adj:9.1 form3:8.0 home:0.0
+    3. Douglas Luiz (MID) raw:7.0 adj:8.2 form3:8.3 home:1.0
+  [CAP] GW10 -> Watkins selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-10 actuals (w=11)...
+    GK: 3661 rows
+    DEF: 14495 rows
+    MID: 17095 rows
+    FWD: 4728 rows
+  Predicted: 82.6 | Actual: 68 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 1.3m | Squad val: 100.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 11  |  FT: 1  |  Bank: 1.3m
+  [TEAM FORM] GW11 top attack: [(1, 2.6666666666666665), (15, 2.6666666666666665), (2, 2.3333333333333335)] | top defence: [(4, 1.0), (9, 1.0), (18, 1.0)]
+  [BENCH-INTEL] GW11 | BB target: GW11 (score: 28.82) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW11:28.82, GW12:28.36, GW13:27.52, GW14:28.36
+  [BENCH-INTEL] Recommended bench: Pickford(£4.4m,f3=5.3), Pinnock(£4.5m,f3=7.7), Douglas Luiz(£5.5m,f3=8.0), Van de Ven(£4.6m,f3=7.7)
+  [CHIP-CHECK] GW11 | chips_used: ['fh1', 'tc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW11
+  [CAP] GW11 blank penalty on Watkins (capped last GW, scored 2.0pts)
+  [CAP] GW11 candidates:
+    1. Son (MID) raw:8.7 adj:10.0 form3:9.0 home:1.0  <- SELECTED
+    2. Haaland (FWD) raw:7.6 adj:9.6 form3:8.7 home:1.0
+    3. Douglas Luiz (MID) raw:7.5 adj:8.7 form3:8.0 home:0.0
+  [CAP] GW11 -> Son selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-11 actuals (w=12)...
+    GK: 3746 rows
+    DEF: 14734 rows
+    MID: 17410 rows
+    FWD: 4822 rows
+  Predicted: 67.6 | Actual: 39 | Cap: Son [BB1] | Hits: 0
+  FT next GW: 1 | Bank: 1.4m | Squad val: 100.6m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 12  |  FT: 1  |  Bank: 1.4m
+  [TEAM FORM] GW12 top attack: [(13, 3.6666666666666665), (1, 2.3333333333333335), (4, 2.3333333333333335)] | top defence: [(11, 1.0), (4, 0.6666666666666666), (9, 0.6666666666666666)]
+  [CHIP-CHECK] GW12 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW12 blank penalty on Son (capped last GW, scored 2.0pts)
+  [CAP] GW12 candidates:
+    1. Haaland (FWD) raw:9.6 adj:12.0 form3:8.3 home:0.0  <- SELECTED
+    2. Douglas Luiz (MID) raw:5.0 adj:5.8 form3:8.0 home:1.0
+    3. Son (MID) raw:6.4 adj:5.6 form3:8.7 home:0.0
+  [CAP] GW12 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-12 actuals (w=13)...
+    GK: 3831 rows
+    DEF: 14975 rows
+    MID: 17731 rows
+    FWD: 4918 rows
+  Predicted: 66.4 | Actual: 63 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.2m | Squad val: 101.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 13  |  FT: 1  |  Bank: 1.2m
+  [TEAM FORM] GW13 top attack: [(13, 4.333333333333333), (1, 2.6666666666666665), (7, 2.6666666666666665)] | top defence: [(11, 1.0), (2, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW13 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW13 candidates:
+    1. Haaland (FWD) raw:7.5 adj:9.3 form3:11.0 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:6.9 adj:4.9 form3:3.3 home:0.0
+    3. Son (MID) raw:6.1 adj:4.1 form3:4.7 home:1.0
+  [CAP] GW13 -> Haaland selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-13 actuals (w=14)...
+    GK: 3916 rows
+    DEF: 15217 rows
+    MID: 18053 rows
+    FWD: 5016 rows
+  Predicted: 62.2 | Actual: 55 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 1.1m | Squad val: 101.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 14  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW14 top attack: [(13, 3.6666666666666665), (7, 3.0), (3, 2.0)] | top defence: [(14, 1.0), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW14 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW14 candidates:
+    1. Haaland (FWD) raw:8.8 adj:11.0 form3:8.0 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:7.9 adj:5.7 form3:4.3 home:0.0
+    3. Saka (MID) raw:6.7 adj:4.5 form3:5.0 home:1.0
+  [CAP] GW14 -> Haaland selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-14 actuals (w=15)...
+    GK: 4002 rows
+    DEF: 15461 rows
+    MID: 18378 rows
+    FWD: 5114 rows
+  Predicted: 64.4 | Actual: 65 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.6m | Squad val: 102.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 15  |  FT: 1  |  Bank: 0.6m
+  [TEAM FORM] GW15 top attack: [(7, 2.6666666666666665), (3, 2.3333333333333335), (6, 2.3333333333333335)] | top defence: [(4, 1.0), (1, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW15 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW15 candidates:
+    1. Haaland (FWD) raw:8.7 adj:10.7 form3:10.0 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:6.7 adj:8.2 form3:7.3 home:1.0
+    3. Saka (MID) raw:6.9 adj:8.0 form3:7.0 home:0.0
+  [CAP] GW15 -> Haaland selected (streak: 4 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-15 actuals (w=16)...
+    GK: 4089 rows
+    DEF: 15706 rows
+    MID: 18705 rows
+    FWD: 5212 rows
+  Predicted: 67.1 | Actual: 39 | Cap: Haaland | Hits: 0
+  FT next GW: 1 | Bank: 0.4m | Squad val: 102.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 16  |  FT: 1  |  Bank: 0.4m
+  [TEAM FORM] GW16 top attack: [(10, 3.6666666666666665), (1, 2.3333333333333335), (3, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW16 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW16 blank penalty on Haaland (capped last GW, scored 2.0pts)
+  [CAP] GW16 candidates:
+    1. Saka (MID) raw:5.4 adj:6.1 form3:7.0 home:0.0  <- SELECTED
+    2. Son (MID) raw:7.5 adj:5.0 form3:4.7 home:1.0
+    3. Haaland (FWD) raw:8.2 adj:4.0 form3:5.3 home:0.0
+  [CAP] GW16 -> Saka selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-16 actuals (w=17)...
+    GK: 4176 rows
+    DEF: 15951 rows
+    MID: 19033 rows
+    FWD: 5310 rows
+  Predicted: 57.3 | Actual: 34 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 1.1m | Squad val: 101.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 17  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW17 top attack: [(10, 4.333333333333333), (18, 2.6666666666666665), (3, 2.3333333333333335)] | top defence: [(9, 1.0), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW17 | chips_used: ['bb1', 'fh1', 'tc1'] | dgw: False
+  [CAP] GW17 blank penalty on Saka (capped last GW, scored 2.0pts)
+  [CAP] GW17 candidates:
+    1. Son (MID) raw:11.4 adj:13.2 form3:9.7 home:0.0  <- SELECTED
+    2. Salah (MID) raw:8.7 adj:10.1 form3:7.0 home:1.0
+    3. Bowen (MID) raw:10.4 adj:6.9 form3:3.7 home:1.0
+  [CAP] GW17 -> Son selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-17 actuals (w=18)...
+    GK: 4255 rows
+    DEF: 16177 rows
+    MID: 19328 rows
+    FWD: 5396 rows
+  Predicted: 102.7 | Actual: 49 | Cap: Son [WC1] | Hits: 0
+  FT next GW: 2 | Bank: 2.2m | Squad val: 100.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 18  |  FT: 2  |  Bank: 2.2m
+  [TEAM FORM] GW18 top attack: [(10, 3.3333333333333335), (3, 2.3333333333333335), (9, 2.3333333333333335)] | top defence: [(9, 1.0), (2, 0.6666666666666666), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW18 | chips_used: ['bb1', 'fh1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW18 blank penalty on Son (capped last GW, scored 2.0pts)
+  [CAP] GW18 candidates:
+    1. Son (MID) raw:8.2 adj:7.2 form3:7.0 home:1.0  <- SELECTED
+    2. Bowen (MID) raw:8.4 adj:5.5 form3:5.7 home:1.0
+    3. Salah (MID) raw:8.0 adj:5.2 form3:6.3 home:1.0
+  [CAP] GW18 -> Son selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-18 actuals (w=19)...
+    GK: 4334 rows
+    DEF: 16404 rows
+    MID: 19630 rows
+    FWD: 5488 rows
+  Predicted: 63.4 | Actual: 43 | Cap: Son | Hits: 0
+  FT next GW: 1 | Bank: 1.1m | Squad val: 101.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 19  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW19 top attack: [(3, 2.6666666666666665), (18, 2.6666666666666665), (9, 1.6666666666666667)] | top defence: [(9, 1.0), (18, 1.0), (2, 0.6666666666666666)]
+  [CHIP-CHECK] GW19 | chips_used: ['bb1', 'fh1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW19 candidates:
+    1. Salah (MID) raw:9.7 adj:11.2 form3:7.7 home:0.0  <- SELECTED
+    2. Son (MID) raw:6.6 adj:7.6 form3:8.7 home:0.0
+    3. Watkins (FWD) raw:5.8 adj:4.1 form3:4.3 home:0.0
+  [CAP] GW19 -> Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-19 actuals (w=20)...
+    GK: 4422 rows
+    DEF: 16653 rows
+    MID: 19966 rows
+    FWD: 5586 rows
+  Predicted: 62.0 | Actual: 44 | Cap: Salah | Hits: 0
+  FT next GW: 1 | Bank: 0.2m | Squad val: 103.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 20  |  FT: 1  |  Bank: 0.2m
+  [TEAM FORM] GW20 top attack: [(3, 3.0), (13, 2.3333333333333335), (19, 2.3333333333333335)] | top defence: [(19, 1.0), (3, 0.6666666666666666), (9, 0.6666666666666666)]
+  [BENCH-INTEL] GW20 | BB target: GW20 (score: 24.23) | is_target: True | bonus: 2.2pts
+  [BENCH-INTEL] Lookahead scores: GW20:24.23, GW21:24.06, GW22:24.06, GW23:23.09
+  [BENCH-INTEL] Recommended bench: Areola(£4.2m,f3=6.0), Emerson(£4.5m,f3=7.3), Coufal(£4.6m,f3=6.0), Mario Jr.(£4.9m,f3=6.7)
+  [CHIP-CHECK] GW20 | chips_used: ['bb1', 'fh1', 'tc1', 'wc1'] | dgw: False
+  [CHIP] BB triggered on Intel 07 target GW20
+  [CAP] GW20 blank penalty on Salah (capped last GW, scored 3.0pts)
+  [CAP] GW20 candidates:
+    1. Bowen (MID) raw:7.4 adj:8.5 form3:7.3 home:1.0  <- SELECTED
+    2. Alexander-Arnold (DEF) raw:7.1 adj:5.3 form3:7.3 home:1.0
+    3. Son (MID) raw:8.0 adj:5.3 form3:4.7 home:1.0
+  [CAP] GW20 -> Bowen selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-20 actuals (w=21)...
+    GK: 4510 rows
+    DEF: 16903 rows
+    MID: 20303 rows
+    FWD: 5684 rows
+  Predicted: 66.3 | Actual: 57 | Cap: Bowen [BB2] | Hits: 0
+  FT next GW: 1 | Bank: 0.1m | Squad val: 103.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 21  |  FT: 1  |  Bank: 0.1m
+  [TEAM FORM] GW21 top attack: [(20, 3.0), (3, 2.3333333333333335), (11, 2.3333333333333335)] | top defence: [(19, 1.0), (5, 0.6666666666666666), (18, 0.6666666666666666)]
+  [CHIP-CHECK] GW21 | chips_used: ['bb1', 'bb2', 'fh1', 'tc1', 'wc1'] | dgw: False
+  [CAP] GW21 blank penalty on Bowen (capped last GW, scored 3.0pts)
+  [CAP] GW21 candidates:
+    1. Salah (MID) raw:8.9 adj:10.4 form3:8.7 home:0.0  <- SELECTED
+    2. Son (MID) raw:7.9 adj:9.1 form3:7.0 home:0.0
+    3. Watkins (FWD) raw:5.7 adj:4.1 form3:4.0 home:0.0
+  [CAP] GW21 -> Salah selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-21 actuals (w=22)...
+    GK: 4599 rows
+    DEF: 17157 rows
+    MID: 20645 rows
+    FWD: 5786 rows
+  Predicted: 72.8 | Actual: 20 | Cap: Salah [TC2] | Hits: 0
+  FT next GW: 1 | Bank: 1.8m | Squad val: 102.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 22  |  FT: 1  |  Bank: 1.8m
+  [TEAM FORM] GW22 top attack: [(11, 3.3333333333333335), (13, 2.6666666666666665), (16, 2.3333333333333335)] | top defence: [(5, 1.0), (10, 0.6666666666666666), (11, 0.6666666666666666)]
+  [CHIP-CHECK] GW22 | chips_used: ['bb1', 'bb2', 'fh1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW22 blank penalty on Salah (capped last GW, scored 0.0pts)
+  [CAP] GW22 candidates:
+    1. Son (MID) raw:9.1 adj:6.0 form3:4.7 home:1.0  <- SELECTED
+    2. Saka (MID) raw:6.6 adj:4.4 form3:4.0 home:0.0
+    3. Bowen (MID) raw:5.9 adj:3.9 form3:3.7 home:1.0
+  [CAP] GW22 -> Son selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-22 actuals (w=23)...
+    GK: 4690 rows
+    DEF: 17415 rows
+    MID: 20993 rows
+    FWD: 5888 rows
+  Predicted: 61.0 | Actual: 45 | Cap: Son | Hits: 0
+  FT next GW: 1 | Bank: 2.4m | Squad val: 101.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 23  |  FT: 1  |  Bank: 2.4m
+  [TEAM FORM] GW23 top attack: [(11, 4.0), (13, 2.6666666666666665), (18, 2.6666666666666665)] | top defence: [(10, 1.0), (1, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW23 | chips_used: ['bb1', 'bb2', 'fh1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW23 blank penalty on Son (capped last GW, scored 0.0pts)
+  [CAP] GW23 candidates:
+    1. Saka (MID) raw:6.0 adj:6.8 form3:6.7 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:6.0 adj:4.3 form3:5.3 home:0.0
+    3. Cunha (FWD) raw:5.2 adj:3.7 form3:5.7 home:0.0
+  [CAP] GW23 -> Saka selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-23 actuals (w=24)...
+    GK: 4782 rows
+    DEF: 17676 rows
+    MID: 21345 rows
+    FWD: 5992 rows
+  Predicted: 57.1 | Actual: 69 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 4.9m | Squad val: 98.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 24  |  FT: 1  |  Bank: 4.9m
+  [TEAM FORM] GW24 top attack: [(1, 3.0), (12, 3.0), (13, 3.0)] | top defence: [(1, 0.6666666666666666), (2, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW24 | chips_used: ['bb1', 'bb2', 'fh1', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW24 candidates:
+    1. Watkins (FWD) raw:8.0 adj:10.0 form3:8.7 home:1.0  <- SELECTED
+    2. Saka (MID) raw:6.3 adj:7.3 form3:7.3 home:0.0
+    3. Cunha (FWD) raw:4.8 adj:6.1 form3:7.3 home:1.0
+  [CAP] GW24 -> Watkins selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-24 actuals (w=25)...
+    GK: 4875 rows
+    DEF: 17937 rows
+    MID: 21700 rows
+    FWD: 6097 rows
+  Predicted: 57.5 | Actual: 42 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 2.5m | Squad val: 100.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 25  |  FT: 1  |  Bank: 2.5m
+  [TEAM FORM] GW25 top attack: [(1, 3.6666666666666665), (12, 3.0), (14, 3.0)] | top defence: [(1, 0.6666666666666666), (13, 0.6666666666666666), (2, 0.3333333333333333)]
+  [DGW] GW25: 166 players boosted x2.0
+  [CHIP-CHECK] GW25 | chips_used: ['bb1', 'bb2', 'fh1', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CHIP] GW25 FH triggered naturally — DGW with only 5 DGW squad players
+  [CAP] GW25 candidates:
+    1. Haaland (FWD) raw:14.5 adj:10.5 form3:6.3 home:1.0  <- SELECTED
+    2. Morris (FWD) raw:7.4 adj:9.2 form3:7.0 home:1.0
+    3. J.Alvarez (FWD) raw:11.1 adj:8.0 form3:5.7 home:1.0
+  [CAP] GW25 -> Haaland selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-25 actuals (w=26)...
+    GK: 4969 rows
+    DEF: 18201 rows
+    MID: 22057 rows
+    FWD: 6205 rows
+  Predicted: 104.0 | Actual: 66 | Cap: Haaland [FH2] | Hits: 0
+  FT next GW: 2 | Bank: 2.5m | Squad val: 100.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 26  |  FT: 2  |  Bank: 2.5m
+  [TEAM FORM] GW26 top attack: [(1, 4.666666666666667), (11, 3.6666666666666665), (5, 3.0)] | top defence: [(1, 0.6666666666666666), (4, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW26 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW26 candidates:
+    1. Watkins (FWD) raw:7.1 adj:8.9 form3:11.0 home:1.0  <- SELECTED
+    2. Saka (MID) raw:6.4 adj:7.3 form3:13.0 home:1.0
+    3. J.Alvarez (FWD) raw:6.8 adj:4.9 form3:3.7 home:0.0
+  [CAP] GW26 -> Watkins selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-26 actuals (w=27)...
+    GK: 5041 rows
+    DEF: 18406 rows
+    MID: 22346 rows
+    FWD: 6288 rows
+  Predicted: 59.9 | Actual: 49 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 2.7m | Squad val: 100.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 27  |  FT: 1  |  Bank: 2.7m
+  [TEAM FORM] GW27 top attack: [(1, 4.666666666666667), (11, 3.6666666666666665), (2, 2.3333333333333335)] | top defence: [(1, 1.0), (13, 1.0), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW27 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW27 candidates:
+    1. Saka (MID) raw:7.8 adj:9.0 form3:13.3 home:0.0  <- SELECTED
+    2. Watkins (FWD) raw:7.1 adj:8.9 form3:8.0 home:0.0
+    3. Bowen (MID) raw:6.8 adj:7.8 form3:8.0 home:0.0
+  [CAP] GW27 -> Saka selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-27 actuals (w=28)...
+    GK: 5135 rows
+    DEF: 18674 rows
+    MID: 22708 rows
+    FWD: 6396 rows
+  Predicted: 63.1 | Actual: 76 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 5.3m | Squad val: 97.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 28  |  FT: 1  |  Bank: 5.3m
+  [TEAM FORM] GW28 top attack: [(1, 4.333333333333333), (11, 4.0), (2, 3.0)] | top defence: [(1, 1.0), (8, 1.0), (5, 0.6666666666666666)]
+  [DGW] GW28: 90 players boosted x2.0
+  [CHIP-CHECK] GW28 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW28 candidates:
+    1. Saka (MID) raw:8.4 adj:9.8 form3:10.7 home:1.0  <- SELECTED
+    2. Watkins (FWD) raw:7.5 adj:9.3 form3:11.7 home:1.0
+    3. Solanke (FWD) raw:9.8 adj:7.1 form3:5.3 home:1.0
+  [CAP] GW28 -> Saka selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-28 actuals (w=29)...
+    GK: 5230 rows
+    DEF: 18945 rows
+    MID: 23071 rows
+    FWD: 6505 rows
+  Predicted: 65.1 | Actual: 47 | Cap: Saka | Hits: 1
+  FT next GW: 1 | Bank: 3.7m | Squad val: 99.8m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 29  |  FT: 1  |  Bank: 3.7m
+  [TEAM FORM] GW29 top attack: [(1, 3.3333333333333335), (11, 3.3333333333333335), (19, 3.0)] | top defence: [(8, 1.0), (1, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW29 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW29 blank penalty on Saka (capped last GW, scored 2.0pts)
+  [CAP] GW29 candidates:
+    1. Watkins (FWD) raw:5.9 adj:7.3 form3:8.0 home:0.0  <- SELECTED
+    2. Son (MID) raw:6.2 adj:7.1 form3:8.7 home:0.0
+    3. Foden (MID) raw:5.9 adj:6.7 form3:9.3 home:0.0
+  [CAP] GW29 -> Watkins selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-29 actuals (w=30)...
+    GK: 5271 rows
+    DEF: 19058 rows
+    MID: 23213 rows
+    FWD: 6553 rows
+  Predicted: 57.1 | Actual: 9 | Cap: Watkins | Hits: 0
+  FT next GW: 1 | Bank: 6.4m | Squad val: 97.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 30  |  FT: 1  |  Bank: 6.4m
+  [TEAM FORM] GW30 top attack: [(1, 3.3333333333333335), (11, 3.3333333333333335), (3, 2.6666666666666665)] | top defence: [(8, 1.0), (1, 0.6666666666666666), (5, 0.6666666666666666)]
+  [CHIP-CHECK] GW30 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW30 blank penalty on Watkins (capped last GW, scored 2.0pts)
+  [CAP] GW30 candidates:
+    1. Son (MID) raw:7.4 adj:8.5 form3:8.7 home:1.0  <- SELECTED
+    2. Foden (MID) raw:4.8 adj:5.5 form3:9.3 home:1.0
+    3. Salah (MID) raw:6.2 adj:4.1 form3:4.0 home:1.0
+  [CAP] GW30 -> Son selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-30 actuals (w=31)...
+    GK: 5366 rows
+    DEF: 19329 rows
+    MID: 23579 rows
+    FWD: 6663 rows
+  Predicted: 59.1 | Actual: 56 | Cap: Son | Hits: 0
+  FT next GW: 1 | Bank: 1.2m | Squad val: 102.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 31  |  FT: 1  |  Bank: 1.2m
+  [TEAM FORM] GW31 top attack: [(3, 3.0), (15, 3.0), (1, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (8, 0.6666666666666666)]
+  [CHIP-CHECK] GW31 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW31 candidates:
+    1. Foden (MID) raw:5.4 adj:6.3 form3:6.7 home:1.0  <- SELECTED
+    2. Son (MID) raw:5.8 adj:6.6 form3:9.7 home:0.0
+    3. Saka (MID) raw:9.0 adj:6.0 form3:4.0 home:1.0
+  [CAP] GW31 -> Foden selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-31 actuals (w=32)...
+    GK: 5461 rows
+    DEF: 19602 rows
+    MID: 23945 rows
+    FWD: 6773 rows
+  Predicted: 65.4 | Actual: 66 | Cap: Foden | Hits: 0
+  FT next GW: 1 | Bank: 4.8m | Squad val: 98.7m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 32  |  FT: 1  |  Bank: 4.8m
+  [TEAM FORM] GW32 top attack: [(7, 3.0), (3, 2.6666666666666665), (10, 2.3333333333333335)] | top defence: [(1, 0.6666666666666666), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW32 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW32 candidates:
+    1. Foden (MID) raw:7.5 adj:8.7 form3:8.3 home:0.0  <- SELECTED
+    2. Son (MID) raw:8.1 adj:5.4 form3:4.7 home:1.0
+    3. Solanke (FWD) raw:6.9 adj:5.0 form3:5.7 home:0.0
+  [CAP] GW32 -> Foden selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-32 actuals (w=33)...
+    GK: 5557 rows
+    DEF: 19876 rows
+    MID: 24311 rows
+    FWD: 6883 rows
+  Predicted: 60.0 | Actual: 46 | Cap: Foden | Hits: 0
+  FT next GW: 1 | Bank: 3.5m | Squad val: 100.4m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 33  |  FT: 1  |  Bank: 3.5m
+  [TEAM FORM] GW33 top attack: [(7, 2.6666666666666665), (13, 2.6666666666666665), (11, 2.3333333333333335)] | top defence: [(1, 1.0), (3, 1.0), (4, 0.6666666666666666)]
+  [CHIP-CHECK] GW33 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW33 blank penalty on Foden (capped last GW, scored 0.0pts)
+  [CAP] GW33 candidates:
+    1. Foden (MID) raw:7.4 adj:6.5 form3:7.7 home:1.0  <- SELECTED
+    2. Salah (MID) raw:6.2 adj:4.1 form3:5.3 home:1.0
+    3. Son (MID) raw:6.1 adj:4.0 form3:5.7 home:0.0
+  [CAP] GW33 -> Foden selected (streak: 3 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-33 actuals (w=34)...
+    GK: 5653 rows
+    DEF: 20150 rows
+    MID: 24679 rows
+    FWD: 6996 rows
+  Predicted: 58.0 | Actual: 42 | Cap: Foden | Hits: 0
+  FT next GW: 1 | Bank: 1.1m | Squad val: 102.9m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 34  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW34 top attack: [(7, 4.0), (13, 4.0), (14, 2.3333333333333335)] | top defence: [(1, 1.0), (15, 1.0), (3, 0.6666666666666666)]
+  [DGW] GW34: 285 players boosted x2.0
+  [CHIP-CHECK] GW34 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW34 blank penalty on Foden (capped last GW, scored 0.0pts)
+  [CAP] GW34 candidates:
+    1. B.Fernandes (MID) raw:10.2 adj:11.9 form3:10.7 home:1.0  <- SELECTED
+    2. Solanke (FWD) raw:12.6 adj:9.1 form3:3.7 home:0.0
+    3. Saka (MID) raw:12.3 adj:8.2 form3:4.0 home:0.0
+  [CAP] GW34 -> B.Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-34 actuals (w=35)...
+    GK: 5745 rows
+    DEF: 20410 rows
+    MID: 25034 rows
+    FWD: 7104 rows
+  Predicted: 105.9 | Actual: 142 | Cap: B.Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 0.7m | Squad val: 103.5m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 35  |  FT: 1  |  Bank: 0.7m
+  [TEAM FORM] GW35 top attack: [(13, 4.0), (1, 3.3333333333333335), (4, 3.0)] | top defence: [(1, 1.0), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [DGW] GW35: 102 players boosted x2.0
+  [CHIP-CHECK] GW35 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW35 candidates:
+    1. B.Fernandes (MID) raw:10.6 adj:12.3 form3:14.0 home:1.0  <- SELECTED
+    2. Son (MID) raw:10.7 adj:6.9 form3:2.7 home:1.0
+    3. Saka (MID) raw:5.6 adj:6.4 form3:7.0 home:0.0
+  [CAP] GW35 -> B.Fernandes selected (streak: 2 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-35 actuals (w=36)...
+    GK: 5843 rows
+    DEF: 20687 rows
+    MID: 25405 rows
+    FWD: 7217 rows
+  Predicted: 71.9 | Actual: 47 | Cap: B.Fernandes | Hits: 0
+  FT next GW: 1 | Bank: 0.3m | Squad val: 104.3m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 36  |  FT: 1  |  Bank: 0.3m
+  [TEAM FORM] GW36 top attack: [(7, 3.3333333333333335), (13, 3.3333333333333335), (1, 3.0)] | top defence: [(1, 1.0), (13, 1.0), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW36 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW36 blank penalty on B.Fernandes (capped last GW, scored 4.0pts)
+  [CAP] GW36 candidates:
+    1. Saka (MID) raw:9.6 adj:11.1 form3:7.7 home:1.0  <- SELECTED
+    2. Palmer (MID) raw:8.8 adj:10.2 form3:11.3 home:1.0
+    3. B.Fernandes (MID) raw:8.3 adj:7.3 form3:12.3 home:0.0
+  [CAP] GW36 -> Saka selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-36 actuals (w=37)...
+    GK: 5941 rows
+    DEF: 20964 rows
+    MID: 25776 rows
+    FWD: 7330 rows
+  Predicted: 65.9 | Actual: 81 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 2.3m | Squad val: 102.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 37  |  FT: 1  |  Bank: 2.3m
+  [TEAM FORM] GW37 top attack: [(1, 4.0), (8, 3.6666666666666665), (13, 3.6666666666666665)] | top defence: [(1, 1.0), (3, 0.6666666666666666), (4, 0.6666666666666666)]
+  [DGW] GW37: 271 players boosted x2.0
+  [CHIP-CHECK] GW37 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: True
+  [CAP] GW37 candidates:
+    1. B.Fernandes (MID) raw:17.0 adj:19.5 form3:7.3 home:1.0  <- SELECTED
+    2. N.Jackson (FWD) raw:12.8 adj:16.1 form3:8.7 home:0.0
+    3. Isak (FWD) raw:10.2 adj:12.8 form3:7.3 home:1.0
+  [CAP] GW37 -> B.Fernandes selected (streak: 1 consecutive)
+  [RETRAIN] History (w=1.0) + GW1-37 actuals (w=38)...
+    GK: 6039 rows
+    DEF: 21242 rows
+    MID: 26148 rows
+    FWD: 7443 rows
+  Predicted: 98.1 | Actual: 57 | Cap: B.Fernandes | Hits: 1
+  FT next GW: 1 | Bank: 1.1m | Squad val: 103.2m
+  [SAVED]
+
+----------------------------------------------------------------------
+  GW 38  |  FT: 1  |  Bank: 1.1m
+  [TEAM FORM] GW38 top attack: [(7, 4.666666666666667), (13, 4.333333333333333), (15, 3.6666666666666665)] | top defence: [(1, 1.0), (7, 1.0), (3, 0.6666666666666666)]
+  [CHIP-CHECK] GW38 | chips_used: ['bb1', 'bb2', 'fh1', 'fh2', 'tc1', 'tc2', 'wc1'] | dgw: False
+  [CAP] GW38 candidates:
+    1. Saka (MID) raw:7.3 adj:8.4 form3:8.0 home:1.0  <- SELECTED
+    2. Isak (FWD) raw:7.4 adj:9.3 form3:8.0 home:0.0
+    3. Son (MID) raw:7.2 adj:8.4 form3:6.7 home:0.0
+  [CAP] GW38 -> Saka selected (streak: 1 consecutive)
+  Predicted: 68.4 | Actual: 65 | Cap: Saka | Hits: 0
+  FT next GW: 1 | Bank: 1.5m | Squad val: 102.4m
+  [SAVED]
+
+======================================================================
+  SIMULATION COMPLETE
+  Total actual pts:    2164
+  Total predicted:     2973.4
+  Total penalties:     -8
+  Chips used:          ['tc1', 'fh1', 'bb1', 'wc1', 'bb2', 'tc2', 'fh2']
+======================================================================
