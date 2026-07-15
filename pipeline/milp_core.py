@@ -28,6 +28,11 @@ GAMMA   = 0.07   # captain-miss probability for the vice term
 W_BENCH = 0.15   # bench-slot activation prob (measured: Phase 0 metrics
                  # showed 18-24 auto-subs/season over 4 slots ≈ 0.12-0.16)
 HIT_CAP = 2      # max paid hits per GW (rollout guardrail, blueprint §12)
+HIT_COST = 4.0   # objective price per hit — the DECISION threshold only.
+                 # Scoring always subtracts the real -4; raising this above 4
+                 # demands a margin over the paper gain (predicted upgrade mu
+                 # is upward-biased by selection — Phase 4 measured realized
+                 # hit ROI at -6.8). Env: MP_HIT_COST via season_simulator.
 N_CAP_CANDIDATES = 60   # captain/vice variables restricted to top-N by kappa
 
 # ── Phase 3: horizon constants ────────────────────────────────────────────────
@@ -79,7 +84,7 @@ def kappa(row, theta=THETA):
 def solve_gw(rows, owned, available_budget, free_transfers, gw,
              is_wildcard=False, is_freehit=False,
              theta=THETA, gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
-             time_limit=120):
+             hit_cost=HIT_COST, no_rebuy=None, time_limit=120):
     """
     rows  : {pid: matrix row} for ONE gameweek — needs mu, pi, q90, price,
             sell_value, element_type, team (prediction_matrix output).
@@ -114,6 +119,11 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
         ti = {p: LpVariable(f"i{p}", cat=LpBinary) for p in pids}
         to = {p: LpVariable(f"o{p}", cat=LpBinary) for p in pids}
         hits = LpVariable("hits", lowBound=0, upBound=hit_cap, cat=LpInteger)
+        # cross-solve rebuy lock: recently-sold players stay out (WC/FH
+        # weeks never reach here — no_transfers rebuilds are exempt)
+        for p in (no_rebuy or ()):
+            if p in pids and p not in owned:
+                prob += ti[p] == 0
     else:
         ti = to = hits = None
 
@@ -125,7 +135,7 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
            + gamma * lpSum(mu[p] * v[p] for p in cap_cands)
            + lpSum(beta[p] * (x[p] - s[p]) for p in pids))
     if hits is not None:
-        obj -= 4.0 * hits
+        obj -= hit_cost * hits
     prob += obj
 
     prob += lpSum(x.values()) == 15
@@ -225,7 +235,7 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                   is_wildcard_now=False, ft_events=None, chip_state=None,
                   delta=DELTA, delta_chip=DELTA_CHIP, theta=THETA,
                   gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
-                  time_limit=240):
+                  hit_cost=HIT_COST, no_rebuy=None, time_limit=240):
     """
     Multi-period MILP over the matrix weeks {t..t+H-1}: per-week squad/XI/
     captain/vice + per-week transfers with FT banking, churn guard (max one
@@ -439,7 +449,7 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
             terms.append(w * (z + zt))
         else:
             terms.append(w * W)
-        terms.append(-4.0 * w * h[g])
+        terms.append(-hit_cost * w * h[g])
 
         wc_ = delta_chip ** (g - t)
         if g in CH["bb"]:
@@ -521,6 +531,24 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
     for p in pids:
         prob += lpSum(ti[p, g] for g in gws) <= 1
         prob += lpSum(to[p, g] for g in gws) <= 1
+
+    # cross-solve rebuy lock (no_rebuy = {pid: last locked gw}): a player
+    # sold in a PREVIOUS executed week cannot come back while his lock
+    # runs — unless a wildcard rebuild fires that week (external WC at t,
+    # or the in-model WC_g variable, which relaxes the bound only if set)
+    for p, until in (no_rebuy or {}).items():
+        if p not in pids or p in owned:
+            continue
+        for g in gws:
+            if g > until:
+                break
+            if g == t and (is_wildcard_now or initial_build):
+                continue
+            wc_var = CH["wc"].get(g)
+            if wc_var is not None:
+                prob += ti[p, g] <= wc_var
+            else:
+                prob += ti[p, g] == 0
 
     prob.solve(_get_solver(time_limit))
     if LpStatus[prob.status] != "Optimal":

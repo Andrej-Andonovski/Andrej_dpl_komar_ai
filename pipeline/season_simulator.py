@@ -161,6 +161,27 @@ if MP_CHIPS not in ("model", "legacy"):
 # WC squad-state gate: fire only when this many owned players sit below
 # their position's replacement level (interpretable; Phase 6 sweep candidate)
 MP_WC_BELOW = int(os.environ.get("MP_WC_BELOW", "4"))
+# Hit + churn discipline — DEFAULTS = the shipped config (2×2 A/B
+# 2026-07-15: discipline-only won the 3-season sum 6681 vs 6613 undisciplined,
+# penalties 0/-12/-8 vs -64/-136/-60; see docs/HANDOFF.md scoreboard).
+# MP_HIT_COST is the MILP's decision price per paid hit — scoring always
+# subtracts the real -4.  8 demands a 2x margin over the paper gain (upgrade
+# mus are selection-biased upward; undisciplined runs took 34/15 hits per
+# season at negative realized ROI).
+# Clamped > 0: at 0 the no-phantom-hit proof (milp_core §4.6) breaks.
+MP_HIT_COST = max(0.01, float(os.environ.get("MP_HIT_COST", "8")))
+MP_HIT_CAP = int(os.environ.get("MP_HIT_CAP", "2"))   # max paid hits per GW
+# Cross-solve rebuy lock: a player sold at GW g cannot be rebought before
+# GW g+GAP+1 (0 = off).  Kills the memoryless sell->rebuy thrash the rolling
+# re-solve produces (40/30/28 buybacks per season measured in the milestone
+# runs).  WC weeks are exempt — a wildcard is a legitimate judgment reset —
+# and FH weeks never touch the ledger (shadow squad reverts).
+MP_REBUY_GAP = int(os.environ.get("MP_REBUY_GAP", "4"))
+# Season-level hit budget: hard cap on TOTAL paid hits per season (-1 =
+# unlimited).  MP_HIT_COST shifts the decision margin; this BOUNDS the
+# damage — MP_HIT_BUDGET=4 means at most -16 in penalties all season.
+# Enforced at execution: each GW's per-week cap shrinks to what's left.
+MP_HIT_BUDGET = int(os.environ.get("MP_HIT_BUDGET", "4"))
 
 # ── Cross-season backtests (fixing stage, docs/phase4_report.md) ─────────────
 # SIM_SEASON picks the season to simulate. Default "2025-26" = original
@@ -183,10 +204,15 @@ if SIM_SEASON != "2025-26":
     RULE_EVENTS_FT = {}              # the GW15 grant was a 2025-26 event
     OUTPUT_JSON = OUTPUT_JSON.replace(".json", f"_{SIM_SEASON}.json")
 
-# Phase 6 candidate: unanchored WC/TC/BB can only fire when their current
-# proxy value reaches the q-th percentile of earlier real GWs in the same
-# chip set.  Simulation runs start fresh by default; set RESUME=1 for a live
-# weekly executor to load the prior state file.
+# Percentile chip bar: unanchored WC/TC/BB can only fire on a plain week
+# when their proxy clears the q-th percentile of the season's earlier plain
+# weeks (kind-level series).  DEFAULT OFF — the 2026-07-15 2×2 A/B showed
+# that once hit/churn discipline is on, the bar nets −46 across the three
+# calendars (−73/+38/−11).  MP_CHIP_BAR=1 re-enables; q + the switch are
+# Phase 6 sweep candidates.  Proxies are recorded either way (state file is
+# diagnostic).  Simulation runs start fresh by default; set RESUME=1 for a
+# live weekly executor to load the prior state file.
+MP_CHIP_BAR = os.environ.get("MP_CHIP_BAR", "0") == "1"
 MP_CHIP_PERCENTILE_Q = float(os.environ.get("MP_CHIP_PERCENTILE_Q", "0.75"))
 MP_CHIP_PERCENTILE_WARMUP = int(os.environ.get("MP_CHIP_PERCENTILE_WARMUP", "3"))
 MP_CHIP_PERCENTILE_RESUME = os.environ.get("MP_CHIP_PERCENTILE_RESUME", "0") == "1"
@@ -2023,6 +2049,8 @@ def run_simulation():
     # State
     current_squad    = set()
     purchase_price   = {}    # pid -> £m paid (corrected-mode sell ledger)
+    sold_at          = {}    # pid -> gw of last REAL sale (rebuy-lock memory)
+    hits_paid        = 0     # season running total (MP_HIT_BUDGET enforcement)
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
@@ -2054,6 +2082,11 @@ def run_simulation():
         "mp_horizon":       MP_HORIZON,
         "mp_theta":         MP_THETA,
         "mp_chips":         MP_CHIPS,
+        "mp_hit_cost":      MP_HIT_COST,
+        "mp_hit_cap":       MP_HIT_CAP,
+        "mp_hit_budget":    MP_HIT_BUDGET,
+        "mp_rebuy_gap":     MP_REBUY_GAP,
+        "mp_chip_bar":      MP_CHIP_BAR,
         "mp_chip_percentile_q": MP_CHIP_PERCENTILE_Q,
         "mp_chip_percentile_warmup": MP_CHIP_PERCENTILE_WARMUP,
         "mp_chip_percentile_state": MP_CHIP_PERCENTILE_STATE,
@@ -2216,6 +2249,24 @@ def run_simulation():
         # ── ILP ─────────────────────────────────────────────────────────────
         vice_id = None
         if OPTIMIZER == "mp":
+            # rebuy lock: pids sold recently enough that their lock window
+            # (sold_gw + GAP) still covers a horizon week
+            no_rebuy = {p: g0 + MP_REBUY_GAP for p, g0 in sold_at.items()
+                        if MP_REBUY_GAP > 0 and g0 + MP_REBUY_GAP >= gw
+                        and p not in current_squad}
+            if no_rebuy:
+                print(f"  [REBUY-LOCK] {len(no_rebuy)} recently sold "
+                      f"players locked out")
+            # season hit budget: shrink this week's cap to what remains
+            if MP_HIT_BUDGET >= 0:
+                hit_cap_now = max(0, min(MP_HIT_CAP,
+                                         MP_HIT_BUDGET - hits_paid))
+                if hit_cap_now < MP_HIT_CAP:
+                    print(f"  [HIT-BUDGET] {hits_paid}/{MP_HIT_BUDGET} paid "
+                          f"— cap now {hit_cap_now}/GW")
+            else:
+                hit_cap_now = MP_HIT_CAP
+
             def _plan_print(plan):
                 nxt = [f"GW{g}:{len(w['transfers_in'])}t"
                        f"{'/-' + str(w['hits'] * 4) if w['hits'] else ''}"
@@ -2275,7 +2326,9 @@ def run_simulation():
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT,
-                        chip_state=chip_state, theta=MP_THETA)
+                        chip_state=chip_state, theta=MP_THETA,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        no_rebuy=no_rebuy)
                 except RuntimeError as e:
                     print(f"  [MILP-H] chipped solve failed ({e}) — "
                           f"retrying without chips")
@@ -2285,24 +2338,30 @@ def run_simulation():
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT,
-                        theta=MP_THETA)
+                        theta=MP_THETA,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        no_rebuy=no_rebuy)
                 chip  = plan["chips"].get(gw)
-                # A plain-week chip must clear its own historical bar.  The
-                # first solve exposes the current XI/captain/bench proxies;
-                # if it proposes a weak unanchored chip, block only that chip
-                # for this real GW and re-solve.  Future planned chips are
-                # deliberately left free because every GW is re-solved.
+                # A plain-week chip must clear the KIND-level historical bar
+                # (wc/tc/bb — one season-wide series per kind, so set-2 chips
+                # inherit set-1 history instead of a fresh warm-up free pass).
+                # NO deadline disarm: tried 2026-07-15, cost 54 pts on
+                # 2025-26 — it released wc1 at GW15 on a weak week the bar
+                # was rightly holding; the MILP's within-horizon placement
+                # is noisier than the bar near set ends.  Future planned
+                # chips are deliberately left free (every GW is re-solved).
                 plain_week = all(r["n_fix"] == 1 for r in mrows_t.values())
+                bar_active = plain_week and MP_CHIP_BAR
                 blocked_now = set()
-                while chip and plain_week and chip[:2] in ("wc", "tc", "bb"):
+                while chip and bar_active and chip[:2] in ("wc", "tc", "bb"):
                     result = plan["weeks"][gw]
                     proxies = mp_chip_proxy_values(
                         result, mrows_t, current_squad, repl, MP_THETA)
                     kind = chip[:2]
-                    if chip_percentile.allows(chip, proxies[kind]):
+                    if chip_percentile.allows(kind, proxies[kind]):
                         break
                     blocked_now.add(kind)
-                    cutoff = chip_percentile.threshold(chip)
+                    cutoff = chip_percentile.threshold(kind)
                     print(f"  [CHIP-BAR] holding {chip}: {proxies[kind]:.2f} "
                           f"< q{MP_CHIP_PERCENTILE_Q:.2f} {cutoff:.2f}")
                     retry_state = dict(chip_state)
@@ -2311,18 +2370,25 @@ def run_simulation():
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT,
-                        chip_state=retry_state, theta=MP_THETA)
+                        chip_state=retry_state, theta=MP_THETA,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        no_rebuy=no_rebuy)
                     chip = plan["chips"].get(gw)
 
                 result = plan["weeks"][gw]
-                final_proxies = mp_chip_proxy_values(
-                    result, mrows_t, current_squad, repl, MP_THETA)
-                sid = 1 if gw <= 19 else 2
-                chip_percentile.record({
-                    f"{kind}{sid}": value
-                    for kind, value in final_proxies.items()
-                    if f"{kind}{sid}" not in chips_used
-                })
+                # The bar's population is PLAIN weeks only: DGW-doubled (or
+                # blank-deflated) proxies distort the threshold plain weeks
+                # must clear (2023-24 has Set-1 events; excluding them was
+                # worth +32).  Keyed by KIND so the series spans the season.
+                if plain_week:
+                    final_proxies = mp_chip_proxy_values(
+                        result, mrows_t, current_squad, repl, MP_THETA)
+                    chip_percentile.record({
+                        kind: value
+                        for kind, value in final_proxies.items()
+                        if (f"{kind}1" not in chips_used
+                            or f"{kind}2" not in chips_used)
+                    })
                 is_wc = chip in ("wc1", "wc2")
                 is_fh = chip in ("fh1", "fh2")
                 is_tc = chip in ("tc1", "tc2")
@@ -2336,7 +2402,9 @@ def run_simulation():
                 result = milp_solve_gw(mp_rows, current_squad,
                                        available_budget, ft_ilp, gw,
                                        is_wildcard=is_wc, is_freehit=is_fh,
-                                       theta=MP_THETA)
+                                       theta=MP_THETA,
+                                       hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                                       no_rebuy=set(no_rebuy))
             else:
                 try:
                     plan = milp_solve_horizon(
@@ -2344,7 +2412,9 @@ def run_simulation():
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw,
                         is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT,
-                        theta=MP_THETA)
+                        theta=MP_THETA,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        no_rebuy=no_rebuy)
                     result = plan["weeks"][gw]
                     _plan_print(plan)
                 except RuntimeError as e:
@@ -2354,7 +2424,9 @@ def run_simulation():
                     result = milp_solve_gw(mp_rows, current_squad,
                                            available_budget, ft_ilp, gw,
                                            is_wildcard=is_wc, is_freehit=False,
-                                           theta=MP_THETA)
+                                           theta=MP_THETA,
+                                           hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                                           no_rebuy=set(no_rebuy))
         else:
             result = run_ilp(pool, current_squad, available_budget,
                              ft_ilp, is_wc, is_fh, gw)
@@ -2411,6 +2483,11 @@ def run_simulation():
                     purchase_price.pop(p, None)
                 for p in t_in_pids:
                     purchase_price[p] = _mp(p)
+                # rebuy-lock memory: buys clear their lock, sales start one
+                for p in t_in_pids:
+                    sold_at.pop(p, None)
+                for p in t_out_pids:
+                    sold_at[p] = gw
         elif not (is_wc or is_fh):
             sell = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_out_pids)
             buy  = sum(pool_by_pid.get(p, {}).get("price", 0.0) for p in t_in_pids)
@@ -2422,6 +2499,7 @@ def run_simulation():
             bank = available_budget - new_cost
 
         penalty_pts = n_hits * 4
+        hits_paid  += n_hits
         if chip:
             chips_used.add(chip)
             log["chips_used"].append({"chip": chip, "gw": gw})

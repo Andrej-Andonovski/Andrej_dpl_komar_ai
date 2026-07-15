@@ -61,6 +61,21 @@ def test_used_chips_unavailable():
     assert plan["chips"] == {}, plan["chips"]
 
 
+def test_rebuy_lock_waived_on_wildcard_week():
+    # trash squad forces a WC; 306 is locked the whole horizon, yet the
+    # WC rebuild (a legitimate judgment reset) may still bring him in
+    ov = {(p, g): {"mu": 0.0} for p in OWNED for g in range(T, T + 5)}
+    ov.update({(306, g): {"mu": 12.0} for g in range(T, T + 5)})
+    plan = solve(make_matrix(week_over=ov), no_rebuy={306: T + 4})
+    wc_g = [g for g, k in plan["chips"].items() if k.startswith("wc")]
+    assert wc_g, plan["chips"]
+    assert 306 in plan["weeks"][wc_g[0]]["transfers_in"]
+    # and outside the WC week the lock held
+    for g, wk in plan["weeks"].items():
+        if g != wc_g[0]:
+            assert 306 not in wk["transfers_in"]
+
+
 def test_tc_fires_on_captain_peak_week():
     ov = {(403, T + 3): {"mu": 15.0, "q90": 24.0, "n_fix": 2}}
     plan = solve(make_matrix(week_over=ov))

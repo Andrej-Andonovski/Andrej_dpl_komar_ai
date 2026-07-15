@@ -1,10 +1,15 @@
 """Persistent percentile gates for unanchored in-model chips.
 
-The ledger records one proxy value per real gameweek for each chip token
-(``wc1``, ``tc2``, ...).  A chip can fire on a plain week only when its
-current value meets the q-th percentile of earlier values in that chip's
-current set.  Event weeks are intentionally exempt: their calendar signal is
-already captured by the chip model's existing guards.
+The ledger records one proxy value per real PLAIN gameweek per chip KIND
+(``wc``, ``tc``, ``bb`` — one season-wide series each, so set-2 chips
+inherit set-1 history instead of restarting the warm-up).  A chip can fire
+on a plain week only when its current value meets the q-th percentile of
+the earlier values in its kind's series.  Event weeks are intentionally
+exempt both ways: they bypass the bar (calendar signal is already captured
+by the chip model's guards) and their DGW-inflated / blank-deflated proxies
+are never recorded.  Keys are plain strings — the ledger itself is
+key-agnostic.  (A set-deadline disarm was tried and reverted: empirically
+the bar places late chips better than the horizon MILP does.)
 """
 import json
 import math

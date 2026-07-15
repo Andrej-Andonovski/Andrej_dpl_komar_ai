@@ -108,6 +108,37 @@ def test_small_gain_hit_declined():
     assert all(w["hits"] == 0 for w in plan["weeks"].values())
 
 
+def test_hit_cost_flips_horizon_hit():
+    # the test_hit_priced_on_horizon_gains scenario: the marginal hit buys
+    # ~7 pts (the deferred upgrade's week-t burst). Worth it at -4; at a
+    # -10 decision price the second move waits for next week's FT instead.
+    ov = {}
+    for g in range(T, T + 5):
+        ov[(306, g)] = {"mu": 12.0 if g == T else 7.0}
+        ov[(307, g)] = {"mu": 12.0 if g == T else 7.0}
+    plan = solve(make_matrix(week_over=ov), ft=1, hit_cost=10.0)
+    wk = plan["weeks"][T]
+    assert wk["hits"] == 0 and len(wk["transfers_in"]) == 1
+    later = {p for g in range(T + 1, T + 5)
+             for p in plan["weeks"][g]["transfers_in"]}
+    assert ({306, 307} - set(wk["transfers_in"])) <= later
+    assert all(w["hits"] == 0 for w in plan["weeks"].values())
+
+
+def test_rebuy_lock_defers_to_expiry():
+    # 306 elite all horizon; owned 305 is dead weight. Lock runs through
+    # T+1, so the buy may happen at T+2 at the earliest — and does.
+    ov = {}
+    for g in range(T, T + 5):
+        ov[(306, g)] = {"mu": 12.0}
+        ov[(305, g)] = {"mu": 0.0}
+    plan = solve(make_matrix(week_over=ov), ft=1, no_rebuy={306: T + 1})
+    assert 306 not in plan["weeks"][T]["transfers_in"]
+    assert 306 not in plan["weeks"][T + 1]["transfers_in"]
+    assert any(306 in plan["weeks"][g]["transfers_in"]
+               for g in range(T + 2, T + 5))
+
+
 def test_churn_guard_structural():
     # busy scenario: nobody may be bought twice or sold twice across the plan
     ov = {}

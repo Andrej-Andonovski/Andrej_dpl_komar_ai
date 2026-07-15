@@ -123,6 +123,35 @@ def test_hit_cap_enforced():
     assert len(res["transfers_in"]) <= 1 + mc.HIT_CAP
 
 
+def test_hit_cost_raises_bar():
+    # 307 in (mu 10) displaces the marginal XI player (mu 4.5): +5.5 gain
+    # clears the default -4 price but not a raised -8.
+    rows = base_rows({305: {"mu": 0.0}, 306: {"mu": 10.0},
+                        304: {"mu": 0.0}, 307: {"mu": 10.0}})
+    assert solve(rows, ft=1)["hits"] == 1
+    res = solve(rows, ft=1, hit_cost=8.0)
+    assert res["hits"] == 0
+    # the FT still buys one of the (equal) upgrades — no second on a hit
+    assert len(res["transfers_in"]) == 1
+    assert set(res["transfers_in"]) <= {306, 307}
+
+
+def test_hit_cap_zero_blocks_all_hits():
+    rows = base_rows({305: {"mu": 0.0}, 306: {"mu": 10.0},
+                        304: {"mu": 0.0}, 307: {"mu": 9.0}})
+    res = solve(rows, ft=1, hit_cap=0)
+    assert res["hits"] == 0 and len(res["transfers_in"]) == 1
+    assert 306 in res["transfers_in"]        # FT goes to the bigger upgrade
+
+
+def test_rebuy_lock_blocks_transfer_in():
+    # 306 is the obvious FT upgrade — but recently sold, so locked out
+    rows = base_rows({305: {"mu": 0.0}, 306: {"mu": 10.0}})
+    assert 306 in solve(rows, ft=1)["transfers_in"]
+    res = solve(rows, ft=1, no_rebuy={306})
+    assert 306 not in res["transfers_in"]
+
+
 def test_wildcard_free_rebuild():
     ov = {p: {"mu": 0.0} for p in OWNED}
     rows = base_rows(ov)
