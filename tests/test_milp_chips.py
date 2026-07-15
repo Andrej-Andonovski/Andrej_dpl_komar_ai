@@ -148,6 +148,16 @@ def test_lockout_blocks_all_early_chips():
     assert all(g > T + 1 for g in plan["chips"]), plan["chips"]
 
 
+def test_percentile_rejection_blocks_plain_week_chip_only_now():
+    # The simulator re-solves after the percentile ledger rejects a weak
+    # plain-week WC/TC/BB.  FH is independently event-only, so no chip can
+    # remain at t when all three unanchored kinds are blocked.
+    st = {"used": set(), "reset_gws": [], "far_dgw": {},
+          "blocked_now": {"wc", "tc", "bb"}}
+    plan = solve(make_matrix(), chip_state=st)
+    assert T not in plan["chips"], plan["chips"]
+
+
 def test_tc_held_for_far_dgw():
     # decent captain weeks in horizon but no double; a far DGW exists in
     # the set -> TC must be reserved (same guard as BB)

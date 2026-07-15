@@ -56,8 +56,12 @@ def _get_solver(time_limit=120):
     global _solver_logged
     try:
         from pulp import HiGHS
-        s = HiGHS(msg=False, timeLimit=time_limit)
-        name = "HiGHS"
+        candidate = HiGHS(msg=False, timeLimit=time_limit)
+        if candidate.available():
+            s = candidate
+            name = "HiGHS"
+        else:
+            raise RuntimeError("HiGHS executable is unavailable")
     except Exception:
         s = PULP_CBC_CMD(msg=0, timeLimit=time_limit)
         name = "CBC"
@@ -301,6 +305,7 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
     # Chip scarcity guards (phase4_report.md fix — measurable, not tuned):
     lockout = (chip_state or {}).get("lockout_until", 0)   # no chips <= this GW
     wc_ok = (chip_state or {}).get("wc_ok", True)          # squad-state gate
+    blocked_now = set((chip_state or {}).get("blocked_now", set()))
 
     def is_event(g):
         return any(r["n_fix"] != 1 for r in matrix[g].values())
@@ -315,6 +320,8 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                 continue            # cold-start lockout: never chip early
             sid = _set_of(g)
             for k in ("wc", "fh", "bb", "tc"):
+                if g == t and k in blocked_now:
+                    continue        # rejected by the percentile bar; re-solve
                 if f"{k}{sid}" in used:
                     continue
                 if k == "fh" and not is_event(g):

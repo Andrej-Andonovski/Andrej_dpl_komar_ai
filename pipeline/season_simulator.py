@@ -24,11 +24,15 @@ except ImportError:
 try:
     from pipeline import prediction_matrix as pmx
     from pipeline.milp_core import (solve_gw as milp_solve_gw,
-                                    solve_horizon as milp_solve_horizon)
+                                    solve_horizon as milp_solve_horizon,
+                                    kappa as milp_kappa, W_BENCH as MP_W_BENCH)
+    from pipeline.chip_percentile import ChipPercentileLedger
 except ImportError:
     import prediction_matrix as pmx
     from milp_core import (solve_gw as milp_solve_gw,
-                           solve_horizon as milp_solve_horizon)
+                           solve_horizon as milp_solve_horizon,
+                           kappa as milp_kappa, W_BENCH as MP_W_BENCH)
+    from chip_percentile import ChipPercentileLedger
 
 warnings.filterwarnings("ignore")
 random.seed(42)
@@ -141,6 +145,13 @@ if OPTIMIZER == "mp":
 # Phase 1 decay measurement.
 MP_HORIZON = int(os.environ.get("MP_HORIZON", "5"))
 
+# Captain mean-to-ceiling blend for the mp objective.  Kept as an environment
+# override so ablations do not require source edits; its value is recorded in
+# the simulation log below.
+MP_THETA = float(os.environ.get("MP_THETA", "0.5"))
+if not 0.0 <= MP_THETA <= 1.0:
+    raise ValueError(f"MP_THETA must be in [0, 1], got {MP_THETA!r}")
+
 # Phase 4: chip decision source for the mp optimizer.
 # "model"  — chips are variables inside the horizon MILP (blueprint §4.7)
 # "legacy" — external decide_chip scheduler (Phase 3 behaviour, ablation)
@@ -171,6 +182,18 @@ if SIM_SEASON != "2025-26":
     FIXTURES_CSV = os.path.join(_sdir, "fixtures_raw.csv")
     RULE_EVENTS_FT = {}              # the GW15 grant was a 2025-26 event
     OUTPUT_JSON = OUTPUT_JSON.replace(".json", f"_{SIM_SEASON}.json")
+
+# Phase 6 candidate: unanchored WC/TC/BB can only fire when their current
+# proxy value reaches the q-th percentile of earlier real GWs in the same
+# chip set.  Simulation runs start fresh by default; set RESUME=1 for a live
+# weekly executor to load the prior state file.
+MP_CHIP_PERCENTILE_Q = float(os.environ.get("MP_CHIP_PERCENTILE_Q", "0.75"))
+MP_CHIP_PERCENTILE_WARMUP = int(os.environ.get("MP_CHIP_PERCENTILE_WARMUP", "3"))
+MP_CHIP_PERCENTILE_RESUME = os.environ.get("MP_CHIP_PERCENTILE_RESUME", "0") == "1"
+MP_CHIP_PERCENTILE_STATE = os.environ.get(
+    "MP_CHIP_PERCENTILE_STATE",
+    os.path.join(DATA_DIR, "intel", f"chip_percentile_{SIM_SEASON}.json"),
+)
 
 # GW1 feature snapshot = the season before SIM_SEASON
 _sy = int(SIM_SEASON[:4])
@@ -1942,6 +1965,24 @@ def compute_score(xi_pids, bench_pids, captain_pid, chip, gw_actuals,
     return int(total) - penalty_pts
 
 
+def mp_chip_proxy_values(result, rows, current_squad, replacement, theta):
+    """Current-week proxy values used by the unanchored-chip percentile bar."""
+    captain = result.get("captain")
+    tc_value = (milp_kappa(rows[captain], theta)
+                if captain in rows else 0.0)
+    bb_value = sum(
+        r["mu"] * (1.0 - MP_W_BENCH * r["pi"])
+        for pid in result.get("bench", [])
+        if (r := rows.get(pid)) is not None
+    )
+    wc_value = sum(
+        max(0.0, replacement.get(rows[pid]["element_type"], 0.0)
+            - rows[pid]["mu"])
+        for pid in current_squad if pid in rows
+    )
+    return {"tc": tc_value, "bb": bb_value, "wc": wc_value}
+
+
 # ── Main Simulation ───────────────────────────────────────────────────────────
 
 def run_simulation():
@@ -1985,6 +2026,12 @@ def run_simulation():
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
+    chip_percentile = ChipPercentileLedger(
+        MP_CHIP_PERCENTILE_STATE,
+        q=MP_CHIP_PERCENTILE_Q,
+        min_observations=MP_CHIP_PERCENTILE_WARMUP,
+        load=MP_CHIP_PERCENTILE_RESUME,
+    )
     pre_fh_squad     = None
     bank_pre_fh      = 0.0
     bench_pred_hist  = []
@@ -2005,7 +2052,11 @@ def run_simulation():
         "chip_strategy":    CHIP_STRATEGY,
         "optimizer":        OPTIMIZER,
         "mp_horizon":       MP_HORIZON,
+        "mp_theta":         MP_THETA,
         "mp_chips":         MP_CHIPS,
+        "mp_chip_percentile_q": MP_CHIP_PERCENTILE_Q,
+        "mp_chip_percentile_warmup": MP_CHIP_PERCENTILE_WARMUP,
+        "mp_chip_percentile_state": MP_CHIP_PERCENTILE_STATE,
         "season":           SIM_SEASON,
         "total_actual_pts": 0,
         "total_predicted_pts": 0,
@@ -2224,15 +2275,54 @@ def run_simulation():
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT,
-                        chip_state=chip_state)
+                        chip_state=chip_state, theta=MP_THETA)
                 except RuntimeError as e:
                     print(f"  [MILP-H] chipped solve failed ({e}) — "
                           f"retrying without chips")
+                    # Preserve the theta ablation even if the chipped solve
+                    # falls back to the no-chip horizon model.
                     plan = milp_solve_horizon(
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
-                        free_transfers, gw, ft_events=RULE_EVENTS_FT)
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        theta=MP_THETA)
                 chip  = plan["chips"].get(gw)
+                # A plain-week chip must clear its own historical bar.  The
+                # first solve exposes the current XI/captain/bench proxies;
+                # if it proposes a weak unanchored chip, block only that chip
+                # for this real GW and re-solve.  Future planned chips are
+                # deliberately left free because every GW is re-solved.
+                plain_week = all(r["n_fix"] == 1 for r in mrows_t.values())
+                blocked_now = set()
+                while chip and plain_week and chip[:2] in ("wc", "tc", "bb"):
+                    result = plan["weeks"][gw]
+                    proxies = mp_chip_proxy_values(
+                        result, mrows_t, current_squad, repl, MP_THETA)
+                    kind = chip[:2]
+                    if chip_percentile.allows(chip, proxies[kind]):
+                        break
+                    blocked_now.add(kind)
+                    cutoff = chip_percentile.threshold(chip)
+                    print(f"  [CHIP-BAR] holding {chip}: {proxies[kind]:.2f} "
+                          f"< q{MP_CHIP_PERCENTILE_Q:.2f} {cutoff:.2f}")
+                    retry_state = dict(chip_state)
+                    retry_state["blocked_now"] = blocked_now
+                    plan = milp_solve_horizon(
+                        mp_matrix, current_squad,
+                        BUDGET if gw == 1 else bank,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        chip_state=retry_state, theta=MP_THETA)
+                    chip = plan["chips"].get(gw)
+
+                result = plan["weeks"][gw]
+                final_proxies = mp_chip_proxy_values(
+                    result, mrows_t, current_squad, repl, MP_THETA)
+                sid = 1 if gw <= 19 else 2
+                chip_percentile.record({
+                    f"{kind}{sid}": value
+                    for kind, value in final_proxies.items()
+                    if f"{kind}{sid}" not in chips_used
+                })
                 is_wc = chip in ("wc1", "wc2")
                 is_fh = chip in ("fh1", "fh2")
                 is_tc = chip in ("tc1", "tc2")
@@ -2240,20 +2330,21 @@ def run_simulation():
                 if is_fh:
                     pre_fh_squad = set(current_squad)
                     bank_pre_fh  = bank
-                result = plan["weeks"][gw]
                 _plan_print(plan)
             elif is_fh or MP_HORIZON <= 1:
                 # FH squad reverts — horizon planning is moot for it
                 result = milp_solve_gw(mp_rows, current_squad,
                                        available_budget, ft_ilp, gw,
-                                       is_wildcard=is_wc, is_freehit=is_fh)
+                                       is_wildcard=is_wc, is_freehit=is_fh,
+                                       theta=MP_THETA)
             else:
                 try:
                     plan = milp_solve_horizon(
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw,
-                        is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT)
+                        is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT,
+                        theta=MP_THETA)
                     result = plan["weeks"][gw]
                     _plan_print(plan)
                 except RuntimeError as e:
@@ -2262,7 +2353,8 @@ def run_simulation():
                           f"falling back to H=1")
                     result = milp_solve_gw(mp_rows, current_squad,
                                            available_budget, ft_ilp, gw,
-                                           is_wildcard=is_wc, is_freehit=False)
+                                           is_wildcard=is_wc, is_freehit=False,
+                                           theta=MP_THETA)
         else:
             result = run_ilp(pool, current_squad, available_budget,
                              ft_ilp, is_wc, is_fh, gw)
