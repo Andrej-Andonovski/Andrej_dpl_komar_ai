@@ -33,6 +33,13 @@ HIT_COST = 4.0   # objective price per hit — the DECISION threshold only.
                  # demands a margin over the paper gain (predicted upgrade mu
                  # is upward-biased by selection — Phase 4 measured realized
                  # hit ROI at -6.8). Env: MP_HIT_COST via season_simulator.
+FT_VALUE = 0.0   # objective price per EXECUTED transfer (even FT-funded) —
+                 # transfer friction. A free transfer is not free: banking
+                 # has option value and sub-noise mu edges trigger sideways
+                 # churn (sell a hauler for a +0.2/wk paper edge). The move
+                 # must beat holding by this margin over the horizon. The
+                 # honest version of legacy's tuned loyalty bonus. WC/FH/GW1
+                 # rebuilds exempt. Env: MP_FT_VALUE via season_simulator.
 N_CAP_CANDIDATES = 60   # captain/vice variables restricted to top-N by kappa
 
 # ── Phase 3: horizon constants ────────────────────────────────────────────────
@@ -84,7 +91,8 @@ def kappa(row, theta=THETA):
 def solve_gw(rows, owned, available_budget, free_transfers, gw,
              is_wildcard=False, is_freehit=False,
              theta=THETA, gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
-             hit_cost=HIT_COST, no_rebuy=None, time_limit=120):
+             hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
+             sell_hold=None, time_limit=120):
     """
     rows  : {pid: matrix row} for ONE gameweek — needs mu, pi, q90, price,
             sell_value, element_type, team (prediction_matrix output).
@@ -136,6 +144,13 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
            + lpSum(beta[p] * (x[p] - s[p]) for p in pids))
     if hits is not None:
         obj -= hit_cost * hits
+        if ft_value > 0:
+            obj -= ft_value * lpSum(ti.values())
+        # form hold: selling last week's haulers costs extra (soft) —
+        # the solver prefers selling someone else or holding the FT
+        for p, pen in (sell_hold or {}).items():
+            if p in pids and p in owned:
+                obj -= pen * to[p]
     prob += obj
 
     prob += lpSum(x.values()) == 15
@@ -235,7 +250,8 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                   is_wildcard_now=False, ft_events=None, chip_state=None,
                   delta=DELTA, delta_chip=DELTA_CHIP, theta=THETA,
                   gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
-                  hit_cost=HIT_COST, no_rebuy=None, time_limit=240):
+                  hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
+                  sell_hold=None, time_limit=240):
     """
     Multi-period MILP over the matrix weeks {t..t+H-1}: per-week squad/XI/
     captain/vice + per-week transfers with FT banking, churn guard (max one
@@ -300,6 +316,8 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
          for g in gws for p in cap_cands[g]}
 
     h = {g: LpVariable(f"h{g}", lowBound=0, upBound=hit_cap) for g in gws}
+    # transfer-friction counter: executed transfers net of WC/GW1 waivers
+    fr = {g: LpVariable(f"fr{g}", lowBound=0) for g in gws}
     bankv = {g: LpVariable(f"bank{g}", lowBound=0) for g in gws}
     fvar = {g: LpVariable(f"f{g}", lowBound=1, upBound=FT_MAX, cat=LpInteger)
             for g in gws[1:]}
@@ -450,6 +468,12 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
         else:
             terms.append(w * W)
         terms.append(-hit_cost * w * h[g])
+        if ft_value > 0:
+            terms.append(-ft_value * w * fr[g])
+        # form hold (soft): selling last week's haulers costs extra
+        for p, pen in (sell_hold or {}).items():
+            if p in pids and p in owned:
+                terms.append(-pen * w * to[p, g])
 
         wc_ = delta_chip ** (g - t)
         if g in CH["bb"]:
@@ -510,6 +534,10 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
         wc_var = CH["wc"].get(g)
         prob += h[g] >= (n_g - ft_expr(g) - waived
                          - (15 * wc_var if wc_var is not None else 0))
+        # friction counts every non-waived transfer, FT-funded included —
+        # spending a transfer must beat holding it (option value)
+        prob += fr[g] >= (n_g - waived
+                          - (15 * wc_var if wc_var is not None else 0))
 
         # bank recursion (exact sell values; bank >= 0 via lowBound)
         prev_bank = bank if g == t else bankv[gws[gi - 1]]

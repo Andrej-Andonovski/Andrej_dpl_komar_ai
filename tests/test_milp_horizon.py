@@ -125,6 +125,35 @@ def test_hit_cost_flips_horizon_hit():
     assert all(w["hits"] == 0 for w in plan["weeks"].values())
 
 
+def test_ft_friction_holds_over_horizon():
+    # 306 edges an owned starter by +0.3/wk all horizon: 5 discounted weeks
+    # of paper gain (~1.35) beat one week of friction, so friction must be
+    # charged per week-of-horizon... it is charged ONCE per executed
+    # transfer at its week's discount — the swap clears 1.0 friction over
+    # a full horizon but NOT 2.5 (sub-noise edges stay blocked).
+    ov = {}
+    for g in range(T, T + 5):
+        ov[(306, g)] = {"mu": 5.3}   # owned MIDs are 5.0
+    plan = solve(make_matrix(week_over=ov), ft=1, ft_value=2.5)
+    assert all(w["transfers_in"] == [] for w in plan["weeks"].values())
+    # a real upgrade (+7/wk) sails through the same friction
+    ov = {(306, g): {"mu": 12.0} for g in range(T, T + 5)}
+    plan = solve(make_matrix(week_over=ov), ft=1, ft_value=2.5)
+    assert 306 in plan["weeks"][T]["transfers_in"]
+
+
+def test_form_hold_protects_hauler_across_horizon():
+    # 305 is weakest all horizon but just hauled: with the hold he must
+    # not be the sale in ANY planned week
+    ov = {}
+    for g in range(T, T + 5):
+        ov[(305, g)] = {"mu": 3.0}
+        ov[(306, g)] = {"mu": 6.5}
+    plan = solve(make_matrix(week_over=ov), ft=1, sell_hold={305: 5.0})
+    for wk in plan["weeks"].values():
+        assert 305 not in wk["transfers_out"]
+
+
 def test_rebuy_lock_defers_to_expiry():
     # 306 elite all horizon; owned 305 is dead weight. Lock runs through
     # T+1, so the buy may happen at T+2 at the earliest — and does.

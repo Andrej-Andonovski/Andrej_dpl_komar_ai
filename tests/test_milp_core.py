@@ -144,6 +144,29 @@ def test_hit_cap_zero_blocks_all_hits():
     assert 306 in res["transfers_in"]        # FT goes to the bigger upgrade
 
 
+def test_ft_friction_blocks_sideways_swap():
+    # 307 edges owned 305 by +0.4 mu — a sub-noise sideways move. With
+    # friction 1.0 the FT is held; a genuinely big upgrade still happens.
+    rows = base_rows({305: {"mu": 5.0}, 307: {"mu": 5.4}})
+    assert 307 in solve(rows, ft=1)["transfers_in"]      # free => churn
+    res = solve(rows, ft=1, ft_value=1.0)
+    assert res["transfers_in"] == []                     # friction => hold
+    rows = base_rows({305: {"mu": 0.0}, 307: {"mu": 9.0}})
+    res = solve(rows, ft=1, ft_value=1.0)
+    assert 307 in res["transfers_in"]                    # real upgrade goes
+
+
+def test_form_hold_protects_hauler():
+    # owned 305 is the weakest (mu 3) and would normally be the one sold
+    # for incoming 307 — but he just hauled, so the hold makes the solver
+    # sell someone else (or hold) rather than the in-form player
+    rows = base_rows({305: {"mu": 3.0}, 307: {"mu": 6.5}})
+    res = solve(rows, ft=1)
+    assert res["transfers_out"] == [305]                 # baseline: sold
+    res = solve(rows, ft=1, sell_hold={305: 5.0})
+    assert 305 not in res["transfers_out"]               # hauler protected
+
+
 def test_rebuy_lock_blocks_transfer_in():
     # 306 is the obvious FT upgrade — but recently sold, so locked out
     rows = base_rows({305: {"mu": 0.0}, 306: {"mu": 10.0}})

@@ -25,13 +25,13 @@ try:
     from pipeline import prediction_matrix as pmx
     from pipeline.milp_core import (solve_gw as milp_solve_gw,
                                     solve_horizon as milp_solve_horizon,
-                                    kappa as milp_kappa, W_BENCH as MP_W_BENCH)
+                                    kappa as milp_kappa)
     from pipeline.chip_percentile import ChipPercentileLedger
 except ImportError:
     import prediction_matrix as pmx
     from milp_core import (solve_gw as milp_solve_gw,
                            solve_horizon as milp_solve_horizon,
-                           kappa as milp_kappa, W_BENCH as MP_W_BENCH)
+                           kappa as milp_kappa)
     from chip_percentile import ChipPercentileLedger
 
 warnings.filterwarnings("ignore")
@@ -147,10 +147,19 @@ MP_HORIZON = int(os.environ.get("MP_HORIZON", "5"))
 
 # Captain mean-to-ceiling blend for the mp objective.  Kept as an environment
 # override so ablations do not require source edits; its value is recorded in
-# the simulation log below.
-MP_THETA = float(os.environ.get("MP_THETA", "0.5"))
+# the simulation log below.  Default 0.3 = the 2026-07-15 sweep winner
+# (sum 6824 vs 6681 at 0.5, 6766 at 0.1): captaincy pays closer to the
+# reliable mean than the q90 ceiling.
+MP_THETA = float(os.environ.get("MP_THETA", "0.3"))
 if not 0.0 <= MP_THETA <= 1.0:
     raise ValueError(f"MP_THETA must be in [0, 1], got {MP_THETA!r}")
+# Phase 6 sweep knobs: the remaining honest constants, env-exposed so the
+# Optuna harness can search them without source edits.  Defaults = the
+# blueprint values the whole scoreboard was measured at.
+MP_DELTA      = float(os.environ.get("MP_DELTA", "0.94"))       # week discount
+MP_DELTA_CHIP = float(os.environ.get("MP_DELTA_CHIP", "0.97"))  # chip discount
+MP_GAMMA      = float(os.environ.get("MP_GAMMA", "0.07"))       # vice weight
+MP_W_BENCH    = float(os.environ.get("MP_W_BENCH", "0.15"))     # bench slot prob
 
 # Phase 4: chip decision source for the mp optimizer.
 # "model"  — chips are variables inside the horizon MILP (blueprint §4.7)
@@ -182,6 +191,20 @@ MP_REBUY_GAP = int(os.environ.get("MP_REBUY_GAP", "4"))
 # damage — MP_HIT_BUDGET=4 means at most -16 in penalties all season.
 # Enforced at execution: each GW's per-week cap shrinks to what's left.
 MP_HIT_BUDGET = int(os.environ.get("MP_HIT_BUDGET", "4"))
+# Transfer friction: objective price per EXECUTED transfer, FT-funded
+# included (WC/FH/GW1 rebuilds exempt; real scoring unaffected).  A free
+# transfer is not free — banking has option value, and sub-noise mu edges
+# otherwise trigger sideways churn (e.g. selling a 15-pt hauler for a
+# +0.2/wk paper edge).  The honest version of legacy's tuned loyalty bonus.
+# 0 = off until A/B-validated.
+MP_FT_VALUE = float(os.environ.get("MP_FT_VALUE", "0"))
+# Form hold: selling a player who just hauled >= MP_FORM_HOLD_MIN actual
+# points costs MP_FORM_HOLD extra objective points (soft — a genuinely
+# better move can still pay it; the solver usually sells someone else
+# instead).  Past performance as a strategy signal: a haul is evidence the
+# model's mu may be lagging the player's true level.  0 = off.
+MP_FORM_HOLD = float(os.environ.get("MP_FORM_HOLD", "0"))
+MP_FORM_HOLD_MIN = int(os.environ.get("MP_FORM_HOLD_MIN", "10"))
 
 # ── Cross-season backtests (fixing stage, docs/phase4_report.md) ─────────────
 # SIM_SEASON picks the season to simulate. Default "2025-26" = original
@@ -2051,6 +2074,7 @@ def run_simulation():
     purchase_price   = {}    # pid -> £m paid (corrected-mode sell ledger)
     sold_at          = {}    # pid -> gw of last REAL sale (rebuy-lock memory)
     hits_paid        = 0     # season running total (MP_HIT_BUDGET enforcement)
+    form_hold        = {}    # pid -> sell-penalty for last GW's haulers
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
@@ -2086,6 +2110,13 @@ def run_simulation():
         "mp_hit_cap":       MP_HIT_CAP,
         "mp_hit_budget":    MP_HIT_BUDGET,
         "mp_rebuy_gap":     MP_REBUY_GAP,
+        "mp_ft_value":      MP_FT_VALUE,
+        "mp_form_hold":     MP_FORM_HOLD,
+        "mp_form_hold_min": MP_FORM_HOLD_MIN,
+        "mp_delta":         MP_DELTA,
+        "mp_delta_chip":    MP_DELTA_CHIP,
+        "mp_gamma":         MP_GAMMA,
+        "mp_w_bench":       MP_W_BENCH,
         "mp_chip_bar":      MP_CHIP_BAR,
         "mp_chip_percentile_q": MP_CHIP_PERCENTILE_Q,
         "mp_chip_percentile_warmup": MP_CHIP_PERCENTILE_WARMUP,
@@ -2325,9 +2356,9 @@ def run_simulation():
                     plan = milp_solve_horizon(
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
-                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         chip_state=chip_state, theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                         no_rebuy=no_rebuy)
                 except RuntimeError as e:
                     print(f"  [MILP-H] chipped solve failed ({e}) — "
@@ -2337,9 +2368,9 @@ def run_simulation():
                     plan = milp_solve_horizon(
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
-                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                         no_rebuy=no_rebuy)
                 chip  = plan["chips"].get(gw)
                 # A plain-week chip must clear the KIND-level historical bar
@@ -2369,9 +2400,9 @@ def run_simulation():
                     plan = milp_solve_horizon(
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
-                        free_transfers, gw, ft_events=RULE_EVENTS_FT,
+                        free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         chip_state=retry_state, theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                         no_rebuy=no_rebuy)
                     chip = plan["chips"].get(gw)
 
@@ -2403,7 +2434,7 @@ def run_simulation():
                                        available_budget, ft_ilp, gw,
                                        is_wildcard=is_wc, is_freehit=is_fh,
                                        theta=MP_THETA,
-                                       hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                                       hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                                        no_rebuy=set(no_rebuy))
             else:
                 try:
@@ -2411,9 +2442,9 @@ def run_simulation():
                         mp_matrix, current_squad,
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw,
-                        is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT,
+                        is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                         no_rebuy=no_rebuy)
                     result = plan["weeks"][gw]
                     _plan_print(plan)
@@ -2425,7 +2456,7 @@ def run_simulation():
                                            available_budget, ft_ilp, gw,
                                            is_wildcard=is_wc, is_freehit=False,
                                            theta=MP_THETA,
-                                           hit_cost=MP_HIT_COST, hit_cap=hit_cap_now,
+                                           hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
                                            no_rebuy=set(no_rebuy))
         else:
             result = run_ilp(pool, current_squad, available_budget,
@@ -2483,7 +2514,11 @@ def run_simulation():
                     purchase_price.pop(p, None)
                 for p in t_in_pids:
                     purchase_price[p] = _mp(p)
-                # rebuy-lock memory: buys clear their lock, sales start one
+                # rebuy-lock memory: buys clear their lock, sales start one.
+                # WC sales DO seed locks — exempting them was tried
+                # 2026-07-15 and lost 88/66 pts on the neutral seasons:
+                # committing to a wildcard's dropped players for GAP weeks
+                # is empirically worth more than post-WC flexibility.
                 for p in t_in_pids:
                     sold_at.pop(p, None)
                 for p in t_out_pids:
@@ -2513,6 +2548,16 @@ def run_simulation():
                 gw_actuals[pid] = hist_lookup[pid][gw]
             else:
                 gw_actuals[pid] = {"total_points": 0, "minutes": 0}
+
+        # form hold for NEXT GW's solve: this week's double-digit haulers
+        # cost extra to sell (skip FH weeks — shadow squad reverts)
+        if MP_FORM_HOLD > 0 and not is_fh:
+            form_hold = {
+                pid: MP_FORM_HOLD for pid, a in gw_actuals.items()
+                if a.get("total_points", 0) >= MP_FORM_HOLD_MIN
+            }
+        elif not is_fh:
+            form_hold = {}
 
         # ── Auto-subs ───────────────────────────────────────────────────────
         xi_final, bench_final, auto_subs = apply_auto_subs(

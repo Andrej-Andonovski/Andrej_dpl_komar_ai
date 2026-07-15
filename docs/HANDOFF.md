@@ -117,18 +117,30 @@ CHIP_STRATEGY=legacy            # only matters for OPTIMIZER=legacy runs
 Tests: `python tests/test_{fpl_rules,prediction_matrix,milp_core,milp_horizon,milp_chips,chip_percentile}.py`
 (plain python, no pytest). Import smoke: `tests/smoke_imports.py`.
 
-## 4. IMMEDIATE NEXT TASK — captain channel (MP_THETA sweep)
+## 4. IMMEDIATE NEXT TASK — Phase 6 sweep is RUNNING
 
-DONE 2026-07-15: percentile-bar A/B (all variants), hit/churn discipline
-2×2 — see §1 scoreboard. Shipped default = discipline-only.
+DONE 2026-07-15 (evening): θ sweep — **θ=0.3 is the champion** (default
+now): 2128/2270/2426 Σ6824 vs 6681 (θ=0.5) / 6766 (θ=0.1). Captain lever
+was worth +143, as backlog predicted.
 
-Next: the captain channel is the biggest known lever (~50 pts vs legacy on
-2025-26; captain regret 6.5-7.3/GW from Phase 0 metrics). MP_THETA sweep
-{0.3, 0.7, 1.0} × 3 seasons on the shipped defaults (0.5 = the Wave C
-numbers above). Also queued: legacy-optimizer + CHIP_STRATEGY=v2 backtest
-(closes docs/chip_strategy_redesign.md §10 for the thesis ablation table —
-writes season_simulation_corrected*.json, safe to run alongside mp runs).
-Archive mp JSONs before every wave (§0).
+REJECTED by A/B (mechanisms kept in code, OFF by default, in the sweep
+space): anti-churn coefficients FT_VALUE=1.0 + FORM_HOLD=4 (Σ6618, and
+transfer count did NOT drop); WC-sales-don't-seed-rebuy-locks
+(−47/−88/−66 everywhere). Pattern of the day: theory-driven tweaks lose
+to measured behavior — A/B everything.
+
+Also DONE: legacy + CHIP_STRATEGY=v2 backtest = **2180** vs 2252
+hardcoded (closes chip_strategy_redesign.md §10, thesis ablation row).
+
+RUNNING: pipeline/optuna_mp_search.py — Phase 6 TPE sweep, 13 knobs
+(θ, δ, δ_c, γ, w̄, hit cost/budget, rebuy gap, ft_value, form_hold,
+wc_below, chip bar+q), train = 2023-24+2024-25 (objective = summed total,
+champion baseline 4696), holdout = 2025-26 (top-K only, report fold gap).
+Storage data/intel/optuna_mp/study.db (resumable), ~25 min/trial.
+fpl-sim image now includes optuna 4.9.0 (committed). NOTE: trials
+overwrite season_simulation_corrected_mp_{2023-24,2024-25}.json — do NOT
+run other mp sims while the sweep is live; champion runs are archived
+(season_simulation_mp_theta03_*).
 
 ## 5. Remaining backlog (docs/fixing_backlog.md has full detail)
 

@@ -1,0 +1,865 @@
+==============================================================================
+SEASON 2025-26   TOTAL 2128 pts   (56.0/GW)   penalties 0
+config: mp H=5 model-chips discipline theta=0.3   chips: wc1@GW5 tc1@GW6 bb1@GW8 tc2@GW26 fh2@GW31 bb2@GW33 wc2@GW35
+==============================================================================
+
+GW  1  actual  76  (pred 130.1)  bank 0.1m  FT 15
+  captain: Haaland (pred 19.3, actual 13)   vice: Borges Fernandes
+  XI:    GK: Dúbravka 2 | DEF: dos Santos Magalhães 6, van Dijk 3, Guéhi 6 | MID: Borges Fernandes 2, Semenyo 15, Rice 6, Rogers 3, Wilson 5 | FWD: Haaland (C) 26, Junqueira de Jesus 2
+  bench: GK: Darlow 0 | DEF: Estève 1, Alderete 4 | FWD: Kroupi 1
+  transfers in:  dos Santos Magalhães, Rice, Rogers, Estève, Dúbravka, Kroupi, Junqueira de Jesus, Wilson, Darlow, van Dijk, Semenyo, Guéhi, Haaland, Borges Fernandes, Alderete
+  transfers out: -
+
+GW  2  actual  56  (pred 48.1)  bank 0.1m  FT 2
+  captain: Haaland (pred 7.5, actual 2)   vice: Johnson
+  XI:    GK: Dúbravka 6 | DEF: dos Santos Magalhães 6, van Dijk 3, Guéhi 2 | MID: Johnson 9, Borges Fernandes 2, Rice 6, Rogers 2, Wilson 1 | FWD: Haaland (C) 4, Junqueira de Jesus 15
+  bench: GK: Darlow 0 | DEF: Estève 6, Alderete 1 | FWD: Kroupi 1
+  transfers in:  Johnson
+  transfers out: Semenyo
+
+GW  3  actual  67  (pred 44.2)  bank 1.1m  FT 2
+  captain: Johnson (pred 5.2, actual 1)   vice: Timber
+  XI:    GK: Dúbravka 2 | DEF: Timber 2, dos Santos Magalhães 2, van Dijk 8, Guéhi 15 | MID: Johnson (C) 2, Fernández 12, Rice 4, Rogers 2 | FWD: Junqueira de Jesus 9, Haaland 9
+  bench: GK: Darlow 0 | DEF: Estève 1 | MID: Wilson 1 | FWD: Kroupi 1
+  transfers in:  Timber, Fernández
+  transfers out: Borges Fernandes, Alderete
+
+GW  4  actual  66  (pred 47.9)  bank 0.5m  FT 1
+  captain: Timber (pred 5.0, actual 8)   vice: Junqueira de Jesus
+  XI:    GK: Dúbravka 3 | DEF: Timber (C) 16, dos Santos Magalhães 9, van Dijk 8 | MID: Gakpo 3, Johnson 1, Fernández 4, Rice 1, Wilson 1 | FWD: Junqueira de Jesus 7, Haaland 13
+  bench: GK: Darlow 3 | DEF: Estève 4, Guéhi 6 | FWD: Kroupi 0
+  transfers in:  Gakpo
+  transfers out: Rogers
+
+GW  5  actual  45  (pred 55.3)  bank 0.0m  FT 1  chip=wc1
+  captain: Haaland (pred 7.6, actual 9)   vice: Junqueira de Jesus
+  XI:    GK: Becker 2 | DEF: Timber 1, Mitchell 8, Porro Sauceda 1, Richards 4 | MID: Gakpo 2, Szoboszlai 1, Fernández 1, Semenyo 5 | FWD: Haaland (C) 18, Junqueira de Jesus 2
+  bench: GK: Dúbravka 4 | DEF: Mandava -2 | MID: Cullen 4 | FWD: Foster 6
+  transfers in:  Cullen, Foster, Mitchell, Richards, Becker, Szoboszlai, Semenyo, Mandava, Porro Sauceda
+  transfers out: dos Santos Magalhães, Rice, Estève, Kroupi, Johnson, Wilson, Darlow, van Dijk, Guéhi
+
+GW  6  actual  85  (pred 62.0)  bank 0.0m  FT 2  chip=tc1
+  captain: Haaland (pred 8.3, actual 16)   vice: Semenyo
+  XI:    GK: Pope 2 | DEF: Porro Sauceda 1, Timber 2, Mitchell 4, Richards 4 | MID: Semenyo 7, Fernández 9, Gakpo 1, Szoboszlai 5 | FWD: Haaland (C x3) 48, Junqueira de Jesus 2
+  bench: GK: Dúbravka 1 | DEF: Mandava 0 | MID: Anthony 6 | FWD: Foster 2
+  transfers in:  Anthony, Pope
+  transfers out: Cullen, Becker
+
+GW  7  actual  78  (pred 49.6)  bank 0.6m  FT 1
+  captain: Haaland (pred 8.8, actual 8)   vice: Semenyo
+  XI:    GK: Pope 7 | DEF: Burn 11, Mitchell 1, Richards 3, Timber 11 | MID: Semenyo 18, Fernández 2, Anthony 1, Gakpo 7, Szoboszlai 1 | FWD: Haaland (C) 16
+  bench: GK: Dúbravka 2 | DEF: Mandava 0 | FWD: Foster 1, Junqueira de Jesus 2
+  transfers in:  Burn
+  transfers out: Porro Sauceda
+
+GW  8  actual  70  (pred 49.1)  bank 0.8m  FT 1  chip=bb1
+  captain: Haaland (pred 8.6, actual 13)   vice: Semenyo
+  XI:    GK: Pope 2 | DEF: Mitchell 1, Richards 3, Timber 6 | MID: Semenyo 4, Sarr 2, Gakpo 7, Anthony 2, Szoboszlai 4 | FWD: Haaland (C) 26, Junqueira de Jesus 2
+  bench: [BENCH BOOST - counts] GK: Dúbravka 9 | DEF: Burn 2, Mandava 0 | FWD: Foster 0
+  transfers in:  Sarr
+  transfers out: Fernández
+  auto-subs: Richards on for Mandava
+
+GW  9  actual  41  (pred 49.6)  bank 2.2m  FT 1
+  captain: Haaland (pred 10.0, actual 2)   vice: Semenyo
+  XI:    GK: Pope 3 | DEF: Burn 2, Timber 6, Mitchell 2 | MID: Semenyo 3, Gakpo 2, Anthony 2, Szoboszlai 10, Sarr 2 | FWD: Haaland (C) 4, Nascimento Rodrigues 5
+  bench: GK: Dúbravka 2 | DEF: Richards 2, Mandava 2 | FWD: Foster 7
+  transfers in:  Nascimento Rodrigues
+  transfers out: Junqueira de Jesus
+
+GW 10  actual  55  (pred 53.6)  bank 0.5m  FT 1
+  captain: Haaland (pred 9.8, actual 13)   vice: Semenyo
+  XI:    GK: Donnarumma 2 | DEF: Burn 1, Timber 6, Mitchell 6 | MID: Semenyo 2, Gakpo 3, Szoboszlai 2, Sarr 3, Anthony 2 | FWD: Haaland (C) 26, Nascimento Rodrigues 2
+  bench: GK: Pope 3 | DEF: Mandava 2, Richards 6 | FWD: Foster 0
+  transfers in:  Donnarumma
+  transfers out: Dúbravka
+
+GW 11  actual  52  (pred 53.3)  bank 0.3m  FT 1
+  captain: Haaland (pred 11.3, actual 4)   vice: Semenyo
+  XI:    GK: Donnarumma 6 | DEF: Timber 1, Mitchell 11, Burn 0, Richards 8 | MID: Semenyo 0, Rice 2, Gakpo 1, Anthony 2 | FWD: Haaland (C) 8, Nascimento Rodrigues 13
+  bench: GK: Pope 3 | DEF: Mandava 0 | MID: Szoboszlai 1 | FWD: Foster 0
+  transfers in:  Rice
+  transfers out: Sarr
+
+GW 12  actual  40  (pred 49.7)  bank 0.7m  FT 1
+  captain: Haaland (pred 8.6, actual 2)   vice: Semenyo
+  XI:    GK: Donnarumma 1 | DEF: Mitchell 6, Richards 6, Timber 5 | MID: Rice 6, Gakpo 2, Anthony 2, Szoboszlai 2 | FWD: Haaland (C) 4, Nascimento Rodrigues 4, Kroupi 2
+  bench: GK: Pope 3 | DEF: Burn 0, Mandava 1 | MID: Semenyo 0
+  transfers in:  Kroupi
+  transfers out: Foster
+  auto-subs: Szoboszlai on for Semenyo; Timber on for Burn
+
+GW 13  actual  57  (pred 47.4)  bank 0.8m  FT 1
+  captain: Haaland (pred 6.3, actual 2)   vice: Eze
+  XI:    GK: Donnarumma 5 | DEF: Mitchell 1, Timber 2, Burn 5 | MID: Eze 2, Rice 4, Szoboszlai 3, Gakpo 14, Anthony 4 | FWD: Haaland (C) 4, Nascimento Rodrigues 13
+  bench: GK: Pope 0 | DEF: Mandava 4, Richards 1 | FWD: Kroupi 1
+  transfers in:  Eze
+  transfers out: Semenyo
+
+GW 14  actual  47  (pred 46.3)  bank 0.8m  FT 1
+  captain: Eze (pred 4.7, actual 1)   vice: Gakpo
+  XI:    GK: Donnarumma 0 | DEF: Lacroix 8, Timber 1, Mitchell 6, Richards 9 | MID: Gakpo 1, Eze (C) 2, Rice 3, Szoboszlai 2, Anthony 1 | FWD: Haaland 14
+  bench: GK: Pope 0 | DEF: Mandava 4 | FWD: Kroupi 2, Nascimento Rodrigues 1
+  transfers in:  Lacroix
+  transfers out: Burn
+
+GW 15  actual  44  (pred 51.7)  bank 1.1m  FT 5
+  captain: Haaland (pred 5.7, actual 2)   vice: Kudus
+  XI:    GK: Donnarumma 6 | DEF: van Dijk 2, Mitchell 2, Richards 4, Lacroix 2 | MID: Kudus 3, Eze 1, Rogers 2, Guimarães Rodriguez Moura 10, Szoboszlai 8 | FWD: Haaland (C) 4
+  bench: GK: Verbruggen 3 | DEF: Mandava 0 | FWD: Nascimento Rodrigues 2, Kroupi 0
+  transfers in:  Rogers, Verbruggen, van Dijk, Guimarães Rodriguez Moura, Kudus
+  transfers out: Timber, Rice, Anthony, Gakpo, Pope
+
+GW 16  actual  68  (pred 48.1)  bank 0.4m  FT 1
+  captain: Foden (pred 5.4, actual 11)   vice: Haaland
+  XI:    GK: Donnarumma 7 | DEF: Lacroix 1, Richards 1, Mitchell 1 | MID: Foden (C) 22, Guimarães Rodriguez Moura 1, Szoboszlai 3, Rogers 15, Kudus 2 | FWD: Haaland 13, Nascimento Rodrigues 2
+  bench: GK: Verbruggen 1 | DEF: van Dijk 6, Mandava 10 | FWD: Kroupi 5
+  transfers in:  Foden
+  transfers out: Eze
+
+GW 17  actual  53  (pred 49.7)  bank 0.4m  FT 1
+  captain: Foden (pred 6.9, actual 3)   vice: Haaland
+  XI:    GK: Donnarumma 7 | DEF: van Dijk 2, Lacroix 1, Mitchell 0 | MID: Foden (C) 6, Rogers 15, Guimarães Rodriguez Moura 2, Kudus 1 | FWD: Haaland 16, Nascimento Rodrigues 2, Kroupi 1
+  bench: GK: Verbruggen 11 | DEF: Mandava 0, Richards 2 | MID: Szoboszlai 1
+  transfers: none (FT banked)
+
+GW 18  actual  29  (pred 54.3)  bank 1.8m  FT 2
+  captain: Haaland (pred 10.2, actual 2)   vice: Calvert-Lewin
+  XI:    GK: Donnarumma 2 | DEF: van Dijk 2, Krejcí 1, Lacroix 3 | MID: Rogers 1, Foden 2, Guimarães Rodriguez Moura 2, Kudus 3 | FWD: Haaland (C) 4, Calvert-Lewin 8, Kroupi 1
+  bench: GK: Verbruggen 1 | DEF: Richards 0, Mandava 0 | MID: Szoboszlai 0
+  transfers in:  Calvert-Lewin, Krejcí
+  transfers out: Nascimento Rodrigues, Mitchell
+  auto-subs: Kudus on for Szoboszlai; Kroupi on for Mandava
+
+GW 19  actual  47  (pred 47.4)  bank 1.1m  FT 1
+  captain: Haaland (pred 6.9, actual 2)   vice: van Hecke
+  XI:    GK: Donnarumma 7 | DEF: van Hecke 0, van Dijk 6, Lacroix 2, Krejcí 8 | MID: Foden 3, Guimarães Rodriguez Moura 10, Szoboszlai 3, Kudus 3 | FWD: Haaland (C) 4, Calvert-Lewin 1
+  bench: GK: Verbruggen 1 | DEF: Richards 0 | MID: Rogers 1 | FWD: Kroupi 0
+  transfers in:  van Hecke
+  transfers out: Mandava
+  auto-subs: Krejcí on for Richards
+
+GW 20  actual  48  (pred 46.2)  bank 7.5m  FT 1
+  captain: Watkins (pred 6.7, actual 7)   vice: Calvert-Lewin
+  XI:    GK: Donnarumma 2 | DEF: van Dijk 1, Lacroix 3, Krejcí 6 | MID: Rogers 5, Guimarães Rodriguez Moura 10, Foden 2, Kudus 1, Szoboszlai 2 | FWD: Watkins (C) 14, Calvert-Lewin 2
+  bench: GK: Verbruggen 7 | DEF: van Hecke 6, Richards 0 | FWD: Kroupi 5
+  transfers in:  Watkins
+  transfers out: Haaland
+
+GW 21  actual  55  (pred 41.2)  bank 3.7m  FT 1
+  captain: Watkins (pred 5.0, actual 2)   vice: Saka
+  XI:    GK: Donnarumma 1 | DEF: Lacroix 8, Krejcí 2, van Dijk 6 | MID: Saka 3, Guimarães Rodriguez Moura 11, Rogers 3, Foden 2 | FWD: Watkins (C) 4, Calvert-Lewin 8, Kroupi 7
+  bench: GK: Verbruggen 3 | DEF: Richards 0, van Hecke 3 | MID: Kudus 0
+  transfers in:  Saka
+  transfers out: Szoboszlai
+  auto-subs: Kroupi on for Kudus
+
+GW 22  actual  32  (pred 45.3)  bank 1.5m  FT 1
+  captain: Rogers (pred 4.0, actual 2)   vice: Saka
+  XI:    GK: Donnarumma 2 | DEF: dos Santos Magalhães 8, van Dijk 2, Lacroix 1, van Hecke 6 | MID: Saka 1, Guimarães Rodriguez Moura 3, Rogers (C) 4, Foden 1 | FWD: Calvert-Lewin 2, Watkins 2
+  bench: GK: Verbruggen 2 | DEF: Krejcí 6 | MID: Kudus 0 | FWD: Kroupi 2
+  transfers in:  dos Santos Magalhães
+  transfers out: Richards
+  auto-subs: Watkins on for Kudus
+
+GW 23  actual  43  (pred 46.3)  bank 2.7m  FT 1
+  captain: dos Santos Magalhães (pred 6.4, actual 1)   vice: Rice
+  XI:    GK: Donnarumma 8 | DEF: dos Santos Magalhães (C) 2, Lacroix 1, van Dijk 9, van Hecke 1 | MID: Rice 1, Rogers 8, Saka 2 | FWD: Calvert-Lewin 2, Watkins 8, Kroupi 1
+  bench: GK: Verbruggen 1 | DEF: Krejcí 1 | MID: Guimarães Rodriguez Moura 0, Kudus 0
+  transfers in:  Rice
+  transfers out: Foden
+  auto-subs: van Hecke on for Guimarães Rodriguez Moura
+
+GW 24  actual  32  (pred 45.4)  bank 3.3m  FT 1
+  captain: Rogers (pred 4.7, actual 2)   vice: dos Santos Magalhães
+  XI:    GK: Donnarumma 2 | DEF: dos Santos Magalhães 8, Justin 0, van Dijk 4, Lacroix 2, Krejcí 0 | MID: Rogers (C) 4, Guimarães Rodriguez Moura 0, Rice 3 | FWD: Calvert-Lewin 2, Kroupi 7
+  bench: GK: Verbruggen 3 | MID: Saka 0, Kudus 0 | FWD: Watkins 0
+  transfers in:  Justin
+  transfers out: van Hecke
+  auto-subs: Kroupi on for Saka
+
+GW 25  actual  76  (pred 48.2)  bank 0.6m  FT 1
+  captain: dos Santos Magalhães (pred 7.8, actual 6)   vice: Junqueira de Jesus
+  XI:    GK: Donnarumma 3 | DEF: dos Santos Magalhães (C) 12, van Dijk 0, Lacroix 11, Justin 7 | MID: Rice 5, Rogers 10, Guimarães Rodriguez Moura 11 | FWD: Junqueira de Jesus 8, Watkins 2, Calvert-Lewin 7
+  bench: GK: Verbruggen 3 | DEF: Krejcí 1 | MID: Saka 0, Kudus 0
+  transfers in:  Junqueira de Jesus
+  transfers out: Kroupi
+
+GW 26  actual 103  (pred 72.8)  bank 3.7m  FT 1  chip=tc2
+  captain: dos Santos Magalhães (pred 10.6, actual 7)   vice: Rice
+  XI:    GK: Donnarumma 7 | DEF: dos Santos Magalhães (C x3) 21, Lacroix 3, Krejcí 9, van Dijk 17 | MID: Rice 14, Rogers 2, Saka 13, Guimarães Rodriguez Moura 3 | FWD: Armstrong 4, Junqueira de Jesus 10
+  bench: GK: Verbruggen 2 | DEF: Justin 0 | MID: Kudus 0 | FWD: Calvert-Lewin 0
+  transfers in:  Armstrong
+  transfers out: Watkins
+
+GW 27  actual  42  (pred 51.2)  bank 3.1m  FT 1
+  captain: Palmer (pred 9.1, actual 3)   vice: Junqueira de Jesus
+  XI:    GK: Donnarumma 5 | DEF: dos Santos Magalhães 2, van Dijk 11, Justin 2, Krejcí -1 | MID: Palmer (C) 6, Rogers 2, Rice 4 | FWD: Junqueira de Jesus 7, Armstrong 2, Calvert-Lewin 2
+  bench: GK: Verbruggen 7 | DEF: Lacroix 0 | MID: Guimarães Rodriguez Moura 0, Kudus 0
+  transfers in:  Palmer
+  transfers out: Saka
+  auto-subs: Krejcí on for Guimarães Rodriguez Moura
+
+GW 28  actual  54  (pred 48.4)  bank 1.5m  FT 1
+  captain: van Dijk (pred 6.2, actual 7)   vice: Palmer
+  XI:    GK: Donnarumma 5 | DEF: van Dijk (C) 14, dos Santos Magalhães 9, Justin 2 | MID: Palmer 1, Rice 5, Semenyo 8, Rogers 2 | FWD: Junqueira de Jesus 2, Calvert-Lewin 2, Armstrong 4
+  bench: GK: Verbruggen 3 | DEF: Krejcí 0, Lacroix 3 | MID: Guimarães Rodriguez Moura 0
+  transfers in:  Semenyo
+  transfers out: Kudus
+  auto-subs: Armstrong on for Guimarães Rodriguez Moura; Justin on for Krejcí
+
+GW 29  actual  43  (pred 49.3)  bank 1.8m  FT 1
+  captain: van Dijk (pred 6.7, actual 1)   vice: Sesko
+  XI:    GK: Donnarumma 1 | DEF: van Dijk (C) 2, dos Santos Magalhães 11, Krejcí 4 | MID: Semenyo 7, Rice 3, Rogers 1, Palmer 9 | FWD: Sesko 2, Calvert-Lewin 2, Armstrong 1
+  bench: GK: Verbruggen 2 | DEF: Lacroix 0, Justin 2 | MID: Guimarães Rodriguez Moura 0
+  transfers in:  Sesko
+  transfers out: Junqueira de Jesus
+  auto-subs: Krejcí on for Lacroix; Armstrong on for Guimarães Rodriguez Moura
+
+GW 30  actual  41  (pred 44.4)  bank 2.3m  FT 1
+  captain: Rice (pred 4.9, actual 3)   vice: dos Santos Magalhães
+  XI:    GK: Donnarumma 2 | DEF: dos Santos Magalhães 9, van Dijk 2, Diouf 2, Lacroix 9 | MID: Rice (C) 6, Palmer 2, Semenyo 2, Rogers 2 | FWD: Sesko 5, Calvert-Lewin 0
+  bench: GK: Verbruggen 7 | DEF: Justin 6 | MID: Guimarães Rodriguez Moura 0 | FWD: Armstrong 5
+  transfers in:  Diouf
+  transfers out: Krejcí
+
+GW 31  actual  70  (pred 49.3)  bank 2.3m  FT 1  chip=fh2
+  captain: Borges Fernandes (pred 5.6, actual 13)   vice: Junqueira de Jesus
+  XI:    GK: Leno 3 | DEF: van Dijk 3, Thiaw 0, van Hecke 4 | MID: Borges Fernandes (C) 26, Gordon 10, Santos Carneiro da Cunha 6, Gibbs-White 8, Rogers 6 | FWD: Junqueira de Jesus 2, Bowen 2
+  bench: GK: Darlow 6 | DEF: Milenković 9, Kadıoğlu 2 | FWD: Nascimento Rodrigues 4
+  transfers in:  Nascimento Rodrigues, Kadıoğlu, van Hecke, Junqueira de Jesus, Leno, Darlow, Borges Fernandes, Santos Carneiro da Cunha, Gordon, Thiaw, Milenković, Gibbs-White, Bowen
+  transfers out: Donnarumma, Lacroix, Justin, dos Santos Magalhães, Guimarães Rodriguez Moura, Sesko, Verbruggen, Palmer, Armstrong, Semenyo, Calvert-Lewin, Rice, Diouf
+
+GW 32  actual  60  (pred 46.0)  bank 0.5m  FT 2
+  captain: van Dijk (pred 4.9, actual 9)   vice: Santos Carneiro da Cunha
+  XI:    GK: Verbruggen 9 | DEF: van Dijk (C) 18, van Hecke 5, Lacroix 4, Diouf 6, dos Santos Magalhães 4 | MID: Santos Carneiro da Cunha 1, Semenyo 2, Rogers 5, Palmer 4 | FWD: Armstrong 2
+  bench: GK: Donnarumma 7 | MID: Rice 4 | FWD: Calvert-Lewin 2, Sesko 2
+  transfers in:  van Hecke, Santos Carneiro da Cunha
+  transfers out: Justin, Guimarães Rodriguez Moura
+
+GW 33  actual  91  (pred 54.3)  bank 0.2m  FT 1  chip=bb2
+  captain: Palmer (pred 6.6, actual 2)   vice: Donnarumma
+  XI:    GK: Donnarumma 8 | DEF: dos Santos Magalhães 0, van Dijk 8, Diouf 5, Lacroix 11 | MID: Semenyo 5, Palmer (C) 4, Santos Carneiro da Cunha 7, Rogers 9, Rice 2 | FWD: Armstrong 2
+  bench: [BENCH BOOST - counts] GK: Verbruggen 8 | DEF: van Hecke 12 | FWD: Bowen 2, Calvert-Lewin 8
+  transfers in:  Bowen
+  transfers out: Sesko
+
+GW 34  actual  43  (pred 44.0)  bank 0.4m  FT 1
+  captain: Borges Fernandes (pred 5.3, actual 5)   vice: dos Santos Magalhães
+  XI:    GK: Donnarumma 0 | DEF: dos Santos Magalhães 8, van Dijk 4, Lacroix 3, Diouf 2 | MID: Borges Fernandes (C) 10, Santos Carneiro da Cunha 0, Rogers 2, Rice 2 | FWD: Bowen 10, Armstrong 2
+  bench: GK: Verbruggen 0 | DEF: van Hecke 0 | MID: Semenyo 0 | FWD: Calvert-Lewin 0
+  transfers in:  Borges Fernandes
+  transfers out: Palmer
+
+GW 35  actual  54  (pred 56.8)  bank 0.9m  FT 1  chip=wc2
+  captain: Gibbs-White (pred 6.9, actual 4)   vice: dos Santos Magalhães
+  XI:    GK: Verbruggen 2 | DEF: dos Santos Magalhães 6, Truffert 7, Williams 1, Mukiele 11 | MID: Gibbs-White (C) 8, Borges Fernandes 5, Rogers 1 | FWD: Bowen 2, Nascimento Rodrigues 6, Maciel da Cruz 5
+  bench: GK: Donnarumma 1 | DEF: Lacroix 2 | MID: Semenyo 2, Garner 5
+  transfers in:  Truffert, Nascimento Rodrigues, Garner, Williams, Gibbs-White, Maciel da Cruz, Mukiele
+  transfers out: Rice, van Hecke, Calvert-Lewin, van Dijk, Santos Carneiro da Cunha, Diouf, Armstrong
+
+GW 36  actual  65  (pred 64.4)  bank 0.3m  FT 2
+  captain: Borges Fernandes (pred 6.5, actual 3)   vice: Nunes
+  XI:    GK: Donnarumma 14 | DEF: Nunes 6, Lacroix 4, dos Santos Magalhães 11, Mukiele 6 | MID: Semenyo 12, Borges Fernandes (C) 6, Rogers 2, Garner 1 | FWD: Maciel da Cruz 1, Bowen 2
+  bench: GK: Verbruggen 6 | DEF: Williams 2 | MID: Gibbs-White 0 | FWD: Nascimento Rodrigues 2
+  transfers in:  Nunes
+  transfers out: Truffert
+  auto-subs: Mukiele on for Gibbs-White
+
+GW 37  actual  48  (pred 49.0)  bank 0.0m  FT 2
+  captain: Borges Fernandes (pred 5.4, actual 9)   vice: Saka
+  XI:    GK: Verbruggen 2 | DEF: dos Santos Magalhães 6, Mukiele 2, Nunes 2 | MID: Saka 10, Borges Fernandes (C) 18, Semenyo 1, Garner 1 | FWD: Bowen 2, Nascimento Rodrigues 2, Maciel da Cruz 2
+  bench: GK: Donnarumma 1 | DEF: Williams 1, Lacroix 2 | MID: Hinshelwood 3
+  transfers in:  Saka, Hinshelwood
+  transfers out: Rogers, Gibbs-White
+
+GW 38  actual  52  (pred 49.1)  bank 0.0m  FT 1
+  captain: dos Santos Magalhães (pred 6.5, actual 1)   vice: Borges Fernandes
+  XI:    GK: Verbruggen 2 | DEF: dos Santos Magalhães (C) 2, Mukiele 4, Williams 2 | MID: Borges Fernandes 14, Semenyo 6, Garner 4, Hinshelwood 2 | FWD: Bowen 12, Nascimento Rodrigues 2, Maciel da Cruz 2
+  bench: GK: Donnarumma 0 | DEF: O'Reilly 0, Lacroix 0 | MID: Saka 0
+  transfers in:  O'Reilly
+  transfers out: Nunes
+  auto-subs: Hinshelwood on for Saka; Williams on for O'Reilly; Verbruggen on for Donnarumma
+
+==============================================================================
+SEASON 2023-24   TOTAL 2270 pts   (59.7/GW)   penalties -16
+config: mp H=5 model-chips discipline theta=0.3   chips: fh1@GW7 tc1@GW10 bb1@GW11 wc1@GW15 tc2@GW25 fh2@GW26 bb2@GW28 wc2@GW34
+==============================================================================
+
+GW  1  actual  71  (pred 140.3)  bank 0.0m  FT 15
+  captain: Haaland (pred 21.7, actual 13)   vice: Saka
+  XI:    GK: Areola 3 | DEF: Saliba 5, Gabriel 1, Trippier 2 | MID: Saka 10, Foden 3, Palmer 1, Son 2 | FWD: Haaland (C) 26, Isak 13, Watkins 5
+  bench: GK: Pickford 2 | DEF: Virgil 2, Branthwaite 0 | MID: Gordon 4
+  transfers in:  Gabriel, Saka, Saliba, Watkins, Palmer, Branthwaite, Pickford, Virgil, Foden, Haaland, Gordon, Isak, Trippier, Son, Areola
+  transfers out: -
+
+GW  2  actual  49  (pred 50.6)  bank 0.0m  FT 2
+  captain: Haaland (pred 6.3, actual 2)   vice: March
+  XI:    GK: Pickford 0 | DEF: Trippier 2, Virgil 2, Gabriel 1 | MID: March 15, Foden 9, Son 3, Saka 3 | FWD: Haaland (C) 4, Solanke 5, Watkins 5
+  bench: GK: Areola 10 | DEF: Saliba 8, Branthwaite 0 | MID: Palmer 0
+  transfers in:  Solanke, March
+  transfers out: Gordon, Isak
+
+GW  3  actual  35  (pred 45.1)  bank 8.0m  FT 1
+  captain: Saka (pred 5.4, actual 8)   vice: Wissa
+  XI:    GK: Pickford 2 | DEF: Trippier 0, Saliba 1, Virgil -2 | MID: Saka (C) 16, Foden 4, Son 3, March 2 | FWD: Wissa 2, Solanke 2, Watkins 5
+  bench: GK: Areola 5 | DEF: Gabriel 0, Branthwaite 1 | MID: Palmer 0
+  transfers in:  Wissa
+  transfers out: Haaland
+
+GW  4  actual  55  (pred 45.4)  bank 0.5m  FT 1
+  captain: Foden (pred 5.1, actual 5)   vice: Salah
+  XI:    GK: Pickford 1 | DEF: Saliba 2, Trippier 1, Gabriel 2 | MID: Salah 8, Foden (C) 10, Saka 4, Son 20, March 3 | FWD: Watkins 2, Wissa 2
+  bench: GK: Areola 2 | DEF: Virgil 0, Branthwaite 0 | FWD: Solanke 7
+  transfers in:  Salah
+  transfers out: Palmer
+  auto-subs: Gabriel on for Virgil
+
+GW  5  actual  52  (pred 50.0)  bank 0.5m  FT 1
+  captain: Son (pred 5.9, actual 2)   vice: Salah
+  XI:    GK: Pickford 3 | DEF: Saliba 6, Trippier 8, Gabriel 5 | MID: Salah 10, Son (C) 4, Saka 6, Foden 2 | FWD: Solanke 2, Watkins 5, Wissa 1
+  bench: GK: Areola 4 | DEF: Virgil 0, Branthwaite 2 | MID: March 0
+  transfers: none (FT banked)
+  auto-subs: Wissa on for March; Gabriel on for Virgil
+
+GW  6  actual  98  (pred 49.1)  bank 0.0m  FT 2
+  captain: Salah (pred 6.1, actual 10)   vice: Saka
+  XI:    GK: Pickford 2 | DEF: Trippier 18, Robertson 2, Saliba 1 | MID: Salah (C) 20, Saka 13, Foden 11, Son 14 | FWD: Solanke 6, Watkins 9, Wissa 2
+  bench: GK: Areola 2 | DEF: Gabriel 1, Branthwaite 1 | MID: March 0
+  transfers in:  Robertson
+  transfers out: Virgil
+  auto-subs: Son on for March
+
+GW  7  actual  71  (pred 62.7)  bank 0.0m  FT 2  chip=fh1
+  captain: Haaland (pred 6.3, actual 2)   vice: Trafford
+  XI:    GK: Trafford 5 | DEF: Andersen 1, Lockyer 8, Roberts 5 | MID: Saka 9, Rashford 2, B.Fernandes 2, Ødegaard 17 | FWD: Morris 10, Haaland (C) 4, J.Alvarez 8
+  bench: GK: Turner 3 | DEF: Trippier 12, Walker 0 | MID: M.Trésor 0
+  transfers in:  Ødegaard, Roberts, Trafford, M.Trésor, Andersen, Morris, Lockyer, J.Alvarez, Haaland, Walker, B.Fernandes, Rashford, Turner
+  transfers out: Foden, Son, Gabriel, Pickford, March, Areola, Saliba, Solanke, Branthwaite, Wissa, Robertson, Salah, Watkins
+  auto-subs: J.Alvarez on for M.Trésor
+
+GW  8  actual  50  (pred 53.4)  bank 0.7m  FT 3
+  captain: Son (pred 5.7, actual 3)   vice: Watkins
+  XI:    GK: Areola 1 | DEF: Trippier 6, Robertson 1, Digne 2 | MID: Salah 15, Son (C) 6, Foden 2, Neto 5 | FWD: Watkins 5, J.Alvarez 2, Wissa 5
+  bench: GK: Pickford 9 | DEF: Branthwaite 6, Gabriel 8 | MID: Saka 0
+  transfers in:  Digne, J.Alvarez, Neto
+  transfers out: Saliba, Solanke, March
+  auto-subs: Wissa on for Saka
+
+GW  9  actual 101  (pred 57.4)  bank 0.2m  FT 1
+  captain: Son (pred 5.9, actual 14)   vice: Trippier
+  XI:    GK: Pickford 2 | DEF: Trippier 10, Digne 2, Gabriel 1 | MID: Son (C) 28, Maddison 9, Salah 16, Saka 5 | FWD: Wissa 8, Watkins 11, J.Alvarez 9
+  bench: GK: Areola 1 | DEF: Robertson 0, Branthwaite 1 | MID: Neto 4
+  transfers in:  Maddison
+  transfers out: Foden
+  auto-subs: Gabriel on for Robertson
+
+GW 10  actual  54  (pred 66.2)  bank 1.1m  FT 1  chip=tc1
+  captain: Watkins (pred 7.8, actual 2)   vice: Trippier
+  XI:    GK: Areola 3 | DEF: Trippier 0, White 6, Digne 2 | MID: Salah 8, Son 10, Maddison 6, Saka 6, Neto 5 | FWD: Watkins (C x3) 6, J.Alvarez 2
+  bench: GK: Pickford 5 | DEF: Gabriel 0, Branthwaite 8 | FWD: Wissa 2
+  transfers in:  White
+  transfers out: Robertson
+  auto-subs: Digne on for Gabriel
+
+GW 11  actual  36  (pred 57.6)  bank 0.9m  FT 1  chip=bb1
+  captain: Son (pred 7.7, actual 2)   vice: Salah
+  XI:    GK: Areola 1 | DEF: Trippier 9, Andersen 5, Digne 1 | MID: Son (C) 4, Salah 2, Maddison 1, Saka 2 | FWD: Watkins 2, Wissa 2, J.Alvarez 2
+  bench: [BENCH BOOST - counts] GK: Pickford 2 | DEF: White 2, Branthwaite 1 | MID: Neto 0
+  transfers in:  Andersen
+  transfers out: Gabriel
+
+GW 12  actual  55  (pred 54.6)  bank 0.0m  FT 1  HITS -4
+  captain: Haaland (pred 8.6, actual 16)   vice: Watkins
+  XI:    GK: Areola 2 | DEF: Trippier 1, Andersen 1, Branthwaite 1, Digne 2 | MID: Son 2, Saka 5, Hee Chan 2 | FWD: Haaland (C) 32, Watkins 6, J.Alvarez 5
+  bench: GK: Pickford 2 | DEF: White 0 | MID: Maddison 0, Neto 0
+  transfers in:  Haaland, Hee Chan
+  transfers out: Wissa, Salah
+  auto-subs: Branthwaite on for White; Digne on for Maddison
+
+GW 13  actual  45  (pred 50.5)  bank 0.4m  FT 1
+  captain: Haaland (pred 6.7, actual 7)   vice: Watkins
+  XI:    GK: Areola 3 | DEF: Trippier 1, Andersen 1, White 1, Branthwaite 1 | MID: Son 2, Saka 8, Hee Chan 7 | FWD: Haaland (C) 14, Watkins 5, J.Alvarez 2
+  bench: GK: Pickford 1 | DEF: Digne 2 | MID: Bowen 0, Neto 0
+  transfers in:  Bowen
+  transfers out: Maddison
+  auto-subs: Branthwaite on for Bowen
+
+GW 14  actual  70  (pred 49.5)  bank 1.2m  FT 1
+  captain: Haaland (pred 7.8, actual 7)   vice: Watkins
+  XI:    GK: Areola 2 | DEF: Trippier 12, White 1, Andersen 2 | MID: Saka 8, Son 10, Diaby 4, Hee Chan 1 | FWD: Haaland (C) 14, Watkins 11, J.Alvarez 5
+  bench: GK: Pickford 7 | DEF: Branthwaite 9, Digne 1 | MID: Neto 0
+  transfers in:  Diaby
+  transfers out: Bowen
+
+GW 15  actual  42  (pred 59.1)  bank 0.1m  FT 1  chip=wc1
+  captain: Haaland (pred 7.9, actual 2)   vice: Son
+  XI:    GK: Onana 2 | DEF: Alexander-Arnold 12, Trippier 1, Lascelles 1 | MID: Son 2, Saka 5, Bowen 7, Gordon 2 | FWD: Haaland (C) 4, Watkins 1, Cunha 5
+  bench: GK: Areola 0 | DEF: Tomiyasu 0, Branthwaite 6 | MID: Iwobi 14
+  transfers in:  Tomiyasu, Iwobi, Alexander-Arnold, Onana, Gordon, Lascelles, Bowen, Cunha
+  transfers out: White, Digne, Diaby, Andersen, Pickford, J.Alvarez, Hee Chan, Neto
+  auto-subs: Lascelles on for Tomiyasu
+
+GW 16  actual  55  (pred 53.6)  bank 0.1m  FT 2
+  captain: Haaland (pred 7.0, actual 0)   vice: Alexander-Arnold
+  XI:    GK: Sanchez 3 | DEF: Alexander-Arnold 4, Trippier -1, Branthwaite 5 | MID: Son 17, Szoboszlai 2, Saka 2, Gordon 2, Iwobi 6 | FWD: Cunha 9, Watkins 2
+  bench: GK: Onana 1 | DEF: Tomiyasu 0, Lascelles -1 | FWD: Haaland 0
+  transfers in:  Sanchez, Szoboszlai
+  transfers out: Areola, Bowen
+  auto-subs: Watkins on for Haaland
+
+GW 17  actual  52  (pred 54.7)  bank 1.4m  FT 1  HITS -4
+  captain: Salah (pred 8.7, actual 3)   vice: Son
+  XI:    GK: Onana 10 | DEF: Alexander-Arnold 9, Trippier 0, Lascelles 6 | MID: Salah (C) 6, Son 2, Saka 3, Szoboszlai 3, Gordon 6 | FWD: Cunha 2, Watkins 9
+  bench: GK: Sanchez 0 | DEF: Branthwaite 0, Tomiyasu 0 | FWD: Mateta 12
+  transfers in:  Mateta, Salah
+  transfers out: Iwobi, Haaland
+  auto-subs: Lascelles on for Tomiyasu; Onana on for Sanchez
+
+GW 18  actual  43  (pred 54.1)  bank 1.9m  FT 1
+  captain: Salah (pred 7.4, actual 7)   vice: Alexander-Arnold
+  XI:    GK: Onana 2 | DEF: Alexander-Arnold 5, Branthwaite 1, Lascelles 1 | MID: Salah (C) 14, Son 7, Saka 1, Richarlison 8 | FWD: Watkins 2, Cunha 1, Mateta 1
+  bench: GK: Sanchez 0 | DEF: Trippier 2, Tomiyasu 0 | MID: Gordon 2
+  transfers in:  Richarlison
+  transfers out: Szoboszlai
+
+GW 19  actual  39  (pred 51.3)  bank 0.2m  FT 1
+  captain: Salah (pred 8.4, actual 3)   vice: Son
+  XI:    GK: Onana 1 | DEF: Virgil 7, Alexander-Arnold 8, Trippier 1 | MID: Salah (C) 6, Son 5, Saka 2, Gordon 1, Richarlison 1 | FWD: Watkins 2, Cunha 5
+  bench: GK: Sanchez 0 | DEF: Lascelles 0, Branthwaite 0 | FWD: Mateta 2
+  transfers in:  Virgil
+  transfers out: Tomiyasu
+
+GW 20  actual  80  (pred 52.6)  bank 2.4m  FT 1
+  captain: Salah (pred 8.6, actual 16)   vice: Son
+  XI:    GK: Onana 1 | DEF: Alexander-Arnold 0, Virgil 1, Senesi 0 | MID: Salah (C) 32, Son 9, Richarlison 8, Saka 7 | FWD: Watkins 8, Cunha 12, Mateta 2
+  bench: GK: Sanchez 0 | DEF: Branthwaite 1, Lascelles 1 | MID: Gordon 5
+  transfers in:  Senesi
+  transfers out: Trippier
+
+GW 21  actual  41  (pred 52.8)  bank 2.1m  FT 1
+  captain: Salah (pred 7.7, actual 0)   vice: Son
+  XI:    GK: Onana 2 | DEF: Virgil 6, Doughty 5, Branthwaite 6 | MID: Son 0, Saka 3, Richarlison 8, Gordon 7 | FWD: Watkins 1, Cunha 1, Mateta 2
+  bench: GK: Sanchez 0 | DEF: Alexander-Arnold 0, Senesi 0 | MID: Salah 0
+  transfers in:  Doughty
+  transfers out: Lascelles
+  auto-subs: Branthwaite on for Alexander-Arnold; Mateta on for Salah
+
+GW 22  actual  53  (pred 49.3)  bank 2.5m  FT 1
+  captain: Son (pred 7.8, actual 0)   vice: Saka
+  XI:    GK: Steele 1 | DEF: Virgil 2, Alexander-Arnold 1, Doughty 6, Senesi 2 | MID: Saka 10, Richarlison 7, Gordon 1 | FWD: Watkins 7, Cunha 4, Mateta 2
+  bench: GK: Onana 1 | DEF: Branthwaite 5 | MID: Son 0, Salah 0
+  transfers in:  Steele
+  transfers out: Sanchez
+  auto-subs: Mateta on for Salah; Senesi on for Son
+
+GW 23  actual  99  (pred 51.8)  bank 5.5m  FT 1  HITS -4
+  captain: Saka (pred 5.1, actual 9)   vice: Son
+  XI:    GK: Onana 8 | DEF: Virgil 1, Doughty 3, Branthwaite 8 | MID: De Bruyne 5, Saka (C) 18, Gordon 4, Richarlison 15 | FWD: Watkins 18, Cunha 17, Mateta 6
+  bench: GK: Steele 0 | DEF: Bradley 0, Alexander-Arnold 1 | MID: Son 0
+  transfers in:  Bradley, De Bruyne
+  transfers out: Senesi, Salah
+  auto-subs: Onana on for Steele; Branthwaite on for Bradley; Mateta on for Son
+
+GW 24  actual  39  (pred 50.7)  bank 3.5m  FT 1
+  captain: Watkins (pred 7.0, actual 2)   vice: De Bruyne
+  XI:    GK: Steele 2 | DEF: Virgil 2, Doughty 1, Alexander-Arnold 4 | MID: De Bruyne 4, Saka 15, Richarlison 2, Gordon 2 | FWD: Watkins (C) 4, J.Alvarez 2, Cunha 1
+  bench: GK: Onana 4 | DEF: Bradley 0, Branthwaite 1 | MID: Son 4
+  transfers in:  J.Alvarez
+  transfers out: Mateta
+  auto-subs: Alexander-Arnold on for Bradley
+
+GW 25  actual  91  (pred 80.7)  bank 3.2m  FT 1  chip=tc2
+  captain: Virgil (pred 8.6, actual 10)   vice: De Bruyne
+  XI:    GK: Kaminski 7 | DEF: Virgil (C x3) 30, Bradley 4, Doughty 1 | MID: De Bruyne 2, Son 2, Saka 15, Richarlison 2, Gordon 8 | FWD: J.Alvarez 7, Watkins 13
+  bench: GK: Onana 3 | DEF: Alexander-Arnold 0, Branthwaite 2 | FWD: Cunha 0
+  transfers in:  Kaminski
+  transfers out: Steele
+  auto-subs: Doughty on for Alexander-Arnold
+
+GW 26  actual  52  (pred 55.7)  bank 3.2m  FT 1  chip=fh2
+  captain: Haaland (pred 8.6, actual 5)   vice: Watkins
+  XI:    GK: Flekken 0 | DEF: Dunk 10, White 2, Dalot 1 | MID: Saka 10, De Bruyne 0, Martinelli 6, Neto 3 | FWD: Haaland (C) 10, Watkins 9, J.Alvarez 1
+  bench: GK: Pickford 4 | DEF: Dawson 7, Kilman 6 | MID: Bailey 12
+  transfers in:  Martinelli, White, Bailey, Flekken, Dunk, Pickford, Haaland, Dalot, Dawson, Kilman, Neto
+  transfers out: Doughty, Alexander-Arnold, Richarlison, Son, Kaminski, Cunha, Branthwaite, Bradley, Onana, Virgil, Gordon
+
+GW 27  actual  70  (pred 51.2)  bank 6.8m  FT 2
+  captain: Saka (pred 6.6, actual 7)   vice: Watkins
+  XI:    GK: Onana 2 | DEF: Virgil 6, Bradley 8, Branthwaite 1 | MID: Saka (C) 14, Bowen 5, Son 7, Gordon 8 | FWD: Watkins 13, Ogbene 2, J.Alvarez 4
+  bench: GK: Kaminski 2 | DEF: Alexander-Arnold 0, Doughty 5 | MID: Richarlison 0
+  transfers in:  Ogbene, Bowen
+  transfers out: De Bruyne, Cunha
+  auto-subs: Branthwaite on for Alexander-Arnold; J.Alvarez on for Richarlison
+
+GW 28  actual  72  (pred 53.9)  bank 6.3m  FT 1  chip=bb2
+  captain: Solanke (pred 9.5, actual 8)   vice: Ogbene
+  XI:    GK: Kaminski 4 | DEF: Doughty 5, Bradley 2, Virgil 2, Branthwaite 1 | MID: Saka 2, Son 17, Bowen 2 | FWD: Solanke (C) 16, Ogbene 7, Watkins 2
+  bench: [BENCH BOOST - counts] GK: Onana 11 | DEF: Alexander-Arnold 0 | MID: Gordon 1, Richarlison 0
+  transfers in:  Solanke
+  transfers out: J.Alvarez
+  auto-subs: Doughty on for Alexander-Arnold; Bowen on for Richarlison
+
+GW 29  actual  20  (pred 28.2)  bank 10.1m  FT 1
+  captain: Watkins (pred 4.9, actual 2)   vice: Son
+  XI:    GK: Kaminski 2 | DEF: Bassey 6, Doughty 1, Branthwaite 0 | MID: Son 2, Bowen 2, Richarlison 1, Saka 0 | FWD: Watkins (C) 4, Ogbene 2, Solanke 0
+  bench: GK: Onana 0 | DEF: Virgil 0, Bradley 0 | MID: Gordon 0
+  transfers in:  Bassey
+  transfers out: Alexander-Arnold
+
+GW 30  actual  55  (pred 48.4)  bank 3.8m  FT 1
+  captain: Watkins (pred 5.9, actual 1)   vice: Son
+  XI:    GK: Onana 3 | DEF: Virgil 1, Bassey 0, Bradley 4 | MID: Son 10, Salah 7, Saka 3, Gordon 8, Bowen 10 | FWD: Watkins (C) 2, Solanke 7
+  bench: GK: Kaminski 1 | DEF: Branthwaite 1, Doughty 2 | FWD: Ogbene 0
+  transfers in:  Salah
+  transfers out: Richarlison
+
+GW 31  actual  24  (pred 53.8)  bank 2.6m  FT 1
+  captain: Saka (pred 7.7, actual 0)   vice: Salah
+  XI:    GK: Onana 2 | DEF: White 6, Virgil 2, Bradley 0, Bassey 1, Branthwaite 2 | MID: Salah 1, Gordon 0, Son 2, Bowen 5 | FWD: Solanke 2
+  bench: GK: Kaminski 2 | MID: Saka 0 | FWD: Watkins 0, Ogbene 0
+  transfers in:  White
+  transfers out: Doughty
+  auto-subs: Bassey on for Saka; Branthwaite on for Watkins
+
+GW 32  actual  59  (pred 48.6)  bank 2.1m  FT 1
+  captain: Son (pred 6.9, actual 5)   vice: Solanke
+  XI:    GK: Onana 2 | DEF: Aït-Nouri 4, White 5, Virgil 1 | MID: Son (C) 10, Saka 10, Bowen 1, Salah 8, Gordon 3 | FWD: Solanke 2, Watkins 13
+  bench: GK: Kaminski 2 | DEF: Branthwaite 6, Bassey 2 | FWD: Ogbene 0
+  transfers in:  Aït-Nouri
+  transfers out: Bradley
+
+GW 33  actual  32  (pred 47.9)  bank 0.3m  FT 1  HITS -4
+  captain: Son (pred 5.2, actual 1)   vice: Havertz
+  XI:    GK: Onana 2 | DEF: White 5, Virgil 2, Branthwaite -1, Bassey 7 | MID: Havertz 1, Son (C) 2, Salah 2, Saka 2 | FWD: Solanke 7, Watkins 7
+  bench: GK: Kaminski 3 | DEF: Aït-Nouri 0 | MID: Foden 0 | FWD: Ogbene 0
+  transfers in:  Havertz, Foden
+  transfers out: Gordon, Bowen
+  auto-subs: Bassey on for Foden
+
+GW 34  actual 135  (pred 94.5)  bank 1.6m  FT 1  chip=wc2
+  captain: Havertz (pred 10.2, actual 17)   vice: José Sá
+  XI:    GK: José Sá 6 | DEF: White 26, Mitchell 6, Aït-Nouri 2 | MID: Havertz (C) 34, Salah 3, Saka 9, B.Fernandes 18, Eze 14 | FWD: Solanke 8, Watkins 9
+  bench: GK: Dubravka 2 | DEF: Cucurella -1, Pedro Porro 0 | FWD: N.Jackson 2
+  transfers in:  Cucurella, N.Jackson, Eze, Mitchell, B.Fernandes, Dubravka, Pedro Porro, José Sá
+  transfers out: Branthwaite, Bassey, Virgil, Ogbene, Kaminski, Foden, Onana, Son
+
+GW 35  actual  69  (pred 63.7)  bank 2.8m  FT 2
+  captain: B.Fernandes (pred 9.3, actual 4)   vice: N.Jackson
+  XI:    GK: José Sá 3 | DEF: Pedro Porro 2, White 1, Cucurella 7 | MID: B.Fernandes (C) 8, Palmer 8, Saka 12, Havertz 13 | FWD: N.Jackson 8, Haaland 5, Solanke 2
+  bench: GK: Dubravka 3 | DEF: Mitchell 2, Aït-Nouri 2 | MID: Eze 0
+  transfers in:  Palmer, Haaland
+  transfers out: Watkins, Salah
+
+GW 36  actual  72  (pred 58.4)  bank 8.7m  FT 1
+  captain: B.Fernandes (pred 7.1, actual 0)   vice: Palmer
+  XI:    GK: José Sá 2 | DEF: White 6, Cucurella 5, Pedro Porro 0 | MID: Palmer 8, Saka 10, Havertz 5, Eze 3 | FWD: Isak 7, N.Jackson 16, Solanke 2
+  bench: GK: Dubravka 3 | DEF: Mitchell 12, Aït-Nouri 0 | MID: B.Fernandes 0
+  transfers in:  Isak
+  transfers out: Haaland
+  auto-subs: Solanke on for B.Fernandes
+
+GW 37  actual  84  (pred 80.4)  bank 4.2m  FT 1
+  captain: N.Jackson (pred 10.2, actual 7)   vice: B.Fernandes
+  XI:    GK: Dubravka 5 | DEF: Cucurella 6, Pedro Porro 10, White 6 | MID: B.Fernandes 5, De Bruyne 12, Palmer 14, Saka 2 | FWD: N.Jackson (C) 14, Isak 4, Solanke 6
+  bench: GK: José Sá 0 | DEF: Mitchell 2, Aït-Nouri 1 | MID: Havertz 6
+  transfers in:  De Bruyne
+  transfers out: Eze
+
+GW 38  actual  50  (pred 58.2)  bank 5.1m  FT 1
+  captain: Madueke (pred 6.3, actual 2)   vice: Isak
+  XI:    GK: José Sá 4 | DEF: White 2, Cucurella 1, Pedro Porro 14 | MID: Madueke (C) 4, De Bruyne 2, Havertz 6, B.Fernandes 0 | FWD: Isak 14, Solanke 1, N.Jackson 2
+  bench: GK: Dubravka 0 | DEF: Mitchell 6, Aït-Nouri 1 | MID: Saka 0
+  transfers in:  Madueke
+  transfers out: Palmer
+  auto-subs: N.Jackson on for Saka; José Sá on for Dubravka
+
+==============================================================================
+SEASON 2024-25   TOTAL 2426 pts   (63.8/GW)   penalties -8
+config: mp H=5 model-chips discipline theta=0.3   chips: bb1@GW10 tc1@GW11 wc1@GW15 wc2@GW20 tc2@GW24 bb2@GW25 fh2@GW29
+==============================================================================
+
+GW  1  actual  84  (pred 135.8)  bank 0.0m  FT 15
+  captain: M.Salah (pred 19.7, actual 14)   vice: Isak
+  XI:    GK: Raya 8 | DEF: Gvardiol 7, Saliba 6, Virgil 6 | MID: M.Salah (C) 28, Mbeumo 9, Palmer 2, Rogers 2 | FWD: Isak 5, Watkins 2, Wood 9
+  bench: GK: Turner 0 | DEF: Robinson 2, Faes 1 | MID: Elanga 1
+  transfers in:  Raya, Saliba, Rogers, Watkins, Mbeumo, Palmer, Turner, Robinson, Faes, M.Salah, Virgil, Gvardiol, Isak, Elanga, Wood
+  transfers out: -
+
+GW  2  actual  88  (pred 51.7)  bank 1.5m  FT 2
+  captain: Palmer (pred 6.3, actual 17)   vice: Son
+  XI:    GK: Raya 10 | DEF: Alexander-Arnold 6, Gvardiol 2, Virgil 7, Robinson 7 | MID: Palmer (C) 34, Son 16, Mbeumo 1 | FWD: Isak 2, Watkins 2, Wood 1
+  bench: GK: Turner 0 | DEF: Faes 7 | MID: Elanga 3, Rogers 2
+  transfers in:  Alexander-Arnold, Son
+  transfers out: Saliba, M.Salah
+
+GW  3  actual  71  (pred 48.6)  bank 2.0m  FT 1
+  captain: Saka (pred 7.1, actual 6)   vice: Son
+  XI:    GK: Raya 2 | DEF: Alexander-Arnold 6, Virgil 5, Gvardiol 2, Robinson 4 | MID: Saka (C) 12, Son 3, Mbeumo 14 | FWD: Isak 9, Watkins 5, Wood 9
+  bench: GK: Turner 0 | DEF: Faes 1 | MID: Elanga 2, Rogers 2
+  transfers in:  Saka
+  transfers out: Palmer
+
+GW  4  actual  38  (pred 50.1)  bank 2.9m  FT 1
+  captain: Saka (pred 7.0, actual 7)   vice: Isak
+  XI:    GK: Raya 9 | DEF: Alexander-Arnold 1, Virgil 2, Gvardiol 1 | MID: Saka (C) 14, Son 2, Mbeumo 2, Rogers 2 | FWD: Isak 1, Havertz 2, Wood 2
+  bench: GK: Turner 0 | DEF: Robinson 2, Faes 1 | MID: Elanga 3
+  transfers in:  Havertz
+  transfers out: Watkins
+
+GW  5  actual  76  (pred 53.4)  bank 0.6m  FT 1  HITS -4
+  captain: Haaland (pred 10.8, actual 9)   vice: Son
+  XI:    GK: Raya 4 | DEF: Alexander-Arnold 11, Virgil 6, Gvardiol 1 | MID: Son 10, Mbeumo 8, Semenyo 2, Rogers 10 | FWD: Haaland (C) 18, Havertz 2, Wood 8
+  bench: GK: Turner 0 | DEF: Faes 2, Robinson 2 | MID: Elanga 1
+  transfers in:  Semenyo, Haaland
+  transfers out: Saka, Isak
+
+GW  6  actual  47  (pred 60.8)  bank 0.1m  FT 1
+  captain: Haaland (pred 10.7, actual 2)   vice: Son
+  XI:    GK: Raya 1 | DEF: Alexander-Arnold 1, Virgil 2, Robinson 7 | MID: Mbeumo 9, Semenyo 7, Rogers 7, Elanga 1 | FWD: Haaland (C) 4, Havertz 6, Wood 2
+  bench: GK: Turner 0 | DEF: White 0, Faes 0 | MID: Son 0
+  transfers in:  White
+  transfers out: Gvardiol
+  auto-subs: Robinson on for White; Elanga on for Son
+
+GW  7  actual  54  (pred 55.5)  bank 1.1m  FT 1
+  captain: Haaland (pred 9.9, actual 2)   vice: Son
+  XI:    GK: Sels 3 | DEF: Alexander-Arnold 8, Virgil 8, Robinson 1 | MID: Mbeumo 8, Semenyo 2, Rogers 3, Elanga 1 | FWD: Haaland (C) 4, Havertz 8, Wood 8
+  bench: GK: Turner 0 | DEF: White 0, Faes 6 | MID: Son 0
+  transfers in:  Sels
+  transfers out: Raya
+  auto-subs: Elanga on for Son
+
+GW  8  actual  41  (pred 48.9)  bank 0.3m  FT 1
+  captain: Haaland (pred 6.8, actual 2)   vice: Son
+  XI:    GK: Pickford 6 | DEF: Alexander-Arnold 2, Virgil 2, Robinson 1, Faes 1 | MID: Son 8, Mbeumo 2, Rogers 6 | FWD: Haaland (C) 4, Wood 7, Havertz 2
+  bench: GK: Sels 11 | DEF: White 0 | MID: Semenyo 2, Elanga 3
+  transfers in:  Pickford
+  transfers out: Turner
+
+GW  9  actual  62  (pred 49.5)  bank 0.9m  FT 1  HITS -4
+  captain: Palmer (pred 6.9, actual 10)   vice: Mbeumo
+  XI:    GK: Pickford 2 | DEF: Alexander-Arnold 1, Virgil 7, Robinson 2 | MID: Palmer (C) 20, Mbeumo 15, Semenyo 1, Rogers 1 | FWD: Watkins 2, Wood 13, Havertz 2
+  bench: GK: Sels 5 | DEF: White 4, Faes 1 | MID: Son 0
+  transfers in:  Watkins, Palmer
+  transfers out: Haaland, Elanga
+  auto-subs: Rogers on for Son
+
+GW 10  actual  66  (pred 47.0)  bank 0.9m  FT 1  chip=bb1
+  captain: Palmer (pred 6.4, actual 3)   vice: Watkins
+  XI:    GK: Sels 6 | DEF: Alexander-Arnold 2, White 1, Virgil 5, Faes 2 | MID: Palmer (C) 6, Son 4, Rogers 9 | FWD: Watkins 2, Wood 7, Havertz 1
+  bench: [BENCH BOOST - counts] GK: Pickford 2 | DEF: Robinson 6 | MID: Mbeumo 3, Semenyo 10
+  transfers: none (FT banked)
+
+GW 11  actual  80  (pred 60.9)  bank 1.3m  FT 2  chip=tc1
+  captain: M.Salah (pred 8.4, actual 14)   vice: Mbeumo
+  XI:    GK: Pickford 11 | DEF: Alexander-Arnold 1, Virgil 6, White 1, Robinson 6 | MID: M.Salah (C x3) 42, Son 2, Mbeumo 5 | FWD: Wood 2, Welbeck 2, Watkins 2
+  bench: GK: Sels 2 | DEF: Faes 1 | MID: Semenyo 2, Rogers 1
+  transfers in:  Welbeck, M.Salah
+  transfers out: Havertz, Palmer
+
+GW 12  actual  61  (pred 48.6)  bank 1.1m  FT 1
+  captain: M.Salah (pred 8.8, actual 13)   vice: Saka
+  XI:    GK: Pickford 6 | DEF: Virgil 1, Robinson 0, Faes 0 | MID: M.Salah (C) 26, Saka 13, Mbeumo 3, Rogers 2 | FWD: Welbeck 2, Watkins 7, Wood 1
+  bench: GK: Sels 2 | DEF: Alexander-Arnold 0, White 0 | MID: Semenyo 1
+  transfers in:  Saka
+  transfers out: Son
+  auto-subs: Robinson on for White; Faes on for Alexander-Arnold
+
+GW 13  actual  76  (pred 56.2)  bank 0.6m  FT 1
+  captain: M.Salah (pred 9.3, actual 13)   vice: Cunha
+  XI:    GK: Sels 6 | DEF: Virgil 6, Alexander-Arnold 8, Robinson 2 | MID: M.Salah (C) 26, Mbeumo 2, Saka 18, Rogers 2 | FWD: Cunha 2, Welbeck 2, Watkins 2
+  bench: GK: Pickford 0 | DEF: White 0, Faes 0 | MID: Semenyo 0
+  transfers in:  Cunha
+  transfers out: Wood
+  auto-subs: Robinson on for White
+
+GW 14  actual  68  (pred 51.7)  bank 2.4m  FT 1
+  captain: Saka (pred 8.0, actual 3)   vice: M.Salah
+  XI:    GK: Sels 2 | DEF: Virgil 1, Alexander-Arnold 6, Kerkez 8 | MID: Saka (C) 6, M.Salah 18, Mbeumo 2, Rogers 8, Semenyo 3 | FWD: Cunha 2, Watkins 12
+  bench: GK: Pickford 6 | DEF: Robinson 6, Faes 1 | FWD: Welbeck 0
+  transfers in:  Kerkez
+  transfers out: White
+  auto-subs: Semenyo on for Welbeck
+
+GW 15  actual  70  (pred 51.3)  bank 2.8m  FT 1  chip=wc1
+  captain: Saka (pred 7.1, actual 2)   vice: Watkins
+  XI:    GK: Lumley 3 | DEF: Saliba 9, Digne 1, Pedro Porro 3 | MID: Saka (C) 4, Palmer 18, Mbeumo 13, B.Fernandes 9 | FWD: Watkins 1, Cunha 1, Wood 8
+  bench: GK: Henderson 1 | DEF: Kerkez 2, Robinson 1 | MID: Enzo 9
+  transfers in:  Saliba, Digne, Enzo, Palmer, Henderson, B.Fernandes, Wood, Lumley, Pedro Porro
+  transfers out: Rogers, Semenyo, Welbeck, Pickford, Faes, Alexander-Arnold, M.Salah, Virgil, Sels
+
+GW 16  actual  48  (pred 53.8)  bank 2.1m  FT 2
+  captain: Palmer (pred 9.0, actual 3)   vice: Saka
+  XI:    GK: Henderson 2 | DEF: Saliba 6, Kerkez 2, Pedro Porro 6 | MID: Palmer (C) 6, Saka 3, B.Fernandes 9, Mbeumo 9 | FWD: Havertz 2, Wissa 2, Watkins 1
+  bench: GK: Lumley 0 | DEF: Digne 2, Robinson 6 | MID: Enzo 5
+  transfers in:  Havertz, Wissa
+  transfers out: Wood, Cunha
+  auto-subs: Henderson on for Lumley
+
+GW 17  actual  35  (pred 53.6)  bank 1.4m  FT 1
+  captain: Saka (pred 6.7, actual 1)   vice: Palmer
+  XI:    GK: Henderson 0 | DEF: Robinson 6, Saliba 2, Pedro Porro -1 | MID: Saka (C) 2, Palmer 3, Mbeumo 2, B.Fernandes 2 | FWD: Isak 17, Wissa 1, Watkins 1
+  bench: GK: Lumley 0 | DEF: Digne 2, Kerkez 6 | MID: Enzo 3
+  transfers in:  Isak
+  transfers out: Havertz
+
+GW 18  actual  56  (pred 51.6)  bank 2.0m  FT 1
+  captain: Saka (pred 8.4, actual 0)   vice: Palmer
+  XI:    GK: Henderson 7 | DEF: Saliba 7, Robinson 1, Kerkez 6 | MID: Palmer 10, Mbeumo 3, B.Fernandes -2, Enzo 2 | FWD: N.Jackson 2, Wissa 2, Isak 8
+  bench: GK: Lumley 0 | DEF: Pedro Porro 1, Digne 1 | MID: Saka 0
+  transfers in:  N.Jackson
+  transfers out: Watkins
+  auto-subs: Enzo on for Saka
+
+GW 19  actual  37  (pred 51.1)  bank 1.9m  FT 1
+  captain: Palmer (pred 6.2, actual 2)   vice: Saka
+  XI:    GK: Henderson 2 | DEF: Saliba 2, Kerkez 1, Robinson 4, Pedro Porro 4 | MID: Palmer (C) 4, J.Murphy 3, Mbeumo 7 | FWD: N.Jackson 1, Isak 7, Wissa 2
+  bench: GK: Lumley 0 | DEF: Digne 1 | MID: Saka 0, B.Fernandes 0
+  transfers in:  J.Murphy
+  transfers out: Enzo
+  auto-subs: Wissa on for Saka; Pedro Porro on for B.Fernandes
+
+GW 20  actual  73  (pred 60.9)  bank 0.1m  FT 1  chip=wc2
+  captain: Palmer (pred 6.7, actual 10)   vice: M.Salah
+  XI:    GK: Leno 1 | DEF: Alexander-Arnold 0, Gabriel 2, Saliba 2 | MID: M.Salah 7, Palmer (C) 20, Mbeumo 19, J.Murphy 5 | FWD: Wood 8, Isak 7, Strand Larsen 2
+  bench: GK: Dúbravka 3 | DEF: Mitchell 2, Pau 0 | MID: Elanga 6
+  transfers in:  Gabriel, Pau, Mitchell, Leno, Alexander-Arnold, M.Salah, Dúbravka, Elanga, Wood, Strand Larsen
+  transfers out: Saka, Digne, Kerkez, Wissa, N.Jackson, Henderson, Robinson, B.Fernandes, Lumley, Pedro Porro
+
+GW 21  actual  42  (pred 59.2)  bank 1.7m  FT 2
+  captain: M.Salah (pred 12.1, actual 2)   vice: Palmer
+  XI:    GK: Leno 1 | DEF: Alexander-Arnold 2, Gabriel 1, Saliba 2 | MID: M.Salah (C) 4, Palmer 10, Mbeumo 2, Elanga 7 | FWD: Gakpo 2, Wood 9, Strand Larsen 2
+  bench: GK: Dúbravka 10 | DEF: Mitchell 6, Pau 0 | MID: J.Murphy 3
+  transfers in:  Gakpo
+  transfers out: Isak
+
+GW 22  actual  53  (pred 57.9)  bank 1.2m  FT 2
+  captain: M.Salah (pred 8.8, actual 3)   vice: Wood
+  XI:    GK: Leno 7 | DEF: Alexander-Arnold 11, Mitchell 6, Tarkowski 1 | MID: M.Salah (C) 6, Palmer 2, Elanga 2, J.Murphy 2, Mbeumo 2 | FWD: Wood 12, Gakpo 2
+  bench: GK: Dúbravka 2 | DEF: Saliba 0, Pau 0 | FWD: Solanke 0
+  transfers in:  Tarkowski, Solanke
+  transfers out: Gabriel, Strand Larsen
+  auto-subs: Mbeumo on for Solanke
+
+GW 23  actual  69  (pred 56.0)  bank 1.9m  FT 1
+  captain: M.Salah (pred 9.9, actual 8)   vice: Palmer
+  XI:    GK: Dúbravka 3 | DEF: Alexander-Arnold 5, Mitchell 1, Saliba 9 | MID: M.Salah (C) 16, Palmer 2, Mbeumo 7, Elanga 2, J.Murphy 6 | FWD: Wood 2, Gakpo 16
+  bench: GK: José Sá 2 | DEF: Tarkowski 7, Pau 0 | FWD: Solanke 0
+  transfers in:  José Sá
+  transfers out: Leno
+  auto-subs: J.Murphy on for Solanke
+
+GW 24  actual 160  (pred 98.5)  bank 0.4m  FT 1  chip=tc2
+  captain: M.Salah (pred 17.7, actual 29)   vice: Alexander-Arnold
+  XI:    GK: Dúbravka 1 | DEF: Alexander-Arnold 7, Tarkowski 17, Saliba 2 | MID: M.Salah (C x3) 87, Palmer 6, Mbeumo 2, Elanga 13 | FWD: Gakpo 7, Watkins 1, Wood 17
+  bench: GK: José Sá 7 | DEF: Mitchell 6, Pau 0 | MID: J.Murphy 8
+  transfers in:  Watkins
+  transfers out: Solanke
+
+GW 25  actual 102  (pred 71.2)  bank -0.0m  FT 1  chip=bb2
+  captain: M.Salah (pred 23.0, actual 20)   vice: Alexander-Arnold
+  XI:    GK: José Sá 1 | DEF: Alexander-Arnold 13, Digne 5, Saliba 6, Mitchell 1, Tarkowski 2 | MID: M.Salah (C) 40, Mbeumo 3, Elanga 2, J.Murphy 2 | FWD: Wood 9
+  bench: [BENCH BOOST - counts] GK: Dúbravka 1 | MID: Palmer 2 | FWD: Gakpo 0, Watkins 15
+  transfers in:  Digne
+  transfers out: Pau
+
+GW 26  actual  80  (pred 65.2)  bank 0.6m  FT 1
+  captain: M.Salah (pred 14.2, actual 14)   vice: Watkins
+  XI:    GK: José Sá 9 | DEF: Alexander-Arnold 6, Saliba 2, Tarkowski 1 | MID: M.Salah (C) 28, Palmer 2, Mbeumo 14, Elanga 2 | FWD: Watkins 2, Wood 5, Cunha 9
+  bench: GK: Dúbravka 0 | DEF: Mitchell 7, Digne 0 | MID: J.Murphy 7
+  transfers in:  Cunha
+  transfers out: Gakpo
+  auto-subs: José Sá on for Dúbravka
+
+GW 27  actual  48  (pred 62.8)  bank 1.9m  FT 1
+  captain: M.Salah (pred 13.9, actual 6)   vice: Palmer
+  XI:    GK: José Sá 2 | DEF: Alexander-Arnold 6, Muñoz 4, Tarkowski 2, Mitchell 5 | MID: M.Salah (C) 12, Palmer 3, Mbeumo 5 | FWD: Cunha 2, Wood 2, Watkins 5
+  bench: GK: Dúbravka 0 | DEF: Digne 1 | MID: J.Murphy 1, Elanga 3
+  transfers in:  Muñoz
+  transfers out: Saliba
+
+GW 28  actual  67  (pred 59.6)  bank 0.8m  FT 1
+  captain: M.Salah (pred 11.5, actual 15)   vice: Palmer
+  XI:    GK: Ederson M. 3 | DEF: Alexander-Arnold 2, Muñoz 6, Mitchell 6 | MID: M.Salah (C) 30, Palmer 1, Mbeumo 2, J.Murphy 3, Elanga 3 | FWD: Wood 2, Watkins 9
+  bench: GK: José Sá 3 | DEF: Tarkowski 2, Digne 6 | FWD: Cunha 0
+  transfers in:  Ederson M.
+  transfers out: Dúbravka
+  auto-subs: Elanga on for Cunha
+
+GW 29  actual  68  (pred 55.0)  bank 0.8m  FT 1  chip=fh2
+  captain: Wood (pred 6.9, actual 2)   vice: Haaland
+  XI:    GK: Vicario 1 | DEF: Aït-Nouri 2, Gabriel 5, Saliba 9, N.Williams 1 | MID: B.Fernandes 17, Gibbs-White 5, Bellegarde 11, Mbeumo 6 | FWD: Wood (C) 4, Haaland 7
+  bench: GK: Areola 3 | DEF: Mykolenko 2 | MID: Palmer 0 | FWD: Cunha 0
+  transfers in:  Gabriel, Saliba, Mykolenko, Haaland, B.Fernandes, Gibbs-White, N.Williams, Vicario, Areola, Aït-Nouri, Bellegarde
+  transfers out: Digne, M.Salah, José Sá, Tarkowski, Elanga, Mitchell, Muñoz, J.Murphy, Alexander-Arnold, Watkins, Ederson M.
+  auto-subs: Mbeumo on for Palmer; N.Williams on for Cunha
+
+GW 30  actual  49  (pred 65.7)  bank 3.6m  FT 2
+  captain: M.Salah (pred 16.6, actual 3)   vice: Wood
+  XI:    GK: José Sá 5 | DEF: Muñoz 2, Mitchell 1, Tarkowski 1 | MID: M.Salah (C) 6, I.Sarr 2, Elanga 11, Mbeumo 8, J.Murphy 5 | FWD: Watkins 0, Isak 8
+  bench: GK: Ederson M. 6 | DEF: Alexander-Arnold 0, Digne 6 | FWD: Wood 0
+  transfers in:  I.Sarr, Isak
+  transfers out: Palmer, Cunha
+  auto-subs: Tarkowski on for Alexander-Arnold; J.Murphy on for Wood
+
+GW 31  actual  55  (pred 55.4)  bank 2.1m  FT 1
+  captain: M.Salah (pred 12.3, actual 2)   vice: Isak
+  XI:    GK: Ederson M. 6 | DEF: Gvardiol 9, Mitchell 2, Muñoz 8 | MID: M.Salah (C) 4, Elanga 1, Mbeumo 3, J.Murphy 16, I.Sarr 2 | FWD: Isak 2, Watkins 2
+  bench: GK: José Sá 2 | DEF: Alexander-Arnold 0, Tarkowski 1 | FWD: Wood 0
+  transfers in:  Gvardiol
+  transfers out: Digne
+  auto-subs: Muñoz on for Alexander-Arnold; I.Sarr on for Wood
+
+GW 32  actual  77  (pred 74.4)  bank 3.9m  FT 1
+  captain: M.Salah (pred 12.4, actual 6)   vice: Isak
+  XI:    GK: Ederson M. 4 | DEF: Schär 16, Mitchell 0, Muñoz -1, Gvardiol 1 | MID: M.Salah (C) 12, I.Sarr 7, J.Murphy 19, Elanga 1 | FWD: Isak 11, Watkins 7
+  bench: GK: José Sá 1 | DEF: Tarkowski 7 | MID: Mbeumo 2 | FWD: Wood 2
+  transfers in:  Schär
+  transfers out: Alexander-Arnold
+
+GW 33  actual  75  (pred 73.4)  bank 3.9m  FT 1
+  captain: M.Salah (pred 11.4, actual 3)   vice: Watkins
+  XI:    DEF: Gvardiol 7, Mitchell 7, Muñoz 6 | MID: M.Salah (C) 6, I.Sarr 3, Mbeumo 18, J.Murphy 2, Elanga 4 | FWD: Watkins 12, Isak 2, Wood 8
+  bench: GK: Ederson M. 0, José Sá 0 | DEF: Schär 5, Tarkowski 1
+  transfers: none (FT banked)
+  auto-subs: Elanga on for Ederson M.
+
+GW 34  actual  70  (pred 58.4)  bank 2.7m  FT 2
+  captain: M.Salah (pred 10.7, actual 8)   vice: Isak
+  XI:    GK: José Sá 12 | DEF: Schär 6, Sessegnon 11, Tarkowski 0 | MID: M.Salah (C) 16, Luis Díaz 7, Mbeumo 2, J.Murphy 6, Elanga 2 | FWD: Isak 6, Wood 2
+  bench: GK: Ederson M. 0 | DEF: Muñoz 0, Gvardiol 0 | FWD: Watkins 0
+  transfers in:  Sessegnon, Luis Díaz
+  transfers out: Mitchell, I.Sarr
+
+GW 35  actual  45  (pred 58.9)  bank 1.1m  FT 1
+  captain: M.Salah (pred 9.3, actual 2)   vice: Watkins
+  XI:    GK: Ederson M. 6 | DEF: Saliba 1, Sessegnon 0, Gvardiol 8, Schär 6 | MID: M.Salah (C) 4, Mbeumo 5, Elanga 2 | FWD: Watkins 2, Wood 2, Isak 9
+  bench: GK: José Sá 2 | DEF: Tarkowski 0 | MID: Luis Díaz 0, J.Murphy 1
+  transfers in:  Saliba
+  transfers out: Muñoz
+  auto-subs: Elanga on for Luis Díaz
+
+GW 36  actual  55  (pred 60.0)  bank 1.1m  FT 1
+  captain: M.Salah (pred 9.5, actual 2)   vice: Isak
+  XI:    GK: Ederson M. 6 | DEF: Saliba 1, Gvardiol 6, Schär 5, Sessegnon 1 | MID: M.Salah (C) 4, Mbeumo 6, Elanga 7 | FWD: Isak 2, Wood 8, Watkins 9
+  bench: GK: José Sá 1 | DEF: Murillo 0 | MID: J.Murphy 5, Luis Díaz 8
+  transfers in:  Murillo
+  transfers out: Tarkowski
+  auto-subs: Sessegnon on for Murillo
+
+GW 37  actual  30  (pred 58.7)  bank 2.2m  FT 1
+  captain: M.Salah (pred 9.9, actual 2)   vice: Wood
+  XI:    GK: Areola 2 | DEF: Saliba 1, Gvardiol 2, Murillo 1 | MID: M.Salah (C) 4, Luis Díaz 1, Mbeumo 5, Elanga 5, J.Murphy 2 | FWD: Wood 2, Watkins 5
+  bench: GK: José Sá 0 | DEF: Sessegnon 1, Schär 2 | FWD: Isak 0
+  transfers in:  Areola
+  transfers out: Ederson M.
+  auto-subs: J.Murphy on for Isak
+
+GW 38  actual  50  (pred 57.1)  bank 1.5m  FT 1
+  captain: Wood (pred 7.3, actual 2)   vice: M.Salah
+  XI:    GK: José Sá 4 | DEF: Gvardiol 8, Schär 1, Murillo 2 | MID: M.Salah 10, Ødegaard 7, Mbeumo 8, Elanga 2 | FWD: Wood (C) 4, Watkins 2, Isak 2
+  bench: GK: Areola 0 | DEF: Saliba 0, Sessegnon 1 | MID: J.Murphy 2
+  transfers in:  Ødegaard
+  transfers out: Luis Díaz
+  auto-subs: Murillo on for Saliba; José Sá on for Areola
