@@ -162,7 +162,7 @@ def player_stats(ph, t, minutes_reliability_fallback=0.5):
 
 def build_matrix(pool, models, fixture_list, t, horizon,
                  feat_cols=None, hist_lookup=None, avail_gws=None,
-                 purchase_price=None, max_gw=38):
+                 purchase_price=None, max_gw=38, pi_overrides=None):
     """
     pool         : list of player dicts (build_rolling_pool / build_gw1_pool
                    shape: player_id, pos, team, price, zero_minutes, features)
@@ -173,6 +173,10 @@ def build_matrix(pool, models, fixture_list, t, horizon,
     hist_lookup  : {pid: {gw: {...}}} actuals for stats (may be None at GW1)
     avail_gws    : intel_03 availability {gw_str: {"players": {pid_str: ...}}}
     purchase_price: {pid: paid} for sell values (optional)
+    pi_overrides : {pid: (p_play, p_start)} from the learned minutes model
+                   (pipeline/minutes_model.py) — replaces the heuristic
+                   pi_base/rot for those pids; the intel blend, phi and q90
+                   are untouched. Absent pids keep the heuristic.
 
     Returns {g: {pid: {"mu","n_fix","pi","phi","q90","price","sell_value"}}}
     """
@@ -196,6 +200,11 @@ def build_matrix(pool, models, fixture_list, t, horizon,
     for p in pool:
         s = player_stats(hist_lookup.get(p["player_id"], {}), t,
                          p.get("minutes_reliability", 0.5))
+        ov = (pi_overrides or {}).get(p["player_id"])
+        if ov is not None:
+            p_play, p_start = ov
+            s = dict(s, pi_base=max(0.0, min(PI_MAX, float(p_play))),
+                     rot=min(1.0, float(p_start) + 0.2))
         stats[p["player_id"]] = s
         if s["sigma_hat"] is not None:
             sig_by_pos[p["pos"]].append(s["sigma_hat"])

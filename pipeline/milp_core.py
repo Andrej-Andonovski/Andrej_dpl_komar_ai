@@ -40,6 +40,14 @@ FT_VALUE = 0.0   # objective price per EXECUTED transfer (even FT-funded) —
                  # must beat holding by this margin over the horizon. The
                  # honest version of legacy's tuned loyalty bonus. WC/FH/GW1
                  # rebuilds exempt. Env: MP_FT_VALUE via season_simulator.
+# Slot-ordered bench pricing (w_bench_slots/w_bench_gk params, None = the
+# legacy flat w_bench for every bench body). FPL benches are ORDERED: the
+# first outfield sub comes on far more often than the third, and the bench
+# GK almost never. A flat 0.15 credit for all four overvalues bench depth
+# — measured 11 pred-pts/GW parked on the mp bench vs legacy's 3.3 — so
+# budget leaks from the XI into subs who never play. Slot weights make the
+# 2nd/3rd bench body nearly worthless to the objective, pushing that money
+# back into starters. Envs: MP_BENCH_SLOTS / MP_W_BENCH_GK.
 N_CAP_CANDIDATES = 60   # captain/vice variables restricted to top-N by kappa
 
 # ── Phase 3: horizon constants ────────────────────────────────────────────────
@@ -60,7 +68,40 @@ XI_MIN = {1: 1, 2: 3, 3: 2, 4: 1}             # formation minima
 XI_MAX = {1: 1, 2: 5, 3: 5, 4: 3}             # formation maxima
 MAX_CLUB = 3
 
+W_BENCH_GK = 0.04   # bench-GK slot weight when slot pricing is on (auto-sub
+                    # of the keeper is rare: starter must be red-carded or 0')
+
 _solver_logged = False
+
+
+def _bench_term(prob, pids, r_of_g, x_g, s_g, tag,
+                w_bench, slots=None, w_gk=None):
+    """One week's bench-EV expression.
+
+    slots=None -> the legacy flat term: w_bench * pi * mu per bench body.
+    slots=(w1, w2, w3) -> ordered pricing: continuous assignment vars put
+    the best outfield bench body in the highest-weight slot (assignment
+    polytope, so the LP resolves them integrally); bench GK priced at w_gk.
+    """
+    if not slots:
+        return lpSum(w_bench * r_of_g(p)["pi"] * r_of_g(p)["mu"]
+                     * (x_g(p) - s_g(p)) for p in pids)
+    w_gk = W_BENCH_GK if w_gk is None else w_gk
+    gks = [p for p in pids if r_of_g(p)["element_type"] == 1]
+    outf = [p for p in pids if r_of_g(p)["element_type"] != 1]
+    term = lpSum(w_gk * r_of_g(p)["pi"] * r_of_g(p)["mu"]
+                 * (x_g(p) - s_g(p)) for p in gks)
+    ys = {}
+    for k in range(len(slots)):
+        for p in outf:
+            ys[k, p] = LpVariable(f"yb{tag}_{k}_{p}", lowBound=0, upBound=1)
+        prob += lpSum(ys[k, p] for p in outf) <= 1
+    for p in outf:
+        prob += (lpSum(ys[k, p] for k in range(len(slots)))
+                 <= x_g(p) - s_g(p))
+    term += lpSum(slots[k] * r_of_g(p)["pi"] * r_of_g(p)["mu"] * ys[k, p]
+                  for k in range(len(slots)) for p in outf)
+    return term
 
 
 def _get_solver(time_limit=120):
@@ -92,7 +133,8 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
              is_wildcard=False, is_freehit=False,
              theta=THETA, gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
              hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
-             sell_hold=None, time_limit=120):
+             sell_hold=None, w_bench_slots=None, w_bench_gk=None,
+             time_limit=120):
     """
     rows  : {pid: matrix row} for ONE gameweek — needs mu, pi, q90, price,
             sell_value, element_type, team (prediction_matrix output).
@@ -141,7 +183,9 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
     obj = (lpSum(mu[p] * s[p] for p in pids)
            + lpSum(kap[p] * c[p] for p in cap_cands)
            + gamma * lpSum(mu[p] * v[p] for p in cap_cands)
-           + lpSum(beta[p] * (x[p] - s[p]) for p in pids))
+           + _bench_term(prob, pids, lambda p: r_of[p],
+                         lambda p: x[p], lambda p: s[p], f"g{gw}",
+                         w_bench, w_bench_slots, w_bench_gk))
     if hits is not None:
         obj -= hit_cost * hits
         if ft_value > 0:
@@ -251,7 +295,8 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                   delta=DELTA, delta_chip=DELTA_CHIP, theta=THETA,
                   gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
                   hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
-                  sell_hold=None, time_limit=240):
+                  sell_hold=None, w_bench_slots=None, w_bench_gk=None,
+                  time_limit=240):
     """
     Multi-period MILP over the matrix weeks {t..t+H-1}: per-week squad/XI/
     captain/vice + per-week transfers with FT banking, churn guard (max one
@@ -447,8 +492,9 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
         W = (lpSum(row(p, g)["mu"] * s[p, g] for p in pids)
              + lpSum(kappa(row(p, g), theta) * c[p, g] for p in cap_cands[g])
              + gamma * lpSum(row(p, g)["mu"] * v[p, g] for p in cap_cands[g])
-             + lpSum(w_bench * row(p, g)["pi"] * row(p, g)["mu"]
-                     * (x[p, g] - s[p, g]) for p in pids))
+             + _bench_term(prob, pids, lambda p, g=g: row(p, g),
+                           lambda p, g=g: x[p, g], lambda p, g=g: s[p, g],
+                           f"{g}", w_bench, w_bench_slots, w_bench_gk))
         if g in fh_cands:
             FH = CH["fh"][g]
             z = LpVariable(f"z_{g}", lowBound=0)
@@ -460,8 +506,10 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                           for p in cap_cands[g])
                   + gamma * lpSum(row(p, g)["mu"] * vs[p, g]
                                   for p in cap_cands[g])
-                  + lpSum(w_bench * row(p, g)["pi"] * row(p, g)["mu"]
-                          * (xs[p, g] - ss[p, g]) for p in pids))
+                  + _bench_term(prob, pids, lambda p, g=g: row(p, g),
+                                lambda p, g=g: xs[p, g],
+                                lambda p, g=g: ss[p, g],
+                                f"s{g}", w_bench, w_bench_slots, w_bench_gk))
             prob += zt <= Wt
             prob += zt <= M_Z * FH
             terms.append(w * (z + zt))

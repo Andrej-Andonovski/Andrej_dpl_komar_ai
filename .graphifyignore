@@ -1,0 +1,56 @@
+# .graphifyignore — keep the Graphify knowledge graph focused on source code.
+# Gitignore-style patterns. Graphify honors this alongside .gitignore.
+# NOTE: this only limits what Graphify SCANS for the graph. It does NOT hide or
+# delete these files — the application and tests still read them normally.
+
+# --- Data (required app inputs/outputs, but not code: produce zero graph nodes) ---
+# Includes data/raw/transfers/raw_html_cache/*.html — raw scraped HTML cache, not source.
+data/
+
+# --- Thesis / LaTeX sources (prose, not code) ---
+thesis/
+*.tex
+*.pdf
+*.bib
+
+# --- LaTeX build artifacts ---
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.out
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# --- Python caches / bytecode ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Virtual environments ---
+.venv/
+venv/
+ENV/
+env/
+
+# --- Generated build directories ---
+build/
+dist/
+_build/
+site/
+
+# --- Jupyter notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Graphify's own output (regenerable) ---
+graphify-out/

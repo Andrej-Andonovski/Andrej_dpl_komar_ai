@@ -1,0 +1,204 @@
+{
+  "protocol": {
+    "train": [
+      "2023-24",
+      "2024-25"
+    ],
+    "holdout": "2025-26",
+    "objective": "sum of train-season totals"
+  },
+  "champion_baseline": 4696,
+  "n_complete": 38,
+  "best": [
+    {
+      "trial": 16,
+      "value": 4837.0,
+      "params": {
+        "MP_THETA": 0.4725698430811003,
+        "MP_DELTA": 0.9891075133845075,
+        "MP_DELTA_CHIP": 0.9485089742091658,
+        "MP_GAMMA": 0.03166449919141911,
+        "MP_W_BENCH": 0.16503056023737767,
+        "MP_HIT_COST": 10.4472683731341,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 3,
+        "MP_FT_VALUE": 0.5548339820315356,
+        "MP_FORM_HOLD": 3.818656842401357,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5058124421369449
+      }
+    },
+    {
+      "trial": 31,
+      "value": 4810.0,
+      "params": {
+        "MP_THETA": 0.3535936833649509,
+        "MP_DELTA": 0.9788381081295028,
+        "MP_DELTA_CHIP": 0.9842970523298249,
+        "MP_GAMMA": 0.035945274157019806,
+        "MP_W_BENCH": 0.15445325820895436,
+        "MP_HIT_COST": 10.52360955673916,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 3,
+        "MP_FT_VALUE": 0.8624071567477709,
+        "MP_FORM_HOLD": 4.646257699752139,
+        "MP_WC_BELOW": 4,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5754313800129887
+      }
+    },
+    {
+      "trial": 11,
+      "value": 4789.0,
+      "params": {
+        "MP_THETA": 0.5912199620309687,
+        "MP_DELTA": 0.980847863055118,
+        "MP_DELTA_CHIP": 0.940229476547757,
+        "MP_GAMMA": 0.03535057292224643,
+        "MP_W_BENCH": 0.1663800833546717,
+        "MP_HIT_COST": 11.869669017040888,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 0,
+        "MP_FT_VALUE": 0.348944041435259,
+        "MP_FORM_HOLD": 2.8498180238569653,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5045452944022633
+      }
+    },
+    {
+      "trial": 23,
+      "value": 4775.0,
+      "params": {
+        "MP_THETA": 0.4861807403308816,
+        "MP_DELTA": 0.9635655240573697,
+        "MP_DELTA_CHIP": 0.9527640910106625,
+        "MP_GAMMA": 0.045655378591211826,
+        "MP_W_BENCH": 0.1592038461461795,
+        "MP_HIT_COST": 9.29883945317292,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 3,
+        "MP_FT_VALUE": 0.6282041534445745,
+        "MP_FORM_HOLD": 3.7142902294256537,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5941439459612743
+      }
+    },
+    {
+      "trial": 30,
+      "value": 4760.0,
+      "params": {
+        "MP_THETA": 0.42642262160147115,
+        "MP_DELTA": 0.9795643661067678,
+        "MP_DELTA_CHIP": 0.9831931879916166,
+        "MP_GAMMA": 0.03586181259471479,
+        "MP_W_BENCH": 0.15710818436583765,
+        "MP_HIT_COST": 10.481239415803811,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 3,
+        "MP_FT_VALUE": 0.8316303587154935,
+        "MP_FORM_HOLD": 4.720412249160338,
+        "MP_WC_BELOW": 4,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5774483541638089
+      }
+    },
+    {
+      "trial": 26,
+      "value": 4744.0,
+      "params": {
+        "MP_THETA": 0.4168374721827896,
+        "MP_DELTA": 0.9428467770407348,
+        "MP_DELTA_CHIP": 0.9641416894433497,
+        "MP_GAMMA": 0.04928184809342692,
+        "MP_W_BENCH": 0.1533695906909221,
+        "MP_HIT_COST": 9.081129632085121,
+        "MP_HIT_BUDGET": 8,
+        "MP_REBUY_GAP": 3,
+        "MP_FT_VALUE": 1.0107699542126571,
+        "MP_FORM_HOLD": 4.042423920817526,
+        "MP_WC_BELOW": 4,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.564080770960052
+      }
+    },
+    {
+      "trial": 27,
+      "value": 4714.0,
+      "params": {
+        "MP_THETA": 0.3520788269704561,
+        "MP_DELTA": 0.9649367791367525,
+        "MP_DELTA_CHIP": 0.9470669800546644,
+        "MP_GAMMA": 0.030360980197355298,
+        "MP_W_BENCH": 0.12200358056996688,
+        "MP_HIT_COST": 9.624561136479176,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 2,
+        "MP_FT_VALUE": 0.5424231730756742,
+        "MP_FORM_HOLD": 3.304846788759196,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.6892960170360092
+      }
+    },
+    {
+      "trial": 38,
+      "value": 4667.0,
+      "params": {
+        "MP_THETA": 0.5602309753758374,
+        "MP_DELTA": 0.9541798475819764,
+        "MP_DELTA_CHIP": 0.9474465794393532,
+        "MP_GAMMA": 0.036167590985138214,
+        "MP_W_BENCH": 0.13638518257659932,
+        "MP_HIT_COST": 10.54402432083283,
+        "MP_HIT_BUDGET": 7,
+        "MP_REBUY_GAP": 5,
+        "MP_FT_VALUE": 1.2811885257914608,
+        "MP_FORM_HOLD": 4.407529067374363,
+        "MP_WC_BELOW": 4,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.6574193436672678
+      }
+    },
+    {
+      "trial": 10,
+      "value": 4664.0,
+      "params": {
+        "MP_THETA": 0.5900265456224529,
+        "MP_DELTA": 0.9831555654074895,
+        "MP_DELTA_CHIP": 0.9436398653393202,
+        "MP_GAMMA": 0.036841371734394744,
+        "MP_W_BENCH": 0.167203598668605,
+        "MP_HIT_COST": 11.197757333281483,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 0,
+        "MP_FT_VALUE": 0.3745299616843468,
+        "MP_FORM_HOLD": 2.260523475859018,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5157638703411097
+      }
+    },
+    {
+      "trial": 21,
+      "value": 4662.0,
+      "params": {
+        "MP_THETA": 0.5694038363729536,
+        "MP_DELTA": 0.9885021335359481,
+        "MP_DELTA_CHIP": 0.9452562006773739,
+        "MP_GAMMA": 0.040559989815678266,
+        "MP_W_BENCH": 0.1730355034902144,
+        "MP_HIT_COST": 10.92521910838201,
+        "MP_HIT_BUDGET": 2,
+        "MP_REBUY_GAP": 0,
+        "MP_FT_VALUE": 0.47054094240546207,
+        "MP_FORM_HOLD": 2.8960386786880106,
+        "MP_WC_BELOW": 3,
+        "MP_CHIP_BAR": 1,
+        "MP_CHIP_PERCENTILE_Q": 0.5187056214878172
+      }
+    }
+  ]
+}

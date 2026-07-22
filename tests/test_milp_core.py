@@ -156,6 +156,20 @@ def test_ft_friction_blocks_sideways_swap():
     assert 307 in res["transfers_in"]                    # real upgrade goes
 
 
+def test_bench_slots_legal_and_devalues_depth():
+    # slot pricing keeps the program legal, and because only slot 1 pays
+    # much, total bench credit shrinks vs the flat 0.15-per-body term:
+    # the same instance must never score HIGHER on the slotted objective
+    rows = base_rows()
+    flat = solve(rows)
+    slotted = solve(rows, w_bench_slots=(0.35, 0.10, 0.02), w_bench_gk=0.04)
+    assert len(slotted["squad"]) == 15 and len(slotted["xi"]) == 11
+    ets = [base_rows()[p]["element_type"] for p in slotted["squad"]
+           if p not in slotted["xi"]]
+    assert ets.count(1) == 1 and len(ets) == 4      # 1 GK + 3 outfield bench
+    assert slotted["objective"] <= flat["objective"] + 1e-6
+
+
 def test_form_hold_protects_hauler():
     # owned 305 is the weakest (mu 3) and would normally be the one sold
     # for incoming 307 — but he just hauled, so the hold makes the solver

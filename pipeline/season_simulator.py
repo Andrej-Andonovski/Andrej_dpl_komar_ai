@@ -26,12 +26,14 @@ try:
     from pipeline.milp_core import (solve_gw as milp_solve_gw,
                                     solve_horizon as milp_solve_horizon,
                                     kappa as milp_kappa)
+    from pipeline.minutes_model import MinutesModel
     from pipeline.chip_percentile import ChipPercentileLedger
 except ImportError:
     import prediction_matrix as pmx
     from milp_core import (solve_gw as milp_solve_gw,
                            solve_horizon as milp_solve_horizon,
                            kappa as milp_kappa)
+    from minutes_model import MinutesModel
     from chip_percentile import ChipPercentileLedger
 
 warnings.filterwarnings("ignore")
@@ -205,6 +207,24 @@ MP_FT_VALUE = float(os.environ.get("MP_FT_VALUE", "0"))
 # model's mu may be lagging the player's true level.  0 = off.
 MP_FORM_HOLD = float(os.environ.get("MP_FORM_HOLD", "0"))
 MP_FORM_HOLD_MIN = int(os.environ.get("MP_FORM_HOLD_MIN", "10"))
+# Learned minutes model (pipeline/minutes_model.py): replaces the heuristic
+# pi (appearances/5) with LightGBM P(play)/P(start) trained online on the
+# season's own actuals — better pi feeds captaincy, bench value and
+# availability everywhere. 0 = off until A/B-validated.
+MP_PI_MODEL = os.environ.get("MP_PI_MODEL", "0") == "1"
+# Feed intel_03 availability + intel_04 rotation-risk scores into the
+# minutes model as features (2025-26 only — the scraped data's season).
+# Requires MP_PI_MODEL=1.
+MP_PI_INTEL = os.environ.get("MP_PI_INTEL", "0") == "1"
+# Slot-ordered bench pricing: "" = off (flat MP_W_BENCH for all four bench
+# bodies). Set e.g. "0.35,0.15,0.05" to price outfield bench slots by
+# realistic auto-sub likelihood (first sub >> third) and the bench GK at
+# MP_W_BENCH_GK — pushes budget out of sub-fodder into the XI (the mp
+# system parks ~11 pred-pts/GW on its bench vs legacy's 3.3).
+_slots_env = os.environ.get("MP_BENCH_SLOTS", "").strip()
+MP_BENCH_SLOTS = (tuple(float(v) for v in _slots_env.split(","))
+                  if _slots_env else None)
+MP_W_BENCH_GK = float(os.environ.get("MP_W_BENCH_GK", "0.04"))
 
 # ── Cross-season backtests (fixing stage, docs/phase4_report.md) ─────────────
 # SIM_SEASON picks the season to simulate. Default "2025-26" = original
@@ -447,6 +467,42 @@ def load_availability():
     with open(AVAIL_JSON, encoding="utf-8") as f:
         data = json.load(f)
     return data.get("gameweeks", {})
+
+
+def load_pi_intel():
+    """intel_03 availability_pct + intel_04 rotation_risk as minutes-model
+    features: {gw: {pid: (availability_pct, rotation_risk)}} (2025-26 only)."""
+    if SIM_SEASON != "2025-26":
+        return {}
+    out = {}
+    for path, field in ((AVAIL_JSON, "availability_pct"),
+                        (os.path.join(DATA_DIR, "intel", "rotation_risk.json"),
+                         "rotation_risk")):
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        for gw_str, gd in data.get("gameweeks", {}).items():
+            gw_map = out.setdefault(int(gw_str), {})
+            for pid_str, p in (gd.get("players") or {}).items():
+                v = p.get(field)
+                if v is None:
+                    continue
+                prev = gw_map.get(int(pid_str), (None, None))
+                gw_map[int(pid_str)] = ((float(v), prev[1])
+                                        if field == "availability_pct"
+                                        else (prev[0], float(v)))
+    # fill missing halves with the minutes-model neutral defaults
+    try:
+        from pipeline.minutes_model import (INTEL_AVAIL_DEFAULT,
+                                            INTEL_ROT_DEFAULT)
+    except ImportError:
+        from minutes_model import INTEL_AVAIL_DEFAULT, INTEL_ROT_DEFAULT
+    for gw_map in out.values():
+        for pid, (a, r) in list(gw_map.items()):
+            gw_map[pid] = (a if a is not None else INTEL_AVAIL_DEFAULT,
+                           r if r is not None else INTEL_ROT_DEFAULT)
+    return out
 
 
 def load_recommendations():
@@ -2051,6 +2107,11 @@ def run_simulation():
     train_dfs                            = load_training_data()
     avail_gws                            = load_availability()
     recs_gws                             = load_recommendations()
+    pi_intel = (load_pi_intel()
+                if (OPTIMIZER == "mp" and MP_PI_MODEL and MP_PI_INTEL)
+                else {})
+    if pi_intel:
+        print(f"  [PI-MODEL] intel features for {len(pi_intel)} GWs")
     print(f"  Players: {len(players_df)} | DGW GWs in range: {sorted(g for g in dgw_gws if g <= SIM_END_GW)}")
     print(f"  Blank GWs in range: {sorted(g for g in blank_gws if g <= SIM_END_GW)} | Chip strategy: {CHIP_STRATEGY}")
     print(f"  Availability data: {len(avail_gws)} GWs loaded")
@@ -2075,6 +2136,7 @@ def run_simulation():
     sold_at          = {}    # pid -> gw of last REAL sale (rebuy-lock memory)
     hits_paid        = 0     # season running total (MP_HIT_BUDGET enforcement)
     form_hold        = {}    # pid -> sell-penalty for last GW's haulers
+    minutes_model    = MinutesModel() if OPTIMIZER == "mp" else None
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
@@ -2113,6 +2175,10 @@ def run_simulation():
         "mp_ft_value":      MP_FT_VALUE,
         "mp_form_hold":     MP_FORM_HOLD,
         "mp_form_hold_min": MP_FORM_HOLD_MIN,
+        "mp_pi_model":      MP_PI_MODEL,
+        "mp_pi_intel":      MP_PI_INTEL,
+        "mp_bench_slots":   list(MP_BENCH_SLOTS) if MP_BENCH_SLOTS else None,
+        "mp_w_bench_gk":    MP_W_BENCH_GK,
         "mp_delta":         MP_DELTA,
         "mp_delta_chip":    MP_DELTA_CHIP,
         "mp_gamma":         MP_GAMMA,
@@ -2190,10 +2256,19 @@ def run_simulation():
             # Phase 2: matrix predictions — per-fixture DGW sums, hard blank
             # zeros, availability tiers baked into mu. No loyalty/ownership/
             # caps/blending; pool preds mirror mu for chip logic + auto-subs.
+            pi_overrides = None
+            if MP_PI_MODEL:
+                minutes_model.fit(hist_lookup, gw, intel=pi_intel)
+                if minutes_model.ready:
+                    pi_overrides = minutes_model.predict(
+                        hist_lookup, [p["player_id"] for p in pool], gw,
+                        intel=pi_intel)
+                    print(f"  [PI-MODEL] learned pi for "
+                          f"{len(pi_overrides)} players")
             mp_matrix = pmx.build_matrix(
                 pool, models, fixture_list, gw, MP_HORIZON,
                 hist_lookup=hist_lookup, avail_gws=avail_gws,
-                purchase_price=purchase_price)
+                purchase_price=purchase_price, pi_overrides=pi_overrides)
             mp_rows = mp_matrix[gw]
             for p in pool:
                 p["pred"] = mp_rows.get(p["player_id"], {}).get("mu", 0.0)
@@ -2358,7 +2433,7 @@ def run_simulation():
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         chip_state=chip_state, theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                         no_rebuy=no_rebuy)
                 except RuntimeError as e:
                     print(f"  [MILP-H] chipped solve failed ({e}) — "
@@ -2370,7 +2445,7 @@ def run_simulation():
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                         no_rebuy=no_rebuy)
                 chip  = plan["chips"].get(gw)
                 # A plain-week chip must clear the KIND-level historical bar
@@ -2402,7 +2477,7 @@ def run_simulation():
                         BUDGET if gw == 1 else bank,
                         free_transfers, gw, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         chip_state=retry_state, theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                         no_rebuy=no_rebuy)
                     chip = plan["chips"].get(gw)
 
@@ -2434,7 +2509,7 @@ def run_simulation():
                                        available_budget, ft_ilp, gw,
                                        is_wildcard=is_wc, is_freehit=is_fh,
                                        theta=MP_THETA,
-                                       hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                                       hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                                        no_rebuy=set(no_rebuy))
             else:
                 try:
@@ -2444,7 +2519,7 @@ def run_simulation():
                         free_transfers, gw,
                         is_wildcard_now=is_wc, ft_events=RULE_EVENTS_FT, delta=MP_DELTA, delta_chip=MP_DELTA_CHIP,
                         theta=MP_THETA,
-                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                        hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                         no_rebuy=no_rebuy)
                     result = plan["weeks"][gw]
                     _plan_print(plan)
@@ -2456,7 +2531,7 @@ def run_simulation():
                                            available_budget, ft_ilp, gw,
                                            is_wildcard=is_wc, is_freehit=False,
                                            theta=MP_THETA,
-                                           hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH,
+                                           hit_cost=MP_HIT_COST, hit_cap=hit_cap_now, ft_value=MP_FT_VALUE, sell_hold=form_hold, gamma=MP_GAMMA, w_bench=MP_W_BENCH, w_bench_slots=MP_BENCH_SLOTS, w_bench_gk=MP_W_BENCH_GK,
                                            no_rebuy=set(no_rebuy))
         else:
             result = run_ilp(pool, current_squad, available_budget,

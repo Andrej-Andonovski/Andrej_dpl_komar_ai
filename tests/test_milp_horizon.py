@@ -142,6 +142,14 @@ def test_ft_friction_holds_over_horizon():
     assert 306 in plan["weeks"][T]["transfers_in"]
 
 
+def test_bench_slots_solve_across_horizon():
+    plan = solve(make_matrix(), ft=1,
+                 w_bench_slots=(0.35, 0.10, 0.02), w_bench_gk=0.04)
+    for wk in plan["weeks"].values():
+        assert len(wk["squad"]) == 15 and len(wk["xi"]) == 11
+        assert len(wk["bench"]) == 4
+
+
 def test_form_hold_protects_hauler_across_horizon():
     # 305 is weakest all horizon but just hauled: with the hold he must
     # not be the sale in ANY planned week

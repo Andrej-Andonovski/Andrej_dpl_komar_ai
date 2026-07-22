@@ -1,0 +1,50 @@
+{
+  "params": {
+    "MP_THETA": 0.4168374721827896,
+    "MP_DELTA": 0.9428467770407348,
+    "MP_DELTA_CHIP": 0.9641416894433497,
+    "MP_GAMMA": 0.04928184809342692,
+    "MP_W_BENCH": 0.1533695906909221,
+    "MP_HIT_COST": 9.081129632085121,
+    "MP_HIT_BUDGET": 8,
+    "MP_REBUY_GAP": 3,
+    "MP_FT_VALUE": 1.0107699542126571,
+    "MP_FORM_HOLD": 4.042423920817526,
+    "MP_WC_BELOW": 4,
+    "MP_CHIP_BAR": 1,
+    "MP_CHIP_PERCENTILE_Q": 0.564080770960052
+  },
+  "seasons": {
+    "2023-24": {
+      "total": 2262,
+      "penalties": -8,
+      "chips": [
+        "tc1@6",
+        "fh1@7",
+        "bb1@10",
+        "wc1@17",
+        "fh2@25",
+        "tc2@28",
+        "wc2@34",
+        "bb2@37"
+      ],
+      "minutes": 19.2
+    },
+    "2024-25": {
+      "total": 2482,
+      "penalties": -4,
+      "chips": [
+        "wc1@8",
+        "bb1@10",
+        "tc1@11",
+        "fh1@15",
+        "tc2@24",
+        "bb2@25",
+        "fh2@29",
+        "wc2@34"
+      ],
+      "minutes": 21.3
+    }
+  },
+  "objective": 4744
+}

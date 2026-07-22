@@ -150,7 +150,15 @@ def main():
         params = suggest_params(trial)
         results = {}
         for season in TRAIN_SEASONS:
-            results[season] = run_season(season, params, args.end_gw)
+            # a single pathological param combo (e.g. a chip-percentile
+            # retry loop that never settles) must not take the whole sweep
+            # down — prune this trial and keep going.
+            try:
+                results[season] = run_season(season, params, args.end_gw)
+            except (RuntimeError, subprocess.TimeoutExpired) as e:
+                print(f"[trial {trial.number:>3}] {season} failed: {e} "
+                      "— pruning", flush=True)
+                raise optuna.TrialPruned() from e
         total = sum(r["total"] for r in results.values())
         with open(os.path.join(RESULTS_DIR, f"trial_{trial.number:03d}.json"),
                   "w", encoding="utf-8") as f:
@@ -161,7 +169,16 @@ def main():
         write_summary(study)
         return total
 
-    study.optimize(objective, n_trials=args.trials)
+    # n_trials is the TARGET TOTAL, not "run this many more" — Optuna's
+    # own n_trials counts fresh calls, so on resume we must subtract what
+    # the study already has (including pruned/failed) to land on the same
+    # total instead of drifting past it on every restart.
+    remaining = max(0, args.trials - len(study.trials))
+    if remaining:
+        study.optimize(objective, n_trials=remaining)
+    else:
+        print(f"study already has {len(study.trials)} trials "
+              f">= target {args.trials} — nothing to do")
     write_summary(study)
     print(f"\nbest: trial {study.best_trial.number} = {study.best_value}")
     print(json.dumps(study.best_params, indent=2))

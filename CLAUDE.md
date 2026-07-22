@@ -5,6 +5,26 @@
 Fantasy Premier League Predictive Management System (thesis).
 3-layer hybrid AI: LightGBM models → ILP optimizer → LLM agent.
 
+## Documentation (canonical architectural reference)
+The conceptual knowledge base lives in `docs/` (Obsidian vault) — entry point
+`docs/index.md`. It is the canonical architectural reference, organized as
+Architecture / Components / Workflows / Decisions / Reference and linked with
+Obsidian wikilinks. This file (`CLAUDE.md`) is operational/session memory; the
+detailed evidence reports (`docs/HANDOFF.md`, `docs/phase*_report.md`, etc.)
+remain the evidence layer that the conceptual notes cite.
+
+Maintenance rules — apply on any significant change:
+- Read the relevant note(s) before implementing.
+- Update the matching note IN THE SAME CHANGE whenever architecture, workflows,
+  external integrations, or design decisions change.
+- Prefer updating existing notes over creating new ones; never one note per
+  source file, class, or endpoint.
+- Keep ONE canonical explanation per concept and link to it — do not duplicate
+  (e.g. environment/score caveats → `environment-and-docker`; leakage rules →
+  `walkforward-no-leakage`; tuned constants → `tuned-parameters`).
+- If code and docs disagree, verify the code first, then update the docs.
+Note: `AGENTS.md` is a stale duplicate of this file — do not treat as current.
+
 ## Current Status
 ALL STAGES COMPLETE + INTEL COMPLETE + FULLY OPTIMIZED + FULL-SEASON LIVE DEMO DONE
 System fully built, validated, enhanced with pre-deadline intelligence, and
@@ -458,3 +478,23 @@ DEF only:        prev_int_per_90, prev_tklW_per_90
 - Potential new features: minutes_last3, minutes_last5, minutes_trend
   (fatigue proxy) — would require updating feature_engineering_stage6.py
   + retraining models
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+
+Division of responsibilities (do not conflate):
+- `docs/` (Obsidian vault, entry `docs/index.md`) remains the CANONICAL reference for
+  architecture, design decisions, workflows, and intent — prefer it over
+  `graphify-out/GRAPH_REPORT.md` for the "why" and the conceptual model.
+- Graphify (query/path/explain/affected/god-nodes) is the authority for IMPLEMENTATION
+  relationships: callers, callees, imports/dependencies, shortest paths, and impact
+  analysis ("what breaks if I change X").
+- Source code is the FINAL authority. If docs, graph, and code disagree, verify against
+  the code, then update the docs (per the maintenance rules above).
