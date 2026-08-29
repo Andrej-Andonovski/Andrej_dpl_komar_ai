@@ -1,0 +1,45 @@
+{
+  "detected_at": "2026-08-05T16:17:53.355818+00:00",
+  "players": [
+    {
+      "fpl_id": 566,
+      "name": "Ant\u00f3nio Jo\u00e3o Pereira de Albuquerque Tavares da Silva",
+      "team": "Bournemouth",
+      "position": "DEF",
+      "price": 5.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 569,
+      "name": "Gonzalo Garc\u00eda",
+      "team": "Fulham",
+      "position": "FWD",
+      "price": 6.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 570,
+      "name": "C\u00e9sar Palacios",
+      "team": "Fulham",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 564,
+      "name": "Kjell Scherpen",
+      "team": "Ipswich Town",
+      "position": "GK",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 567,
+      "name": "Luk\u00e1s Horn\u00edcek",
+      "team": "Newcastle",
+      "position": "GK",
+      "price": 5.0,
+      "prediction": null
+    }
+  ]
+}

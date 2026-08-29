@@ -1,0 +1,31 @@
+{
+  "detected_at": "2026-08-26T17:01:14.602335+00:00",
+  "players": [
+    {
+      "fpl_id": 614,
+      "name": "Jaouen Hadjam",
+      "team": "Brighton",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.63,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 613,
+      "name": "Jules Ahoka",
+      "team": "Sunderland",
+      "position": "MID",
+      "price": 4.5,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.27,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

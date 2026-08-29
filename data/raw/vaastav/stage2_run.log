@@ -1,0 +1,118 @@
+Stage 2: Loading vaastav historical data...
+  Loading: 2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
+  Blocked: 2026-27 (live season -- never train on this)
+  WARNING: Could not map these team names: ['West Ham', 'Wolves']
+  Loading 2019-20...
+  Loading 2020-21...
+  Loading 2021-22...
+  Loading 2022-23...
+  Loading 2023-24...
+  Loading 2024-25...
+  Loading 2025-26...
+  Total rows loaded: 185,964
+  Cleaning data...
+  Rows after cleaning: 59,820
+  Engineering rolling features...
+  Saving output files...
+
+=== STAGE 2 VALIDATION REPORT ===
+
+ROWS LOADED PER SEASON (before cleaning):
+  2019-20: 22,560 rows
+  2020-21: 24,365 rows
+  2021-22: 25,447 rows
+  2022-23: 26,505 rows
+  2023-24: 29,725 rows
+  2024-25: 27,605 rows
+  2025-26: 29,757 rows
+  TOTAL:   185,964 rows
+
+ROWS AFTER CLEANING (minutes >= 30, deduped):
+  2019-20: 8,700 rows
+  2020-21: 8,305 rows
+  2021-22: 8,170 rows
+  2022-23: 8,478 rows
+  2023-24: 8,616 rows
+  2024-25: 8,775 rows
+  2025-26: 8,776 rows
+  TOTAL:   59,820 rows
+
+ROWS PER POSITION:
+  GK:  5,154 rows
+  DEF:  22,108 rows
+  MID:  25,975 rows
+  FWD:  6,563 rows
+
+AVERAGE TOTAL_POINTS PER POSITION PER SEASON:
+season    2019-20  2020-21  2021-22  2022-23  2023-24  2024-25  2025-26
+position                                                               
+GK           3.64     3.73     3.62     3.65     3.21     3.33     3.36
+DEF          3.05     3.15     3.14     2.93     2.64     2.69     3.43
+MID          3.21     3.32     3.37     3.26     3.40     3.26     3.54
+FWD          3.97     3.99     3.65     3.90     3.98     4.17     3.75
+
+TOP 10 HIGHEST SCORING PLAYERS (total points across all 7 seasons):
+   1. Mohamed Salah: 1549 pts
+   2. Jarrod Bowen: 1056 pts
+   3. Ollie Watkins: 1014 pts
+   4. Bukayo Saka: 995 pts
+   5. Trent Alexander-Arnold: 929 pts
+   6. Kevin De Bruyne: 889 pts
+   7. Jordan Pickford: 884 pts
+   8. Virgil van Dijk: 876 pts
+   9. Erling Haaland: 848 pts
+  10. Declan Rice: 846 pts
+
+TEAM NAME MAPPING:
+  Successfully mapped: 28 teams
+  Could not map (kept as-is): ['West Ham', 'Wolves']
+
+COLUMNS MISSING PER SEASON:
+  None — all columns present in all seasons
+
+NULL VALUES AFTER CLEANING:
+  None
+
+SAMPLE ROWS (5 per position file):
+
+  [historical_gk.csv]
+             name      team  season  GW position  total_points  minutes  value  form_last3  form_last5
+Caoimhín Kelleher Brentford 2025-26  11       GK             2       90    4.5         2.3        3.05
+  Martin Dubravka Newcastle 2019-20  15       GK            10       90    5.0         3.3        3.03
+        Nick Pope Newcastle 2022-23  26       GK             1       90    5.4         3.3        4.15
+  Alphonse Areola  West Ham 2025-26  18       GK             3       90    4.3         1.9        2.07
+        Nick Pope Newcastle 2022-23   1       GK             6       90    5.0         0.0        0.00
+
+  [historical_def.csv]
+              name        team  season  GW position  total_points  minutes  value  form_last3  form_last5
+Jarrad Branthwaite     Everton 2024-25  11      DEF             6       90    4.8         2.0        2.00
+   Mohammed Salisu Southampton 2020-21  25      DEF             2       90    4.3         0.0        0.00
+       John Stones    Man City 2022-23  20      DEF             1       90    5.4         5.5        4.33
+          Dan Burn   Newcastle 2023-24  35      DEF             2       90    4.5         3.5        3.37
+     Marcos Alonso     Chelsea 2019-20   8      DEF             5       90    6.2         3.6        3.50
+
+  [historical_mid.csv]
+              name        team  season  GW position  total_points  minutes  value  form_last3  form_last5
+     Mateo Kovacic     Chelsea 2020-21  38      MID             1       65    5.3         1.3        1.65
+     Tyler Dibling Southampton 2024-25  21      MID             5       62    4.5         3.6        3.30
+Abdoulaye Doucouré     Everton 2023-24   1      MID             2       90    5.5         0.0        0.00
+       Pascal Groß    Brighton 2019-20   8      MID             3       90    6.4         2.3        2.69
+    Enzo Fernández     Chelsea 2025-26  11      MID             3       82    6.7         2.0        2.76
+
+  [historical_fwd.csv]
+                 name        team  season  GW position  total_points  minutes  value  form_last3  form_last5
+Dominic Calvert-Lewin     Everton 2020-21  20      FWD             2       88    7.6        2.10      2.7500
+          Jamie Vardy   Leicester 2020-21   9      FWD             2       90   10.1        7.60      7.9000
+      Dominic Solanke Bournemouth 2023-24  27      FWD             2       88    7.1        5.40      5.3800
+        Junior Kroupi Bournemouth 2025-26  10      FWD             2       61    4.6        8.25      8.5000
+        Danny Welbeck    Brighton 2020-21  12      FWD             2       62    5.5        5.80      5.4783
+
+FILES SAVED:
+  historical_gw_data.csv -- 59,820 rows
+  historical_gk.csv      -- 5,154 rows
+  historical_def.csv      -- 22,108 rows
+  historical_mid.csv      -- 25,975 rows
+  historical_fwd.csv      -- 6,563 rows
+
+=== END REPORT ===
+

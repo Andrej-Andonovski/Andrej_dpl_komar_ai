@@ -1,0 +1,121 @@
+
+======================================================================
+STAGE 6 -- Feature Engineering Pipeline
+======================================================================
+  Starting from step: 7
+  Last completed step (from state): 6
+
+
+======================================================================
+STEP 7 -- Position-Specific Training File Split
+======================================================================
+  Loading data/processed/base_gw_table.csv ...
+  Loaded 59,820 rows x 71 cols
+
+  Processing GK ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_attacking_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'team_defensive_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_attacking_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_defensive_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 1 nonzero rows
+    GW1 zero-check: 14 column(s) with violations
+    Saved: data/processed/train_gk.csv  (5,174 rows x 69 cols)
+
+  Processing DEF ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_attacking_strength' has 581 nonzero rows
+    WARNING: GW1 nonzero -- 'team_defensive_strength' has 581 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_attacking_strength' has 581 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_defensive_strength' has 581 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 4 nonzero rows
+    GW1 zero-check: 14 column(s) with violations
+    Saved: data/processed/train_def.csv  (22,108 rows x 67 cols)
+
+  Processing MID ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_attacking_strength' has 681 nonzero rows
+    WARNING: GW1 nonzero -- 'team_defensive_strength' has 681 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_attacking_strength' has 681 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_defensive_strength' has 681 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 5 nonzero rows
+    GW1 zero-check: 14 column(s) with violations
+    Saved: data/processed/train_mid.csv  (25,975 rows x 65 cols)
+
+  Processing FWD ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_attacking_strength' has 159 nonzero rows
+    WARNING: GW1 nonzero -- 'team_defensive_strength' has 159 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_attacking_strength' has 159 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_defensive_strength' has 159 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 1 nonzero rows
+    GW1 zero-check: 14 column(s) with violations
+    Saved: data/processed/train_fwd.csv  (6,563 rows x 65 cols)
+
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+======================================================================
+STEP 7 COMPLETE -- Position-Specific Training Files
+======================================================================
+  GK   :  5,174 rows x  69 cols  ->  train_gk.csv
+  DEF  : 22,108 rows x  67 cols  ->  train_def.csv
+  MID  : 25,975 rows x  65 cols  ->  train_mid.csv
+  FWD  :  6,563 rows x  65 cols  ->  train_fwd.csv
+
+  All files saved to data/processed/
+
+  NEXT: Step 8 will run final validation checks across all 4
+  training files and save the Stage 6 validation report.
+
+Proceed to Step 8? (y/n): ======================================================================
+
+======================================================================
+STEP 8 -- Stage 6 Final Validation Report
+======================================================================
+
+  Loaded data/processed/train_gk.csv  (5,174 rows x 69 cols)
+  Loaded data/processed/train_def.csv  (22,108 rows x 67 cols)
+  Loaded data/processed/train_mid.csv  (25,975 rows x 65 cols)
+  Loaded data/processed/train_fwd.csv  (6,563 rows x 65 cols)
+
+  *** CRITICAL FAIL — Check 4 [GK]: leakage in: ['team_xG_last5', 'team_xGA_last5', 'opp_xG_last5', 'opp_xGA_last5', 'team_attacking_strength', 'team_defensive_strength']
+  *** CRITICAL FAIL — Check 4 [DEF]: leakage in: ['team_xG_last5', 'team_xGA_last5', 'opp_xG_last5', 'opp_xGA_last5', 'team_attacking_strength', 'team_defensive_strength']
+  *** CRITICAL FAIL — Check 4 [MID]: leakage in: ['team_xG_last5', 'team_xGA_last5', 'opp_xG_last5', 'opp_xGA_last5', 'team_attacking_strength', 'team_defensive_strength']
+  *** CRITICAL FAIL — Check 4 [FWD]: leakage in: ['team_xG_last5', 'team_xGA_last5', 'opp_xG_last5', 'opp_xGA_last5', 'team_attacking_strength', 'team_defensive_strength']
+
+  *** ONE OR MORE CRITICAL CHECKS FAILED — stopping. ***

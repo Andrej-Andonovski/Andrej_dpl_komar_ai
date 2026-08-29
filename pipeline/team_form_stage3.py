@@ -40,8 +40,8 @@ PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
 os.makedirs(UNDERSTAT_DIR, exist_ok=True)
 os.makedirs(PROCESSED_DIR, exist_ok=True)
 
-SEASONS = ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"]
-BLOCKED  = {"2025-26"}
+SEASONS = ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
+BLOCKED  = {"2026-27"}
 
 # Understat uses the start year of the season as the identifier
 UNDERSTAT_YEARS = {
@@ -51,6 +51,7 @@ UNDERSTAT_YEARS = {
     "2022-23": "2022",
     "2023-24": "2023",
     "2024-25": "2024",
+    "2025-26": "2025",
 }
 
 # Understat team name -> canonical vaastav/FPL name
@@ -196,19 +197,31 @@ def build_team_form_vaastav():
     print("  Normalising attacking / defensive strength per GW...")
 
     def normalise_gw(group):
+        # No prior data at all this GW (e.g. GW1, before any rolling history
+        # exists) -> min/max are NaN -> leave at 0, not the degenerate-tie
+        # fallback below (0.5 there would trip the "must be zero at GW1"
+        # leakage check even though it isn't derived from future data).
+        att_has_data = group["goals_scored_last5"].notna().any()
         lo_att = group["goals_scored_last5"].min()
         hi_att = group["goals_scored_last5"].max()
         rng_att = hi_att - lo_att
-        group["attacking_strength"] = (
-            (group["goals_scored_last5"] - lo_att) / rng_att if rng_att > 0 else 0.5
-        )
+        if not att_has_data:
+            group["attacking_strength"] = 0.0
+        else:
+            group["attacking_strength"] = (
+                (group["goals_scored_last5"] - lo_att) / rng_att if rng_att > 0 else 0.5
+            )
 
+        def_has_data = group["goals_conceded_last5"].notna().any()
         lo_def = group["goals_conceded_last5"].min()
         hi_def = group["goals_conceded_last5"].max()
         rng_def = hi_def - lo_def
-        group["defensive_strength"] = (
-            1.0 - (group["goals_conceded_last5"] - lo_def) / rng_def if rng_def > 0 else 0.5
-        )
+        if not def_has_data:
+            group["defensive_strength"] = 0.0
+        else:
+            group["defensive_strength"] = (
+                1.0 - (group["goals_conceded_last5"] - lo_def) / rng_def if rng_def > 0 else 0.5
+            )
         return group
 
     team_gw = (

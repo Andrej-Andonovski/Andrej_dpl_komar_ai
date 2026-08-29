@@ -1,12 +1,12 @@
 ======================================================================
 STAGE 6 FINAL VALIDATION REPORT
-Generated: 2026-03-11 15:13:52
+Generated: 2026-08-29 01:01:19
 ======================================================================
 
 CRITICAL CHECKS:
   Check 1  -- No NaN               GK PASS  DEF PASS  MID PASS  FWD PASS
-  Check 2  -- No 2025-26           GK PASS  DEF PASS  MID PASS  FWD PASS
-  Check 3  -- 6 seasons            GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 2  -- No 2026-27           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 3  -- 7 seasons            GK PASS  DEF PASS  MID PASS  FWD PASS
   Check 4  -- GW1 zeros            GK PASS  DEF PASS  MID PASS  FWD PASS
   Check 5  -- Points sane          GK PASS  DEF PASS  MID PASS  FWD PASS
   Check 6  -- Row counts           GK PASS  DEF PASS  MID PASS  FWD PASS
@@ -19,28 +19,28 @@ OVERALL: ALL CHECKS PASSED
 
 TRAINING FILE SUMMARY:
   File                       Rows   Cols   Mean pts   Max pts  Seasons
-  train_gk.csv              4,421     69       3.52        16        6
-  train_def.csv            18,828     67       2.93        24        6
-  train_mid.csv            22,132     65       3.30        26        6
-  train_fwd.csv             5,663     65       3.94        24        6
-  TOTAL                    51,044
+  train_gk.csv              5,174     69       3.50        16        7
+  train_def.csv            22,108     67       3.00        24        7
+  train_mid.csv            25,975     65       3.34        26        7
+  train_fwd.csv             6,563     65       3.91        24        7
+  TOTAL                    59,820
 
 FEATURE ENGINEERING SUMMARY:
-  Base GW rows:                51,044
+  Base GW rows:                59,820
   Rolling features added:      10
   Prev league features added:  12  (position-specific)
   Team form features added:    22  (11 own + 11 opp)
   Fixture features added:      4
-  Players with prev data:      26  (stage4a/4b new signings)
-  Players vaastav-only:        1210
+  Players with prev data:      2  (stage4a/4b new signings)
+  Players vaastav-only:        1390
   GW1 leakage checks passed:   all
   Cross-season bleed:          none
   NaN in final files:          0
 
 DATA SOURCES:
-  Vaastav historical GW data:  2019-20 to 2024-25
-  FBref new signings:          Stage 4a (63 players) +
-                               Stage 4b (26 players)
+  Vaastav historical GW data:  2019-20 to 2025-26
+  FBref new signings:          Stage 4a (transfers) +
+                               Stage 4c (promoted clubs)
   Team form:                   Stage 3 (vaastav + understat)
   Fixture difficulty:          FPL API (proxy for training,
                                live FDR for GW1 prediction)

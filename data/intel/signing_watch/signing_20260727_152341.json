@@ -1,0 +1,57 @@
+{
+  "detected_at": "2026-07-27T13:23:41.302261+00:00",
+  "players": [
+    {
+      "fpl_id": 25,
+      "name": "Viktor Gy\u00f6keres",
+      "team": "Arsenal",
+      "position": "FWD",
+      "price": 7.5,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 4.68,
+        "note": "neutral-fixture debut estimate (GW=0 proxy row, prev-league-adjusted features, no real fixture context yet)"
+      }
+    },
+    {
+      "fpl_id": 560,
+      "name": "Mike Penders",
+      "team": "Chelsea",
+      "position": "GK",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 561,
+      "name": "Aaron Anselmino",
+      "team": "Chelsea",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 563,
+      "name": "Hidemasa Morita",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 562,
+      "name": "Daizen Maeda",
+      "team": "Ipswich Town",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 559,
+      "name": "Aladji Bamba",
+      "team": "Newcastle",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": null
+    }
+  ]
+}

@@ -138,6 +138,8 @@ if not _4A_IMPORTED:
         "avg_points_per_game_season", "goals_per_game_season",
         "assists_per_game_season", "clean_sheet_rate_season",
         "saves_per_game_season", "points_per_million", "is_new_to_pl",
+        "adjG_per_90", "adjA_per_90", "league_multiplier", "season_reliability",
+        "data_source", "data_confidence",
     ]
 
     def normalize_name(name):

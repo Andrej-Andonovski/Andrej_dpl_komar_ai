@@ -1,0 +1,44 @@
+{
+  "detected_at": "2026-08-28T14:01:31.258885+00:00",
+  "players": [
+    {
+      "fpl_id": 618,
+      "name": "Leon Goretzka",
+      "team": "Aston Villa",
+      "position": "MID",
+      "price": 6.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.44,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 617,
+      "name": "Mohamed-Ali Cho",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.69,
+        "seasons_used": 4,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 619,
+      "name": "Exequiel Palacios",
+      "team": "Ipswich Town",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.63,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

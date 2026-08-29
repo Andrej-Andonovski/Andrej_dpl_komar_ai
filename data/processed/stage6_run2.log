@@ -1,0 +1,704 @@
+
+======================================================================
+STAGE 6 -- Feature Engineering Pipeline
+======================================================================
+  Starting from step: 1
+  Last completed step (from state): 3
+
+
+======================================================================
+STEP 1 -- Load and Audit All Source Files
+======================================================================
+
+File                                         Rows   Cols  Key columns present                                 Missing             
+----------------------------------------------------------------------------------------------------------------------------------
+  historical_gw_data.csv                   59,820     40  name, GW, season, total_points, minutes +15 more    none
+  historical_gk.csv                         5,154     40  name, season, GW, total_points, saves +3 more       none
+  historical_def.csv                       22,108     40  name, season, GW, total_points, clean_sheets +2 more  tackles_won_per_90, interceptions_per_90, defensive_actions_available
+  historical_mid.csv                       25,975     40  name, season, GW, total_points, goals_scored +2 more  none
+  historical_fwd.csv                        6,563     40  name, season, GW, total_points, goals_scored +2 more  none
+  new_signings_gk.csv                          27     47  fpl_name(as name), season, saves, clean_sheets, data_source +1 more  prev_saves_per_game, prev_cs_rate
+  new_signings_def.csv                         92     47  fpl_name(as name), season, adjG_per_90, adjA_per_90, data_source  interceptions_per_90, tackles_won_per_90, defensive_actions_available
+  new_signings_mid.csv                        123     47  fpl_name(as name), season, adjG_per_90, adjA_per_90, league_multiplier +3 more  none
+  new_signings_fwd.csv                         40     47  fpl_name(as name), season, adjG_per_90, adjA_per_90, league_multiplier +3 more  none
+  team_form.csv                             5,124     35  team, season, GW, xG_last5, xGA_last5 +3 more       none
+  fixture_difficulty.csv                      760      7  team(as team_name), GW(as gameweek), difficulty(as fdr)  season
+  players_raw.csv                             558     38  id, team, element_type, now_cost                    web_name
+  player_upcoming_fixtures.csv             21,204      6  element(as player_id), GW(as gameweek), difficulty, is_home, opponent_team  none
+
+CHECK 1 -- Players in vaastav_gw not in players_raw:
+  Count: 965
+  Note: expected -- these are historical players who have left the PL
+
+CHECK 2 -- Players in players_raw not in vaastav_gw:
+  Total in players_raw with zero GW history: 0
+  -- Have stage4a/4b data:  0
+  -- No data at all:        0
+
+CHECK 3 -- Team name mismatches (vaastav vs team_form):
+  No mismatches found -- join will be clean
+
+CHECK 4 -- 2026-27 data scan:
+  2026-27 data: NOT FOUND -- clean
+
+CHECK 5 -- Season range in historical_gw_data.csv:
+  Seasons found: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  All 7 expected seasons present -- OK
+
+CHECK 6 -- Row count sanity:
+  historical_gw_data.csv              expected ~51,044  actual 59,820  [MISMATCH]
+  new_signings_def.csv                expected ~   107  actual     92  [MISMATCH]
+  new_signings_mid.csv                expected ~   123  actual    123  [OK]
+  new_signings_fwd.csv                expected ~    46  actual     40  [MISMATCH]
+  new_signings_gk.csv                 expected ~    29  actual     27  [OK]
+
+
+======================================================================
+STEP 1 COMPLETE -- Source Audit
+======================================================================
+  Files loaded successfully:      13/13
+  2026-27 data detected:          NO
+  Critical missing columns:       10
+    historical_def.csv: missing 'tackles_won_per_90'
+    historical_def.csv: missing 'interceptions_per_90'
+    historical_def.csv: missing 'defensive_actions_available'
+    new_signings_gk.csv: missing 'prev_saves_per_game'
+    new_signings_gk.csv: missing 'prev_cs_rate'
+    new_signings_def.csv: missing 'interceptions_per_90'
+    new_signings_def.csv: missing 'tackles_won_per_90'
+    new_signings_def.csv: missing 'defensive_actions_available'
+    fixture_difficulty.csv: missing 'season'
+    players_raw.csv: missing 'web_name'
+  Team name mismatches found:     0
+  Row count mismatches:           3
+    historical_gw_data.csv: expected ~51,044, got 59,820
+    new_signings_def.csv: expected ~107, got 92
+    new_signings_fwd.csv: expected ~46, got 40
+
+  NEXT: Step 2 will build the base GW table from vaastav_gw data only.
+  No features computed, no files written -- structural foundation only.
+
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+======================================================================
+Proceed to Step 2? (y/n): ======================================================================
+
+======================================================================
+STEP 2 -- Build Base GW Table
+======================================================================
+
+  Loading C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\raw\vaastav\historical_gw_data.csv ...
+  Loaded 59,820 rows x 40 cols
+
+  Checking required columns ...
+  All required columns present -- OK
+
+  NOTE: normalised 20 'GKP' rows -> 'GK'
+  NOTE: season 2019-20 has GWs up to 47 (COVID extension) -- 8,700 rows, allowed
+
+  Running row-level validations ...
+  All validations passed -- OK
+
+  Total rows:       59,820
+  GK rows:          5,174
+  DEF rows:         22,108
+  MID rows:         25,975
+  FWD rows:         6,563
+  Unique players:   1,392
+  Seasons present:  2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
+  Null total_points: 0  (OK)
+
+  Building web_name from players_raw.csv ...
+  Constructed web_name from first_name + second_name -- sample:
+    id=1  web_name='David Raya Martín'
+    id=2  web_name='Kepa Arrizabalaga Revuelta'
+    id=3  web_name='Illan Meslier'
+    id=4  web_name='Gabriel dos Santos Magalhães'
+    id=5  web_name='Jurriën Timber'
+  web_name nulls: 0  (558 total players in players_raw)
+
+  Saved base_gw_table.csv  (59,820 rows x 22 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 2 COMPLETE -- Base GW Table
+======================================================================
+  Rows:           59,820
+  Unique players: 1,392
+  Null targets:   0  (must be 0)
+  Position split: GK 5,174 / DEF 22,108 / MID 25,975 / FWD 6,563
+  Saved to:       data/processed/base_gw_table.csv
+
+  NEXT: Step 3 will compute all rolling player features from
+  the base table only. No new data sources. Features computed:
+  form_last3, form_last5, minutes_reliability_season,
+  cumulative_points_season, avg_points_per_game_season,
+  goals_per_game_season, assists_per_game_season,
+  clean_sheet_rate_season, saves_per_game_season,
+  points_per_million. All windows strictly partition by season.
+
+Proceed to Step 3? (y/n): ======================================================================
+
+======================================================================
+STEP 3 -- Compute Rolling Player Features
+======================================================================
+
+  Loading C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\base_gw_table.csv ...
+  Loaded 59,820 rows x 22 cols
+
+  Sorting by name, season, GW ...
+  Sort complete
+
+  Computing rolling features (all windows partition by [name, season]) ...
+  All 10 features computed
+
+  Filling NaN values ...
+  NaN fill complete
+
+  Running leakage validation (GW==1 must all be 0) ...
+
+  Feature                          GW1 zeros    Leakage check
+  --------------------------------------------------------
+  form_last3                       YES          PASS
+  form_last5                       YES          PASS
+  cumulative_points_season         YES          PASS
+  avg_points_per_game_season       YES          PASS
+  goals_per_game_season            YES          PASS
+  assists_per_game_season          YES          PASS
+  clean_sheet_rate_season          YES          PASS
+  saves_per_game_season            YES          PASS
+  minutes_reliability_season       YES          PASS
+  points_per_million               YES          PASS
+
+  All 10/10 leakage checks: PASS
+
+  NaN assertion: 0 NaNs remaining -- OK
+
+  Feature distribution summary:
+  Feature                              Mean      Std      Min      Max
+  --------------------------------------------------------------------
+  form_last3                          3.139    2.147   -5.000   24.000
+  form_last5                          3.142    1.920   -5.000   24.000
+  cumulative_points_season           40.233   36.262   -5.000  309.000
+  avg_points_per_game_season          3.140    1.709   -5.000   24.000
+  goals_per_game_season               0.106    0.187    0.000    3.000
+  assists_per_game_season             0.095    0.156    0.000    4.000
+  clean_sheet_rate_season             0.246    0.200    0.000    1.000
+  saves_per_game_season               0.243    0.856    0.000    9.000
+  minutes_reliability_season          0.611    0.310    0.000    1.000
+  points_per_million                 73.284   61.632    0.000  347.619
+
+  Saved base_gw_table.csv  (59,820 rows x 32 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 3 COMPLETE -- Rolling Player Features
+======================================================================
+  Features computed:          10
+  Leakage checks passed:      10/10  (must be 10/10)
+  GW1 zero checks passed:     10/10  (must be 10/10)
+  NaN values remaining:       0      (must be 0)
+  Columns in base table now:  32     (22 base + 10 rolling)
+  Saved to: data/processed/base_gw_table.csv
+
+  NEXT: Step 4 will attach stage 4a/4b previous-league baseline
+  features as static columns on every GW row for each player's
+  first PL season. These become prior knowledge features for
+  new signings where vaastav has no history yet.
+
+Proceed to Step 4? (y/n): ======================================================================
+
+======================================================================
+STEP 4 -- Attach Previous-League Baseline Features
+======================================================================
+
+  Loading base_gw_table.csv ...
+  Loaded 59,820 rows x 32 cols
+
+  Loading new_signings files ...
+    new_signings_gk.csv  27 rows
+    new_signings_def.csv  92 rows
+    new_signings_mid.csv  123 rows
+    new_signings_fwd.csv  40 rows
+  Combined: 282 rows  (115 unique players)
+
+  STEP 4A: Building reliability-weighted prev-league lookup ...
+  Lookup table: 115 players
+
+  Matched to vaastav: 31
+  No vaastav match (2025/26 debutants): 84
+
+  Player (vaastav)               Player (signings)               Conf   adjG/90  adjA/90 Seasons    Rel
+  -----------------------------------------------------------------------------------------------
+  Abdul Fatawu                   Abdul Fatawu                    100%    0.0000   0.0000       1   0.10
+  Alex Palmer                    Alex Palmer                     100%    0.0000   0.0000       3   1.00
+  Ali Al-Hamadi                  Ali Al-Hamadi                   100%    0.2058   0.0000       3   0.40
+  Amine Adli                     Amine Adli                      100%    0.2803   0.2670       2   0.50
+  Ben Gibson                     Ben Wilson                       80%    0.0338   0.0158      10   1.00
+  Ben Johnson                    Ben Johnson                     100%    0.0792   0.0792       1   0.50
+  Chiedozie Ogbene               Chiedozie Ogbene                100%    0.0346   0.0346       3   0.83
+  Christian Walton               Christian Walton                100%    0.0000   0.0000       2   0.55
+  Cody Drameh                    Cody Drameh                     100%    0.0116   0.0534       4   0.78
+  Dara O'Shea                    Dara O'Shea                     100%    0.1872   0.0072       2   1.00
+  Darnell Furlong                Darnell Furlong                 100%    0.0288   0.0396       4   1.00
+  Ellis Simms                    Ellis Simms                     100%    0.3258   0.0450       3   0.67
+  Frank Onyeka                   Frank Onyeka                    100%    0.0648   0.0648       1   1.00
+  George Hirst                   George Hirst                    100%    0.2856   0.1800       2   0.75
+  Jack Butland                   Jack Butland                    100%    0.0000   0.0000       1   0.10
+  Jack Clarke                    Jack Clarke                     100%    0.3427   0.1786       3   0.83
+  Jack Taylor                    Jack Taylor                     100%    0.0655   0.0589       2   0.55
+  Jacob Greaves                  Jacob Greaves                   100%    0.0249   0.0498       4   0.65
+  Jaden Philogene                Jaden Philogene                 100%    0.3204   0.1008       2   1.00
+  John Egan                      John Egan                       100%    0.0274   0.0000       3   0.70
+  Kasey McAteer                  Kasey McAteer                   100%    0.2225   0.0229       3   0.37
+  Kieran Dowell                  Kieran Dowell                   100%    0.2520   0.0000       1   0.10
+  Leif Davis                     Leif Davis                      100%    0.0396   0.1944       2   1.00
+  Loum Tchaouna                  Loum Tchaouna                   100%    0.0000   0.0000       1   0.10
+  Luke Woolfenden                Luke Woolfenden                 100%    0.0072   0.0072       2   1.00
+  Matt Targett                   Matt Targett                    100%    0.0792   0.0792       1   1.00
+  Oliver McBurnie                Oli McBurnie                     89%    0.3816   0.1584       1   1.00
+  Ryan Giles                     Ryan Giles                      100%    0.0000   0.0859       4   0.78
+  Sam Szmodics                   Sam Szmodics                    100%    0.3520   0.1429       4   0.65
+  Viktor Gyökeres                Viktor Gyökeres                 100%    0.8385   0.2067       2   1.00
+  Wes Burns                      Wes Burns                       100%    0.1656   0.0984       2   0.75
+
+  Fuzzy matches below 95% (review):
+    Ben Wilson                          -> Ben Gibson                          80.0%
+    Oli McBurnie                        -> Oliver McBurnie                     88.9%
+
+  Players in signings with no vaastav match (84) -- 2025/26 debutants:
+    Abdülkadir Ömür
+    Abu Kamara
+    Adam Aznou
+    Anis Mehmeti
+    Anthony Patterson
+    Aurèle Amenda
+    Azor Matusiwa
+    Bazoumana Touré
+    Benjamin Lecomte
+    Bobby Thomas
+    Brandon Thomas-Asante
+    Cathal McCarthy
+    Charlie Hughes
+    Christantus Uche
+    Chuba Akpom
+    Claudio Echeverri
+    Cédric Kipré
+    Darko Gyabi
+    David Akintola
+    Dillon Phillips
+    Divine Mukasa
+    Dário Luís Essugo
+    Eliot Matazo
+    Emersonn Correia da Silva
+    Emmanuel Emegha
+    Enis Destan
+    Ephron Mason-Clark
+    Ewen Jaouen
+    George Shepherd
+    Geovany Quenda
+    Giovanni Leoni
+    Haji Wright
+    Jack Rudoni
+    Jahnoah Markelo
+    Jake Bidwell
+    James McConnell
+    Jannik Schuster
+    Jay Dasilva
+    Jeremy Jacquet
+    Joao Gomes
+    Joel Latibeaudiere
+    Johan Manzambi
+    Jonah Kusi-Asare
+    Josh Eccles
+    Kaine Andrews
+    Kaine Kesler-Hayden
+    Kayne van Oevelen
+    Lewie Coyle
+    Liam Kitching
+    Liam Millar
+    Luka Vušković
+    Mamadou Sarr
+    Marcelino Núñez
+    Marco Palestra
+    Mason Burstow
+    Mateus Fernandes
+    Matt Crooks
+    Matt Grimes
+    Matty Jacob
+    Michael Svoboda
+    Milan van Ewijk
+    Mohamed Belloumi
+    Norman Bassette
+    Oliver Dovin
+    Omar Richards
+    Oscar Mingueza
+    Paddy McNair
+    Raphael Borges Rodrigues
+    Regan Slater
+    Remi Matthews
+    Samuel Iling-Junior
+    Sean Steur
+    Semi Ajayi
+    Sindre Walle Egeli
+    Tarik Muharemović
+    Tatsuhiro Sakamoto
+    Thomas Meunier
+    Victor Munoz
+    Victor Torp
+    Vitezslav Jaros
+    Xaver Schlager
+    Zadok Yohanna
+    Álvaro Rodríguez
+    Óscar Zambrano
+
+  STEP 4B: Identifying first PL season per matched player ...
+  First-season map built for 31 players
+    first_pl_season = 2024-25: 14 players
+    first_pl_season = 2021-22: 5 players
+    first_pl_season = 2019-20: 4 players
+    first_pl_season = 2025-26: 3 players
+    first_pl_season = 2020-21: 3 players
+    first_pl_season = 2023-24: 2 players
+
+  STEP 4C: Initialising prev_ columns (all zeros) ...
+  Filled 449 GW rows across 31 players (first PL season only)
+
+  Validation ...
+    NaN in prev_ columns:          0  (must be 0)
+    has_prev_league_data=1 rows:   449
+    has_prev_league_data=0 rows:   59,371
+
+  Spot checks:
+    Omar Marmoush             not found in base table
+    Riccardo Calafiori        not found in base table
+    Viktor Gyökeres           [2025/26 debutant -- not in training data]
+      lookup: prev_adjG=0.8385  prev_adjA=0.2067  mult=0.78
+    Mads Hermansen            not found in base table
+    Maxence Lacroix           not found in base table
+
+  Saved base_gw_table.csv  (59,820 rows x 44 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 4 COMPLETE -- Previous League Features Attached
+======================================================================
+  Players with prev league data:    31
+  Players without (vaastav only):   1,361
+  has_prev_league_data=1 GW rows:   449
+  has_prev_league_data=0 GW rows:   59,371
+  NaN in prev_ columns:             0  (must be 0)
+  Columns in base table now:        44  (32 + 12)
+
+  Fuzzy matches below 95% needing review:
+    Ben Wilson                          -> Ben Gibson                          80.0%
+    Oli McBurnie                        -> Oliver McBurnie                     88.9%
+
+  Players in signings with no vaastav match (2025/26 only):
+    Abdülkadir Ömür
+    Abu Kamara
+    Adam Aznou
+    Anis Mehmeti
+    Anthony Patterson
+    Aurèle Amenda
+    Azor Matusiwa
+    Bazoumana Touré
+    Benjamin Lecomte
+    Bobby Thomas
+    Brandon Thomas-Asante
+    Cathal McCarthy
+    Charlie Hughes
+    Christantus Uche
+    Chuba Akpom
+    Claudio Echeverri
+    Cédric Kipré
+    Darko Gyabi
+    David Akintola
+    Dillon Phillips
+    Divine Mukasa
+    Dário Luís Essugo
+    Eliot Matazo
+    Emersonn Correia da Silva
+    Emmanuel Emegha
+    Enis Destan
+    Ephron Mason-Clark
+    Ewen Jaouen
+    George Shepherd
+    Geovany Quenda
+    Giovanni Leoni
+    Haji Wright
+    Jack Rudoni
+    Jahnoah Markelo
+    Jake Bidwell
+    James McConnell
+    Jannik Schuster
+    Jay Dasilva
+    Jeremy Jacquet
+    Joao Gomes
+    Joel Latibeaudiere
+    Johan Manzambi
+    Jonah Kusi-Asare
+    Josh Eccles
+    Kaine Andrews
+    Kaine Kesler-Hayden
+    Kayne van Oevelen
+    Lewie Coyle
+    Liam Kitching
+    Liam Millar
+    Luka Vušković
+    Mamadou Sarr
+    Marcelino Núñez
+    Marco Palestra
+    Mason Burstow
+    Mateus Fernandes
+    Matt Crooks
+    Matt Grimes
+    Matty Jacob
+    Michael Svoboda
+    Milan van Ewijk
+    Mohamed Belloumi
+    Norman Bassette
+    Oliver Dovin
+    Omar Richards
+    Oscar Mingueza
+    Paddy McNair
+    Raphael Borges Rodrigues
+    Regan Slater
+    Remi Matthews
+    Samuel Iling-Junior
+    Sean Steur
+    Semi Ajayi
+    Sindre Walle Egeli
+    Tarik Muharemović
+    Tatsuhiro Sakamoto
+    Thomas Meunier
+    Victor Munoz
+    Victor Torp
+    Vitezslav Jaros
+    Xaver Schlager
+    Zadok Yohanna
+    Álvaro Rodríguez
+    Óscar Zambrano
+
+  Spot checks:
+    Omar Marmoush             NOT FOUND
+    Riccardo Calafiori        NOT FOUND
+    Viktor Gyökeres           prev_adjG=0.8385  prev_adjA=0.2067  mult=0.78  [not in training data]
+    Mads Hermansen            NOT FOUND
+    Maxence Lacroix           NOT FOUND
+
+  NEXT: Step 5 will attach team form features -- both the
+  player's own team form and the opponent's team form for
+  each GW row, joined from team_form.csv.
+
+Proceed to Step 5? (y/n): ======================================================================
+
+======================================================================
+STEP 5 -- Attach Team Form Features
+======================================================================
+
+  STEP 5A: Inspect team_form.csv ...
+  Loaded 5,124 rows x 35 cols
+  Columns: ['team', 'season', 'GW', 'goals_scored_for', 'goals_conceded', 'was_home', 'opponent', 'clean_sheet', 'win', 'draw', 'points_earned', 'goals_scored_last5', 'goals_conceded_last5', 'clean_sheet_rate_last5', 'wins_last5', 'form_points_last5', 'goals_scored_last3', 'goals_conceded_last3', 'home_goals_scored_season', 'away_goals_scored_season', 'home_goals_conceded_season', 'away_goals_conceded_season', 'attacking_strength', 'defensive_strength', 'xG_last5', 'xGA_last5', 'xG_last3', 'xGA_last3', 'xG_season_avg', 'xGA_season_avg', 'home_xG_season', 'away_xG_season', 'home_xGA_season', 'away_xGA_season', 'clean_sheet_probability']
+  Seasons: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  GW range: 1 - 47
+  Teams (28): ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Burnley', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham', 'Ipswich', 'Leeds', 'Leicester', 'Liverpool', 'Luton', 'Man City', 'Man Utd', 'Newcastle', 'Norwich', "Nott'm Forest", 'Sheffield Utd', 'Southampton', 'Spurs', 'Sunderland', 'Watford', 'West Brom', 'West Ham', 'Wolves']
+
+  STEP 5B: GW1 leakage check ...
+  WARNING: GW1 non-zero values in rolling columns (potential leakage):
+    xG_last5: 1 non-zero GW1 rows
+    xGA_last5: 1 non-zero GW1 rows
+    attacking_strength: 136 non-zero GW1 rows
+    defensive_strength: 136 non-zero GW1 rows
+    clean_sheet_probability: 1 non-zero GW1 rows
+    xG_season_avg: 1 non-zero GW1 rows
+    xGA_season_avg: 1 non-zero GW1 rows
+
+  STEP 5C: Team name consistency check ...
+  Loaded base_gw_table.csv: 59,820 rows x 44 cols
+  Own-team names: all match team_form -- no mismatches.
+  opponent_team names: all match team_form -- no mismatches.
+
+  STEP 5D: Joining own-team form (team_ prefix) ...
+  Added 11 own-team columns. NaN count: 0
+
+  STEP 5E: Joining opponent form (opp_ prefix) ...
+  Added 11 opponent columns. NaN count: 0
+
+  STEP 5F: Filling NaNs with 0 (GW1 and any unmatched) ...
+  Remaining NaN in team form columns: 0  (must be 0)
+
+  STEP 5G: Sample rows (5 rows, non-GW1) ...
+          name     team opponent_team  season  GW  team_xG_last5  team_xGA_last5  team_attacking_strength  team_defensive_strength  team_clean_sheet_probability  opp_xG_last5  opp_xGA_last5  opp_attacking_strength  opp_defensive_strength
+Aaron Connolly Brighton         Spurs 2019-20   8       1.075276        2.018057                 0.000000                 0.538462                      0.132913      1.358256       1.093355                0.388889                0.769231
+Aaron Connolly Brighton   Aston Villa 2019-20   9       1.395768        1.698168                 0.200000                 0.600000                      0.183019      1.603311       1.599776                0.466667                0.600000
+Aaron Connolly Brighton       Everton 2019-20  10       1.487929        1.829916                 0.285714                 0.727273                      0.160427      1.733166       1.209931                0.142857                0.363636
+Aaron Connolly Brighton       Norwich 2019-20  11       1.381397        1.971031                 0.294118                 0.764706                      0.139313      0.931442       2.612847                0.000000                0.411765
+Aaron Connolly Brighton       Man Utd 2019-20  12       1.669205        1.842433                 0.411765                 0.750000                      0.158431      1.609603       1.229485                0.235294                0.812500
+
+  Saved base_gw_table.csv  (59,820 rows x 66 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 5 COMPLETE -- Team Form Features Attached
+======================================================================
+  Own-team form columns added:        11
+  Opponent form columns added:        11
+  Total columns in base table now:    66
+  NaN remaining in form columns:      0  (must be 0)
+  Leakage warnings:
+    xG_last5: 1 non-zero GW1 rows
+    xGA_last5: 1 non-zero GW1 rows
+    attacking_strength: 136 non-zero GW1 rows
+    defensive_strength: 136 non-zero GW1 rows
+    clean_sheet_probability: 1 non-zero GW1 rows
+    xG_season_avg: 1 non-zero GW1 rows
+    xGA_season_avg: 1 non-zero GW1 rows
+
+  NEXT: Step 6 will attach fixture difficulty features
+  from fixture_difficulty.csv and player_upcoming_fixtures.csv.
+
+Proceed to Step 6? (y/n): ======================================================================
+
+======================================================================
+STEP 6 -- Attach Fixture Difficulty Features
+======================================================================
+
+  STEP 6A: Inspect fixture_difficulty.csv ...
+  Columns: ['team_name', 'gameweek', 'opponent', 'was_home', 'fdr', 'trajectory_raw', 'trajectory_score']
+  Shape:   760 rows x 7 cols
+  No 'season' column -- file is 2026-27 only (current season FDR)
+  GW range: 1 - 38
+  Teams (20): ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Chelsea', 'Coventry City', 'Crystal Palace', 'Everton', 'Fulham', 'Hull City', 'Ipswich Town', 'Leeds', 'Liverpool', 'Man City', 'Man Utd', 'Newcastle', "Nott'm Forest", 'Spurs', 'Sunderland']
+  First 5 rows:
+team_name  gameweek      opponent  was_home  fdr  trajectory_raw  trajectory_score
+  Arsenal         1 Coventry City      True    2            12.7      4.634146e-01
+  Arsenal         2   Aston Villa     False    4            13.3      1.332268e-15
+  Arsenal         3       Chelsea      True    4            12.3      4.545455e-01
+  Arsenal         4    Sunderland     False    3            11.2      6.190476e-01
+  Arsenal         5      Brighton     False    3            11.7      6.274510e-01
+
+  STEP 6B: Inspect player_upcoming_fixtures.csv ...
+  Columns: ['player_id', 'gameweek', 'opponent_team_id', 'opponent_team', 'is_home', 'difficulty']
+  Shape:   21,204 rows x 6 cols
+  GW range: 1 - 38
+  First 5 rows:
+ player_id  gameweek  opponent_team_id  opponent_team  is_home  difficulty
+         1         1               NaN            NaN     True           2
+         1         2               NaN            NaN    False           4
+         1         3               NaN            NaN     True           4
+         1         4               NaN            NaN    False           3
+         1         5               NaN            NaN    False           3
+
+  Loading base_gw_table.csv ...
+  Loaded 59,820 rows x 66 cols
+
+  STEP 6C: Historical FDR proxy (was_home -> FDR 2/4) ...
+  Proxy FDR assigned: 59,820 rows total
+    was_home=1 -> FDR 2:  29,804 rows
+    was_home=0 -> FDR 4:  30,016 rows
+
+  STEP 6D: fixture_difficulty.csv season check ...
+  fixture_difficulty.csv is 2026-27 only -- using proxy FDR for all historical rows
+
+  STEP 6E: Fixture trajectory score ...
+  trajectory_is_full=0 for all training rows (no historical lookahead available)
+  fixture_trajectory_score = current_gw_fdr for 59,820 rows
+
+  STEP 6F: Home advantage flag ...
+  home_advantage added (copy of was_home as int, was_home retained)
+
+  STEP 6G: Validation ...
+    NaN in current_gw_fdr                   0  [OK]
+    NaN in fixture_trajectory_score         0  [OK]
+    NaN in fdr_is_proxy                     0  [OK]
+    NaN in home_advantage                   0  [OK]
+
+  current_gw_fdr value distribution:
+    FDR 2: 29,804 rows
+    FDR 4: 30,016 rows
+
+  fdr_is_proxy=0 (actual FDR):     0
+  fdr_is_proxy=1 (proxy home/away): 59,820
+  trajectory_is_full=1:             0
+
+  Sample rows (5, GW > 1):
+          name  GW     team opponent_team  was_home  current_gw_fdr  fixture_trajectory_score  fdr_is_proxy  home_advantage
+Aaron Connolly   8 Brighton         Spurs      True               2                       2.0             1               1
+Aaron Connolly   9 Brighton   Aston Villa     False               4                       4.0             1               0
+Aaron Connolly  10 Brighton       Everton      True               2                       2.0             1               1
+Aaron Connolly  11 Brighton       Norwich      True               2                       2.0             1               1
+Aaron Connolly  12 Brighton       Man Utd     False               4                       4.0             1               0
+
+  Saved base_gw_table.csv  (59,820 rows x 71 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 6 COMPLETE -- Fixture Difficulty Features
+======================================================================
+  current_gw_fdr attached:             59,820 rows
+  fixture_trajectory_score attached:   59,820 rows
+  fdr_is_proxy=0 (actual FDR):         0 rows
+  fdr_is_proxy=1 (proxy home/away):    59,820 rows
+  trajectory_is_full=1:                0 rows
+  NaN in fixture columns:              0  (must be 0)
+  Total columns now:                   71  (expected ~70)
+
+  NEXT: Step 7 will split into 4 position-specific training
+  files, apply position-specific feature selection, fill
+  any remaining NaN, and write final training CSVs to
+  data/processed/.
+
+Proceed to Step 7? (y/n): ======================================================================
+
+======================================================================
+STEP 7 -- Position-Specific Training File Split
+======================================================================
+  Loading data/processed/base_gw_table.csv ...
+  Loaded 59,820 rows x 71 cols
+
+  Processing GK ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_attacking_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'team_defensive_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_attacking_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_defensive_strength' has 137 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 1 nonzero rows
+    GW1 zero-check: 14 column(s) with violations
+Traceback (most recent call last):
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 2238, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 2217, in main
+    step1(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 481, in step1
+    step2(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 724, in step2
+    step3(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 963, in step3
+    step4(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1359, in step4
+    step5(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1544, in step5
+    step6(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1728, in step6
+    step7(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1881, in step7
+    assert len(subset) == expected_rows[pos], (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: [GK] Row count mismatch: got 5,174, expected 4,421

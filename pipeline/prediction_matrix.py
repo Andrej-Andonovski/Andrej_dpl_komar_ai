@@ -27,11 +27,35 @@ import numpy as np
 
 # Canonical feature order for the redesign. Must match the trainer's order —
 # phase1_calibration.py asserts this equals season_simulator.FEAT_COLS.
+# 2026-08-21: kept in sync by hand (circular import risk prevents importing
+# FEAT_COLS directly — season_simulator imports this module). If you touch
+# season_simulator.FEAT_COLS, update this list to match or build_matrix()
+# will raise a feature-count mismatch against the trained model.
+# Per-fixture fixture-difficulty adjustment (2026-08-21 fix). fdr IS swapped
+# correctly per GW into the feature vector below (v[fdr_idx] = fx["fdr"]),
+# but the trained model's own native sensitivity to that one feature (among
+# 23) turned out to be nearly flat in practice — verified directly: an
+# Arsenal defender's mu barely moved across an easy->hard->hard->medium
+# fixture swing (GW1 Coventry -> GW2 Villa -> GW3 Chelsea -> GW4 Sunderland).
+# The legacy path compensates with a hand-tuned post-hoc multiplier
+# (FDR_MULT/FDR_MULT_DEF); the mp blueprint deliberately dropped that
+# multiplier after Phase 1 calibration found it "safely deletable" — a call
+# made on backtested aggregate season score, not on verified per-player
+# per-GW fixture responsiveness. Applying the same multiplier here, using
+# each fixture's own fdr (correct for DGWs: one factor per fixture, summed).
+# Same env vars as season_simulator.py so both paths share tuning.
+FDR_MULT     = float(os.environ.get("FDR_MULT",     "0.028451479772615692"))
+FDR_MULT_DEF = float(os.environ.get("FDR_MULT_DEF",  "0.08424155707006356"))
+
 DEFAULT_FEAT_COLS = [
     "form_last3", "form_last5", "avg_points_per_game",
     "minutes_reliability", "goals_per_game", "assists_per_game",
     "clean_sheet_rate", "saves_per_game",
     "value", "was_home", "fdr",
+    "has_prev_league_data", "prev_adjG_per_90", "prev_adjA_per_90",
+    "prev_league_multiplier", "prev_seasons_available", "prev_reliability_avg",
+    "prev_minutes_avg", "prev_small_sample", "prev_int_per_90",
+    "prev_tklW_per_90", "prev_saves_per_game", "prev_cs_rate",
 ]
 
 # ── Availability tiers (intel_03) ─────────────────────────────────────────────
@@ -69,8 +93,10 @@ HEADROOM_PRIOR_DEFAULT = {"GK": 2.5, "DEF": 3.0, "MID": 4.5, "FWD": 5.0}
 # is the strongest available quality signal; legacy carried it as the Optuna-
 # tuned OWN_BOOST_GW1. Kept as ONE documented constant until ownership becomes
 # a model feature (§11). Applied at t == 1 only. Phase 2 evidence for keeping
-# it: deleting it cost −98 pts across GW1-2 (docs/phase2_report.md).
-OWN_PRIOR_GW1 = 0.213
+# it: deleting it cost −98 pts across GW1-2 (docs/phase2_report.md) — so don't
+# set this to 0 expecting a free win, but the exact value is still worth
+# exploring. Env-tunable (2026-08-21) to match legacy's OWN_BOOST_GW1 knob.
+OWN_PRIOR_GW1 = float(os.environ.get("OWN_PRIOR_GW1", "0.213"))
 
 MU_SANITY_MAX = 40.0    # assert-only ceiling — never clamp (§1.2)
 
@@ -252,6 +278,11 @@ def build_matrix(pool, models, fixture_list, t, horizon,
                     next((q.get("avg_points_per_game", 2.0) for q in pool
                           if q["player_id"] == pid), 2.0)
                     for pid in batch["who"]], dtype=float)
+            # Per-fixture FDR adjustment — same formula as legacy, applied
+            # per fixture (correct for DGWs) using that fixture's own fdr.
+            fdr_mult = FDR_MULT_DEF if pos in ("GK", "DEF") else FDR_MULT
+            fdr_vals = X[:, fdr_idx]
+            preds = preds * np.maximum(0.5, 1.0 - fdr_mult * (fdr_vals - 3.0))
             preds = np.maximum(preds, 0.0)            # per-fixture floor
             for pid, pr in zip(batch["who"], preds):
                 mu_raw[pid] += float(pr)              # DGW: sum fixtures

@@ -250,8 +250,15 @@ def load_inputs():
         rot = json.load(f)
     print(f"  rotation_risk.json: {len(rot['gameweeks'])} GWs")
 
-    ph = pd.read_csv(PLAYER_HISTORY)
-    print(f"  player_history.csv: {len(ph)} rows, GWs {ph['gameweek'].min()}-{ph['gameweek'].max()}")
+    try:
+        ph = pd.read_csv(PLAYER_HISTORY)
+    except pd.errors.EmptyDataError:
+        # Pre-season: no GW has been played yet, file has no header at all.
+        ph = pd.DataFrame(columns=["gameweek", "player_id", "total_points"])
+    if len(ph) == 0:
+        print("  player_history.csv: 0 rows (pre-season, no GWs played yet)")
+    else:
+        print(f"  player_history.csv: {len(ph)} rows, GWs {ph['gameweek'].min()}-{ph['gameweek'].max()}")
 
     fd = pd.read_csv(FIXTURE_DIFF)
     print(f"  fixture_difficulty.csv: {len(fd)} rows")

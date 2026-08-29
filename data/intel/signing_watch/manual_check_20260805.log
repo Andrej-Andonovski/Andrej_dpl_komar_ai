@@ -1,0 +1,182 @@
+[2026-08-05 18:16:09] === New-signing watcher run start ===
+[2026-08-05 18:16:09] Refreshing FPL API bootstrap data (Stage 1) ...
+[2026-08-05 18:16:09]   $ C:\Users\Andrej\AppData\Local\Programs\Python\Python313\python.exe -u pipeline/data_fetcher_stage1.py
+[2026-08-05 18:16:34] Identifying new-to-PL players (Stage 4a step 1) ...
+
+============================================================
+STEP 1: Identifying new-to-PL players
+============================================================
+  FPL players loaded:            570
+  Vaastav unique player names:   1392
+  Matching threshold:            80% (flag <90% for review)
+
+  [MANUAL REVIEW REQUIRED] 5 matches at 80-89% — may be wrong:
+     80% [full]  'Ben Wilson'  ->  'Ben Gibson'
+     80% [full]  'Jeremy Monga'  ->  'Jeremy Ngakia'
+     81% [full]  'Mamadou Sangaré'  ->  'Mamadou Sarr'
+     83% [full]  'Kostas Tsimikas'  ->  'Konstantinos Tsimikas'
+     89% [full]  'Oli McBurnie'  ->  'Oliver McBurnie'
+
+  Players with vaastav history:            432
+  Players with NO vaastav history (new):   138
+
+  ID     Name                             Team                   Pos   Price
+  ------ -------------------------------- ---------------------- ----- -----
+  25     Viktor Gyökeres                  Arsenal                FWD   7.5
+  49     Samuel Iling-Junior              Aston Villa            MID   5.0
+  50     Bradley Burrowes                 Aston Villa            MID   4.5
+  51     George Hemmings                  Aston Villa            MID   4.5
+  52     Alysson Edward Franco da Rocha dos Santos Aston Villa            MID   5.0
+  53     Johan Manzambi                   Aston Villa            MID   6.0
+  54     Joao Gomes                       Aston Villa            MID   5.5
+  59     Will Dennis                      Bournemouth            GK    4.0
+  66     Julio Soler Barreto              Bournemouth            DEF   4.0
+  81     Álvaro Rodríguez                 Bournemouth            FWD   6.0
+  566    António João Pereira de Albuquerque Tavares da Silva Bournemouth            DEF   5.0
+  92     Kim Ji-soo                       Brentford              DEF   4.5
+  93     Jannik Schuster                  Brentford              DEF   4.5
+  107    Kaye Furo                        Brentford              FWD   4.5
+  119    João Pedro Loureiro da Costa     Brighton               DEF   4.5
+  120    Michael Svoboda                  Brighton               DEF   5.0
+  134    Nehemiah Oriola                  Brighton               MID   4.5
+  135    Zadok Yohanna                    Brighton               MID   5.0
+  137    Stefanos Tzimas                  Brighton               FWD   5.5
+  504    Luka Vušković                    Brighton               DEF   5.0
+  150    Mamadou Sarr                     Chelsea                DEF   4.5
+  152    Marco Palestra                   Chelsea                DEF   5.5
+  163    Dário Luís Essugo                Chelsea                MID   4.5
+  164    Geovany Quenda                   Chelsea                MID   5.5
+  169    Shumaira Mheuka                  Chelsea                FWD   4.5
+  170    Emmanuel Emegha                  Chelsea                FWD   5.0
+  560    Mike Penders                     Chelsea                GK    4.5
+  561    Aaron Anselmino                  Chelsea                DEF   4.5
+  110    Carl Rushworth                   Coventry City          GK    4.5
+  171    Oliver Dovin                     Coventry City          GK    4.0
+  173    Bobby Thomas                     Coventry City          DEF   4.0
+  174    Liam Kitching                    Coventry City          DEF   4.0
+  175    Milan van Ewijk                  Coventry City          DEF   4.0
+  176    Jay Dasilva                      Coventry City          DEF   4.0
+  177    Kaine Kesler-Hayden              Coventry City          DEF   4.0
+  178    Jake Bidwell                     Coventry City          DEF   4.0
+  179    Joel Latibeaudiere               Coventry City          DEF   4.0
+  181    Miguel Brau                      Coventry City          DEF   4.0
+  182    Aurèle Amenda                    Coventry City          DEF   4.0
+  183    Jack Rudoni                      Coventry City          MID   5.0
+  184    Matt Grimes                      Coventry City          MID   5.0
+  185    Tatsuhiro Sakamoto               Coventry City          MID   5.0
+  186    Ephron Mason-Clark               Coventry City          MID   5.5
+  187    Josh Eccles                      Coventry City          MID   5.0
+  188    Victor Torp                      Coventry City          MID   5.5
+  189    George Shepherd                  Coventry City          MID   4.5
+  191    Raphael Borges Rodrigues         Coventry City          MID   4.5
+  192    Kaine Andrews                    Coventry City          MID   4.5
+  193    Haji Wright                      Coventry City          FWD   5.5
+  194    Brandon Thomas-Asante            Coventry City          FWD   5.0
+  196    Jahnoah Markelo                  Coventry City          FWD   5.0
+  197    Norman Bassette                  Coventry City          FWD   4.5
+  207    Oscar Mingueza                   Crystal Palace         DEF   4.5
+  221    Joél Drakes-Thomas               Crystal Palace         MID   4.5
+  225    Christantus Uche                 Crystal Palace         FWD   5.0
+  555    Remi Matthews                    Crystal Palace         GK    4.0
+  228    Tom King                         Everton                GK    4.5
+  235    Adam Aznou                       Everton                DEF   4.0
+  247    Hayden Hackney                   Everton                MID   5.5
+  251    Benjamin Lecomte                 Fulham                 GK    4.0
+  252    Alfie McNally                    Fulham                 GK    4.0
+  272    Jonah Kusi-Asare                 Fulham                 FWD   4.5
+  569    Gonzalo García                   Fulham                 FWD   6.0
+  570    César Palacios                   Fulham                 MID   5.5
+  273    Dillon Phillips                  Hull City              GK    4.0
+  275    Harvey Cartwright                Hull City              GK    4.0
+  276    Thimothée Lo-Tutala              Hull City              GK    4.0
+  278    Charlie Hughes                   Hull City              DEF   4.0
+  279    Semi Ajayi                       Hull City              DEF   4.0
+  280    Lewie Coyle                      Hull City              DEF   4.0
+  283    Matty Jacob                      Hull City              DEF   4.0
+  284    Cathal McCarthy                  Hull City              DEF   4.0
+  285    Paddy McNair                     Hull City              DEF   4.0
+  286    Mohamed Belloumi                 Hull City              MID   5.0
+  287    Liam Millar                      Hull City              MID   5.0
+  289    Matt Crooks                      Hull City              MID   4.5
+  290    Regan Slater                     Hull City              MID   4.5
+  291    Eliot Matazo                     Hull City              MID   4.5
+  292    Abdülkadir Ömür                  Hull City              MID   5.0
+  293    Abu Kamara                       Hull City              MID   5.0
+  294    Óscar Zambrano                   Hull City              MID   4.5
+  296    David Akintola                   Hull City              MID   5.0
+  297    Darko Gyabi                      Hull City              MID   4.5
+  298    Enis Destan                      Hull City              FWD   4.5
+  299    Mason Burstow                    Hull City              FWD   4.5
+  563    Hidemasa Morita                  Hull City              MID   5.0
+  303    Cédric Kipré                     Ipswich Town           DEF   4.0
+  309    Marcelino Núñez                  Ipswich Town           MID   5.0
+  310    Azor Matusiwa                    Ipswich Town           MID   5.0
+  316    Emersonn Correia da Silva        Ipswich Town           FWD   5.5
+  320    Chuba Akpom                      Ipswich Town           FWD   5.0
+  321    Sindre Walle Egeli               Ipswich Town           FWD   4.5
+  324    Anis Mehmeti                     Ipswich Town           MID   5.0
+  554    Kayne van Oevelen                Ipswich Town           GK    4.5
+  562    Daizen Maeda                     Ipswich Town           MID   5.5
+  564    Kjell Scherpen                   Ipswich Town           GK    4.5
+  334    Tarik Muharemović                Leeds                  DEF   5.0
+  349    Mateo Joseph Fernández-Regatillo Leeds                  FWD   4.5
+  353    Armin Pecsi                      Liverpool              GK    4.0
+  354    Vitezslav Jaros                  Liverpool              GK    4.0
+  355    Harvey Davies                    Liverpool              GK    4.0
+  361    Wellity Lucky                    Liverpool              DEF   4.0
+  362    Jeremy Jacquet                   Liverpool              DEF   5.0
+  363    Giovanni Leoni                   Liverpool              DEF   4.0
+  365    Calvin Ramsay                    Liverpool              DEF   4.0
+  375    Trey Nyoni                       Liverpool              MID   5.0
+  376    Stefan Bajčetić Maquieira        Liverpool              MID   5.0
+  377    Victor Munoz                     Liverpool              MID   6.5
+  378    James McConnell                  Liverpool              MID   4.5
+  381    Lewis Koumas                     Liverpool              MID   5.0
+  382    Jayden Danns                     Liverpool              FWD   4.5
+  386    Marcus Bettinelli                Man City               GK    4.5
+  396    Vitor de Oliveira Nunes dos Reis Man City               DEF   4.5
+  407    Claudio Echeverri                Man City               MID   5.0
+  409    Divine Mukasa                    Man City               MID   4.5
+  435    Shea Lacey                       Man Utd                MID   5.0
+  437    Bendito Mantato                  Man Utd                MID   4.5
+  438    Tyler Fletcher                   Man Utd                MID   4.5
+  441    Chido Obi                        Man Utd                FWD   4.5
+  443    Mark Gillespie                   Newcastle              GK    4.5
+  444    Ewen Jaouen                      Newcastle              GK    4.5
+  451    Alex Murphy                      Newcastle              DEF   4.0
+  461    Bazoumana Touré                  Newcastle              MID   6.0
+  462    Sean Steur                       Newcastle              MID   5.0
+  466    Sean Neave                       Newcastle              FWD   4.5
+  559    Aladji Bamba                     Newcastle              MID   5.0
+  567    Lukás Hornícek                   Newcastle              GK    5.0
+  476    Omar Richards                    Nott'm Forest          DEF   4.0
+  479    Tyler Bindon                     Nott'm Forest          DEF   4.0
+  558    Xaver Schlager                   Nott'm Forest          MID   5.0
+  507    Ashley Phillips                  Spurs                  DEF   4.5
+  509    Jun'ai Byfield                   Spurs                  DEF   4.0
+  510    James Rowswell                   Spurs                  DEF   4.0
+  524    Callum Olusesi                   Spurs                  MID   4.5
+  525    Mateus Fernandes                 Spurs                  MID   6.0
+  528    Dane Scarlett                    Spurs                  FWD   4.5
+  530    Anthony Patterson                Sunderland             GK    4.0
+  541    Thomas Meunier                   Sunderland             DEF   4.5
+
+  Saved: new_signings_2025.csv (138 rows)
+[2026-08-05 18:16:43] Found 5 new player(s) since last run:
+[2026-08-05 18:16:43]   António João Pereira de Albuquerque Tavares da Silva (Bournemouth, DEF, £5.0)
+[2026-08-05 18:16:43]   Gonzalo García (Fulham, FWD, £6.0)
+[2026-08-05 18:16:43]   César Palacios (Fulham, MID, £5.5)
+[2026-08-05 18:16:43]   Kjell Scherpen (Ipswich Town, GK, £4.5)
+[2026-08-05 18:16:43]   Lukás Hornícek (Newcastle, GK, £5.0)
+[2026-08-05 18:16:43] Clearing Transfermarkt page cache (not season-keyed; must be fresh) ...
+[2026-08-05 18:16:43] Running Stage 4a (Transfermarkt + FBref scrape) ...
+[2026-08-05 18:16:43]   $ C:\Users\Andrej\AppData\Local\Programs\Python\Python313\python.exe -u pipeline/new_signings_stage4a.py --full-run
+[2026-08-05 18:17:17] Rebuilding training data (Stage 6) ...
+[2026-08-05 18:17:17]   $ C:\Users\Andrej\AppData\Local\Programs\Python\Python313\python.exe -u pipeline/feature_engineering_stage6.py
+[2026-08-05 18:17:49]   António João Pereira de Albuquerque Tavares da Silva: no prediction (no scraped row found -- check Stage 4a's 'no FBref data found' list)
+[2026-08-05 18:17:50]   Gonzalo García: no prediction (no scraped row found -- check Stage 4a's 'no FBref data found' list)
+[2026-08-05 18:17:51]   César Palacios: no prediction (no scraped row found -- check Stage 4a's 'no FBref data found' list)
+[2026-08-05 18:17:52]   Kjell Scherpen: no prediction (no scraped row found -- check Stage 4a's 'no FBref data found' list)
+[2026-08-05 18:17:53]   Lukás Hornícek: no prediction (no scraped row found -- check Stage 4a's 'no FBref data found' list)
+[2026-08-05 18:17:53] New signing(s) processed: António João Pereira de Albuquerque Tavares da Silva (Bournemouth), Gonzalo García (Fulham), César Palacios (Fulham), Kjell Scherpen (Ipswich Town), Lukás Hornícek (Newcastle). Training data rebuilt. See C:\Users\Andrej\Desktop\fpl ai\data\intel\signing_watch\signing_20260805_181753.json
+[2026-08-05 18:17:54] === Run complete ===

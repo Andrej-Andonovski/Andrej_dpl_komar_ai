@@ -1,0 +1,329 @@
+
+======================================================================
+STAGE 6 -- Feature Engineering Pipeline
+======================================================================
+  Starting from step: 5
+  Last completed step (from state): 7
+
+
+======================================================================
+STEP 5 -- Attach Team Form Features
+======================================================================
+
+  STEP 5A: Inspect team_form.csv ...
+  Loaded 5,124 rows x 35 cols
+  Columns: ['team', 'season', 'GW', 'goals_scored_for', 'goals_conceded', 'was_home', 'opponent', 'clean_sheet', 'win', 'draw', 'points_earned', 'goals_scored_last5', 'goals_conceded_last5', 'clean_sheet_rate_last5', 'wins_last5', 'form_points_last5', 'goals_scored_last3', 'goals_conceded_last3', 'home_goals_scored_season', 'away_goals_scored_season', 'home_goals_conceded_season', 'away_goals_conceded_season', 'attacking_strength', 'defensive_strength', 'xG_last5', 'xGA_last5', 'xG_last3', 'xGA_last3', 'xG_season_avg', 'xGA_season_avg', 'home_xG_season', 'away_xG_season', 'home_xGA_season', 'away_xGA_season', 'clean_sheet_probability']
+  Seasons: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  GW range: 1 - 47
+  Teams (28): ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Burnley', 'Chelsea', 'Crystal Palace', 'Everton', 'Fulham', 'Ipswich', 'Leeds', 'Leicester', 'Liverpool', 'Luton', 'Man City', 'Man Utd', 'Newcastle', 'Norwich', "Nott'm Forest", 'Sheffield Utd', 'Southampton', 'Spurs', 'Sunderland', 'Watford', 'West Brom', 'West Ham', 'Wolves']
+
+  STEP 5B: GW1 leakage check ...
+  WARNING: GW1 non-zero values in rolling columns (potential leakage):
+    xG_last5: 1 non-zero GW1 rows
+    xGA_last5: 1 non-zero GW1 rows
+    clean_sheet_probability: 1 non-zero GW1 rows
+    xG_season_avg: 1 non-zero GW1 rows
+    xGA_season_avg: 1 non-zero GW1 rows
+
+  STEP 5C: Team name consistency check ...
+  Dropped 22 stale team/opp columns from previous partial run.
+  Loaded base_gw_table.csv: 59,820 rows x 49 cols
+  Own-team names: all match team_form -- no mismatches.
+  opponent_team names: all match team_form -- no mismatches.
+
+  STEP 5D: Joining own-team form (team_ prefix) ...
+  Added 11 own-team columns. NaN count: 0
+
+  STEP 5E: Joining opponent form (opp_ prefix) ...
+  Added 11 opponent columns. NaN count: 0
+
+  STEP 5F: Filling NaNs with 0 (GW1 and any unmatched) ...
+  Remaining NaN in team form columns: 0  (must be 0)
+
+  STEP 5G: Sample rows (5 rows, non-GW1) ...
+          name     team opponent_team  season  GW  team_xG_last5  team_xGA_last5  team_attacking_strength  team_defensive_strength  team_clean_sheet_probability  opp_xG_last5  opp_xGA_last5  opp_attacking_strength  opp_defensive_strength
+Aaron Connolly Brighton         Spurs 2019-20   8       1.075276        2.018057                 0.000000                 0.538462                      0.132913      1.358256       1.093355                0.388889                0.769231
+Aaron Connolly Brighton   Aston Villa 2019-20   9       1.395768        1.698168                 0.200000                 0.600000                      0.183019      1.603311       1.599776                0.466667                0.600000
+Aaron Connolly Brighton       Everton 2019-20  10       1.487929        1.829916                 0.285714                 0.727273                      0.160427      1.733166       1.209931                0.142857                0.363636
+Aaron Connolly Brighton       Norwich 2019-20  11       1.381397        1.971031                 0.294118                 0.764706                      0.139313      0.931442       2.612847                0.000000                0.411765
+Aaron Connolly Brighton       Man Utd 2019-20  12       1.669205        1.842433                 0.411765                 0.750000                      0.158431      1.609603       1.229485                0.235294                0.812500
+
+  Saved base_gw_table.csv  (59,820 rows x 71 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 5 COMPLETE -- Team Form Features Attached
+======================================================================
+  Own-team form columns added:        11
+  Opponent form columns added:        11
+  Total columns in base table now:    71
+  NaN remaining in form columns:      0  (must be 0)
+  Leakage warnings:
+    xG_last5: 1 non-zero GW1 rows
+    xGA_last5: 1 non-zero GW1 rows
+    clean_sheet_probability: 1 non-zero GW1 rows
+    xG_season_avg: 1 non-zero GW1 rows
+    xGA_season_avg: 1 non-zero GW1 rows
+
+  NEXT: Step 6 will attach fixture difficulty features
+  from fixture_difficulty.csv and player_upcoming_fixtures.csv.
+
+Proceed to Step 6? (y/n): ======================================================================
+
+======================================================================
+STEP 6 -- Attach Fixture Difficulty Features
+======================================================================
+
+  STEP 6A: Inspect fixture_difficulty.csv ...
+  Columns: ['team_name', 'gameweek', 'opponent', 'was_home', 'fdr', 'trajectory_raw', 'trajectory_score']
+  Shape:   760 rows x 7 cols
+  No 'season' column -- file is 2026-27 only (current season FDR)
+  GW range: 1 - 38
+  Teams (20): ['Arsenal', 'Aston Villa', 'Bournemouth', 'Brentford', 'Brighton', 'Chelsea', 'Coventry City', 'Crystal Palace', 'Everton', 'Fulham', 'Hull City', 'Ipswich Town', 'Leeds', 'Liverpool', 'Man City', 'Man Utd', 'Newcastle', "Nott'm Forest", 'Spurs', 'Sunderland']
+  First 5 rows:
+team_name  gameweek      opponent  was_home  fdr  trajectory_raw  trajectory_score
+  Arsenal         1 Coventry City      True    2            12.7      4.634146e-01
+  Arsenal         2   Aston Villa     False    4            13.3      1.332268e-15
+  Arsenal         3       Chelsea      True    4            12.3      4.545455e-01
+  Arsenal         4    Sunderland     False    3            11.2      6.190476e-01
+  Arsenal         5      Brighton     False    3            11.7      6.274510e-01
+
+  STEP 6B: Inspect player_upcoming_fixtures.csv ...
+  Columns: ['player_id', 'gameweek', 'opponent_team_id', 'opponent_team', 'is_home', 'difficulty']
+  Shape:   21,204 rows x 6 cols
+  GW range: 1 - 38
+  First 5 rows:
+ player_id  gameweek  opponent_team_id  opponent_team  is_home  difficulty
+         1         1               NaN            NaN     True           2
+         1         2               NaN            NaN    False           4
+         1         3               NaN            NaN     True           4
+         1         4               NaN            NaN    False           3
+         1         5               NaN            NaN    False           3
+
+  Loading base_gw_table.csv ...
+  Loaded 59,820 rows x 71 cols
+
+  STEP 6C: Historical FDR proxy (was_home -> FDR 2/4) ...
+  Proxy FDR assigned: 59,820 rows total
+    was_home=1 -> FDR 2:  29,804 rows
+    was_home=0 -> FDR 4:  30,016 rows
+
+  STEP 6D: fixture_difficulty.csv season check ...
+  fixture_difficulty.csv is 2026-27 only -- using proxy FDR for all historical rows
+
+  STEP 6E: Fixture trajectory score ...
+  trajectory_is_full=0 for all training rows (no historical lookahead available)
+  fixture_trajectory_score = current_gw_fdr for 59,820 rows
+
+  STEP 6F: Home advantage flag ...
+  home_advantage added (copy of was_home as int, was_home retained)
+
+  STEP 6G: Validation ...
+    NaN in current_gw_fdr                   0  [OK]
+    NaN in fixture_trajectory_score         0  [OK]
+    NaN in fdr_is_proxy                     0  [OK]
+    NaN in home_advantage                   0  [OK]
+
+  current_gw_fdr value distribution:
+    FDR 2: 29,804 rows
+    FDR 4: 30,016 rows
+
+  fdr_is_proxy=0 (actual FDR):     0
+  fdr_is_proxy=1 (proxy home/away): 59,820
+  trajectory_is_full=1:             0
+
+  Sample rows (5, GW > 1):
+          name  GW     team opponent_team  was_home  current_gw_fdr  fixture_trajectory_score  fdr_is_proxy  home_advantage
+Aaron Connolly   8 Brighton         Spurs      True               2                       2.0             1               1
+Aaron Connolly   9 Brighton   Aston Villa     False               4                       4.0             1               0
+Aaron Connolly  10 Brighton       Everton      True               2                       2.0             1               1
+Aaron Connolly  11 Brighton       Norwich      True               2                       2.0             1               1
+Aaron Connolly  12 Brighton       Man Utd     False               4                       4.0             1               0
+
+  Saved base_gw_table.csv  (59,820 rows x 71 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 6 COMPLETE -- Fixture Difficulty Features
+======================================================================
+  current_gw_fdr attached:             59,820 rows
+  fixture_trajectory_score attached:   59,820 rows
+  fdr_is_proxy=0 (actual FDR):         0 rows
+  fdr_is_proxy=1 (proxy home/away):    59,820 rows
+  trajectory_is_full=1:                0 rows
+  NaN in fixture columns:              0  (must be 0)
+  Total columns now:                   71  (expected ~70)
+
+  NEXT: Step 7 will split into 4 position-specific training
+  files, apply position-specific feature selection, fill
+  any remaining NaN, and write final training CSVs to
+  data/processed/.
+
+Proceed to Step 7? (y/n): ======================================================================
+
+======================================================================
+STEP 7 -- Position-Specific Training File Split
+======================================================================
+  Loading data/processed/base_gw_table.csv ...
+  Loaded 59,820 rows x 71 cols
+
+  Processing GK ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 1 nonzero rows
+    GW1 zero-check: 10 column(s) with violations
+    Saved: data/processed/train_gk.csv  (5,174 rows x 69 cols)
+
+  Processing DEF ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 7 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 4 nonzero rows
+    GW1 zero-check: 10 column(s) with violations
+    Saved: data/processed/train_def.csv  (22,108 rows x 67 cols)
+
+  Processing MID ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 4 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 5 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 5 nonzero rows
+    GW1 zero-check: 10 column(s) with violations
+    Saved: data/processed/train_mid.csv  (25,975 rows x 65 cols)
+
+  Processing FWD ...
+    No NaN to fill
+    WARNING: GW1 nonzero -- 'team_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'team_xGA_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_last5' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_clean_sheet_probability' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xG_season_avg' has 1 nonzero rows
+    WARNING: GW1 nonzero -- 'opp_xGA_season_avg' has 1 nonzero rows
+    GW1 zero-check: 10 column(s) with violations
+    Saved: data/processed/train_fwd.csv  (6,563 rows x 65 cols)
+
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+======================================================================
+STEP 7 COMPLETE -- Position-Specific Training Files
+======================================================================
+  GK   :  5,174 rows x  69 cols  ->  train_gk.csv
+  DEF  : 22,108 rows x  67 cols  ->  train_def.csv
+  MID  : 25,975 rows x  65 cols  ->  train_mid.csv
+  FWD  :  6,563 rows x  65 cols  ->  train_fwd.csv
+
+  All files saved to data/processed/
+
+  NEXT: Step 8 will run final validation checks across all 4
+  training files and save the Stage 6 validation report.
+
+Proceed to Step 8? (y/n): ======================================================================
+
+======================================================================
+STEP 8 -- Stage 6 Final Validation Report
+======================================================================
+
+  Loaded data/processed/train_gk.csv  (5,174 rows x 69 cols)
+  Loaded data/processed/train_def.csv  (22,108 rows x 67 cols)
+  Loaded data/processed/train_mid.csv  (25,975 rows x 65 cols)
+  Loaded data/processed/train_fwd.csv  (6,563 rows x 65 cols)
+
+    [GK] GW1 known-exception rows (within tolerance): [('team_xG_last5', 1), ('team_xGA_last5', 1), ('opp_xG_last5', 1), ('opp_xGA_last5', 1)]
+    [DEF] GW1 known-exception rows (within tolerance): [('team_xG_last5', 7), ('team_xGA_last5', 7), ('opp_xG_last5', 4), ('opp_xGA_last5', 4)]
+    [MID] GW1 known-exception rows (within tolerance): [('team_xG_last5', 4), ('team_xGA_last5', 4), ('opp_xG_last5', 5), ('opp_xGA_last5', 5)]
+    [FWD] GW1 known-exception rows (within tolerance): [('team_xG_last5', 1), ('team_xGA_last5', 1), ('opp_xG_last5', 1), ('opp_xGA_last5', 1)]
+======================================================================
+CHECK RESULTS:
+
+  Check 1  -- No NaN              GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 2  -- No 2026-27          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 3  -- 7 seasons           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 4  -- GW1 zeros           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 5  -- Points sane         GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 6  -- Row counts          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 7  -- Pos purity          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 8  -- No neg min          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 9  -- All numeric         GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 10 -- Prev isolation      GK PASS  DEF PASS  MID PASS  FWD PASS
+
+  Report saved to data/processed/stage6_validation_report.txt
+
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+======================================================================
+STAGE 6 FINAL VALIDATION REPORT
+Generated: 2026-07-27 13:59:17
+======================================================================
+
+CRITICAL CHECKS:
+  Check 1  -- No NaN               GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 2  -- No 2026-27           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 3  -- 7 seasons            GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 4  -- GW1 zeros            GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 5  -- Points sane          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 6  -- Row counts           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 7  -- Pos purity           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 8  -- No neg min           GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 9  -- All numeric          GK PASS  DEF PASS  MID PASS  FWD PASS
+  Check 10 -- Prev isolation       GK PASS  DEF PASS  MID PASS  FWD PASS
+
+OVERALL: ALL CHECKS PASSED
+
+TRAINING FILE SUMMARY:
+  File                       Rows   Cols   Mean pts   Max pts  Seasons
+  train_gk.csv              5,174     69       3.50        16        7
+  train_def.csv            22,108     67       3.00        24        7
+  train_mid.csv            25,975     65       3.34        26        7
+  train_fwd.csv             6,563     65       3.91        24        7
+  TOTAL                    59,820
+
+FEATURE ENGINEERING SUMMARY:
+  Base GW rows:                59,820
+  Rolling features added:      10
+  Prev league features added:  12  (position-specific)
+  Team form features added:    22  (11 own + 11 opp)
+  Fixture features added:      4
+  Players with prev data:      31  (stage4a/4b new signings)
+  Players vaastav-only:        1361
+  GW1 leakage checks passed:   all
+  Cross-season bleed:          none
+  NaN in final files:          0
+
+DATA SOURCES:
+  Vaastav historical GW data:  2019-20 to 2025-26
+  FBref new signings:          Stage 4a (transfers) +
+                               Stage 4c (promoted clubs)
+  Team form:                   Stage 3 (vaastav + understat)
+  Fixture difficulty:          FPL API (proxy for training,
+                               live FDR for GW1 prediction)
+
+======================================================================
+Stage 6 complete. Training data ready.
+Ready for Stage 7 -- XGBoost Model Training.
+======================================================================
+
+Stage 6 complete. Proceed to Stage 7? (y/n): ======================================================================
+Stopped after Stage 6. Training files are ready at data/processed/

@@ -1,0 +1,171 @@
+Stage 4c: Newly-Promoted Clubs -- Championship Previous-Season Stats
+Clubs: ['Coventry City', 'Hull City', 'Ipswich Town']
+Previous league: Championship (SEASONS window set in new_signings_stage4a.SEASONS)
+  Promoted-club roster (Coventry City, Hull City, Ipswich Town): 83 players
+  Excluding 2 already resolved via real transfer this cycle: ['Aurèle Amenda', 'Kayne van Oevelen']
+  Synthetic new_signings_df: 81 rows, previous_league=Championship
+
+======================================================================
+PREVIEW -- players to scrape Championship stats for:
+======================================================================
+
+  GK (9)
+    Oliver Dovin                     Coventry City    4.0
+    Ben Wilson                       Coventry City    4.5
+    Dillon Phillips                  Hull City        4.0
+    Jack Butland                     Hull City        4.5
+    Harvey Cartwright                Hull City        4.0
+    Thimothée Lo-Tutala              Hull City        4.0
+    Christian Walton                 Ipswich Town     4.5
+    Alex Palmer                      Ipswich Town     4.0
+    David Button                     Ipswich Town     4.0
+
+  DEF (26)
+    Bobby Thomas                     Coventry City    4.0
+    Liam Kitching                    Coventry City    4.0
+    Milan van Ewijk                  Coventry City    4.0
+    Jay Dasilva                      Coventry City    4.0
+    Kaine Kesler-Hayden              Coventry City    4.0
+    Jake Bidwell                     Coventry City    4.0
+    Joel Latibeaudiere               Coventry City    4.0
+    Luke Woolfenden                  Coventry City    4.0
+    Miguel Brau                      Coventry City    4.0
+    Matt Targett                     Hull City        4.0
+    Paddy McNair                     Hull City        4.0
+    Cathal McCarthy                  Hull City        4.0
+    Matty Jacob                      Hull City        4.0
+    Ryan Giles                       Hull City        4.0
+    Lewie Coyle                      Hull City        4.0
+    Semi Ajayi                       Hull City        4.0
+    Charlie Hughes                   Hull City        4.0
+    John Egan                        Hull City        4.0
+    Cody Drameh                      Hull City        4.0
+    Ben Johnson                      Ipswich Town     4.0
+    Issa Diop                        Ipswich Town     4.0
+    Cédric Kipré                     Ipswich Town     4.0
+    Dara O'Shea                      Ipswich Town     4.0
+    Leif Davis                       Ipswich Town     4.0
+    Jacob Greaves                    Ipswich Town     4.0
+    Darnell Furlong                  Ipswich Town     4.0
+
+  MID (33)
+    Frank Onyeka                     Coventry City    5.0
+    Jack Rudoni                      Coventry City    5.0
+    Matt Grimes                      Coventry City    5.0
+    Tatsuhiro Sakamoto               Coventry City    5.0
+    Ephron Mason-Clark               Coventry City    5.5
+    Josh Eccles                      Coventry City    5.0
+    Victor Torp                      Coventry City    5.5
+    George Shepherd                  Coventry City    4.5
+    Loum Tchaouna                    Coventry City    5.5
+    Raphael Borges Rodrigues         Coventry City    4.5
+    Kaine Andrews                    Coventry City    4.5
+    Darko Gyabi                      Hull City        4.5
+    David Akintola                   Hull City        5.0
+    Óscar Zambrano                   Hull City        4.5
+    Abu Kamara                       Hull City        5.0
+    Abdülkadir Ömür                  Hull City        5.0
+    Eliot Matazo                     Hull City        4.5
+    Regan Slater                     Hull City        4.5
+    Matt Crooks                      Hull City        4.5
+    Kieran Dowell                    Hull City        4.5
+    Liam Millar                      Hull City        5.0
+    Mohamed Belloumi                 Hull City        5.0
+    Marcelino Núñez                  Ipswich Town     5.0
+    Azor Matusiwa                    Ipswich Town     5.0
+    Wes Burns                        Ipswich Town     5.0
+    Jack Taylor                      Ipswich Town     4.5
+    Jack Clarke                      Ipswich Town     5.5
+    Chiedozie Ogbene                 Ipswich Town     5.0
+    Abdul Fatawu                     Ipswich Town     5.5
+    Jaden Philogene                  Ipswich Town     5.5
+    Sam Szmodics                     Ipswich Town     5.0
+    Kasey McAteer                    Ipswich Town     4.5
+    Anis Mehmeti                     Ipswich Town     5.0
+
+  FWD (13)
+    Haji Wright                      Coventry City    5.5
+    Brandon Thomas-Asante            Coventry City    5.0
+    Ellis Simms                      Coventry City    5.0
+    Jahnoah Markelo                  Coventry City    5.0
+    Norman Bassette                  Coventry City    4.5
+    Oli McBurnie                     Hull City        5.5
+    Enis Destan                      Hull City        4.5
+    Mason Burstow                    Hull City        4.5
+    Emersonn Correia da Silva        Ipswich Town     5.5
+    George Hirst                     Ipswich Town     5.0
+    Chuba Akpom                      Ipswich Town     5.0
+    Sindre Walle Egeli               Ipswich Town     4.5
+    Ali Al-Hamadi                    Ipswich Town     5.0
+
+============================================================
+STEP 3: Scraping FBref (Selenium) for last 3 seasons
+============================================================
+  Leagues to scrape:          ['Championship']
+  Leagues needing browser:    []
+    Championship 2023-24: loaded from cache (735 rows)
+    Championship 2024-25: loaded from cache (765 rows)
+    Championship 2025-26: loaded from cache (791 rows)
+
+  Total FBref rows combined: 2291
+
+============================================================
+STEP 4: Filtering to new signings + applying league multipliers
+============================================================
+  FBref columns: player='Unnamed: 1_level_0_Player', team='Unnamed: 4_level_0_Squad', pos='Unnamed: 3_level_0_Pos', season='season_tag', league='league_tag'
+
+  FBref rows matched to new signings: 181
+
+  [REVIEW] FBref->FPL matches below 95%:
+     92%  'Kai Andrews'  ->  'Kaine Andrews'
+     80%  'Ryan Andrews'  ->  'Kaine Andrews'
+     80%  'Ben Gibson'  ->  'Ben Wilson'
+     80%  'Jack Grieves'  ->  'Jacob Greaves'
+     94%  'Joël Latibeaudière'  ->  'Joel Latibeaudiere'
+     81%  'Jaden Philogene Bidace'  ->  'Jaden Philogene'
+     89%  'Sammie Szmodics'  ->  'Sam Szmodics'
+     84%  'Ben Wiles'  ->  'Ben Wilson'
+     80%  'Ben Wilmot'  ->  'Ben Wilson'
+     80%  'Sindre Egeli'  ->  'Sindre Walle Egeli'
+     89%  'Oliver McBurnie'  ->  'Oli McBurnie'
+
+  [FLAG] 12 new signings with no FBref data found:
+    - Miguel Brau (Coventry City, DEF)
+    - George Shepherd (Coventry City, MID)
+    - Loum Tchaouna (Coventry City, MID)
+    - Jack Butland (Hull City, GK)
+    - Harvey Cartwright (Hull City, GK)
+    - Thimothée Lo-Tutala (Hull City, GK)
+    - Mohamed Belloumi (Hull City, MID)
+    - David Akintola (Hull City, MID)
+    - Issa Diop (Ipswich Town, DEF)
+    - David Button (Ipswich Town, GK)
+    - Abdul Fatawu (Ipswich Town, MID)
+    - Emersonn Correia da Silva (Ipswich Town, FWD)
+
+  Rows after filtering + multipliers: 181
+
+  Adding 7 zero-stat rows for non-scrapeable leagues:
+    - George Shepherd (Championship)
+    - Loum Tchaouna (Championship)
+    - Jack Butland (Championship)
+    - Mohamed Belloumi (Championship)
+    - David Akintola (Championship)
+    - Abdul Fatawu (Championship)
+    - Emersonn Correia da Silva (Championship)
+  Season reliability: 1.0=127, 0.5=33, 0.1=28
+
+============================================================
+STEP 5: Building position-specific files (vaastav structure)
+============================================================
+  Saved: result_extended.csv (188 rows, extended cols)
+  Saved: new_signings_gk.csv (19 rows)
+  Saved: new_signings_def.csv (65 rows)
+  Saved: new_signings_mid.csv (81 rows)
+  Saved: new_signings_fwd.csv (23 rows)
+  Merged C:\Users\Andrej\Desktop\fpl ai\data\raw\fbref\new_signings\new_signings_gk.csv: 8 existing + 19 promoted-club -> 27 rows
+  Merged C:\Users\Andrej\Desktop\fpl ai\data\raw\fbref\new_signings\new_signings_def.csv: 27 existing + 65 promoted-club -> 92 rows
+  Merged C:\Users\Andrej\Desktop\fpl ai\data\raw\fbref\new_signings\new_signings_mid.csv: 42 existing + 81 promoted-club -> 123 rows
+  Merged C:\Users\Andrej\Desktop\fpl ai\data\raw\fbref\new_signings\new_signings_fwd.csv: 17 existing + 23 promoted-club -> 40 rows
+
+=== END: Stage 4c ===

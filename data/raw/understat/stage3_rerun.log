@@ -1,0 +1,73 @@
+Stage 3: Building team form dataset...
+  Seasons: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  Blocked: ['2026-27'] (live season -- never use)
+
+Part A: Building team form from vaastav data...
+  Loaded 59,820 player-GW rows
+  Calculating rolling form features (no cross-season bleed)...
+  Normalising attacking / defensive strength per GW...
+  Saved: team_form_vaastav.csv (5,124 rows)
+
+Part B: Fetching xG data from Understat...
+  Loading cached Understat data: C:\Users\Andrej\Desktop\fpl ai\data\raw\understat\raw_matches.json
+  2019-20: cached (380 matches in response)
+  2020-21: cached (380 matches in response)
+  2021-22: cached (380 matches in response)
+  2022-23: cached (380 matches in response)
+  2023-24: cached (380 matches in response)
+  2024-25: cached (380 matches in response)
+  2025-26: cached (380 matches in response)
+  Cache saved: raw_matches.json
+  Calculating rolling xG features (no cross-season bleed)...
+  Saved: team_xg_data.csv (5,320 rows)
+
+Part C: Merging vaastav form + Understat xG data...
+  Saved: team_form.csv (5,124 rows)
+
+============================================================
+=== STAGE 3 VALIDATION REPORT ===
+============================================================
+
+TEAM FORM FROM VAASTAV:
+  Rows: 5,124  (expected ~4,200)
+  Seasons covered: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  All teams have >= 30 GWs per season -- OK
+
+XG DATA FROM UNDERSTAT:
+  Matches fetched per season: 2019-20: 380, 2020-21: 380, 2021-22: 380, 2022-23: 380, 2023-24: 380, 2024-25: 380, 2025-26: 380
+  Seasons covered: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  Any fetch failures: None
+
+MERGED TEAM FORM:
+  Total rows: 5,124
+  Null values: None
+
+SANITY CHECKS:
+  Top 5 teams by avg xG last 5 GWs in 2024-25 (should be Man City, Liverpool, Arsenal etc):
+    1. Liverpool: 2.43
+    2. Bournemouth: 1.90
+    3. Chelsea: 1.89
+    4. Arsenal: 1.88
+    5. Man City: 1.87
+  Top 5 teams by avg xGA last 5 GWs in 2024-25 (lowest = best defense, should be top clubs):
+    1. Arsenal: 0.97
+    2. Liverpool: 0.97
+    3. Fulham: 1.22
+    4. Man City: 1.35
+    5. Chelsea: 1.41
+  Team with highest clean sheet rate 2024-25: Liverpool (36.1%) [should be a top 6 club]
+
+SAMPLE ROWS (5 rows from team_form.csv):
+          team  season  GW  was_home  goals_scored_for  goals_conceded  clean_sheet  goals_scored_last5  goals_conceded_last5  attacking_strength  defensive_strength  clean_sheet_probability
+   Bournemouth 2019-20  20     False                 0               2            0                 0.4                   1.2            0.071429            0.625000                 0.245693
+Crystal Palace 2023-24  16      True                 1               2            0                 1.2                   1.6            0.300000            0.454545                 0.235373
+      Brighton 2022-23  21     False                 1               2            0                 2.2                   1.6            1.000000            0.333333                 0.181228
+       Burnley 2019-20  13     False                 3               0            1                 1.2                   1.8            0.333333            0.562500                 0.290378
+       Chelsea 2020-21  32      True                 0               0            1                 1.4                   1.2            0.600000            0.666667                 0.561461
+
+FILES SAVED:
+  team_form_vaastav.csv  - 5,124 rows
+  team_xg_data.csv       - 5,320 rows
+  team_form.csv          - 5,124 rows (final merged)
+
+=== END REPORT ===

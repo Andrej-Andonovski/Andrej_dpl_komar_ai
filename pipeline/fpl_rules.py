@@ -54,19 +54,25 @@ def next_free_transfers(gw, ft_start, transfers_made,
       - +1 accrues every week, bank capped at ft_cap (5), never below 1
       - Wildcard / Free Hit weeks consume NO free transfers (chips preserve
         the bank; accrual still happens)
-      - GW1 squad selection consumes nothing
+      - GW1 squad selection consumes nothing AND banks nothing — it isn't a
+        transfer opportunity at all, so GW2 just gets the standard 1 FT
+        accrual, not ft_start+1 (2026-08 fix: this previously double-counted
+        the placeholder ft_start seed as if it were a real unused transfer,
+        handing GW2 an extra free transfer that doesn't exist in real FPL)
       - hits (transfers beyond ft_start) cannot push next week's FTs below 1
       - ft_events: {gw: granted_ft} one-off rule events (e.g. the AFCON
         grant) — configuration, never hardcoded in optimizer logic
     """
     ft_events = ft_events or {}
-    if is_wildcard or is_freehit or gw == 1:
-        consumed = 0
-    else:
-        consumed = min(transfers_made, ft_start)
     nxt = gw + 1
     if nxt in ft_events:
         return ft_events[nxt]
+    if gw == 1:
+        return 1
+    if is_wildcard or is_freehit:
+        consumed = 0
+    else:
+        consumed = min(transfers_made, ft_start)
     return max(1, min(ft_cap, ft_start - consumed + 1))
 
 

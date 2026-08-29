@@ -1,0 +1,279 @@
+
+======================================================================
+STAGE 6 -- Feature Engineering Pipeline
+======================================================================
+  Starting from step: 1
+  Last completed step (from state): 8
+
+
+======================================================================
+STEP 1 -- Load and Audit All Source Files
+======================================================================
+
+File                                         Rows   Cols  Key columns present                                 Missing             
+----------------------------------------------------------------------------------------------------------------------------------
+  historical_gw_data.csv                   59,820     40  name, GW, season, total_points, minutes +15 more    none
+  historical_gk.csv                         5,154     40  name, season, GW, total_points, saves +3 more       none
+  historical_def.csv                       22,108     40  name, season, GW, total_points, clean_sheets +2 more  tackles_won_per_90, interceptions_per_90, defensive_actions_available
+  historical_mid.csv                       25,975     40  name, season, GW, total_points, goals_scored +2 more  none
+  historical_fwd.csv                        6,563     40  name, season, GW, total_points, goals_scored +2 more  none
+  new_signings_gk.csv                          27     41  fpl_name(as name), season, saves, clean_sheets      prev_saves_per_game, prev_cs_rate, data_source, data_confidence
+  new_signings_def.csv                         92     41  fpl_name(as name), season                           adjG_per_90, adjA_per_90, interceptions_per_90, tackles_won_per_90, defensive_actions_available, data_source
+  new_signings_mid.csv                        123     41  fpl_name(as name), season                           adjG_per_90, adjA_per_90, league_multiplier, season_reliability, data_source, data_confidence
+  new_signings_fwd.csv                         40     41  fpl_name(as name), season                           adjG_per_90, adjA_per_90, league_multiplier, season_reliability, data_source, data_confidence
+  team_form.csv                             5,124     35  team, season, GW, xG_last5, xGA_last5 +3 more       none
+  fixture_difficulty.csv                      760      7  team(as team_name), GW(as gameweek), difficulty(as fdr)  season
+  players_raw.csv                             558     38  id, team, element_type, now_cost                    web_name
+  player_upcoming_fixtures.csv             21,204      6  element(as player_id), GW(as gameweek), difficulty, is_home, opponent_team  none
+
+CHECK 1 -- Players in vaastav_gw not in players_raw:
+  Count: 965
+  Note: expected -- these are historical players who have left the PL
+
+CHECK 2 -- Players in players_raw not in vaastav_gw:
+  Total in players_raw with zero GW history: 0
+  -- Have stage4a/4b data:  0
+  -- No data at all:        0
+
+CHECK 3 -- Team name mismatches (vaastav vs team_form):
+  No mismatches found -- join will be clean
+
+CHECK 4 -- 2026-27 data scan:
+  2026-27 data: NOT FOUND -- clean
+
+CHECK 5 -- Season range in historical_gw_data.csv:
+  Seasons found: ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25', '2025-26']
+  All 7 expected seasons present -- OK
+
+CHECK 6 -- Row count sanity:
+  historical_gw_data.csv              expected ~51,044  actual 59,820  [MISMATCH]
+  new_signings_def.csv                expected ~   107  actual     92  [MISMATCH]
+  new_signings_mid.csv                expected ~   123  actual    123  [OK]
+  new_signings_fwd.csv                expected ~    46  actual     40  [MISMATCH]
+  new_signings_gk.csv                 expected ~    29  actual     27  [OK]
+
+
+======================================================================
+STEP 1 COMPLETE -- Source Audit
+======================================================================
+  Files loaded successfully:      13/13
+  2026-27 data detected:          NO
+  Critical missing columns:       27
+    historical_def.csv: missing 'tackles_won_per_90'
+    historical_def.csv: missing 'interceptions_per_90'
+    historical_def.csv: missing 'defensive_actions_available'
+    new_signings_gk.csv: missing 'prev_saves_per_game'
+    new_signings_gk.csv: missing 'prev_cs_rate'
+    new_signings_gk.csv: missing 'data_source'
+    new_signings_gk.csv: missing 'data_confidence'
+    new_signings_def.csv: missing 'adjG_per_90'
+    new_signings_def.csv: missing 'adjA_per_90'
+    new_signings_def.csv: missing 'interceptions_per_90'
+    new_signings_def.csv: missing 'tackles_won_per_90'
+    new_signings_def.csv: missing 'defensive_actions_available'
+    new_signings_def.csv: missing 'data_source'
+    new_signings_mid.csv: missing 'adjG_per_90'
+    new_signings_mid.csv: missing 'adjA_per_90'
+    new_signings_mid.csv: missing 'league_multiplier'
+    new_signings_mid.csv: missing 'season_reliability'
+    new_signings_mid.csv: missing 'data_source'
+    new_signings_mid.csv: missing 'data_confidence'
+    new_signings_fwd.csv: missing 'adjG_per_90'
+    new_signings_fwd.csv: missing 'adjA_per_90'
+    new_signings_fwd.csv: missing 'league_multiplier'
+    new_signings_fwd.csv: missing 'season_reliability'
+    new_signings_fwd.csv: missing 'data_source'
+    new_signings_fwd.csv: missing 'data_confidence'
+    fixture_difficulty.csv: missing 'season'
+    players_raw.csv: missing 'web_name'
+  Team name mismatches found:     0
+  Row count mismatches:           3
+    historical_gw_data.csv: expected ~51,044, got 59,820
+    new_signings_def.csv: expected ~107, got 92
+    new_signings_fwd.csv: expected ~46, got 40
+
+  NEXT: Step 2 will build the base GW table from vaastav_gw data only.
+  No features computed, no files written -- structural foundation only.
+
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+======================================================================
+Proceed to Step 2? (y/n): ======================================================================
+
+======================================================================
+STEP 2 -- Build Base GW Table
+======================================================================
+
+  Loading C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\raw\vaastav\historical_gw_data.csv ...
+  Loaded 59,820 rows x 40 cols
+
+  Checking required columns ...
+  All required columns present -- OK
+
+  NOTE: normalised 20 'GKP' rows -> 'GK'
+  NOTE: season 2019-20 has GWs up to 47 (COVID extension) -- 8,700 rows, allowed
+
+  Running row-level validations ...
+  All validations passed -- OK
+
+  Total rows:       59,820
+  GK rows:          5,174
+  DEF rows:         22,108
+  MID rows:         25,975
+  FWD rows:         6,563
+  Unique players:   1,392
+  Seasons present:  2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
+  Null total_points: 0  (OK)
+
+  Building web_name from players_raw.csv ...
+  Constructed web_name from first_name + second_name -- sample:
+    id=1  web_name='David Raya Martín'
+    id=2  web_name='Kepa Arrizabalaga Revuelta'
+    id=3  web_name='Illan Meslier'
+    id=4  web_name='Gabriel dos Santos Magalhães'
+    id=5  web_name='Jurriën Timber'
+  web_name nulls: 0  (558 total players in players_raw)
+
+  Saved base_gw_table.csv  (59,820 rows x 22 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 2 COMPLETE -- Base GW Table
+======================================================================
+  Rows:           59,820
+  Unique players: 1,392
+  Null targets:   0  (must be 0)
+  Position split: GK 5,174 / DEF 22,108 / MID 25,975 / FWD 6,563
+  Saved to:       data/processed/base_gw_table.csv
+
+  NEXT: Step 3 will compute all rolling player features from
+  the base table only. No new data sources. Features computed:
+  form_last3, form_last5, minutes_reliability_season,
+  cumulative_points_season, avg_points_per_game_season,
+  goals_per_game_season, assists_per_game_season,
+  clean_sheet_rate_season, saves_per_game_season,
+  points_per_million. All windows strictly partition by season.
+
+Proceed to Step 3? (y/n): ======================================================================
+
+======================================================================
+STEP 3 -- Compute Rolling Player Features
+======================================================================
+
+  Loading C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\base_gw_table.csv ...
+  Loaded 59,820 rows x 22 cols
+
+  Sorting by name, season, GW ...
+  Sort complete
+
+  Computing rolling features (all windows partition by [name, season]) ...
+  All 10 features computed
+
+  Filling NaN values ...
+  NaN fill complete
+
+  Running leakage validation (GW==1 must all be 0) ...
+
+  Feature                          GW1 zeros    Leakage check
+  --------------------------------------------------------
+  form_last3                       YES          PASS
+  form_last5                       YES          PASS
+  cumulative_points_season         YES          PASS
+  avg_points_per_game_season       YES          PASS
+  goals_per_game_season            YES          PASS
+  assists_per_game_season          YES          PASS
+  clean_sheet_rate_season          YES          PASS
+  saves_per_game_season            YES          PASS
+  minutes_reliability_season       YES          PASS
+  points_per_million               YES          PASS
+
+  All 10/10 leakage checks: PASS
+
+  NaN assertion: 0 NaNs remaining -- OK
+
+  Feature distribution summary:
+  Feature                              Mean      Std      Min      Max
+  --------------------------------------------------------------------
+  form_last3                          3.139    2.147   -5.000   24.000
+  form_last5                          3.142    1.920   -5.000   24.000
+  cumulative_points_season           40.233   36.262   -5.000  309.000
+  avg_points_per_game_season          3.140    1.709   -5.000   24.000
+  goals_per_game_season               0.106    0.187    0.000    3.000
+  assists_per_game_season             0.095    0.156    0.000    4.000
+  clean_sheet_rate_season             0.246    0.200    0.000    1.000
+  saves_per_game_season               0.243    0.856    0.000    9.000
+  minutes_reliability_season          0.611    0.310    0.000    1.000
+  points_per_million                 73.284   61.632    0.000  347.619
+
+  Saved base_gw_table.csv  (59,820 rows x 32 cols)
+[state] Saved to C:\Users\Andrej\Desktop\fpl ai\pipeline\..\data\processed\stage6_state.json
+
+======================================================================
+STEP 3 COMPLETE -- Rolling Player Features
+======================================================================
+  Features computed:          10
+  Leakage checks passed:      10/10  (must be 10/10)
+  GW1 zero checks passed:     10/10  (must be 10/10)
+  NaN values remaining:       0      (must be 0)
+  Columns in base table now:  32     (22 base + 10 rolling)
+  Saved to: data/processed/base_gw_table.csv
+
+  NEXT: Step 4 will attach stage 4a/4b previous-league baseline
+  features as static columns on every GW row for each player's
+  first PL season. These become prior knowledge features for
+  new signings where vaastav has no history yet.
+
+Proceed to Step 4? (y/n): ======================================================================
+
+======================================================================
+STEP 4 -- Attach Previous-League Baseline Features
+======================================================================
+
+  Loading base_gw_table.csv ...
+  Loaded 59,820 rows x 32 cols
+
+  Loading new_signings files ...
+    new_signings_gk.csv  27 rows
+    new_signings_def.csv  92 rows
+    new_signings_mid.csv  123 rows
+    new_signings_fwd.csv  40 rows
+  Combined: 282 rows  (115 unique players)
+
+  STEP 4A: Building reliability-weighted prev-league lookup ...
+Traceback (most recent call last):
+  File "C:\Users\Andrej\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'data_source'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 2238, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 2217, in main
+    step1(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 481, in step1
+    step2(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 724, in step2
+    step3(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 963, in step3
+    step4(state)
+    ~~~~~^^^^^^^
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1137, in step4
+    lookup = build_prev_lookup(sigs_all)
+  File "C:\Users\Andrej\Desktop\fpl ai\pipeline\feature_engineering_stage6.py", line 1016, in build_prev_lookup
+    foreign = sigs_all[sigs_all["data_source"] != "vaastav"].copy()
+                       ~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Andrej\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\Andrej\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'data_source'

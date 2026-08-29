@@ -36,6 +36,13 @@ except ImportError:
     from minutes_model import MinutesModel
     from chip_percentile import ChipPercentileLedger
 
+# GW1 debutant prev-league lookup (2026-08-21 fix) — reuse Stage 6's own
+# reliability-weighted aggregation instead of duplicating it.
+try:
+    from pipeline.feature_engineering_stage6 import build_prev_lookup as _build_prev_lookup
+except ImportError:
+    from feature_engineering_stage6 import build_prev_lookup as _build_prev_lookup
+
 warnings.filterwarnings("ignore")
 random.seed(42)
 np.random.seed(42)
@@ -47,21 +54,25 @@ HIST_CSV     = os.path.join(DATA_DIR, "raw", "fpl_api", "player_history.csv")
 PLAYERS_CSV  = os.path.join(DATA_DIR, "raw", "fpl_api", "players_raw.csv")
 FIXTURES_CSV = os.path.join(DATA_DIR, "raw", "fpl_api", "fixtures_raw.csv")
 TRAIN_DIR    = os.path.join(DATA_DIR, "processed")
+NEW_SIGNINGS_DIR = os.path.join(DATA_DIR, "raw", "fbref", "new_signings")
 OUTPUT_JSON  = os.path.join(DATA_DIR, "intel", "season_simulation.json")
 AVAIL_JSON   = os.path.join(DATA_DIR, "intel", "availability.json")
 RECS_JSON    = os.path.join(DATA_DIR, "intel", "recommendations.json")
 
 # ── Constants ─────────────────────────────────────────────────────────────────
+# Env-overridable knobs (2026-08-21) — the ones that actually shape a GW1
+# squad pick. Defaults are the Optuna trial 429 tuned values; override via
+# env var to explore variants without editing this file each time.
 BUDGET         = 100.0
 MAX_CLUB       = 3
 SIM_END_GW     = int(os.environ.get("SIM_END_GW", "38"))
 CHIP_LOCKOUT   = 4
 MAX_HITS       = 1
-FDR_MULT        = 0.028451479772615692   # optuna trial 429 best (1799 pts, 0 pen)
-FDR_MULT_DEF    = 0.08424155707006356   # optuna trial 429 best
-OWN_BOOST_GW1  = 0.212871272538615     # optuna trial 429 best
-PRED_CAP       = 20.0   # per-player prediction ceiling
-XI_PRED_CAP    = 120.0  # XI predicted total ceiling — keeps predictions calibrated
+FDR_MULT        = float(os.environ.get("FDR_MULT",     "0.028451479772615692"))  # optuna trial 429 best (1799 pts, 0 pen)
+FDR_MULT_DEF    = float(os.environ.get("FDR_MULT_DEF",  "0.08424155707006356"))  # optuna trial 429 best
+OWN_BOOST_GW1  = float(os.environ.get("OWN_BOOST_GW1", "0.212871272538615"))     # optuna trial 429 best — GW1 ownership/template bias
+PRED_CAP       = float(os.environ.get("PRED_CAP",      "20.0"))   # per-player prediction ceiling
+XI_PRED_CAP    = float(os.environ.get("XI_PRED_CAP",   "120.0"))  # XI predicted total ceiling — keeps predictions calibrated
 TC_THRESH      = 6.1714966141844405   # optuna trial 429 best
 TC_FORM_MIN    = 6.0    # tuned — enables tc2 at GW25 (+67 pts)
 TC2_MIN_GW   = 20     # earliest GW tc2 is allowed to fire (set2 only)
@@ -74,7 +85,7 @@ WC_THRESH      = 5      # squad members below pos avg triggers WC
 WC17_LOYALTY   = 5.0    # loyalty bonus when force-using WC at GW17
 CAP_STREAK_MAX      = 3     # consecutive captain GWs before rotation considered
 CAP_FORM_MIN        = 6.0   # form_last3 below this + streak triggers rotation
-CAP_FORM_GATE       = 6.565535461604104    # optuna trial 429 best
+CAP_FORM_GATE       = float(os.environ.get("CAP_FORM_GATE", "6.565535461604104"))    # optuna trial 429 best
 CAP_FORM_PENALTY    = 0.5736997458448272   # optuna trial 429 best
 CAP_STREAK_LIMIT    = 2                    # optuna trial 429 best
 CAP_STREAK_FORM     = 6.0                  # streak penalty only if form_last3 below this
@@ -90,10 +101,30 @@ MC_SQUADS      = 3      # Monte Carlo random squads
 DGW_PRED_MULT  = 2.0   # prediction boost for players with 2 fixtures in DGW weeks
 
 # ── Intel 07 — Bench Intelligence ─────────────────────────────────────────────
-MAX_BENCH_PRICE    = 5.5   # max price for bench candidates (£m)
+MAX_BENCH_PRICE    = float(os.environ.get("MAX_BENCH_PRICE", "5.5"))  # max price for bench candidates (£m)
+
+# Bench weight in run_ilp's objective (2026-08-21, env-tunable). The real,
+# live objective (below, ~line 1601) was lpSum(pred[i] * s[i]) — XI only,
+# ZERO weight on bench, period. With bench contributing nothing, the solver's
+# only incentive re: bench is to spend as little as possible on it to free
+# budget for the XI — quality/reliability of the 4 bench picks was pure
+# accident. Default 0.0 preserves that original (arguably broken) baseline
+# exactly; set nonzero to make the solver actually value the bench.
+BENCH_WEIGHT    = float(os.environ.get("BENCH_WEIGHT",    "0.0"))
+BENCH_GK_WEIGHT = float(os.environ.get("BENCH_GK_WEIGHT", "0.0"))
+
+# Minutes-reliability floor for NEW buy candidates (2026-08-21). 0.0 = off
+# (default, no behaviour change). rotation_risk.json has zero signal at GW1
+# (needs prior-season minutes that don't exist pre-season) so this is the
+# only "will this player actually play" proxy available for a live GW1 run:
+# minutes_reliability for established players, prev_reliability_avg for
+# debutants (has_prev_league_data=1). Players with no signal either way
+# (pos_avg fallback, or with a genuinely 0 rolling denominator) are left
+# alone — there's nothing to judge them on.
+MIN_BUY_MINUTES_REL = float(os.environ.get("MIN_BUY_MINUTES_REL", "0.0"))
 MIN_MINUTES_REL    = 0.5   # must have played 50%+ of available minutes
 MIN_FORM_LAST3     = 2.0   # minimum form to be considered
-BENCH_BONUS_NORMAL = 2.7084338238469625   # optuna trial 429 best
+BENCH_BONUS_NORMAL = float(os.environ.get("BENCH_BONUS_NORMAL", "2.7084338238469625"))   # optuna trial 429 best
 BENCH_BONUS_BB_GW  = 2.2462419467730097   # optuna trial 429 best
 LOOKAHEAD_GWS      = 3     # how many GWs ahead to evaluate for BB window
 BB_MIN_GW          = 8   # optuna trial 429 best
@@ -227,15 +258,27 @@ MP_BENCH_SLOTS = (tuple(float(v) for v in _slots_env.split(","))
 MP_W_BENCH_GK = float(os.environ.get("MP_W_BENCH_GK", "0.04"))
 
 # ── Cross-season backtests (fixing stage, docs/phase4_report.md) ─────────────
-# SIM_SEASON picks the season to simulate. Default "2025-26" = original
-# inputs + intel. Other seasons: inputs from data/raw/seasons/<S>/
-# (pipeline/build_season_inputs.py), NO intel data, no GW15 FT event,
-# training restricted to seasons strictly before SIM_SEASON (no leakage),
-# corrected rules mandatory. Chip/FT rules are applied uniformly (2025-26
-# ruleset) — the cross-season test measures CALENDAR generalization, not
-# historical rule replay.
-SIM_SEASON = os.environ.get("SIM_SEASON", "2025-26")
-if SIM_SEASON != "2025-26":
+# SIM_SEASON picks the season to simulate. Default LIVE_SEASON = original
+# inputs (data/raw/fpl_api, refreshed each season-rollover) + intel. Other
+# seasons: inputs from data/raw/seasons/<S>/ (pipeline/build_season_inputs.py),
+# NO intel data, no GW15 FT event, training restricted to seasons strictly
+# before SIM_SEASON (no leakage), corrected rules mandatory. Chip/FT rules
+# are applied uniformly (current ruleset) — the cross-season test measures
+# CALENDAR generalization, not historical rule replay.
+#
+# LIVE_SEASON is the sentinel for "read straight from the live data/raw/
+# fpl_api path" and must be bumped forward on every season rollover (was
+# "2025-26", now "2026-27" — see CLAUDE.md's 2026-27 refresh notes).
+# INTEL_SEASON is separate: it's the season the intel_01-05 scrape (data/
+# intel/availability.json etc.) actually covers, which lags behind
+# LIVE_SEASON until those scripts are re-run for the new season — do not
+# conflate the two even though they were historically the same string.
+# Bumped to 2026-27 on 2026-08-21 after intel_01/02/03/04/05 were re-run
+# against live 2026-27 GW1 sources.
+LIVE_SEASON  = "2026-27"
+INTEL_SEASON = "2026-27"
+SIM_SEASON = os.environ.get("SIM_SEASON", LIVE_SEASON)
+if SIM_SEASON != LIVE_SEASON:
     if RULES_MODE != "corrected":
         raise ValueError("cross-season runs require RULES_MODE=corrected")
     _sdir = os.path.join(DATA_DIR, "raw", "seasons", SIM_SEASON)
@@ -308,12 +351,31 @@ LGBM_PARAMS = dict(
     min_child_samples=27, random_state=42, verbosity=-1
 )
 
-FEAT_COLS = [
+# Personal-rolling-history features — undefined (0.0) for a player's literal
+# first PL appearance, whether that's a today's-GW1 debutant or a rookie from
+# any past season. Kept as its own list so the debutant path in
+# build_gw1_pool() can zero exactly these while still populating PREV_COLS.
+ROLLING_FEAT_COLS = [
     "form_last3", "form_last5", "avg_points_per_game",
     "minutes_reliability", "goals_per_game", "assists_per_game",
     "clean_sheet_rate", "saves_per_game",
-    "value", "was_home", "fdr",
 ]
+
+# Prev-league features (Stage 6 / new_signings pipeline) — reliability-
+# weighted stats from a player's last league before the PL (Championship,
+# foreign leagues). Historically computed by Stage 6 but never wired into
+# this model's feature set (2026-08-21 fix) — see build_gw1_pool() for how
+# current-season debutants (no vaastav row yet) get these populated live.
+PREV_LEAGUE_FEAT_COLS = [
+    "has_prev_league_data", "prev_adjG_per_90", "prev_adjA_per_90",
+    "prev_league_multiplier", "prev_seasons_available", "prev_reliability_avg",
+    "prev_minutes_avg", "prev_small_sample", "prev_int_per_90",
+    "prev_tklW_per_90", "prev_saves_per_game", "prev_cs_rate",
+]
+
+FEAT_COLS = ROLLING_FEAT_COLS + [
+    "value", "was_home", "fdr",
+] + PREV_LEAGUE_FEAT_COLS
 
 # Intel 08 feature flags — kept for trial_runner compatibility; team/opp features
 # are NOT in FEAT_COLS so these flags have no effect on predictions.
@@ -348,8 +410,12 @@ def load_player_history():
     """Returns {player_id: {gw: {total_points, minutes, goals_scored,
                                   assists, clean_sheets, saves, value, was_home}}}
     DGW: players can have 2 rows per GW — points/minutes/stats are summed."""
-    df = pd.read_csv(HIST_CSV)
     hist = defaultdict(dict)
+    try:
+        df = pd.read_csv(HIST_CSV)
+    except pd.errors.EmptyDataError:
+        # Pre-season: no GW has been played yet, file has no header at all.
+        return hist
     for r in df.itertuples(index=False):
         pid = int(r.player_id)
         gw  = int(r.gameweek)
@@ -431,7 +497,7 @@ def load_training_data():
         df = df.loc[:, ~df.columns.duplicated()]   # drop duplicate cols
         # walk-forward hygiene across seasons: train ONLY on seasons strictly
         # before SIM_SEASON ("YYYY-YY" strings compare correctly). No-op for
-        # 2025-26 (training files end at 2024-25).
+        # LIVE_SEASON (training files end at 2025-26, one season before).
         if "season" in df.columns:
             n0 = len(df)
             df = df[df["season"] < SIM_SEASON]
@@ -458,8 +524,8 @@ def _norm(s):
 
 def load_availability():
     """Load intel_03 availability.json → {gw_str: gw_data}."""
-    if SIM_SEASON != "2025-26":
-        print(f"  [AVAIL] intel data is 2025-26-only — disabled for {SIM_SEASON}")
+    if SIM_SEASON != INTEL_SEASON:
+        print(f"  [AVAIL] intel data is {INTEL_SEASON}-only — disabled for {SIM_SEASON}")
         return {}
     if not os.path.exists(AVAIL_JSON):
         print("  [AVAIL] availability.json not found — skipping intel penalties")
@@ -471,8 +537,8 @@ def load_availability():
 
 def load_pi_intel():
     """intel_03 availability_pct + intel_04 rotation_risk as minutes-model
-    features: {gw: {pid: (availability_pct, rotation_risk)}} (2025-26 only)."""
-    if SIM_SEASON != "2025-26":
+    features: {gw: {pid: (availability_pct, rotation_risk)}} (INTEL_SEASON only)."""
+    if SIM_SEASON != INTEL_SEASON:
         return {}
     out = {}
     for path, field in ((AVAIL_JSON, "availability_pct"),
@@ -507,8 +573,8 @@ def load_pi_intel():
 
 def load_recommendations():
     """Load intel_05 recommendations.json → {gw_str: gw_data}."""
-    if SIM_SEASON != "2025-26":
-        print(f"  [RECS] intel data is 2025-26-only — disabled for {SIM_SEASON}")
+    if SIM_SEASON != INTEL_SEASON:
+        print(f"  [RECS] intel data is {INTEL_SEASON}-only — disabled for {SIM_SEASON}")
         return {}
     if not os.path.exists(RECS_JSON):
         print("  [RECS] recommendations.json not found — captain override disabled")
@@ -564,16 +630,20 @@ def apply_intel_captain_override(captain_id, xi_pids, pool_by_pid, recs_gws, gw)
 def apply_availability_penalties(pool, avail_gws, gw):
     """
     Apply AVAIL_MULT to pool predictions using intel_03 tier data (player_id keyed).
-    Returns (pool, n_penalized).
+    Returns (pool, n_penalized, out_pids) — out_pids are confirmed OUT/suspended
+    (mult == 0.0), for the caller to exclude from new squad additions (a
+    guaranteed-absent player is worthless as bench fodder too — zero points
+    AND zero auto-sub safety net).
     """
     gw_str = str(gw)
     if gw_str not in avail_gws:
-        return pool, 0
+        return pool, 0, set()
 
     gw_avail    = avail_gws[gw_str].get("players", {})
     n_penalized = 0
     out_names   = []
     dbt_names   = []
+    out_pids    = set()
 
     for p in pool:
         pid_str = str(p["player_id"])
@@ -586,6 +656,7 @@ def apply_availability_penalties(pool, avail_gws, gw):
             n_penalized += 1
             if mult == 0.0:
                 out_names.append(p["web_name"])
+                out_pids.add(p["player_id"])
             elif mult <= 0.5:
                 dbt_names.append(p["web_name"])
 
@@ -597,7 +668,7 @@ def apply_availability_penalties(pool, avail_gws, gw):
         if dbt_names:
             print(f"    DOUBTFUL: {_fmt(dbt_names)}")
 
-    return pool, n_penalized
+    return pool, n_penalized, out_pids
 
 
 # ── Intel 07 — Bench Intelligence ─────────────────────────────────────────────
@@ -936,11 +1007,11 @@ def build_gw1_team_form(players_df):
     For GW1, use prior-season averages from team_form.csv as team form prior.
     Returns {team_id: {team_goals_last3, team_cs_rate_last3}}
     """
-    if SIM_SEASON != "2025-26":
-        # teams_raw.csv maps names to 2025-26 team ids — wrong for other
-        # seasons; fall back to the league-average prior
+    if SIM_SEASON != LIVE_SEASON:
+        # teams_raw.csv is the live file and maps names to LIVE_SEASON team
+        # ids — wrong for other seasons; fall back to the league-average prior
         print(f"  [GW1 TEAM FORM] disabled for {SIM_SEASON} (id mapping is "
-              "2025-26-specific) — league-average prior")
+              f"{LIVE_SEASON}-specific) — league-average prior")
         return {}
     team_form_path = os.path.join(DATA_DIR, "processed", "team_form.csv")
     if not os.path.exists(team_form_path):
@@ -987,8 +1058,30 @@ def build_gw1_team_form(players_df):
 
 # ── GW1 Player Pool ───────────────────────────────────────────────────────────
 
+def load_debutant_prev_lookup():
+    """
+    norm_name -> prev-league feature dict, from data/raw/fbref/new_signings/
+    (Stage 4a/4b/4c output). Used by build_gw1_pool for players with ZERO
+    vaastav history (true PL debutants: promoted-club retained squads, foreign
+    transfers) so they get real prev-league signal instead of falling all the
+    way through to a blind position-average.
+    """
+    parts = []
+    for pos_key in ("gk", "def", "mid", "fwd"):
+        path = os.path.join(NEW_SIGNINGS_DIR, f"new_signings_{pos_key}.csv")
+        if os.path.exists(path):
+            parts.append(pd.read_csv(path, low_memory=False))
+    if not parts:
+        return {}
+    sigs_all = pd.concat(parts, ignore_index=True)
+    lookup_df = _build_prev_lookup(sigs_all)
+    return {_norm(r["sig_name"]): r.to_dict() for _, r in lookup_df.iterrows()}
+
+
 def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
     """Build feature vectors for GW1 from 2024-25 training data averages."""
+    debutant_lookup = load_debutant_prev_lookup()
+
     # Position averages from 2024-25 (fallback)
     pos_avgs = {}
     for pos, df in train_dfs.items():
@@ -1009,7 +1102,7 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
             name_idx[_norm(nm)] = grp[feat_avail].mean().to_dict()
 
     pool = []
-    stats = {"exact": 0, "partial": 0, "pos_avg": 0}
+    stats = {"exact": 0, "partial": 0, "debutant": 0, "pos_avg": 0}
     for r in players_df.itertuples(index=False):
         pid   = int(r.id)
         pos   = str(r.position)
@@ -1038,6 +1131,39 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
                     break
 
         if feats is None:
+            # True debutant (no vaastav PL history at all): zero the
+            # personal-rolling-history features (matches the shape of any
+            # player's actual first-ever PL row) and populate real
+            # prev-league signal instead of falling through to pos_avg.
+            dfeats = None
+            for candidate in [web, sn, fn + " " + sn, fn]:
+                nc = _norm(candidate)
+                if nc and nc in debutant_lookup:
+                    dfeats = debutant_lookup[nc]
+                    break
+            if dfeats is None:
+                nw = _norm(web)
+                for tn, tf in debutant_lookup.items():
+                    if nw and len(nw) >= 4 and (nw in tn or tn in nw):
+                        dfeats = tf
+                        break
+            if dfeats is not None:
+                feats = {c: 0.0 for c in ROLLING_FEAT_COLS}
+                feats["has_prev_league_data"]   = 1.0
+                feats["prev_adjG_per_90"]       = dfeats.get("prev_adjG_per_90", 0.0)
+                feats["prev_adjA_per_90"]       = dfeats.get("prev_adjA_per_90", 0.0)
+                feats["prev_league_multiplier"] = dfeats.get("prev_league_multiplier", 0.0)
+                feats["prev_seasons_available"] = dfeats.get("prev_seasons_available", 0.0)
+                feats["prev_reliability_avg"]   = dfeats.get("prev_reliability_avg", 0.0)
+                feats["prev_minutes_avg"]       = dfeats.get("prev_minutes_avg", 0.0)
+                feats["prev_small_sample"]      = dfeats.get("prev_small_sample", 0.0)
+                feats["prev_int_per_90"]        = dfeats.get("prev_int_per_90", 0.0) if pos == "DEF" else 0.0
+                feats["prev_tklW_per_90"]       = dfeats.get("prev_tklW_per_90", 0.0) if pos == "DEF" else 0.0
+                feats["prev_saves_per_game"]    = dfeats.get("prev_saves_per_game", 0.0) if pos == "GK" else 0.0
+                feats["prev_cs_rate"]           = dfeats.get("prev_cs_rate", 0.0) if pos == "GK" else 0.0
+                stats["debutant"] += 1
+
+        if feats is None:
             feats = dict(pos_avgs.get(pos, {}))
             stats["pos_avg"] += 1
 
@@ -1056,7 +1182,8 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
         })
 
     print(f"  [GW1 pool] {len(pool)} players | "
-          f"exact={stats['exact']} partial={stats['partial']} pos_avg={stats['pos_avg']}")
+          f"exact={stats['exact']} partial={stats['partial']} "
+          f"debutant={stats['debutant']} pos_avg={stats['pos_avg']}")
 
     # Attach team form features (GW1: use 2024-25 historical averages)
     gw1_team_form = build_gw1_team_form(players_df) if TEAM_FEATURES else {}
@@ -1514,8 +1641,14 @@ def run_ilp(pool, current_squad_ids, available_budget, free_transfers,
         else:
             ti = to = hits = None
 
-        # Objective: maximise XI score minus hit penalties
+        # Objective: maximise XI score (+ weighted bench value) minus hit penalties
         obj = lpSum(pred[i] * s[i] for i in idx)
+        if BENCH_WEIGHT > 0.0:
+            obj += lpSum(BENCH_WEIGHT * pred[i] * (x[i] - s[i])
+                         for i in idx if pos[i] != 1)   # outfield bench
+        if BENCH_GK_WEIGHT > 0.0:
+            obj += lpSum(BENCH_GK_WEIGHT * pred[i] * (x[i] - s[i])
+                         for i in idx if pos[i] == 1)   # bench GK
         if hits is not None:
             obj -= 4.0 * hits
         prob += obj
@@ -2040,11 +2173,18 @@ def next_ft(gw, ft_start, used, is_wc, is_fh):
         # nothing. One-off grants live in RULE_EVENTS_FT, not in code.
         return next_free_transfers(gw, ft_start, used, is_wc, is_fh,
                                    ft_cap=5, ft_events=RULE_EVENTS_FT)
-    actual_used = 0 if (is_wc or is_fh or gw == 1) else used
-    remaining   = max(0, ft_start - actual_used)
-    next_gw     = gw + 1
+    next_gw = gw + 1
     if next_gw == 15:
         return 5              # GW15 always gets 5 FTs flat (banked lost)
+    if gw == 1:
+        # Initial squad selection isn't a transfer opportunity — nothing was
+        # banked, so GW2 just gets the standard 1 FT (2026-08 fix: this used
+        # to run ft_start through the remaining+1 formula and double-count
+        # the placeholder seed as an unused transfer, handing GW2 an extra
+        # FT that doesn't exist in real FPL).
+        return 1
+    actual_used = 0 if (is_wc or is_fh) else used
+    remaining   = max(0, ft_start - actual_used)
     cap = 5 if next_gw > 15 else 2
     return min(cap, remaining + 1)
 
@@ -2288,7 +2428,43 @@ def run_simulation():
 
         # ── Availability penalties (intel_03 tier data) ─────────────────────
         if OPTIMIZER != "mp":       # matrix already applies tier multipliers
-            pool, _ = apply_availability_penalties(pool, avail_gws, gw)
+            pool, _, out_pids = apply_availability_penalties(pool, avail_gws, gw)
+            # Confirmed OUT/suspended players are never worth newly rostering
+            # (zero points, zero auto-sub value) — drop them as buy candidates.
+            # Players already owned are untouched; hold-vs-sell stays the
+            # transfer logic's call, not this filter's.
+            n_out_excluded = sum(1 for p in pool
+                                  if p["player_id"] in out_pids
+                                  and p["player_id"] not in current_squad)
+            if n_out_excluded:
+                pool = [p for p in pool if p["player_id"] not in out_pids
+                        or p["player_id"] in current_squad]
+                print(f"  [AVAIL] Excluded {n_out_excluded} confirmed-OUT "
+                      f"players from buy candidates")
+
+            # Minutes-reliability floor for new buys (opt-in, MIN_BUY_MINUTES_REL).
+            if MIN_BUY_MINUTES_REL > 0.0:
+                def _reliability_proxy(p):
+                    mr = p.get("minutes_reliability", 0.0)
+                    if mr > 0.0:
+                        return mr
+                    if p.get("has_prev_league_data", 0.0) >= 1.0:
+                        return p.get("prev_reliability_avg", 0.0)
+                    return None  # no signal either way — don't judge
+
+                n_fringe_excluded = sum(
+                    1 for p in pool
+                    if p["player_id"] not in current_squad
+                    and (rp := _reliability_proxy(p)) is not None
+                    and rp < MIN_BUY_MINUTES_REL
+                )
+                if n_fringe_excluded:
+                    pool = [p for p in pool if p["player_id"] in current_squad
+                            or (rp := _reliability_proxy(p)) is None
+                            or rp >= MIN_BUY_MINUTES_REL]
+                    print(f"  [AVAIL] Excluded {n_fringe_excluded} low-minutes-"
+                          f"reliability players (< {MIN_BUY_MINUTES_REL:.0%}) "
+                          f"from buy candidates")
         pool_by_pid = {p["player_id"]: p for p in pool}
 
         # Save GW1 predictions for early-season blending

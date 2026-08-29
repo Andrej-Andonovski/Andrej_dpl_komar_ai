@@ -1,0 +1,31 @@
+{
+  "detected_at": "2026-08-27T17:01:20.260591+00:00",
+  "players": [
+    {
+      "fpl_id": 615,
+      "name": "Michele Di Gregorio",
+      "team": "Bournemouth",
+      "position": "GK",
+      "price": 4.5,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 3.09,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 616,
+      "name": "Ayyoub Bouaddi",
+      "team": "Man City",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.07,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

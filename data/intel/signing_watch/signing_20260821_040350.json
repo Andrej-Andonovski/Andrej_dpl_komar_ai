@@ -1,0 +1,307 @@
+{
+  "detected_at": "2026-08-21T02:03:50.404010+00:00",
+  "players": [
+    {
+      "fpl_id": 582,
+      "name": "Brian Madjo",
+      "team": "Aston Villa",
+      "position": "FWD",
+      "price": 5.5,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.23,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 596,
+      "name": "Matteo Ruggeri",
+      "team": "Aston Villa",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.62,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 597,
+      "name": "Zion Suzuki",
+      "team": "Aston Villa",
+      "position": "GK",
+      "price": 5.0,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 4.14,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 573,
+      "name": "Juanlu S\u00e1nchez",
+      "team": "Bournemouth",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.35,
+        "seasons_used": 6,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 594,
+      "name": "Promise David",
+      "team": "Brighton",
+      "position": "FWD",
+      "price": 6.0,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.98,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 583,
+      "name": "Pep Chavarr\u00eda",
+      "team": "Chelsea",
+      "position": "DEF",
+      "price": 5.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.88,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 575,
+      "name": "Caleb Yirenkyi",
+      "team": "Coventry City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 599,
+      "name": "Sidiki Cherif",
+      "team": "Coventry City",
+      "position": "FWD",
+      "price": 5.0,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.54,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 588,
+      "name": "Anan Khalaili",
+      "team": "Crystal Palace",
+      "position": "DEF",
+      "price": 5.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.69,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 595,
+      "name": "Zavier Gozo",
+      "team": "Crystal Palace",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 580,
+      "name": "Shea Charles",
+      "team": "Fulham",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 572,
+      "name": "Konstantinos Tzolakis",
+      "team": "Hull City",
+      "position": "GK",
+      "price": 4.5,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 3.28,
+        "seasons_used": 4,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 574,
+      "name": "Jens Hjert\u00f8-Dahl",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 576,
+      "name": "Elliot Stroud",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 585,
+      "name": "Lucas Herrington",
+      "team": "Hull City",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 586,
+      "name": "Nobel Mendy",
+      "team": "Hull City",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.11,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 589,
+      "name": "Lucas Gourna-Douath",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 592,
+      "name": "Abdoul Ouattara",
+      "team": "Ipswich Town",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 1.89,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 598,
+      "name": "Nico Elvedi",
+      "team": "Leeds",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.36,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 579,
+      "name": "Ronald Araujo",
+      "team": "Liverpool",
+      "position": "DEF",
+      "price": 5.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 3.29,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 587,
+      "name": "Ger\u00f3nimo Rulli",
+      "team": "Man City",
+      "position": "GK",
+      "price": 5.0,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 3.85,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 593,
+      "name": "Amar Dedic",
+      "team": "Newcastle",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.6,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 581,
+      "name": "Ousmane Diomande",
+      "team": "Nott'm Forest",
+      "position": "DEF",
+      "price": 5.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 3.45,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 590,
+      "name": "Steven Benda",
+      "team": "Nott'm Forest",
+      "position": "GK",
+      "price": 4.5,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 2.56,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "detected_at": "2026-08-25T10:42:45.131025+00:00",
+  "players": [
+    {
+      "fpl_id": 606,
+      "name": "Triston Rowe",
+      "team": "Aston Villa",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 607,
+      "name": "Luka Lynch",
+      "team": "Aston Villa",
+      "position": "MID",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 605,
+      "name": "Malick Yalcouy\u00e9",
+      "team": "Brighton",
+      "position": "MID",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 610,
+      "name": "Luc De Fougerolles",
+      "team": "Fulham",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.23,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 602,
+      "name": "Cameron Humphreys",
+      "team": "Ipswich Town",
+      "position": "MID",
+      "price": 4.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 603,
+      "name": "Jayden Lienou",
+      "team": "Leeds",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 609,
+      "name": "Leo Shahar",
+      "team": "Newcastle",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 601,
+      "name": "Luca Williams-Barnett",
+      "team": "Spurs",
+      "position": "MID",
+      "price": 4.5,
+      "prediction": null
+    }
+  ]
+}

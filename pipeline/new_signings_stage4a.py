@@ -66,7 +66,7 @@ for _d in [TRANSFERS_DIR, HTML_CACHE_DIR, FBREF_RAW_DIR, FBREF_SIGN_DIR]:
 
 # ── constants ─────────────────────────────────────────────────────────────────
 FUZZY_THRESHOLD = 80
-SEASONS         = ["2022-23", "2023-24", "2024-25"]
+SEASONS         = ["2023-24", "2024-25", "2025-26"]
 
 TM_HEADERS = {
     "User-Agent": (
@@ -81,7 +81,7 @@ TM_HEADERS = {
 
 TM_BASE = (
     "https://www.transfermarkt.com/premier-league/neuimland/wettbewerb/GB1"
-    "/saison_id/2025/land_id//ausrichtung//spielerposition_id//altersklasse//leihe//w_s//plus/1"
+    "/saison_id/2026/land_id//ausrichtung//spielerposition_id//altersklasse//leihe//w_s//plus/1"
 )
 TM_URLS = [
     TM_BASE,
@@ -251,6 +251,11 @@ VAASTAV_COLS = [
     "avg_points_per_game_season", "goals_per_game_season",
     "assists_per_game_season", "clean_sheet_rate_season",
     "saves_per_game_season", "points_per_million", "is_new_to_pl",
+    # Consumed by feature_engineering_stage6.build_prev_lookup (hard-required
+    # there: data_source, season_reliability, adjG_per_90, adjA_per_90,
+    # league_multiplier -- must not be dropped by the VAASTAV_COLS projection).
+    "adjG_per_90", "adjA_per_90", "league_multiplier", "season_reliability",
+    "data_source", "data_confidence",
 ]
 
 
@@ -1435,6 +1440,7 @@ def step5_build_position_files(result_df, new_signings_df):
         adj_g90  = float(r.get("adjusted_goals_per_90",   0) or 0)
         adj_a90  = float(r.get("adjusted_assists_per_90", 0) or 0)
         rel      = float(r.get("season_reliability", 0.1) or 0.1)
+        mult     = float(r.get("multiplier", 1.0) or 1.0)
 
         cs_rate  = safe_div(cs, apps) if fpl_pos in ("GK", "DEF") else 0.0
         sv_pg    = safe_div(saves, apps) if fpl_pos == "GK" else 0.0
@@ -1481,6 +1487,12 @@ def step5_build_position_files(result_df, new_signings_df):
             "saves_per_game_season":        sv_pg,
             "points_per_million":           0.0,
             "is_new_to_pl":                 1,
+            "adjG_per_90":        adj_g90,
+            "adjA_per_90":        adj_a90,
+            "league_multiplier":  mult,
+            "season_reliability": rel,
+            "data_source":        "stage4a",
+            "data_confidence":    rel,
         }
         out_rows.append(row_out)
 
@@ -1671,7 +1683,7 @@ def main():
 
     print("Stage 4a: New Premier League Signings Data")
     print("Seasons for FBref: " + str(SEASONS))
-    print("Blocked: 2025-26 (live season -- never use)")
+    print("Blocked: 2026-27 (live season -- never use)")
 
     if step4_only:
         # ── Fast re-run: load cached outputs from Steps 1-3 ──────────────────

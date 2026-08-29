@@ -19,6 +19,13 @@ from collections import defaultdict
 
 warnings.filterwarnings("ignore")
 
+# Bench weight in the ILP objective (2026-08-21, env-tunable). Outfield bench
+# was hardcoded at 0.25x predicted points; bench GK had NO weight at all (the
+# solver just grabbed the cheapest legal GK, no quality signal whatsoever).
+# Defaults preserve the original baseline exactly — set either to explore.
+BENCH_WEIGHT    = float(os.environ.get("BENCH_WEIGHT",    "0.25"))
+BENCH_GK_WEIGHT = float(os.environ.get("BENCH_GK_WEIGHT", "0.0"))
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
@@ -513,8 +520,10 @@ def run_ilp(player_pool, horizon_scores, pred_gw0_scores,
             pulp.lpSum(h_scores[i] * s[i] for i in range(n))
             + pulp.lpSum(g0[i] * c[i]           for i in range(n))
             + pulp.lpSum(g0[i] * 0.5 * vc[i]    for i in range(n))
-            + pulp.lpSum(0.25 * g0[i] * (x[i] - s[i])
+            + pulp.lpSum(BENCH_WEIGHT * g0[i] * (x[i] - s[i])
                          for i in range(n) if not is_gk[i])
+            + pulp.lpSum(BENCH_GK_WEIGHT * g0[i] * (x[i] - s[i])
+                         for i in range(n) if is_gk[i])
             + transfer_start_term
             - 4.0 * pen
         )

@@ -58,31 +58,12 @@ OUT_PATH  = os.path.join(INTEL_DIR, "press_conferences.json")
 LIVE_PATH = os.path.join(INTEL_DIR, "fpl_live.json")
 
 # Known URLs (confirmed). GWs not listed here are discovered via search.
-KNOWN_URLS = {
-    1:  "https://www.fantasyfootballscout.co.uk/2025/08/15/fpl-gameweek-1-team-news-fridays-live-injury-updates",
-    5:  "https://www.fantasyfootballscout.co.uk/2025/09/19/fpl-gameweek-5-team-news-fridays-live-injury-updates",
-    8:  "https://www.fantasyfootballscout.co.uk/2025/10/17/fpl-gameweek-8-team-news-fridays-live-injury-updates-2",
-    9:  "https://www.fantasyfootballscout.co.uk/2025/10/24/fpl-gameweek-9-team-news-fridays-live-injury-updates-2",
-    10: "https://www.fantasyfootballscout.co.uk/2025/10/31/fpl-gameweek-10-team-news-fridays-live-injury-updates-2",
-    11: "https://www.fantasyfootballscout.co.uk/2025/11/07/fpl-gameweek-11-team-news-fridays-live-injury-updates-3",
-    12: "https://www.fantasyfootballscout.co.uk/2025/11/21/fpl-gameweek-12-team-news-fridays-live-injury-updates-3",
-    13: "https://www.fantasyfootballscout.co.uk/2025/11/28/fpl-gameweek-13-team-news-fridays-live-injury-updates-2",
-    14: "https://www.fantasyfootballscout.co.uk/2025/12/02/fpl-gameweek-14-team-news-tuesdays-live-injury-updates-2",
-    15: "https://www.fantasyfootballscout.co.uk/2025/12/05/fpl-gameweek-15-team-news-fridays-live-injury-updates",
-    16: "https://www.fantasyfootballscout.co.uk/2025/12/12/fpl-gameweek-16-team-news-fridays-live-injury-updates-2",
-    17: "https://www.fantasyfootballscout.co.uk/2025/12/19/fpl-gameweek-17-team-news-fridays-live-injury-updates",
-    18: "https://www.fantasyfootballscout.co.uk/2025/12/26/fpl-gameweek-18-team-news-thursday-updates-bruno-latest",
-    19: "https://www.fantasyfootballscout.co.uk/2025/12/30/fpl-gameweek-19-team-news-tuesdays-live-injury-updates",
-    20: "https://www.fantasyfootballscout.co.uk/2026/01/02/fpl-gameweek-20-team-news-fridays-live-injury-update",
-    21: "https://www.fantasyfootballscout.co.uk/2026/01/07/fpl-gameweek-21-team-news-weds-live-injury-updates-ekitike-latest",
-    22: "https://www.fantasyfootballscout.co.uk/2026/01/16/fpl-gameweek-22-team-news-fridays-live-injury-updates-2",
-    23: "https://www.fantasyfootballscout.co.uk/2026/01/23/fpl-gameweek-23-team-news-fridays-live-injury-updates-3",
-    24: "https://www.fantasyfootballscout.co.uk/2026/01/30/fpl-gameweek-24-team-news-fridays-live-injury-updates-3",
-    25: "https://www.fantasyfootballscout.co.uk/2026/02/06/fpl-gameweek-25-team-news-fridays-live-injury-updates-3",
-    26: "https://www.fantasyfootballscout.co.uk/2026/02/10/fpl-gameweek-26-team-news-tuesdays-live-injury-updates",
-    27: "https://www.fantasyfootballscout.co.uk/2026/02/20/fpl-gameweek-27-team-news-fridays-live-injury-updates-2",
-    28: "https://www.fantasyfootballscout.co.uk/2026/02/27/fpl-gameweek-28-team-news-fridays-live-injury-updates-3",
-}
+# Hand-verified URL cache, populated per-GW as discover_url() finds them each
+# season. Reset to {} on every season rollover (2026-08-21: cleared for
+# 2026-27 — the old entries pointed at 2025-26 articles and would silently
+# scrape last season's news under this season's GW numbers). Old cache
+# archived at data/intel/archive/press_conferences_2025-26_final.json.
+KNOWN_URLS = {}
 
 PL_CLUBS = [
     "Arsenal", "Aston Villa", "Bournemouth", "Brentford", "Brighton",
@@ -161,7 +142,13 @@ def discover_url(session: requests.Session, gw: int) -> str | None:
         print("FAILED")
         return None
     soup = BeautifulSoup(r.text, "html.parser")
-    pattern = re.compile(rf"gameweek-{gw}[^\"']*team-news[^\"']*friday", re.IGNORECASE)
+    # (?!\d) prevents "gameweek-1" matching inside "gameweek-17"/"gameweek-19"
+    # etc — without it, a GW1 search could silently return a wrong-week (even
+    # wrong-season) article whose URL just happens to start with the same
+    # digit. Bit tonight: a GW1 2026-27 search matched a cached GW17 2025-26
+    # article and its stale press-conference quotes fed the whole night's
+    # availability scoring undetected.
+    pattern = re.compile(rf"gameweek-{gw}(?!\d)[^\"']*team-news[^\"']*friday", re.IGNORECASE)
     for a in soup.find_all("a", href=True):
         if pattern.search(a["href"]):
             print("found")
@@ -470,11 +457,13 @@ def main():
     session = make_session()
 
     # ── Verify login ─────────────────────────────────────────────────────────
-    # Use any known URL for the login check (pick first needed GW or GW10 as fallback)
-    verify_gw = gws_to_scrape[0] if gws_to_scrape[0] in KNOWN_URLS else 10
-    verify_url = KNOWN_URLS.get(verify_gw, KNOWN_URLS[10])
+    # Use a known GW URL if we have one cached, else the homepage — the check
+    # only needs member-gated content, not a specific GW article.
+    verify_gw = gws_to_scrape[0] if gws_to_scrape[0] in KNOWN_URLS else None
+    verify_url = KNOWN_URLS.get(verify_gw, "https://www.fantasyfootballscout.co.uk/")
 
-    print(f"Verifying FFS login (GW{verify_gw})...", end=" ", flush=True)
+    print(f"Verifying FFS login ({'GW' + str(verify_gw) if verify_gw else 'homepage'})...",
+          end=" ", flush=True)
     r_verify = safe_get(session, verify_url, "login-verify")
     if r_verify is None:
         print("FAILED — could not reach FFS. Check internet.")

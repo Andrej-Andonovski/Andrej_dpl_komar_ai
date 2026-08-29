@@ -79,7 +79,7 @@ def fetch_bootstrap():
 
     # ── Players ────────────────────────────────────────────────────────────────
     player_fields = [
-        "id", "first_name", "second_name", "team", "element_type",
+        "id", "first_name", "second_name", "web_name", "team", "element_type",
         "now_cost", "selected_by_percent", "transfers_in", "transfers_out",
         "total_points", "points_per_game", "minutes",
         "goals_scored", "assists", "clean_sheets", "goals_conceded",

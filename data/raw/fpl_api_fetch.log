@@ -1,0 +1,643 @@
+
+=== STEP 1: Fetching bootstrap-static ===
+  Saved 20 teams -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\teams_raw.csv
+  Saved 558 players -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\players_raw.csv
+
+=== STEP 2: Fetching fixtures ===
+  Saved 380 fixtures -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\fixtures_raw.csv
+
+=== STEP 3: Building fixture difficulty table ===
+  Saved 760 rows -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\fixture_difficulty.csv
+
+=== STEP 4: Fetching per-player summaries ===
+  [1/558] Fetching player 1... OK
+  [2/558] Fetching player 2... OK
+  [3/558] Fetching player 3... OK
+  [4/558] Fetching player 4... OK
+  [5/558] Fetching player 5... OK
+  [6/558] Fetching player 6... OK
+  [7/558] Fetching player 7... OK
+  [8/558] Fetching player 8... OK
+  [9/558] Fetching player 9... OK
+  [10/558] Fetching player 10... OK
+  [11/558] Fetching player 11... OK
+  [12/558] Fetching player 12... OK
+  [13/558] Fetching player 13... OK
+  [14/558] Fetching player 14... OK
+  [15/558] Fetching player 15... OK
+  [16/558] Fetching player 16... OK
+  [17/558] Fetching player 17... OK
+  [18/558] Fetching player 18... OK
+  [19/558] Fetching player 19... OK
+  [20/558] Fetching player 20... OK
+  [21/558] Fetching player 21... OK
+  [22/558] Fetching player 22... OK
+  [23/558] Fetching player 23... OK
+  [24/558] Fetching player 24... OK
+  [25/558] Fetching player 25... OK
+  [26/558] Fetching player 26... OK
+  [27/558] Fetching player 27... OK
+  [28/558] Fetching player 557... OK
+  [29/558] Fetching player 28... OK
+  [30/558] Fetching player 29... OK
+  [31/558] Fetching player 30... OK
+  [32/558] Fetching player 31... OK
+  [33/558] Fetching player 32... OK
+  [34/558] Fetching player 33... OK
+  [35/558] Fetching player 34... OK
+  [36/558] Fetching player 35... OK
+  [37/558] Fetching player 36... OK
+  [38/558] Fetching player 37... OK
+  [39/558] Fetching player 38... OK
+  [40/558] Fetching player 39... OK
+  [41/558] Fetching player 41... OK
+  [42/558] Fetching player 42... OK
+  [43/558] Fetching player 44... OK
+  [44/558] Fetching player 45... OK
+  [45/558] Fetching player 46... OK
+  [46/558] Fetching player 47... OK
+  [47/558] Fetching player 48... OK
+  [48/558] Fetching player 49... OK
+  [49/558] Fetching player 50... OK
+  [50/558] Fetching player 51... OK
+  [51/558] Fetching player 52... OK
+  [52/558] Fetching player 53... OK
+  [53/558] Fetching player 54... OK
+  [54/558] Fetching player 55... OK
+  [55/558] Fetching player 56... OK
+  [56/558] Fetching player 160... OK
+  [57/558] Fetching player 57... OK
+  [58/558] Fetching player 58... OK
+  [59/558] Fetching player 59... OK
+  [60/558] Fetching player 60... OK
+  [61/558] Fetching player 61... OK
+  [62/558] Fetching player 62... OK
+  [63/558] Fetching player 63... OK
+  [64/558] Fetching player 64... OK
+  [65/558] Fetching player 65... OK
+  [66/558] Fetching player 66... OK
+  [67/558] Fetching player 67... OK
+  [68/558] Fetching player 68... OK
+  [69/558] Fetching player 69... OK
+  [70/558] Fetching player 70... OK
+  [71/558] Fetching player 71... OK
+  [72/558] Fetching player 72... OK
+  [73/558] Fetching player 73... OK
+  [74/558] Fetching player 74... OK
+  [75/558] Fetching player 75... OK
+  [76/558] Fetching player 76... OK
+  [77/558] Fetching player 77... OK
+  [78/558] Fetching player 78... OK
+  [79/558] Fetching player 79... OK
+  [80/558] Fetching player 80... OK
+  [81/558] Fetching player 81... OK
+  [82/558] Fetching player 82... OK
+  [83/558] Fetching player 83... OK
+  [84/558] Fetching player 84... OK
+  [85/558] Fetching player 85... OK
+  [86/558] Fetching player 86... OK
+  [87/558] Fetching player 87... OK
+  [88/558] Fetching player 88... OK
+  [89/558] Fetching player 89... OK
+  [90/558] Fetching player 90... OK
+  [91/558] Fetching player 91... OK
+  [92/558] Fetching player 92... OK
+  [93/558] Fetching player 93... OK
+  [94/558] Fetching player 94... OK
+  [95/558] Fetching player 95... OK
+  [96/558] Fetching player 96... OK
+  [97/558] Fetching player 97... OK
+  [98/558] Fetching player 98... OK
+  [99/558] Fetching player 99... OK
+  [100/558] Fetching player 100... OK
+  [101/558] Fetching player 101... OK
+  [102/558] Fetching player 102... OK
+  [103/558] Fetching player 103... OK
+  [104/558] Fetching player 105... OK
+  [105/558] Fetching player 106... OK
+  [106/558] Fetching player 107... OK
+  [107/558] Fetching player 108... OK
+  [108/558] Fetching player 109... OK
+  [109/558] Fetching player 110... OK
+  [110/558] Fetching player 111... OK
+  [111/558] Fetching player 113... OK
+  [112/558] Fetching player 114... OK
+  [113/558] Fetching player 115... OK
+  [114/558] Fetching player 116... OK
+  [115/558] Fetching player 117... OK
+  [116/558] Fetching player 118... OK
+  [117/558] Fetching player 119... OK
+  [118/558] Fetching player 120... OK
+  [119/558] Fetching player 121... OK
+  [120/558] Fetching player 122... OK
+  [121/558] Fetching player 123... OK
+  [122/558] Fetching player 124... OK
+  [123/558] Fetching player 125... OK
+  [124/558] Fetching player 126... OK
+  [125/558] Fetching player 127... OK
+  [126/558] Fetching player 128... OK
+  [127/558] Fetching player 129... OK
+  [128/558] Fetching player 130... OK
+  [129/558] Fetching player 131... OK
+  [130/558] Fetching player 132... OK
+  [131/558] Fetching player 133... OK
+  [132/558] Fetching player 134... OK
+  [133/558] Fetching player 135... OK
+  [134/558] Fetching player 136... OK
+  [135/558] Fetching player 137... OK
+  [136/558] Fetching player 138... OK
+  [137/558] Fetching player 139... OK
+  [138/558] Fetching player 328... OK
+  [139/558] Fetching player 504... OK
+  [140/558] Fetching player 40... OK
+  [141/558] Fetching player 140... OK
+  [142/558] Fetching player 141... OK
+  [143/558] Fetching player 142... OK
+  [144/558] Fetching player 143... OK
+  [145/558] Fetching player 144... OK
+  [146/558] Fetching player 145... OK
+  [147/558] Fetching player 146... OK
+  [148/558] Fetching player 147... OK
+  [149/558] Fetching player 148... OK
+  [150/558] Fetching player 149... OK
+  [151/558] Fetching player 150... OK
+  [152/558] Fetching player 151... OK
+  [153/558] Fetching player 152... OK
+  [154/558] Fetching player 153... OK
+  [155/558] Fetching player 154... OK
+  [156/558] Fetching player 155... OK
+  [157/558] Fetching player 156... OK
+  [158/558] Fetching player 157... OK
+  [159/558] Fetching player 158... OK
+  [160/558] Fetching player 159... OK
+  [161/558] Fetching player 161... OK
+  [162/558] Fetching player 163... OK
+  [163/558] Fetching player 164... OK
+  [164/558] Fetching player 165... OK
+  [165/558] Fetching player 166... OK
+  [166/558] Fetching player 167... OK
+  [167/558] Fetching player 168... OK
+  [168/558] Fetching player 169... OK
+  [169/558] Fetching player 170... OK
+  [170/558] Fetching player 104... OK
+  [171/558] Fetching player 171... OK
+  [172/558] Fetching player 172... OK
+  [173/558] Fetching player 173... OK
+  [174/558] Fetching player 174... OK
+  [175/558] Fetching player 175... OK
+  [176/558] Fetching player 176... OK
+  [177/558] Fetching player 177... OK
+  [178/558] Fetching player 178... OK
+  [179/558] Fetching player 179... OK
+  [180/558] Fetching player 180... OK
+  [181/558] Fetching player 181... OK
+  [182/558] Fetching player 182... OK
+  [183/558] Fetching player 183... OK
+  [184/558] Fetching player 184... OK
+  [185/558] Fetching player 185... OK
+  [186/558] Fetching player 186... OK
+  [187/558] Fetching player 187... OK
+  [188/558] Fetching player 188... OK
+  [189/558] Fetching player 189... OK
+  [190/558] Fetching player 190... OK
+  [191/558] Fetching player 191... OK
+  [192/558] Fetching player 192... OK
+  [193/558] Fetching player 193... OK
+  [194/558] Fetching player 194... OK
+  [195/558] Fetching player 195... OK
+  [196/558] Fetching player 196... OK
+  [197/558] Fetching player 197... OK
+  [198/558] Fetching player 198... OK
+  [199/558] Fetching player 199... OK
+  [200/558] Fetching player 200... OK
+  [201/558] Fetching player 201... OK
+  [202/558] Fetching player 202... OK
+  [203/558] Fetching player 203... OK
+  [204/558] Fetching player 204... OK
+  [205/558] Fetching player 205... OK
+  [206/558] Fetching player 206... OK
+  [207/558] Fetching player 207... OK
+  [208/558] Fetching player 208... OK
+  [209/558] Fetching player 209... OK
+  [210/558] Fetching player 210... OK
+  [211/558] Fetching player 211... OK
+  [212/558] Fetching player 212... OK
+  [213/558] Fetching player 213... OK
+  [214/558] Fetching player 214... OK
+  [215/558] Fetching player 215... OK
+  [216/558] Fetching player 216... OK
+  [217/558] Fetching player 217... OK
+  [218/558] Fetching player 218... OK
+  [219/558] Fetching player 219... OK
+  [220/558] Fetching player 220... OK
+  [221/558] Fetching player 221... OK
+  [222/558] Fetching player 222... OK
+  [223/558] Fetching player 223... OK
+  [224/558] Fetching player 224... OK
+  [225/558] Fetching player 225... OK
+  [226/558] Fetching player 555... OK
+  [227/558] Fetching player 226... OK
+  [228/558] Fetching player 227... OK
+  [229/558] Fetching player 228... OK
+  [230/558] Fetching player 229... OK
+  [231/558] Fetching player 230... OK
+  [232/558] Fetching player 231... OK
+  [233/558] Fetching player 232... OK
+  [234/558] Fetching player 233... OK
+  [235/558] Fetching player 234... OK
+  [236/558] Fetching player 235... OK
+  [237/558] Fetching player 236... OK
+  [238/558] Fetching player 237... OK
+  [239/558] Fetching player 239... OK
+  [240/558] Fetching player 240... OK
+  [241/558] Fetching player 241... OK
+  [242/558] Fetching player 242... OK
+  [243/558] Fetching player 243... OK
+  [244/558] Fetching player 244... OK
+  [245/558] Fetching player 245... OK
+  [246/558] Fetching player 246... OK
+  [247/558] Fetching player 247... OK
+  [248/558] Fetching player 248... OK
+  [249/558] Fetching player 249... OK
+  [250/558] Fetching player 250... OK
+  [251/558] Fetching player 251... OK
+  [252/558] Fetching player 252... OK
+  [253/558] Fetching player 253... OK
+  [254/558] Fetching player 254... OK
+  [255/558] Fetching player 255... OK
+  [256/558] Fetching player 256... OK
+  [257/558] Fetching player 257... OK
+  [258/558] Fetching player 258... OK
+  [259/558] Fetching player 261... OK
+  [260/558] Fetching player 262... OK
+  [261/558] Fetching player 263... OK
+  [262/558] Fetching player 264... OK
+  [263/558] Fetching player 265... OK
+  [264/558] Fetching player 266... OK
+  [265/558] Fetching player 267... OK
+  [266/558] Fetching player 268... OK
+  [267/558] Fetching player 269... OK
+  [268/558] Fetching player 270... OK
+  [269/558] Fetching player 271... OK
+  [270/558] Fetching player 272... OK
+  [271/558] Fetching player 273... OK
+  [272/558] Fetching player 274... OK
+  [273/558] Fetching player 275... OK
+  [274/558] Fetching player 276... OK
+  [275/558] Fetching player 277... OK
+  [276/558] Fetching player 278... OK
+  [277/558] Fetching player 279... OK
+  [278/558] Fetching player 280... OK
+  [279/558] Fetching player 281... OK
+  [280/558] Fetching player 282... OK
+  [281/558] Fetching player 283... OK
+  [282/558] Fetching player 284... OK
+  [283/558] Fetching player 285... OK
+  [284/558] Fetching player 286... OK
+  [285/558] Fetching player 287... OK
+  [286/558] Fetching player 288... OK
+  [287/558] Fetching player 289... OK
+  [288/558] Fetching player 290... OK
+  [289/558] Fetching player 291... OK
+  [290/558] Fetching player 292... OK
+  [291/558] Fetching player 293... OK
+  [292/558] Fetching player 294... OK
+  [293/558] Fetching player 295... OK
+  [294/558] Fetching player 296... OK
+  [295/558] Fetching player 297... OK
+  [296/558] Fetching player 298... OK
+  [297/558] Fetching player 299... OK
+  [298/558] Fetching player 556... OK
+  [299/558] Fetching player 259... OK
+  [300/558] Fetching player 300... OK
+  [301/558] Fetching player 301... OK
+  [302/558] Fetching player 302... OK
+  [303/558] Fetching player 303... OK
+  [304/558] Fetching player 304... OK
+  [305/558] Fetching player 305... OK
+  [306/558] Fetching player 306... OK
+  [307/558] Fetching player 307... OK
+  [308/558] Fetching player 308... OK
+  [309/558] Fetching player 309... OK
+  [310/558] Fetching player 310... OK
+  [311/558] Fetching player 311... OK
+  [312/558] Fetching player 312... OK
+  [313/558] Fetching player 313... OK
+  [314/558] Fetching player 314... OK
+  [315/558] Fetching player 315... OK
+  [316/558] Fetching player 316... OK
+  [317/558] Fetching player 317... OK
+  [318/558] Fetching player 318... OK
+  [319/558] Fetching player 319... OK
+  [320/558] Fetching player 320... OK
+  [321/558] Fetching player 321... OK
+  [322/558] Fetching player 322... OK
+  [323/558] Fetching player 323... OK
+  [324/558] Fetching player 324... OK
+  [325/558] Fetching player 554... OK
+  [326/558] Fetching player 260... OK
+  [327/558] Fetching player 326... OK
+  [328/558] Fetching player 327... OK
+  [329/558] Fetching player 329... OK
+  [330/558] Fetching player 330... OK
+  [331/558] Fetching player 331... OK
+  [332/558] Fetching player 332... OK
+  [333/558] Fetching player 333... OK
+  [334/558] Fetching player 334... OK
+  [335/558] Fetching player 335... OK
+  [336/558] Fetching player 336... OK
+  [337/558] Fetching player 337... OK
+  [338/558] Fetching player 338... OK
+  [339/558] Fetching player 339... OK
+  [340/558] Fetching player 340... OK
+  [341/558] Fetching player 341... OK
+  [342/558] Fetching player 342... OK
+  [343/558] Fetching player 343... OK
+  [344/558] Fetching player 344... OK
+  [345/558] Fetching player 345... OK
+  [346/558] Fetching player 346... OK
+  [347/558] Fetching player 347... OK
+  [348/558] Fetching player 348... OK
+  [349/558] Fetching player 349... OK
+  [350/558] Fetching player 350... OK
+  [351/558] Fetching player 351... OK
+  [352/558] Fetching player 352... OK
+  [353/558] Fetching player 353... OK
+  [354/558] Fetching player 354... OK
+  [355/558] Fetching player 355... OK
+  [356/558] Fetching player 356... OK
+  [357/558] Fetching player 357... OK
+  [358/558] Fetching player 358... OK
+  [359/558] Fetching player 359... OK
+  [360/558] Fetching player 360... OK
+  [361/558] Fetching player 361... OK
+  [362/558] Fetching player 362... OK
+  [363/558] Fetching player 363... OK
+  [364/558] Fetching player 364... OK
+  [365/558] Fetching player 365... OK
+  [366/558] Fetching player 366... OK
+  [367/558] Fetching player 367... OK
+  [368/558] Fetching player 368... OK
+  [369/558] Fetching player 369... OK
+  [370/558] Fetching player 370... OK
+  [371/558] Fetching player 371... OK
+  [372/558] Fetching player 372... OK
+  [373/558] Fetching player 373... OK
+  [374/558] Fetching player 374... OK
+  [375/558] Fetching player 375... OK
+  [376/558] Fetching player 376... OK
+  [377/558] Fetching player 377... OK
+  [378/558] Fetching player 378... OK
+  [379/558] Fetching player 379... OK
+  [380/558] Fetching player 380... OK
+  [381/558] Fetching player 381... OK
+  [382/558] Fetching player 382... OK
+  [383/558] Fetching player 383... OK
+  [384/558] Fetching player 238... OK
+  [385/558] Fetching player 384... OK
+  [386/558] Fetching player 385... OK
+  [387/558] Fetching player 386... OK
+  [388/558] Fetching player 387... OK
+  [389/558] Fetching player 388... OK
+  [390/558] Fetching player 389... OK
+  [391/558] Fetching player 390... OK
+  [392/558] Fetching player 391... OK
+  [393/558] Fetching player 392... OK
+  [394/558] Fetching player 393... OK
+  [395/558] Fetching player 394... OK
+  [396/558] Fetching player 395... OK
+  [397/558] Fetching player 396... OK
+  [398/558] Fetching player 397... OK
+  [399/558] Fetching player 398... OK
+  [400/558] Fetching player 399... OK
+  [401/558] Fetching player 400... OK
+  [402/558] Fetching player 401... OK
+  [403/558] Fetching player 402... OK
+  [404/558] Fetching player 403... OK
+  [405/558] Fetching player 404... OK
+  [406/558] Fetching player 405... OK
+  [407/558] Fetching player 406... OK
+  [408/558] Fetching player 407... OK
+  [409/558] Fetching player 408... OK
+  [410/558] Fetching player 409... OK
+  [411/558] Fetching player 410... OK
+  [412/558] Fetching player 411... OK
+  [413/558] Fetching player 481... OK
+  [414/558] Fetching player 43... OK
+  [415/558] Fetching player 162... OK
+  [416/558] Fetching player 325... OK
+  [417/558] Fetching player 412... OK
+  [418/558] Fetching player 413... OK
+  [419/558] Fetching player 414... OK
+  [420/558] Fetching player 415... OK
+  [421/558] Fetching player 416... OK
+  [422/558] Fetching player 417... OK
+  [423/558] Fetching player 418... OK
+  [424/558] Fetching player 419... OK
+  [425/558] Fetching player 420... OK
+  [426/558] Fetching player 421... OK
+  [427/558] Fetching player 422... OK
+  [428/558] Fetching player 423... OK
+  [429/558] Fetching player 424... OK
+  [430/558] Fetching player 425... OK
+  [431/558] Fetching player 426... OK
+  [432/558] Fetching player 427... OK
+  [433/558] Fetching player 428... OK
+  [434/558] Fetching player 429... OK
+  [435/558] Fetching player 430... OK
+  [436/558] Fetching player 431... OK
+  [437/558] Fetching player 432... OK
+  [438/558] Fetching player 433... OK
+  [439/558] Fetching player 434... OK
+  [440/558] Fetching player 435... OK
+  [441/558] Fetching player 436... OK
+  [442/558] Fetching player 437... OK
+  [443/558] Fetching player 438... OK
+  [444/558] Fetching player 439... OK
+  [445/558] Fetching player 440... OK
+  [446/558] Fetching player 441... OK
+  [447/558] Fetching player 442... OK
+  [448/558] Fetching player 443... OK
+  [449/558] Fetching player 444... OK
+  [450/558] Fetching player 445... OK
+  [451/558] Fetching player 446... OK
+  [452/558] Fetching player 447... OK
+  [453/558] Fetching player 448... OK
+  [454/558] Fetching player 449... OK
+  [455/558] Fetching player 450... OK
+  [456/558] Fetching player 451... OK
+  [457/558] Fetching player 452... OK
+  [458/558] Fetching player 453... OK
+  [459/558] Fetching player 454... OK
+  [460/558] Fetching player 456... OK
+  [461/558] Fetching player 457... OK
+  [462/558] Fetching player 458... OK
+  [463/558] Fetching player 459... OK
+  [464/558] Fetching player 460... OK
+  [465/558] Fetching player 461... OK
+  [466/558] Fetching player 462... OK
+  [467/558] Fetching player 463... OK
+  [468/558] Fetching player 464... OK
+  [469/558] Fetching player 465... OK
+  [470/558] Fetching player 466... OK
+  [471/558] Fetching player 467... OK
+  [472/558] Fetching player 468... OK
+  [473/558] Fetching player 469... OK
+  [474/558] Fetching player 470... OK
+  [475/558] Fetching player 471... OK
+  [476/558] Fetching player 472... OK
+  [477/558] Fetching player 473... OK
+  [478/558] Fetching player 474... OK
+  [479/558] Fetching player 475... OK
+  [480/558] Fetching player 476... OK
+  [481/558] Fetching player 477... OK
+  [482/558] Fetching player 478... OK
+  [483/558] Fetching player 479... OK
+  [484/558] Fetching player 480... OK
+  [485/558] Fetching player 482... OK
+  [486/558] Fetching player 483... OK
+  [487/558] Fetching player 484... OK
+  [488/558] Fetching player 485... OK
+  [489/558] Fetching player 486... OK
+  [490/558] Fetching player 487... OK
+  [491/558] Fetching player 488... OK
+  [492/558] Fetching player 489... OK
+  [493/558] Fetching player 490... OK
+  [494/558] Fetching player 491... OK
+  [495/558] Fetching player 492... OK
+  [496/558] Fetching player 493... OK
+  [497/558] Fetching player 558... OK
+  [498/558] Fetching player 112... OK
+  [499/558] Fetching player 455... OK
+  [500/558] Fetching player 494... OK
+  [501/558] Fetching player 495... OK
+  [502/558] Fetching player 496... OK
+  [503/558] Fetching player 497... OK
+  [504/558] Fetching player 498... OK
+  [505/558] Fetching player 499... OK
+  [506/558] Fetching player 500... OK
+  [507/558] Fetching player 501... OK
+  [508/558] Fetching player 502... OK
+  [509/558] Fetching player 503... OK
+  [510/558] Fetching player 505... OK
+  [511/558] Fetching player 506... OK
+  [512/558] Fetching player 507... OK
+  [513/558] Fetching player 508... OK
+  [514/558] Fetching player 509... OK
+  [515/558] Fetching player 510... OK
+  [516/558] Fetching player 511... OK
+  [517/558] Fetching player 512... OK
+  [518/558] Fetching player 513... OK
+  [519/558] Fetching player 514... OK
+  [520/558] Fetching player 515... OK
+  [521/558] Fetching player 516... OK
+  [522/558] Fetching player 517... OK
+  [523/558] Fetching player 518... OK
+  [524/558] Fetching player 519... OK
+  [525/558] Fetching player 520... OK
+  [526/558] Fetching player 521... OK
+  [527/558] Fetching player 522... OK
+  [528/558] Fetching player 523... OK
+  [529/558] Fetching player 524... OK
+  [530/558] Fetching player 525... OK
+  [531/558] Fetching player 526... OK
+  [532/558] Fetching player 527... OK
+  [533/558] Fetching player 528... OK
+  [534/558] Fetching player 529... OK
+  [535/558] Fetching player 530... OK
+  [536/558] Fetching player 531... OK
+  [537/558] Fetching player 532... OK
+  [538/558] Fetching player 533... OK
+  [539/558] Fetching player 534... OK
+  [540/558] Fetching player 535... OK
+  [541/558] Fetching player 536... OK
+  [542/558] Fetching player 537... OK
+  [543/558] Fetching player 538... OK
+  [544/558] Fetching player 539... OK
+  [545/558] Fetching player 540... OK
+  [546/558] Fetching player 541... OK
+  [547/558] Fetching player 542... OK
+  [548/558] Fetching player 543... OK
+  [549/558] Fetching player 544... OK
+  [550/558] Fetching player 545... OK
+  [551/558] Fetching player 546... OK
+  [552/558] Fetching player 547... OK
+  [553/558] Fetching player 548... OK
+  [554/558] Fetching player 549... OK
+  [555/558] Fetching player 550... OK
+  [556/558] Fetching player 551... OK
+  [557/558] Fetching player 552... OK
+  [558/558] Fetching player 553... OK
+
+  Saved 21204 upcoming fixture rows -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\player_upcoming_fixtures.csv
+  Saved 0 history rows -> C:\Users\Andrej\Desktop\fpl ai\data\raw\fpl_api\player_history.csv
+
+=== STEP 5: Validation Report ===
+--------------------------------------------------
+Total players fetched:       558
+  GK    60
+  DEF   184
+  MID   246
+  FWD   68
+--------------------------------------------------
+Primary penalty takers:      20
+Primary corner takers:       0
+Primary free kick takers:    20
+--------------------------------------------------
+Total fixtures fetched:      380
+Gameweeks covered:           1–38 (38 GWs)
+--------------------------------------------------
+Players missing now_cost:    0
+Players missing element_type:0
+--------------------------------------------------
+Top 10 most owned players:
+  Rayan Cherki               Man City             MID  9.9%
+  Harry Wilson               Leeds                MID  9.2%
+  Jordan Pickford             Everton              GK  9.1%
+  Jonah Kusi-Asare           Fulham               FWD  8.6%
+  Jan Paul van Hecke            Spurs                DEF  8.3%
+  Bruno Guimarães Rodriguez Moura Newcastle            MID  8.2%
+  Nordi Mukiele              Sunderland           DEF  8.2%
+  Matty Cash                 Aston Villa          DEF  8.2%
+  Reece James                Chelsea              DEF  8.1%
+  Erling Haaland              Man City             FWD  74.9%
+--------------------------------------------------
+Top 10 highest priced players:
+  Erling Haaland              Man City             FWD  £15.5m
+  Bruno Borges Fernandes     Man Utd              MID  £12.0m
+  Cole Palmer               Chelsea              MID  £9.5m
+  Bukayo Saka                 Arsenal              MID  £9.5m
+  Alexander Isak                 Liverpool            FWD  £9.0m
+  Antoine Semenyo              Man City             MID  £8.5m
+  Bryan Mbeumo               Man Utd              MID  £8.0m
+  Gabriel dos Santos Magalhães Arsenal              DEF  £8.0m
+  Morgan Gibbs-White          Nott'm Forest        MID  £8.0m
+  Igor Thiago Nascimento Rodrigues Brentford            FWD  £8.0m
+--------------------------------------------------
+Sample rows from each CSV:
+
+  players_raw.csv:
+ id first_name second_name  team  element_type  now_cost selected_by_percent  transfers_in  transfers_out  total_points points_per_game  minutes  goals_scored  assists  clean_sheets  goals_conceded  yellow_cards  red_cards  saves  bonus  bps influence creativity threat ict_index form value_form value_season  corners_and_indirect_freekicks_order  direct_freekicks_order  penalties_order team_name position  price  is_corner_taker  is_freekick_taker  is_penalty_taker  is_set_piece_taker
+  1      David Raya Martín     1             1        60                29.7             0              0           162             4.4     3330             0        0            19              26             1          0     60     11  633     541.6       33.5    0.0      57.5  0.0        0.0         27.0                                   NaN                     NaN              NaN   Arsenal       GK    6.0                0                  0                 0                   0
+
+  teams_raw.csv:
+ id    name short_name strength  strength_overall_home  strength_overall_away  strength_attack_home  strength_attack_away  strength_defence_home  strength_defence_away
+  1 Arsenal        ARS     None                      4                      5                     0                     0                      0                      0
+
+  fixtures_raw.csv:
+ id  gameweek  team_h  team_a team_h_name   team_a_name  team_h_difficulty  team_a_difficulty  finished         kickoff_time
+  1         1       1       7     Arsenal Coventry City                  2                  5     False 2026-08-21T19:00:00Z
+
+  fixture_difficulty.csv:
+team_name  gameweek      opponent  was_home  fdr  trajectory_raw  trajectory_score
+  Arsenal         1 Coventry City      True    2            12.7          0.463415
+
+  player_upcoming_fixtures.csv:
+ player_id  gameweek opponent_team_id opponent_team  is_home  difficulty
+         1         1             None          None     True           2
+
+  player_history.csv:
+--------------------------------------------------
+Validation complete.
+
+All done. Data saved to data/raw/fpl_api/

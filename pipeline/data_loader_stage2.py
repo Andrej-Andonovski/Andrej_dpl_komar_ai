@@ -1,8 +1,8 @@
 """
 Stage 2: Vaastav Historical Data Loader
-Loads, cleans and engineers features from 6 seasons of FPL historical GW data.
-Seasons: 2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25
-2025-26 is EXCLUDED (live season — reserved for GW34 demo only).
+Loads, cleans and engineers features from 7 seasons of FPL historical GW data.
+Seasons: 2019-20, 2020-21, 2021-22, 2022-23, 2023-24, 2024-25, 2025-26
+2026-27 is EXCLUDED (live season — GW1 blind test target).
 Usage: python pipeline/data_loader_stage2.py
 """
 
@@ -25,12 +25,12 @@ FPL_API_DIR = os.path.join(BASE_DIR, "data", "raw", "fpl_api")
 OUT_DIR = os.path.join(BASE_DIR, "data", "raw", "vaastav")
 os.makedirs(OUT_DIR, exist_ok=True)
 
-SEASONS = ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"]
+SEASONS = ["2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26"]
 SEASON_YEAR = {"2019-20": 2020, "2020-21": 2021, "2021-22": 2022,
-               "2022-23": 2023, "2023-24": 2024, "2024-25": 2025}
+               "2022-23": 2023, "2023-24": 2024, "2024-25": 2025, "2025-26": 2026}
 
-# 2025-26 is the live current season — NEVER load it here
-BLOCKED_SEASONS = {"2025-26"}
+# 2026-27 is the live current season — NEVER load it here
+BLOCKED_SEASONS = {"2026-27"}
 
 # Columns we want to extract (handles missing gracefully)
 DESIRED_COLS = [
@@ -356,7 +356,7 @@ def print_validation_report(raw_counts, df_clean, pos_file_counts,
     pivot = pivot.reindex(["GK", "DEF", "MID", "FWD"])
     print(pivot.round(2).to_string())
 
-    print("\nTOP 10 HIGHEST SCORING PLAYERS (total points across all 5 seasons):")
+    print(f"\nTOP 10 HIGHEST SCORING PLAYERS (total points across all {len(SEASONS)} seasons):")
     top = (df_clean.groupby("name")["total_points"].sum()
            .sort_values(ascending=False).head(10))
     for i, (name, pts) in enumerate(top.items(), 1):

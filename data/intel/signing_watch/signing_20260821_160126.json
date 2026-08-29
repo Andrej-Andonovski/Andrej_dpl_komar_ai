@@ -1,0 +1,18 @@
+{
+  "detected_at": "2026-08-21T14:01:26.712361+00:00",
+  "players": [
+    {
+      "fpl_id": 600,
+      "name": "Ibrahim Osman",
+      "team": "Brighton",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.64,
+        "seasons_used": 11,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

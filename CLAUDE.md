@@ -32,6 +32,53 @@ hyperparameter-tuned. Live demo = full GW1-38 season run end-to-end.
 Result: 2468 pts (~64.9/GW) — roughly +400 pts over the average FPL manager,
 i.e. top-tier global rank (~64 pts/GW ≈ top ~0.01% / top ~1000 per GiveMeSport).
 Thesis (FINKI_Thesis.pdf, MK + EN, Overleaf) written up with these results.
+The 2468 headline number reflects the 2025-26 season (now historical, see
+below) — it is not re-derived by the 2026-27 refresh described next.
+
+## 2026-27 Season Data Refresh (2026-07-27)
+2025-26 completed, so the pipeline was rolled forward one season: 2025-26 is
+now historical training data (rule #1's "never train on the live season"
+boundary moved from 2025-26 to 2026-27), and fresh 2026-27 squad/fixture data
+was pulled for the live blind test (GW1 deadline 2026-08-21). Machine now has
+`data/raw/` and native Python (no Docker needed for pipeline dev; Docker
+remains the reference env for any score that must match a documented number).
+Promotion/relegation vs 2025-26: **out** Burnley, West Ham, Wolves; **in**
+Coventry City, Hull City, Ipswich Town.
+Done:
+- Stage 1 refreshed (`data/raw/fpl_api/`, old 2025-26 snapshot archived to
+  `fpl_api_2025-26_final/`); vaastav repo pulled (adds full 2025-26 season);
+  Stage 2/3 season lists extended to 7 seasons (2019-20..2025-26), blocked-season
+  gate moved to 2026-27.
+- Stage 4a (new_signings_stage4a.py): SEASONS window bumped to
+  2023-24/2024-25/2025-26, Transfermarkt `saison_id` bumped to 2026 (its HTML
+  cache is NOT keyed by season — must be manually archived/cleared on each
+  cycle or it silently serves last year's transfer window).
+- New `pipeline/promoted_clubs_stage4c.py`: handles the case Transfermarkt's
+  "new arrivals" page structurally can't see — a promoted club's retained
+  squad (previous league = Championship, not a real transfer). Reuses Stage
+  4a's scrape/match machinery with a synthetic signings df. Run per promotion
+  cycle: `python pipeline/promoted_clubs_stage4c.py --full-run`.
+- Fixed real bugs found along the way (not cosmetic): (1) `new_signings_stage4a.py`'s
+  VAASTAV_COLS was missing `adjG_per_90/adjA_per_90/league_multiplier/
+  season_reliability/data_source/data_confidence` — Stage 6's
+  `build_prev_lookup` hard-requires these and would KeyError; (2)
+  `team_form_stage3.py`'s `normalise_gw` defaulted attacking/defensive_strength
+  to 0.5 at GW1 (all-NaN group -> degenerate range -> wrong fallback) instead
+  of 0 — a systematic ~137-row-per-position GW1 leakage-check violation,
+  present since this function was written, now fixed to distinguish
+  "no data yet" from "data exists but tied".
+- Stage 6 re-run end to end, all 10 validation checks pass. New training
+  counts below. `EXPECTED_ROWS`-style checks changed from exact-match to
+  minimum-baseline (a new season should only add rows).
+- Ad hoc LGBM walk-forward sanity check (production hyperparameters, no
+  re-search) extended to a 6th fold (train 2019-24 -> validate 2025-26):
+  mean MAE 2.39, squarely inside the 2.34-2.44 range of all prior folds —
+  no degradation from the new season/signings/promoted-club data.
+Not done / still open: `pipeline/train_xgboost_stage7.py` is XGBoost-only and
+superseded (production trains LightGBM online from `data/processed/` every
+run — see `season_simulator.py:train_models` — so no separate "retrain"
+artifact step is needed for the new data to take effect); a live 2026-27
+GW-by-GW run hasn't happened yet (season hasn't started).
 
 ## Completed Stages
 - Stage 1 ✅ FPL API data
@@ -305,13 +352,13 @@ Phase 0 implementation:
 Run + exit criteria: docs/phase0_baseline.md. Gate 1: legacy repro must
 still total exactly 2468. Gate 2: corrected run = the fair baseline number.
 
-## Data Availability Warning (this machine)
-This Desktop copy is a git clone — data/raw/ is GITIGNORED and absent.
-season_simulator.py needs data/raw/fpl_api/{player_history,players_raw,
-fixtures_raw}.csv — copy from the original machine before running.
-FPL API re-fetch impossible: API rolled over to 2026-27 (season ended).
-No local Python either — use Docker image `fpl-sim` (built 2026-07-02):
-  docker run --rm -v "<repo>:/app" fpl-sim python -u pipeline/season_simulator.py
+## Data Availability (this machine, updated 2026-07-27)
+data/raw/ is present and native Python works (pandas/lightgbm/xgboost/sklearn/
+pulp/highspy/optuna all installed) — Docker is no longer required for pipeline
+dev, only as the reference env for reproducing a documented score exactly.
+FPL API now serves 2026-27 (2025-26 has ended) — re-fetching 2025-26 raw data
+is impossible, but the completed season lives on in the vaastav repo and was
+folded into training in the 2026-27 refresh (see above).
 Pre-v2 production result backed up:
   data/intel/archive/season_simulation_legacy_2468.json
 
@@ -346,14 +393,14 @@ Per-GW explanations via Claude API (post-simulation analysis):
   - MAX_TOKENS: 1200, TEMPERATURE: 0
   Note: Stage 9 is explanatory only — decisions are made by intel_06/simulator.
 
-## Training Files (data/processed/)
-train_gk.csv   — 4,421  rows  69 cols
-train_def.csv  — 18,828 rows  67 cols
-train_mid.csv  — 22,132 rows  65 cols
-train_fwd.csv  — 5,663  rows  65 cols
-TOTAL          — 51,044 rows
+## Training Files (data/processed/) — updated 2026-07-27, 7 seasons (2019-20..2025-26)
+train_gk.csv   — 5,174  rows  69 cols
+train_def.csv  — 22,108 rows  67 cols
+train_mid.csv  — 25,975 rows  65 cols
+train_fwd.csv  — 6,563  rows  65 cols
+TOTAL          — 59,820 rows
 Target column: total_points
-All validated: 0 NaN, 0 leakage, 0 cross-season bleed
+All validated: 0 NaN, 0 leakage (10/10 Stage 6 checks pass), 0 cross-season bleed
 
 ## Model Output Paths
 models/xgb_gk.pkl   — GK model (contains LightGBM when MODEL_TYPE=lgbm)
@@ -373,7 +420,8 @@ data/intel/effective_ownership.json — intel_08 output (top-10k EO, latest snap
 data/intel/eo_history/gw{N}.json  — intel_08 per-GW EO archive (cannot backfill)
 
 ## Critical Rules — Never Break
-1. GW1 BLIND TEST — zero 2025-26 data in training ever
+1. GW1 BLIND TEST — zero 2026-27 data in training ever (boundary moves
+   forward one season each cycle; 2025-26 is now historical, see above)
 2. NO LEAKAGE — all features must be knowable before GW kickoff
 3. NO CROSS-SEASON BLEED — rolling windows partition by season
 4. 4 SEPARATE MODELS — one per position, never mix

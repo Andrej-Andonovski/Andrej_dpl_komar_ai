@@ -1,41 +1,37 @@
 {
-  "generated_at": "2026-07-21T07:12:55.218330",
+  "generated_at": "2026-07-27T12:35:04.601030",
   "rules_mode": "corrected",
   "chip_strategy": "v2",
   "optimizer": "mp",
   "mp_horizon": 5,
-  "mp_theta": 0.47582559616936687,
+  "mp_theta": 0.4244407978036352,
   "mp_chips": "model",
-  "mp_hit_cost": 7.955663801043844,
+  "mp_hit_cost": 9.893149090323389,
   "mp_hit_cap": 2,
-  "mp_hit_budget": 3,
-  "mp_rebuy_gap": 3,
-  "mp_ft_value": 0.9357330119830503,
-  "mp_form_hold": 3.643321381317695,
+  "mp_hit_budget": 5,
+  "mp_rebuy_gap": 4,
+  "mp_ft_value": 0.301712705393176,
+  "mp_form_hold": 5.121719371656024,
   "mp_form_hold_min": 10,
   "mp_pi_model": false,
   "mp_pi_intel": false,
   "mp_bench_slots": null,
   "mp_w_bench_gk": 0.04,
-  "mp_delta": 0.9792017273783681,
-  "mp_delta_chip": 0.9670388402538618,
-  "mp_gamma": 0.0641785771630167,
-  "mp_w_bench": 0.23277652556870626,
-  "mp_chip_bar": true,
-  "mp_chip_percentile_q": 0.5281248274964869,
+  "mp_delta": 0.9429599133496225,
+  "mp_delta_chip": 0.9454329208358049,
+  "mp_gamma": 0.10029647518722526,
+  "mp_w_bench": 0.11655331206170695,
+  "mp_chip_bar": false,
+  "mp_chip_percentile_q": 0.616618222821584,
   "mp_chip_percentile_warmup": 3,
-  "mp_chip_percentile_state": "/app/pipeline/../data/intel/chip_percentile_2023-24.json",
+  "mp_chip_percentile_state": "C:\\Users\\Andrej\\Desktop\\fpl ai\\pipeline\\..\\data\\intel\\chip_percentile_2023-24.json",
   "season": "2023-24",
-  "total_actual_pts": 2185,
-  "total_predicted_pts": 2176.3568077427185,
-  "total_penalties": -12,
+  "total_actual_pts": 2001,
+  "total_predicted_pts": 1870.01627120917,
+  "total_penalties": 0,
   "chips_used": [
     {
       "chip": "bb1",
-      "gw": 5
-    },
-    {
-      "chip": "tc1",
       "gw": 6
     },
     {
@@ -43,19 +39,19 @@
       "gw": 7
     },
     {
-      "chip": "wc1",
-      "gw": 17
+      "chip": "tc1",
+      "gw": 9
     },
     {
-      "chip": "tc2",
-      "gw": 25
+      "chip": "wc1",
+      "gw": 15
     },
     {
       "chip": "fh2",
-      "gw": 26
+      "gw": 25
     },
     {
-      "chip": "bb2",
+      "chip": "tc2",
       "gw": 28
     },
     {
@@ -78,11 +74,11 @@
     },
     {
       "gw": 5,
-      "mae": 2.566
+      "mae": 2.867
     },
     {
       "gw": 6,
-      "mae": 5.14
+      "mae": 3.569
     },
     {
       "gw": 7,
@@ -90,127 +86,111 @@
     },
     {
       "gw": 8,
-      "mae": 2.644
+      "mae": 2.678
     },
     {
       "gw": 9,
-      "mae": 3.301
+      "mae": 2.892
     },
     {
       "gw": 10,
-      "mae": 3.404
+      "mae": 3.028
     },
     {
       "gw": 11,
-      "mae": 3.429
+      "mae": 3.381
     },
     {
       "gw": 12,
-      "mae": 3.671
+      "mae": 2.556
     },
     {
       "gw": 13,
-      "mae": 2.847
+      "mae": 2.437
     },
     {
       "gw": 14,
-      "mae": 2.771
+      "mae": 3.427
     },
     {
       "gw": 15,
-      "mae": 3.915
+      "mae": 3.396
     },
     {
       "gw": 16,
-      "mae": 3.871
+      "mae": 4.293
     },
     {
       "gw": 17,
-      "mae": 4.339
+      "mae": 3.974
     },
     {
       "gw": 18,
-      "mae": 2.255
+      "mae": 2.582
     },
     {
       "gw": 19,
-      "mae": 2.542
+      "mae": 2.363
     },
     {
       "gw": 20,
-      "mae": 3.889
+      "mae": 5.556
     },
     {
       "gw": 21,
-      "mae": 3.836
+      "mae": 3.723
     },
     {
       "gw": 22,
-      "mae": 3.578
+      "mae": 3.837
     },
     {
       "gw": 23,
-      "mae": 4.838
+      "mae": 5.236
     },
     {
       "gw": 24,
-      "mae": 3.539
+      "mae": 3.887
     },
     {
       "gw": 25,
-      "mae": 4.453
+      "mae": 3.771
     },
     {
       "gw": 26,
-      "mae": 3.55
+      "mae": 3.664
     },
     {
       "gw": 27,
-      "mae": 3.187
+      "mae": 2.771
     },
     {
       "gw": 28,
-      "mae": 3.459
+      "mae": 3.55
     },
     {
       "gw": 29,
-      "mae": 1.801
+      "mae": 1.185
     },
     {
       "gw": 30,
-      "mae": 2.748
+      "mae": 3.516
     },
     {
       "gw": 31,
-      "mae": 4.243
+      "mae": 5.168
     },
     {
       "gw": 32,
-      "mae": 3.521
+      "mae": 3.237
     },
     {
       "gw": 33,
-      "mae": 3.045
+      "mae": 4.75
     },
     {
       "gw": 34,
-      "mae": 5.951
-    },
-    {
-      "gw": 35,
-      "mae": 4.126
-    },
-    {
-      "gw": 36,
-      "mae": 1.946
-    },
-    {
-      "gw": 37,
-      "mae": 3.786
-    },
-    {
-      "gw": 38,
-      "mae": 3.92
+      "mae": 5.384
     }
   ],
   "gameweeks": [
@@ -1112,15 +1092,15 @@
     },
     {
       "gw": 5,
-      "chip": "bb1",
+      "chip": null,
       "free_transfers": 1,
-      "bank": 7.1,
-      "squad_value": 93.5,
+      "bank": 0.9,
+      "squad_value": 99.6,
       "transfers_in": [
-        "Neto"
+        "Alexander-Arnold"
       ],
       "transfers_out": [
-        "De Bruyne"
+        "Trippier"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -1149,6 +1129,18 @@
           "pts_counted": 6
         },
         {
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 6.5,
+          "predicted_pts": 4.66,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
           "player_id": 119,
           "web_name": "Wissa",
           "pos": "FWD",
@@ -1171,6 +1163,30 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
+        },
+        {
+          "player_id": 263,
+          "web_name": "Pickford",
+          "pos": "GK",
+          "team": 9,
+          "price": 4.5,
+          "predicted_pts": 4.72,
+          "actual_pts": 3,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 3
+        },
+        {
+          "player_id": 5,
+          "web_name": "Gabriel",
+          "pos": "DEF",
+          "team": 1,
+          "price": 4.8,
+          "predicted_pts": 2.13,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
         },
         {
           "player_id": 353,
@@ -1197,28 +1213,16 @@
           "pts_counted": 5
         },
         {
-          "player_id": 85,
-          "web_name": "Solanke",
+          "player_id": 415,
+          "web_name": "Isak",
           "pos": "FWD",
-          "team": 3,
-          "price": 6.5,
-          "predicted_pts": 4.66,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 430,
-          "web_name": "Trippier",
-          "pos": "DEF",
           "team": 15,
-          "price": 6.5,
-          "predicted_pts": 3.34,
-          "actual_pts": 8,
+          "price": 7.7,
+          "predicted_pts": 4.03,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 8
+          "pts_counted": 0
         },
         {
           "player_id": 516,
@@ -1231,6 +1235,32 @@
           "is_captain": true,
           "captain_multiplier": 2,
           "pts_counted": 4
+        }
+      ],
+      "bench": [
+        {
+          "player_id": 313,
+          "web_name": "Virgil",
+          "pos": "DEF",
+          "team": 11,
+          "price": 6.0,
+          "predicted_pts": 2.75,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
+          "player_id": 349,
+          "web_name": "De Bruyne",
+          "pos": "MID",
+          "team": 13,
+          "price": 10.3,
+          "predicted_pts": 2.86,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         },
         {
           "player_id": 524,
@@ -1245,63 +1275,12 @@
           "pts_counted": 4
         },
         {
-          "player_id": 567,
-          "web_name": "Neto",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.5,
-          "predicted_pts": 3.59,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 5,
-          "web_name": "Gabriel",
-          "pos": "DEF",
-          "team": 1,
-          "price": 4.8,
-          "predicted_pts": 2.13,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 263,
-          "web_name": "Pickford",
-          "pos": "GK",
-          "team": 9,
-          "price": 4.5,
-          "predicted_pts": 4.72,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 313,
-          "web_name": "Virgil",
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
           "pos": "DEF",
           "team": 11,
-          "price": 6.0,
-          "predicted_pts": 2.75,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
-        },
-        {
-          "player_id": 415,
-          "web_name": "Isak",
-          "pos": "FWD",
-          "team": 15,
-          "price": 7.7,
-          "predicted_pts": 4.03,
+          "price": 7.9,
+          "predicted_pts": 5.42,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -1321,16 +1300,12 @@
         "predicted_pts": 5.9,
         "source": "milp"
       },
-      "predicted_total": 43.5,
-      "actual_total": 51,
+      "predicted_total": 50.0,
+      "actual_total": 34,
       "auto_subs": [
         [
-          "Virgil",
-          "Chilwell"
-        ],
-        [
-          "Isak",
-          "Solanke"
+          "Alexander-Arnold",
+          "Gabriel"
         ]
       ],
       "bench_intel_target": null,
@@ -1339,18 +1314,30 @@
     },
     {
       "gw": 6,
-      "chip": "tc1",
+      "chip": "bb1",
       "free_transfers": 1,
-      "bank": 0.6,
-      "squad_value": 99.7,
+      "bank": 5.6,
+      "squad_value": 94.6,
       "transfers_in": [
-        "Haaland"
+        "Neto"
       ],
       "transfers_out": [
-        "Isak"
+        "De Bruyne"
       ],
       "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 5,
+          "web_name": "Gabriel",
+          "pos": "DEF",
+          "team": 1,
+          "price": 4.8,
+          "predicted_pts": 2.52,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -1359,9 +1346,9 @@
           "price": 8.7,
           "predicted_pts": 5.11,
           "actual_pts": 13,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 13
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 26
         },
         {
           "player_id": 20,
@@ -1424,28 +1411,28 @@
           "pts_counted": 2
         },
         {
-          "player_id": 353,
-          "web_name": "Foden",
+          "player_id": 567,
+          "web_name": "Neto",
           "pos": "MID",
-          "team": 13,
-          "price": 7.6,
-          "predicted_pts": 4.27,
-          "actual_pts": 11,
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 4.36,
+          "actual_pts": 9,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 11
+          "pts_counted": 9
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.1,
-          "predicted_pts": 10.12,
-          "actual_pts": 6,
-          "is_captain": true,
-          "captain_multiplier": 3,
-          "pts_counted": 18
+          "player_id": 313,
+          "web_name": "Virgil",
+          "pos": "DEF",
+          "team": 11,
+          "price": 6.0,
+          "predicted_pts": 2.92,
+          "actual_pts": 7,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 7
         },
         {
           "player_id": 412,
@@ -1460,54 +1447,30 @@
           "pts_counted": 12
         },
         {
-          "player_id": 430,
-          "web_name": "Trippier",
-          "pos": "DEF",
+          "player_id": 415,
+          "web_name": "Isak",
+          "pos": "FWD",
           "team": 15,
-          "price": 6.5,
-          "predicted_pts": 4.76,
-          "actual_pts": 18,
+          "price": 7.7,
+          "predicted_pts": 3.55,
+          "actual_pts": 5,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 18
-        },
-        {
-          "player_id": 567,
-          "web_name": "Neto",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.5,
-          "predicted_pts": 4.36,
-          "actual_pts": 9,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 9
+          "pts_counted": 5
         }
       ],
       "bench": [
         {
-          "player_id": 5,
-          "web_name": "Gabriel",
-          "pos": "DEF",
-          "team": 1,
-          "price": 4.8,
-          "predicted_pts": 2.52,
-          "actual_pts": 1,
+          "player_id": 353,
+          "web_name": "Foden",
+          "pos": "MID",
+          "team": 13,
+          "price": 7.6,
+          "predicted_pts": 4.27,
+          "actual_pts": 11,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 313,
-          "web_name": "Virgil",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.0,
-          "predicted_pts": 2.92,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 11
         },
         {
           "player_id": 516,
@@ -1532,23 +1495,41 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 4.41,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0,
+          "auto_subbed_out": true
         }
       ],
-      "captain_id": 355,
-      "vice_id": 19,
-      "vice_name": "Saka",
+      "captain_id": 19,
+      "vice_id": 85,
+      "vice_name": "Solanke",
       "captain_source": "milp",
       "captain": {
-        "player_id": 355,
-        "web_name": "Haaland",
-        "pos": "FWD",
-        "actual_pts": 6.0,
-        "predicted_pts": 10.1,
+        "player_id": 19,
+        "web_name": "Saka",
+        "pos": "MID",
+        "actual_pts": 13.0,
+        "predicted_pts": 5.1,
         "source": "milp"
       },
-      "predicted_total": 62.4,
-      "actual_total": 92,
-      "auto_subs": [],
+      "predicted_total": 42.1,
+      "actual_total": 98,
+      "auto_subs": [
+        [
+          "Alexander-Arnold",
+          "Neto"
+        ]
+      ],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
@@ -1557,8 +1538,8 @@
       "gw": 7,
       "chip": "fh1",
       "free_transfers": 1,
-      "bank": 0.6,
-      "squad_value": 100.0,
+      "bank": 5.6,
+      "squad_value": 94.7,
       "transfers_in": [
         "\u00d8degaard",
         "Roberts",
@@ -1568,24 +1549,28 @@
         "Morris",
         "Lockyer",
         "J.Alvarez",
+        "Haaland",
         "Walker",
         "B.Fernandes",
         "Rashford",
+        "Trippier",
         "Turner"
       ],
       "transfers_out": [
         "Foden",
+        "Alexander-Arnold",
         "Chilwell",
-        "Gabriel",
         "Son",
-        "Pickford",
+        "Gabriel",
         "Neto",
+        "Pickford",
         "Areola",
         "Saliba",
         "Solanke",
         "Wissa",
         "Virgil",
-        "Gordon"
+        "Gordon",
+        "Isak"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -1801,15 +1786,15 @@
       "gw": 8,
       "chip": null,
       "free_transfers": 2,
-      "bank": 5.8,
-      "squad_value": 95.2,
+      "bank": 4.2,
+      "squad_value": 96.3,
       "transfers_in": [
         "Watkins",
         "J.Alvarez"
       ],
       "transfers_out": [
         "Wissa",
-        "Haaland"
+        "Isak"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -1862,6 +1847,18 @@
           "pts_counted": 8
         },
         {
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 2.57,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
           "player_id": 313,
           "web_name": "Virgil",
           "pos": "DEF",
@@ -1896,18 +1893,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        },
-        {
-          "player_id": 430,
-          "web_name": "Trippier",
-          "pos": "DEF",
-          "team": 15,
-          "price": 6.7,
-          "predicted_pts": 4.81,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
         },
         {
           "player_id": 516,
@@ -2010,8 +1995,8 @@
         "predicted_pts": 5.7,
         "source": "milp"
       },
-      "predicted_total": 50.9,
-      "actual_total": 44,
+      "predicted_total": 48.7,
+      "actual_total": 39,
       "auto_subs": [
         [
           "Saka",
@@ -2028,15 +2013,15 @@
     },
     {
       "gw": 9,
-      "chip": null,
+      "chip": "tc1",
       "free_transfers": 1,
-      "bank": 4.7,
-      "squad_value": 96.7,
+      "bank": 1.7,
+      "squad_value": 99.1,
       "transfers_in": [
-        "Robertson"
+        "Maddison"
       ],
       "transfers_out": [
-        "Chilwell"
+        "Gordon"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -2053,6 +2038,18 @@
           "pts_counted": 5
         },
         {
+          "player_id": 20,
+          "web_name": "Saliba",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.75,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
           "player_id": 60,
           "web_name": "Watkins",
           "pos": "FWD",
@@ -2063,18 +2060,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 11
-        },
-        {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 6.4,
-          "predicted_pts": 4.02,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
         },
         {
           "player_id": 263,
@@ -2089,16 +2074,16 @@
           "pts_counted": 2
         },
         {
-          "player_id": 20,
-          "web_name": "Saliba",
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
           "pos": "DEF",
-          "team": 1,
-          "price": 5.2,
-          "predicted_pts": 3.75,
-          "actual_pts": 1,
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 4.03,
+          "actual_pts": 6,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 6
         },
         {
           "player_id": 313,
@@ -2137,16 +2122,16 @@
           "pts_counted": 2
         },
         {
-          "player_id": 430,
-          "web_name": "Trippier",
-          "pos": "DEF",
-          "team": 15,
-          "price": 6.8,
-          "predicted_pts": 6.01,
-          "actual_pts": 10,
+          "player_id": 504,
+          "web_name": "Maddison",
+          "pos": "MID",
+          "team": 18,
+          "price": 8.0,
+          "predicted_pts": 5.79,
+          "actual_pts": 9,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 10
+          "pts_counted": 9
         },
         {
           "player_id": 516,
@@ -2157,8 +2142,8 @@
           "predicted_pts": 5.86,
           "actual_pts": 14,
           "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 28
+          "captain_multiplier": 3,
+          "pts_counted": 42
         },
         {
           "player_id": 567,
@@ -2187,16 +2172,28 @@
           "pts_counted": 1
         },
         {
-          "player_id": 412,
-          "web_name": "Gordon",
-          "pos": "MID",
-          "team": 15,
-          "price": 5.6,
-          "predicted_pts": 3.71,
-          "actual_pts": 8,
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 6.4,
+          "predicted_pts": 4.02,
+          "actual_pts": 7,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 8
+          "pts_counted": 7
+        },
+        {
+          "player_id": 195,
+          "web_name": "Chilwell",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.5,
+          "predicted_pts": 2.25,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         },
         {
           "player_id": 524,
@@ -2209,24 +2206,11 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 1
-        },
-        {
-          "player_id": 307,
-          "web_name": "Robertson",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.6,
-          "predicted_pts": 5.48,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
         }
       ],
       "captain_id": 516,
-      "vice_id": 430,
-      "vice_name": "Trippier",
+      "vice_id": 504,
+      "vice_name": "Maddison",
       "captain_source": "milp",
       "captain": {
         "player_id": 516,
@@ -2236,14 +2220,9 @@
         "predicted_pts": 5.9,
         "source": "milp"
       },
-      "predicted_total": 54.2,
-      "actual_total": 86,
-      "auto_subs": [
-        [
-          "Robertson",
-          "Saliba"
-        ]
-      ],
+      "predicted_total": 58.1,
+      "actual_total": 98,
+      "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
@@ -2252,13 +2231,13 @@
       "gw": 10,
       "chip": null,
       "free_transfers": 1,
-      "bank": 4.9,
-      "squad_value": 96.8,
+      "bank": 0.3,
+      "squad_value": 100.8,
       "transfers_in": [
-        "Bowen"
+        "Trippier"
       ],
       "transfers_out": [
-        "Foden"
+        "Chilwell"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -2273,18 +2252,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 6
-        },
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.2,
-          "predicted_pts": 3.71,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
         },
         {
           "player_id": 60,
@@ -2311,6 +2278,18 @@
           "pts_counted": 2
         },
         {
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 4.41,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
+        },
+        {
           "player_id": 313,
           "web_name": "Virgil",
           "pos": "DEF",
@@ -2335,16 +2314,16 @@
           "pts_counted": 2
         },
         {
-          "player_id": 412,
-          "web_name": "Gordon",
+          "player_id": 353,
+          "web_name": "Foden",
           "pos": "MID",
-          "team": 15,
-          "price": 5.6,
-          "predicted_pts": 4.21,
-          "actual_pts": 2,
+          "team": 13,
+          "price": 7.6,
+          "predicted_pts": 3.79,
+          "actual_pts": 7,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 7
         },
         {
           "player_id": 430,
@@ -2357,6 +2336,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
+        },
+        {
+          "player_id": 504,
+          "web_name": "Maddison",
+          "pos": "MID",
+          "team": 18,
+          "price": 8.1,
+          "predicted_pts": 5.43,
+          "actual_pts": 6,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 6
         },
         {
           "player_id": 516,
@@ -2381,18 +2372,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.3,
-          "predicted_pts": 5.0,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         }
       ],
       "bench": [
@@ -2409,6 +2388,18 @@
           "pts_counted": 0
         },
         {
+          "player_id": 20,
+          "web_name": "Saliba",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.71,
+          "actual_pts": 7,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 7
+        },
+        {
           "player_id": 263,
           "web_name": "Pickford",
           "pos": "GK",
@@ -2419,18 +2410,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 5
-        },
-        {
-          "player_id": 307,
-          "web_name": "Robertson",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.6,
-          "predicted_pts": 3.4,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
         },
         {
           "player_id": 567,
@@ -2457,8 +2436,8 @@
         "predicted_pts": 7.8,
         "source": "milp"
       },
-      "predicted_total": 56.8,
-      "actual_total": 46,
+      "predicted_total": 57.5,
+      "actual_total": 53,
       "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
@@ -2468,23 +2447,23 @@
       "gw": 11,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.6,
-      "squad_value": 101.6,
+      "bank": 0.4,
+      "squad_value": 101.1,
       "transfers_in": [
-        "Salah"
+        "Bowen"
       ],
       "transfers_out": [
-        "Saka"
+        "Foden"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
+          "player_id": 19,
+          "web_name": "Saka",
+          "pos": "MID",
           "team": 1,
-          "price": 5.2,
-          "predicted_pts": 3.35,
+          "price": 8.6,
+          "predicted_pts": 4.84,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -2503,12 +2482,12 @@
           "pts_counted": 2
         },
         {
-          "player_id": 308,
-          "web_name": "Salah",
-          "pos": "MID",
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
           "team": 11,
-          "price": 12.8,
-          "predicted_pts": 7.56,
+          "price": 7.9,
+          "predicted_pts": 5.41,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -2539,18 +2518,6 @@
           "pts_counted": 2
         },
         {
-          "player_id": 412,
-          "web_name": "Gordon",
-          "pos": "MID",
-          "team": 15,
-          "price": 5.7,
-          "predicted_pts": 2.98,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
           "player_id": 430,
           "web_name": "Trippier",
           "pos": "DEF",
@@ -2561,6 +2528,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 9
+        },
+        {
+          "player_id": 504,
+          "web_name": "Maddison",
+          "pos": "MID",
+          "team": 18,
+          "price": 8.1,
+          "predicted_pts": 5.16,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 516,
@@ -2599,6 +2578,20 @@
           "pts_counted": 7
         },
         {
+          "player_id": 20,
+          "web_name": "Saliba",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.35,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        }
+      ],
+      "bench": [
+        {
           "player_id": 5,
           "web_name": "Gabriel",
           "pos": "DEF",
@@ -2609,9 +2602,7 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        }
-      ],
-      "bench": [
+        },
         {
           "player_id": 85,
           "web_name": "Solanke",
@@ -2637,18 +2628,6 @@
           "pts_counted": 2
         },
         {
-          "player_id": 307,
-          "web_name": "Robertson",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.5,
-          "predicted_pts": 2.03,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
           "player_id": 567,
           "web_name": "Neto",
           "pos": "MID",
@@ -2663,8 +2642,8 @@
         }
       ],
       "captain_id": 516,
-      "vice_id": 308,
-      "vice_name": "Salah",
+      "vice_id": 526,
+      "vice_name": "Bowen",
       "captain_source": "milp",
       "captain": {
         "player_id": 516,
@@ -2674,12 +2653,12 @@
         "predicted_pts": 7.7,
         "source": "milp"
       },
-      "predicted_total": 55.5,
-      "actual_total": 40,
+      "predicted_total": 57.0,
+      "actual_total": 34,
       "auto_subs": [
         [
           "Neto",
-          "Gabriel"
+          "Saliba"
         ]
       ],
       "bench_intel_target": null,
@@ -2690,18 +2669,24 @@
       "gw": 12,
       "chip": null,
       "free_transfers": 1,
-      "bank": 1.0,
+      "bank": 0.4,
       "squad_value": 101.3,
-      "transfers_in": [
-        "Haaland",
-        "Hee Chan"
-      ],
-      "transfers_out": [
-        "Salah",
-        "J.Alvarez"
-      ],
-      "penalty_pts": -4,
+      "transfers_in": [],
+      "transfers_out": [],
+      "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 19,
+          "web_name": "Saka",
+          "pos": "MID",
+          "team": 1,
+          "price": 8.6,
+          "predicted_pts": 4.86,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
+        },
         {
           "player_id": 20,
           "web_name": "Saliba",
@@ -2722,21 +2707,21 @@
           "price": 8.4,
           "predicted_pts": 6.01,
           "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 12
         },
         {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 6.4,
-          "predicted_pts": 3.52,
-          "actual_pts": 13,
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 4.43,
+          "actual_pts": 7,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 13
+          "pts_counted": 7
         },
         {
           "player_id": 313,
@@ -2751,28 +2736,16 @@
           "pts_counted": 6
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
+          "player_id": 343,
+          "web_name": "J.Alvarez",
           "pos": "FWD",
           "team": 13,
-          "price": 14.0,
-          "predicted_pts": 8.59,
-          "actual_pts": 16,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 32
-        },
-        {
-          "player_id": 412,
-          "web_name": "Gordon",
-          "pos": "MID",
-          "team": 15,
-          "price": 5.7,
-          "predicted_pts": 3.68,
-          "actual_pts": 2,
+          "price": 7.2,
+          "predicted_pts": 4.01,
+          "actual_pts": 5,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 5
         },
         {
           "player_id": 430,
@@ -2785,6 +2758,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 1
+        },
+        {
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 6.4,
+          "predicted_pts": 3.52,
+          "actual_pts": 13,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 13
         },
         {
           "player_id": 516,
@@ -2821,18 +2806,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 8
-        },
-        {
-          "player_id": 557,
-          "web_name": "Hee Chan",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.5,
-          "predicted_pts": 4.33,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         }
       ],
       "bench": [
@@ -2861,18 +2834,6 @@
           "pts_counted": 2
         },
         {
-          "player_id": 307,
-          "web_name": "Robertson",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.5,
-          "predicted_pts": 1.57,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
           "player_id": 567,
           "web_name": "Neto",
           "pos": "MID",
@@ -2883,23 +2844,41 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
+        },
+        {
+          "player_id": 504,
+          "web_name": "Maddison",
+          "pos": "MID",
+          "team": 18,
+          "price": 8.1,
+          "predicted_pts": 4.95,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0,
+          "auto_subbed_out": true
         }
       ],
-      "captain_id": 355,
-      "vice_id": 60,
-      "vice_name": "Watkins",
+      "captain_id": 60,
+      "vice_id": 430,
+      "vice_name": "Trippier",
       "captain_source": "milp",
       "captain": {
-        "player_id": 355,
-        "web_name": "Haaland",
+        "player_id": 60,
+        "web_name": "Watkins",
         "pos": "FWD",
-        "actual_pts": 16.0,
-        "predicted_pts": 8.6,
+        "actual_pts": 6.0,
+        "predicted_pts": 6.0,
         "source": "milp"
       },
-      "predicted_total": 52.6,
-      "actual_total": 79,
-      "auto_subs": [],
+      "predicted_total": 50.8,
+      "actual_total": 70,
+      "auto_subs": [
+        [
+          "Maddison",
+          "Solanke"
+        ]
+      ],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
@@ -2907,14 +2886,16 @@
     {
       "gw": 13,
       "chip": null,
-      "free_transfers": 1,
-      "bank": 2.1,
-      "squad_value": 100.6,
+      "free_transfers": 2,
+      "bank": 0.2,
+      "squad_value": 101.4,
       "transfers_in": [
-        "Walker"
+        "Palmer",
+        "Salah"
       ],
       "transfers_out": [
-        "Robertson"
+        "Saka",
+        "Son"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -2967,40 +2948,52 @@
           "pts_counted": 2
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.0,
-          "predicted_pts": 6.72,
-          "actual_pts": 7,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 14
-        },
-        {
-          "player_id": 369,
-          "web_name": "Walker",
-          "pos": "DEF",
-          "team": 13,
-          "price": 5.3,
-          "predicted_pts": 3.26,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.1,
+          "predicted_pts": 3.32,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
         },
         {
-          "player_id": 412,
-          "web_name": "Gordon",
-          "pos": "MID",
-          "team": 15,
-          "price": 5.8,
-          "predicted_pts": 3.71,
-          "actual_pts": 13,
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 3.68,
+          "actual_pts": 8,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 13
+          "pts_counted": 8
+        },
+        {
+          "player_id": 308,
+          "web_name": "Salah",
+          "pos": "MID",
+          "team": 11,
+          "price": 12.9,
+          "predicted_pts": 7.11,
+          "actual_pts": 5,
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 10
+        },
+        {
+          "player_id": 343,
+          "web_name": "J.Alvarez",
+          "pos": "FWD",
+          "team": 13,
+          "price": 7.2,
+          "predicted_pts": 3.72,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
         },
         {
           "player_id": 430,
@@ -3015,18 +3008,6 @@
           "pts_counted": 1
         },
         {
-          "player_id": 516,
-          "web_name": "Son",
-          "pos": "MID",
-          "team": 18,
-          "price": 9.7,
-          "predicted_pts": 5.14,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
           "player_id": 524,
           "web_name": "Areola",
           "pos": "GK",
@@ -3039,16 +3020,16 @@
           "pts_counted": 3
         },
         {
-          "player_id": 557,
-          "web_name": "Hee Chan",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.5,
-          "predicted_pts": 3.19,
-          "actual_pts": 7,
+          "player_id": 313,
+          "web_name": "Virgil",
+          "pos": "DEF",
+          "team": 11,
+          "price": 6.1,
+          "predicted_pts": 2.86,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 2
         }
       ],
       "bench": [
@@ -3065,16 +3046,16 @@
           "pts_counted": 1
         },
         {
-          "player_id": 313,
-          "web_name": "Virgil",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.1,
-          "predicted_pts": 2.86,
-          "actual_pts": 2,
+          "player_id": 504,
+          "web_name": "Maddison",
+          "pos": "MID",
+          "team": 18,
+          "price": 8.0,
+          "predicted_pts": 2.98,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0
         },
         {
           "player_id": 567,
@@ -3102,24 +3083,24 @@
           "auto_subbed_out": true
         }
       ],
-      "captain_id": 355,
+      "captain_id": 308,
       "vice_id": 60,
       "vice_name": "Watkins",
       "captain_source": "milp",
       "captain": {
-        "player_id": 355,
-        "web_name": "Haaland",
-        "pos": "FWD",
-        "actual_pts": 7.0,
-        "predicted_pts": 6.7,
+        "player_id": 308,
+        "web_name": "Salah",
+        "pos": "MID",
+        "actual_pts": 5.0,
+        "predicted_pts": 7.1,
         "source": "milp"
       },
-      "predicted_total": 50.3,
-      "actual_total": 61,
+      "predicted_total": 49.3,
+      "actual_total": 47,
       "auto_subs": [
         [
           "Bowen",
-          "Hee Chan"
+          "Virgil"
         ]
       ],
       "bench_intel_target": null,
@@ -3130,40 +3111,16 @@
       "gw": 14,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.8,
-      "squad_value": 102.0,
+      "bank": 1.2,
+      "squad_value": 100.8,
       "transfers_in": [
-        "Diaby"
+        "Mbeumo"
       ],
       "transfers_out": [
-        "Neto"
+        "Maddison"
       ],
       "penalty_pts": 0,
       "xi": [
-        {
-          "player_id": 5,
-          "web_name": "Gabriel",
-          "pos": "DEF",
-          "team": 1,
-          "price": 4.8,
-          "predicted_pts": 3.28,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.4,
-          "predicted_pts": 3.7,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
         {
           "player_id": 60,
           "web_name": "Watkins",
@@ -3175,18 +3132,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 11
-        },
-        {
-          "player_id": 599,
-          "web_name": "Diaby",
-          "pos": "MID",
-          "team": 2,
-          "price": 6.8,
-          "predicted_pts": 4.51,
-          "actual_pts": 4,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 4
         },
         {
           "player_id": 85,
@@ -3201,6 +3146,54 @@
           "pts_counted": 6
         },
         {
+          "player_id": 108,
+          "web_name": "Mbeumo",
+          "pos": "MID",
+          "team": 4,
+          "price": 6.9,
+          "predicted_pts": 4.47,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.2,
+          "predicted_pts": 3.99,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 7.9,
+          "predicted_pts": 4.71,
+          "actual_pts": 13,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 13
+        },
+        {
+          "player_id": 308,
+          "web_name": "Salah",
+          "pos": "MID",
+          "team": 11,
+          "price": 13.0,
+          "predicted_pts": 9.07,
+          "actual_pts": 5,
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 10
+        },
+        {
           "player_id": 313,
           "web_name": "Virgil",
           "pos": "DEF",
@@ -3213,16 +3206,16 @@
           "pts_counted": 1
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
+          "player_id": 343,
+          "web_name": "J.Alvarez",
           "pos": "FWD",
           "team": 13,
-          "price": 14.0,
-          "predicted_pts": 7.76,
-          "actual_pts": 7,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 14
+          "price": 7.1,
+          "predicted_pts": 3.75,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
         },
         {
           "player_id": 430,
@@ -3235,18 +3228,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 12
-        },
-        {
-          "player_id": 516,
-          "web_name": "Son",
-          "pos": "MID",
-          "team": 18,
-          "price": 9.7,
-          "predicted_pts": 5.32,
-          "actual_pts": 10,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 10
         },
         {
           "player_id": 524,
@@ -3275,6 +3256,30 @@
       ],
       "bench": [
         {
+          "player_id": 5,
+          "web_name": "Gabriel",
+          "pos": "DEF",
+          "team": 1,
+          "price": 4.8,
+          "predicted_pts": 3.28,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
+          "player_id": 20,
+          "web_name": "Saliba",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.4,
+          "predicted_pts": 3.7,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
           "player_id": 263,
           "web_name": "Pickford",
           "pos": "GK",
@@ -3287,56 +3292,32 @@
           "pts_counted": 7
         },
         {
-          "player_id": 369,
-          "web_name": "Walker",
-          "pos": "DEF",
-          "team": 13,
-          "price": 5.3,
-          "predicted_pts": 3.02,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 412,
-          "web_name": "Gordon",
-          "pos": "MID",
-          "team": 15,
-          "price": 5.8,
-          "predicted_pts": 2.67,
-          "actual_pts": 10,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 10
-        },
-        {
-          "player_id": 557,
-          "web_name": "Hee Chan",
+          "player_id": 567,
+          "web_name": "Neto",
           "pos": "MID",
           "team": 20,
-          "price": 5.5,
-          "predicted_pts": 3.28,
-          "actual_pts": 1,
+          "price": 5.6,
+          "predicted_pts": 0.78,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 0
         }
       ],
-      "captain_id": 355,
+      "captain_id": 308,
       "vice_id": 60,
       "vice_name": "Watkins",
       "captain_source": "milp",
       "captain": {
-        "player_id": 355,
-        "web_name": "Haaland",
-        "pos": "FWD",
-        "actual_pts": 7.0,
-        "predicted_pts": 7.8,
+        "player_id": 308,
+        "web_name": "Salah",
+        "pos": "MID",
+        "actual_pts": 5.0,
+        "predicted_pts": 9.1,
         "source": "milp"
       },
-      "predicted_total": 51.3,
-      "actual_total": 65,
+      "predicted_total": 52.8,
+      "actual_total": 68,
       "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
@@ -3344,37 +3325,55 @@
     },
     {
       "gw": 15,
-      "chip": null,
+      "chip": "wc1",
       "free_transfers": 1,
-      "bank": 1.8,
-      "squad_value": 101.1,
+      "bank": -0.0,
+      "squad_value": 101.7,
       "transfers_in": [
+        "Saka",
+        "Zinchenko",
+        "Douglas Luiz",
+        "Tsimikas",
+        "Haaland",
+        "Onana",
+        "Gordon",
+        "Lascelles",
+        "Son",
         "Cunha"
       ],
       "transfers_out": [
-        "Solanke"
+        "Gabriel",
+        "Saliba",
+        "Solanke",
+        "Mbeumo",
+        "Pickford",
+        "Salah",
+        "Virgil",
+        "J.Alvarez",
+        "Bowen",
+        "Neto"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 5,
-          "web_name": "Gabriel",
-          "pos": "DEF",
+          "player_id": 19,
+          "web_name": "Saka",
+          "pos": "MID",
           "team": 1,
-          "price": 4.9,
-          "predicted_pts": 3.46,
-          "actual_pts": 1,
+          "price": 8.8,
+          "predicted_pts": 5.71,
+          "actual_pts": 5,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 5
         },
         {
-          "player_id": 20,
-          "web_name": "Saliba",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
           "team": 1,
-          "price": 5.5,
-          "predicted_pts": 3.93,
+          "price": 5.1,
+          "predicted_pts": 4.35,
           "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -3393,28 +3392,28 @@
           "pts_counted": 1
         },
         {
-          "player_id": 263,
-          "web_name": "Pickford",
-          "pos": "GK",
-          "team": 9,
-          "price": 4.4,
-          "predicted_pts": 3.26,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
-          "player_id": 313,
-          "web_name": "Virgil",
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
           "pos": "DEF",
           "team": 11,
-          "price": 6.1,
-          "predicted_pts": 4.15,
-          "actual_pts": 14,
+          "price": 7.9,
+          "predicted_pts": 6.32,
+          "actual_pts": 12,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 14
+          "pts_counted": 12
+        },
+        {
+          "player_id": 419,
+          "web_name": "Lascelles",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.1,
+          "predicted_pts": 3.57,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 355,
@@ -3427,6 +3426,18 @@
           "is_captain": true,
           "captain_multiplier": 2,
           "pts_counted": 4
+        },
+        {
+          "player_id": 597,
+          "web_name": "Onana",
+          "pos": "GK",
+          "team": 14,
+          "price": 4.8,
+          "predicted_pts": 3.91,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
         },
         {
           "player_id": 412,
@@ -3465,18 +3476,6 @@
           "pts_counted": 2
         },
         {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.6,
-          "predicted_pts": 4.67,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
           "player_id": 590,
           "web_name": "Cunha",
           "pos": "FWD",
@@ -3491,28 +3490,28 @@
       ],
       "bench": [
         {
-          "player_id": 599,
-          "web_name": "Diaby",
+          "player_id": 43,
+          "web_name": "Douglas Luiz",
           "pos": "MID",
           "team": 2,
-          "price": 6.8,
-          "predicted_pts": 3.39,
-          "actual_pts": 1,
+          "price": 5.6,
+          "predicted_pts": 3.29,
+          "actual_pts": 3,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 3
         },
         {
-          "player_id": 369,
-          "web_name": "Walker",
-          "pos": "DEF",
-          "team": 13,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
           "price": 5.3,
-          "predicted_pts": 2.94,
-          "actual_pts": 2,
+          "predicted_pts": 3.02,
+          "actual_pts": 8,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 8
         },
         {
           "player_id": 524,
@@ -3527,16 +3526,17 @@
           "pts_counted": 0
         },
         {
-          "player_id": 557,
-          "web_name": "Hee Chan",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.6,
-          "predicted_pts": 3.48,
-          "actual_pts": 10,
+          "player_id": 311,
+          "web_name": "Tsimikas",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.8,
+          "predicted_pts": 3.97,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 10
+          "pts_counted": 0,
+          "auto_subbed_out": true
         }
       ],
       "captain_id": 355,
@@ -3551,9 +3551,14 @@
         "predicted_pts": 7.9,
         "source": "milp"
       },
-      "predicted_total": 54.2,
-      "actual_total": 45,
-      "auto_subs": [],
+      "predicted_total": 59.0,
+      "actual_total": 36,
+      "auto_subs": [
+        [
+          "Tsimikas",
+          "Lascelles"
+        ]
+      ],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
@@ -3561,52 +3566,66 @@
     {
       "gw": 16,
       "chip": null,
-      "free_transfers": 1,
-      "bank": 0.5,
-      "squad_value": 102.4,
+      "free_transfers": 2,
+      "bank": 0.1,
+      "squad_value": 101.9,
       "transfers_in": [
-        "Alexander-Arnold"
+        "T.Silva",
+        "Iwobi"
       ],
       "transfers_out": [
-        "Trippier"
+        "Douglas Luiz",
+        "Tsimikas"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 20,
-          "web_name": "Saliba",
+          "player_id": 19,
+          "web_name": "Saka",
+          "pos": "MID",
+          "team": 1,
+          "price": 8.9,
+          "predicted_pts": 4.5,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
           "team": 1,
-          "price": 5.5,
-          "predicted_pts": 3.11,
-          "actual_pts": 2,
+          "price": 5.2,
+          "predicted_pts": 3.02,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 1
         },
         {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 8.4,
-          "predicted_pts": 2.98,
-          "actual_pts": 2,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.3,
+          "predicted_pts": 3.17,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 1
         },
         {
-          "player_id": 263,
-          "web_name": "Pickford",
-          "pos": "GK",
-          "team": 9,
-          "price": 4.4,
-          "predicted_pts": 4.04,
-          "actual_pts": 10,
+          "player_id": 256,
+          "web_name": "Iwobi",
+          "pos": "MID",
+          "team": 10,
+          "price": 5.3,
+          "predicted_pts": 3.89,
+          "actual_pts": 6,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 10
+          "pts_counted": 6
         },
         {
           "player_id": 290,
@@ -3621,40 +3640,28 @@
           "pts_counted": 4
         },
         {
-          "player_id": 313,
-          "web_name": "Virgil",
-          "pos": "DEF",
-          "team": 11,
-          "price": 6.1,
-          "predicted_pts": 5.03,
+          "player_id": 60,
+          "web_name": "Watkins",
+          "pos": "FWD",
+          "team": 2,
+          "price": 8.4,
+          "predicted_pts": 2.98,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
         },
         {
-          "player_id": 5,
-          "web_name": "Gabriel",
-          "pos": "DEF",
-          "team": 1,
-          "price": 4.9,
-          "predicted_pts": 2.75,
-          "actual_pts": 2,
+          "player_id": 597,
+          "web_name": "Onana",
+          "pos": "GK",
+          "team": 14,
+          "price": 4.8,
+          "predicted_pts": 3.95,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 369,
-          "web_name": "Walker",
-          "pos": "DEF",
-          "team": 13,
-          "price": 5.3,
-          "predicted_pts": 3.19,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 1
         },
         {
           "player_id": 412,
@@ -3669,6 +3676,18 @@
           "pts_counted": 2
         },
         {
+          "player_id": 430,
+          "web_name": "Trippier",
+          "pos": "DEF",
+          "team": 15,
+          "price": 7.0,
+          "predicted_pts": 4.51,
+          "actual_pts": -1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": -1
+        },
+        {
           "player_id": 516,
           "web_name": "Son",
           "pos": "MID",
@@ -3679,18 +3698,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 17
-        },
-        {
-          "player_id": 557,
-          "web_name": "Hee Chan",
-          "pos": "MID",
-          "team": 20,
-          "price": 5.6,
-          "predicted_pts": 4.01,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         },
         {
           "player_id": 590,
@@ -3707,16 +3714,16 @@
       ],
       "bench": [
         {
-          "player_id": 599,
-          "web_name": "Diaby",
-          "pos": "MID",
-          "team": 2,
-          "price": 6.8,
-          "predicted_pts": 2.71,
-          "actual_pts": 1,
+          "player_id": 419,
+          "web_name": "Lascelles",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 2.54,
+          "actual_pts": -1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": -1
         },
         {
           "player_id": 524,
@@ -3731,16 +3738,17 @@
           "pts_counted": 0
         },
         {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.6,
-          "predicted_pts": 2.67,
-          "actual_pts": 2,
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 3.69,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0,
+          "auto_subbed_out": true
         },
         {
           "player_id": 355,
@@ -3768,12 +3776,16 @@
         "predicted_pts": 7.0,
         "source": "milp"
       },
-      "predicted_total": 51.4,
-      "actual_total": 58,
+      "predicted_total": 52.8,
+      "actual_total": 48,
       "auto_subs": [
         [
+          "T.Silva",
+          "Zinchenko"
+        ],
+        [
           "Haaland",
-          "Gabriel"
+          "Watkins"
         ]
       ],
       "bench_intel_target": null,
@@ -3782,31 +3794,15 @@
     },
     {
       "gw": 17,
-      "chip": "wc1",
+      "chip": null,
       "free_transfers": 1,
-      "bank": 0.0,
-      "squad_value": 102.7,
+      "bank": 0.4,
+      "squad_value": 102.1,
       "transfers_in": [
-        "Saka",
-        "Konsa",
-        "Trafford",
-        "Palmer",
-        "Mateta",
-        "Mykolenko",
-        "Salah",
-        "Trippier",
-        "Pedro Porro"
+        "Trafford"
       ],
       "transfers_out": [
-        "Gabriel",
-        "Saliba",
-        "Diaby",
-        "Virgil",
-        "Haaland",
-        "Walker",
-        "Gordon",
-        "Areola",
-        "Hee Chan"
+        "Onana"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -3821,6 +3817,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
+        },
+        {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.22,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
         },
         {
           "player_id": 60,
@@ -3859,16 +3867,16 @@
           "pts_counted": 14
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
+          "player_id": 256,
+          "web_name": "Iwobi",
+          "pos": "MID",
+          "team": 10,
           "price": 5.3,
-          "predicted_pts": 3.58,
-          "actual_pts": 8,
+          "predicted_pts": 3.34,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 8
+          "pts_counted": 2
         },
         {
           "player_id": 290,
@@ -3883,28 +3891,28 @@
           "pts_counted": 9
         },
         {
-          "player_id": 308,
-          "web_name": "Salah",
+          "player_id": 412,
+          "web_name": "Gordon",
           "pos": "MID",
-          "team": 11,
-          "price": 13.1,
-          "predicted_pts": 8.74,
-          "actual_pts": 3,
-          "is_captain": true,
-          "captain_multiplier": 2,
+          "team": 15,
+          "price": 6.1,
+          "predicted_pts": 3.82,
+          "actual_pts": 6,
+          "is_captain": false,
+          "captain_multiplier": 1,
           "pts_counted": 6
         },
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 419,
+          "web_name": "Lascelles",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 3.56,
-          "actual_pts": 1,
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 2.72,
+          "actual_pts": 6,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 6
         },
         {
           "player_id": 516,
@@ -3914,21 +3922,9 @@
           "price": 9.6,
           "predicted_pts": 6.2,
           "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.7,
-          "predicted_pts": 5.24,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 4
         },
         {
           "player_id": 590,
@@ -3945,41 +3941,40 @@
       ],
       "bench": [
         {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 2.23,
-          "actual_pts": 12,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 12
-        },
-        {
-          "player_id": 263,
-          "web_name": "Pickford",
-          "pos": "GK",
-          "team": 9,
-          "price": 4.4,
-          "predicted_pts": 4.06,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 260,
-          "web_name": "Mykolenko",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 9,
-          "price": 4.5,
-          "predicted_pts": 3.82,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.31,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
+        },
+        {
+          "player_id": 355,
+          "web_name": "Haaland",
+          "pos": "FWD",
+          "team": 13,
+          "price": 14.0,
+          "predicted_pts": 2.78,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
+          "pts_counted": 0
+        },
+        {
+          "player_id": 524,
+          "web_name": "Areola",
+          "pos": "GK",
+          "team": 19,
+          "price": 4.3,
+          "predicted_pts": 2.39,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         },
         {
           "player_id": 430,
@@ -3995,28 +3990,24 @@
           "auto_subbed_out": true
         }
       ],
-      "captain_id": 308,
-      "vice_id": 516,
-      "vice_name": "Son",
+      "captain_id": 516,
+      "vice_id": 290,
+      "vice_name": "Alexander-Arnold",
       "captain_source": "milp",
       "captain": {
-        "player_id": 308,
-        "web_name": "Salah",
+        "player_id": 516,
+        "web_name": "Son",
         "pos": "MID",
-        "actual_pts": 3.0,
-        "predicted_pts": 8.7,
+        "actual_pts": 2.0,
+        "predicted_pts": 6.2,
         "source": "milp"
       },
-      "predicted_total": 57.4,
-      "actual_total": 64,
+      "predicted_total": 50.0,
+      "actual_total": 65,
       "auto_subs": [
         [
-          "Mykolenko",
-          "Pedro Porro"
-        ],
-        [
           "Trippier",
-          "Konsa"
+          "Lascelles"
         ]
       ],
       "bench_intel_target": null,
@@ -4026,16 +4017,14 @@
     {
       "gw": 18,
       "chip": null,
-      "free_transfers": 2,
-      "bank": 1.4,
-      "squad_value": 101.9,
+      "free_transfers": 1,
+      "bank": 6.5,
+      "squad_value": 96.5,
       "transfers_in": [
-        "Martinez",
-        "Udogie"
+        "G.Jesus"
       ],
       "transfers_out": [
-        "Pickford",
-        "Trippier"
+        "Haaland"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -4052,18 +4041,6 @@
           "pts_counted": 1
         },
         {
-          "player_id": 49,
-          "web_name": "Martinez",
-          "pos": "GK",
-          "team": 2,
-          "price": 5.1,
-          "predicted_pts": 4.62,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
           "player_id": 60,
           "web_name": "Watkins",
           "pos": "FWD",
@@ -4074,6 +4051,30 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 596,
+          "web_name": "Trafford",
+          "pos": "GK",
+          "team": 6,
+          "price": 4.5,
+          "predicted_pts": 3.82,
+          "actual_pts": 9,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 9
+        },
+        {
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 3.42,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 362,
@@ -4088,6 +4089,18 @@
           "pts_counted": 1
         },
         {
+          "player_id": 256,
+          "web_name": "Iwobi",
+          "pos": "MID",
+          "team": 10,
+          "price": 5.3,
+          "predicted_pts": 3.8,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
           "player_id": 290,
           "web_name": "Alexander-Arnold",
           "pos": "DEF",
@@ -4100,28 +4113,28 @@
           "pts_counted": 5
         },
         {
-          "player_id": 308,
-          "web_name": "Salah",
+          "player_id": 412,
+          "web_name": "Gordon",
           "pos": "MID",
-          "team": 11,
-          "price": 13.2,
-          "predicted_pts": 7.38,
-          "actual_pts": 7,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 14
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.4,
-          "predicted_pts": 3.58,
+          "team": 15,
+          "price": 6.2,
+          "predicted_pts": 3.16,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 419,
+          "web_name": "Lascelles",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 2.99,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 516,
@@ -4131,33 +4144,9 @@
           "price": 9.7,
           "predicted_pts": 7.02,
           "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 3.18,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.7,
-          "predicted_pts": 7.41,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 14
         },
         {
           "player_id": 590,
@@ -4174,75 +4163,69 @@
       ],
       "bench": [
         {
-          "player_id": 596,
-          "web_name": "Trafford",
-          "pos": "GK",
-          "team": 6,
-          "price": 4.5,
-          "predicted_pts": 3.82,
-          "actual_pts": 9,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 9
-        },
-        {
-          "player_id": 232,
-          "web_name": "Mateta",
+          "player_id": 8,
+          "web_name": "G.Jesus",
           "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 3.19,
-          "actual_pts": 1,
+          "team": 1,
+          "price": 7.9,
+          "predicted_pts": 2.1,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 2
         },
         {
-          "player_id": 260,
-          "web_name": "Mykolenko",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 9,
-          "price": 4.6,
-          "predicted_pts": 2.4,
-          "actual_pts": 1,
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 2.23,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 2
         },
         {
-          "player_id": 519,
-          "web_name": "Udogie",
+          "player_id": 430,
+          "web_name": "Trippier",
           "pos": "DEF",
-          "team": 18,
-          "price": 4.8,
-          "predicted_pts": 3.78,
-          "actual_pts": 0,
+          "team": 15,
+          "price": 6.9,
+          "predicted_pts": 2.42,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
+          "pts_counted": 2
+        },
+        {
+          "player_id": 524,
+          "web_name": "Areola",
+          "pos": "GK",
+          "team": 19,
+          "price": 4.2,
+          "predicted_pts": 1.38,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
         }
       ],
-      "captain_id": 308,
+      "captain_id": 516,
       "vice_id": 290,
       "vice_name": "Alexander-Arnold",
       "captain_source": "milp",
       "captain": {
-        "player_id": 308,
-        "web_name": "Salah",
+        "player_id": 516,
+        "web_name": "Son",
         "pos": "MID",
         "actual_pts": 7.0,
-        "predicted_pts": 7.4,
+        "predicted_pts": 7.0,
         "source": "milp"
       },
-      "predicted_total": 59.6,
-      "actual_total": 45,
-      "auto_subs": [
-        [
-          "Udogie",
-          "Konsa"
-        ]
-      ],
+      "predicted_total": 50.0,
+      "actual_total": 39,
+      "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
@@ -4251,16 +4234,28 @@
       "gw": 19,
       "chip": null,
       "free_transfers": 1,
-      "bank": 1.5,
-      "squad_value": 102.6,
+      "bank": 9.0,
+      "squad_value": 94.5,
       "transfers_in": [
         "Senesi"
       ],
       "transfers_out": [
-        "Mykolenko"
+        "Trippier"
       ],
       "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 4.09,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -4272,6 +4267,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.86,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 60,
@@ -4310,16 +4317,16 @@
           "pts_counted": 3
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.5,
-          "predicted_pts": 3.03,
-          "actual_pts": 5,
+          "player_id": 256,
+          "web_name": "Iwobi",
+          "pos": "MID",
+          "team": 10,
+          "price": 5.3,
+          "predicted_pts": 3.19,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 5
+          "pts_counted": 2
         },
         {
           "player_id": 290,
@@ -4334,16 +4341,16 @@
           "pts_counted": 8
         },
         {
-          "player_id": 308,
-          "web_name": "Salah",
+          "player_id": 412,
+          "web_name": "Gordon",
           "pos": "MID",
-          "team": 11,
-          "price": 13.2,
-          "predicted_pts": 8.43,
-          "actual_pts": 3,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 6
+          "team": 15,
+          "price": 6.2,
+          "predicted_pts": 3.99,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 516,
@@ -4353,33 +4360,9 @@
           "price": 9.8,
           "predicted_pts": 5.64,
           "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 519,
-          "web_name": "Udogie",
-          "pos": "DEF",
-          "team": 18,
-          "price": 4.8,
-          "predicted_pts": 2.9,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.8,
-          "predicted_pts": 3.42,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 10
         },
         {
           "player_id": 590,
@@ -4396,40 +4379,40 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 2.78,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 3.6,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 419,
+          "web_name": "Lascelles",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 2.8,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
         },
         {
-          "player_id": 49,
-          "web_name": "Martinez",
+          "player_id": 524,
+          "web_name": "Areola",
           "pos": "GK",
-          "team": 2,
-          "price": 5.1,
-          "predicted_pts": 4.28,
-          "actual_pts": 2,
+          "team": 19,
+          "price": 4.2,
+          "predicted_pts": 2.41,
+          "actual_pts": 10,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 2.21,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 10
         },
         {
           "player_id": 362,
@@ -4445,24 +4428,24 @@
           "auto_subbed_out": true
         }
       ],
-      "captain_id": 308,
-      "vice_id": 516,
-      "vice_name": "Son",
+      "captain_id": 516,
+      "vice_id": 60,
+      "vice_name": "Watkins",
       "captain_source": "milp",
       "captain": {
-        "player_id": 308,
-        "web_name": "Salah",
+        "player_id": 516,
+        "web_name": "Son",
         "pos": "MID",
-        "actual_pts": 3.0,
-        "predicted_pts": 8.4,
+        "actual_pts": 5.0,
+        "predicted_pts": 5.6,
         "source": "milp"
       },
-      "predicted_total": 50.8,
-      "actual_total": 48,
+      "predicted_total": 47.9,
+      "actual_total": 41,
       "auto_subs": [
         [
           "Palmer",
-          "Pedro Porro"
+          "Iwobi"
         ]
       ],
       "bench_intel_target": null,
@@ -4473,12 +4456,28 @@
       "gw": 20,
       "chip": null,
       "free_transfers": 1,
-      "bank": 1.5,
-      "squad_value": 102.9,
-      "transfers_in": [],
-      "transfers_out": [],
+      "bank": 1.7,
+      "squad_value": 101.7,
+      "transfers_in": [
+        "Salah"
+      ],
+      "transfers_out": [
+        "Gordon"
+      ],
       "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 3.74,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -4490,18 +4489,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 7
-        },
-        {
-          "player_id": 49,
-          "web_name": "Martinez",
-          "pos": "GK",
-          "team": 2,
-          "price": 5.2,
-          "predicted_pts": 3.97,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
         },
         {
           "player_id": 60,
@@ -4528,16 +4515,28 @@
           "pts_counted": 0
         },
         {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 3.42,
-          "actual_pts": 2,
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.84,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 1
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.6,
+          "predicted_pts": 3.14,
+          "actual_pts": 18,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 18
         },
         {
           "player_id": 290,
@@ -4564,18 +4563,6 @@
           "pts_counted": 32
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.6,
-          "predicted_pts": 3.48,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
           "player_id": 516,
           "web_name": "Son",
           "pos": "MID",
@@ -4588,16 +4575,16 @@
           "pts_counted": 9
         },
         {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
+          "player_id": 524,
+          "web_name": "Areola",
+          "pos": "GK",
           "team": 19,
-          "price": 7.8,
-          "predicted_pts": 6.18,
-          "actual_pts": 3,
+          "price": 4.2,
+          "predicted_pts": 3.06,
+          "actual_pts": 11,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 3
+          "pts_counted": 11
         },
         {
           "player_id": 590,
@@ -4614,12 +4601,12 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 3.24,
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 2.54,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -4638,28 +4625,28 @@
           "pts_counted": 2
         },
         {
-          "player_id": 362,
-          "web_name": "Palmer",
+          "player_id": 256,
+          "web_name": "Iwobi",
           "pos": "MID",
-          "team": 7,
-          "price": 5.6,
-          "predicted_pts": 3.14,
-          "actual_pts": 18,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 18
-        },
-        {
-          "player_id": 519,
-          "web_name": "Udogie",
-          "pos": "DEF",
-          "team": 18,
-          "price": 4.8,
-          "predicted_pts": 2.98,
+          "team": 10,
+          "price": 5.3,
+          "predicted_pts": 2.99,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 419,
+          "web_name": "Lascelles",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 0.67,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         }
       ],
       "captain_id": 308,
@@ -4674,8 +4661,8 @@
         "predicted_pts": 8.6,
         "source": "milp"
       },
-      "predicted_total": 54.3,
-      "actual_total": 76,
+      "predicted_total": 50.0,
+      "actual_total": 99,
       "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
@@ -4684,19 +4671,29 @@
     {
       "gw": 21,
       "chip": null,
-      "free_transfers": 2,
-      "bank": 2.8,
-      "squad_value": 102.1,
+      "free_transfers": 1,
+      "bank": 1.4,
+      "squad_value": 102.2,
       "transfers_in": [
-        "Doughty",
-        "Areola"
+        "Doughty"
       ],
       "transfers_out": [
-        "Martinez",
-        "Udogie"
+        "Lascelles"
       ],
       "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 3.45,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -4708,18 +4705,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
-        },
-        {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 3.51,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
         },
         {
           "player_id": 60,
@@ -4734,6 +4719,18 @@
           "pts_counted": 1
         },
         {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 2.76,
+          "actual_pts": 6,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 6
+        },
+        {
           "player_id": 362,
           "web_name": "Palmer",
           "pos": "MID",
@@ -4746,28 +4743,28 @@
           "pts_counted": 10
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 18,
-          "price": 5.7,
-          "predicted_pts": 3.09,
-          "actual_pts": 6,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.51,
+          "actual_pts": 5,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 6
+          "pts_counted": 5
         },
         {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 1.85,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
+          "player_id": 308,
+          "web_name": "Salah",
+          "pos": "MID",
+          "team": 11,
+          "price": 13.3,
+          "predicted_pts": 7.72,
+          "actual_pts": 0,
+          "is_captain": true,
+          "captain_multiplier": 2,
+          "pts_counted": 0
         },
         {
           "player_id": 321,
@@ -4806,18 +4803,6 @@
           "pts_counted": 3
         },
         {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.9,
-          "predicted_pts": 5.32,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
           "player_id": 590,
           "web_name": "Cunha",
           "pos": "FWD",
@@ -4832,18 +4817,6 @@
       ],
       "bench": [
         {
-          "player_id": 83,
-          "web_name": "Senesi",
-          "pos": "DEF",
-          "team": 3,
-          "price": 4.5,
-          "predicted_pts": 3.01,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
           "player_id": 596,
           "web_name": "Trafford",
           "pos": "GK",
@@ -4856,12 +4829,24 @@
           "pts_counted": 2
         },
         {
-          "player_id": 290,
-          "web_name": "Alexander-Arnold",
+          "player_id": 256,
+          "web_name": "Iwobi",
+          "pos": "MID",
+          "team": 10,
+          "price": 5.3,
+          "predicted_pts": 2.65,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
+          "player_id": 83,
+          "web_name": "Senesi",
           "pos": "DEF",
-          "team": 11,
-          "price": 8.4,
-          "predicted_pts": 4.69,
+          "team": 3,
+          "price": 4.5,
+          "predicted_pts": 3.01,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -4869,12 +4854,12 @@
           "auto_subbed_out": true
         },
         {
-          "player_id": 308,
-          "web_name": "Salah",
-          "pos": "MID",
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
           "team": 11,
-          "price": 13.3,
-          "predicted_pts": 7.72,
+          "price": 8.4,
+          "predicted_pts": 4.69,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -4894,16 +4879,16 @@
         "predicted_pts": 7.7,
         "source": "milp"
       },
-      "predicted_total": 53.8,
+      "predicted_total": 51.4,
       "actual_total": 39,
       "auto_subs": [
         [
-          "Alexander-Arnold",
-          "Pedro Porro"
+          "Senesi",
+          "Zinchenko"
         ],
         [
-          "Salah",
-          "Mateta"
+          "Alexander-Arnold",
+          "T.Silva"
         ]
       ],
       "bench_intel_target": null,
@@ -4914,16 +4899,28 @@
       "gw": 22,
       "chip": null,
       "free_transfers": 1,
-      "bank": 1.8,
-      "squad_value": 102.8,
+      "bank": 0.2,
+      "squad_value": 103.3,
       "transfers_in": [
         "Bernardo"
       ],
       "transfers_out": [
-        "Palmer"
+        "Iwobi"
       ],
       "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 3.97,
+          "actual_pts": 10,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 10
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -4935,6 +4932,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 10
+        },
+        {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 3.32,
+          "actual_pts": 7,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 7
         },
         {
           "player_id": 60,
@@ -4961,12 +4970,12 @@
           "pts_counted": 1
         },
         {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 2.83,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.7,
+          "predicted_pts": 1.38,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -4985,30 +4994,6 @@
           "pts_counted": 6
         },
         {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 2.65,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 4.12,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
           "player_id": 83,
           "web_name": "Senesi",
           "pos": "DEF",
@@ -5021,6 +5006,18 @@
           "pts_counted": 2
         },
         {
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.32,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
           "player_id": 524,
           "web_name": "Areola",
           "pos": "GK",
@@ -5031,18 +5028,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 8.1,
-          "predicted_pts": 4.74,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
         },
         {
           "player_id": 590,
@@ -5122,20 +5107,20 @@
         "predicted_pts": 7.8,
         "source": "milp"
       },
-      "predicted_total": 51.1,
-      "actual_total": 48,
+      "predicted_total": 49.5,
+      "actual_total": 62,
       "auto_subs": [
         [
           "Salah",
-          "Mateta"
+          "Palmer"
         ],
         [
           "Bernardo",
-          "Konsa"
+          "Senesi"
         ],
         [
           "Son",
-          "Senesi"
+          "T.Silva"
         ]
       ],
       "bench_intel_target": null,
@@ -5146,18 +5131,28 @@
       "gw": 23,
       "chip": null,
       "free_transfers": 1,
-      "bank": 8.5,
-      "squad_value": 95.7,
+      "bank": 4.4,
+      "squad_value": 98.6,
       "transfers_in": [
-        "Bradley",
-        "De Bruyne"
+        "Bradley"
       ],
       "transfers_out": [
-        "Alexander-Arnold",
-        "Salah"
+        "Alexander-Arnold"
       ],
-      "penalty_pts": -4,
+      "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.8,
+          "predicted_pts": 2.35,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -5169,6 +5164,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 9
+        },
+        {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 2.65,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
         },
         {
           "player_id": 60,
@@ -5183,12 +5190,24 @@
           "pts_counted": 36
         },
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 2.55,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.93,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
+        },
+        {
+          "player_id": 83,
+          "web_name": "Senesi",
+          "pos": "DEF",
+          "team": 3,
+          "price": 4.5,
+          "predicted_pts": 2.06,
           "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5219,40 +5238,16 @@
           "pts_counted": 2
         },
         {
-          "player_id": 349,
-          "web_name": "De Bruyne",
+          "player_id": 516,
+          "web_name": "Son",
           "pos": "MID",
-          "team": 13,
-          "price": 10.6,
-          "predicted_pts": 6.3,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
           "team": 18,
-          "price": 5.9,
-          "predicted_pts": 3.64,
-          "actual_pts": 1,
+          "price": 9.7,
+          "predicted_pts": 6.12,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 232,
-          "web_name": "Mateta",
-          "pos": "FWD",
-          "team": 8,
-          "price": 4.9,
-          "predicted_pts": 2.37,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
+          "pts_counted": 0
         },
         {
           "player_id": 524,
@@ -5265,18 +5260,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 1
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 8.1,
-          "predicted_pts": 3.91,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         },
         {
           "player_id": 590,
@@ -5293,18 +5276,6 @@
       ],
       "bench": [
         {
-          "player_id": 83,
-          "web_name": "Senesi",
-          "pos": "DEF",
-          "team": 3,
-          "price": 4.5,
-          "predicted_pts": 2.06,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
           "player_id": 596,
           "web_name": "Trafford",
           "pos": "GK",
@@ -5317,12 +5288,24 @@
           "pts_counted": 2
         },
         {
-          "player_id": 757,
-          "web_name": "Bradley",
-          "pos": "DEF",
+          "player_id": 308,
+          "web_name": "Salah",
+          "pos": "MID",
           "team": 11,
-          "price": 4.0,
-          "predicted_pts": 6.79,
+          "price": 13.1,
+          "predicted_pts": 2.04,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 3.5,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5330,12 +5313,12 @@
           "auto_subbed_out": true
         },
         {
-          "player_id": 516,
-          "web_name": "Son",
-          "pos": "MID",
-          "team": 18,
-          "price": 9.7,
-          "predicted_pts": 6.12,
+          "player_id": 757,
+          "web_name": "Bradley",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.0,
+          "predicted_pts": 6.79,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5355,16 +5338,16 @@
         "predicted_pts": 4.8,
         "source": "milp"
       },
-      "predicted_total": 51.2,
-      "actual_total": 79,
+      "predicted_total": 46.4,
+      "actual_total": 86,
       "auto_subs": [
         [
-          "Bradley",
-          "Konsa"
+          "G.Jesus",
+          "Palmer"
         ],
         [
-          "Son",
-          "Mateta"
+          "Bradley",
+          "Senesi"
         ]
       ],
       "bench_intel_target": null,
@@ -5375,18 +5358,28 @@
       "gw": 24,
       "chip": null,
       "free_transfers": 1,
-      "bank": 7.8,
-      "squad_value": 96.1,
+      "bank": 3.3,
+      "squad_value": 99.7,
       "transfers_in": [
-        "Diogo J.",
-        "J.Alvarez"
+        "De Bruyne"
       ],
       "transfers_out": [
-        "Mateta",
         "Son"
       ],
-      "penalty_pts": -4,
+      "penalty_pts": 0,
       "xi": [
+        {
+          "player_id": 83,
+          "web_name": "Senesi",
+          "pos": "DEF",
+          "team": 3,
+          "price": 4.5,
+          "predicted_pts": 1.48,
+          "actual_pts": 8,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 8
+        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -5412,28 +5405,40 @@
           "pts_counted": 4
         },
         {
-          "player_id": 294,
-          "web_name": "Diogo J.",
-          "pos": "MID",
-          "team": 11,
-          "price": 8.0,
-          "predicted_pts": 5.48,
-          "actual_pts": 7,
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 2.57,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 2
         },
         {
-          "player_id": 83,
-          "web_name": "Senesi",
-          "pos": "DEF",
-          "team": 3,
-          "price": 4.5,
-          "predicted_pts": 1.48,
-          "actual_pts": 8,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.8,
+          "predicted_pts": 3.59,
+          "actual_pts": 10,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 8
+          "pts_counted": 10
+        },
+        {
+          "player_id": 757,
+          "web_name": "Bradley",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.1,
+          "predicted_pts": 3.38,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         },
         {
           "player_id": 321,
@@ -5446,18 +5451,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 1
-        },
-        {
-          "player_id": 343,
-          "web_name": "J.Alvarez",
-          "pos": "FWD",
-          "team": 13,
-          "price": 6.9,
-          "predicted_pts": 5.51,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         },
         {
           "player_id": 344,
@@ -5482,18 +5475,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 4
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.9,
-          "predicted_pts": 3.46,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         },
         {
           "player_id": 524,
@@ -5522,12 +5503,12 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 1.77,
+          "team": 1,
+          "price": 5.2,
+          "predicted_pts": 2.32,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5546,24 +5527,24 @@
           "pts_counted": 4
         },
         {
-          "player_id": 526,
-          "web_name": "Bowen",
+          "player_id": 308,
+          "web_name": "Salah",
           "pos": "MID",
-          "team": 19,
-          "price": 8.0,
-          "predicted_pts": 3.67,
-          "actual_pts": 2,
+          "team": 11,
+          "price": 13.0,
+          "predicted_pts": 3.16,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0
         },
         {
-          "player_id": 757,
-          "web_name": "Bradley",
-          "pos": "DEF",
-          "team": 11,
-          "price": 4.1,
-          "predicted_pts": 3.38,
+          "player_id": 8,
+          "web_name": "G.Jesus",
+          "pos": "FWD",
+          "team": 1,
+          "price": 8.0,
+          "predicted_pts": 3.34,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5583,11 +5564,11 @@
         "predicted_pts": 7.0,
         "source": "milp"
       },
-      "predicted_total": 51.6,
-      "actual_total": 41,
+      "predicted_total": 46.6,
+      "actual_total": 46,
       "auto_subs": [
         [
-          "Bradley",
+          "G.Jesus",
           "Senesi"
         ]
       ],
@@ -5597,41 +5578,57 @@
     },
     {
       "gw": 25,
-      "chip": "tc2",
+      "chip": "fh2",
       "free_transfers": 1,
-      "bank": 0.3,
-      "squad_value": 103.3,
+      "bank": 3.3,
+      "squad_value": 99.2,
       "transfers_in": [
-        "Haaland"
+        "Flekken",
+        "Lewis-Potter",
+        "Roerslev",
+        "Branthwaite",
+        "Alexander-Arnold",
+        "Diogo J.",
+        "Virgil",
+        "Morris",
+        "Kaminski",
+        "Barkley",
+        "J.Alvarez",
+        "Foden",
+        "Haaland",
+        "Trippier",
+        "Son"
       ],
       "transfers_out": [
-        "J.Alvarez"
+        "Doughty",
+        "G.Jesus",
+        "Palmer",
+        "Areola",
+        "Cunha",
+        "Senesi",
+        "Saka",
+        "Trafford",
+        "Salah",
+        "Bradley",
+        "Bernardo",
+        "T.Silva",
+        "Watkins",
+        "De Bruyne",
+        "Zinchenko"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 19,
-          "web_name": "Saka",
-          "pos": "MID",
-          "team": 1,
-          "price": 9.0,
-          "predicted_pts": 5.63,
-          "actual_pts": 15,
+          "player_id": 114,
+          "web_name": "Roerslev",
+          "pos": "DEF",
+          "team": 4,
+          "price": 4.4,
+          "predicted_pts": 3.79,
+          "actual_pts": 3,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 15
-        },
-        {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 8.8,
-          "predicted_pts": 4.45,
-          "actual_pts": 13,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 13
+          "pts_counted": 3
         },
         {
           "player_id": 294,
@@ -5642,56 +5639,80 @@
           "predicted_pts": 10.34,
           "actual_pts": 4,
           "is_captain": true,
-          "captain_multiplier": 3,
-          "pts_counted": 12
+          "captain_multiplier": 2,
+          "pts_counted": 8
         },
         {
-          "player_id": 757,
-          "web_name": "Bradley",
+          "player_id": 313,
+          "web_name": "Virgil",
           "pos": "DEF",
           "team": 11,
-          "price": 4.1,
-          "predicted_pts": 5.35,
-          "actual_pts": 4,
+          "price": 6.3,
+          "predicted_pts": 8.56,
+          "actual_pts": 10,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 4
+          "pts_counted": 10
         },
         {
-          "player_id": 321,
-          "web_name": "Doughty",
-          "pos": "DEF",
+          "player_id": 326,
+          "web_name": "Morris",
+          "pos": "FWD",
           "team": 12,
-          "price": 4.6,
-          "predicted_pts": 3.59,
-          "actual_pts": 1,
+          "price": 5.0,
+          "predicted_pts": 6.19,
+          "actual_pts": 10,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 10
         },
         {
-          "player_id": 344,
-          "web_name": "Bernardo",
+          "player_id": 614,
+          "web_name": "Kaminski",
+          "pos": "GK",
+          "team": 12,
+          "price": 4.5,
+          "predicted_pts": 6.39,
+          "actual_pts": 7,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 7
+        },
+        {
+          "player_id": 630,
+          "web_name": "Barkley",
           "pos": "MID",
-          "team": 13,
-          "price": 6.4,
-          "predicted_pts": 6.36,
+          "team": 12,
+          "price": 5.0,
+          "predicted_pts": 5.79,
           "actual_pts": 3,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
         },
         {
-          "player_id": 349,
-          "web_name": "De Bruyne",
-          "pos": "MID",
+          "player_id": 343,
+          "web_name": "J.Alvarez",
+          "pos": "FWD",
           "team": 13,
-          "price": 10.8,
-          "predicted_pts": 9.07,
-          "actual_pts": 2,
+          "price": 6.8,
+          "predicted_pts": 8.37,
+          "actual_pts": 7,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 7
+        },
+        {
+          "player_id": 353,
+          "web_name": "Foden",
+          "pos": "MID",
+          "team": 13,
+          "price": 8.0,
+          "predicted_pts": 8.82,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
         },
         {
           "player_id": 355,
@@ -5706,36 +5727,24 @@
           "pts_counted": 10
         },
         {
-          "player_id": 83,
-          "web_name": "Senesi",
+          "player_id": 430,
+          "web_name": "Trippier",
           "pos": "DEF",
-          "team": 3,
-          "price": 4.5,
-          "predicted_pts": 1.77,
-          "actual_pts": 0,
+          "team": 15,
+          "price": 6.8,
+          "predicted_pts": 5.1,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0
+          "pts_counted": 1
         },
         {
-          "player_id": 524,
-          "web_name": "Areola",
-          "pos": "GK",
-          "team": 19,
-          "price": 4.2,
-          "predicted_pts": 2.93,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
+          "player_id": 516,
+          "web_name": "Son",
           "pos": "MID",
-          "team": 19,
-          "price": 7.9,
-          "predicted_pts": 4.61,
+          "team": 18,
+          "price": 9.6,
+          "predicted_pts": 6.73,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5744,48 +5753,48 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.6,
-          "predicted_pts": 1.81,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 596,
-          "web_name": "Trafford",
+          "player_id": 101,
+          "web_name": "Flekken",
           "pos": "GK",
-          "team": 6,
+          "team": 4,
           "price": 4.5,
-          "predicted_pts": 2.19,
-          "actual_pts": 0,
+          "predicted_pts": 5.59,
+          "actual_pts": 6,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0
+          "pts_counted": 6
         },
         {
-          "player_id": 590,
-          "web_name": "Cunha",
-          "pos": "FWD",
-          "team": 20,
-          "price": 5.8,
-          "predicted_pts": 2.75,
-          "actual_pts": 0,
+          "player_id": 107,
+          "web_name": "Lewis-Potter",
+          "pos": "MID",
+          "team": 4,
+          "price": 4.7,
+          "predicted_pts": 3.9,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0
+          "pts_counted": 2
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
+          "player_id": 245,
+          "web_name": "Branthwaite",
           "pos": "DEF",
-          "team": 18,
-          "price": 5.9,
-          "predicted_pts": 3.2,
+          "team": 9,
+          "price": 4.1,
+          "predicted_pts": 3.06,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
+          "player_id": 290,
+          "web_name": "Alexander-Arnold",
+          "pos": "DEF",
+          "team": 11,
+          "price": 8.6,
+          "predicted_pts": 7.99,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -5805,12 +5814,12 @@
         "predicted_pts": 10.3,
         "source": "milp"
       },
-      "predicted_total": 80.3,
-      "actual_total": 65,
+      "predicted_total": 88.8,
+      "actual_total": 66,
       "auto_subs": [
         [
-          "Pedro Porro",
-          "Senesi"
+          "Alexander-Arnold",
+          "Roerslev"
         ]
       ],
       "bench_intel_target": null,
@@ -5819,50 +5828,20 @@
     },
     {
       "gw": 26,
-      "chip": "fh2",
-      "free_transfers": 1,
-      "bank": 0.3,
-      "squad_value": 103.2,
+      "chip": null,
+      "free_transfers": 2,
+      "bank": 1.9,
+      "squad_value": 100.5,
       "transfers_in": [
-        "Martinelli",
-        "White",
-        "Bailey",
-        "Flekken",
-        "Dunk",
-        "Pickford",
-        "J.Alvarez",
-        "Dalot",
-        "Dawson",
-        "Kilman",
-        "Neto"
+        "Haaland",
+        "Bowen"
       ],
       "transfers_out": [
-        "Doughty",
-        "Diogo J.",
-        "Areola",
-        "Bowen",
-        "Cunha",
-        "Konsa",
-        "Senesi",
-        "Trafford",
-        "Bradley",
-        "Bernardo",
-        "Pedro Porro"
+        "G.Jesus",
+        "Salah"
       ],
       "penalty_pts": 0,
       "xi": [
-        {
-          "player_id": 12,
-          "web_name": "Martinelli",
-          "pos": "MID",
-          "team": 1,
-          "price": 7.7,
-          "predicted_pts": 4.68,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
         {
           "player_id": 19,
           "web_name": "Saka",
@@ -5876,16 +5855,16 @@
           "pts_counted": 10
         },
         {
-          "player_id": 29,
-          "web_name": "White",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
           "team": 1,
-          "price": 5.6,
-          "predicted_pts": 3.53,
-          "actual_pts": 2,
+          "price": 5.1,
+          "predicted_pts": 1.94,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0
         },
         {
           "player_id": 60,
@@ -5900,40 +5879,40 @@
           "pts_counted": 9
         },
         {
-          "player_id": 101,
-          "web_name": "Flekken",
-          "pos": "GK",
-          "team": 4,
+          "player_id": 83,
+          "web_name": "Senesi",
+          "pos": "DEF",
+          "team": 3,
           "price": 4.5,
-          "predicted_pts": 5.17,
+          "predicted_pts": 1.38,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 757,
+          "web_name": "Bradley",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.1,
+          "predicted_pts": 0.0,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
         },
         {
-          "player_id": 129,
-          "web_name": "Dunk",
-          "pos": "DEF",
-          "team": 5,
-          "price": 5.0,
-          "predicted_pts": 3.85,
-          "actual_pts": 10,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 10
-        },
-        {
-          "player_id": 343,
-          "web_name": "J.Alvarez",
-          "pos": "FWD",
+          "player_id": 344,
+          "web_name": "Bernardo",
+          "pos": "MID",
           "team": 13,
-          "price": 6.7,
-          "predicted_pts": 5.66,
-          "actual_pts": 1,
+          "price": 6.4,
+          "predicted_pts": 3.56,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 2
         },
         {
           "player_id": 349,
@@ -5960,78 +5939,90 @@
           "pts_counted": 10
         },
         {
-          "player_id": 377,
-          "web_name": "Dalot",
-          "pos": "DEF",
-          "team": 14,
-          "price": 5.1,
-          "predicted_pts": 3.3,
-          "actual_pts": 1,
+          "player_id": 524,
+          "web_name": "Areola",
+          "pos": "GK",
+          "team": 19,
+          "price": 4.2,
+          "predicted_pts": 3.07,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 2
         },
         {
-          "player_id": 567,
-          "web_name": "Neto",
+          "player_id": 526,
+          "web_name": "Bowen",
           "pos": "MID",
-          "team": 20,
-          "price": 5.7,
-          "predicted_pts": 4.46,
-          "actual_pts": 3,
+          "team": 19,
+          "price": 7.8,
+          "predicted_pts": 4.39,
+          "actual_pts": 20,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 3
+          "pts_counted": 20
+        },
+        {
+          "player_id": 590,
+          "web_name": "Cunha",
+          "pos": "FWD",
+          "team": 20,
+          "price": 5.7,
+          "predicted_pts": 3.29,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         }
       ],
       "bench": [
         {
-          "player_id": 34,
-          "web_name": "Bailey",
-          "pos": "MID",
-          "team": 2,
-          "price": 5.6,
-          "predicted_pts": 4.13,
-          "actual_pts": 12,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 12
-        },
-        {
-          "player_id": 263,
-          "web_name": "Pickford",
+          "player_id": 596,
+          "web_name": "Trafford",
           "pos": "GK",
-          "team": 9,
+          "team": 6,
           "price": 4.5,
-          "predicted_pts": 3.68,
-          "actual_pts": 4,
+          "predicted_pts": 1.97,
+          "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 4
+          "pts_counted": 2
         },
         {
-          "player_id": 551,
-          "web_name": "Dawson",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 20,
-          "price": 4.5,
-          "predicted_pts": 2.93,
-          "actual_pts": 7,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 0
         },
         {
-          "player_id": 563,
-          "web_name": "Kilman",
-          "pos": "DEF",
-          "team": 20,
-          "price": 4.5,
-          "predicted_pts": 2.75,
-          "actual_pts": 6,
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.8,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 6
+          "pts_counted": 0
+        },
+        {
+          "player_id": 321,
+          "web_name": "Doughty",
+          "pos": "DEF",
+          "team": 12,
+          "price": 4.6,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         }
       ],
       "captain_id": 355,
@@ -6046,8 +6037,8 @@
         "predicted_pts": 8.6,
         "source": "milp"
       },
-      "predicted_total": 55.7,
-      "actual_total": 52,
+      "predicted_total": 42.6,
+      "actual_total": 54,
       "auto_subs": [],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
@@ -6056,16 +6047,14 @@
     {
       "gw": 27,
       "chip": null,
-      "free_transfers": 2,
-      "bank": 3.5,
-      "squad_value": 100.0,
+      "free_transfers": 1,
+      "bank": 0.1,
+      "squad_value": 102.5,
       "transfers_in": [
-        "Ogbene",
         "Foden"
       ],
       "transfers_out": [
-        "De Bruyne",
-        "Cunha"
+        "Bernardo"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -6118,16 +6107,28 @@
           "pts_counted": 1
         },
         {
-          "player_id": 344,
-          "web_name": "Bernardo",
-          "pos": "MID",
-          "team": 13,
-          "price": 6.3,
-          "predicted_pts": 3.8,
-          "actual_pts": 3,
+          "player_id": 321,
+          "web_name": "Doughty",
+          "pos": "DEF",
+          "team": 12,
+          "price": 4.6,
+          "predicted_pts": 2.28,
+          "actual_pts": 5,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 3
+          "pts_counted": 5
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.8,
+          "predicted_pts": 3.97,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
         },
         {
           "player_id": 757,
@@ -6142,12 +6143,12 @@
           "pts_counted": 8
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
-          "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 4.43,
+          "player_id": 349,
+          "web_name": "De Bruyne",
+          "pos": "MID",
+          "team": 13,
+          "price": 10.8,
+          "predicted_pts": 4.21,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -6178,18 +6179,6 @@
           "pts_counted": 6
         },
         {
-          "player_id": 321,
-          "web_name": "Doughty",
-          "pos": "DEF",
-          "team": 12,
-          "price": 4.6,
-          "predicted_pts": 2.28,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
           "player_id": 526,
           "web_name": "Bowen",
           "pos": "MID",
@@ -6204,16 +6193,16 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 1.35,
-          "actual_pts": 1,
+          "team": 1,
+          "price": 5.1,
+          "predicted_pts": 1.72,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 0
         },
         {
           "player_id": 524,
@@ -6228,25 +6217,24 @@
           "pts_counted": 13
         },
         {
-          "player_id": 294,
-          "web_name": "Diogo J.",
-          "pos": "MID",
-          "team": 11,
-          "price": 8.3,
-          "predicted_pts": 5.54,
+          "player_id": 590,
+          "web_name": "Cunha",
+          "pos": "FWD",
+          "team": 20,
+          "price": 5.6,
+          "predicted_pts": 1.63,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
+          "pts_counted": 0
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 2.95,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 3.1,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -6266,15 +6254,11 @@
         "predicted_pts": 6.6,
         "source": "milp"
       },
-      "predicted_total": 54.0,
-      "actual_total": 73,
+      "predicted_total": 52.3,
+      "actual_total": 75,
       "auto_subs": [
         [
-          "Diogo J.",
-          "Bernardo"
-        ],
-        [
-          "Pedro Porro",
+          "T.Silva",
           "Doughty"
         ]
       ],
@@ -6284,15 +6268,15 @@
     },
     {
       "gw": 28,
-      "chip": "bb2",
+      "chip": "tc2",
       "free_transfers": 1,
-      "bank": 0.1,
-      "squad_value": 103.8,
+      "bank": 7.4,
+      "squad_value": 95.5,
       "transfers_in": [
-        "Son"
+        "Solanke"
       ],
       "transfers_out": [
-        "Bernardo"
+        "Haaland"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -6304,21 +6288,9 @@
           "price": 9.2,
           "predicted_pts": 7.22,
           "actual_pts": 2,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 4
-        },
-        {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 1.72,
-          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
+          "pts_counted": 2
         },
         {
           "player_id": 60,
@@ -6333,24 +6305,60 @@
           "pts_counted": 2
         },
         {
+          "player_id": 31,
+          "web_name": "Zinchenko",
+          "pos": "DEF",
+          "team": 1,
+          "price": 5.0,
+          "predicted_pts": 0.93,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 7.1,
+          "predicted_pts": 9.49,
+          "actual_pts": 8,
+          "is_captain": true,
+          "captain_multiplier": 3,
+          "pts_counted": 24
+        },
+        {
+          "player_id": 596,
+          "web_name": "Trafford",
+          "pos": "GK",
+          "team": 6,
+          "price": 4.5,
+          "predicted_pts": 3.74,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.7,
+          "predicted_pts": 3.5,
+          "actual_pts": 13,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 13
+        },
+        {
           "player_id": 757,
           "web_name": "Bradley",
           "pos": "DEF",
           "team": 11,
           "price": 4.1,
           "predicted_pts": 4.82,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 526,
-          "web_name": "Bowen",
-          "pos": "MID",
-          "team": 19,
-          "price": 7.8,
-          "predicted_pts": 4.54,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -6369,16 +6377,16 @@
           "pts_counted": 5
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
-          "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 7.44,
-          "actual_pts": 7,
+          "player_id": 349,
+          "web_name": "De Bruyne",
+          "pos": "MID",
+          "team": 13,
+          "price": 10.7,
+          "predicted_pts": 2.72,
+          "actual_pts": 6,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 6
         },
         {
           "player_id": 353,
@@ -6393,28 +6401,30 @@
           "pts_counted": 2
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.5,
-          "predicted_pts": 5.6,
+          "player_id": 526,
+          "web_name": "Bowen",
+          "pos": "MID",
+          "team": 19,
+          "price": 7.8,
+          "predicted_pts": 4.54,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        },
+        }
+      ],
+      "bench": [
         {
-          "player_id": 516,
-          "web_name": "Son",
-          "pos": "MID",
-          "team": 18,
-          "price": 9.7,
-          "predicted_pts": 5.23,
-          "actual_pts": 17,
+          "player_id": 217,
+          "web_name": "T.Silva",
+          "pos": "DEF",
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 1.77,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 17
+          "pts_counted": 0
         },
         {
           "player_id": 524,
@@ -6427,32 +6437,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 596,
-          "web_name": "Trafford",
-          "pos": "GK",
-          "team": 6,
-          "price": 4.5,
-          "predicted_pts": 3.74,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
         },
         {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.7,
-          "predicted_pts": 2.1,
-          "actual_pts": 7,
+          "player_id": 590,
+          "web_name": "Cunha",
+          "pos": "FWD",
+          "team": 20,
+          "price": 5.6,
+          "predicted_pts": 0.99,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 7
+          "pts_counted": 0
         },
         {
           "player_id": 83,
@@ -6466,43 +6462,26 @@
           "captain_multiplier": 1,
           "pts_counted": 0,
           "auto_subbed_out": true
-        },
-        {
-          "player_id": 294,
-          "web_name": "Diogo J.",
-          "pos": "MID",
-          "team": 11,
-          "price": 8.1,
-          "predicted_pts": 4.09,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
         }
       ],
-      "captain_id": 19,
-      "vice_id": 328,
-      "vice_name": "Ogbene",
+      "captain_id": 85,
+      "vice_id": 19,
+      "vice_name": "Saka",
       "captain_source": "milp",
       "captain": {
-        "player_id": 19,
-        "web_name": "Saka",
-        "pos": "MID",
-        "actual_pts": 2.0,
-        "predicted_pts": 7.2,
+        "player_id": 85,
+        "web_name": "Solanke",
+        "pos": "FWD",
+        "actual_pts": 8.0,
+        "predicted_pts": 9.5,
         "source": "milp"
       },
-      "predicted_total": 54.5,
-      "actual_total": 54,
+      "predicted_total": 66.0,
+      "actual_total": 60,
       "auto_subs": [
         [
           "Senesi",
-          "Bradley"
-        ],
-        [
-          "Diogo J.",
-          "Bowen"
+          "Zinchenko"
         ]
       ],
       "bench_intel_target": null,
@@ -6513,39 +6492,27 @@
       "gw": 29,
       "chip": null,
       "free_transfers": 1,
-      "bank": 2.4,
-      "squad_value": 101.9,
+      "bank": 8.2,
+      "squad_value": 95.0,
       "transfers_in": [
-        "Douglas Luiz"
+        "Son"
       ],
       "transfers_out": [
-        "Diogo J."
+        "De Bruyne"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 43,
-          "web_name": "Douglas Luiz",
+          "player_id": 19,
+          "web_name": "Saka",
           "pos": "MID",
-          "team": 2,
-          "price": 5.7,
-          "predicted_pts": 4.08,
-          "actual_pts": 1,
+          "team": 1,
+          "price": 9.2,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 1.85,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0
         },
         {
           "player_id": 60,
@@ -6560,6 +6527,18 @@
           "pts_counted": 4
         },
         {
+          "player_id": 83,
+          "web_name": "Senesi",
+          "pos": "DEF",
+          "team": 3,
+          "price": 4.6,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
           "player_id": 524,
           "web_name": "Areola",
           "pos": "GK",
@@ -6572,11 +6551,23 @@
           "pts_counted": 3
         },
         {
-          "player_id": 757,
-          "web_name": "Bradley",
+          "player_id": 217,
+          "web_name": "T.Silva",
           "pos": "DEF",
-          "team": 11,
-          "price": 4.1,
+          "team": 7,
+          "price": 5.0,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.7,
           "predicted_pts": 0.0,
           "actual_pts": 0,
           "is_captain": false,
@@ -6596,18 +6587,6 @@
           "pts_counted": 1
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
-          "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 4.19,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
           "player_id": 353,
           "web_name": "Foden",
           "pos": "MID",
@@ -6618,18 +6597,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.7,
-          "predicted_pts": 2.35,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
         },
         {
           "player_id": 516,
@@ -6654,27 +6621,27 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 590,
+          "web_name": "Cunha",
+          "pos": "FWD",
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         }
       ],
       "bench": [
         {
-          "player_id": 19,
-          "web_name": "Saka",
-          "pos": "MID",
-          "team": 1,
-          "price": 9.2,
-          "predicted_pts": 0.0,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 83,
-          "web_name": "Senesi",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 3,
-          "price": 4.6,
+          "team": 1,
+          "price": 5.0,
           "predicted_pts": 0.0,
           "actual_pts": 0,
           "is_captain": false,
@@ -6682,11 +6649,23 @@
           "pts_counted": 0
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
+          "player_id": 85,
+          "web_name": "Solanke",
           "pos": "FWD",
-          "team": 13,
-          "price": 14.4,
+          "team": 3,
+          "price": 7.2,
+          "predicted_pts": 0.0,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
+        },
+        {
+          "player_id": 757,
+          "web_name": "Bradley",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.1,
           "predicted_pts": 0.0,
           "actual_pts": 0,
           "is_captain": false,
@@ -6719,8 +6698,8 @@
         "predicted_pts": 4.9,
         "source": "milp"
       },
-      "predicted_total": 32.5,
-      "actual_total": 18,
+      "predicted_total": 20.0,
+      "actual_total": 12,
       "auto_subs": [
         [
           "Trafford",
@@ -6735,13 +6714,13 @@
       "gw": 30,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.5,
-      "squad_value": 103.7,
+      "bank": 6.8,
+      "squad_value": 96.4,
       "transfers_in": [
         "Virgil"
       ],
       "transfers_out": [
-        "Senesi"
+        "T.Silva"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -6752,18 +6731,6 @@
           "team": 1,
           "price": 9.2,
           "predicted_pts": 4.39,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 43,
-          "web_name": "Douglas Luiz",
-          "pos": "MID",
-          "team": 2,
-          "price": 5.7,
-          "predicted_pts": 4.6,
           "actual_pts": 3,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -6782,6 +6749,18 @@
           "pts_counted": 2
         },
         {
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 7.2,
+          "predicted_pts": 4.1,
+          "actual_pts": 7,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 7
+        },
+        {
           "player_id": 524,
           "web_name": "Areola",
           "pos": "GK",
@@ -6792,6 +6771,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.7,
+          "predicted_pts": 4.59,
+          "actual_pts": 15,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 15
         },
         {
           "player_id": 313,
@@ -6818,6 +6809,18 @@
           "pts_counted": 4
         },
         {
+          "player_id": 321,
+          "web_name": "Doughty",
+          "pos": "DEF",
+          "team": 12,
+          "price": 4.7,
+          "predicted_pts": 2.11,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
           "player_id": 353,
           "web_name": "Foden",
           "pos": "MID",
@@ -6828,30 +6831,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
-        },
-        {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.4,
-          "predicted_pts": 4.31,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 3.06,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
         },
         {
           "player_id": 516,
@@ -6880,36 +6859,36 @@
       ],
       "bench": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 31,
+          "web_name": "Zinchenko",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 2.46,
-          "actual_pts": 15,
+          "team": 1,
+          "price": 5.0,
+          "predicted_pts": 0.71,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 15
+          "pts_counted": 0
         },
         {
-          "player_id": 321,
-          "web_name": "Doughty",
+          "player_id": 83,
+          "web_name": "Senesi",
           "pos": "DEF",
-          "team": 12,
-          "price": 4.7,
-          "predicted_pts": 2.11,
-          "actual_pts": 2,
+          "team": 3,
+          "price": 4.6,
+          "predicted_pts": 1.73,
+          "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 0
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
+          "player_id": 590,
+          "web_name": "Cunha",
           "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 3.33,
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 1.01,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -6941,8 +6920,8 @@
         "predicted_pts": 5.9,
         "source": "milp"
       },
-      "predicted_total": 46.0,
-      "actual_total": 42,
+      "predicted_total": 44.8,
+      "actual_total": 59,
       "auto_subs": [
         [
           "Trafford",
@@ -6957,27 +6936,27 @@
       "gw": 31,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.4,
-      "squad_value": 103.5,
+      "bank": 6.1,
+      "squad_value": 97.2,
       "transfers_in": [
         "White"
       ],
       "transfers_out": [
-        "Pedro Porro"
+        "Zinchenko"
       ],
       "penalty_pts": 0,
       "xi": [
         {
-          "player_id": 48,
-          "web_name": "Konsa",
+          "player_id": 321,
+          "web_name": "Doughty",
           "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 1.96,
-          "actual_pts": 0,
+          "team": 12,
+          "price": 4.7,
+          "predicted_pts": 1.63,
+          "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 0
+          "pts_counted": 1
         },
         {
           "player_id": 29,
@@ -6992,40 +6971,40 @@
           "pts_counted": 6
         },
         {
-          "player_id": 43,
-          "web_name": "Douglas Luiz",
+          "player_id": 590,
+          "web_name": "Cunha",
+          "pos": "FWD",
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 0.53,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 7.2,
+          "predicted_pts": 5.58,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
           "pos": "MID",
-          "team": 2,
-          "price": 5.7,
-          "predicted_pts": 2.82,
-          "actual_pts": 1,
+          "team": 7,
+          "price": 5.8,
+          "predicted_pts": 4.79,
+          "actual_pts": 20,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 321,
-          "web_name": "Doughty",
-          "pos": "DEF",
-          "team": 12,
-          "price": 4.7,
-          "predicted_pts": 1.63,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 596,
-          "web_name": "Trafford",
-          "pos": "GK",
-          "team": 6,
-          "price": 4.5,
-          "predicted_pts": 2.17,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
+          "pts_counted": 20
         },
         {
           "player_id": 313,
@@ -7064,18 +7043,6 @@
           "pts_counted": 20
         },
         {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.3,
-          "predicted_pts": 7.0,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
           "player_id": 516,
           "web_name": "Son",
           "pos": "MID",
@@ -7086,6 +7053,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 524,
+          "web_name": "Areola",
+          "pos": "GK",
+          "team": 19,
+          "price": 4.3,
+          "predicted_pts": 2.37,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0
         },
         {
           "player_id": 526,
@@ -7102,24 +7081,24 @@
       ],
       "bench": [
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
-          "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 2.12,
+          "player_id": 83,
+          "web_name": "Senesi",
+          "pos": "DEF",
+          "team": 3,
+          "price": 4.5,
+          "predicted_pts": 1.14,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 0
         },
         {
-          "player_id": 524,
-          "web_name": "Areola",
+          "player_id": 596,
+          "web_name": "Trafford",
           "pos": "GK",
-          "team": 19,
-          "price": 4.3,
-          "predicted_pts": 2.37,
+          "team": 6,
+          "price": 4.5,
+          "predicted_pts": 2.17,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -7153,8 +7132,8 @@
         }
       ],
       "captain_id": 19,
-      "vice_id": 355,
-      "vice_name": "Haaland",
+      "vice_id": 85,
+      "vice_name": "Solanke",
       "captain_source": "milp",
       "captain": {
         "player_id": 19,
@@ -7164,16 +7143,16 @@
         "predicted_pts": 7.7,
         "source": "milp"
       },
-      "predicted_total": 49.2,
-      "actual_total": 37,
+      "predicted_total": 49.9,
+      "actual_total": 61,
       "auto_subs": [
         [
           "Saka",
-          "Konsa"
+          "Doughty"
         ],
         [
           "Watkins",
-          "Doughty"
+          "Cunha"
         ]
       ],
       "bench_intel_target": null,
@@ -7184,13 +7163,13 @@
       "gw": 32,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.3,
-      "squad_value": 103.5,
+      "bank": 5.9,
+      "squad_value": 97.5,
       "transfers_in": [
-        "Mac Allister"
+        "A\u00eft-Nouri"
       ],
       "transfers_out": [
-        "Douglas Luiz"
+        "Senesi"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -7219,18 +7198,6 @@
           "pts_counted": 5
         },
         {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 3.12,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
           "player_id": 60,
           "web_name": "Watkins",
           "pos": "FWD",
@@ -7243,16 +7210,28 @@
           "pts_counted": 13
         },
         {
-          "player_id": 304,
-          "web_name": "Mac Allister",
-          "pos": "MID",
-          "team": 11,
-          "price": 5.8,
-          "predicted_pts": 5.08,
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 7.2,
+          "predicted_pts": 5.7,
           "actual_pts": 2,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 5.9,
+          "predicted_pts": 3.91,
+          "actual_pts": 5,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 5
         },
         {
           "player_id": 313,
@@ -7277,18 +7256,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        },
-        {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.3,
-          "predicted_pts": 5.13,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
         },
         {
           "player_id": 516,
@@ -7325,6 +7292,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 1
+        },
+        {
+          "player_id": 545,
+          "web_name": "A\u00eft-Nouri",
+          "pos": "DEF",
+          "team": 20,
+          "price": 4.6,
+          "predicted_pts": 3.85,
+          "actual_pts": 4,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 4
         }
       ],
       "bench": [
@@ -7341,12 +7320,12 @@
           "pts_counted": 0
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
+          "player_id": 590,
+          "web_name": "Cunha",
           "pos": "FWD",
-          "team": 12,
-          "price": 4.9,
-          "predicted_pts": 1.65,
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 1.5,
           "actual_pts": 0,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -7391,7 +7370,7 @@
         "predicted_pts": 6.9,
         "source": "milp"
       },
-      "predicted_total": 50.5,
+      "predicted_total": 50.6,
       "actual_total": 54,
       "auto_subs": [
         [
@@ -7411,8 +7390,8 @@
       "gw": 33,
       "chip": null,
       "free_transfers": 1,
-      "bank": 0.6,
-      "squad_value": 103.0,
+      "bank": 6.4,
+      "squad_value": 97.1,
       "transfers_in": [
         "Havertz"
       ],
@@ -7470,16 +7449,28 @@
           "pts_counted": 7
         },
         {
-          "player_id": 304,
-          "web_name": "Mac Allister",
-          "pos": "MID",
-          "team": 11,
-          "price": 5.9,
-          "predicted_pts": 4.83,
-          "actual_pts": 2,
+          "player_id": 85,
+          "web_name": "Solanke",
+          "pos": "FWD",
+          "team": 3,
+          "price": 7.3,
+          "predicted_pts": 4.19,
+          "actual_pts": 7,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 2
+          "pts_counted": 7
+        },
+        {
+          "player_id": 362,
+          "web_name": "Palmer",
+          "pos": "MID",
+          "team": 7,
+          "price": 6.0,
+          "predicted_pts": 5.41,
+          "actual_pts": 26,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 26
         },
         {
           "player_id": 313,
@@ -7494,40 +7485,16 @@
           "pts_counted": 2
         },
         {
-          "player_id": 757,
-          "web_name": "Bradley",
-          "pos": "DEF",
-          "team": 11,
-          "price": 4.3,
-          "predicted_pts": 1.7,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 48,
-          "web_name": "Konsa",
-          "pos": "DEF",
-          "team": 2,
-          "price": 4.5,
-          "predicted_pts": 1.52,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 355,
-          "web_name": "Haaland",
+          "player_id": 590,
+          "web_name": "Cunha",
           "pos": "FWD",
-          "team": 13,
-          "price": 14.3,
-          "predicted_pts": 6.48,
-          "actual_pts": 10,
+          "team": 20,
+          "price": 5.5,
+          "predicted_pts": 1.94,
+          "actual_pts": 12,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 10
+          "pts_counted": 12
         },
         {
           "player_id": 516,
@@ -7536,6 +7503,18 @@
           "team": 18,
           "price": 10.1,
           "predicted_pts": 5.21,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
+          "player_id": 757,
+          "web_name": "Bradley",
+          "pos": "DEF",
+          "team": 11,
+          "price": 4.3,
+          "predicted_pts": 1.7,
           "actual_pts": 1,
           "is_captain": false,
           "captain_multiplier": 1,
@@ -7568,18 +7547,6 @@
           "pts_counted": 0
         },
         {
-          "player_id": 328,
-          "web_name": "Ogbene",
-          "pos": "FWD",
-          "team": 12,
-          "price": 4.8,
-          "predicted_pts": 0.82,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
           "player_id": 353,
           "web_name": "Foden",
           "pos": "MID",
@@ -7604,11 +7571,24 @@
           "captain_multiplier": 1,
           "pts_counted": 0,
           "auto_subbed_out": true
+        },
+        {
+          "player_id": 545,
+          "web_name": "A\u00eft-Nouri",
+          "pos": "DEF",
+          "team": 20,
+          "price": 4.7,
+          "predicted_pts": 2.4,
+          "actual_pts": 0,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 0,
+          "auto_subbed_out": true
         }
       ],
       "captain_id": 6,
-      "vice_id": 355,
-      "vice_name": "Haaland",
+      "vice_id": 353,
+      "vice_name": "Foden",
       "captain_source": "milp",
       "captain": {
         "player_id": 6,
@@ -7618,15 +7598,19 @@
         "predicted_pts": 6.2,
         "source": "milp"
       },
-      "predicted_total": 47.3,
-      "actual_total": 38,
+      "predicted_total": 46.3,
+      "actual_total": 65,
       "auto_subs": [
         [
           "Foden",
-          "Konsa"
+          "Cunha"
         ],
         [
           "Areola",
+          "Bradley"
+        ],
+        [
+          "A\u00eft-Nouri",
           "Doughty"
         ]
       ],
@@ -7638,31 +7622,27 @@
       "gw": 34,
       "chip": "wc2",
       "free_transfers": 1,
-      "bank": 3.2,
-      "squad_value": 100.2,
+      "bank": 1.6,
+      "squad_value": 101.8,
       "transfers_in": [
-        "Saliba",
-        "Solanke",
         "Cucurella",
-        "Palmer",
-        "Eze",
         "Mitchell",
+        "Darwin",
+        "Salah",
         "B.Fernandes",
+        "Hall",
         "Dubravka",
-        "Sch\u00e4r",
         "Jos\u00e9 S\u00e1"
       ],
       "transfers_out": [
-        "Saka",
-        "Konsa",
         "Trafford",
         "Virgil",
         "Bradley",
         "Doughty",
-        "Ogbene",
         "Foden",
         "Son",
-        "Areola"
+        "Areola",
+        "Cunha"
       ],
       "penalty_pts": 0,
       "xi": [
@@ -7679,16 +7659,16 @@
           "pts_counted": 34
         },
         {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
+          "player_id": 19,
+          "web_name": "Saka",
+          "pos": "MID",
           "team": 1,
-          "price": 5.9,
-          "predicted_pts": 7.6,
-          "actual_pts": 14,
+          "price": 8.9,
+          "predicted_pts": 9.99,
+          "actual_pts": 9,
           "is_captain": false,
           "captain_multiplier": 1,
-          "pts_counted": 14
+          "pts_counted": 9
         },
         {
           "player_id": 29,
@@ -7727,18 +7707,6 @@
           "pts_counted": 8
         },
         {
-          "player_id": 226,
-          "web_name": "Eze",
-          "pos": "MID",
-          "team": 8,
-          "price": 6.0,
-          "predicted_pts": 7.69,
-          "actual_pts": 14,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 14
-        },
-        {
           "player_id": 234,
           "web_name": "Mitchell",
           "pos": "DEF",
@@ -7751,28 +7719,28 @@
           "pts_counted": 6
         },
         {
-          "player_id": 304,
-          "web_name": "Mac Allister",
+          "player_id": 293,
+          "web_name": "Darwin",
+          "pos": "FWD",
+          "team": 11,
+          "price": 7.7,
+          "predicted_pts": 7.03,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
+        },
+        {
+          "player_id": 308,
+          "web_name": "Salah",
           "pos": "MID",
           "team": 11,
-          "price": 5.9,
-          "predicted_pts": 7.39,
+          "price": 13.5,
+          "predicted_pts": 10.09,
           "actual_pts": 3,
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 3
-        },
-        {
-          "player_id": 427,
-          "web_name": "Sch\u00e4r",
-          "pos": "DEF",
-          "team": 15,
-          "price": 5.5,
-          "predicted_pts": 3.53,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
         },
         {
           "player_id": 373,
@@ -7785,6 +7753,18 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 18
+        },
+        {
+          "player_id": 545,
+          "web_name": "A\u00eft-Nouri",
+          "pos": "DEF",
+          "team": 20,
+          "price": 4.8,
+          "predicted_pts": 5.68,
+          "actual_pts": 2,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 2
         },
         {
           "player_id": 569,
@@ -7825,6 +7805,18 @@
           "pts_counted": 0
         },
         {
+          "player_id": 204,
+          "web_name": "Hall",
+          "pos": "DEF",
+          "team": 15,
+          "price": 4.2,
+          "predicted_pts": 2.62,
+          "actual_pts": 1,
+          "is_captain": false,
+          "captain_multiplier": 1,
+          "pts_counted": 1
+        },
+        {
           "player_id": 409,
           "web_name": "Dubravka",
           "pos": "GK",
@@ -7835,19 +7827,6 @@
           "is_captain": false,
           "captain_multiplier": 1,
           "pts_counted": 2
-        },
-        {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.3,
-          "predicted_pts": 5.93,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
         }
       ],
       "captain_id": 6,
@@ -7862,897 +7841,9 @@
         "predicted_pts": 10.2,
         "source": "milp"
       },
-      "predicted_total": 89.6,
-      "actual_total": 139,
-      "auto_subs": [
-        [
-          "Haaland",
-          "Sch\u00e4r"
-        ]
-      ],
-      "bench_intel_target": null,
-      "bench_intel_recommended": [],
-      "is_bb_target_gw": false
-    },
-    {
-      "gw": 35,
-      "chip": null,
-      "free_transfers": 2,
-      "bank": 2.2,
-      "squad_value": 101.4,
-      "transfers_in": [
-        "Gallagher",
-        "Pedro Porro"
-      ],
-      "transfers_out": [
-        "Mitchell",
-        "Mac Allister"
-      ],
-      "penalty_pts": 0,
-      "xi": [
-        {
-          "player_id": 6,
-          "web_name": "Havertz",
-          "pos": "MID",
-          "team": 1,
-          "price": 7.4,
-          "predicted_pts": 4.32,
-          "actual_pts": 13,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 13
-        },
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.9,
-          "predicted_pts": 4.92,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 29,
-          "web_name": "White",
-          "pos": "DEF",
-          "team": 1,
-          "price": 6.0,
-          "predicted_pts": 5.15,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 8.9,
-          "predicted_pts": 4.79,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 7.2,
-          "predicted_pts": 5.4,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 202,
-          "web_name": "Gallagher",
-          "pos": "MID",
-          "team": 7,
-          "price": 5.4,
-          "predicted_pts": 6.53,
-          "actual_pts": 15,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 15
-        },
-        {
-          "player_id": 362,
-          "web_name": "Palmer",
-          "pos": "MID",
-          "team": 7,
-          "price": 6.2,
-          "predicted_pts": 6.27,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
-        },
-        {
-          "player_id": 355,
-          "web_name": "Haaland",
-          "pos": "FWD",
-          "team": 13,
-          "price": 14.2,
-          "predicted_pts": 5.78,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 373,
-          "web_name": "B.Fernandes",
-          "pos": "MID",
-          "team": 14,
-          "price": 8.3,
-          "predicted_pts": 9.29,
-          "actual_pts": 4,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 8
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.9,
-          "predicted_pts": 6.48,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 569,
-          "web_name": "Jos\u00e9 S\u00e1",
-          "pos": "GK",
-          "team": 20,
-          "price": 5.0,
-          "predicted_pts": 4.7,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 198,
-          "web_name": "Cucurella",
-          "pos": "DEF",
-          "team": 7,
-          "price": 4.8,
-          "predicted_pts": 4.2,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
-          "player_id": 226,
-          "web_name": "Eze",
-          "pos": "MID",
-          "team": 8,
-          "price": 6.1,
-          "predicted_pts": 3.89,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 409,
-          "web_name": "Dubravka",
-          "pos": "GK",
-          "team": 15,
-          "price": 4.2,
-          "predicted_pts": 3.11,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 427,
-          "web_name": "Sch\u00e4r",
-          "pos": "DEF",
-          "team": 15,
-          "price": 5.6,
-          "predicted_pts": 3.26,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        }
-      ],
-      "captain_id": 373,
-      "vice_id": 202,
-      "vice_name": "Gallagher",
-      "captain_source": "milp",
-      "captain": {
-        "player_id": 373,
-        "web_name": "B.Fernandes",
-        "pos": "MID",
-        "actual_pts": 4.0,
-        "predicted_pts": 9.3,
-        "source": "milp"
-      },
-      "predicted_total": 63.6,
-      "actual_total": 60,
+      "predicted_total": 93.8,
+      "actual_total": 123,
       "auto_subs": [],
-      "bench_intel_target": null,
-      "bench_intel_recommended": [],
-      "is_bb_target_gw": false
-    },
-    {
-      "gw": 36,
-      "chip": null,
-      "free_transfers": 1,
-      "bank": 8.1,
-      "squad_value": 95.8,
-      "transfers_in": [
-        "Isak"
-      ],
-      "transfers_out": [
-        "Haaland"
-      ],
-      "penalty_pts": 0,
-      "xi": [
-        {
-          "player_id": 6,
-          "web_name": "Havertz",
-          "pos": "MID",
-          "team": 1,
-          "price": 7.4,
-          "predicted_pts": 4.81,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.9,
-          "predicted_pts": 5.07,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 29,
-          "web_name": "White",
-          "pos": "DEF",
-          "team": 1,
-          "price": 6.0,
-          "predicted_pts": 5.8,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 9.0,
-          "predicted_pts": 4.22,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 202,
-          "web_name": "Gallagher",
-          "pos": "MID",
-          "team": 7,
-          "price": 5.4,
-          "predicted_pts": 4.51,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
-        },
-        {
-          "player_id": 362,
-          "web_name": "Palmer",
-          "pos": "MID",
-          "team": 7,
-          "price": 6.2,
-          "predicted_pts": 8.55,
-          "actual_pts": 8,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 8
-        },
-        {
-          "player_id": 226,
-          "web_name": "Eze",
-          "pos": "MID",
-          "team": 8,
-          "price": 6.1,
-          "predicted_pts": 3.78,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 7.3,
-          "predicted_pts": 3.41,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 415,
-          "web_name": "Isak",
-          "pos": "FWD",
-          "team": 15,
-          "price": 8.2,
-          "predicted_pts": 6.29,
-          "actual_pts": 7,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 7
-        },
-        {
-          "player_id": 198,
-          "web_name": "Cucurella",
-          "pos": "DEF",
-          "team": 7,
-          "price": 4.8,
-          "predicted_pts": 3.01,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 569,
-          "web_name": "Jos\u00e9 S\u00e1",
-          "pos": "GK",
-          "team": 20,
-          "price": 5.0,
-          "predicted_pts": 3.45,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 409,
-          "web_name": "Dubravka",
-          "pos": "GK",
-          "team": 15,
-          "price": 4.3,
-          "predicted_pts": 3.12,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 2.62,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 373,
-          "web_name": "B.Fernandes",
-          "pos": "MID",
-          "team": 14,
-          "price": 8.4,
-          "predicted_pts": 7.14,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
-        },
-        {
-          "player_id": 427,
-          "web_name": "Sch\u00e4r",
-          "pos": "DEF",
-          "team": 15,
-          "price": 5.7,
-          "predicted_pts": 3.72,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
-        }
-      ],
-      "captain_id": 373,
-      "vice_id": 362,
-      "vice_name": "Palmer",
-      "captain_source": "milp",
-      "captain": {
-        "player_id": 373,
-        "web_name": "B.Fernandes",
-        "pos": "MID",
-        "actual_pts": 0.0,
-        "predicted_pts": 7.1,
-        "source": "milp"
-      },
-      "predicted_total": 57.3,
-      "actual_total": 62,
-      "auto_subs": [
-        [
-          "B.Fernandes",
-          "Solanke"
-        ],
-        [
-          "Sch\u00e4r",
-          "Cucurella"
-        ]
-      ],
-      "bench_intel_target": null,
-      "bench_intel_recommended": [],
-      "is_bb_target_gw": false
-    },
-    {
-      "gw": 37,
-      "chip": null,
-      "free_transfers": 1,
-      "bank": 3.6,
-      "squad_value": 100.2,
-      "transfers_in": [
-        "De Bruyne"
-      ],
-      "transfers_out": [
-        "Eze"
-      ],
-      "penalty_pts": 0,
-      "xi": [
-        {
-          "player_id": 6,
-          "web_name": "Havertz",
-          "pos": "MID",
-          "team": 1,
-          "price": 7.5,
-          "predicted_pts": 3.69,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 7.2,
-          "predicted_pts": 4.73,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 198,
-          "web_name": "Cucurella",
-          "pos": "DEF",
-          "team": 7,
-          "price": 4.8,
-          "predicted_pts": 5.46,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 202,
-          "web_name": "Gallagher",
-          "pos": "MID",
-          "team": 7,
-          "price": 5.4,
-          "predicted_pts": 8.33,
-          "actual_pts": 3,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 3
-        },
-        {
-          "player_id": 362,
-          "web_name": "Palmer",
-          "pos": "MID",
-          "team": 7,
-          "price": 6.2,
-          "predicted_pts": 8.97,
-          "actual_pts": 14,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 14
-        },
-        {
-          "player_id": 349,
-          "web_name": "De Bruyne",
-          "pos": "MID",
-          "team": 13,
-          "price": 10.5,
-          "predicted_pts": 10.24,
-          "actual_pts": 12,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 12
-        },
-        {
-          "player_id": 373,
-          "web_name": "B.Fernandes",
-          "pos": "MID",
-          "team": 14,
-          "price": 8.5,
-          "predicted_pts": 13.27,
-          "actual_pts": 5,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 10
-        },
-        {
-          "player_id": 409,
-          "web_name": "Dubravka",
-          "pos": "GK",
-          "team": 15,
-          "price": 4.3,
-          "predicted_pts": 6.04,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 415,
-          "web_name": "Isak",
-          "pos": "FWD",
-          "team": 15,
-          "price": 8.3,
-          "predicted_pts": 9.28,
-          "actual_pts": 4,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 4
-        },
-        {
-          "player_id": 427,
-          "web_name": "Sch\u00e4r",
-          "pos": "DEF",
-          "team": 15,
-          "price": 5.7,
-          "predicted_pts": 4.71,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 3.9,
-          "actual_pts": 10,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 10
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.9,
-          "predicted_pts": 3.32,
-          "actual_pts": 9,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 9
-        },
-        {
-          "player_id": 29,
-          "web_name": "White",
-          "pos": "DEF",
-          "team": 1,
-          "price": 6.1,
-          "predicted_pts": 3.25,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 9.0,
-          "predicted_pts": 2.98,
-          "actual_pts": 5,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 5
-        },
-        {
-          "player_id": 569,
-          "web_name": "Jos\u00e9 S\u00e1",
-          "pos": "GK",
-          "team": 20,
-          "price": 5.0,
-          "predicted_pts": 3.47,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        }
-      ],
-      "captain_id": 373,
-      "vice_id": 349,
-      "vice_name": "De Bruyne",
-      "captain_source": "milp",
-      "captain": {
-        "player_id": 373,
-        "web_name": "B.Fernandes",
-        "pos": "MID",
-        "actual_pts": 5.0,
-        "predicted_pts": 13.3,
-        "source": "milp"
-      },
-      "predicted_total": 78.6,
-      "actual_total": 76,
-      "auto_subs": [],
-      "bench_intel_target": null,
-      "bench_intel_recommended": [],
-      "is_bb_target_gw": false
-    },
-    {
-      "gw": 38,
-      "chip": null,
-      "free_transfers": 1,
-      "bank": 3.7,
-      "squad_value": 100.2,
-      "transfers_in": [
-        "Madueke"
-      ],
-      "transfers_out": [
-        "Gallagher"
-      ],
-      "penalty_pts": 0,
-      "xi": [
-        {
-          "player_id": 6,
-          "web_name": "Havertz",
-          "pos": "MID",
-          "team": 1,
-          "price": 7.5,
-          "predicted_pts": 5.95,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 20,
-          "web_name": "Saliba",
-          "pos": "DEF",
-          "team": 1,
-          "price": 5.9,
-          "predicted_pts": 5.82,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 29,
-          "web_name": "White",
-          "pos": "DEF",
-          "team": 1,
-          "price": 6.1,
-          "predicted_pts": 5.71,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 60,
-          "web_name": "Watkins",
-          "pos": "FWD",
-          "team": 2,
-          "price": 8.9,
-          "predicted_pts": 5.18,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 85,
-          "web_name": "Solanke",
-          "pos": "FWD",
-          "team": 3,
-          "price": 7.0,
-          "predicted_pts": 4.85,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 198,
-          "web_name": "Cucurella",
-          "pos": "DEF",
-          "team": 7,
-          "price": 4.9,
-          "predicted_pts": 4.73,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 208,
-          "web_name": "Madueke",
-          "pos": "MID",
-          "team": 7,
-          "price": 5.3,
-          "predicted_pts": 6.33,
-          "actual_pts": 2,
-          "is_captain": true,
-          "captain_multiplier": 2,
-          "pts_counted": 4
-        },
-        {
-          "player_id": 349,
-          "web_name": "De Bruyne",
-          "pos": "MID",
-          "team": 13,
-          "price": 10.6,
-          "predicted_pts": 6.0,
-          "actual_pts": 2,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 2
-        },
-        {
-          "player_id": 373,
-          "web_name": "B.Fernandes",
-          "pos": "MID",
-          "team": 14,
-          "price": 8.5,
-          "predicted_pts": 5.17,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0
-        },
-        {
-          "player_id": 569,
-          "web_name": "Jos\u00e9 S\u00e1",
-          "pos": "GK",
-          "team": 20,
-          "price": 5.0,
-          "predicted_pts": 2.81,
-          "actual_pts": 4,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 4
-        },
-        {
-          "player_id": 415,
-          "web_name": "Isak",
-          "pos": "FWD",
-          "team": 15,
-          "price": 8.4,
-          "predicted_pts": 6.22,
-          "actual_pts": 14,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 14
-        }
-      ],
-      "bench": [
-        {
-          "player_id": 362,
-          "web_name": "Palmer",
-          "pos": "MID",
-          "team": 7,
-          "price": 6.3,
-          "predicted_pts": 4.08,
-          "actual_pts": 6,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 6
-        },
-        {
-          "player_id": 427,
-          "web_name": "Sch\u00e4r",
-          "pos": "DEF",
-          "team": 15,
-          "price": 5.6,
-          "predicted_pts": 2.18,
-          "actual_pts": 1,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 1
-        },
-        {
-          "player_id": 506,
-          "web_name": "Pedro Porro",
-          "pos": "DEF",
-          "team": 18,
-          "price": 5.8,
-          "predicted_pts": 3.63,
-          "actual_pts": 14,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 14
-        },
-        {
-          "player_id": 409,
-          "web_name": "Dubravka",
-          "pos": "GK",
-          "team": 15,
-          "price": 4.3,
-          "predicted_pts": 3.49,
-          "actual_pts": 0,
-          "is_captain": false,
-          "captain_multiplier": 1,
-          "pts_counted": 0,
-          "auto_subbed_out": true
-        }
-      ],
-      "captain_id": 208,
-      "vice_id": 415,
-      "vice_name": "Isak",
-      "captain_source": "milp",
-      "captain": {
-        "player_id": 208,
-        "web_name": "Madueke",
-        "pos": "MID",
-        "actual_pts": 2.0,
-        "predicted_pts": 6.3,
-        "source": "milp"
-      },
-      "predicted_total": 59.5,
-      "actual_total": 38,
-      "auto_subs": [
-        [
-          "Dubravka",
-          "Jos\u00e9 S\u00e1"
-        ]
-      ],
       "bench_intel_target": null,
       "bench_intel_recommended": [],
       "is_bb_target_gw": false
