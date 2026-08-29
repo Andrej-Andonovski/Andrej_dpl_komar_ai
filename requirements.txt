@@ -1,0 +1,38 @@
+# FPL AI pipeline — pinned to the versions proven working on the dev machine
+# (Python 3.13.7). Install with: pip install -r requirements.txt
+
+# Data handling
+pandas==2.3.3
+numpy==2.3.4
+
+# Models
+lightgbm==4.6.0
+xgboost==3.2.0
+scikit-learn==1.8.0
+
+# Optimization (ILP/MILP squad solvers)
+PuLP==3.3.0
+highspy==1.15.1
+
+# Hyperparameter search
+optuna==4.7.0
+
+# HTTP / scraping
+requests==2.32.3
+beautifulsoup4==4.13.4
+seleniumbase==4.38.3
+
+# LLM clients (Stage 9 narrative layer, intel_05 recommendations)
+anthropic==0.84.0
+google-genai==1.67.0
+
+# Config
+python-dotenv==1.1.1
+
+# NOTE: seleniumbase drives a real browser (Chrome by default) for FBref
+# scraping (new_signings_stage4a.py, promoted_clubs_stage4c.py) — it
+# manages its own driver binary on first run, no separate install needed.
+#
+# NOTE: create a .env file in the project root with:
+#   ANTHROPIC_API_KEY=...   (Stage 9 narrative layer)
+#   GEMINI_API_KEY=...      (intel_05 recommendations)
