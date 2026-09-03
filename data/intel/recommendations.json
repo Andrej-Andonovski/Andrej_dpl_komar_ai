@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:59:12.502549+00:00",
+  "generated_at": "2026-09-03T23:27:14.447619+00:00",
   "mode": "backtest",
   "model": "gemini-2.5-flash",
   "sources": {
@@ -175,28 +175,127 @@
         "most_concerning_availability": "Onana (0%)",
         "highest_rotation_risk": "Caicedo (57, heavy_rotation)"
       }
+    },
+    "3": {
+      "gw": 3,
+      "pool_size": 40,
+      "llm_call_success": true,
+      "decisions": {
+        "captain": {
+          "name": "Hinshelwood",
+          "team": "N/A",
+          "position": "N/A",
+          "reasoning": "Hinshelwood (BHA MID) boasts exceptional form with 16 points and faces a favourable home fixture against Leeds (FDR 2). As a midfielder, he offers higher ceiling potential than defenders, and his strong recent performance combined with a prime fixture makes him the top choice."
+        },
+        "vice_captain": {
+          "name": "N/A",
+          "team": "N/A",
+          "reasoning": ""
+        },
+        "differential": {
+          "name": "Hinshelwood",
+          "team": "N/A",
+          "ownership_pct": 0,
+          "reasoning": "With an ownership of just 1.4%, Hinshelwood (BHA MID) is an outstanding differential. He has recorded 16 points in the opening gameweeks and has an excellent home fixture against Leeds (FDR 2), offering significant upside for managers looking for a unique pick."
+        },
+        "transfers_in": [
+          {
+            "name": "De Cuyper",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "De Cuyper (BHA DEF) is the highest-scoring player in the top 40 with 17 points and is available at a budget-friendly price of 4.7. He faces Leeds at home (FDR 2) and has a favourable run of fixtures, making him a top defensive target."
+          },
+          {
+            "name": "Hinshelwood",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Hinshelwood (BHA MID) offers excellent value at 6.0, having accumulated 16 points. His home fixture against Leeds (FDR 2) is highly appealing, and Brighton's subsequent fixtures are also favourable, making him a strong midfield acquisition."
+          },
+          {
+            "name": "M.Sangaré",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "M.Sangaré (BRE MID) has shown strong form with 14 points and is priced attractively at 5.7. Brentford faces Sunderland at home (FDR 2), providing a good opportunity for attacking returns in Gameweek 3."
+          }
+        ],
+        "transfers_out": [
+          {
+            "name": "João Pedro",
+            "team": "?",
+            "position": "?",
+            "priority": "#1",
+            "reasoning": "Despite decent form (11 points), João Pedro (CHE FWD) faces the toughest fixture of the gameweek, an away trip to Arsenal (FDR 5). His very high ownership (69.6%) means a blank could be particularly damaging to many FPL teams."
+          },
+          {
+            "name": "Rogers",
+            "team": "?",
+            "position": "?",
+            "priority": "#2",
+            "reasoning": "Rogers (CHE MID) has relatively low form (8 points) and also faces the challenging Arsenal away fixture (FDR 5). With an ownership of 24.5%, he is a prime candidate to be sold for players with better fixtures and/or form."
+          },
+          {
+            "name": "Palmer",
+            "team": "?",
+            "position": "?",
+            "priority": "#3",
+            "reasoning": "Palmer (CHE MID) has good form (13 points), but the away fixture against Arsenal (FDR 5) is extremely tough. While he has shown he can deliver, the fixture significantly reduces his expected returns compared to other midfield options this gameweek."
+          }
+        ],
+        "risk_warnings": [
+          {
+            "warning": "Chelsea players (João Pedro, Palmer, Rogers) face the toughest fixture of Gameweek 3, an away trip to Arsenal (FDR 5). Owners should temper expectations for attacking returns from these players.",
+            "players_affected": [
+              "João Pedro",
+              "Palmer",
+              "Rogers"
+            ]
+          },
+          {
+            "warning": "Arsenal defenders (White, Calafiori) face Chelsea at home (FDR 4). While a home game, Chelsea's attacking threat makes a clean sheet less likely, potentially limiting defensive returns for Arsenal assets.",
+            "players_affected": [
+              "White",
+              "Calafiori"
+            ]
+          }
+        ],
+        "gw_narrative": ""
+      },
+      "raw_prose": "```json\n{\n  \"decisions\": {\n    \"captain_pick\": {\n      \"player_name\": \"Hinshelwood\",\n      \"reasoning\": \"Hinshelwood (BHA MID) boasts exceptional form with 16 points and faces a favourable home fixture against Leeds (FDR 2). As a midfielder, he offers higher ceiling potential than defenders, and his strong recent performance combined with a prime fixture makes him the top choice.\"\n    },\n    \"differential_pick\": {\n      \"player_name\": \"Hinshelwood\",\n      \"reasoning\": \"With an ownership of just 1.4%, Hinshelwood (BHA MID) is an outstanding differential. He has recorded 16 points in the opening gameweeks and has an excellent home fixture against Leeds (FDR 2), offering significant upside for managers looking for a unique pick.\"\n    },\n    \"transfer_targets_in\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"De Cuyper\",\n        \"reasoning\": \"De Cuyper (BHA DEF) is the highest-scoring player in the top 40 with 17 points and is available at a budget-friendly price of 4.7. He faces Leeds at home (FDR 2) and has a favourable run of fixtures, making him a top defensive target.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Hinshelwood\",\n        \"reasoning\": \"Hinshelwood (BHA MID) offers excellent value at 6.0, having accumulated 16 points. His home fixture against Leeds (FDR 2) is highly appealing, and Brighton's subsequent fixtures are also favourable, making him a strong midfield acquisition.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"M.Sangaré\",\n        \"reasoning\": \"M.Sangaré (BRE MID) has shown strong form with 14 points and is priced attractively at 5.7. Brentford faces Sunderland at home (FDR 2), providing a good opportunity for attacking returns in Gameweek 3.\"\n      }\n    ],\n    \"transfer_targets_out\": [\n      {\n        \"priority\": 1,\n        \"player_name\": \"João Pedro\",\n        \"reasoning\": \"Despite decent form (11 points), João Pedro (CHE FWD) faces the toughest fixture of the gameweek, an away trip to Arsenal (FDR 5). His very high ownership (69.6%) means a blank could be particularly damaging to many FPL teams.\"\n      },\n      {\n        \"priority\": 2,\n        \"player_name\": \"Rogers\",\n        \"reasoning\": \"Rogers (CHE MID) has relatively low form (8 points) and also faces the challenging Arsenal away fixture (FDR 5). With an ownership of 24.5%, he is a prime candidate to be sold for players with better fixtures and/or form.\"\n      },\n      {\n        \"priority\": 3,\n        \"player_name\": \"Palmer\",\n        \"reasoning\": \"Palmer (CHE MID) has good form (13 points), but the away fixture against Arsenal (FDR 5) is extremely tough. While he has shown he can deliver, the fixture significantly reduces his expected returns compared to other midfield options this gameweek.\"\n      }\n    ],\n    \"risk_warnings\": [\n      {\n        \"warning\": \"Chelsea players (João Pedro, Palmer, Rogers) face the toughest fixture of Gameweek 3, an away trip to Arsenal (FDR 5). Owners should temper expectations for attacking returns from these players.\",\n        \"players_affected\": [\"João Pedro\", \"Palmer\", \"Rogers\"]\n      },\n      {\n        \"warning\": \"Arsenal defenders (White, Calafiori) face Chelsea at home (FDR 4). While a home game, Chelsea's attacking threat makes a clean sheet less likely, potentially limiting defensive returns for Arsenal assets.\",\n        \"players_affected\": [\"White\", \"Calafiori\"]\n      }\n    ]\n  }\n}\n```\n\n## Gameweek 3 FPL Analysis: The Dossier Debrief\n\nWelcome to the Gameweek 3 FPL intelligence report! Based on the latest data, here are your actionable recommendations for the upcoming deadline.\n\n### CAPTAIN PICK: Hinshelwood (BHA)\n\nOur top captaincy choice for Gameweek 3 is **Hinshelwood (BHA MID)**. He has demonstrated exceptional form, accumulating 16 points in the opening gameweeks. Brighton faces Leeds at home, a fixture rated with a favourable Difficulty Rating (FDR) of 2. As a midfielder, Hinshelwood offers a higher ceiling for points through goals and assists compared to defenders. His strong individual form combined with a prime home fixture makes him the standout captaincy option.\n\n### DIFFERENTIAL PICK: Hinshelwood (BHA)\n\nFor those looking for a low-ownership gem, **Hinshelwood (BHA MID)** is also our differential pick. With an ownership of just 1.4%, he offers significant upside. His impressive form of 16 points and a highly favourable home fixture against Leeds (FDR 2) position him as an excellent choice to gain ground on your mini-league rivals.\n\n### TRANSFER TARGETS IN:\n\n1.  **De Cuyper (BHA DEF) - Priority 1:** The Brighton defender is currently the highest-scoring player in our top 40, with 17 points. Priced at a budget-friendly 4.7, he offers incredible value. Facing Leeds at home (FDR 2) and with a decent run of fixtures (Coventry City A, Arsenal H, Sunderland A), De Cuyper is a must-have defensive asset.\n2.  **Hinshelwood (BHA MID) - Priority 2:** Following his strong form (16 points) and attractive price (6.0), Hinshelwood is a top midfield target. His home fixture against Leeds (FDR 2) is highly appealing, and Brighton's subsequent fixtures also look promising.\n3.  **M.Sangaré (BRE MID) - Priority 3:** Sangaré (BRE MID) has started the season well with 14 points and is available at a good price of 5.7. Brentford hosts Sunderland (FDR 2) in Gameweek 3, providing a solid opportunity for attacking returns.\n\n### TRANSFER TARGETS OUT:\n\n1.  **João Pedro (CHE FWD) - Priority 1:** Despite decent form (11 points), João Pedro faces the toughest fixture of the gameweek: an away trip to Arsenal (FDR 5). With a very high ownership of 69.6%, a blank from him could be particularly damaging to a large number of FPL managers. Consider selling for a player with a better fixture.\n2.  **Rogers (CHE MID) - Priority 2:** Rogers (CHE MID) has recorded a modest 8 points and also faces the challenging Arsenal away fixture (FDR 5). His ownership of 24.5% makes him a prime candidate to be moved on for a midfielder with a more favourable Gameweek 3 outlook.\n3.  **Palmer (CHE MID) - Priority 3:** While Palmer (CHE MID) has shown good form with 13 points, the away fixture against Arsenal (FDR 5) is extremely tough. Although he has the quality to perform in difficult games, the fixture significantly reduces his expected returns compared to other midfield options this gameweek.\n\n### RISK WARNINGS:\n\n*   **Chelsea Players (João Pedro, Palmer, Rogers):** All Chelsea assets face the toughest fixture of Gameweek 3, an away trip to Arsenal (FDR 5). Managers owning these players should temper expectations for attacking returns and consider alternative captaincy or transfer options.\n*   **Arsenal Defenders (White, Calafiori):** While Arsenal plays at home, they face Chelsea (FDR 4). Chelsea's attacking threat makes a clean sheet less likely for Arsenal defenders, potentially limiting their FPL returns this gameweek.",
+      "context_summary": {
+        "top_form_player": "De Cuyper (17.0)",
+        "most_concerning_availability": "De Cuyper (95%)",
+        "highest_rotation_risk": "N/A"
+      }
     }
   },
   "summary": {
     "captain_picks_across_gws": [
       "GW1: Haaland",
-      "GW2: João Pedro"
+      "GW2: João Pedro",
+      "GW3: Hinshelwood"
     ],
     "most_recommended_transfers_in": [
+      "M.Sangaré (2 GWs)",
       "Haaland (1 GWs)",
       "B.Fernandes (1 GWs)",
       "Gabriel (1 GWs)",
       "João Pedro (1 GWs)",
-      "M.Sangaré (1 GWs)",
-      "Mendy (1 GWs)"
+      "Mendy (1 GWs)",
+      "De Cuyper (1 GWs)",
+      "Hinshelwood (1 GWs)"
     ],
     "most_recommended_transfers_out": [
+      "Palmer (2 GWs)",
       "J.Timber (1 GWs)",
       "Ekitiké (1 GWs)",
       "Saliba (1 GWs)",
-      "Palmer (1 GWs)",
       "Ndiaye (1 GWs)",
-      "Hinshelwood (1 GWs)"
+      "Hinshelwood (1 GWs)",
+      "João Pedro (1 GWs)",
+      "Rogers (1 GWs)"
     ]
   }
 }

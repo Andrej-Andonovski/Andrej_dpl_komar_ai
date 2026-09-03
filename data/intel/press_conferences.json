@@ -1,10 +1,12 @@
 {
-  "scraped_at": "2026-08-28T15:07:53.385862+00:00",
+  "scraped_at": "2026-09-03T23:21:45.244974+00:00",
   "gws_scraped": [
     1,
     2
   ],
-  "gws_failed": [],
+  "gws_failed": [
+    3
+  ],
   "total_player_mentions": 86,
   "gameweeks": {
     "1": {
@@ -1203,6 +1205,14 @@
           "availability": "out"
         }
       ]
+    },
+    "3": {
+      "gw": 3,
+      "url": null,
+      "status": "url_not_found",
+      "scraped_at": "2026-09-03T23:21:45.244849+00:00",
+      "clubs": {},
+      "all_player_news": []
     }
   }
 }

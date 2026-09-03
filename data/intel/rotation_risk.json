@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T15:44:04.360319+00:00",
+  "generated_at": "2026-09-03T23:25:20.781101+00:00",
   "mode": "backtest",
   "note": "GW1-28 rotation risk scored using minutes history (player_history.csv), press conference quotes, and availability from intel_03. Players with availability_pct < 60 are skipped (rotation_tier='unavailable'). Players with rotation_risk < 20 and no rotation press mention are omitted from per-GW player lists to keep output manageable.",
   "sources": {
@@ -8,21 +8,21 @@
     "availability": "C:\\Users\\Andrej\\Desktop\\fpl ai\\data\\intel\\availability.json",
     "player_history": "C:\\Users\\Andrej\\Desktop\\fpl ai\\data\\raw\\fpl_api\\player_history.csv"
   },
-  "current_gw": 1,
+  "current_gw": 2,
   "gameweeks": {
     "1": {
       "gw": 1,
       "prior_gws_used": [],
-      "players_assessed": 619,
-      "unavailable_skipped": 11,
-      "fringe_skipped": 320,
-      "low_risk_count": 288,
+      "players_assessed": 652,
+      "unavailable_skipped": 5,
+      "fringe_skipped": 292,
+      "low_risk_count": 355,
       "flagged_count": 0,
-      "press_matched": 6,
-      "press_unmatched": 18,
+      "press_matched": 5,
+      "press_unmatched": 19,
       "tier_counts": {
-        "nailed": 288,
-        "unavailable": 11
+        "nailed": 355,
+        "unavailable": 5
       },
       "players": {}
     },
@@ -31,18 +31,19 @@
       "prior_gws_used": [
         1
       ],
-      "players_assessed": 619,
+      "players_assessed": 652,
       "unavailable_skipped": 32,
-      "fringe_skipped": 286,
-      "low_risk_count": 0,
-      "flagged_count": 301,
-      "press_matched": 35,
-      "press_unmatched": 27,
+      "fringe_skipped": 271,
+      "low_risk_count": 7,
+      "flagged_count": 342,
+      "press_matched": 37,
+      "press_unmatched": 25,
       "tier_counts": {
-        "likely": 202,
+        "likely": 203,
         "rotation_risk": 97,
+        "heavy_rotation": 42,
         "unavailable": 32,
-        "heavy_rotation": 2
+        "nailed": 7
       },
       "players": {
         "1": {
@@ -70,7 +71,7 @@
           "full_name": "Gabriel dos Santos Magalhães",
           "team_short": "ARS",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -203,7 +204,7 @@
           "full_name": "Declan Rice",
           "team_short": "ARS",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -330,13 +331,51 @@
             "100% start rate"
           ]
         },
+        "31": {
+          "player_id": 31,
+          "web_name": "Konsa",
+          "full_name": "Ezri Konsa Ngoyo",
+          "team_short": "ARS",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "452": {
+          "player_id": 452,
+          "web_name": "Bruno G.",
+          "full_name": "Bruno Guimarães Rodriguez Moura",
+          "team_short": "ARS",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "557": {
           "player_id": 557,
           "web_name": "Tzolis",
           "full_name": "Christos Tzolis",
           "team_short": "ARS",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -615,6 +654,25 @@
             "moderate rotation pattern"
           ]
         },
+        "166": {
+          "player_id": 166,
+          "web_name": "N.Jackson",
+          "full_name": "Nicolas Jackson",
+          "team_short": "AVL",
+          "position": "FWD",
+          "availability_pct": 68,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "596": {
           "player_id": 596,
           "web_name": "Ruggeri",
@@ -632,6 +690,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "597": {
+          "player_id": 597,
+          "web_name": "Suzuki",
+          "full_name": "Zion Suzuki",
+          "team_short": "AVL",
+          "position": "GK",
+          "availability_pct": 95,
+          "rotation_risk": 54.9,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "57": {
@@ -843,6 +920,44 @@
             "moderate rotation pattern"
           ]
         },
+        "74": {
+          "player_id": 74,
+          "web_name": "Brooks",
+          "full_name": "David Brooks",
+          "team_short": "BOU",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "75": {
+          "player_id": 75,
+          "web_name": "Christie",
+          "full_name": "Ryan Christie",
+          "team_short": "BOU",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "76": {
           "player_id": 76,
           "web_name": "Tóth.A",
@@ -879,6 +994,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "81": {
+          "player_id": 81,
+          "web_name": "Rodríguez",
+          "full_name": "Álvaro Rodríguez",
+          "team_short": "BOU",
+          "position": "FWD",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "566": {
@@ -1014,6 +1148,25 @@
             "100% start rate"
           ]
         },
+        "89": {
+          "player_id": 89,
+          "web_name": "Henry",
+          "full_name": "Rico Henry",
+          "team_short": "BRE",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "90": {
           "player_id": 90,
           "web_name": "Hickey",
@@ -1096,7 +1249,7 @@
           "full_name": "Mathias Jensen",
           "team_short": "BRE",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -1128,6 +1281,25 @@
             "100% start rate"
           ]
         },
+        "102": {
+          "player_id": 102,
+          "web_name": "Yarmoliuk",
+          "full_name": "Yehor Yarmoliuk",
+          "team_short": "BRE",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 48.0,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 23.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "moderate rotation pattern"
+          ]
+        },
         "105": {
           "player_id": 105,
           "web_name": "Anthony",
@@ -1153,7 +1325,7 @@
           "full_name": "Igor Thiago Nascimento Rodrigues",
           "team_short": "BRE",
           "position": "FWD",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -1202,6 +1374,26 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "620": {
+          "player_id": 620,
+          "web_name": "Diouf",
+          "full_name": "El Hadji Malick Diouf",
+          "team_short": "BRE",
+          "position": "DEF",
+          "availability_pct": 68,
+          "rotation_risk": 52.0,
+          "rotation_tier": "rotation_risk",
+          "start_rate": null,
+          "bench_rate": null,
+          "minutes_avg": null,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": "not sure",
+          "contributing_factors": [
+            "no prior GW data -- score driven by press conf signal",
+            "press conf: 'not sure'"
           ]
         },
         "109": {
@@ -1299,25 +1491,6 @@
             "moderate rotation pattern"
           ]
         },
-        "123": {
-          "player_id": 123,
-          "web_name": "Hinshelwood",
-          "full_name": "Jack Hinshelwood",
-          "team_short": "BHA",
-          "position": "MID",
-          "availability_pct": 95,
-          "rotation_risk": 34.7,
-          "rotation_tier": "likely",
-          "start_rate": 1.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 63.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "100% start rate"
-          ]
-        },
         "124": {
           "player_id": 124,
           "web_name": "Groß",
@@ -1343,7 +1516,7 @@
           "full_name": "Georginio Rutter",
           "team_short": "BHA",
           "position": "FWD",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -1381,7 +1554,7 @@
           "full_name": "Yasin Ayari",
           "team_short": "BHA",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -1470,6 +1643,25 @@
             "100% start rate"
           ]
         },
+        "594": {
+          "player_id": 594,
+          "web_name": "David",
+          "full_name": "Promise David",
+          "team_short": "BHA",
+          "position": "FWD",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "600": {
           "player_id": 600,
           "web_name": "Osman",
@@ -1508,6 +1700,25 @@
             "moderate rotation pattern"
           ]
         },
+        "28": {
+          "player_id": 28,
+          "web_name": "Martinez",
+          "full_name": "Emiliano Martínez Romero",
+          "team_short": "CHE",
+          "position": "GK",
+          "availability_pct": 95,
+          "rotation_risk": 54.9,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "40": {
           "player_id": 40,
           "web_name": "Rogers",
@@ -1520,25 +1731,6 @@
           "start_rate": 1.0,
           "bench_rate": 0.0,
           "minutes_avg": 81.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "100% start rate"
-          ]
-        },
-        "140": {
-          "player_id": 140,
-          "web_name": "Sánchez",
-          "full_name": "Robert Lynch Sánchez",
-          "team_short": "CHE",
-          "position": "GK",
-          "availability_pct": 95,
-          "rotation_risk": 32.7,
-          "rotation_tier": "likely",
-          "start_rate": 1.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 90.0,
           "minutes_stdev": null,
           "recent_trend": null,
           "press_signal": null,
@@ -1584,6 +1776,25 @@
             "100% start rate"
           ]
         },
+        "149": {
+          "player_id": 149,
+          "web_name": "Colwill",
+          "full_name": "Levi Samuels Colwill",
+          "team_short": "CHE",
+          "position": "DEF",
+          "availability_pct": 68,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 90.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% start rate"
+          ]
+        },
         "151": {
           "player_id": 151,
           "web_name": "Acheampong",
@@ -1603,23 +1814,23 @@
             "100% start rate"
           ]
         },
-        "155": {
-          "player_id": 155,
-          "web_name": "Enzo",
-          "full_name": "Enzo Fernández",
+        "154": {
+          "player_id": 154,
+          "web_name": "Palmer",
+          "full_name": "Cole Palmer",
           "team_short": "CHE",
           "position": "MID",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
+          "availability_pct": 68,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
           "bench_rate": 0.0,
-          "minutes_avg": 25.0,
+          "minutes_avg": 82.0,
           "minutes_stdev": null,
           "recent_trend": null,
           "press_signal": null,
           "contributing_factors": [
-            "moderate rotation pattern"
+            "100% start rate"
           ]
         },
         "156": {
@@ -1666,7 +1877,7 @@
           "full_name": "Moisés Caicedo Corozo",
           "team_short": "CHE",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 88,
           "rotation_risk": 56.9,
           "rotation_tier": "heavy_rotation",
           "start_rate": 0.0,
@@ -1696,6 +1907,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "164": {
+          "player_id": 164,
+          "web_name": "Quenda",
+          "full_name": "Geovany Quenda",
+          "team_short": "CHE",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 48.0,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 8.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "moderate rotation pattern"
           ]
         },
         "165": {
@@ -1736,6 +1966,25 @@
             "100% start rate"
           ]
         },
+        "568": {
+          "player_id": 568,
+          "web_name": "Barco",
+          "full_name": "Valentín Barco",
+          "team_short": "CHE",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "583": {
           "player_id": 583,
           "web_name": "Chavarria",
@@ -1753,6 +2002,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "91": {
+          "player_id": 91,
+          "web_name": "Pinnock",
+          "full_name": "Ethan Pinnock",
+          "team_short": "COV",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "104": {
@@ -1907,6 +2175,44 @@
             "100% start rate"
           ]
         },
+        "185": {
+          "player_id": 185,
+          "web_name": "Sakamoto",
+          "full_name": "Tatsuhiro Sakamoto",
+          "team_short": "COV",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "186": {
+          "player_id": 186,
+          "web_name": "Mason-Clark",
+          "full_name": "Ephron Mason-Clark",
+          "team_short": "COV",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "188": {
           "player_id": 188,
           "web_name": "Torp",
@@ -2059,6 +2365,25 @@
             "moderate rotation pattern"
           ]
         },
+        "153": {
+          "player_id": 153,
+          "web_name": "Disasi",
+          "full_name": "Axel Disasi",
+          "team_short": "CRY",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "198": {
           "player_id": 198,
           "web_name": "Henderson",
@@ -2076,25 +2401,6 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
-          ]
-        },
-        "201": {
-          "player_id": 201,
-          "web_name": "Muñoz",
-          "full_name": "Daniel Muñoz Mejía",
-          "team_short": "CRY",
-          "position": "DEF",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 54.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "moderate rotation pattern"
           ]
         },
         "202": {
@@ -2154,23 +2460,23 @@
             "100% start rate"
           ]
         },
-        "206": {
-          "player_id": 206,
-          "web_name": "Chadi Riad",
-          "full_name": "Chadi Riad Dnanou",
+        "207": {
+          "player_id": 207,
+          "web_name": "Mingueza",
+          "full_name": "Oscar Mingueza",
           "team_short": "CRY",
           "position": "DEF",
           "availability_pct": 95,
-          "rotation_risk": 34.7,
-          "rotation_tier": "likely",
-          "start_rate": 1.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 72.0,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
           "minutes_stdev": null,
           "recent_trend": null,
           "press_signal": null,
           "contributing_factors": [
-            "100% start rate"
+            "100% bench rate"
           ]
         },
         "210": {
@@ -2249,25 +2555,6 @@
             "moderate rotation pattern"
           ]
         },
-        "223": {
-          "player_id": 223,
-          "web_name": "Mateta",
-          "full_name": "Jean-Philippe Mateta",
-          "team_short": "CRY",
-          "position": "FWD",
-          "availability_pct": 95,
-          "rotation_risk": 34.7,
-          "rotation_tier": "likely",
-          "start_rate": 1.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 62.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "100% start rate"
-          ]
-        },
         "224": {
           "player_id": 224,
           "web_name": "Nketiah",
@@ -2342,6 +2629,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "595": {
+          "player_id": 595,
+          "web_name": "Gozo",
+          "full_name": "Zavier Gozo",
+          "team_short": "CRY",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "209": {
@@ -2458,13 +2764,32 @@
             "100% start rate"
           ]
         },
+        "238": {
+          "player_id": 238,
+          "web_name": "Grealish",
+          "full_name": "Jack Grealish",
+          "team_short": "EVE",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 48.0,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 8.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "moderate rotation pattern"
+          ]
+        },
         "239": {
           "player_id": 239,
           "web_name": "Garner",
           "full_name": "James Garner",
           "team_short": "EVE",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 100,
           "rotation_risk": 48.0,
           "rotation_tier": "rotation_risk",
           "start_rate": 0.0,
@@ -2553,23 +2878,23 @@
             "100% start rate"
           ]
         },
-        "248": {
-          "player_id": 248,
-          "web_name": "Beto",
-          "full_name": "Norberto Bercique Gomes Betuncal",
+        "247": {
+          "player_id": 247,
+          "web_name": "Hackney",
+          "full_name": "Hayden Hackney",
           "team_short": "EVE",
-          "position": "FWD",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
           "bench_rate": 0.0,
-          "minutes_avg": 11.0,
+          "minutes_avg": 78.0,
           "minutes_stdev": null,
           "recent_trend": null,
           "press_signal": null,
           "contributing_factors": [
-            "moderate rotation pattern"
+            "100% start rate"
           ]
         },
         "249": {
@@ -2705,6 +3030,25 @@
             "100% start rate"
           ]
         },
+        "262": {
+          "player_id": 262,
+          "web_name": "Smith Rowe",
+          "full_name": "Emile Smith Rowe",
+          "team_short": "FUL",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "263": {
           "player_id": 263,
           "web_name": "Kevin",
@@ -2838,6 +3182,25 @@
             "100% start rate"
           ]
         },
+        "570": {
+          "player_id": 570,
+          "web_name": "Palacios",
+          "full_name": "César Palacios",
+          "team_short": "FUL",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 72.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% start rate"
+          ]
+        },
         "580": {
           "player_id": 580,
           "web_name": "Charles",
@@ -2855,6 +3218,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "240": {
+          "player_id": 240,
+          "web_name": "Iroegbunam",
+          "full_name": "Tim Iroegbunam",
+          "team_short": "HUL",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "277": {
@@ -2901,7 +3283,7 @@
           "full_name": "Lewie Coyle",
           "team_short": "HUL",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -2912,25 +3294,6 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
-          ]
-        },
-        "281": {
-          "player_id": 281,
-          "web_name": "Drameh",
-          "full_name": "Cody Drameh",
-          "team_short": "HUL",
-          "position": "DEF",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 20.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "moderate rotation pattern"
           ]
         },
         "282": {
@@ -2990,32 +3353,13 @@
             "100% start rate"
           ]
         },
-        "287": {
-          "player_id": 287,
-          "web_name": "Millar",
-          "full_name": "Liam Millar",
-          "team_short": "HUL",
-          "position": "MID",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 19.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "moderate rotation pattern"
-          ]
-        },
         "289": {
           "player_id": 289,
           "web_name": "Crooks",
           "full_name": "Matt Crooks",
           "team_short": "HUL",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -3083,6 +3427,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "563": {
+          "player_id": 563,
+          "web_name": "Morita",
+          "full_name": "Hidemasa Morita",
+          "team_short": "HUL",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "572": {
@@ -3159,6 +3522,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "589": {
+          "player_id": 589,
+          "web_name": "Gourna-Douath",
+          "full_name": "Lucas Gourna-Douath",
+          "team_short": "HUL",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "259": {
@@ -3254,6 +3636,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "308": {
+          "player_id": 308,
+          "web_name": "Furlong",
+          "full_name": "Darnell Furlong",
+          "team_short": "IPS",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "309": {
@@ -3471,7 +3872,7 @@
           "full_name": "Harry Wilson",
           "team_short": "LEE",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -3488,25 +3889,6 @@
           "player_id": 327,
           "web_name": "Bijol",
           "full_name": "Jaka Bijol",
-          "team_short": "LEE",
-          "position": "DEF",
-          "availability_pct": 95,
-          "rotation_risk": 34.7,
-          "rotation_tier": "likely",
-          "start_rate": 1.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 90.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "100% start rate"
-          ]
-        },
-        "329": {
-          "player_id": 329,
-          "web_name": "Rodon",
-          "full_name": "Joe Rodon",
           "team_short": "LEE",
           "position": "DEF",
           "availability_pct": 95,
@@ -3674,6 +4056,44 @@
             "moderate rotation pattern"
           ]
         },
+        "343": {
+          "player_id": 343,
+          "web_name": "James",
+          "full_name": "Daniel James",
+          "team_short": "LEE",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "345": {
+          "player_id": 345,
+          "web_name": "Tanaka",
+          "full_name": "Tanaka Ao",
+          "team_short": "LEE",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "346": {
           "player_id": 346,
           "web_name": "Calvert-Lewin",
@@ -3693,6 +4113,25 @@
             "100% start rate"
           ]
         },
+        "347": {
+          "player_id": 347,
+          "web_name": "Nmecha",
+          "full_name": "Lukas Nmecha",
+          "team_short": "LEE",
+          "position": "FWD",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "385": {
           "player_id": 385,
           "web_name": "Trafford",
@@ -3710,6 +4149,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "598": {
+          "player_id": 598,
+          "web_name": "Elvedi",
+          "full_name": "Nico Elvedi",
+          "team_short": "LEE",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "350": {
@@ -3737,7 +4195,7 @@
           "full_name": "Virgil van Dijk",
           "team_short": "LIV",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -3807,13 +4265,32 @@
             "100% start rate"
           ]
         },
+        "364": {
+          "player_id": 364,
+          "web_name": "Tsimikas",
+          "full_name": "Kostas Tsimikas",
+          "team_short": "LIV",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "366": {
           "player_id": 366,
           "web_name": "Wirtz",
           "full_name": "Florian Wirtz",
           "team_short": "LIV",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -3851,7 +4328,7 @@
           "full_name": "Dominik Szoboszlai",
           "team_short": "LIV",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -3919,6 +4396,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "375": {
+          "player_id": 375,
+          "web_name": "Nyoni",
+          "full_name": "Trey Nyoni",
+          "team_short": "LIV",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "377": {
@@ -3997,10 +4493,10 @@
             "moderate rotation pattern"
           ]
         },
-        "238": {
-          "player_id": 238,
-          "web_name": "Grealish",
-          "full_name": "Jack Grealish",
+        "155": {
+          "player_id": 155,
+          "web_name": "Enzo",
+          "full_name": "Enzo Fernández",
           "team_short": "MCI",
           "position": "MID",
           "availability_pct": 95,
@@ -4008,12 +4504,31 @@
           "rotation_tier": "rotation_risk",
           "start_rate": 0.0,
           "bench_rate": 0.0,
-          "minutes_avg": 8.0,
+          "minutes_avg": 25.0,
           "minutes_stdev": null,
           "recent_trend": null,
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "237": {
+          "player_id": 237,
+          "web_name": "Ndiaye",
+          "full_name": "Iliman Ndiaye",
+          "team_short": "MCI",
+          "position": "MID",
+          "availability_pct": 90,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 90.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% start rate"
           ]
         },
         "384": {
@@ -4041,7 +4556,7 @@
           "full_name": "Nico O'Reilly",
           "team_short": "MCI",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4079,7 +4594,7 @@
           "full_name": "Matheus Nunes",
           "team_short": "MCI",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 48.0,
           "rotation_tier": "rotation_risk",
           "start_rate": 0.0,
@@ -4168,13 +4683,32 @@
             "moderate rotation pattern"
           ]
         },
+        "396": {
+          "player_id": 396,
+          "web_name": "Vitor Reis",
+          "full_name": "Vitor de Oliveira Nunes dos Reis",
+          "team_short": "MCI",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "397": {
           "player_id": 397,
           "web_name": "Semenyo",
           "full_name": "Antoine Semenyo",
           "team_short": "MCI",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4326,7 +4860,7 @@
           "full_name": "Senne Lammens",
           "team_short": "MUN",
           "position": "GK",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 32.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4383,7 +4917,7 @@
           "full_name": "Harry Maguire",
           "team_short": "MUN",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4394,6 +4928,44 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "419": {
+          "player_id": 419,
+          "web_name": "Martinez",
+          "full_name": "Lisandro Martínez",
+          "team_short": "MUN",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "420": {
+          "player_id": 420,
+          "web_name": "Yoro",
+          "full_name": "Leny Yoro",
+          "team_short": "MUN",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "421": {
@@ -4440,7 +5012,7 @@
           "full_name": "Luke Shaw",
           "team_short": "MUN",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4478,7 +5050,7 @@
           "full_name": "Bryan Mbeumo",
           "team_short": "MUN",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4497,7 +5069,7 @@
           "full_name": "Matheus Santos Carneiro da Cunha",
           "team_short": "MUN",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -4535,7 +5107,7 @@
           "full_name": "Mason Mount",
           "team_short": "MUN",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 88,
           "rotation_risk": 56.9,
           "rotation_tier": "heavy_rotation",
           "start_rate": 0.0,
@@ -4603,6 +5175,25 @@
           "press_signal": null,
           "contributing_factors": [
             "moderate rotation pattern"
+          ]
+        },
+        "405": {
+          "player_id": 405,
+          "web_name": "N.Gonzalez",
+          "full_name": "Nico González Iglesias",
+          "team_short": "NEW",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "445": {
@@ -4795,6 +5386,25 @@
             "moderate rotation pattern"
           ]
         },
+        "461": {
+          "player_id": 461,
+          "web_name": "Touré",
+          "full_name": "Bazoumana Touré",
+          "team_short": "NEW",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "462": {
           "player_id": 462,
           "web_name": "Steur",
@@ -4831,25 +5441,6 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
-          ]
-        },
-        "465": {
-          "player_id": 465,
-          "web_name": "Osula",
-          "full_name": "William Osula",
-          "team_short": "NEW",
-          "position": "FWD",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 55.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "moderate rotation pattern"
           ]
         },
         "559": {
@@ -4907,6 +5498,44 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "167": {
+          "player_id": 167,
+          "web_name": "Delap",
+          "full_name": "Liam Delap",
+          "team_short": "NFO",
+          "position": "FWD",
+          "availability_pct": 68,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "201": {
+          "player_id": 201,
+          "web_name": "Muñoz",
+          "full_name": "Daniel Muñoz Mejía",
+          "team_short": "NFO",
+          "position": "DEF",
+          "availability_pct": 90,
+          "rotation_risk": 48.0,
+          "rotation_tier": "rotation_risk",
+          "start_rate": 0.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 54.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "moderate rotation pattern"
           ]
         },
         "467": {
@@ -5042,6 +5671,25 @@
             "moderate rotation pattern"
           ]
         },
+        "482": {
+          "player_id": 482,
+          "web_name": "Hudson-Odoi",
+          "full_name": "Callum Hudson-Odoi",
+          "team_short": "NFO",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "483": {
           "player_id": 483,
           "web_name": "Ndoye",
@@ -5078,6 +5726,63 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "487": {
+          "player_id": 487,
+          "web_name": "Dominguez",
+          "full_name": "Nicolás Domínguez",
+          "team_short": "NFO",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
+        "488": {
+          "player_id": 488,
+          "web_name": "I.Sangaré",
+          "full_name": "Ibrahim Sangaré",
+          "team_short": "NFO",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 34.7,
+          "rotation_tier": "likely",
+          "start_rate": 1.0,
+          "bench_rate": 0.0,
+          "minutes_avg": 90.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% start rate"
+          ]
+        },
+        "489": {
+          "player_id": 489,
+          "web_name": "Yates",
+          "full_name": "Ryan Yates",
+          "team_short": "NFO",
+          "position": "MID",
+          "availability_pct": 68,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "490": {
@@ -5162,7 +5867,7 @@
           "full_name": "Jan Paul van Hecke",
           "team_short": "TOT",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -5173,6 +5878,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "401": {
+          "player_id": 401,
+          "web_name": "Marmoush",
+          "full_name": "Omar Marmoush",
+          "team_short": "TOT",
+          "position": "FWD",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "455": {
@@ -5200,7 +5924,7 @@
           "full_name": "Antonín Kinský",
           "team_short": "TOT",
           "position": "GK",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 32.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -5219,7 +5943,7 @@
           "full_name": "Marcos Senesi Barón",
           "team_short": "TOT",
           "position": "DEF",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -5230,6 +5954,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "499": {
+          "player_id": 499,
+          "web_name": "Pedro Porro",
+          "full_name": "Pedro Porro Sauceda",
+          "team_short": "TOT",
+          "position": "DEF",
+          "availability_pct": 90,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "502": {
@@ -5270,6 +6013,25 @@
             "moderate rotation pattern"
           ]
         },
+        "512": {
+          "player_id": 512,
+          "web_name": "Kudus",
+          "full_name": "Mohammed Kudus",
+          "team_short": "TOT",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "514": {
           "player_id": 514,
           "web_name": "Tel",
@@ -5295,7 +6057,7 @@
           "full_name": "James Maddison",
           "team_short": "TOT",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 75,
           "rotation_risk": 48.0,
           "rotation_tier": "rotation_risk",
           "start_rate": 0.0,
@@ -5498,6 +6260,25 @@
             "100% start rate"
           ]
         },
+        "533": {
+          "player_id": 533,
+          "web_name": "Mukiele",
+          "full_name": "Nordi Mukiele",
+          "team_short": "SUN",
+          "position": "DEF",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
+          ]
+        },
         "534": {
           "player_id": 534,
           "web_name": "Hume",
@@ -5599,7 +6380,7 @@
           "full_name": "Enzo Le Fée",
           "team_short": "SUN",
           "position": "MID",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -5610,25 +6391,6 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
-          ]
-        },
-        "543": {
-          "player_id": 543,
-          "web_name": "Diarra",
-          "full_name": "Habib Diarra",
-          "team_short": "SUN",
-          "position": "MID",
-          "availability_pct": 95,
-          "rotation_risk": 48.0,
-          "rotation_tier": "rotation_risk",
-          "start_rate": 0.0,
-          "bench_rate": 0.0,
-          "minutes_avg": 10.0,
-          "minutes_stdev": null,
-          "recent_trend": null,
-          "press_signal": null,
-          "contributing_factors": [
-            "moderate rotation pattern"
           ]
         },
         "544": {
@@ -5667,6 +6429,25 @@
           "press_signal": null,
           "contributing_factors": [
             "100% start rate"
+          ]
+        },
+        "547": {
+          "player_id": 547,
+          "web_name": "Mundle",
+          "full_name": "Romaine Mundle",
+          "team_short": "SUN",
+          "position": "MID",
+          "availability_pct": 95,
+          "rotation_risk": 56.9,
+          "rotation_tier": "heavy_rotation",
+          "start_rate": 0.0,
+          "bench_rate": 1.0,
+          "minutes_avg": 0.0,
+          "minutes_stdev": null,
+          "recent_trend": null,
+          "press_signal": null,
+          "contributing_factors": [
+            "100% bench rate"
           ]
         },
         "548": {
@@ -5709,7 +6490,7 @@
         },
         "551": {
           "player_id": 551,
-          "web_name": "Angulo",
+          "web_name": "N.Angulo",
           "full_name": "Nilson Angulo",
           "team_short": "SUN",
           "position": "MID",
@@ -5732,7 +6513,7 @@
           "full_name": "Brian Brobbey",
           "team_short": "SUN",
           "position": "FWD",
-          "availability_pct": 95,
+          "availability_pct": 90,
           "rotation_risk": 34.7,
           "rotation_tier": "likely",
           "start_rate": 1.0,
@@ -5769,16 +6550,16 @@
   },
   "summary": {
     "most_rotated_players": [
+      "Konsa (ARS)",
+      "Bruno G. (ARS)",
+      "N.Jackson (AVL)",
+      "Brooks (BOU)",
+      "Christie (BOU)",
+      "Rodríguez (BOU)",
+      "Henry (BRE)",
+      "David (BHA)",
       "Caicedo (CHE)",
-      "Mount (MUN)",
-      "Hincapie (ARS)",
-      "Eze (ARS)",
-      "Madueke (ARS)",
-      "Merino (ARS)",
-      "Zubimendi (ARS)",
-      "Mings (AVL)",
-      "Bogarde (AVL)",
-      "Alysson (AVL)"
+      "Barco (CHE)"
     ],
     "most_nailed_players": [
       "Raya (ARS)",
@@ -5786,33 +6567,33 @@
       "Petrović (BOU)",
       "Kelleher (BRE)",
       "Verbruggen (BHA)",
-      "Sánchez (CHE)",
       "Rushworth (COV)",
       "Henderson (CRY)",
       "Pickford (EVE)",
-      "Leno (FUL)"
+      "Leno (FUL)",
+      "Tzolakis (HUL)"
     ],
     "rotation_by_team": {
-      "MUN": 40.6,
-      "CRY": 40.4,
-      "NEW": 40.4,
-      "TOT": 40.4,
-      "CHE": 40.3,
-      "SUN": 39.6,
-      "AVL": 39.0,
-      "MCI": 39.0,
-      "ARS": 38.7,
-      "BHA": 38.7,
-      "HUL": 38.7,
-      "IPS": 38.7,
-      "EVE": 38.6,
-      "NFO": 38.6,
-      "FUL": 38.4,
-      "BOU": 38.1,
-      "BRE": 38.1,
-      "COV": 38.1,
-      "LIV": 38.1,
-      "LEE": 36.6
+      "CRY": 43.7,
+      "TOT": 43.0,
+      "NFO": 42.8,
+      "MUN": 42.3,
+      "CHE": 42.1,
+      "NEW": 41.9,
+      "LEE": 41.8,
+      "BOU": 41.2,
+      "COV": 41.2,
+      "SUN": 41.1,
+      "AVL": 41.0,
+      "ARS": 40.8,
+      "HUL": 40.8,
+      "BRE": 40.5,
+      "LIV": 40.3,
+      "BHA": 40.1,
+      "IPS": 39.8,
+      "MCI": 39.8,
+      "FUL": 39.3,
+      "EVE": 38.4
     },
     "chronic_rotators": [
       "Hincapie (ARS)",
@@ -5820,11 +6601,11 @@
       "Madueke (ARS)",
       "Merino (ARS)",
       "Zubimendi (ARS)",
+      "Konsa (ARS)",
+      "Bruno G. (ARS)",
       "Mings (AVL)",
       "Bogarde (AVL)",
-      "Alysson (AVL)",
-      "Garnacho (AVL)",
-      "Ruggeri (AVL)"
+      "Alysson (AVL)"
     ]
   }
 }
