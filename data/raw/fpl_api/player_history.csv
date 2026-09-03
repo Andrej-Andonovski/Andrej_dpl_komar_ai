@@ -28,7 +28,6 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 31,1,7,Coventry City,True,0,0,0,0,0,0,0,4.5
 452,1,7,Coventry City,True,0,0,0,0,0,0,0,7.0
 557,1,7,Coventry City,True,6,75,0,1,1,0,0,6.5
-28,1,5,Brighton,False,0,0,0,0,0,0,0,5.0
 29,1,5,Brighton,False,1,90,0,0,0,3,0,4.5
 30,1,5,Brighton,False,0,0,0,0,0,0,0,4.5
 32,1,5,Brighton,False,-1,90,0,0,0,0,0,4.5
@@ -145,6 +144,8 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 594,1,2,Aston Villa,True,0,0,0,0,0,0,0,6.0
 600,1,2,Aston Villa,True,1,12,0,0,0,0,0,5.0
 605,1,2,Aston Villa,True,1,4,0,0,0,0,0,4.5
+624,2,6,Chelsea,False,0,0,0,0,0,0,0,5.0
+28,1,5,Brighton,False,0,0,0,0,0,0,0,5.0
 40,1,10,Fulham,False,8,81,1,0,0,0,1,7.5
 101,1,10,Fulham,False,0,0,0,0,0,0,0,5.0
 136,1,10,Fulham,False,0,0,0,0,0,0,0,6.0
@@ -155,14 +156,12 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 144,1,10,Fulham,False,1,75,0,0,0,0,0,5.0
 145,1,10,Fulham,False,0,0,0,0,0,0,0,5.0
 146,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
-147,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 148,1,10,Fulham,False,1,64,0,0,0,0,0,4.5
 149,1,10,Fulham,False,0,90,0,0,0,0,0,5.0
 150,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 151,1,10,Fulham,False,3,90,0,0,0,0,0,4.5
 152,1,10,Fulham,False,0,0,0,0,0,0,0,5.5
 154,1,10,Fulham,False,13,82,1,1,0,0,3,9.5
-155,1,10,Fulham,False,1,25,0,0,0,0,0,7.0
 156,1,10,Fulham,False,1,14,0,0,0,0,0,6.5
 157,1,10,Fulham,False,1,7,0,0,0,0,0,6.5
 158,1,10,Fulham,False,0,0,0,0,0,0,0,6.0
@@ -178,7 +177,6 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 560,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 561,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 568,1,10,Fulham,False,0,0,0,0,0,0,0,5.5
-578,1,10,Fulham,False,0,0,0,0,0,0,0,5.5
 583,1,10,Fulham,False,1,25,0,0,0,0,0,5.0
 91,1,19,Spurs,True,0,0,0,0,0,0,0,4.5
 104,1,1,Arsenal,False,2,90,0,0,0,0,0,5.0
@@ -219,7 +217,6 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 153,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 198,1,9,Everton,False,2,90,0,0,0,3,0,5.0
 199,1,9,Everton,False,0,0,0,0,0,0,0,4.5
-201,1,9,Everton,False,0,54,0,0,0,0,0,5.5
 202,1,9,Everton,False,3,90,0,0,0,0,0,5.0
 203,1,9,Everton,False,1,90,0,0,0,0,0,5.0
 204,1,9,Everton,False,1,90,0,0,0,0,0,4.5
@@ -261,9 +258,8 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 234,1,8,Crystal Palace,True,0,0,0,0,0,0,0,4.5
 235,1,8,Crystal Palace,True,0,0,0,0,0,0,0,4.0
 236,1,8,Crystal Palace,True,11,90,1,0,1,0,3,6.5
-237,1,8,Crystal Palace,True,9,90,0,1,1,0,1,6.0
+238,1,3,Bournemouth,True,1,8,0,0,0,0,0,6.5
 239,1,8,Crystal Palace,True,1,11,0,0,0,0,0,6.0
-240,1,8,Crystal Palace,True,0,0,0,0,0,0,0,5.0
 242,1,8,Crystal Palace,True,3,83,0,0,1,0,0,5.5
 243,1,8,Crystal Palace,True,1,1,0,0,0,0,0,5.0
 244,1,8,Crystal Palace,True,8,90,0,1,1,0,0,5.0
@@ -296,6 +292,8 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 570,1,6,Chelsea,True,2,72,0,0,0,0,0,5.5
 580,1,6,Chelsea,True,1,23,0,0,0,0,0,5.0
 610,1,6,Chelsea,True,0,0,0,0,0,0,0,4.0
+626,2,20,Sunderland,False,0,0,0,0,0,0,0,4.5
+240,1,8,Crystal Palace,True,0,0,0,0,0,0,0,5.0
 273,1,16,Man Utd,True,0,0,0,0,0,0,0,4.0
 274,1,16,Man Utd,True,0,0,0,0,0,0,0,4.5
 275,1,16,Man Utd,True,0,0,0,0,0,0,0,4.0
@@ -393,6 +391,7 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 598,1,18,Nott'm Forest,False,0,0,0,0,0,0,0,4.5
 603,1,18,Nott'm Forest,False,0,0,0,0,0,0,0,4.0
 604,1,18,Nott'm Forest,False,0,0,0,0,0,0,0,4.5
+625,2,4,Brentford,True,0,0,0,0,0,0,0,4.0
 350,1,17,Newcastle,False,2,90,0,0,0,3,0,5.5
 351,1,17,Newcastle,False,0,0,0,0,0,0,0,5.0
 352,1,17,Newcastle,False,0,0,0,0,0,0,0,4.0
@@ -428,7 +427,8 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 382,1,17,Newcastle,False,0,0,0,0,0,0,0,4.5
 383,1,17,Newcastle,False,0,0,0,0,0,0,0,5.5
 579,1,17,Newcastle,False,1,20,0,0,0,0,0,5.5
-238,1,3,Bournemouth,True,1,8,0,0,0,0,0,6.5
+155,1,10,Fulham,False,1,25,0,0,0,0,0,7.0
+237,1,8,Crystal Palace,True,9,90,0,1,1,0,1,6.0
 384,1,3,Bournemouth,True,3,90,0,0,0,3,0,5.5
 386,1,3,Bournemouth,True,0,0,0,0,0,0,0,4.5
 387,1,3,Bournemouth,True,2,62,0,0,0,0,0,6.5
@@ -520,6 +520,7 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 593,1,14,Liverpool,True,1,90,0,0,0,0,0,4.5
 609,1,14,Liverpool,True,0,0,0,0,0,0,0,4.0
 167,1,10,Fulham,False,0,0,0,0,0,0,0,5.5
+201,1,9,Everton,False,0,54,0,0,0,0,0,5.5
 467,1,13,Leeds,True,2,90,0,0,0,2,0,5.0
 468,1,13,Leeds,True,0,0,0,0,0,0,0,4.5
 469,1,13,Leeds,True,2,90,0,0,0,0,0,5.0
@@ -549,6 +550,7 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 581,1,13,Leeds,True,0,0,0,0,0,0,0,5.5
 590,1,13,Leeds,True,0,0,0,0,0,0,0,4.5
 112,1,4,Brentford,False,1,90,0,0,0,0,0,5.0
+147,1,10,Fulham,False,0,0,0,0,0,0,0,4.5
 401,1,3,Bournemouth,True,0,0,0,0,0,0,0,7.0
 403,1,3,Bournemouth,True,0,0,0,0,0,0,0,6.5
 455,1,4,Brentford,False,2,90,0,0,0,0,0,5.5
@@ -559,7 +561,6 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 498,1,4,Brentford,False,3,90,0,0,0,0,0,6.0
 499,1,4,Brentford,False,0,0,0,0,0,0,0,5.5
 500,1,4,Brentford,False,0,0,0,0,0,0,0,5.0
-501,1,4,Brentford,False,0,0,0,0,0,0,0,5.0
 502,1,4,Brentford,False,3,90,0,0,0,0,0,4.5
 503,1,4,Brentford,False,0,0,0,0,0,0,0,5.0
 505,1,4,Brentford,False,0,0,0,0,0,0,0,4.5
@@ -586,7 +587,9 @@ player_id,gameweek,opponent_team_id,opponent_team,was_home,total_points,minutes,
 526,1,4,Brentford,False,1,22,0,0,0,0,0,6.0
 527,1,4,Brentford,False,2,67,0,0,0,0,0,6.0
 528,1,4,Brentford,False,0,0,0,0,0,0,0,4.5
+578,1,10,Fulham,False,0,0,0,0,0,0,0,5.5
 601,1,4,Brentford,False,0,0,0,0,0,0,0,4.5
+501,1,4,Brentford,False,0,0,0,0,0,0,0,5.0
 529,1,12,Ipswich Town,False,1,90,0,0,0,1,0,5.0
 530,1,12,Ipswich Town,False,0,0,0,0,0,0,0,4.0
 531,1,12,Ipswich Town,False,0,0,0,0,0,0,0,4.5

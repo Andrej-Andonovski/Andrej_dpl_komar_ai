@@ -1,77 +1,87 @@
 fbref_name,fpl_name,previous_league,multiplier,fbref_season,fbref_team,fbref_position,appearances,goals,assists,xG,xA,shots_per_90,goals_per_90,assists_per_90,yellow_cards,red_cards,clean_sheets,saves,save_percentage,adjusted_goals,adjusted_assists,adjusted_goals_per_90,adjusted_assists_per_90,season_reliability,data_confidence,is_new_to_pl,fpl_position,fpl_team,fpl_price
-Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2023-24,Sporting CP,DF,26.0,2.0,1.0,0.0,0.0,0.72,0.09,0.04,7.0,1.0,0.0,0.0,0.0,1.56,0.78,0.0702,0.031200000000000002,1.0,,1,DEF,Nott'm Forest,5.5
+Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2023-24,Sporting CP,DF,26.0,2.0,1.0,0.0,0.0,0.72,0.09,0.04,7.0,1.0,0.0,0.0,0.0,1.56,0.78,0.0702,0.031200000000000002,1.0,,1,DEF,Nott'm Forest,5.4
 Dario Essugo,Dário Luís Essugo,Primeira Liga,0.78,2023-24,Sporting CP,MF,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Chelsea,4.5
 Dario Essugo,Dário Luís Essugo,Primeira Liga,0.78,2023-24,Chaves,MF,14.0,0.0,0.0,0.0,0.0,0.15,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,MID,Chelsea,4.5
-Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Porto,DF,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.35,1.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.27299999999999996,1.0,,1,MID,Spurs,6.0
-Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Estoril,MF,28.0,1.0,2.0,0.0,0.0,0.56,0.04,0.08,6.0,0.0,0.0,0.0,0.0,0.78,1.56,0.031200000000000002,0.062400000000000004,1.0,,1,MID,Spurs,6.0
-Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Sporting CP,MF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Spurs,6.0
-Viktor Gyökeres,Viktor Gyökeres,Primeira Liga,0.78,2023-24,Sporting CP,FW,33.0,29.0,10.0,0.0,0.0,3.49,0.9,0.31,3.0,0.0,0.0,0.0,0.0,22.62,7.800000000000001,0.7020000000000001,0.24180000000000001,1.0,,1,FWD,Arsenal,7.4
+Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Porto,DF,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.35,1.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.27299999999999996,1.0,,1,MID,Spurs,5.9
+Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Estoril,MF,28.0,1.0,2.0,0.0,0.0,0.56,0.04,0.08,6.0,0.0,0.0,0.0,0.0,0.78,1.56,0.031200000000000002,0.062400000000000004,1.0,,1,MID,Spurs,5.9
+Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2023-24,Sporting CP,MF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Spurs,5.9
+Viktor Gyökeres,Viktor Gyökeres,Primeira Liga,0.78,2023-24,Sporting CP,FW,33.0,29.0,10.0,0.0,0.0,3.49,0.9,0.31,3.0,0.0,0.0,0.0,0.0,22.62,7.800000000000001,0.7020000000000001,0.24180000000000001,1.0,,1,FWD,Arsenal,7.3
 Hidemasa Morita,Hidemasa Morita,Primeira Liga,0.78,2023-24,Sporting CP,MF,29.0,2.0,4.0,0.0,0.0,0.93,0.08,0.17,3.0,0.0,0.0,0.0,0.0,1.56,3.12,0.062400000000000004,0.13260000000000002,1.0,,1,MID,Hull City,5.0
-Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2024-25,Sporting CP,DF,31.0,2.0,0.0,0.0,0.0,1.11,0.07,0.0,7.0,2.0,0.0,0.0,0.0,1.56,0.0,0.05460000000000001,0.0,1.0,,1,DEF,Nott'm Forest,5.5
+Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2024-25,Sporting CP,DF,31.0,2.0,0.0,0.0,0.0,1.11,0.07,0.0,7.0,2.0,0.0,0.0,0.0,1.56,0.0,0.05460000000000001,0.0,1.0,,1,DEF,Nott'm Forest,5.4
 Dario Essugo,Dário Luís Essugo,Primeira Liga,0.78,2024-25,Sporting CP,MF,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Chelsea,4.5
-Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2024-25,Porto,DF,25.0,0.0,6.0,0.0,0.0,0.41,0.0,0.41,5.0,0.0,0.0,0.0,0.0,0.0,4.68,0.0,0.3198,0.5,,1,MID,Spurs,6.0
-Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2024-25,Sporting CP,MF,1.0,0.0,0.0,0.0,0.0,3.46,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Spurs,6.0
+Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2024-25,Porto,DF,25.0,0.0,6.0,0.0,0.0,0.41,0.0,0.41,5.0,0.0,0.0,0.0,0.0,0.0,4.68,0.0,0.3198,0.5,,1,MID,Spurs,5.9
+Mateus Fernandes,Mateus Fernandes,Primeira Liga,0.78,2024-25,Sporting CP,MF,1.0,0.0,0.0,0.0,0.0,3.46,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Spurs,5.9
 José Gomes,Joao Gomes,Primeira Liga,0.78,2024-25,Nacional,DF,28.0,3.0,1.0,0.0,0.0,0.88,0.12,0.04,3.0,0.0,0.0,0.0,0.0,2.34,0.78,0.0936,0.031200000000000002,1.0,,1,MID,Aston Villa,5.5
-Viktor Gyökeres,Viktor Gyökeres,Primeira Liga,0.78,2024-25,Sporting CP,FW,33.0,39.0,7.0,0.0,0.0,4.46,1.25,0.22,4.0,0.0,0.0,0.0,0.0,30.42,5.46,0.9750000000000001,0.1716,1.0,,1,FWD,Arsenal,7.4
+Viktor Gyökeres,Viktor Gyökeres,Primeira Liga,0.78,2024-25,Sporting CP,FW,33.0,39.0,7.0,0.0,0.0,4.46,1.25,0.22,4.0,0.0,0.0,0.0,0.0,30.42,5.46,0.9750000000000001,0.1716,1.0,,1,FWD,Arsenal,7.3
 Lukáš Horníček,Lukás Hornícek,Primeira Liga,0.78,2024-25,Braga,GK,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,47.0,82.8,0.0,0.0,0.0,0.0,1.0,,1,GK,Newcastle,5.0
-Konstantinos Kostoulas,Konstantinos Tzolakis,Super League 1,1.0,2024-25,Rio Ave,DF,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,GK,Hull City,4.5
+Konstantinos Kostoulas,Konstantinos Tzolakis,Super League 1,1.0,2024-25,Rio Ave,DF,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,GK,Hull City,4.6
 Hidemasa Morita,Hidemasa Morita,Primeira Liga,0.78,2024-25,Sporting CP,MF,23.0,2.0,3.0,0.0,0.0,0.97,0.14,0.21,1.0,0.0,0.0,0.0,0.0,1.56,2.34,0.10920000000000002,0.1638,1.0,,1,MID,Hull City,5.0
-Geovany Quenda,Geovany Quenda,Primeira Liga,0.78,2024-25,Sporting CP,MF,34.0,2.0,4.0,0.0,0.0,1.76,0.08,0.16,2.0,0.0,0.0,0.0,0.0,1.56,3.12,0.062400000000000004,0.12480000000000001,1.0,,1,MID,Chelsea,5.5
+Geovany Quenda,Geovany Quenda,Primeira Liga,0.78,2024-25,Sporting CP,MF,34.0,2.0,4.0,0.0,0.0,1.76,0.08,0.16,2.0,0.0,0.0,0.0,0.0,1.56,3.12,0.062400000000000004,0.12480000000000001,1.0,,1,MID,Chelsea,5.4
 Omar Richards,Omar Richards,Primeira Liga,0.78,2024-25,Rio Ave,"DF,MF",26.0,0.0,1.0,0.0,0.0,0.18,0.0,0.05,4.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.03900000000000001,1.0,,1,DEF,Nott'm Forest,4.0
 Amar Dedić,Amar Dedic,Primeira Liga,0.78,2025-26,Benfica,DF,24.0,1.0,4.0,0.0,0.0,0.71,0.05,0.19,5.0,2.0,0.0,0.0,0.0,0.78,3.12,0.03900000000000001,0.1482,1.0,,1,DEF,Newcastle,4.5
-Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2025-26,Sporting CP,DF,17.0,0.0,1.0,0.0,0.0,0.69,0.0,0.07,5.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.05460000000000001,1.0,,1,DEF,Nott'm Forest,5.5
-Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2025-26,Porto,DF,20.0,1.0,1.0,0.0,0.0,0.32,0.08,0.08,4.0,1.0,0.0,0.0,0.0,0.78,0.78,0.062400000000000004,0.062400000000000004,1.0,,1,MID,Spurs,6.0
+Ousmane Diomande,Ousmane Diomande,Primeira Liga,0.78,2025-26,Sporting CP,DF,17.0,0.0,1.0,0.0,0.0,0.69,0.0,0.07,5.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.05460000000000001,1.0,,1,DEF,Nott'm Forest,5.4
+Martim Fernandes,Mateus Fernandes,Primeira Liga,0.78,2025-26,Porto,DF,20.0,1.0,1.0,0.0,0.0,0.32,0.08,0.08,4.0,1.0,0.0,0.0,0.0,0.78,0.78,0.062400000000000004,0.062400000000000004,1.0,,1,MID,Spurs,5.9
 José Gomes,Joao Gomes,Primeira Liga,0.78,2025-26,Nacional,DF,27.0,1.0,5.0,0.0,0.0,0.74,0.04,0.2,3.0,0.0,0.0,0.0,0.0,0.78,3.9000000000000004,0.031200000000000002,0.15600000000000003,1.0,,1,MID,Aston Villa,5.5
 Lukáš Horníček,Lukás Hornícek,Primeira Liga,0.78,2025-26,Braga,GK,33.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,12.0,72.0,68.6,0.0,0.0,0.0,0.0,1.0,,1,GK,Newcastle,5.0
 Hidemasa Morita,Hidemasa Morita,Primeira Liga,0.78,2025-26,Sporting CP,MF,31.0,1.0,4.0,0.0,0.0,0.69,0.05,0.2,3.0,0.0,0.0,0.0,0.0,0.78,3.12,0.03900000000000001,0.15600000000000003,1.0,,1,MID,Hull City,5.0
-Geovany Quenda,Geovany Quenda,Primeira Liga,0.78,2025-26,Sporting CP,MF,20.0,2.0,5.0,0.0,0.0,1.73,0.2,0.51,0.0,0.0,0.0,0.0,0.0,1.56,3.9000000000000004,0.15600000000000003,0.39780000000000004,0.5,,1,MID,Chelsea,5.5
+Geovany Quenda,Geovany Quenda,Primeira Liga,0.78,2025-26,Sporting CP,MF,20.0,2.0,5.0,0.0,0.0,1.73,0.2,0.51,0.0,0.0,0.0,0.0,0.0,1.56,3.9000000000000004,0.15600000000000003,0.39780000000000004,0.5,,1,MID,Chelsea,5.4
 Omar Richards,Omar Richards,Primeira Liga,0.78,2025-26,Rio Ave,"MF,DF",14.0,0.0,0.0,0.0,0.0,0.26,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,DEF,Nott'm Forest,4.0
 Amine Adli,Amine Adli,Bundesliga,0.89,2023-24,Leverkusen,"MF,FW",23.0,4.0,6.0,0.0,0.0,2.71,0.4,0.6,5.0,0.0,0.0,0.0,0.0,3.56,5.34,0.35600000000000004,0.534,0.5,,1,MID,Leverkusen,5.0
 Nico Elvedi,Nico Elvedi,Bundesliga,0.89,2023-24,Gladbach,DF,30.0,2.0,1.0,0.0,0.0,0.65,0.07,0.04,5.0,0.0,0.0,0.0,0.0,1.78,0.89,0.06230000000000001,0.0356,1.0,,1,DEF,Leeds,4.5
 Leon Goretzka,Leon Goretzka,Bundesliga,0.89,2023-24,Bayern Munich,MF,30.0,6.0,7.0,0.0,0.0,2.25,0.24,0.28,3.0,0.0,0.0,0.0,0.0,5.34,6.23,0.21359999999999998,0.24920000000000003,1.0,,1,MID,Aston Villa,6.0
+Hugo Larsson,Hugo Larsson,Bundesliga,0.89,2023-24,Eintracht Frankfurt,MF,29.0,2.0,1.0,0.0,0.0,0.48,0.1,0.05,1.0,0.0,0.0,0.0,0.0,1.78,0.89,0.08900000000000001,0.044500000000000005,1.0,,1,MID,Fulham,5.0
+Jean Mattéo Bahoya,Jean-Mattéo Bahoya,Bundesliga,0.89,2023-24,Eintracht Frankfurt,MF,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Leeds,5.0
 Thomas Meunier,Thomas Meunier,Ligue 1,0.82,2023-24,Dortmund,DF,8.0,0.0,0.0,0.0,0.0,1.23,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Sunderland,4.5
 Exequiel Palacios,Exequiel Palacios,Bundesliga,0.89,2023-24,Leverkusen,MF,24.0,4.0,4.0,0.0,0.0,1.03,0.2,0.2,6.0,0.0,0.0,0.0,0.0,3.56,3.56,0.17800000000000002,0.17800000000000002,1.0,,1,MID,Ipswich Town,5.0
 Xaver Schlager,Xaver Schlager,Bundesliga,0.89,2023-24,RB Leipzig,MF,29.0,0.0,5.0,0.0,0.0,0.76,0.0,0.18,7.0,0.0,0.0,0.0,0.0,0.0,4.45,0.0,0.1602,1.0,,1,MID,Nott'm Forest,5.0
+Michael Zetterer,Michael Zetterer,Bundesliga,0.89,2023-24,Werder Bremen,GK,27.0,0.0,0.0,0.0,0.0,0.04,0.0,0.0,2.0,0.0,5.0,93.0,73.8,0.0,0.0,0.0,0.0,1.0,,1,GK,Leeds,4.0
 Amine Adli,Amine Adli,Bundesliga,0.89,2024-25,Leverkusen,"MF,FW",20.0,2.0,0.0,0.0,0.0,2.35,0.23,0.0,3.0,0.0,0.0,0.0,0.0,1.78,0.0,0.20470000000000002,0.0,0.5,,1,MID,Leverkusen,5.0
 Aurele Amenda,Aurèle Amenda,Bundesliga,0.89,2024-25,Eintracht Frankfurt,DF,8.0,0.0,0.0,0.0,0.0,0.94,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Coventry City,4.0
 Adam Aznou,Adam Aznou,Bundesliga,0.89,2024-25,Bayern Munich,DF,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Everton,4.0
 Nico Elvedi,Nico Elvedi,Bundesliga,0.89,2024-25,Gladbach,DF,25.0,1.0,1.0,0.0,0.0,0.51,0.04,0.04,1.0,0.0,0.0,0.0,0.0,0.89,0.89,0.0356,0.0356,1.0,,1,DEF,Leeds,4.5
 Leon Goretzka,Leon Goretzka,Bundesliga,0.89,2024-25,Bayern Munich,MF,26.0,4.0,1.0,0.0,0.0,2.17,0.27,0.07,2.0,0.0,0.0,0.0,0.0,3.56,0.89,0.2403,0.06230000000000001,0.5,,1,MID,Aston Villa,6.0
-Konstantinos Koulierakis,Konstantinos Tzolakis,Super League 1,1.0,2024-25,Wolfsburg,DF,30.0,0.0,2.0,0.0,0.0,0.8,0.0,0.07,4.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.07,1.0,,1,GK,Hull City,4.5
+Konstantinos Koulierakis,Konstantinos Tzolakis,Super League 1,1.0,2024-25,Wolfsburg,DF,30.0,0.0,2.0,0.0,0.0,0.8,0.0,0.07,4.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.07,1.0,,1,GK,Hull City,4.6
 Jonah Kusi-Asare,Jonah Kusi-Asare,Bundesliga,0.89,2024-25,Bayern Munich,FW,1.0,0.0,0.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Fulham,4.5
-Johan Manzambi,Johan Manzambi,Bundesliga,0.89,2024-25,Freiburg,MF,11.0,2.0,1.0,0.0,0.0,2.96,0.54,0.27,2.0,0.0,0.0,0.0,0.0,1.78,0.89,0.4806,0.2403,0.5,,1,MID,Aston Villa,6.0
+Hugo Larsson,Hugo Larsson,Bundesliga,0.89,2024-25,Eintracht Frankfurt,MF,33.0,3.0,1.0,0.0,0.0,0.79,0.11,0.04,2.0,0.0,0.0,0.0,0.0,2.67,0.89,0.0979,0.0356,1.0,,1,MID,Fulham,5.0
+Johan Manzambi,Johan Manzambi,Bundesliga,0.89,2024-25,Freiburg,MF,11.0,2.0,1.0,0.0,0.0,2.96,0.54,0.27,2.0,0.0,0.0,0.0,0.0,1.78,0.89,0.4806,0.2403,0.5,,1,MID,Aston Villa,5.9
+Jean Mattéo Bahoya,Jean-Mattéo Bahoya,Bundesliga,0.89,2024-25,Eintracht Frankfurt,MF,24.0,2.0,3.0,0.0,0.0,0.98,0.2,0.29,3.0,0.0,0.0,0.0,0.0,1.78,2.67,0.17800000000000002,0.2581,0.5,,1,MID,Leeds,5.0
 Exequiel Palacios,Exequiel Palacios,Bundesliga,0.89,2024-25,Leverkusen,MF,24.0,1.0,6.0,0.0,0.0,1.01,0.08,0.47,2.0,0.0,0.0,0.0,0.0,0.89,5.34,0.0712,0.4183,0.5,,1,MID,Ipswich Town,5.0
 Xaver Schlager,Xaver Schlager,Bundesliga,0.89,2024-25,RB Leipzig,MF,4.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,MID,Nott'm Forest,5.0
-Bazoumana Touré,Bazoumana Touré,Bundesliga,0.89,2024-25,Hoffenheim,"MF,FW",13.0,0.0,3.0,0.0,0.0,2.81,0.0,0.44,1.0,0.0,0.0,0.0,0.0,0.0,2.67,0.0,0.3916,0.5,,1,MID,Newcastle,6.0
+Bazoumana Touré,Bazoumana Touré,Bundesliga,0.89,2024-25,Hoffenheim,"MF,FW",13.0,0.0,3.0,0.0,0.0,2.81,0.0,0.44,1.0,0.0,0.0,0.0,0.0,0.0,2.67,0.0,0.3916,0.5,,1,MID,Newcastle,5.9
+Michael Zetterer,Michael Zetterer,Bundesliga,0.89,2024-25,Werder Bremen,GK,34.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,10.0,103.0,65.8,0.0,0.0,0.0,0.0,1.0,,1,GK,Leeds,4.0
 Aurèle Amenda,Aurèle Amenda,Bundesliga,0.89,2025-26,Frankfurt,DF,24.0,0.0,0.0,0.0,0.0,0.54,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Coventry City,4.0
+Ilyas Ansah,Ilyas Ansah,Bundesliga,0.89,2025-26,Union Berlin,"MF,FW",33.0,5.0,1.0,0.0,0.0,1.57,0.24,0.05,1.0,0.0,0.0,0.0,0.0,4.45,0.89,0.21359999999999998,0.044500000000000005,1.0,,1,FWD,Hull City,5.0
 Aaron Anselmino,Aaron Anselmino,Bundesliga,0.89,2025-26,Dortmund,DF,6.0,1.0,0.0,0.0,0.0,0.24,0.24,0.0,0.0,0.0,0.0,0.0,0.0,0.89,0.0,0.21359999999999998,0.0,1.0,,1,DEF,Chelsea,4.5
-Claudio Echeverri,Claudio Echeverri,Bundesliga,0.89,2025-26,Leverkusen,MF,6.0,0.0,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Man City,5.0
+Claudio Echeverri,Claudio Echeverri,Bundesliga,0.89,2025-26,Leverkusen,MF,6.0,0.0,0.0,0.0,0.0,0.67,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Man City,4.9
 Nico Elvedi,Nico Elvedi,Bundesliga,0.89,2025-26,Gladbach,DF,33.0,0.0,2.0,0.0,0.0,0.27,0.0,0.06,5.0,0.0,0.0,0.0,0.0,0.0,1.78,0.0,0.053399999999999996,1.0,,1,DEF,Leeds,4.5
 Leon Goretzka,Leon Goretzka,Bundesliga,0.89,2025-26,Bayern Munich,MF,31.0,5.0,3.0,0.0,0.0,1.62,0.23,0.14,4.0,0.0,0.0,0.0,0.0,4.45,2.67,0.20470000000000002,0.12460000000000002,1.0,,1,MID,Aston Villa,6.0
-Konstantinos Koulierakis,Konstantinos Tzolakis,Super League 1,1.0,2025-26,Wolfsburg,DF,29.0,4.0,1.0,0.0,0.0,0.94,0.15,0.04,5.0,0.0,0.0,0.0,0.0,4.0,1.0,0.15,0.04,1.0,,1,GK,Hull City,4.5
+Konstantinos Koulierakis,Konstantinos Tzolakis,Super League 1,1.0,2025-26,Wolfsburg,DF,29.0,4.0,1.0,0.0,0.0,0.94,0.15,0.04,5.0,0.0,0.0,0.0,0.0,4.0,1.0,0.15,0.04,1.0,,1,GK,Hull City,4.6
 Jonah Kusi-Asare,Jonah Kusi-Asare,Bundesliga,0.89,2025-26,Bayern Munich,FW,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Fulham,4.5
-Johan Manzambi,Johan Manzambi,Bundesliga,0.89,2025-26,Freiburg,MF,27.0,5.0,4.0,0.0,0.0,2.21,0.22,0.17,4.0,2.0,0.0,0.0,0.0,4.45,3.56,0.1958,0.15130000000000002,1.0,,1,MID,Aston Villa,6.0
-Ibrahim Maza,Ibrahim Osman,Bundesliga,0.89,2025-26,Leverkusen,MF,28.0,3.0,4.0,0.0,0.0,2.63,0.15,0.19,2.0,0.0,0.0,0.0,0.0,2.67,3.56,0.1335,0.1691,1.0,,1,MID,Brighton,5.0
+Hugo Larsson,Hugo Larsson,Bundesliga,0.89,2025-26,Frankfurt,MF,25.0,2.0,2.0,0.0,0.0,0.65,0.1,0.1,0.0,0.0,0.0,0.0,0.0,1.78,1.78,0.08900000000000001,0.08900000000000001,1.0,,1,MID,Fulham,5.0
+Johan Manzambi,Johan Manzambi,Bundesliga,0.89,2025-26,Freiburg,MF,27.0,5.0,4.0,0.0,0.0,2.21,0.22,0.17,4.0,2.0,0.0,0.0,0.0,4.45,3.56,0.1958,0.15130000000000002,1.0,,1,MID,Aston Villa,5.9
+Jean Mattéo Bahoya,Jean-Mattéo Bahoya,Bundesliga,0.89,2025-26,Frankfurt,"MF,FW",27.0,3.0,4.0,0.0,0.0,1.96,0.2,0.27,2.0,0.0,0.0,0.0,0.0,2.67,3.56,0.17800000000000002,0.2403,0.5,,1,MID,Leeds,5.0
+Ibrahim Maza,Ibrahim Mbaye,Ligue 1,0.82,2025-26,Leverkusen,MF,28.0,3.0,4.0,0.0,0.0,2.63,0.15,0.19,2.0,0.0,0.0,0.0,0.0,2.46,3.28,0.12299999999999998,0.1558,1.0,,1,MID,Aston Villa,6.0
 Exequiel Palacios,Exequiel Palacios,Bundesliga,0.89,2025-26,Leverkusen,MF,18.0,0.0,1.0,0.0,0.0,0.82,0.0,0.08,3.0,0.0,0.0,0.0,0.0,0.0,0.89,0.0,0.0712,1.0,,1,MID,Ipswich Town,5.0
 Xaver Schlager,Xaver Schlager,Bundesliga,0.89,2025-26,RB Leipzig,MF,26.0,3.0,1.0,0.0,0.0,1.03,0.15,0.05,6.0,0.0,0.0,0.0,0.0,2.67,0.89,0.1335,0.044500000000000005,1.0,,1,MID,Nott'm Forest,5.0
-Bazoumana Touré,Bazoumana Touré,Bundesliga,0.89,2025-26,Hoffenheim,"MF,FW",30.0,5.0,9.0,0.0,0.0,1.87,0.19,0.35,2.0,0.0,0.0,0.0,0.0,4.45,8.01,0.1691,0.3115,1.0,,1,MID,Newcastle,6.0
+Bazoumana Touré,Bazoumana Touré,Bundesliga,0.89,2025-26,Hoffenheim,"MF,FW",30.0,5.0,9.0,0.0,0.0,1.87,0.19,0.35,2.0,0.0,0.0,0.0,0.0,4.45,8.01,0.1691,0.3115,1.0,,1,MID,Newcastle,5.9
 Luka Vušković,Luka Vušković,Bundesliga,0.89,2025-26,Hamburger SV,DF,28.0,6.0,0.0,0.0,0.0,1.18,0.22,0.0,6.0,0.0,0.0,0.0,0.0,5.34,0.0,0.1958,0.0,1.0,,1,DEF,Brighton,5.0
+Michael Zetterer,Michael Zetterer,Bundesliga,0.89,2025-26,Frankfurt,GK,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,6.0,62.0,65.3,0.0,0.0,0.0,0.0,1.0,,1,GK,Leeds,4.0
 Mohamed Ali Cho,Mohamed-Ali Cho,La Liga,0.92,2023-24,Real Sociedad,FW,11.0,0.0,0.0,0.0,0.0,1.08,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Hull City,5.0
-Ronald Araújo,Ronald Araujo,La Liga,0.92,2023-24,Barcelona,DF,25.0,1.0,2.0,0.0,0.0,1.04,0.05,0.09,6.0,0.0,0.0,0.0,0.0,0.92,1.84,0.046000000000000006,0.0828,1.0,,1,DEF,Liverpool,5.5
+Ronald Araújo,Ronald Araujo,La Liga,0.92,2023-24,Barcelona,DF,25.0,1.0,2.0,0.0,0.0,1.04,0.05,0.09,6.0,0.0,0.0,0.0,0.0,0.92,1.84,0.046000000000000006,0.0828,1.0,,1,DEF,Liverpool,5.4
 Pep Chavarría,Pep Chavarría,La Liga,0.92,2023-24,Rayo Vallecano,"DF,MF",22.0,1.0,1.0,0.0,0.0,0.85,0.08,0.08,6.0,1.0,0.0,0.0,0.0,0.92,0.92,0.0736,0.0736,0.5,,1,DEF,Chelsea,5.0
 Gonzalo García,Gonzalo García,La Liga,0.92,2023-24,Real Madrid,MF,2.0,0.0,0.0,0.0,0.0,4.74,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Fulham,6.0
 Ibrahima Koné,Ibrahim Osman,La Liga,0.92,2023-24,Almería,FW,9.0,0.0,0.0,0.0,0.0,1.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,MID,Brighton,5.0
-Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2023-24,Celta Vigo,"DF,MF",38.0,2.0,2.0,0.0,0.0,0.84,0.06,0.06,4.0,0.0,0.0,0.0,0.0,1.84,1.84,0.0552,0.0552,1.0,,1,DEF,Crystal Palace,4.5
+Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2023-24,Celta Vigo,"DF,MF",38.0,2.0,2.0,0.0,0.0,0.84,0.06,0.06,4.0,0.0,0.0,0.0,0.0,1.84,1.84,0.0552,0.0552,1.0,,1,DEF,Crystal Palace,4.4
 Álvaro Rodríguez,Álvaro Rodríguez,La Liga,0.92,2023-24,Real Madrid,FW,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Bournemouth,6.0
 Juanlu Sánchez,Juanlu Sánchez,La Liga,0.92,2023-24,Sevilla,"DF,MF",26.0,0.0,2.0,0.0,0.0,0.84,0.0,0.15,2.0,0.0,0.0,0.0,0.0,0.0,1.84,0.0,0.138,0.5,,1,DEF,Bournemouth,4.5
 Manu Sánchez,Juanlu Sánchez,La Liga,0.92,2023-24,Celta Vigo,"DF,MF",26.0,0.0,5.0,0.0,0.0,0.46,0.0,0.25,3.0,0.0,0.0,0.0,0.0,0.0,4.6000000000000005,0.0,0.23,1.0,,1,DEF,Bournemouth,4.5
-Ronald Araújo,Ronald Araujo,La Liga,0.92,2024-25,Barcelona,DF,12.0,1.0,1.0,0.0,0.0,0.48,0.12,0.12,3.0,0.0,0.0,0.0,0.0,0.92,0.92,0.1104,0.1104,1.0,,1,DEF,Liverpool,5.5
+Ronald Araújo,Ronald Araujo,La Liga,0.92,2024-25,Barcelona,DF,12.0,1.0,1.0,0.0,0.0,0.48,0.12,0.12,3.0,0.0,0.0,0.0,0.0,0.92,0.92,0.1104,0.1104,1.0,,1,DEF,Liverpool,5.4
 Adam Aznou,Adam Aznou,La Liga,0.92,2024-25,Valladolid,"DF,MF",13.0,0.0,0.0,0.0,0.0,0.41,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Everton,4.0
 Pep Chavarría,Pep Chavarría,La Liga,0.92,2024-25,Rayo Vallecano,DF,34.0,0.0,1.0,0.0,0.0,0.38,0.0,0.03,3.0,0.0,0.0,0.0,0.0,0.0,0.92,0.0,0.0276,1.0,,1,DEF,Chelsea,5.0
 Dario Essugo,Dário Luís Essugo,La Liga,0.92,2024-25,Las Palmas,MF,27.0,1.0,0.0,0.0,0.0,1.07,0.05,0.0,11.0,2.0,0.0,0.0,0.0,0.92,0.0,0.046000000000000006,0.0,1.0,,1,MID,Chelsea,4.5
 Gonzalo García,Gonzalo García,La Liga,0.92,2024-25,Real Madrid,MF,3.0,0.0,1.0,0.0,0.0,1.61,0.0,1.61,0.0,0.0,0.0,0.0,0.0,0.0,0.92,0.0,1.4812,0.1,,1,FWD,Fulham,6.0
 Nobel Mendy,Nobel Mendy,La Liga,0.92,2024-25,Real Betis,DF,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Hull City,4.0
-Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2024-25,Celta Vigo,"MF,DF",34.0,4.0,6.0,0.0,0.0,1.09,0.13,0.2,6.0,1.0,0.0,0.0,0.0,3.68,5.5200000000000005,0.11960000000000001,0.18400000000000002,1.0,,1,DEF,Crystal Palace,4.5
+Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2024-25,Celta Vigo,"MF,DF",34.0,4.0,6.0,0.0,0.0,1.09,0.13,0.2,6.0,1.0,0.0,0.0,0.0,3.68,5.5200000000000005,0.11960000000000001,0.18400000000000002,1.0,,1,DEF,Crystal Palace,4.4
 Víctor Muñoz,Victor Munoz,La Liga,0.92,2024-25,Real Madrid,FW,2.0,0.0,0.0,0.0,0.0,2.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Liverpool,6.5
 Álvaro Rodríguez,Álvaro Rodríguez,La Liga,0.92,2024-25,Getafe,FW,22.0,2.0,0.0,0.0,0.0,2.64,0.21,0.0,6.0,0.0,0.0,0.0,0.0,1.84,0.0,0.1932,0.0,0.5,,1,FWD,Bournemouth,6.0
 Arturo Rodríguez,Álvaro Rodríguez,La Liga,0.92,2024-25,Las Palmas,FW,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Bournemouth,6.0
@@ -79,13 +89,15 @@ Ricardo Rodríguez,Álvaro Rodríguez,La Liga,0.92,2024-25,Real Betis,DF,18.0,0.
 Juanlu Sánchez,Juanlu Sánchez,La Liga,0.92,2024-25,Sevilla,"MF,DF",32.0,4.0,4.0,0.0,0.0,0.68,0.21,0.21,6.0,1.0,0.0,0.0,0.0,3.68,3.68,0.1932,0.1932,0.5,,1,DEF,Bournemouth,4.5
 Manu Sánchez,Juanlu Sánchez,La Liga,0.92,2024-25,Alavés,DF,33.0,1.0,0.0,0.0,0.0,0.41,0.03,0.0,6.0,1.0,0.0,0.0,0.0,0.92,0.0,0.0276,0.0,1.0,,1,DEF,Bournemouth,4.5
 Christantus Uche,Christantus Uche,La Liga,0.92,2024-25,Getafe,"FW,MF",33.0,4.0,6.0,0.0,0.0,1.81,0.14,0.22,8.0,2.0,0.0,0.0,0.0,3.68,5.5200000000000005,0.12880000000000003,0.2024,1.0,,1,FWD,Crystal Palace,5.0
-Ronald Araújo,Ronald Araujo,La Liga,0.92,2025-26,Barcelona,DF,24.0,3.0,0.0,0.0,0.0,1.01,0.25,0.0,2.0,0.0,0.0,0.0,0.0,2.7600000000000002,0.0,0.23,0.0,0.5,,1,DEF,Liverpool,5.5
+David Affengruber,David Affengruber,La Liga,0.92,2025-26,Elche,DF,36.0,1.0,1.0,0.0,0.0,0.43,0.03,0.03,7.0,1.0,0.0,0.0,0.0,0.92,0.92,0.0276,0.0276,1.0,,1,DEF,Fulham,4.5
+Juan Arango,Juan Angulo,La Liga,0.92,2025-26,Girona,MF,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,FWD,Sunderland,4.5
+Ronald Araújo,Ronald Araujo,La Liga,0.92,2025-26,Barcelona,DF,24.0,3.0,0.0,0.0,0.0,1.01,0.25,0.0,2.0,0.0,0.0,0.0,0.0,2.7600000000000002,0.0,0.23,0.0,0.5,,1,DEF,Liverpool,5.4
 Pep Chavarría,Pep Chavarría,La Liga,0.92,2025-26,Rayo Vallecano,DF,33.0,1.0,2.0,0.0,0.0,0.6,0.03,0.07,6.0,1.0,0.0,0.0,0.0,0.92,1.84,0.0276,0.06440000000000001,1.0,,1,DEF,Chelsea,5.0
-Claudio Echeverri,Claudio Echeverri,La Liga,0.92,2025-26,Girona,"FW,MF",17.0,1.0,1.0,0.0,0.0,3.03,0.14,0.14,4.0,0.0,0.0,0.0,0.0,0.92,0.92,0.12880000000000003,0.12880000000000003,0.5,,1,MID,Man City,5.0
+Claudio Echeverri,Claudio Echeverri,La Liga,0.92,2025-26,Girona,"FW,MF",17.0,1.0,1.0,0.0,0.0,3.03,0.14,0.14,4.0,0.0,0.0,0.0,0.0,0.92,0.92,0.12880000000000003,0.12880000000000003,0.5,,1,MID,Man City,4.9
 Gonzalo García,Gonzalo García,La Liga,0.92,2025-26,Real Madrid,FW,30.0,6.0,1.0,0.0,0.0,1.96,0.56,0.09,2.0,0.0,0.0,0.0,0.0,5.5200000000000005,0.92,0.5152000000000001,0.0828,0.5,,1,FWD,Fulham,6.0
 Abu Kamara,Abu Kamara,La Liga,0.92,2025-26,Getafe,MF,12.0,0.0,0.0,0.0,0.0,1.41,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Hull City,5.0
 Nobel Mendy,Nobel Mendy,La Liga,0.92,2025-26,Rayo Vallecano,DF,24.0,2.0,0.0,0.0,0.0,0.55,0.1,0.0,9.0,2.0,0.0,0.0,0.0,1.84,0.0,0.09200000000000001,0.0,1.0,,1,DEF,Hull City,4.0
-Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2025-26,Celta Vigo,MF,34.0,1.0,4.0,0.0,0.0,0.64,0.05,0.18,4.0,0.0,0.0,0.0,0.0,0.92,3.68,0.046000000000000006,0.1656,1.0,,1,DEF,Crystal Palace,4.5
+Óscar Mingueza,Oscar Mingueza,La Liga,0.92,2025-26,Celta Vigo,MF,34.0,1.0,4.0,0.0,0.0,0.64,0.05,0.18,4.0,0.0,0.0,0.0,0.0,0.92,3.68,0.046000000000000006,0.1656,1.0,,1,DEF,Crystal Palace,4.4
 Víctor Muñoz,Victor Munoz,La Liga,0.92,2025-26,Osasuna,"MF,FW",34.0,6.0,2.0,0.0,0.0,2.74,0.2,0.07,3.0,0.0,0.0,0.0,0.0,5.5200000000000005,1.84,0.18400000000000002,0.06440000000000001,1.0,,1,MID,Liverpool,6.5
 César Palacios,César Palacios,La Liga,0.92,2025-26,Real Madrid,MF,5.0,0.0,0.0,0.0,0.0,2.09,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Fulham,5.5
 Álvaro Rodríguez,Álvaro Rodríguez,La Liga,0.92,2025-26,Elche,FW,34.0,7.0,5.0,0.0,0.0,3.07,0.29,0.2,2.0,0.0,0.0,0.0,0.0,6.44,4.6000000000000005,0.2668,0.18400000000000002,1.0,,1,FWD,Bournemouth,6.0
@@ -99,42 +111,34 @@ Samuel Iling-Junior,Samuel Iling-Junior,Serie A,0.88,2023-24,Juventus,MF,24.0,1.
 Ricardo Rodríguez,Álvaro Rodríguez,La Liga,0.92,2023-24,Torino,"DF,MF",35.0,1.0,2.0,0.0,0.0,0.36,0.03,0.06,4.0,0.0,0.0,0.0,0.0,0.92,1.84,0.0276,0.0552,1.0,,1,FWD,Bournemouth,6.0
 Matteo Ruggeri,Matteo Ruggeri,La Liga,0.92,2023-24,Atalanta,MF,34.0,0.0,4.0,0.0,0.0,0.44,0.0,0.15,3.0,0.0,0.0,0.0,0.0,0.0,3.68,0.0,0.138,1.0,,1,DEF,Aston Villa,4.5
 Ibrahim Sulemana,Ibrahim Osman,Serie A,0.88,2023-24,Cagliari,MF,21.0,2.0,0.0,0.0,0.0,0.87,0.13,0.0,4.0,0.0,0.0,0.0,0.0,1.76,0.0,0.1144,0.0,1.0,,1,MID,Brighton,5.0
+Honest Ahanor,Honest Ahanor,Serie A,0.88,2024-25,Genoa,"MF,DF",6.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,DEF,Crystal Palace,4.5
 Michele Di Gregorio,Michele Di Gregorio,Serie A,0.88,2024-25,Juventus,GK,33.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,14.0,71.0,72.7,0.0,0.0,0.0,0.0,1.0,,1,GK,Bournemouth,4.5
 Lucas Gourna-Douath,Lucas Gourna-Douath,Bundesliga,0.89,2024-25,Roma,MF,6.0,0.0,0.0,0.0,0.0,1.18,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,MID,Hull City,5.0
 Samuel Iling-Junior,Samuel Iling-Junior,Serie A,0.88,2024-25,Bologna,MF,7.0,1.0,0.0,0.0,0.0,3.05,0.76,0.0,0.0,0.0,0.0,0.0,0.0,0.88,0.0,0.6688000000000001,0.0,0.1,,1,MID,Aston Villa,5.0
 Giovanni Leoni,Giovanni Leoni,Serie A,0.88,2024-25,Parma,DF,17.0,1.0,0.0,0.0,0.0,0.15,0.08,0.0,3.0,1.0,0.0,0.0,0.0,0.88,0.0,0.0704,0.0,1.0,,1,DEF,Liverpool,4.0
-Marco Palestra,Marco Palestra,Serie A,0.88,2024-25,Atalanta,MF,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Chelsea,5.5
+Brooke Norton-Cuffy,Brooke Norton-Cuffy,Serie A,0.88,2024-25,Genoa,"MF,DF",14.0,0.0,0.0,0.0,0.0,0.63,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,DEF,Hull City,4.0
+Marco Palestra,Marco Palestra,Serie A,0.88,2024-25,Atalanta,MF,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Chelsea,5.4
 Matteo Ruggeri,Matteo Ruggeri,La Liga,0.92,2024-25,Atalanta,"MF,DF",30.0,0.0,3.0,0.0,0.0,0.15,0.0,0.15,2.0,0.0,0.0,0.0,0.0,0.0,2.7600000000000002,0.0,0.138,1.0,,1,DEF,Aston Villa,4.5
 Ibrahim Sulemana,Ibrahim Osman,Serie A,0.88,2024-25,Atalanta,MF,9.0,2.0,0.0,0.0,0.0,1.59,0.64,0.0,1.0,0.0,0.0,0.0,0.0,1.76,0.0,0.5632,0.0,0.5,,1,MID,Brighton,5.0
 Zion Suzuki,Zion Suzuki,Serie A,0.88,2024-25,Parma,GK,37.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,7.0,95.0,66.4,0.0,0.0,0.0,0.0,1.0,,1,GK,Aston Villa,5.0
 Michael Svoboda,Michael Svoboda,Serie A,0.88,2024-25,Venezia,DF,16.0,1.0,0.0,0.0,0.0,0.27,0.07,0.0,1.0,0.0,0.0,0.0,0.0,0.88,0.0,0.06160000000000001,0.0,1.0,,1,DEF,Brighton,5.0
+Honest Ahanor,Honest Ahanor,Serie A,0.88,2025-26,Atalanta,DF,22.0,0.0,0.0,0.0,0.0,0.85,0.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Crystal Palace,4.5
 Michele Di Gregorio,Michele Di Gregorio,Serie A,0.88,2025-26,Juventus,GK,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,14.0,60.0,70.9,0.0,0.0,0.0,0.0,1.0,,1,GK,Bournemouth,4.5
+Sadik Fofana,Malick Fofana,Ligue 1,0.82,2025-26,Lecce,MF,5.0,0.0,0.0,0.0,0.0,2.14,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Sunderland,5.5
 Samuel Iling-Junior,Samuel Iling-Junior,Serie A,0.88,2025-26,Pisa,MF,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Aston Villa,5.0
 Tarik Muharemovic,Tarik Muharemović,Serie A,0.88,2025-26,Sassuolo,DF,32.0,2.0,2.0,0.0,0.0,0.63,0.06,0.06,7.0,0.0,0.0,0.0,0.0,1.76,1.76,0.0528,0.0528,1.0,,1,DEF,Leeds,5.0
-Marco Palestra,Marco Palestra,Serie A,0.88,2025-26,Cagliari,"MF,DF",37.0,1.0,4.0,0.0,0.0,0.85,0.03,0.12,3.0,0.0,0.0,0.0,0.0,0.88,3.52,0.0264,0.1056,1.0,,1,DEF,Chelsea,5.5
+Brooke Norton-Cuffy,Brooke Norton-Cuffy,Serie A,0.88,2025-26,Genoa,"MF,DF",27.0,2.0,1.0,0.0,0.0,0.61,0.08,0.04,5.0,1.0,0.0,0.0,0.0,1.76,0.88,0.0704,0.0352,1.0,,1,DEF,Hull City,4.0
+Marco Palestra,Marco Palestra,Serie A,0.88,2025-26,Cagliari,"MF,DF",37.0,1.0,4.0,0.0,0.0,0.85,0.03,0.12,3.0,0.0,0.0,0.0,0.0,0.88,3.52,0.0264,0.1056,1.0,,1,DEF,Chelsea,5.4
 Ibrahim Sulemana,Ibrahim Osman,Serie A,0.88,2025-26,Cagliari,MF,16.0,1.0,0.0,0.0,0.0,1.15,0.1,0.0,2.0,0.0,0.0,0.0,0.0,0.88,0.0,0.08800000000000001,0.0,0.5,,1,MID,Brighton,5.0
 Ibrahim Sulemana,Ibrahim Osman,Serie A,0.88,2025-26,Bologna,MF,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Brighton,5.0
 Zion Suzuki,Zion Suzuki,Serie A,0.88,2025-26,Parma,GK,20.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,5.0,65.0,69.9,0.0,0.0,0.0,0.0,1.0,,1,GK,Aston Villa,5.0
-Norman Bassette,Norman Bassette,Belgian Pro League,0.74,2023-24,Mechelen,FW,22.0,5.0,0.0,0.0,0.0,2.62,0.48,0.0,1.0,0.0,0.0,0.0,0.0,3.7,0.0,0.35519999999999996,0.0,0.5,,1,FWD,Coventry City,4.5
-Konstantinos Laifis,Konstantinos Tzolakis,Super League 1,1.0,2023-24,Standard Liège,DF,26.0,2.0,0.0,0.0,0.0,0.59,0.08,0.0,3.0,0.0,0.0,0.0,0.0,2.0,0.0,0.08,0.0,1.0,,1,GK,Hull City,4.5
-Eliot Matazo,Eliot Matazo,Belgian Pro League,0.74,2023-24,Antwerp,MF,10.0,1.0,0.0,0.0,0.0,0.26,0.26,0.0,1.0,0.0,0.0,0.0,0.0,0.74,0.0,0.19240000000000002,0.0,0.5,,1,MID,Hull City,4.5
-Mamadou Sarr,Mamadou Sarr,Ligue 1,0.82,2023-24,RWDM,"MF,DF",10.0,0.0,0.0,0.0,0.0,0.95,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Chelsea,4.5
-Zion Suzuki,Zion Suzuki,Serie A,0.88,2023-24,Sint-Truiden,GK,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,110.0,71.2,0.0,0.0,0.0,0.0,1.0,,1,GK,Aston Villa,5.0
-Promise David,Promise David,Belgian Pro League,0.74,2024-25,Union SG,FW,34.0,19.0,4.0,0.0,0.0,2.78,0.88,0.19,9.0,0.0,0.0,0.0,0.0,14.06,2.96,0.6512,0.1406,1.0,,1,FWD,Brighton,6.0
-Anan Khalaili,Anan Khalaili,Belgian Pro League,0.74,2024-25,Union SG,MF,34.0,2.0,4.0,0.0,0.0,1.52,0.08,0.16,6.0,0.0,0.0,0.0,0.0,1.48,2.96,0.0592,0.1184,1.0,,1,DEF,Crystal Palace,5.0
-Adrián Palacios,César Palacios,La Liga,0.92,2024-25,Genk,DF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Fulham,5.5
-Mike Penders,Mike Penders,Belgian Pro League,0.74,2024-25,Genk,GK,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,5.0,52.0,76.9,0.0,0.0,0.0,0.0,1.0,,1,GK,Chelsea,4.5
-Luka Vušković,Luka Vušković,Belgian Pro League,0.74,2024-25,Westerlo,DF,36.0,7.0,2.0,0.0,0.0,1.43,0.21,0.06,6.0,1.0,0.0,0.0,0.0,5.18,1.48,0.15539999999999998,0.044399999999999995,1.0,,1,DEF,Brighton,5.0
-Jules Ahoka,Jules Ahoka,2de Nationale VV B,1.0,2025-26,Antwerp,DF,2.0,0.0,0.0,0.0,0.0,0.91,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,MID,Sunderland,4.5
-Promise David,Promise David,Belgian Pro League,0.74,2025-26,Union SG,FW,24.0,9.0,1.0,0.0,0.0,4.23,0.54,0.06,1.0,0.0,0.0,0.0,0.0,6.66,0.74,0.3996,0.044399999999999995,1.0,,1,FWD,Brighton,6.0
-Luc De Fougerolles,Luc De Fougerolles,Belgian Pro League,0.74,2025-26,Dender,DF,27.0,0.0,1.0,0.0,0.0,0.27,0.0,0.05,6.0,2.0,0.0,0.0,0.0,0.0,0.74,0.0,0.037,1.0,,1,DEF,Fulham,4.0
-Enis Destan,Enis Destan,Belgian Pro League,0.74,2025-26,Westerlo,FW,3.0,0.0,0.0,0.0,0.0,2.78,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,FWD,Hull City,4.5
-Kaye Furo,Kaye Furo,Belgian Pro League,0.74,2025-26,Club Brugge,FW,5.0,1.0,0.0,0.0,0.0,4.04,1.01,0.0,0.0,0.0,0.0,0.0,0.0,0.74,0.0,0.7474,0.0,0.1,,1,FWD,Brentford,4.5
-Anan Khalaili,Anan Khalaili,Belgian Pro League,0.74,2025-26,Union SG,MF,38.0,3.0,5.0,0.0,0.0,1.11,0.09,0.15,7.0,0.0,0.0,0.0,0.0,2.2199999999999998,3.7,0.06659999999999999,0.111,1.0,,1,DEF,Crystal Palace,5.0
-Adrián Palacios,César Palacios,La Liga,0.92,2025-26,Genk,DF,10.0,0.0,1.0,0.0,0.0,0.81,0.0,0.41,0.0,0.0,0.0,0.0,0.0,0.0,0.92,0.0,0.3772,0.1,,1,MID,Fulham,5.5
-Kjell Scherpen,Kjell Scherpen,Belgian Pro League,0.74,2025-26,Union SG,GK,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,17.0,58.0,74.7,0.0,0.0,0.0,0.0,1.0,,1,GK,Ipswich Town,4.5
+Robinio Vaz,Robinio Vaz,Serie A,0.88,2025-26,Roma,FW,12.0,1.0,0.0,0.0,0.0,2.08,0.42,0.0,0.0,0.0,0.0,0.0,0.0,0.88,0.0,0.3696,0.0,0.1,,1,FWD,Hull City,5.0
 Mohamed Ali Cho,Mohamed-Ali Cho,Ligue 1,0.82,2023-24,Nice,FW,17.0,1.0,2.0,0.0,0.0,1.88,0.1,0.21,2.0,0.0,0.0,0.0,0.0,0.82,1.64,0.082,0.1722,0.5,,1,MID,Hull City,5.0
+Bradley Barcola,Bradley Barcola,Ligue 1,0.82,2023-24,Lyon,MF,3.0,0.0,0.0,0.0,0.0,0.67,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,MID,Liverpool,8.0
+Bradley Barcola,Bradley Barcola,Ligue 1,0.82,2023-24,Paris Saint-Germain,"FW,MF",25.0,4.0,7.0,0.0,0.0,2.04,0.26,0.46,3.0,1.0,0.0,0.0,0.0,3.28,5.739999999999999,0.2132,0.3772,1.0,,1,MID,Liverpool,8.0
+Melvin Bard,Melvin Bard,Ligue 1,0.82,2023-24,Nice,DF,32.0,1.0,2.0,0.0,0.0,0.51,0.03,0.07,7.0,1.0,0.0,0.0,0.0,0.82,1.64,0.024599999999999997,0.0574,1.0,,1,DEF,Leeds,4.5
 Ayyoub Bouaddi,Ayyoub Bouaddi,Ligue 1,0.82,2023-24,Lille,MF,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Man City,5.5
+Malick Fofana,Malick Fofana,Ligue 1,0.82,2023-24,Lyon,"FW,MF",17.0,3.0,0.0,0.0,0.0,1.45,0.48,0.0,0.0,0.0,0.0,0.0,0.0,2.46,0.0,0.39359999999999995,0.0,0.5,,1,MID,Sunderland,5.5
 Jaouen Hadjam,Jaouen Hadjam,Other,1.0,2023-24,Nantes,DF,8.0,0.0,0.0,0.0,0.0,0.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Brighton,4.5
 Jérémy Jacquet,Jeremy Jacquet,Ligue 1,0.82,2023-24,Rennes,DF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Liverpool,5.0
 Jérémy Jacquet,Jeremy Jacquet,Ligue 1,0.82,2023-24,Clermont Foot,DF,6.0,0.0,1.0,0.0,0.0,0.36,0.0,0.36,0.0,0.0,0.0,0.0,0.0,0.0,0.82,0.0,0.29519999999999996,0.5,,1,DEF,Liverpool,5.0
@@ -146,28 +150,40 @@ Azor Matusiwa,Azor Matusiwa,Ligue 1,0.82,2023-24,Rennes,MF,12.0,0.0,1.0,0.0,0.0,
 Mamadou Sarr,Mamadou Sarr,Ligue 1,0.82,2023-24,Lyon,DF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Chelsea,4.5
 Chuba Akpom,Chuba Akpom,Ligue 1,0.82,2024-25,Lille,FW,14.0,3.0,1.0,0.0,0.0,2.82,0.42,0.14,0.0,0.0,0.0,0.0,0.0,2.46,0.82,0.3444,0.1148,0.5,,1,FWD,Ipswich Town,5.0
 Mohamed Ali Cho,Mohamed-Ali Cho,Ligue 1,0.82,2024-25,Nice,"FW,MF",27.0,3.0,4.0,0.0,0.0,2.05,0.17,0.22,2.0,0.0,0.0,0.0,0.0,2.46,3.28,0.1394,0.18039999999999998,1.0,,1,MID,Hull City,5.0
+Bradley Barcola,Bradley Barcola,Ligue 1,0.82,2024-25,Paris Saint-Germain,FW,34.0,14.0,10.0,0.0,0.0,3.05,0.58,0.41,2.0,0.0,0.0,0.0,0.0,11.479999999999999,8.2,0.4755999999999999,0.33619999999999994,1.0,,1,MID,Liverpool,8.0
+Melvin Bard,Melvin Bard,Ligue 1,0.82,2024-25,Nice,"DF,MF",24.0,2.0,1.0,0.0,0.0,1.07,0.09,0.05,4.0,2.0,0.0,0.0,0.0,1.64,0.82,0.07379999999999999,0.041,1.0,,1,DEF,Leeds,4.5
 Ayyoub Bouaddi,Ayyoub Bouaddi,Ligue 1,0.82,2024-25,Lille,MF,24.0,0.0,1.0,0.0,0.0,0.23,0.0,0.08,2.0,0.0,0.0,0.0,0.0,0.0,0.82,0.0,0.06559999999999999,0.5,,1,MID,Man City,5.5
 Sidiki Cherif,Sidiki Cherif,Other,1.0,2024-25,Angers,FW,7.0,0.0,0.0,0.0,0.0,1.39,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,FWD,Coventry City,5.0
 Amar Dedić,Amar Dedic,Primeira Liga,0.78,2024-25,Marseille,MF,10.0,0.0,1.0,0.0,0.0,1.72,0.0,0.29,1.0,0.0,0.0,0.0,0.0,0.0,0.78,0.0,0.22619999999999998,0.5,,1,DEF,Newcastle,4.5
+Matias Fernandez-Pardo,Matias Fernandez-Pardo,Ligue 1,0.82,2024-25,Lille,"MF,FW",22.0,4.0,2.0,0.0,0.0,1.94,0.34,0.17,4.0,0.0,0.0,0.0,0.0,3.28,1.64,0.2788,0.1394,0.5,,1,FWD,Newcastle,6.0
+Malick Fofana,Malick Fofana,Ligue 1,0.82,2024-25,Lyon,"FW,MF",29.0,5.0,4.0,0.0,0.0,1.76,0.28,0.23,2.0,0.0,0.0,0.0,0.0,4.1,3.28,0.2296,0.1886,1.0,,1,MID,Sunderland,5.5
 Jérémy Jacquet,Jeremy Jacquet,Ligue 1,0.82,2024-25,Rennes,DF,11.0,0.0,1.0,0.0,0.0,0.78,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.82,0.0,0.082,1.0,,1,DEF,Liverpool,5.0
 Cédric Kipré,Cédric Kipré,Ligue 1,0.82,2024-25,Reims,DF,28.0,0.0,1.0,0.0,0.0,0.37,0.0,0.04,4.0,2.0,0.0,0.0,0.0,0.0,0.82,0.0,0.032799999999999996,1.0,,1,DEF,Ipswich Town,4.0
 Benjamin Lecomte,Benjamin Lecomte,Ligue 1,0.82,2024-25,Montpellier,GK,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,108.0,63.3,0.0,0.0,0.0,0.0,1.0,,1,GK,Fulham,4.0
 Eliot Matazo,Eliot Matazo,Ligue 1,0.82,2024-25,Monaco,MF,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Hull City,4.5
 Azor Matusiwa,Azor Matusiwa,Ligue 1,0.82,2024-25,Rennes,MF,29.0,1.0,3.0,0.0,0.0,0.48,0.04,0.13,3.0,0.0,0.0,0.0,0.0,0.82,2.46,0.032799999999999996,0.1066,1.0,,1,MID,Ipswich Town,5.0
+Ibrahim Mbaye,Ibrahim Mbaye,Ligue 1,0.82,2024-25,Paris Saint-Germain,FW,9.0,1.0,1.0,0.0,0.0,3.18,0.26,0.26,0.0,0.0,0.0,0.0,0.0,0.82,0.82,0.2132,0.2132,0.5,,1,MID,Aston Villa,6.0
 Thomas Meunier,Thomas Meunier,Ligue 1,0.82,2024-25,Lille,DF,30.0,2.0,0.0,0.0,0.0,1.31,0.09,0.0,5.0,0.0,0.0,0.0,0.0,1.64,0.0,0.07379999999999999,0.0,1.0,,1,DEF,Sunderland,4.5
-Victor Orakpo,Victor Torp,Ligue 1,0.82,2024-25,Nice,FW,4.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Coventry City,5.5
+Victor Orakpo,Victor Torp,Ligue 1,0.82,2024-25,Nice,FW,4.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Coventry City,5.4
 Abdoul Ouattara,Abdoul Ouattara,Ligue 1,0.82,2024-25,Strasbourg,"MF,FW",17.0,1.0,1.0,0.0,0.0,0.96,0.19,0.19,1.0,0.0,0.0,0.0,0.0,0.82,0.82,0.1558,0.1558,0.5,,1,DEF,Ipswich Town,4.0
 Gerónimo Rulli,Gerónimo Rulli,Ligue 1,0.82,2024-25,Marseille,GK,34.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,5.0,89.0,66.2,0.0,0.0,0.0,0.0,1.0,,1,GK,Man City,5.0
 Mamadou Sarr,Mamadou Sarr,Ligue 1,0.82,2024-25,Strasbourg,DF,27.0,0.0,1.0,0.0,0.0,0.19,0.0,0.04,4.0,0.0,0.0,0.0,0.0,0.0,0.82,0.0,0.032799999999999996,1.0,,1,DEF,Chelsea,4.5
+Sorba Thomas,Sorba Thomas,Ligue 1,0.82,2024-25,Nantes,"MF,DF",25.0,1.0,3.0,0.0,0.0,0.61,0.07,0.2,3.0,0.0,0.0,0.0,0.0,0.82,2.46,0.0574,0.164,0.5,,1,MID,Hull City,5.5
+Robinio Vaz,Robinio Vaz,Serie A,0.88,2024-25,Marseille,FW,2.0,0.0,0.0,0.0,0.0,2.4,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,FWD,Hull City,5.0
 Mohamed Ali Cho,Mohamed-Ali Cho,Ligue 1,0.82,2025-26,Nice,"FW,MF",24.0,4.0,3.0,0.0,0.0,1.73,0.22,0.16,1.0,0.0,0.0,0.0,0.0,3.28,2.46,0.18039999999999998,0.13119999999999998,1.0,,1,MID,Hull City,5.0
 Aaron Anselmino,Aaron Anselmino,Ligue 1,0.82,2025-26,Strasbourg,DF,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,DEF,Chelsea,4.5
 Aladji Bamba,Aladji Bamba,Ligue 1,0.82,2025-26,Monaco,MF,18.0,0.0,2.0,0.0,0.0,0.22,0.0,0.22,2.0,0.0,0.0,0.0,0.0,0.0,1.64,0.0,0.18039999999999998,0.5,,1,MID,Newcastle,5.0
+Bradley Barcola,Bradley Barcola,Ligue 1,0.82,2025-26,PSG,FW,29.0,11.0,1.0,0.0,0.0,3.41,0.57,0.05,2.0,0.0,0.0,0.0,0.0,9.02,0.82,0.4673999999999999,0.041,1.0,,1,MID,Liverpool,8.0
+Melvin Bard,Melvin Bard,Ligue 1,0.82,2025-26,Nice,"DF,MF",29.0,2.0,1.0,0.0,0.0,0.56,0.08,0.04,4.0,0.0,0.0,0.0,0.0,1.64,0.82,0.06559999999999999,0.032799999999999996,1.0,,1,DEF,Leeds,4.5
 Ayyoub Bouaddi,Ayyoub Bouaddi,Ligue 1,0.82,2025-26,Lille,MF,30.0,0.0,1.0,0.0,0.0,0.62,0.0,0.04,7.0,1.0,0.0,0.0,0.0,0.0,0.82,0.0,0.032799999999999996,1.0,,1,MID,Man City,5.5
 Sidiki Cherif,Sidiki Cherif,Other,1.0,2025-26,Angers,"FW,MF",19.0,4.0,0.0,0.0,0.0,2.18,0.31,0.0,3.0,0.0,0.0,0.0,0.0,4.0,0.0,0.31,0.0,1.0,,1,FWD,Coventry City,5.0
+Matias Fernandez-Pardo,Matias Fernandez-Pardo,Ligue 1,0.82,2025-26,Lille,"FW,MF",29.0,8.0,5.0,0.0,0.0,2.58,0.3,0.19,5.0,0.0,0.0,0.0,0.0,6.56,4.1,0.24599999999999997,0.1558,1.0,,1,FWD,Newcastle,6.0
+Malick Fofana,Malick Fofana,Ligue 1,0.82,2025-26,Lyon,"MF,FW",12.0,2.0,1.0,0.0,0.0,2.28,0.24,0.12,1.0,0.0,0.0,0.0,0.0,1.64,0.82,0.19679999999999997,0.09839999999999999,1.0,,1,MID,Sunderland,5.5
 Lucas Gourna-Douath,Lucas Gourna-Douath,Bundesliga,0.89,2025-26,Le Havre,MF,15.0,0.0,0.0,0.0,0.0,0.64,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,MID,Hull City,5.0
 Jérémy Jacquet,Jeremy Jacquet,Ligue 1,0.82,2025-26,Rennes,DF,19.0,0.0,0.0,0.0,0.0,0.59,0.0,0.0,6.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Liverpool,5.0
 Ibrahim Kanté,Ibrahim Osman,Ligue 1,0.82,2025-26,Brest,MF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Brighton,5.0
 Brian Madjo,Brian Madjo,Ligue 1,0.82,2025-26,Metz,FW,5.0,0.0,0.0,0.0,0.0,1.72,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,FWD,Aston Villa,5.5
+Ibrahim Mbaye,Ibrahim Mbaye,Ligue 1,0.82,2025-26,PSG,"FW,MF",24.0,3.0,2.0,0.0,0.0,2.15,0.27,0.18,0.0,0.0,0.0,0.0,0.0,2.46,1.64,0.2214,0.14759999999999998,0.5,,1,MID,Aston Villa,6.0
 Dayann Methalie,Dayann Méthalie,Ligue 1,0.82,2025-26,Toulouse,MF,27.0,2.0,1.0,0.0,0.0,0.72,0.1,0.05,9.0,0.0,0.0,0.0,0.0,1.64,0.82,0.082,0.041,1.0,,1,DEF,Sunderland,4.5
 Thomas Meunier,Thomas Meunier,Ligue 1,0.82,2025-26,Lille,DF,25.0,2.0,2.0,0.0,0.0,0.9,0.09,0.09,3.0,0.0,0.0,0.0,0.0,1.64,1.64,0.07379999999999999,0.07379999999999999,1.0,,1,DEF,Sunderland,4.5
 Ibrahim Osman,Ibrahim Osman,Ligue 1,0.82,2025-26,Auxerre,"MF,FW",14.0,0.0,2.0,0.0,0.0,2.59,0.0,0.29,0.0,0.0,0.0,0.0,0.0,0.0,1.64,0.0,0.23779999999999996,0.5,,1,MID,Brighton,5.0
@@ -175,25 +191,54 @@ Abdoul Ouattara,Abdoul Ouattara,Ligue 1,0.82,2025-26,Strasbourg,"MF,DF",28.0,2.0
 Mike Penders,Mike Penders,Ligue 1,0.82,2025-26,Strasbourg,GK,33.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,8.0,107.0,69.5,0.0,0.0,0.0,0.0,1.0,,1,GK,Chelsea,4.5
 Gerónimo Rulli,Gerónimo Rulli,Ligue 1,0.82,2025-26,Marseille,GK,29.0,0.0,0.0,0.0,0.0,0.03,0.0,0.0,3.0,0.0,8.0,76.0,69.1,0.0,0.0,0.0,0.0,1.0,,1,GK,Man City,5.0
 Mamadou Sarr,Mamadou Sarr,Ligue 1,0.82,2025-26,Strasbourg,DF,15.0,0.0,0.0,0.0,0.0,0.07,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Chelsea,4.5
+Quinten Timber,Quinten Timber,Ligue 1,0.82,2025-26,Marseille,MF,15.0,0.0,0.0,0.0,0.0,0.81,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,MID,Crystal Palace,5.0
+Robinio Vaz,Robinio Vaz,Serie A,0.88,2025-26,Marseille,FW,14.0,4.0,2.0,0.0,0.0,1.9,0.95,0.47,2.0,0.0,0.0,0.0,0.0,3.52,1.76,0.836,0.41359999999999997,0.5,,1,FWD,Hull City,5.0
+Norman Bassette,Norman Bassette,Belgian Pro League,0.74,2023-24,Mechelen,FW,22.0,5.0,0.0,0.0,0.0,2.62,0.48,0.0,1.0,0.0,0.0,0.0,0.0,3.7,0.0,0.35519999999999996,0.0,0.5,,1,FWD,Coventry City,4.5
+Matias Fernandez-Pardo,Matias Fernandez-Pardo,Ligue 1,0.82,2023-24,Gent,FW,15.0,8.0,2.0,0.0,0.0,2.76,0.82,0.2,1.0,0.0,0.0,0.0,0.0,6.56,1.64,0.6723999999999999,0.164,1.0,,1,FWD,Newcastle,6.0
+Malick Fofana,Malick Fofana,Ligue 1,0.82,2023-24,Gent,MF,19.0,2.0,3.0,0.0,0.0,2.12,0.16,0.24,1.0,0.0,0.0,0.0,0.0,1.64,2.46,0.13119999999999998,0.19679999999999997,1.0,,1,MID,Sunderland,5.5
+Konstantinos Laifis,Konstantinos Tzolakis,Super League 1,1.0,2023-24,Standard Liège,DF,26.0,2.0,0.0,0.0,0.0,0.59,0.08,0.0,3.0,0.0,0.0,0.0,0.0,2.0,0.0,0.08,0.0,1.0,,1,GK,Hull City,4.6
+Eliot Matazo,Eliot Matazo,Belgian Pro League,0.74,2023-24,Antwerp,MF,10.0,1.0,0.0,0.0,0.0,0.26,0.26,0.0,1.0,0.0,0.0,0.0,0.0,0.74,0.0,0.19240000000000002,0.0,0.5,,1,MID,Hull City,4.5
+Mamadou Sarr,Mamadou Sarr,Ligue 1,0.82,2023-24,RWDM,"MF,DF",10.0,0.0,0.0,0.0,0.0,0.95,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,DEF,Chelsea,4.5
+Zion Suzuki,Zion Suzuki,Serie A,0.88,2023-24,Sint-Truiden,GK,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,110.0,71.2,0.0,0.0,0.0,0.0,1.0,,1,GK,Aston Villa,5.0
+Promise David,Promise David,Belgian Pro League,0.74,2024-25,Union SG,FW,34.0,19.0,4.0,0.0,0.0,2.78,0.88,0.19,9.0,0.0,0.0,0.0,0.0,14.06,2.96,0.6512,0.1406,1.0,,1,FWD,Brighton,6.0
+Matias Fernandez-Pardo,Matias Fernandez-Pardo,Ligue 1,0.82,2024-25,Gent,"MF,FW",3.0,1.0,0.0,0.0,0.0,3.29,0.55,0.0,1.0,0.0,0.0,0.0,0.0,0.82,0.0,0.451,0.0,1.0,,1,FWD,Newcastle,6.0
+Anan Khalaili,Anan Khalaili,Belgian Pro League,0.74,2024-25,Union SG,MF,34.0,2.0,4.0,0.0,0.0,1.52,0.08,0.16,6.0,0.0,0.0,0.0,0.0,1.48,2.96,0.0592,0.1184,1.0,,1,DEF,Crystal Palace,5.0
+Adrián Palacios,César Palacios,La Liga,0.92,2024-25,Genk,DF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Fulham,5.5
+Mike Penders,Mike Penders,Belgian Pro League,0.74,2024-25,Genk,GK,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,1.0,5.0,52.0,76.9,0.0,0.0,0.0,0.0,1.0,,1,GK,Chelsea,4.5
+Luka Vušković,Luka Vušković,Belgian Pro League,0.74,2024-25,Westerlo,DF,36.0,7.0,2.0,0.0,0.0,1.43,0.21,0.06,6.0,1.0,0.0,0.0,0.0,5.18,1.48,0.15539999999999998,0.044399999999999995,1.0,,1,DEF,Brighton,5.0
+Jules Ahoka,Jules Ahoka,Belgian Pro League,0.74,2025-26,Antwerp,DF,2.0,0.0,0.0,0.0,0.0,0.91,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,MID,Sunderland,4.5
+Promise David,Promise David,Belgian Pro League,0.74,2025-26,Union SG,FW,24.0,9.0,1.0,0.0,0.0,4.23,0.54,0.06,1.0,0.0,0.0,0.0,0.0,6.66,0.74,0.3996,0.044399999999999995,1.0,,1,FWD,Brighton,6.0
+Luc De Fougerolles,Luc De Fougerolles,Belgian Pro League,0.74,2025-26,Dender,DF,27.0,0.0,1.0,0.0,0.0,0.27,0.0,0.05,6.0,2.0,0.0,0.0,0.0,0.0,0.74,0.0,0.037,1.0,,1,DEF,Fulham,4.0
+Enis Destan,Enis Destan,Belgian Pro League,0.74,2025-26,Westerlo,FW,3.0,0.0,0.0,0.0,0.0,2.78,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,,1,FWD,Hull City,4.5
+Kaye Furo,Kaye Furo,Belgian Pro League,0.74,2025-26,Club Brugge,FW,5.0,1.0,0.0,0.0,0.0,4.04,1.01,0.0,0.0,0.0,0.0,0.0,0.0,0.74,0.0,0.7474,0.0,0.1,,1,FWD,Brentford,4.5
+Anan Khalaili,Anan Khalaili,Belgian Pro League,0.74,2025-26,Union SG,MF,38.0,3.0,5.0,0.0,0.0,1.11,0.09,0.15,7.0,0.0,0.0,0.0,0.0,2.2199999999999998,3.7,0.06659999999999999,0.111,1.0,,1,DEF,Crystal Palace,5.0
+Adrián Palacios,César Palacios,La Liga,0.92,2025-26,Genk,DF,10.0,0.0,1.0,0.0,0.0,0.81,0.0,0.41,0.0,0.0,0.0,0.0,0.0,0.0,0.92,0.0,0.3772,0.1,,1,MID,Fulham,5.5
+Kjell Scherpen,Kjell Scherpen,Belgian Pro League,0.74,2025-26,Union SG,GK,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,17.0,58.0,74.7,0.0,0.0,0.0,0.0,1.0,,1,GK,Ipswich Town,4.5
 Chuba Akpom,Chuba Akpom,Eredivisie,0.75,2023-24,Ajax,"FW,MF",25.0,11.0,3.0,0.0,0.0,3.52,0.94,0.26,0.0,0.0,0.0,0.0,0.0,8.25,2.25,0.705,0.195,0.5,,1,FWD,Ipswich Town,5.0
+Sadik Fofana,Malick Fofana,Ligue 1,0.82,2023-24,Fortuna Sittard,DF,11.0,0.0,0.0,0.0,0.0,0.14,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,MID,Sunderland,5.5
 Kayne van Oevelen,Kayne van Oevelen,Keuken Kampioen Divisie,1.0,2023-24,Volendam,GK,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,80.0,0.0,0.0,0.0,0.0,1.0,,1,GK,Ipswich Town,4.5
 Gerónimo Rulli,Gerónimo Rulli,Eredivisie,0.75,2023-24,Ajax,GK,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,18.0,62.1,0.0,0.0,0.0,0.0,1.0,,1,GK,Man City,5.0
 Ibrahim Sangaré,Ibrahim Osman,Eredivisie,0.75,2023-24,PSV,MF,2.0,0.0,1.0,0.0,0.0,1.0,0.0,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.75,0.0,0.375,1.0,,1,MID,Brighton,5.0
+Quinten Timber,Quinten Timber,Ligue 1,0.82,2023-24,Feyenoord,MF,31.0,7.0,9.0,0.0,0.0,2.13,0.24,0.3,4.0,0.0,0.0,0.0,0.0,5.739999999999999,7.38,0.19679999999999997,0.24599999999999997,1.0,,1,MID,Crystal Palace,5.0
 Chuba Akpom,Chuba Akpom,Eredivisie,0.75,2024-25,Ajax,FW,16.0,3.0,1.0,0.0,0.0,2.38,0.32,0.11,0.0,0.0,0.0,0.0,0.0,2.25,0.75,0.24,0.0825,0.5,,1,FWD,Ipswich Town,5.0
 Ibrahim Osman,Ibrahim Osman,Eredivisie,0.75,2024-25,Feyenoord,"MF,FW",22.0,3.0,3.0,0.0,0.0,2.16,0.34,0.34,2.0,0.0,0.0,0.0,0.0,2.25,2.25,0.255,0.255,0.5,,1,MID,Brighton,5.0
 Sean Steur,Sean Steur,Eredivisie,0.75,2024-25,Ajax,MF,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Newcastle,5.0
+Quinten Timber,Quinten Timber,Ligue 1,0.82,2024-25,Feyenoord,MF,18.0,6.0,0.0,0.0,0.0,2.39,0.39,0.0,5.0,0.0,0.0,0.0,0.0,4.92,0.0,0.3198,0.0,1.0,,1,MID,Crystal Palace,5.0
 Steven Benda,Steven Benda,Eredivisie,0.75,2025-26,Feyenoord,GK,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,,1,GK,Nott'm Forest,4.5
 Vitezslav Jaros,Vitezslav Jaros,Eredivisie,0.75,2025-26,Ajax,GK,19.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,5.0,62.0,72.9,0.0,0.0,0.0,0.0,1.0,,1,GK,Liverpool,4.0
 James McConnell,James McConnell,Eredivisie,0.75,2025-26,Ajax,MF,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,,1,MID,Liverpool,4.5
 Kayne van Oevelen,Kayne van Oevelen,Keuken Kampioen Divisie,1.0,2025-26,Volendam,GK,32.0,0.0,0.0,0.0,0.0,0.03,0.0,0.0,1.0,0.0,3.0,149.0,74.5,0.0,0.0,0.0,0.0,1.0,,1,GK,Ipswich Town,4.5
 Sean Steur,Sean Steur,Eredivisie,0.75,2025-26,Ajax,MF,19.0,1.0,1.0,0.0,0.0,1.2,0.08,0.08,2.0,0.0,0.0,0.0,0.0,0.75,0.75,0.06,0.06,1.0,,1,MID,Newcastle,5.0
+Quinten Timber,Quinten Timber,Ligue 1,0.82,2025-26,Feyenoord,MF,17.0,2.0,4.0,0.0,0.0,1.57,0.14,0.27,1.0,0.0,0.0,0.0,0.0,1.64,3.28,0.1148,0.2214,1.0,,1,MID,Crystal Palace,5.0
 Jannik Schuster,Jannik Schuster,Bundesliga,0.89,N/A,Brentford,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,DEF,Brentford,4.5
 Zadok Yohanna,Zadok Yohanna,Allsvenskan,1.0,N/A,Brighton,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Brighton,5.0
 Emmanuel Emegha,Emmanuel Emegha,Ligue 1,0.82,N/A,Chelsea,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,FWD,Chelsea,5.0
 Caleb Yirenkyi,Caleb Yirenkyi,Superliga,1.0,N/A,Coventry City,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Coventry City,5.0
 Zavier Gozo,Zavier Gozo,Other,1.0,N/A,Crystal Palace,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Crystal Palace,5.0
+Darío Osorio,Darío Osorio,Superliga,1.0,N/A,Crystal Palace,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Crystal Palace,5.5
 Jens Hjertø-Dahl,Jens Hjertø-Dahl,Eliteserien,1.0,N/A,Hull City,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Hull City,5.0
 Elliot Stroud,Elliot Stroud,Allsvenskan,1.0,N/A,Hull City,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Hull City,5.0
+Christos Mouzakitis,Christos Mouzakitis,Super League 1,1.0,N/A,Hull City,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Hull City,5.0
 Daizen Maeda,Daizen Maeda,Premiership,1.0,N/A,Ipswich Town,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Ipswich Town,5.5
 Divine Mukasa,Divine Mukasa,unknown,1.0,N/A,Man City,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,MID,Man City,4.5
 Ewen Jaouen,Ewen Jaouen,Ligue 2,1.0,N/A,Newcastle,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,low,1,GK,Newcastle,4.5

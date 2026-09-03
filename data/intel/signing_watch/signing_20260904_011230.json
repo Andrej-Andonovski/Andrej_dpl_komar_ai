@@ -1,0 +1,271 @@
+{
+  "detected_at": "2026-09-03T23:12:30.988445+00:00",
+  "players": [
+    {
+      "fpl_id": 631,
+      "name": "Ibrahim Mbaye",
+      "team": "Aston Villa",
+      "position": "MID",
+      "price": 6.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.41,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 639,
+      "name": "Jos\u00e9 Mar\u00eda Andr\u00e9s Baixauli",
+      "team": "Brighton",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 652,
+      "name": "Femi Azeez",
+      "team": "Brighton",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": null
+    },
+    {
+      "fpl_id": 633,
+      "name": "Honest Ahanor",
+      "team": "Crystal Palace",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.67,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 644,
+      "name": "Quinten Timber",
+      "team": "Crystal Palace",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.74,
+        "seasons_used": 4,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 647,
+      "name": "Dar\u00edo Osorio",
+      "team": "Crystal Palace",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.0,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 635,
+      "name": "Hugo Larsson",
+      "team": "Fulham",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.74,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 636,
+      "name": "Manuel \u00c1ngel Mor\u00e1n Ib\u00e1\u00f1ez",
+      "team": "Fulham",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 650,
+      "name": "David Affengruber",
+      "team": "Fulham",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.69,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 632,
+      "name": "Ilyas Ansah",
+      "team": "Hull City",
+      "position": "FWD",
+      "price": 5.0,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.66,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 637,
+      "name": "Robinio Vaz",
+      "team": "Hull City",
+      "position": "FWD",
+      "price": 5.0,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.57,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 638,
+      "name": "Brooke Norton-Cuffy",
+      "team": "Hull City",
+      "position": "DEF",
+      "price": 4.0,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.03,
+        "seasons_used": 2,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 642,
+      "name": "Sorba Thomas",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.17,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 645,
+      "name": "Christos Mouzakitis",
+      "team": "Hull City",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.48,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 629,
+      "name": "Michael Zetterer",
+      "team": "Leeds",
+      "position": "GK",
+      "price": 4.0,
+      "prediction": {
+        "position": "GK",
+        "predicted_points": 3.35,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 641,
+      "name": "Melvin Bard",
+      "team": "Leeds",
+      "position": "DEF",
+      "price": 4.5,
+      "prediction": {
+        "position": "DEF",
+        "predicted_points": 2.31,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 648,
+      "name": "Jean-Matt\u00e9o Bahoya",
+      "team": "Leeds",
+      "position": "MID",
+      "price": 5.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 2.74,
+        "seasons_used": 3,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 627,
+      "name": "Bradley Barcola",
+      "team": "Liverpool",
+      "position": "MID",
+      "price": 8.0,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 4.48,
+        "seasons_used": 4,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 628,
+      "name": "Allan Andrade Elias",
+      "team": "Man City",
+      "position": "MID",
+      "price": 6.0,
+      "prediction": null
+    },
+    {
+      "fpl_id": 634,
+      "name": "Matias Fernandez-Pardo",
+      "team": "Newcastle",
+      "position": "FWD",
+      "price": 6.0,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.77,
+        "seasons_used": 4,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 646,
+      "name": "Malick Fofana",
+      "team": "Sunderland",
+      "position": "MID",
+      "price": 5.5,
+      "prediction": {
+        "position": "MID",
+        "predicted_points": 3.18,
+        "seasons_used": 6,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    },
+    {
+      "fpl_id": 651,
+      "name": "Juan Angulo",
+      "team": "Sunderland",
+      "position": "FWD",
+      "price": 4.5,
+      "prediction": {
+        "position": "FWD",
+        "predicted_points": 3.09,
+        "seasons_used": 1,
+        "note": "neutral-fixture debut estimate (prev-league-adjusted features, reliability-weighted across scraped seasons, no real fixture context yet -- was_home/fdr held neutral)"
+      }
+    }
+  ]
+}

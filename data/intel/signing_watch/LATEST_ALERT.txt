@@ -1,5 +1,5 @@
 FPL AI: New Signing Detected
 ============================
-New signing(s) processed: Ryan McAidoo (Man City), Kaden Braithwaite (Man City). Training data rebuilt. See C:\Users\Andrej\Desktop\fpl ai\data\intel\signing_watch\signing_20260829_010126.json
+New signing(s) processed: Ibrahim Mbaye (Aston Villa), José María Andrés Baixauli (Brighton), Femi Azeez (Brighton), Honest Ahanor (Crystal Palace), Quinten Timber (Crystal Palace), Darío Osorio (Crystal Palace), Hugo Larsson (Fulham), Manuel Ángel Morán Ibáñez (Fulham), David Affengruber (Fulham), Ilyas Ansah (Hull City), Robinio Vaz (Hull City), Brooke Norton-Cuffy (Hull City), Sorba Thomas (Hull City), Christos Mouzakitis (Hull City), Michael Zetterer (Leeds), Melvin Bard (Leeds), Jean-Mattéo Bahoya (Leeds), Bradley Barcola (Liverpool), Allan Andrade Elias (Man City), Matias Fernandez-Pardo (Newcastle), Malick Fofana (Sunderland), Juan Angulo (Sunderland). Training data rebuilt. See C:\Users\Andrej\Desktop\fpl ai\data\intel\signing_watch\signing_20260904_011230.json
 
-Written: 2026-08-29T01:01:26.864954
+Written: 2026-09-04T01:12:30.992960

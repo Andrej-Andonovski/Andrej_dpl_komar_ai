@@ -1,182 +1,207 @@
-fpl_id,fpl_name,fpl_team,fpl_position,fpl_price,vaastav_match,match_confidence
-25,Viktor Gyökeres,Arsenal,FWD,7.4,,0
-49,Samuel Iling-Junior,Aston Villa,MID,5.0,,0
-50,Bradley Burrowes,Aston Villa,MID,4.5,,0
-51,George Hemmings,Aston Villa,MID,4.5,,0
-52,Alysson Edward Franco da Rocha dos Santos,Aston Villa,MID,5.0,,0
-53,Johan Manzambi,Aston Villa,MID,6.0,,0
-54,Joao Gomes,Aston Villa,MID,5.5,,0
-582,Brian Madjo,Aston Villa,FWD,5.5,,0
-596,Matteo Ruggeri,Aston Villa,DEF,4.5,,0
-597,Zion Suzuki,Aston Villa,GK,5.0,,0
-606,Triston Rowe,Aston Villa,DEF,4.0,,0
-607,Luka Lynch,Aston Villa,MID,4.5,,0
-618,Leon Goretzka,Aston Villa,MID,6.0,,0
-59,Will Dennis,Bournemouth,GK,4.0,,0
-66,Julio Soler Barreto,Bournemouth,DEF,4.0,,0
-81,Álvaro Rodríguez,Bournemouth,FWD,6.0,,0
-566,António João Pereira de Albuquerque Tavares da Silva,Bournemouth,DEF,5.0,,0
-573,Juanlu Sánchez,Bournemouth,DEF,4.5,,0
-615,Michele Di Gregorio,Bournemouth,GK,4.5,,0
-92,Kim Ji-soo,Brentford,DEF,4.5,,0
-93,Jannik Schuster,Brentford,DEF,4.5,,0
-107,Kaye Furo,Brentford,FWD,4.5,,0
-119,João Pedro Loureiro da Costa,Brighton,DEF,4.5,,0
-120,Michael Svoboda,Brighton,DEF,5.0,,0
-134,Nehemiah Oriola,Brighton,MID,4.5,,0
-135,Zadok Yohanna,Brighton,MID,5.0,,0
-137,Stefanos Tzimas,Brighton,FWD,5.5,,0
-504,Luka Vušković,Brighton,DEF,5.0,,0
-594,Promise David,Brighton,FWD,6.0,,0
-600,Ibrahim Osman,Brighton,MID,5.0,,0
-605,Malick Yalcouyé,Brighton,MID,4.5,,0
-614,Jaouen Hadjam,Brighton,DEF,4.5,,0
-150,Mamadou Sarr,Chelsea,DEF,4.5,,0
-152,Marco Palestra,Chelsea,DEF,5.5,,0
-163,Dário Luís Essugo,Chelsea,MID,4.5,,0
-164,Geovany Quenda,Chelsea,MID,5.5,,0
-169,Shumaira Mheuka,Chelsea,FWD,4.5,,0
-170,Emmanuel Emegha,Chelsea,FWD,5.0,,0
-560,Mike Penders,Chelsea,GK,4.5,,0
-561,Aaron Anselmino,Chelsea,DEF,4.5,,0
-583,Pep Chavarría,Chelsea,DEF,5.0,,0
-110,Carl Rushworth,Coventry City,GK,4.5,,0
-171,Oliver Dovin,Coventry City,GK,4.0,,0
-173,Bobby Thomas,Coventry City,DEF,4.0,,0
-174,Liam Kitching,Coventry City,DEF,4.0,,0
-175,Milan van Ewijk,Coventry City,DEF,4.0,,0
-176,Jay Dasilva,Coventry City,DEF,4.0,,0
-177,Kaine Kesler-Hayden,Coventry City,DEF,4.0,,0
-178,Jake Bidwell,Coventry City,DEF,4.0,,0
-179,Joel Latibeaudiere,Coventry City,DEF,4.0,,0
-181,Miguel Brau,Coventry City,DEF,4.0,,0
-182,Aurèle Amenda,Coventry City,DEF,4.0,,0
-183,Jack Rudoni,Coventry City,MID,5.0,,0
-184,Matt Grimes,Coventry City,MID,5.0,,0
-185,Tatsuhiro Sakamoto,Coventry City,MID,5.0,,0
-186,Ephron Mason-Clark,Coventry City,MID,5.5,,0
-187,Josh Eccles,Coventry City,MID,5.0,,0
-188,Victor Torp,Coventry City,MID,5.5,,0
-189,George Shepherd,Coventry City,MID,4.5,,0
-191,Raphael Borges Rodrigues,Coventry City,MID,4.5,,0
-192,Kai Andrews,Coventry City,MID,4.5,,0
-193,Haji Wright,Coventry City,FWD,5.5,,0
-194,Brandon Thomas-Asante,Coventry City,FWD,5.0,,0
-196,Jahnoah Markelo,Coventry City,FWD,5.0,,0
-197,Norman Bassette,Coventry City,FWD,4.5,,0
-575,Caleb Yirenkyi,Coventry City,MID,5.0,,0
-599,Sidiki Cherif,Coventry City,FWD,5.0,,0
-207,Oscar Mingueza,Crystal Palace,DEF,4.5,,0
-221,Joél Drakes-Thomas,Crystal Palace,MID,4.5,,0
-225,Christantus Uche,Crystal Palace,FWD,5.0,,0
-555,Remi Matthews,Crystal Palace,GK,4.0,,0
-588,Anan Khalaili,Crystal Palace,DEF,5.0,,0
-595,Zavier Gozo,Crystal Palace,MID,5.0,,0
-228,Tom King,Everton,GK,4.5,,0
-235,Adam Aznou,Everton,DEF,4.0,,0
-247,Hayden Hackney,Everton,MID,5.5,,0
-251,Benjamin Lecomte,Fulham,GK,4.0,,0
-252,Alfie McNally,Fulham,GK,4.0,,0
-272,Jonah Kusi-Asare,Fulham,FWD,4.5,,0
-569,Gonzalo García,Fulham,FWD,6.0,,0
-570,César Palacios,Fulham,MID,5.5,,0
-580,Shea Charles,Fulham,MID,5.0,,0
-610,Luc De Fougerolles,Fulham,DEF,4.0,,0
-273,Dillon Phillips,Hull City,GK,4.0,,0
-275,Harvey Cartwright,Hull City,GK,4.0,,0
-276,Thimothée Lo-Tutala,Hull City,GK,4.0,,0
-278,Charlie Hughes,Hull City,DEF,4.0,,0
-279,Semi Ajayi,Hull City,DEF,4.0,,0
-280,Lewie Coyle,Hull City,DEF,4.0,,0
-283,Matty Jacob,Hull City,DEF,4.0,,0
-284,Cathal McCarthy,Hull City,DEF,4.0,,0
-285,Paddy McNair,Hull City,DEF,4.0,,0
-286,Mohamed Belloumi,Hull City,MID,5.0,,0
-287,Liam Millar,Hull City,MID,5.0,,0
-289,Matt Crooks,Hull City,MID,4.5,,0
-290,Regan Slater,Hull City,MID,4.5,,0
-291,Eliot Matazo,Hull City,MID,4.5,,0
-292,Abdülkadir Ömür,Hull City,MID,5.0,,0
-293,Abu Kamara,Hull City,MID,5.0,,0
-294,Óscar Zambrano,Hull City,MID,4.5,,0
-296,David Akintola,Hull City,MID,5.0,,0
-297,Darko Gyabi,Hull City,MID,4.5,,0
-298,Enis Destan,Hull City,FWD,4.5,,0
-299,Mason Burstow,Hull City,FWD,4.5,,0
-563,Hidemasa Morita,Hull City,MID,5.0,,0
-572,Konstantinos Tzolakis,Hull City,GK,4.5,,0
-574,Jens Hjertø-Dahl,Hull City,MID,5.0,,0
-576,Elliot Stroud,Hull City,MID,5.0,,0
-585,Lucas Herrington,Hull City,DEF,4.0,,0
-586,Nobel Mendy,Hull City,DEF,4.0,,0
-589,Lucas Gourna-Douath,Hull City,MID,5.0,,0
-617,Mohamed-Ali Cho,Hull City,MID,5.0,,0
-303,Cédric Kipré,Ipswich Town,DEF,4.0,,0
-309,Marcelino Núñez,Ipswich Town,MID,5.0,,0
-310,Azor Matusiwa,Ipswich Town,MID,5.0,,0
-316,Emersonn Correia da Silva,Ipswich Town,FWD,5.5,,0
-320,Chuba Akpom,Ipswich Town,FWD,5.0,,0
-321,Sindre Walle Egeli,Ipswich Town,FWD,4.5,,0
-324,Anis Mehmeti,Ipswich Town,MID,5.0,,0
-554,Kayne van Oevelen,Ipswich Town,GK,4.5,,0
-562,Daizen Maeda,Ipswich Town,MID,5.5,,0
-564,Kjell Scherpen,Ipswich Town,GK,4.5,,0
-592,Abdoul Ouattara,Ipswich Town,DEF,4.0,,0
-602,Cameron Humphreys,Ipswich Town,MID,4.5,,0
-619,Exequiel Palacios,Ipswich Town,MID,5.0,,0
-334,Tarik Muharemović,Leeds,DEF,5.0,,0
-349,Mateo Joseph Fernández-Regatillo,Leeds,FWD,4.5,,0
-598,Nico Elvedi,Leeds,DEF,4.5,,0
-603,Jayden Lienou,Leeds,DEF,4.0,,0
-353,Armin Pecsi,Liverpool,GK,4.0,,0
-354,Vitezslav Jaros,Liverpool,GK,4.0,,0
-355,Harvey Davies,Liverpool,GK,4.0,,0
-361,Wellity Lucky,Liverpool,DEF,4.0,,0
-362,Jeremy Jacquet,Liverpool,DEF,5.0,,0
-363,Giovanni Leoni,Liverpool,DEF,4.0,,0
-365,Calvin Ramsay,Liverpool,DEF,4.0,,0
-375,Trey Nyoni,Liverpool,MID,5.0,,0
-376,Stefan Bajčetić Maquieira,Liverpool,MID,5.0,,0
-377,Victor Munoz,Liverpool,MID,6.5,,0
-378,James McConnell,Liverpool,MID,4.5,,0
-381,Lewis Koumas,Liverpool,MID,5.0,,0
-382,Jayden Danns,Liverpool,FWD,4.5,,0
-579,Ronald Araujo,Liverpool,DEF,5.5,,0
-386,Marcus Bettinelli,Man City,GK,4.5,,0
-396,Vitor de Oliveira Nunes dos Reis,Man City,DEF,4.5,,0
-407,Claudio Echeverri,Man City,MID,5.0,,0
-409,Divine Mukasa,Man City,MID,4.5,,0
-587,Gerónimo Rulli,Man City,GK,5.0,,0
-616,Ayyoub Bouaddi,Man City,MID,5.5,,0
-621,Ryan McAidoo,Man City,MID,4.5,,0
-622,Kaden Braithwaite,Man City,DEF,4.0,,0
-435,Shea Lacey,Man Utd,MID,5.0,,0
-437,Bendito Mantato,Man Utd,MID,4.5,,0
-438,Tyler Fletcher,Man Utd,MID,4.5,,0
-441,Chido Obi,Man Utd,FWD,4.5,,0
-443,Mark Gillespie,Newcastle,GK,4.5,,0
-444,Ewen Jaouen,Newcastle,GK,4.5,,0
-451,Alex Murphy,Newcastle,DEF,4.0,,0
-461,Bazoumana Touré,Newcastle,MID,6.0,,0
-462,Sean Steur,Newcastle,MID,5.0,,0
-466,Sean Neave,Newcastle,FWD,4.5,,0
-559,Aladji Bamba,Newcastle,MID,5.0,,0
-567,Lukás Hornícek,Newcastle,GK,5.0,,0
-593,Amar Dedic,Newcastle,DEF,4.5,,0
-609,Leo Shahar,Newcastle,DEF,4.0,,0
-476,Omar Richards,Nott'm Forest,DEF,4.0,,0
-479,Tyler Bindon,Nott'm Forest,DEF,4.0,,0
-558,Xaver Schlager,Nott'm Forest,MID,5.0,,0
-581,Ousmane Diomande,Nott'm Forest,DEF,5.5,,0
-590,Steven Benda,Nott'm Forest,GK,4.5,,0
-507,Ashley Phillips,Spurs,DEF,4.5,,0
-509,Jun'ai Byfield,Spurs,DEF,4.0,,0
-510,James Rowswell,Spurs,DEF,4.0,,0
-524,Callum Olusesi,Spurs,MID,4.5,,0
-525,Mateus Fernandes,Spurs,MID,6.0,,0
-528,Dane Scarlett,Spurs,FWD,4.5,,0
-601,Luca Williams-Barnett,Spurs,MID,4.5,,0
-530,Anthony Patterson,Sunderland,GK,4.0,,0
-541,Thomas Meunier,Sunderland,DEF,4.5,,0
-612,Dayann Méthalie,Sunderland,DEF,4.5,,0
-613,Jules Ahoka,Sunderland,MID,4.5,,0
+fpl_id,fpl_name,fpl_team,fpl_position,fpl_price,vaastav_match,match_confidence,previous_club,previous_league,previous_league_standardized,new_pl_club_tm,transfer_type,tm_confidence
+25,Viktor Gyökeres,Arsenal,FWD,7.3,,0,,,Primeira Liga,,,
+49,Samuel Iling-Junior,Aston Villa,MID,5.0,,0,,,,,,
+50,Bradley Burrowes,Aston Villa,MID,4.5,,0,,,,,,
+51,George Hemmings,Aston Villa,MID,4.5,,0,,,,,,
+52,Alysson Edward Franco da Rocha dos Santos,Aston Villa,MID,5.0,,0,,,,,,
+53,Johan Manzambi,Aston Villa,MID,5.9,,0,Freiburg,Bundesliga,Bundesliga,Aston Villa,permanent,100.0
+54,Joao Gomes,Aston Villa,MID,5.5,,0,,,,,,
+582,Brian Madjo,Aston Villa,FWD,5.5,,0,,,,,,
+596,Matteo Ruggeri,Aston Villa,DEF,4.5,,0,Atlético,LaLiga,La Liga,Aston Villa,permanent,100.0
+597,Zion Suzuki,Aston Villa,GK,5.0,,0,Parma,Serie A,Serie A,Aston Villa,permanent,100.0
+606,Triston Rowe,Aston Villa,DEF,4.0,,0,,,,,,
+607,Luka Lynch,Aston Villa,MID,4.5,,0,,,,,,
+618,Leon Goretzka,Aston Villa,MID,6.0,,0,Bayern Munich,Bundesliga,Bundesliga,Aston Villa,permanent,100.0
+631,Ibrahim Mbaye,Aston Villa,MID,6.0,,0,PSG,Ligue 1,Ligue 1,Aston Villa,permanent,100.0
+59,Will Dennis,Bournemouth,GK,4.0,,0,,,,,,
+66,Julio Soler Barreto,Bournemouth,DEF,4.0,,0,,,,,,
+81,Álvaro Rodríguez,Bournemouth,FWD,6.0,,0,Elche CF,LaLiga,La Liga,Bournemouth,permanent,100.0
+566,António João Pereira de Albuquerque Tavares da Silva,Bournemouth,DEF,5.0,,0,,,,,,
+573,Juanlu Sánchez,Bournemouth,DEF,4.5,,0,Sevilla FC,LaLiga,La Liga,Bournemouth,permanent,100.0
+615,Michele Di Gregorio,Bournemouth,GK,4.5,,0,Juventus,Serie A,Serie A,Bournemouth,loan,100.0
+92,Kim Ji-soo,Brentford,DEF,4.5,,0,,,,,,
+93,Jannik Schuster,Brentford,DEF,4.5,,0,Salzburg,Bundesliga,Bundesliga,Brentford,permanent,100.0
+107,Kaye Furo,Brentford,FWD,4.5,,0,,,,,,
+119,João Pedro Loureiro da Costa,Brighton,DEF,4.5,,0,,,,,,
+120,Michael Svoboda,Brighton,DEF,5.0,,0,Venezia,Serie A,Serie A,Brighton,permanent,100.0
+134,Nehemiah Oriola,Brighton,MID,4.5,,0,,,,,,
+135,Zadok Yohanna,Brighton,MID,5.0,,0,AIK,Allsvenskan,Allsvenskan,Brighton,permanent,100.0
+137,Stefanos Tzimas,Brighton,FWD,5.5,,0,,,,,,
+504,Luka Vušković,Brighton,DEF,5.0,,0,,,,,,
+594,Promise David,Brighton,FWD,6.0,,0,Union SG,Jupiler Pro League,Belgian Pro League,Brighton,loan,100.0
+600,Ibrahim Osman,Brighton,MID,5.0,,0,,,,,,
+605,Malick Yalcouyé,Brighton,MID,4.5,,0,,,,,,
+614,Jaouen Hadjam,Brighton,DEF,4.5,,0,Young Boys,Super League,Other,Brighton,permanent,100.0
+624,Amario Cozier-Duberry,Brighton,MID,5.0,,0,,,,,,
+639,José María Andrés Baixauli,Brighton,MID,5.5,,0,,,,,,
+652,Femi Azeez,Brighton,MID,5.5,,0,,,,,,
+150,Mamadou Sarr,Chelsea,DEF,4.5,,0,Lens,Ligue 1,Ligue 1,Brentford,permanent,81.0
+152,Marco Palestra,Chelsea,DEF,5.4,,0,Atalanta,Serie A,Serie A,Chelsea,permanent,100.0
+163,Dário Luís Essugo,Chelsea,MID,4.5,,0,,,,,,
+164,Geovany Quenda,Chelsea,MID,5.4,,0,Sporting,Liga Portugal,Primeira Liga,Chelsea,permanent,100.0
+169,Shumaira Mheuka,Chelsea,FWD,4.5,,0,,,,,,
+170,Emmanuel Emegha,Chelsea,FWD,5.0,,0,R. Strasbourg,Ligue 1,Ligue 1,Chelsea,permanent,100.0
+560,Mike Penders,Chelsea,GK,4.5,,0,,,,,,
+561,Aaron Anselmino,Chelsea,DEF,4.5,,0,,,,,,
+583,Pep Chavarría,Chelsea,DEF,5.0,,0,Rayo Vallecano,LaLiga,La Liga,Chelsea,permanent,100.0
+110,Carl Rushworth,Coventry City,GK,4.5,,0,,,,,,
+171,Oliver Dovin,Coventry City,GK,4.0,,0,,,,,,
+173,Bobby Thomas,Coventry City,DEF,4.0,,0,,,,,,
+174,Liam Kitching,Coventry City,DEF,4.0,,0,,,,,,
+175,Milan van Ewijk,Coventry City,DEF,4.0,,0,,,,,,
+176,Jay Dasilva,Coventry City,DEF,4.0,,0,,,,,,
+177,Kaine Kesler-Hayden,Coventry City,DEF,4.0,,0,,,,,,
+178,Jake Bidwell,Coventry City,DEF,4.0,,0,,,,,,
+179,Joel Latibeaudiere,Coventry City,DEF,4.0,,0,,,,,,
+181,Miguel Brau,Coventry City,DEF,4.0,,0,,,,,,
+182,Aurèle Amenda,Coventry City,DEF,4.0,,0,Frankfurt,Bundesliga,Bundesliga,Coventry,permanent,100.0
+183,Jack Rudoni,Coventry City,MID,5.0,,0,,,,,,
+184,Matt Grimes,Coventry City,MID,5.0,,0,,,,,,
+185,Tatsuhiro Sakamoto,Coventry City,MID,4.9,,0,,,,,,
+186,Ephron Mason-Clark,Coventry City,MID,5.4,,0,,,,,,
+187,Josh Eccles,Coventry City,MID,4.9,,0,,,,,,
+188,Victor Torp,Coventry City,MID,5.4,,0,,,,,,
+189,George Shepherd,Coventry City,MID,4.5,,0,,,,,,
+191,Raphael Borges Rodrigues,Coventry City,MID,4.5,,0,,,,,,
+192,Kai Andrews,Coventry City,MID,4.5,,0,,,,,,
+193,Haji Wright,Coventry City,FWD,5.4,,0,,,,,,
+194,Brandon Thomas-Asante,Coventry City,FWD,5.0,,0,,,,,,
+196,Jahnoah Markelo,Coventry City,FWD,5.0,,0,,,,,,
+197,Norman Bassette,Coventry City,FWD,4.5,,0,,,,,,
+575,Caleb Yirenkyi,Coventry City,MID,5.0,,0,Nordsjaelland,Superliga,Superliga,Coventry,permanent,100.0
+599,Sidiki Cherif,Coventry City,FWD,5.0,,0,Fenerbahçe,Süper Lig,Other,Coventry,permanent,100.0
+207,Oscar Mingueza,Crystal Palace,DEF,4.4,,0,Celta de Vigo,LaLiga,La Liga,Crystal Palace,permanent,100.0
+221,Joél Drakes-Thomas,Crystal Palace,MID,4.5,,0,,,,,,
+225,Christantus Uche,Crystal Palace,FWD,5.0,,0,,,,,,
+555,Remi Matthews,Crystal Palace,GK,4.0,,0,,,,,,
+588,Anan Khalaili,Crystal Palace,DEF,5.0,,0,Union SG,Jupiler Pro League,Belgian Pro League,Crystal Palace,permanent,100.0
+595,Zavier Gozo,Crystal Palace,MID,5.0,,0,Salt Lake,MLS,Other,Crystal Palace,permanent,100.0
+633,Honest Ahanor,Crystal Palace,DEF,4.5,,0,Atalanta,Serie A,Serie A,Crystal Palace,loan,100.0
+644,Quinten Timber,Crystal Palace,MID,5.0,,0,Marseille,Ligue 1,Ligue 1,Crystal Palace,permanent,100.0
+647,Darío Osorio,Crystal Palace,MID,5.5,,0,Midtjylland,Superliga,Superliga,Crystal Palace,loan,100.0
+228,Tom King,Everton,GK,4.5,,0,,,,,,
+235,Adam Aznou,Everton,DEF,4.0,,0,,,,,,
+247,Hayden Hackney,Everton,MID,5.5,,0,,,,,,
+251,Benjamin Lecomte,Fulham,GK,4.0,,0,,,,,,
+252,Alfie McNally,Fulham,GK,4.0,,0,,,,,,
+272,Jonah Kusi-Asare,Fulham,FWD,4.5,,0,,,,,,
+569,Gonzalo García,Fulham,FWD,6.0,,0,Real Madrid,LaLiga,La Liga,Fulham,permanent,100.0
+570,César Palacios,Fulham,MID,5.5,,0,Real Madrid,LaLiga,La Liga,Fulham,permanent,100.0
+580,Shea Charles,Fulham,MID,5.0,,0,,,,,,
+610,Luc De Fougerolles,Fulham,DEF,4.0,,0,,,,,,
+626,Macauley Zepa,Fulham,MID,4.5,,0,,,,,,
+635,Hugo Larsson,Fulham,MID,5.0,,0,Frankfurt,Bundesliga,Bundesliga,Fulham,loan,100.0
+636,Manuel Ángel Morán Ibáñez,Fulham,MID,5.0,,0,,,,,,
+650,David Affengruber,Fulham,DEF,4.5,,0,Elche CF,LaLiga,La Liga,Fulham,permanent,100.0
+273,Dillon Phillips,Hull City,GK,4.0,,0,,,,,,
+275,Harvey Cartwright,Hull City,GK,4.0,,0,,,,,,
+276,Thimothée Lo-Tutala,Hull City,GK,4.0,,0,,,,,,
+278,Charlie Hughes,Hull City,DEF,4.0,,0,,,,,,
+279,Semi Ajayi,Hull City,DEF,4.1,,0,,,,,,
+280,Lewie Coyle,Hull City,DEF,4.0,,0,,,,,,
+283,Matty Jacob,Hull City,DEF,4.0,,0,,,,,,
+284,Cathal McCarthy,Hull City,DEF,4.0,,0,,,,,,
+285,Paddy McNair,Hull City,DEF,4.0,,0,,,,,,
+286,Mohamed Belloumi,Hull City,MID,5.0,,0,,,,,,
+287,Liam Millar,Hull City,MID,5.0,,0,,,,,,
+289,Matt Crooks,Hull City,MID,4.5,,0,,,,,,
+290,Regan Slater,Hull City,MID,4.5,,0,,,,,,
+291,Eliot Matazo,Hull City,MID,4.5,,0,,,,,,
+292,Abdülkadir Ömür,Hull City,MID,4.9,,0,,,,,,
+293,Abu Kamara,Hull City,MID,5.0,,0,,,,,,
+294,Óscar Zambrano,Hull City,MID,4.5,,0,,,,,,
+296,David Akintola,Hull City,MID,5.0,,0,,,,,,
+297,Darko Gyabi,Hull City,MID,4.5,,0,,,,,,
+298,Enis Destan,Hull City,FWD,4.5,,0,,,,,,
+299,Mason Burstow,Hull City,FWD,4.5,,0,,,,,,
+563,Hidemasa Morita,Hull City,MID,5.0,,0,Sporting,Liga Portugal,Primeira Liga,Hull City,permanent,100.0
+572,Konstantinos Tzolakis,Hull City,GK,4.6,,0,Olympiacos,Super League 1,Super League 1,Hull City,permanent,100.0
+574,Jens Hjertø-Dahl,Hull City,MID,5.0,,0,Tromsø IL,Eliteserien,Eliteserien,Hull City,permanent,100.0
+576,Elliot Stroud,Hull City,MID,5.0,,0,Mjällby AIF,Allsvenskan,Allsvenskan,Hull City,permanent,100.0
+585,Lucas Herrington,Hull City,DEF,4.0,,0,Colorado,MLS,Other,Hull City,permanent,100.0
+586,Nobel Mendy,Hull City,DEF,4.0,,0,Rayo Vallecano,LaLiga,La Liga,Hull City,permanent,100.0
+589,Lucas Gourna-Douath,Hull City,MID,5.0,,0,Salzburg,Bundesliga,Bundesliga,Hull City,permanent,100.0
+617,Mohamed-Ali Cho,Hull City,MID,5.0,,0,,,,,,
+632,Ilyas Ansah,Hull City,FWD,5.0,,0,Union Berlin,Bundesliga,Bundesliga,Hull City,permanent,100.0
+637,Robinio Vaz,Hull City,FWD,5.0,,0,Roma,Serie A,Serie A,Hull City,loan,100.0
+638,Brooke Norton-Cuffy,Hull City,DEF,4.0,,0,,,,,,
+642,Sorba Thomas,Hull City,MID,5.5,,0,,,,,,
+645,Christos Mouzakitis,Hull City,MID,5.0,,0,Olympiacos,Super League 1,Super League 1,Hull City,permanent,100.0
+303,Cédric Kipré,Ipswich Town,DEF,4.0,,0,,,,,,
+309,Marcelino Núñez,Ipswich Town,MID,5.0,,0,,,,,,
+310,Azor Matusiwa,Ipswich Town,MID,5.0,,0,,,,,,
+316,Emersonn Correia da Silva,Ipswich Town,FWD,5.5,,0,,,,,,
+320,Chuba Akpom,Ipswich Town,FWD,5.0,,0,,,,,,
+321,Sindre Walle Egeli,Ipswich Town,FWD,4.5,,0,,,,,,
+324,Anis Mehmeti,Ipswich Town,MID,4.9,,0,,,,,,
+554,Kayne van Oevelen,Ipswich Town,GK,4.5,,0,FC Volendam,Keuken Kampioen Divisie,Keuken Kampioen Divisie,Ipswich,permanent,100.0
+562,Daizen Maeda,Ipswich Town,MID,5.5,,0,Celtic,Premiership,Premiership,Ipswich,permanent,100.0
+564,Kjell Scherpen,Ipswich Town,GK,4.5,,0,,,,,,
+592,Abdoul Ouattara,Ipswich Town,DEF,4.0,,0,R. Strasbourg,Ligue 1,Ligue 1,Ipswich,permanent,100.0
+602,Cameron Humphreys,Ipswich Town,MID,4.5,,0,,,,,,
+619,Exequiel Palacios,Ipswich Town,MID,5.0,,0,Leverkusen,Bundesliga,Bundesliga,Ipswich,permanent,100.0
+334,Tarik Muharemović,Leeds,DEF,5.0,,0,Sassuolo,Serie A,Serie A,Leeds,permanent,100.0
+349,Mateo Joseph Fernández-Regatillo,Leeds,FWD,4.5,,0,,,,,,
+598,Nico Elvedi,Leeds,DEF,4.5,,0,Mönchengladbach,Bundesliga,Bundesliga,Leeds,permanent,100.0
+603,Jayden Lienou,Leeds,DEF,4.0,,0,,,,,,
+625,Alex Cairns,Leeds,GK,4.0,,0,,,,,,
+629,Michael Zetterer,Leeds,GK,4.0,,0,Frankfurt,Bundesliga,Bundesliga,Leeds,permanent,100.0
+641,Melvin Bard,Leeds,DEF,4.5,,0,Nice,Ligue 1,Ligue 1,Leeds,loan,100.0
+648,Jean-Mattéo Bahoya,Leeds,MID,5.0,,0,Frankfurt,Bundesliga,Bundesliga,Leeds,loan,100.0
+353,Armin Pecsi,Liverpool,GK,4.0,,0,,,,,,
+354,Vitezslav Jaros,Liverpool,GK,4.0,,0,,,,,,
+355,Harvey Davies,Liverpool,GK,4.0,,0,,,,,,
+361,Wellity Lucky,Liverpool,DEF,4.0,,0,,,,,,
+362,Jeremy Jacquet,Liverpool,DEF,5.0,,0,Stade Rennais,Ligue 1,Ligue 1,Liverpool,permanent,100.0
+363,Giovanni Leoni,Liverpool,DEF,4.0,,0,,,,,,
+365,Calvin Ramsay,Liverpool,DEF,4.0,,0,,,,,,
+375,Trey Nyoni,Liverpool,MID,5.0,,0,,,,,,
+376,Stefan Bajčetić Maquieira,Liverpool,MID,5.0,,0,,,,,,
+377,Victor Munoz,Liverpool,MID,6.5,,0,CA Osasuna,LaLiga,La Liga,Liverpool,permanent,100.0
+378,James McConnell,Liverpool,MID,4.5,,0,,,,,,
+381,Lewis Koumas,Liverpool,MID,5.0,,0,,,,,,
+382,Jayden Danns,Liverpool,FWD,4.5,,0,,,,,,
+579,Ronald Araujo,Liverpool,DEF,5.4,,0,Barcelona,LaLiga,La Liga,Liverpool,loan,100.0
+627,Bradley Barcola,Liverpool,MID,8.0,,0,PSG,Ligue 1,Ligue 1,Liverpool,permanent,100.0
+386,Marcus Bettinelli,Man City,GK,4.5,,0,,,,,,
+396,Vitor de Oliveira Nunes dos Reis,Man City,DEF,4.5,,0,,,,,,
+407,Claudio Echeverri,Man City,MID,4.9,,0,,,,,,
+409,Divine Mukasa,Man City,MID,4.5,,0,,,,,,
+587,Gerónimo Rulli,Man City,GK,5.0,,0,,,,,,
+616,Ayyoub Bouaddi,Man City,MID,5.5,,0,Lille,Ligue 1,Ligue 1,Man City,permanent,100.0
+621,Ryan McAidoo,Man City,MID,4.5,,0,,,,,,
+622,Kaden Braithwaite,Man City,DEF,4.0,,0,,,,,,
+628,Allan Andrade Elias,Man City,MID,6.0,,0,,,,,,
+435,Shea Lacey,Man Utd,MID,5.0,,0,,,,,,
+437,Bendito Mantato,Man Utd,MID,4.5,,0,,,,,,
+438,Tyler Fletcher,Man Utd,MID,4.5,,0,,,,,,
+441,Chido Obi,Man Utd,FWD,4.5,,0,,,,,,
+443,Mark Gillespie,Newcastle,GK,4.5,,0,,,,,,
+444,Ewen Jaouen,Newcastle,GK,4.5,,0,Stade Reims,Ligue 2,Ligue 2,Newcastle,permanent,100.0
+451,Alex Murphy,Newcastle,DEF,4.0,,0,,,,,,
+461,Bazoumana Touré,Newcastle,MID,5.9,,0,Hoffenheim,Bundesliga,Bundesliga,Newcastle,permanent,100.0
+462,Sean Steur,Newcastle,MID,5.0,,0,Ajax,Eredivisie,Eredivisie,Newcastle,permanent,100.0
+466,Sean Neave,Newcastle,FWD,4.5,,0,,,,,,
+559,Aladji Bamba,Newcastle,MID,5.0,,0,Monaco,Ligue 1,Ligue 1,Newcastle,permanent,100.0
+567,Lukás Hornícek,Newcastle,GK,5.0,,0,Braga,Liga Portugal,Primeira Liga,Newcastle,permanent,100.0
+593,Amar Dedic,Newcastle,DEF,4.5,,0,Benfica,Liga Portugal,Primeira Liga,Newcastle,permanent,100.0
+609,Leo Shahar,Newcastle,DEF,4.0,,0,,,,,,
+634,Matias Fernandez-Pardo,Newcastle,FWD,6.0,,0,Lille,Ligue 1,Ligue 1,Newcastle,permanent,100.0
+476,Omar Richards,Nott'm Forest,DEF,4.0,,0,,,,,,
+479,Tyler Bindon,Nott'm Forest,DEF,4.0,,0,,,,,,
+558,Xaver Schlager,Nott'm Forest,MID,5.0,,0,Leipzig,Bundesliga,Bundesliga,Nott'm Forest,permanent,100.0
+581,Ousmane Diomande,Nott'm Forest,DEF,5.4,,0,Sporting,Liga Portugal,Primeira Liga,Nott'm Forest,permanent,100.0
+590,Steven Benda,Nott'm Forest,GK,4.5,,0,,,,,,
+507,Ashley Phillips,Spurs,DEF,4.5,,0,,,,,,
+509,Jun'ai Byfield,Spurs,DEF,4.0,,0,,,,,,
+510,James Rowswell,Spurs,DEF,4.0,,0,,,,,,
+524,Callum Olusesi,Spurs,MID,4.5,,0,,,,,,
+525,Mateus Fernandes,Spurs,MID,5.9,,0,,,,,,
+528,Dane Scarlett,Spurs,FWD,4.5,,0,,,,,,
+601,Luca Williams-Barnett,Spurs,MID,4.5,,0,,,,,,
+530,Anthony Patterson,Sunderland,GK,4.0,,0,,,,,,
+541,Thomas Meunier,Sunderland,DEF,4.5,,0,Lille,Ligue 1,Ligue 1,Sunderland,permanent,100.0
+612,Dayann Méthalie,Sunderland,DEF,4.5,,0,Toulouse,Ligue 1,Ligue 1,Sunderland,permanent,100.0
+613,Jules Ahoka,Sunderland,MID,4.5,,0,Royal Antwerp,Jupiler Pro League,Belgian Pro League,Sunderland,permanent,100.0
+646,Malick Fofana,Sunderland,MID,5.5,,0,Lyon,Ligue 1,Ligue 1,Sunderland,permanent,100.0
+651,Juan Angulo,Sunderland,FWD,4.5,,0,,,,,,
