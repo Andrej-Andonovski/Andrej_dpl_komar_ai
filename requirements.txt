@@ -29,6 +29,13 @@ google-genai==1.67.0
 # Config
 python-dotenv==1.1.1
 
+# Stage 10 (LSTM residual layer) — TRAINING ONLY, and NOT on the dev machine:
+# Windows Smart App Control blocks the PyTorch DLLs here, so pretraining runs on
+# Colab (notebooks/stage10_colab_train.ipynb) and the checkpoints come back as
+# numpy .npz. Runtime inference (pipeline/stage10_infer.py) is pure numpy — the
+# season simulator never imports torch. Install only where you train:
+#   torch==2.14.0        (CPU build; --index-url https://download.pytorch.org/whl/cpu)
+
 # NOTE: seleniumbase drives a real browser (Chrome by default) for FBref
 # scraping (new_signings_stage4a.py, promoted_clubs_stage4c.py) — it
 # manages its own driver binary on first run, no separate install needed.
