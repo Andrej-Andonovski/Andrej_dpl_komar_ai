@@ -116,13 +116,18 @@ def train_one_fold(train_seasons, val_season, joined, *, pos_filter=None,
 
     Xtr, Qtr, Ltr, Ptr, Ytr, Mtr = sq.to_padded_arrays(tr_s, MAX_LEN)
     Xva, Qva, Lva, Pva, Yva, Mva = sq.to_padded_arrays(va_s, MAX_LEN)
-    # pad val to the train sequence width so the same model consumes both
-    if Xva.shape[1] != Xtr.shape[1]:
-        w = Xtr.shape[1]
-        Xva2 = np.zeros((Xva.shape[0], w, Xva.shape[2]), dtype=np.float32)
-        Xva2[:, :min(w, Xva.shape[1])] = Xva[:, :min(w, Xva.shape[1])]
-        Xva = Xva2
-        Lva = np.minimum(Lva, w)
+
+    # widen the narrower split to the common width (right-pad with zeros only —
+    # sequences are front-aligned at 0..length-1, so widening never drops or
+    # reorders a real timestep)
+    def _widen(X, w):
+        if X.shape[1] >= w:
+            return X
+        out = np.zeros((X.shape[0], w, X.shape[2]), dtype=X.dtype)
+        out[:, :X.shape[1]] = X
+        return out
+    W = max(Xtr.shape[1], Xva.shape[1])
+    Xtr, Xva = _widen(Xtr, W), _widen(Xva, W)
 
     ts_mean, ts_std, q_mean, q_std = norm_stats(Xtr, Ltr, Qtr)
     wtr = season_weights(Mtr, train_seasons)
