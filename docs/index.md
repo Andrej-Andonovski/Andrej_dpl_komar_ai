@@ -44,6 +44,7 @@ The subsystems that make up the project (Phase 2):
 - [[data-pipeline]] — ingest & prepare data (Stages 1–4)
 - [[feature-engineering]] — build the position-split training files (Stage 6)
 - [[prediction-models]] — four LightGBM models (Stage 7)
+- [[stage10-residual-layer]] — LSTM residual correction + captain q90 (Stage 10)
 - [[legacy-ilp-optimizer]] — production PuLP squad optimizer (Stage 8)
 - [[milp-optimizer]] — multi-period MILP redesign (in progress)
 - [[season-simulator]] — the per-gameweek orchestrator
@@ -72,6 +73,7 @@ Why the project is built the way it is (Phase 4, ADR-style):
 - [[four-position-models|Four separate position models]]
 - [[walkforward-no-leakage|Walk-forward validation & no leakage]]
 - [[lightgbm-over-xgboost|LightGBM over XGBoost]]
+- [[stage10-residual-lstm|Stage 10 — LSTM residual layer (Phase 1)]]
 - [[corrected-vs-legacy-rules|Corrected vs legacy FPL rules]]
 - [[optimizer-redesign|Optimizer redesign (ILP → MILP)]]
 - [[chip-strategy-v2|Chip Strategy v2]]

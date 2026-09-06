@@ -91,6 +91,10 @@ GW-by-GW run hasn't happened yet (season hasn't started).
 - Stage 7 ✅ LightGBM model training (walk-forward CV)
 - Stage 8 ✅ ILP optimizer (PuLP) + online retraining
 - Stage 9 ✅ LLM agent (Claude API) — per-GW narrative explanations
+- Stage 10 ✅ LSTM residual layer (Phase 1) — corrects raw GBM μ + calibrated
+  captain q90; `STAGE10=off|on` flag (default off = byte-identical no-op).
+  Shipped for `OPTIMIZER=mp` (A/B +14/+40/+81 across 2023-24/24-25/25-26).
+  See "Stage 10" section below + docs/stage10_phase1_report.md.
 - Intel 01-07 ✅ Pre-deadline intelligence suite (see below)
 - Random Search ✅ 250-trial joint search — LGBM trial 220 is best baseline
 - Optuna Search ✅ GW1-28 Bayesian search — trial 429 (1799 pts GW1-28)
@@ -118,6 +122,13 @@ pipeline/intel_08_effective_ownership.py  (recommendation-layer §4.1 — top-10
 pipeline/season_simulator.py
 pipeline/random_search_full.py
 pipeline/optuna_search.py
+pipeline/stage10_oof.py         (Stage 10 — walk-forward OOF μ, residual target)
+pipeline/stage10_sequence.py    (Stage 10 — leakage-safe GW sequence builder)
+pipeline/stage10_model.py       (Stage 10 — torch LSTM + numpy runtime forward)
+pipeline/stage10_train.py       (Stage 10 — 5 walk-forward folds, torch, offline)
+pipeline/stage10_infer.py       (Stage 10 — torch-free checkpoint loader + q90)
+pipeline/stage10_refine.py      (Stage 10 — runtime hook into predict_pool/build_matrix)
+pipeline/stage10_finetune.py    (Stage 10 — in-season head fine-tune; DISABLED, measured negative)
 
 ## File Structure
 data/raw/fpl_api/          — FPL API files
@@ -136,6 +147,7 @@ pipeline/                  — all core pipeline scripts
 pipeline/archive/          — dev/one-off scripts (sweeps, patches, verifiers)
 scripts/                   — analysis scripts (bench reports, form sweeps)
 models/                    — trained models + stage9 results
+models/stage10/            — Stage 10 LSTM checkpoints + OOF + calibration JSONs
 ui/                        — Flask UI (server.py + index.html)
 
 ## Intel Pipeline Architecture (intel_01 through intel_07)
@@ -393,6 +405,39 @@ Per-GW explanations via Claude API (post-simulation analysis):
   - MAX_TOKENS: 1200, TEMPERATURE: 0
   Note: Stage 9 is explanatory only — decisions are made by intel_06/simulator.
 
+## Stage 10 — LSTM Residual Layer (Phase 1, shipped 2026-09-07)
+Stacked correction between the LightGBM μ and the optimizer. Full evidence:
+docs/stage10_phase1_report.md; plan: docs/stage10_phase1_plan.md; component
+note: docs/components/stage10-residual-layer.md.
+  Flow:  LightGBM μ -> LSTM(μ, GW-sequence 1..t-1) -> (r̂, σ)
+         r_applied = confidence_gate(r̂)  added to raw μ  (FDR/intel stay downstream)
+         q90       = μ + r_applied + z·σ_eff   -> captain channel
+  Flag:  STAGE10=off (default, TRUE no-op — stage10_refine never imported so
+         torch never loads; predict_pool/build_matrix byte-identical) | on
+         (writes *_s10.json).
+  Training:  torch, OFFLINE (stage10_train.py), 5 walk-forward folds
+             (val 2021-22..2025-26; 2019-20 has no OOF residual). Runtime
+             inference is a dependency-free numpy forward (NumpyResidualLSTM) —
+             season_simulator + Optuna loop never import torch. torch==2.14.0
+             is a training-only dep (Smart App Control whitelisted the DLLs
+             after first run; WSL2 is the fallback if it re-blocks).
+  Checkpoints:  models/stage10/pretrain_<S>.{pt,npz} + stage10_config.json +
+             stage10_calibration.json. Live 2026-27 loads pretrain_2025-26.npz.
+  Gates:  1 (off byte-identical, all 4 configs) PASS; 2 (OOF MAE) mean +0.026,
+          all folds positive; 3 (q90 coverage) 0.836 -> 0.890; 4 (A/B) see below;
+          8 (determinism) PASS. Tests: test_stage10_{sequence,identity,shapes}.py.
+  A/B (STAGE10 off -> on, full season):
+             mp     2023-24 +14 | 2024-25 +40 | 2025-26 +81   (mean +45)
+             legacy 2023-24 -12 | 2024-25  +0 | 2025-26 +73   (mean +20, inconsistent)
+  SHIPPING CONFIG:  STAGE10=on OPTIMIZER=mp RULES_MODE=corrected.
+             Legacy works + helps on 2/3 seasons (big on deployment) but has one
+             regression — kept functional, mp recommended. select_captain got a
+             CAP_Q90_W=0.35 kappa-analogue blend (legacy only; ILP untouched).
+  In-season head fine-tune (stage10_finetune.py): built, MEASURED NEGATIVE
+             (holdout MAE -0.001..-0.054), DISABLED (STAGE10_FT=on to experiment;
+             ft_*.npz gitignored).
+  Phase 2:  GNN over player/team/fixture nodes on the LSTM embeddings (planned).
+
 ## Training Files (data/processed/) — updated 2026-07-27, 7 seasons (2019-20..2025-26)
 train_gk.csv   — 5,174  rows  73 cols
 train_def.csv  — 22,108 rows  71 cols
@@ -410,6 +455,9 @@ models/xgb_mid.pkl  — MID model
 models/xgb_fwd.pkl  — FWD model
 models/stage7_results.json      — best hyperparams + MAE curves per position
 models/stage9_explanations.json — Claude narrative per GW
+models/stage10/pretrain_<S>.npz — Stage 10 LSTM checkpoints (numpy, runtime path)
+models/stage10/oof_preds.csv    — Stage 10 walk-forward OOF μ + residual target
+data/intel/season_simulation*_s10.json — STAGE10=on runs (never clobber baselines)
 data/intel/season_simulation.json — Season simulator GW1-38 full-season run (2468 pts)
 data/intel/final_squad.json       — Intel 06 GW1-10 simulation log
 data/intel/availability.json      — intel_03 output
@@ -539,6 +587,10 @@ DEF only:        prev_int_per_90, prev_tklW_per_90
 - ✅ DONE: Full GW1-38 season live demo (2468 pts)
 - ✅ DONE: Thesis write-up (FINKI_Thesis.pdf, MK + EN, Overleaf) with results
 - ✅ DONE: Chip strategy v2 implementation (see section above)
+- ✅ DONE: Stage 10 Phase 1 (LSTM residual layer) — shipped for OPTIMIZER=mp
+- PENDING: Stage 10 Phase 2 (GNN on the LSTM embeddings) — design in
+  docs/stage10_phase1_plan.md; held-out hyperparameter fold to de-risk the
+  Phase 1 in-sample tuning
 - PENDING: v2 GW1-38 backtest vs 2468 (blocked: needs data/raw from original
   machine), then generalization runs + bar re-tune via Optuna
 - Remaining polish: final thesis review / defense prep

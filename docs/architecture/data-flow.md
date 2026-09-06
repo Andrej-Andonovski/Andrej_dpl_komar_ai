@@ -97,6 +97,7 @@ flowchart LR
 | 7 | Train four LightGBM models, walk-forward CV | `models/xgb_*.pkl`, `stage7_results.json` |
 | 8 | ILP squad optimizer (legacy PuLP) | (invoked per GW) |
 | 9 | LLM narrative per GW (Claude) | `models/stage9_explanations.json` |
+| 10 | LSTM residual layer — corrects raw μ + calibrated `q90`, `STAGE10=on` ([[stage10-residual-layer]]) | `models/stage10/pretrain_<S>.npz`, `*_s10.json` |
 
 ## The per-gameweek loop
 
@@ -105,6 +106,12 @@ record → **retrain** cycle for GW1–38, retraining on observed actuals each w
 (online retraining, part of [[walkforward-no-leakage]]). The full runtime
 sequence — including chips and auto-subs — is documented in the
 [[season-simulation]] workflow.
+
+### Stage 10 residual adjustment (optional)
+When `STAGE10=on`, the raw GBM μ is corrected by the LSTM residual
+(`μ + r_applied`) and the captaincy ceiling `q90` is replaced with the
+calibrated value **before** the FDR/intel adjustments below. Default off is a
+byte-identical no-op. See [[stage10-residual-layer]].
 
 ### Intelligence adjustment
 Before optimization, predictions are scaled down for players who may not play:

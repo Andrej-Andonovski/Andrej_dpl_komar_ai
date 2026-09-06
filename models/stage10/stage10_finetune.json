@@ -1,0 +1,18 @@
+{
+  "config": {
+    "ft_min_gw": 5,
+    "ft_stride": 4,
+    "ft_epochs": 12,
+    "ft_lr": 0.0003,
+    "frozen": ["pos_emb", "lstm", "ts_mean", "ts_std", "q_mean", "q_std"]
+  },
+  "result": "DISABLED — measured negative. Head fine-tune on the thin partial-season residual sample overfits; holdout MAE regressed on every checkpoint. checkpoint_for() only selects ft_*.npz when STAGE10_FT==on.",
+  "holdout_mae_delta_pretrain_to_ft": {
+    "2024-25": {"gw5": 0.001, "gw9": -0.006, "gw13": -0.002, "gw17": -0.001,
+                "gw21": -0.003, "gw25": -0.006, "gw29": -0.007, "gw33": -0.006,
+                "gw37": -0.008},
+    "2023-24": {"gw5": -0.003, "gw9": -0.006, "gw13": -0.020, "gw17": -0.021,
+                "gw21": -0.023, "gw25": -0.035, "gw29": -0.038, "gw33": -0.054,
+                "gw37": -0.051}
+  }
+}

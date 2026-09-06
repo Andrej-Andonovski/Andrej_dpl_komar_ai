@@ -32,6 +32,8 @@ flowchart TD
 
     subgraph L1["1 · Prediction layer (Stage 7)"]
         MODELS["4 × LightGBM models<br/>GK / DEF / MID / FWD"]
+        S10["Stage 10 · LSTM residual layer<br/>r̂ + calibrated q90 (STAGE10=on)"]
+        MODELS --> S10
     end
 
     subgraph L2["2 · Optimization layer (Stage 8 + redesign)"]
@@ -65,13 +67,20 @@ Ingests historical and current-season data from multiple external sources and
 produces four position-split training files (~51k rows total). Stage 5 (matchup
 stats) was dropped as insufficient signal. Detailed sequence in [[data-flow]].
 
-### 1 · Prediction layer (Stage 7)
+### 1 · Prediction layer (Stage 7 + Stage 10)
 Four **separate LightGBM regressors**, one per position, predict each player's
 `total_points`. They are trained with **walk-forward cross-validation** across
 six seasons so no future information leaks into a prediction. Keeping models
 per-position and preserving temporal order are two of the project's
 [non-negotiable rules](../../CLAUDE.md). XGBoost was evaluated and rejected
 (LightGBM dominated the hyperparameter search).
+
+**Stage 10** ([[stage10-residual-layer]]) optionally stacks an LSTM on top: it
+reads each player's gameweek sequence and emits an additive residual correction
+plus a per-position-calibrated captaincy ceiling `q90`. Selected by
+`STAGE10=off|on` (default off, a true no-op — torch is not even imported).
+Shipped for the [[milp-optimizer]] path; Phase 2 adds a GNN. Evidence:
+[[stage10_phase1_report]].
 
 ### 2 · Optimization layer (Stage 8 + redesign)
 Turns predicted points into concrete decisions — squad, starting XI, captain,

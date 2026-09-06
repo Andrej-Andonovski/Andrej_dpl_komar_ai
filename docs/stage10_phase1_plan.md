@@ -349,5 +349,11 @@ First full Phase 1 result: ~1 day wall-clock, mostly the existing season sims.
    for experimentation, **OFF by default** (`STAGE10_FT=on` to enable, `ft_*.npz`
    gitignored). Gate 8: fine-tune re-run byte-identical; `STAGE10=on` season
    sim deterministic (numpy-only runtime) — two mp/2024-25 runs identical.
-7. full A/B matrix → gate 4; write `stage10_phase1_report.md`
-8. docs: component note + ADR + index/system-overview/data-flow links + CLAUDE.md
+7. ✅ full A/B matrix → gate 4. mp +14/+40/+81 (2023-24/24-25/25-26) — **PASS**;
+   legacy −12/+0/+73 — one regression, kept functional. 2025-26 inputs built
+   from vaastav via `build_season_inputs.py`. Report: `stage10_phase1_report.md`.
+8. ✅ docs: `components/stage10-residual-layer.md`, `decisions/stage10-residual-lstm.md`,
+   links from `index.md` / `system-overview.md` / `data-flow.md`, CLAUDE.md
+   "Stage 10" section.
+
+**Phase 1 SHIPPED 2026-09-07.** Config: `STAGE10=on OPTIMIZER=mp RULES_MODE=corrected`.
