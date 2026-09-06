@@ -297,6 +297,14 @@ if SIM_SEASON != LIVE_SEASON:
     RULE_EVENTS_FT = {}              # the GW15 grant was a 2025-26 event
     OUTPUT_JSON = OUTPUT_JSON.replace(".json", f"_{SIM_SEASON}.json")
 
+# Stage 10 (LSTM residual layer, docs/stage10_phase1_plan.md). "off" is a TRUE
+# no-op — refine() is never imported (so torch never loads) and predict_pool /
+# build_matrix take the exact code path they take without this flag. "on" writes
+# a separate *_s10.json so baselines are never clobbered.
+STAGE10 = os.environ.get("STAGE10", "off")
+if STAGE10 == "on":
+    OUTPUT_JSON = OUTPUT_JSON.replace(".json", "_s10.json")
+
 # Percentile chip bar: unanchored WC/TC/BB can only fire on a plain week
 # when their proxy clears the q-th percentile of the season's earlier plain
 # weeks (kind-level series).  DEFAULT OFF — the 2026-07-15 2×2 A/B showed
@@ -1508,16 +1516,44 @@ def train_gw1_models(train_dfs, hist_team_form=None):
 # ── Prediction ────────────────────────────────────────────────────────────────
 
 def predict_pool(pool, models, gw, current_squad_ids,
-                 gw1_preds=None, loyalty_override=None, sold_last_gw=None):
+                 gw1_preds=None, loyalty_override=None, sold_last_gw=None,
+                 stage10_resid_fn=None):
     """
     Predict points for all players.
     gw1_preds: stored after GW1 — blended into GW2-8 predictions for stability.
     loyalty_override: overrides loyalty_bonus(gw) (used for forced WC at GW17).
     sold_last_gw: reserved for future sell-buyback penalty (not active).
+    stage10_resid_fn: STAGE10=="on" only. Given, the raw model mu is stashed on
+        each pool row and, after a first pass, this callback returns
+        {pid: r_applied}; the raw mu + r is then re-run through the exact same
+        FDR/cap/loyalty pipeline. When None (STAGE10=="off") this function is
+        byte-identical to before the flag existed.
     """
     bonus = loyalty_override if loyalty_override is not None else loyalty_bonus(gw)
     completed_gws = gw - 1
     season_weight = min(1.0, completed_gws / BLEND_GWS) if gw1_preds else 1.0
+
+    def _finalize(p, pred):
+        # FDR adjustment — GK/DEF use position-specific multiplier
+        fdr      = p.get("fdr", 3.0)
+        pos      = p.get("pos", "MID")
+        fdr_mult = FDR_MULT_DEF if pos in ("GK", "DEF") else FDR_MULT
+        pred *= max(0.5, 1.0 - fdr_mult * (fdr - 3.0))
+        # Zero-minutes filter
+        if p.get("zero_minutes", False):
+            pred = 0.0
+        # GW1: add ownership signal on top of model prediction
+        if gw == 1:
+            pred += p.get("sbp", 0.0) * OWN_BOOST_GW1
+        # GW2-8: blend retrained pred with GW1 pred for early-season stability
+        if gw1_preds and 2 <= gw <= 8 and p["player_id"] in gw1_preds:
+            pred = season_weight * pred + (1.0 - season_weight) * gw1_preds[p["player_id"]]
+        # Per-player prediction ceiling
+        pred = min(max(0.0, pred), PRED_CAP)
+        # Loyalty bonus for existing squad members
+        if p["player_id"] in current_squad_ids:
+            pred += bonus
+        return pred
 
     for p in pool:
         pos   = p["pos"]
@@ -1530,32 +1566,19 @@ def predict_pool(pool, models, gw, current_squad_ids,
         else:
             pred = p.get("avg_points_per_game", 2.0)
 
-        # FDR adjustment — GK/DEF use position-specific multiplier
-        fdr      = p.get("fdr", 3.0)
-        pos      = p.get("pos", "MID")
-        fdr_mult = FDR_MULT_DEF if pos in ("GK", "DEF") else FDR_MULT
-        pred *= max(0.5, 1.0 - fdr_mult * (fdr - 3.0))
+        if stage10_resid_fn is not None:
+            p["_mu_raw"] = pred
+        else:
+            p["pred"] = _finalize(p, pred)
 
-        # Zero-minutes filter
-        if p.get("zero_minutes", False):
-            pred = 0.0
-
-        # GW1: add ownership signal on top of model prediction
-        if gw == 1:
-            pred += p.get("sbp", 0.0) * OWN_BOOST_GW1
-
-        # GW2-8: blend retrained pred with GW1 pred for early-season stability
-        if gw1_preds and 2 <= gw <= 8 and pid in gw1_preds:
-            pred = season_weight * pred + (1.0 - season_weight) * gw1_preds[pid]
-
-        # Per-player prediction ceiling
-        pred = min(max(0.0, pred), PRED_CAP)
-
-        # Loyalty bonus for existing squad members
-        if pid in current_squad_ids:
-            pred += bonus
-
-        p["pred"] = pred
+    if stage10_resid_fn is not None:
+        resid = stage10_resid_fn(pool) or {}
+        for p in pool:
+            r = resid.get(p["player_id"], {})
+            p["pred"] = _finalize(p, p["_mu_raw"] + (r.get("r", 0.0) if isinstance(r, dict) else float(r)))
+            if isinstance(r, dict) and "q90" in r:
+                p["stage10_sigma"] = r["sigma"]
+                p["stage10_q90"] = r["q90"]
 
     # Keep predictions calibrated — if top-11 sum exceeds cap, scale all down
     top11_sum = sum(sorted([p["pred"] for p in pool], reverse=True)[:11])
@@ -2359,6 +2382,16 @@ def run_simulation():
     hits_paid        = 0     # season running total (MP_HIT_BUDGET enforcement)
     form_hold        = {}    # pid -> sell-penalty for last GW's haulers
     minutes_model    = MinutesModel() if OPTIMIZER == "mp" else None
+    # STAGE10: {gw: {pid: raw_gbm_mu}} accumulated each GW — the model-as-of-g's
+    # own prediction, so timesteps built from it are walk-forward correct.
+    raw_mu_history   = {}
+    _stage10_refine  = None
+    if STAGE10 == "on":
+        try:
+            from pipeline import stage10_refine as _stage10_refine
+        except ImportError:
+            import stage10_refine as _stage10_refine
+        print(f"  [STAGE10] on — residual layer active for season {SIM_SEASON}")
     bank             = 0.0
     free_transfers   = 1
     chips_used       = set()
@@ -2472,6 +2505,27 @@ def run_simulation():
                          and gw == 17 and "wc1" not in chips_used)
         loyalty_ovr   = WC17_LOYALTY if wc17_force else None
 
+        # ── Stage 10 residual callbacks (STAGE10=="on" only) ────────────────
+        _s10_resid_fn = None
+        _s10_mp_resid = None
+        _s10_mp_clean = {}
+        if _stage10_refine is not None:
+            _live = (SIM_SEASON == LIVE_SEASON)
+
+            def _s10_resid_fn(_pool, _gw=gw):
+                mu_raw = {p["player_id"]: p.get("_mu_raw", 0.0) for p in _pool}
+                return _stage10_refine.refine(
+                    _pool, _gw, SIM_SEASON, hist_lookup, raw_mu_history,
+                    mu_raw, fdr_lookup, home_lookup, live=_live)
+
+            def _s10_mp_resid(_g, _clean_by_pid, _gw=gw):
+                if _g != _gw:
+                    return {}                      # step 4: correct the decision GW only
+                _s10_mp_clean.update(_clean_by_pid)
+                return _stage10_refine.refine(
+                    pool, _gw, SIM_SEASON, hist_lookup, raw_mu_history,
+                    _clean_by_pid, fdr_lookup, home_lookup, live=_live)
+
         # ── Predict ─────────────────────────────────────────────────────────
         mp_rows = None
         if OPTIMIZER == "mp":
@@ -2490,13 +2544,20 @@ def run_simulation():
             mp_matrix = pmx.build_matrix(
                 pool, models, fixture_list, gw, MP_HORIZON,
                 hist_lookup=hist_lookup, avail_gws=avail_gws,
-                purchase_price=purchase_price, pi_overrides=pi_overrides)
+                purchase_price=purchase_price, pi_overrides=pi_overrides,
+                resid_fn=_s10_mp_resid)
             mp_rows = mp_matrix[gw]
             for p in pool:
                 p["pred"] = mp_rows.get(p["player_id"], {}).get("mu", 0.0)
+            if _stage10_refine is not None:
+                raw_mu_history[gw] = dict(_s10_mp_clean)
         else:
             pool = predict_pool(pool, models, gw, current_squad,
-                                gw1_preds=gw1_preds, loyalty_override=loyalty_ovr)
+                                gw1_preds=gw1_preds, loyalty_override=loyalty_ovr,
+                                stage10_resid_fn=_s10_resid_fn)
+            if _stage10_refine is not None:
+                raw_mu_history[gw] = {p["player_id"]: p.get("_mu_raw", 0.0)
+                                      for p in pool}
 
             # ── DGW boost: players with 2 fixtures this GW play twice ────────
             if gw in dgw_gws:

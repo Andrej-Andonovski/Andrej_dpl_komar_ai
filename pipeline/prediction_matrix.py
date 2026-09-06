@@ -193,7 +193,8 @@ def player_stats(ph, t, minutes_reliability_fallback=0.5):
 
 def build_matrix(pool, models, fixture_list, t, horizon,
                  feat_cols=None, hist_lookup=None, avail_gws=None,
-                 purchase_price=None, max_gw=38, pi_overrides=None):
+                 purchase_price=None, max_gw=38, pi_overrides=None,
+                 resid_fn=None):
     """
     pool         : list of player dicts (build_rolling_pool / build_gw1_pool
                    shape: player_id, pos, team, price, zero_minutes, features)
@@ -208,6 +209,11 @@ def build_matrix(pool, models, fixture_list, t, horizon,
                    (pipeline/minutes_model.py) — replaces the heuristic
                    pi_base/rot for those pids; the intel blend, phi and q90
                    are untouched. Absent pids keep the heuristic.
+    resid_fn     : STAGE10=="on" only. resid_fn(g, {pid: clean_mu_sum}) ->
+                   {pid: {"r": r_applied, "q90": q90}}. `r` is added to that
+                   GW's post-FDR mu; `q90` (if present) overrides the
+                   headroom q90. When None this function is byte-identical to
+                   before the flag existed.
 
     Returns {g: {pid: {"mu","n_fix","pi","phi","q90","price","sell_value"}}}
     """
@@ -272,6 +278,7 @@ def build_matrix(pool, models, fixture_list, t, horizon,
                 per_pos[p["pos"]]["who"].append(pid)
 
         mu_raw = defaultdict(float)
+        mu_clean = defaultdict(float)                 # pre-FDR sum, STAGE10 only
         for pos, batch in per_pos.items():
             X = np.vstack(batch["X"])
             model = models.get(pos)
@@ -283,6 +290,9 @@ def build_matrix(pool, models, fixture_list, t, horizon,
                     next((q.get("avg_points_per_game", 2.0) for q in pool
                           if q["player_id"] == pid), 2.0)
                     for pid in batch["who"]], dtype=float)
+            if resid_fn is not None:
+                for pid, pr in zip(batch["who"], np.maximum(preds, 0.0)):
+                    mu_clean[pid] += float(pr)
             # Per-fixture FDR adjustment — same formula as legacy, applied
             # per fixture (correct for DGWs) using that fixture's own fdr.
             fdr_mult = FDR_MULT_DEF if pos in ("GK", "DEF") else FDR_MULT
@@ -291,6 +301,8 @@ def build_matrix(pool, models, fixture_list, t, horizon,
             preds = np.maximum(preds, 0.0)            # per-fixture floor
             for pid, pr in zip(batch["who"], preds):
                 mu_raw[pid] += float(pr)              # DGW: sum fixtures
+
+        resid_g = resid_fn(g, dict(mu_clean)) if resid_fn is not None else {}
 
         for p in pool:
             pid, pos = p["player_id"], p["pos"]
@@ -311,6 +323,12 @@ def build_matrix(pool, models, fixture_list, t, horizon,
                 pi_intel = s["pi_base"]
             pi = w * pi_intel + (1.0 - w) * s["pi_base"]
 
+            # STAGE10: add the LSTM residual to the post-FDR mu (r_hat was
+            # trained on clean residuals; FDR-scaling it too would double-count)
+            _s10 = resid_g.get(pid) if resid_g else None
+            if _s10 and mu > 0.0:
+                mu += _s10.get("r", 0.0)
+
             if n_fix == 0 or p.get("zero_minutes", False):
                 mu, pi = 0.0, 0.0
             if mu > MU_SANITY_MAX:                    # assert-only, no clamp
@@ -324,6 +342,8 @@ def build_matrix(pool, models, fixture_list, t, horizon,
             else:
                 headroom = sigma_prior[pos]
             q90 = mu + headroom * math.sqrt(n_fix) if n_fix > 0 else 0.0
+            if _s10 and "q90" in _s10 and n_fix > 0:
+                q90 = _s10["q90"]
 
             price = p.get("price", 0.0)
             rows[pid] = {

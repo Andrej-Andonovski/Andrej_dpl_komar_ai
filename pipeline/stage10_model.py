@@ -109,14 +109,19 @@ class NumpyResidualLSTM:
 
     def _forward_one(self, ts, query, length, pos_id):
         F, Q = self.F, self.Q
-        ts = (ts[:length] - self.w["ts_mean"]) / self.w["ts_std"]
         query = (query - self.w["q_mean"]) / self.w["q_std"]
         emb = self.w["pos_emb"][pos_id]                      # [P]
 
-        seq = np.concatenate([ts, np.tile(emb, (length, 1))], axis=1)
-        for k in range(self.L):
-            seq = self._lstm_layer(seq, k)
-        h_last = seq[-1]                                     # [H]
+        if length <= 0:
+            # no sequence yet (GW1, or a player with no prior appearance) —
+            # zero LSTM state; the confidence gate zeros r_hat anyway
+            h_last = np.zeros(self.H)
+        else:
+            ts = (ts[:length] - self.w["ts_mean"]) / self.w["ts_std"]
+            seq = np.concatenate([ts, np.tile(emb, (length, 1))], axis=1)
+            for k in range(self.L):
+                seq = self._lstm_layer(seq, k)
+            h_last = seq[-1]                                 # [H]
 
         q_in = np.concatenate([query, emb])
         q_repr = _gelu_tanh(self.w["qmlp_w"] @ q_in + self.w["qmlp_b"])

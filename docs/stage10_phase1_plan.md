@@ -331,12 +331,18 @@ First full Phase 1 result: ~1 day wall-clock, mostly the existing season sims.
 1. ✅ `stage10_oof.py` — OOF residual target, distributions verified (bias ≈ 0,
    MAE matches `stage7_results.json`, 2:1 skew toward missed hauls)
 2. ✅ `stage10_sequence.py` + `test_stage10_sequence.py` — 11/11 leakage tests pass
-3. **← current:** `stage10_model.py` (torch + numpy, parity Δ < 1e-7 verified) +
-   `stage10_train.py` + `stage10_infer.py`; running `--pretrain --ablation`
-   locally for the NLL curves, gate 2 (MAE), gate 3 (q90)
-4. `stage10_refine.py` + `predict_pool` loop-split + `test_stage10_identity.py` +
-   `test_stage10_shapes.py` (gate 1, legacy)
-5. `build_matrix` callback + gate 1 (mp / corrected)
+3. ✅ `stage10_model.py` (torch + numpy, parity Δ 1.9e-7) + `stage10_train.py` +
+   `stage10_infer.py`. Gate 2 (MAE) mean +0.026 all folds positive; gate 3
+   (q90) mean coverage 0.890, deployment fold 0.913 (from 0.836). Fixes:
+   `LAMBDA_R` L2 on r_hat, MAE-based checkpoint, per-position train-calibrated z.
+4. ✅ `stage10_refine.py` + `predict_pool` restructure (`_finalize` helper,
+   `stage10_resid_fn`) + `test_stage10_identity.py` + `test_stage10_shapes.py`.
+   **Gate 1 PASS all 4 configs:** legacy/off & mp/off byte-identical to
+   pre-wiring at GW1-38 (2026-27 live AND 2024-25 full-season backtest);
+   legacy/on & mp/on run clean over a full season; torch never imported.
+   `STAGE10=on` writes a separate `*_s10.json`. Tests 6/6 + 6/6.
+5. ✅ `build_matrix` `resid_fn` callback (mp path) — folded into step 4; gate 1
+   covers mp/off byte-identical + mp/on full-season.
 6. in-season fine-tune + gate 8
 7. full A/B matrix → gate 4; write `stage10_phase1_report.md`
 8. docs: component note + ADR + index/system-overview/data-flow links + CLAUDE.md
