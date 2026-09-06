@@ -75,6 +75,7 @@ Why the project is built the way it is (Phase 4, ADR-style):
 - [[corrected-vs-legacy-rules|Corrected vs legacy FPL rules]]
 - [[optimizer-redesign|Optimizer redesign (ILP → MILP)]]
 - [[chip-strategy-v2|Chip Strategy v2]]
+- [[player-identity-features|Player-identity & context features (design)]]
 - [[known-limitations|Accepted known limitations]]
 
 ## Reference

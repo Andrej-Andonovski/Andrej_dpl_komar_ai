@@ -996,6 +996,19 @@ PREV_COLS = [
     "prev_cs_rate",
 ]
 
+# Career-level player quality (docs/player_identity_features.md §2, 2026-09-04).
+# Unlike PREV_COLS (fires once, on a debutant's first PL season, from an
+# OUTSIDE-the-PL source), these fire on every season after a player's first
+# PL season, computed from vaastav's OWN prior-season rows -- the model
+# otherwise has no way to tell an established player from a rookie once the
+# live season is only 1-2 GWs old (see the Haaland case in the design doc).
+CAREER_COLS = [
+    "career_ppg_last_season",
+    "career_ppg_last3_seasons",
+    "career_minutes_reliability_last_season",
+    "career_seasons_established",
+]
+
 
 def _norm(s: str) -> str:
     nfd = unicodedata.normalize("NFD", str(s))
@@ -1102,6 +1115,99 @@ def match_lookup_to_vaastav(
             unmatched.append(sig)
 
     return pd.DataFrame(matched_rows), unmatched, fuzzy_below95
+
+
+ESTABLISHED_MINUTES_THRESHOLD = 900  # ~10 full matches: the "established" bar
+
+_CAREER_DEFAULT = {
+    "career_ppg_last_season":                 0.0,
+    "career_ppg_last3_seasons":                0.0,
+    "career_minutes_reliability_last_season":  0.0,
+    "career_seasons_established":               0,
+}
+
+
+def _player_season_summaries(df: "pd.DataFrame") -> "pd.DataFrame":
+    """One row per (name, season): that season's END-of-season snapshot of
+    the already-computed rolling columns, plus total minutes that season.
+    Shared building block for build_career_lookup (training rows) and
+    build_career_snapshot (live-season pool -- one step beyond history)."""
+    return (df.sort_values("GW")
+              .groupby(["name", "season"], as_index=False)
+              .agg(avg_ppg_end=("avg_points_per_game_season", "last"),
+                   min_rel_end=("minutes_reliability_season", "last"),
+                   season_minutes=("minutes", "sum")))
+
+
+def _career_state_before(grp: "pd.DataFrame", i: int) -> dict:
+    """Career dict as known BEFORE playing season index i of grp (grp sorted
+    by season, reset_index'd) -- i.e. built from indices [0, i) only."""
+    if i == 0:
+        return dict(_CAREER_DEFAULT)
+    prior_ppgs = grp.loc[max(0, i - 3):i - 1, "avg_ppg_end"].tolist()
+    established = int((grp.loc[:i - 1, "season_minutes"]
+                       >= ESTABLISHED_MINUTES_THRESHOLD).sum())
+    return {
+        "career_ppg_last_season":
+            round(float(grp.loc[i - 1, "avg_ppg_end"]), 6),
+        "career_ppg_last3_seasons":
+            round(float(sum(prior_ppgs) / len(prior_ppgs)), 6),
+        "career_minutes_reliability_last_season":
+            round(float(grp.loc[i - 1, "min_rel_end"]), 6),
+        "career_seasons_established":
+            established,
+    }
+
+
+def build_career_lookup(df: "pd.DataFrame") -> dict:
+    """
+    Per (name, season): career_* values computed from that player's own
+    STRICTLY PRIOR seasons in df (walk-forward safe -- a season's value
+    never depends on itself or anything later).
+
+    Reuses step3's own already-computed, already-validated end-of-season
+    rolling columns (avg_points_per_game_season, minutes_reliability_season)
+    instead of recomputing from raw GW rows -- take each player-season's
+    LAST GW row (the final, most complete snapshot of that season) rather
+    than aggregating fresh.
+
+    "Prior season" means the player's last PL season WITH DATA, not
+    necessarily season N-1 chronologically (a player can be absent a season
+    -- relegated, injured all year, abroad -- and still correctly carry
+    their last real PL form forward once they reappear).
+
+    Returns {(name, season): {col: value, ...}} for every (name, season)
+    pair in df -- including first-season pairs, which get the all-default
+    row (so callers can always look up any (name, season) uniformly).
+    """
+    last_gw = _player_season_summaries(df)
+    lookup = {}
+    for name, grp in last_gw.groupby("name"):
+        grp = grp.sort_values("season").reset_index(drop=True)
+        for i, season in enumerate(grp["season"].tolist()):
+            lookup[(name, season)] = _career_state_before(grp, i)
+    return lookup
+
+
+def build_career_snapshot(df: "pd.DataFrame") -> dict:
+    """
+    Per name: career_* values as of just BEFORE the season after the last
+    one present in df -- i.e. what a player carries INTO a brand-new live
+    season that isn't in df at all yet. Used by season_simulator.py to
+    populate GW1+ live-pool features from historical training data (already
+    cut to season < SIM_SEASON by load_training_data(), so df here is
+    exactly "every prior season" from the live season's perspective).
+
+    Returns {name: {col: value, ...}} -- one entry per player, the
+    equivalent of "one more _career_state_before call past their last
+    season."
+    """
+    last_gw = _player_season_summaries(df)
+    snapshot = {}
+    for name, grp in last_gw.groupby("name"):
+        grp = grp.sort_values("season").reset_index(drop=True)
+        snapshot[name] = _career_state_before(grp, len(grp))
+    return snapshot
 
 
 # ─── Step 4 ───────────────────────────────────────────────────────────────────
@@ -1279,6 +1385,36 @@ def step4(state: dict):
                 print(f"    {player:<25} not found in base table")
     print()
 
+    # ── STEP 4D — Career-level player quality (docs/player_identity_features.md §2) ──
+    print("  STEP 4D: Building career-level player quality lookup ...")
+    career_lookup = build_career_lookup(df)
+    for col in CAREER_COLS:
+        df[col] = 0.0
+    df[CAREER_COLS] = df[CAREER_COLS].astype("float64")
+
+    career_rows_filled = 0
+    for (name, season), feats in career_lookup.items():
+        if feats["career_seasons_established"] == 0 and feats["career_ppg_last_season"] == 0.0:
+            continue  # default row -- nothing to fill, already 0.0
+        mask = (df["name"] == name) & (df["season"] == season)
+        n_rows = mask.sum()
+        for col, val in feats.items():
+            df.loc[mask, col] = val
+        career_rows_filled += n_rows
+
+    career_nan = df[CAREER_COLS].isna().sum().sum()
+    print(f"  Filled {career_rows_filled:,} GW rows with career_* features "
+         f"(seasons after each player's first PL season)")
+    print(f"    NaN in career_ columns: {career_nan}  (must be 0)")
+    if career_nan:
+        print("  FATAL: NaN values in career_ columns -- stopping.")
+        sys.exit(1)
+    established_players = sum(1 for f in career_lookup.values()
+                              if f["career_seasons_established"] > 0)
+    print(f"    (name, season) pairs with >=1 established prior season: "
+         f"{established_players} / {len(career_lookup)}")
+    print()
+
     # ── Save ─────────────────────────────────────────────────────────────────
     df.to_csv(base_path, index=False)
     print(f"  Saved base_gw_table.csv  ({len(df):,} rows x {len(df.columns)} cols)")
@@ -1290,6 +1426,9 @@ def step4(state: dict):
         "gw_rows_with_prev":         int(has1),
         "gw_rows_without":           int(has0),
         "nan_in_prev_cols":          int(nan_count),
+        "career_rows_filled":        int(career_rows_filled),
+        "career_established_pairs": int(established_players),
+        "nan_in_career_cols":        int(career_nan),
         "total_columns":             len(df.columns),
         "fuzzy_below_95":            [(s, v, r) for s, v, r in fuzzy_below95],
         "output":                    "data/processed/base_gw_table.csv",
@@ -1299,14 +1438,16 @@ def step4(state: dict):
     # ── Gate 4 ────────────────────────────────────────────────────────────────
     print()
     print("=" * 70)
-    print("STEP 4 COMPLETE -- Previous League Features Attached")
+    print("STEP 4 COMPLETE -- Previous League + Career Features Attached")
     print("=" * 70)
     print(f"  Players with prev league data:    {len(attach_map)}")
     print(f"  Players without (vaastav only):   {df['name'].nunique() - len(attach_map):,}")
     print(f"  has_prev_league_data=1 GW rows:   {has1:,}")
     print(f"  has_prev_league_data=0 GW rows:   {has0:,}")
     print(f"  NaN in prev_ columns:             {nan_count}  (must be 0)")
-    print(f"  Columns in base table now:        {len(df.columns)}  (32 + 12)")
+    print(f"  Career_ rows filled:              {career_rows_filled:,}")
+    print(f"  NaN in career_ columns:           {career_nan}  (must be 0)")
+    print(f"  Columns in base table now:        {len(df.columns)}  (32 + 12 + 4)")
     print()
     if fuzzy_below95:
         print("  Fuzzy matches below 95% needing review:")
@@ -1802,10 +1943,14 @@ def step7(state):
 
     MARKET_COLS = ["transfers_in", "transfers_out", "selected", "value"]
 
+    # docs/player_identity_features.md §2 -- nonzero from a player's 2nd+ PL
+    # season onward, so deliberately NOT added to ZERO_AT_GW1 below.
+    CAREER_COLS_SHARED = list(CAREER_COLS)
+
     SHARED = (
         IDENTITY_COLS + TARGET_COL + RAW_STAT_COLS + ROLLING_COLS_SHARED
         + PREV_LEAGUE_COLS + TEAM_FORM_COLS_SHARED + FIXTURE_COLS_SHARED
-        + MARKET_COLS
+        + MARKET_COLS + CAREER_COLS_SHARED
     )
 
     POS_EXTRA = {
@@ -1979,9 +2124,17 @@ def step8(state):
         print(f"  Loaded {path}  ({len(dfs[pos]):,} rows x {len(dfs[pos].columns)} cols)")
     print()
 
+    # A player's first season WITHIN one position's split file is not
+    # necessarily their true first-ever PL season (position changers) — the
+    # career_* leakage check (Check 11) needs the GLOBAL first season from
+    # the pre-split base table.
+    global_first_season = (pd.read_csv("data/processed/base_gw_table.csv",
+                                       usecols=["name", "season"], low_memory=False)
+                             .groupby("name")["season"].min())
+
     # ── Run checks ────────────────────────────────────────────────────────────
     # results[check_num][pos] = "PASS" | "FAIL: <reason>"
-    results = {i: {} for i in range(1, 11)}
+    results = {i: {} for i in range(1, 12)}
     any_fail = False
 
     def record(check, pos, ok, reason=""):
@@ -2059,6 +2212,25 @@ def step8(state):
         record(10, pos, g_bad == 0 and a_bad == 0,
                f"prev_adjG nonzero={g_bad}, prev_adjA nonzero={a_bad}")
 
+        # Check 11 — Career features zero at each player's own FIRST recorded
+        # season (docs/player_identity_features.md §2). NOTE: this is NOT
+        # the same invariant as Check 10 -- career_seasons_established==0
+        # does NOT imply "no prior data" the way has_prev_league_data==0
+        # does. A player can have a real (nonzero) career_ppg_last_season
+        # from a prior season that just didn't hit the 900-minute
+        # "established" bar (e.g. a backup keeper with cameo appearances) —
+        # that's correct signal, not leakage. The actual no-leakage
+        # invariant is: a player's OWN first-ever season in the dataset must
+        # carry the all-default row. Uses the GLOBAL first season (position
+        # changers can have an earlier debut in a different position file).
+        first_rows = df[df["season"] == df["name"].map(global_first_season)]
+        ppg_bad = int((first_rows["career_ppg_last_season"] != 0).sum())
+        rel_bad = int((first_rows["career_minutes_reliability_last_season"] != 0).sum())
+        est_bad = int((first_rows["career_seasons_established"] != 0).sum())
+        record(11, pos, ppg_bad == 0 and rel_bad == 0 and est_bad == 0,
+               f"first-season nonzero: ppg={ppg_bad}, reliability={rel_bad}, "
+               f"established={est_bad}")
+
     if any_fail:
         print()
         print("  *** ONE OR MORE CRITICAL CHECKS FAILED — stopping. ***")
@@ -2076,6 +2248,7 @@ def step8(state):
         8:  "No neg min",
         9:  "All numeric",
         10: "Prev isolation",
+        11: "Career isolation",
     }
     print("=" * 70)
     print("CHECK RESULTS:")
@@ -2124,7 +2297,7 @@ def step8(state):
         "=" * 70,
         "",
         "CRITICAL CHECKS:",
-    ] + [check_line(n) for n in range(1, 11)] + [
+    ] + [check_line(n) for n in range(1, 12)] + [
         "",
         f"OVERALL: {overall}",
         "",

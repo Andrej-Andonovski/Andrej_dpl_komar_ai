@@ -43,6 +43,13 @@ try:
 except ImportError:
     from feature_engineering_stage6 import build_prev_lookup as _build_prev_lookup
 
+# Career-level player quality snapshot (docs/player_identity_features.md §2,
+# 2026-09-04) — same reuse-Stage-6's-own-logic pattern as _build_prev_lookup.
+try:
+    from pipeline.feature_engineering_stage6 import build_career_snapshot as _build_career_snapshot
+except ImportError:
+    from feature_engineering_stage6 import build_career_snapshot as _build_career_snapshot
+
 warnings.filterwarnings("ignore")
 random.seed(42)
 np.random.seed(42)
@@ -373,9 +380,21 @@ PREV_LEAGUE_FEAT_COLS = [
     "prev_tklW_per_90", "prev_saves_per_game", "prev_cs_rate",
 ]
 
+# Career-level player quality (docs/player_identity_features.md §2,
+# 2026-09-04). Unlike PREV_LEAGUE_FEAT_COLS (a debutant's last league
+# BEFORE the PL), these summarise a player's OWN prior PL seasons — the gap
+# that let the mp optimizer treat a 3-season Haaland and a rookie as
+# identical at GW3 (rolling features below are within-current-season only).
+# Keep this list identical, in the same order, to prediction_matrix.py's
+# DEFAULT_FEAT_COLS — the runtime assert in phase1_calibration.py checks it.
+CAREER_FEAT_COLS = [
+    "career_ppg_last_season", "career_ppg_last3_seasons",
+    "career_minutes_reliability_last_season", "career_seasons_established",
+]
+
 FEAT_COLS = ROLLING_FEAT_COLS + [
     "value", "was_home", "fdr",
-] + PREV_LEAGUE_FEAT_COLS
+] + PREV_LEAGUE_FEAT_COLS + CAREER_FEAT_COLS
 
 # Intel 08 feature flags — kept for trial_runner compatibility; team/opp features
 # are NOT in FEAT_COLS so these flags have no effect on predictions.
@@ -518,6 +537,60 @@ def _norm(s):
     except Exception:
         pass
     return "".join(c for c in s.lower() if c.isalpha())
+
+
+# ── Career-level player quality snapshot ──────────────────────────────────────
+# docs/player_identity_features.md §2 (2026-09-04). GW1 pool building already
+# picks this up "for free" via train_dfs + FEAT_COLS (build_gw1_pool's
+# name_idx.mean() over a season's rows returns that season's already-merged
+# career_* constant). build_rolling_pool/build_retrain_rows do NOT touch
+# train_dfs at all (they're built from hist_lookup, the LIVE season's own
+# actuals only) — those need this snapshot merged in explicitly, or these
+# columns silently default to 0.0 via build_matrix's row.get(f, 0.0)
+# fallback, exactly like PREV_LEAGUE_FEAT_COLS already does today for GW2+
+# (a separate, pre-existing gap this change does not attempt to fix).
+
+_CAREER_SNAPSHOT_CACHE = None
+_CAREER_DEFAULT = {c: 0.0 for c in CAREER_FEAT_COLS}
+_CAREER_DEFAULT["career_seasons_established"] = 0
+
+
+def load_career_snapshot():
+    """{norm_name: career_dict} as of just before SIM_SEASON, built from
+    every prior season in base_gw_table.csv (walk-forward safe — filtered to
+    season < SIM_SEASON, matching load_training_data()'s own cut, so this is
+    correct for both the live season and the cross-season harness)."""
+    path = os.path.join(DATA_DIR, "processed", "base_gw_table.csv")
+    if not os.path.exists(path):
+        print("  [CAREER] base_gw_table.csv not found — career_* features "
+             "will default to 0 (run pipeline/feature_engineering_stage6.py)")
+        return {}
+    df = pd.read_csv(path, low_memory=False)
+    df = df[df["season"] < SIM_SEASON]
+    snapshot = _build_career_snapshot(df)
+    return {_norm(name): feats for name, feats in snapshot.items()}
+
+
+def _get_career_snapshot():
+    global _CAREER_SNAPSHOT_CACHE
+    if _CAREER_SNAPSHOT_CACHE is None:
+        _CAREER_SNAPSHOT_CACHE = load_career_snapshot()
+    return _CAREER_SNAPSHOT_CACHE
+
+
+def _lookup_career(candidates):
+    """Try each name candidate (web_name, second_name, full name, ...)
+    against the career snapshot; exact normalised match only — no fuzzy/
+    partial fallback here, unlike build_gw1_pool's debutant cascade, since a
+    wrong career match (unlike a wrong rolling-form match) would misattribute
+    a DIFFERENT player's multi-season track record, exactly the surname-
+    collision risk CLAUDE.md warns about (two different 'Hughes', etc)."""
+    snapshot = _get_career_snapshot()
+    for candidate in candidates:
+        nc = _norm(candidate)
+        if nc and nc in snapshot:
+            return snapshot[nc]
+    return _CAREER_DEFAULT
 
 
 # ── Intel-03 Availability ─────────────────────────────────────────────────────
@@ -1211,6 +1284,8 @@ def build_rolling_pool(players_df, hist_lookup, fdr_lookup, home_lookup,
         etype = int(r.element_type)
         team  = int(r.team)
         web   = str(r.web_name)
+        fn    = str(getattr(r, "first_name", ""))
+        sn    = str(getattr(r, "second_name", ""))
         price_static = float(r.price)
         sbp   = float(r.selected_by_percent) if hasattr(r, "selected_by_percent") else 0.0
 
@@ -1251,6 +1326,7 @@ def build_rolling_pool(players_df, hist_lookup, fdr_lookup, home_lookup,
 
         tf  = (team_form_lookup or {}).get((team, next_gw), {}) if TEAM_FEATURES else {}
         opp = (opp_lookup       or {}).get((team, next_gw), {}) if OPP_FEATURES  else {}
+        career = _lookup_career([web, sn, fn + " " + sn, fn])
 
         pool.append({
             "player_id": pid, "web_name": web, "pos": pos,
@@ -1271,6 +1347,7 @@ def build_rolling_pool(players_df, hist_lookup, fdr_lookup, home_lookup,
             "team_cs_rate_last3":  tf.get("team_cs_rate_last3", 0.3),
             "opp_goals_last3":     opp.get("opp_goals_last3",   1.5),
             "opp_cs_rate_last3":   opp.get("opp_cs_rate_last3", 0.3),
+            **career,
         })
     return pool
 
@@ -1285,10 +1362,14 @@ def build_retrain_rows(players_df, hist_lookup, fdr_lookup, home_lookup,
         pid  = int(r.id)
         pos  = str(r.position)
         team = int(r.team)
+        web  = str(r.web_name)
+        fn   = str(getattr(r, "first_name", ""))
+        sn   = str(getattr(r, "second_name", ""))
         price_static = float(r.price)
         ph   = hist_lookup.get(pid, {})
         if not ph:
             continue
+        career = _lookup_career([web, sn, fn + " " + sn, fn])
 
         for target_gw in range(2, up_to_gw + 1):
             if target_gw not in ph:
@@ -1345,6 +1426,7 @@ def build_retrain_rows(players_df, hist_lookup, fdr_lookup, home_lookup,
                 "opp_goals_last3":     opp.get("opp_goals_last3",   1.5),
                 "opp_cs_rate_last3":   opp.get("opp_cs_rate_last3", 0.3),
                 "total_points":        target_pts,
+                **career,
             })
     return rows_by_pos
 

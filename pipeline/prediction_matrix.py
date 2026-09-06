@@ -56,6 +56,11 @@ DEFAULT_FEAT_COLS = [
     "prev_league_multiplier", "prev_seasons_available", "prev_reliability_avg",
     "prev_minutes_avg", "prev_small_sample", "prev_int_per_90",
     "prev_tklW_per_90", "prev_saves_per_game", "prev_cs_rate",
+    # docs/player_identity_features.md §2 — must match season_simulator.py's
+    # FEAT_COLS / CAREER_FEAT_COLS exactly (order included); the consistency
+    # assert lives in phase1_calibration.py.
+    "career_ppg_last_season", "career_ppg_last3_seasons",
+    "career_minutes_reliability_last_season", "career_seasons_established",
 ]
 
 # ── Availability tiers (intel_03) ─────────────────────────────────────────────

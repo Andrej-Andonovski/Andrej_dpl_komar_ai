@@ -394,13 +394,14 @@ Per-GW explanations via Claude API (post-simulation analysis):
   Note: Stage 9 is explanatory only — decisions are made by intel_06/simulator.
 
 ## Training Files (data/processed/) — updated 2026-07-27, 7 seasons (2019-20..2025-26)
-train_gk.csv   — 5,174  rows  69 cols
-train_def.csv  — 22,108 rows  67 cols
-train_mid.csv  — 25,975 rows  65 cols
-train_fwd.csv  — 6,563  rows  65 cols
+train_gk.csv   — 5,174  rows  73 cols
+train_def.csv  — 22,108 rows  71 cols
+train_mid.csv  — 25,975 rows  69 cols
+train_fwd.csv  — 6,563  rows  69 cols
 TOTAL          — 59,820 rows
 Target column: total_points
-All validated: 0 NaN, 0 leakage (10/10 Stage 6 checks pass), 0 cross-season bleed
+All validated: 0 NaN, 0 leakage (11/11 Stage 6 checks pass), 0 cross-season bleed
+Col counts include the 4 career_* features added 2026-09-04 (docs/player_identity_features.md §2).
 
 ## Model Output Paths
 models/xgb_gk.pkl   — GK model (contains LightGBM when MODEL_TYPE=lgbm)
@@ -460,6 +461,14 @@ Prev league:     has_prev_league_data, prev_adjG_per_90,
                  prev_adjA_per_90, prev_league_multiplier,
                  prev_seasons_available, prev_reliability_avg,
                  prev_minutes_avg, prev_small_sample
+Career quality:  career_ppg_last_season, career_ppg_last3_seasons,
+                 career_minutes_reliability_last_season,
+                 career_seasons_established
+                 (added 2026-09-04, docs/player_identity_features.md §2 —
+                 multi-season prior-PL-season summary; rolling player
+                 features above reset every season, so this is the only
+                 signal that tells an established player apart from a
+                 rookie early in a live season)
 Team form:       team_xG_last5, team_xGA_last5, team_xG_season_avg,
                  team_xGA_season_avg, team_attacking_strength,
                  team_defensive_strength, team_cs_probability
@@ -473,6 +482,16 @@ GK only:         saves, saves_per_game_season,
 DEF only:        prev_int_per_90, prev_tklW_per_90
 
 ## Bugs Found & Fixed
+- No cross-season player-identity signal (2026-09-04): live-run GW3 2026-27
+  recommendation for a real squad had the mp optimizer proposing to sell
+  Haaland (15 pts across GW1-2, elite fixture) for a cheaper player, because
+  every rolling feature (form_last3, avg_points_per_game, etc.) is computed
+  from the CURRENT live season's actuals only — at GW3 that's 2 data points
+  for a rookie and a 4-season incumbent alike. Root-caused via
+  docs/player_identity_features.md; fixed by adding 4 career_* features
+  (multi-season prior-PL-season PPG/reliability/established-count) — see
+  "Key Feature Groups" above. Confirmed fixed: re-running the same live
+  recommendation with retrained models, the optimizer now holds Haaland.
 - Penalty sign error: season_simulator was ADDING penalties instead of
   SUBTRACTING — inflated reported scores. Fixed.
 - Player name encoding: accented names (Raya Martin, Ekitike) caused

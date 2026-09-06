@@ -68,6 +68,17 @@ XI_MIN = {1: 1, 2: 3, 3: 2, 4: 1}             # formation minima
 XI_MAX = {1: 1, 2: 5, 3: 5, 4: 3}             # formation maxima
 MAX_CLUB = 3
 
+# Same-fixture exposure cap (opt-in, None = off — preserves existing
+# behaviour for every caller that doesn't pass fixture_pairs). The
+# objective sums each player's mu independently, so it has no notion that
+# two of your players facing EACH OTHER have negatively correlated
+# outcomes (one side's clean sheet is the other side's blank) — nothing
+# stops the solver concentrating a large fraction of the XI in one match.
+# When fixture_pairs is supplied, caps combined XI members from BOTH clubs
+# in a single fixture at MAX_FIXTURE_EXPOSURE (XI only — bench exposure
+# isn't a variance risk since bench points normally don't count).
+MAX_FIXTURE_EXPOSURE = 4
+
 W_BENCH_GK = 0.04   # bench-GK slot weight when slot pricing is on (auto-sub
                     # of the keeper is rare: starter must be red-carded or 0')
 
@@ -134,12 +145,17 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
              theta=THETA, gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
              hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
              sell_hold=None, w_bench_slots=None, w_bench_gk=None,
+             fixture_pairs=None, max_fixture_exposure=MAX_FIXTURE_EXPOSURE,
              time_limit=120):
     """
     rows  : {pid: matrix row} for ONE gameweek — needs mu, pi, q90, price,
             sell_value, element_type, team (prediction_matrix output).
     owned : set of pids currently in the squad (empty at GW1).
     available_budget : bank + Σ sell_value(owned)  (corrected accounting).
+    fixture_pairs : [(team_a, team_b), ...] for this GW (None = off, default
+        for every existing caller). Caps combined XI members from both clubs
+        of a single fixture at max_fixture_exposure — see solve_horizon's
+        docstring for why (no same-match correlation awareness otherwise).
 
     Returns {squad, xi, bench, captain, vice, transfers_in, transfers_out,
              hits, objective} — pids everywhere. Raises on infeasibility.
@@ -214,6 +230,14 @@ def solve_gw(rows, owned, available_budget, free_transfers, gw,
         prob += n_et <= XI_MAX[et]
     for p in pids:
         prob += s[p] <= x[p]
+
+    if fixture_pairs:
+        for team_a, team_b in fixture_pairs:
+            in_fixture = [p for p in pids
+                         if r_of[p]["team"] in (team_a, team_b)]
+            if in_fixture:
+                prob += (lpSum(s[p] for p in in_fixture)
+                        <= max_fixture_exposure)
 
     prob += lpSum(c.values()) == 1
     prob += lpSum(v.values()) == 1
@@ -296,6 +320,7 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
                   gamma=GAMMA, w_bench=W_BENCH, hit_cap=HIT_CAP,
                   hit_cost=HIT_COST, ft_value=FT_VALUE, no_rebuy=None,
                   sell_hold=None, w_bench_slots=None, w_bench_gk=None,
+                  fixture_pairs=None, max_fixture_exposure=MAX_FIXTURE_EXPOSURE,
                   time_limit=240):
     """
     Multi-period MILP over the matrix weeks {t..t+H-1}: per-week squad/XI/
@@ -314,6 +339,13 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
 
     chip_state = {"used": {"wc1", ...}, "reset_gws": [gw, ...],
                   "far_dgw": {1: bool, 2: bool}}  (None = Phase 3, no chips)
+
+    fixture_pairs = {g: [(team_a, team_b), ...]} (None = off, default for
+    every existing caller). When given, caps combined XI members from both
+    clubs of a single fixture at max_fixture_exposure — the objective has
+    no notion that two owned players facing each other have correlated
+    (in fact negatively correlated) outcomes, so without this a large
+    fraction of the XI can end up riding on one match's result.
 
     Only week t is executed; later weeks are the plan (rolling re-solve).
     Returns {"weeks": {g: solve_gw-shaped dict}, "chips": {g: "bb2"...},
@@ -459,6 +491,12 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
         for p in pids:
             prob += ss[p, g] <= xs[p, g]
 
+        for team_a, team_b in (fixture_pairs or {}).get(g, []):
+            in_fixture = [p for p in pids if cl_[p] in (team_a, team_b)]
+            if in_fixture:
+                prob += (lpSum(ss[p, g] for p in in_fixture)
+                        <= max_fixture_exposure)
+
         prob += lpSum(cs[p, g] for p in cap_cands[g]) == FH
         prob += lpSum(vs[p, g] for p in cap_cands[g]) == FH
         for p in cap_cands[g]:
@@ -558,6 +596,12 @@ def solve_horizon(matrix, owned, bank, free_transfers, t,
             prob += n_et <= XI_MAX[et]
         for p in pids:
             prob += s[p, g] <= x[p, g]
+
+        for team_a, team_b in (fixture_pairs or {}).get(g, []):
+            in_fixture = [p for p in pids if cl_[p] in (team_a, team_b)]
+            if in_fixture:
+                prob += (lpSum(s[p, g] for p in in_fixture)
+                        <= max_fixture_exposure)
 
         prob += lpSum(c[p, g] for p in cap_cands[g]) == 1
         prob += lpSum(v[p, g] for p in cap_cands[g]) == 1

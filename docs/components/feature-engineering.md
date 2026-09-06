@@ -14,10 +14,12 @@ learn from. This is **Stage 6** in [[data-flow]].
 ## Responsibility
 Build per-player, per-gameweek feature rows and split them by position into
 `train_gk.csv`, `train_def.csv`, `train_mid.csv`, and `train_fwd.csv`
-(~51k rows total, target column `total_points`). Feature groups documented in
-[`CLAUDE.md`](../../CLAUDE.md) include rolling player form, previous-league stats
-for newcomers, team/opponent form (xG-based), fixture difficulty, and market
-signals, with position-specific extras (e.g. saves for GK).
+(~60k rows total, target column `total_points`). Feature groups documented in
+[`CLAUDE.md`](../../CLAUDE.md) include rolling player form (current-season
+only), career-level player quality (multi-season prior-PL-season summary —
+see [[player-identity-features]]), previous-league stats for newcomers,
+team/opponent form (xG-based), fixture difficulty, and market signals, with
+position-specific extras (e.g. saves for GK).
 
 ## Why it exists
 The predictive signal lives in engineered features (rolling windows, xG-derived
