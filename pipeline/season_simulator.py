@@ -335,6 +335,12 @@ CHIP_BAR_WC     = 20.0   # WC rebuild gain over WC_HORIZON must be >= this
 
 CAP_MULT = {1: 0.0, 2: 0.75, 3: 1.15, 4: 1.25}   # by element_type
 
+# STAGE10=="on" only: blend the captain base score toward the LSTM-calibrated
+# q90 ceiling — the legacy analogue of milp_core.kappa's (1-θ)μ + θ·q90 (θ=0.5).
+# A touch below mp's θ because legacy's base is already FDR/cap/loyalty-adjusted.
+# 0.0 => no effect (STAGE10=off is unaffected regardless: q90 is only stashed on).
+CAP_Q90_W = float(os.environ.get("CAP_Q90_W", "0.35"))
+
 # Availability tier multipliers — applied to pred before ILP (from intel_03)
 AVAIL_MULT = {
     "out":       0.0,    # zero prediction entirely
@@ -1615,6 +1621,18 @@ def select_captain(xi_pids, pool_by_pid, cap_streak=0, last_cap_pid=None,
             continue
 
         raw_pred = p.get("pred", 0.0)
+
+        # STAGE10: blend toward the calibrated q90 ceiling (kappa analogue).
+        # stage10_q90 is on the raw-mu scale; rescale by pred/_mu_raw so it
+        # lands on the same scale as raw_pred before blending. No-op when the
+        # key is absent (STAGE10=off, or GW1).
+        _q90 = p.get("stage10_q90")
+        if _q90 is not None and CAP_Q90_W > 0.0:
+            _mu_raw = p.get("_mu_raw", raw_pred)
+            if _mu_raw > 1e-6:
+                _q90_scaled = _q90 * (raw_pred / _mu_raw)
+                raw_pred = (1.0 - CAP_Q90_W) * raw_pred + CAP_Q90_W * _q90_scaled
+
         adj      = raw_pred * CAP_MULT.get(p.get("element_type", 3), 1.0)
         form3    = p.get("form_last3", 0.0)
         fdr      = p.get("fdr", 3.0)
