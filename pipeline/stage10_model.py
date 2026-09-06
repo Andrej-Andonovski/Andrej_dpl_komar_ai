@@ -84,6 +84,7 @@ class NumpyResidualLSTM:
         self.Q = int(self.meta.get("Q", self.w["q_mean"].shape[0]))
         self.H = int(self.meta.get("hidden", HIDDEN))
         self.L = int(self.meta.get("layers", LSTM_LAYERS))
+        self.z_cal = self.meta.get("z_cal", Z90)   # scalar or {pos: z}, train-calibrated
 
     # -- one LSTM layer over a [T, in] sequence, returns [T, H] --------------
     def _lstm_layer(self, x, k):
@@ -154,8 +155,21 @@ def apply_gate(r_hat, sigma, n_played, positions):
     return r_applied, sigma_eff
 
 
-def q90_from(mu_gbm, r_applied, sigma_eff):
-    return np.asarray(mu_gbm, float) + np.asarray(r_applied, float) + Z90 * np.asarray(sigma_eff, float)
+def z_array(z_cal, positions):
+    """z_cal is either a scalar or a {position: z} dict (per-fold, train-
+    calibrated). Returns a per-row z vector."""
+    if isinstance(z_cal, dict):
+        return np.array([z_cal.get(p, Z90) for p in positions], float)
+    return np.full(len(positions), float(z_cal))
+
+
+def q90_from(mu_gbm, r_applied, sigma_eff, z=Z90):
+    """q90 = mu + r + z*sigma. z defaults to the standard-normal 1.2816; in
+    production it's a per-position value calibrated on the fold's training set
+    (empirical 90th pct of standardized residuals). Pass a scalar or an array
+    (use z_array for a {pos: z} dict)."""
+    return (np.asarray(mu_gbm, float) + np.asarray(r_applied, float)
+            + np.asarray(z, float) * np.asarray(sigma_eff, float))
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -206,10 +220,10 @@ def build_torch_model(F, Q, seed=42):
             r_hat = self.head_r(fused).squeeze(-1)
             log_var = self.head_lv(fused).squeeze(-1)
             sigma = torch.nn.functional.softplus(log_var) + SIGMA_FLOOR
-            return r_hat, sigma
+            return r_hat, sigma, log_var        # log_var for the training penalty
 
         @torch.no_grad()
-        def export_npz(self, path):
+        def export_npz(self, path, z_cal=None):
             sd = self.state_dict()
             w = {
                 "ts_mean": sd["ts_mean"].cpu().numpy(),
@@ -226,7 +240,8 @@ def build_torch_model(F, Q, seed=42):
                 "head_lv_w": sd["head_lv.weight"].cpu().numpy(),
                 "head_lv_b": sd["head_lv.bias"].cpu().numpy(),
                 "meta": np.array({"F": self.F, "Q": self.Q, "hidden": HIDDEN,
-                                  "layers": LSTM_LAYERS, "pos_emb_dim": POS_EMB_DIM},
+                                  "layers": LSTM_LAYERS, "pos_emb_dim": POS_EMB_DIM,
+                                  "z_cal": (Z90 if z_cal is None else z_cal)},
                                  dtype=object),
             }
             for k in range(LSTM_LAYERS):

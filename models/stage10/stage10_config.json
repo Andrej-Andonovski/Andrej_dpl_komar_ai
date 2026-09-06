@@ -1,0 +1,217 @@
+{
+  "feat_spec": {
+    "feat_cols": [
+      "form_last3",
+      "form_last5",
+      "avg_points_per_game",
+      "minutes_reliability",
+      "goals_per_game",
+      "assists_per_game",
+      "clean_sheet_rate",
+      "saves_per_game",
+      "value",
+      "was_home",
+      "fdr",
+      "has_prev_league_data",
+      "prev_adjG_per_90",
+      "prev_adjA_per_90",
+      "prev_league_multiplier",
+      "prev_seasons_available",
+      "prev_reliability_avg",
+      "prev_minutes_avg",
+      "prev_small_sample",
+      "prev_int_per_90",
+      "prev_tklW_per_90",
+      "prev_saves_per_game",
+      "prev_cs_rate",
+      "career_ppg_last_season",
+      "career_ppg_last3_seasons",
+      "career_minutes_reliability_last_season",
+      "career_seasons_established"
+    ],
+    "ts_cols": [
+      "form_last3",
+      "form_last5",
+      "avg_points_per_game",
+      "minutes_reliability",
+      "goals_per_game",
+      "assists_per_game",
+      "clean_sheet_rate",
+      "saves_per_game",
+      "value",
+      "was_home",
+      "fdr",
+      "has_prev_league_data",
+      "prev_adjG_per_90",
+      "prev_adjA_per_90",
+      "prev_league_multiplier",
+      "prev_seasons_available",
+      "prev_reliability_avg",
+      "prev_minutes_avg",
+      "prev_small_sample",
+      "prev_int_per_90",
+      "prev_tklW_per_90",
+      "prev_saves_per_game",
+      "prev_cs_rate",
+      "career_ppg_last_season",
+      "career_ppg_last3_seasons",
+      "career_minutes_reliability_last_season",
+      "career_seasons_established",
+      "mu_gbm_oof",
+      "residual",
+      "o_points",
+      "o_minutes",
+      "o_goals",
+      "o_assists",
+      "o_cs",
+      "o_gc",
+      "o_bonus",
+      "o_bps",
+      "o_saves",
+      "ts_was_home",
+      "ts_fdr",
+      "ts_is_dgw",
+      "ts_is_blank",
+      "played",
+      "gap_since_played",
+      "did_not_feature",
+      "is_first_appearance",
+      "streak_len",
+      "roll_std_points5",
+      "roll_std_minutes5",
+      "avail_tier_ord",
+      "rotation_score",
+      "intel_present",
+      "pos_gk",
+      "pos_def",
+      "pos_mid",
+      "pos_fwd"
+    ],
+    "F": 56,
+    "query_cols": [
+      "form_last3",
+      "form_last5",
+      "avg_points_per_game",
+      "minutes_reliability",
+      "goals_per_game",
+      "assists_per_game",
+      "clean_sheet_rate",
+      "saves_per_game",
+      "value",
+      "was_home",
+      "fdr",
+      "has_prev_league_data",
+      "prev_adjG_per_90",
+      "prev_adjA_per_90",
+      "prev_league_multiplier",
+      "prev_seasons_available",
+      "prev_reliability_avg",
+      "prev_minutes_avg",
+      "prev_small_sample",
+      "prev_int_per_90",
+      "prev_tklW_per_90",
+      "prev_saves_per_game",
+      "prev_cs_rate",
+      "career_ppg_last_season",
+      "career_ppg_last3_seasons",
+      "career_minutes_reliability_last_season",
+      "career_seasons_established",
+      "mu_gbm_t",
+      "q_was_home",
+      "q_fdr",
+      "q_is_dgw",
+      "q_is_blank",
+      "n_played",
+      "n_timesteps",
+      "gws_into_season",
+      "pos_gk",
+      "pos_def",
+      "pos_mid",
+      "pos_fwd"
+    ],
+    "Q": 39,
+    "positions": [
+      "GK",
+      "DEF",
+      "MID",
+      "FWD"
+    ],
+    "gap_cap": 10,
+    "streak_cap": 10,
+    "roll_n": 5
+  },
+  "arch": {
+    "hidden": 64,
+    "lstm_layers": 2,
+    "pos_emb_dim": 8,
+    "mlp_hidden": 64,
+    "dropout": 0.2,
+    "sigma_floor": 0.5
+  },
+  "train": {
+    "max_epochs": 80,
+    "batch": 256,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "grad_clip": 1.0,
+    "patience": 8,
+    "seed": 42,
+    "max_len": 38,
+    "lambda_r": 0.4,
+    "lambda_lv": 0.0,
+    "checkpoint_metric": "val_gated_mae"
+  },
+  "gate": {
+    "z90": 1.2815515655446004,
+    "conf_ramp": 6.0,
+    "sigma_shrink_below": 3,
+    "headroom_prior": {
+      "GK": 2.5,
+      "DEF": 3.0,
+      "MID": 4.5,
+      "FWD": 5.0
+    }
+  },
+  "folds": [
+    {
+      "train": [
+        "2020-21"
+      ],
+      "val": "2021-22"
+    },
+    {
+      "train": [
+        "2020-21",
+        "2021-22"
+      ],
+      "val": "2022-23"
+    },
+    {
+      "train": [
+        "2020-21",
+        "2021-22",
+        "2022-23"
+      ],
+      "val": "2023-24"
+    },
+    {
+      "train": [
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24"
+      ],
+      "val": "2024-25"
+    },
+    {
+      "train": [
+        "2020-21",
+        "2021-22",
+        "2022-23",
+        "2023-24",
+        "2024-25"
+      ],
+      "val": "2025-26"
+    }
+  ]
+}

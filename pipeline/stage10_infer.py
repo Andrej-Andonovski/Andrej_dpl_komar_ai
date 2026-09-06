@@ -71,8 +71,9 @@ class Stage10Refiner:
         r_hat, sigma = self._net.predict(ts, query, lengths, pos_ids)
         r_app, s_eff = sm.apply_gate(r_hat, sigma, n_played, positions)
         mu = np.asarray(mu_gbm, float)
+        z = sm.z_array(self._net.z_cal, positions)
         return {"r_applied": r_app, "sigma_eff": s_eff,
-                "q90": sm.q90_from(mu, r_app, s_eff),
+                "q90": sm.q90_from(mu, r_app, s_eff, z=z),
                 "mu_corrected": mu + r_app, "r_hat_raw": r_hat, "sigma_raw": sigma}
 
     # -- sample API (offline / tests) ------------------------------------
