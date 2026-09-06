@@ -118,6 +118,19 @@ def test_on_short_sim_runs():
     assert "[STAGE10] on" in r.stdout
 
 
+def test_on_short_sim_deterministic():
+    """Gate 8: the STAGE10=on runtime is numpy-only (fine-tune is off by
+    default), so two runs must be byte-identical."""
+    import json
+    p = os.path.join(_ROOT, "data/intel/season_simulation_s10.json")
+    _run({"STAGE10": "on"}, end_gw=4)
+    d1 = json.load(open(p, encoding="utf-8")); d1.pop("generated_at", None)
+    _run({"STAGE10": "on"}, end_gw=4)
+    d2 = json.load(open(p, encoding="utf-8")); d2.pop("generated_at", None)
+    assert json.dumps(d1, sort_keys=True) == json.dumps(d2, sort_keys=True), \
+        "STAGE10=on is not deterministic"
+
+
 def main():
     tests = [(n, f) for n, f in sorted(globals().items())
              if n.startswith("test_") and callable(f)]

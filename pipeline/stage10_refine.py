@@ -174,7 +174,7 @@ def refine(pool, gw, season, hist_lookup, past_mu_history, mu_raw_by_pid,
     """
     if gw <= 1:
         return {}                          # GW1 is the blind test — no sequence
-    refiner = si.load_refiner(season, live=live)
+    refiner = si.load_refiner(season, live=live, gw=gw)
     if not refiner.ready:
         print(f"  [STAGE10] no checkpoint for season {season} — refine is a no-op")
         return {}

@@ -343,6 +343,11 @@ First full Phase 1 result: ~1 day wall-clock, mostly the existing season sims.
    `STAGE10=on` writes a separate `*_s10.json`. Tests 6/6 + 6/6.
 5. ✅ `build_matrix` `resid_fn` callback (mp path) — folded into step 4; gate 1
    covers mp/off byte-identical + mp/on full-season.
-6. in-season fine-tune + gate 8
+6. ✅ in-season head fine-tune (`stage10_finetune.py`, offline, freezes trunk) +
+   gate 8. **Result: fine-tune HURTS** — holdout MAE 2024-25 −0.001..−0.008,
+   2023-24 −0.003..−0.054 (head overfits the thin partial-season sample). Kept
+   for experimentation, **OFF by default** (`STAGE10_FT=on` to enable, `ft_*.npz`
+   gitignored). Gate 8: fine-tune re-run byte-identical; `STAGE10=on` season
+   sim deterministic (numpy-only runtime) — two mp/2024-25 runs identical.
 7. full A/B matrix → gate 4; write `stage10_phase1_report.md`
 8. docs: component note + ADR + index/system-overview/data-flow links + CLAUDE.md

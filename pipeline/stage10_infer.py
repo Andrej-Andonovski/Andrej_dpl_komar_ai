@@ -19,6 +19,7 @@ degrades to exactly STAGE10=off. Callers should check `ready`.
 from __future__ import annotations
 
 import os
+import re
 import sys
 
 import numpy as np
@@ -39,15 +40,35 @@ def _prev_season(s: str) -> str:
     return f"{a}-{str(a + 1)[-2:]}"
 
 
-def checkpoint_for(target_season: str, live: bool) -> str:
+def checkpoint_for(target_season: str, live: bool, gw: int = None) -> str:
+    """The pretrain checkpoint for the season's training cut, OR — when
+    STAGE10_FT=="on", `gw` is given, and step-6 fine-tune checkpoints exist —
+    the largest ft_<base>_gw<k> with k <= gw.
+
+    Fine-tune is OFF by default: step-6 measured it consistently HURTS holdout
+    MAE (2024-25 -0.001..-0.008, 2023-24 -0.003..-0.054) — the head overfits
+    the thin partial-season residual sample. The pretrain checkpoint is the
+    production path; ft_*.npz are kept for experimentation only.
+    """
     base = _prev_season(target_season) if live else target_season
+    if gw is not None and os.environ.get("STAGE10_FT") == "on":
+        best = None
+        for f in os.listdir(CKPT_DIR) if os.path.isdir(CKPT_DIR) else []:
+            m = re.match(rf"ft_{re.escape(base)}_gw(\d+)\.npz$", f)
+            if m and int(m.group(1)) <= gw:
+                k = int(m.group(1))
+                if best is None or k > best[0]:
+                    best = (k, os.path.join(CKPT_DIR, f))
+        if best is not None:
+            return best[1]
     return os.path.join(CKPT_DIR, f"pretrain_{base}.npz")
 
 
 class Stage10Refiner:
-    def __init__(self, target_season: str, live: bool = True, ckpt_path: str = None):
+    def __init__(self, target_season: str, live: bool = True, ckpt_path: str = None,
+                 gw: int = None):
         self.target_season = target_season
-        self.path = ckpt_path or checkpoint_for(target_season, live)
+        self.path = ckpt_path or checkpoint_for(target_season, live, gw)
         self._net = None
         self.ready = os.path.exists(self.path)
         if self.ready:
@@ -97,11 +118,12 @@ class Stage10Refiner:
 _CACHE: dict = {}
 
 
-def load_refiner(target_season: str, live: bool = True) -> Stage10Refiner:
-    key = (target_season, live)
-    if key not in _CACHE:
-        _CACHE[key] = Stage10Refiner(target_season, live)
-    return _CACHE[key]
+def load_refiner(target_season: str, live: bool = True,
+                 gw: int = None) -> Stage10Refiner:
+    path = checkpoint_for(target_season, live, gw)
+    if path not in _CACHE:
+        _CACHE[path] = Stage10Refiner(target_season, live, ckpt_path=path)
+    return _CACHE[path]
 
 
 if __name__ == "__main__":

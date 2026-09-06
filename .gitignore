@@ -13,6 +13,10 @@ Fantasy-Premier-League/
 # Models (large binaries)
 models/*.pkl
 
+# Stage 10 in-season fine-tune checkpoints — experimental, OFF by default
+# (step 6 measured they hurt holdout MAE); regenerate with stage10_finetune.py
+models/stage10/ft_*.npz
+
 # Locks
 *.lock
 
