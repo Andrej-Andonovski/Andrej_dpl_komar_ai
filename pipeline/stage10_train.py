@@ -2,10 +2,11 @@
 pipeline/stage10_train.py
 Stage 10 Phase 1 — Step 3: walk-forward pretrain of the LSTM residual model.
 
-RUN ON COLAB (Smart App Control blocks torch on the dev machine — option C).
+Needs torch (training only — see requirements.txt). Runs on the dev machine;
+if Smart App Control ever re-blocks the torch DLLs, training moves to WSL2.
 Produces, per fold, into models/stage10/:
     pretrain_<valseason>.pt      torch checkpoint
-    pretrain_<valseason>.npz     numpy weights (runtime path, option D)
+    pretrain_<valseason>.npz     numpy weights (runtime path, docs plan §D)
     stage10_config.json          arch + hyperparams + feature spec
     stage10_calibration.json     NLL curves + gate 2 (MAE) + gate 3 (q90 coverage)
 
@@ -15,7 +16,7 @@ Gates checked here (plan §6):
           position MAE regression vs raw GBM.
   Gate 3  q90 coverage  P(actual <= q90)  in [0.88, 0.92]   (baseline 0.836).
 
-Usage (Colab):
+Usage:
     python pipeline/stage10_train.py --pretrain
     python pipeline/stage10_train.py --pretrain --ablation        # + 4 position-specific nets
     python pipeline/stage10_train.py --check-numpy                # torch vs numpy_forward

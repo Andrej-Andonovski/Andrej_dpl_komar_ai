@@ -3,14 +3,15 @@ pipeline/stage10_model.py
 Stage 10 Phase 1 — Step 3: the LSTM residual model.
 
 Two implementations that MUST agree numerically:
-  * ResidualLSTM        — torch nn.Module, used for TRAINING (on Colab; Smart App
-                          Control blocks torch DLLs on the dev machine).
-  * numpy_forward       — dependency-free forward pass, used at RUNTIME by
-                          stage10_refine.py so the production simulator never
-                          imports torch (option C + D, docs/stage10_phase1_plan.md).
+  * ResidualLSTM        — torch nn.Module, used for TRAINING (stage10_train.py).
+  * NumpyResidualLSTM   — dependency-free forward pass, used at RUNTIME by
+                          stage10_infer.py / stage10_refine.py so the production
+                          simulator + Optuna loop never import torch
+                          (option D, docs/stage10_phase1_plan.md).
 
 Contract: torch model -> export_npz() -> a plain .npz the numpy path loads.
-The Colab notebook asserts max|torch - numpy| < 1e-4 over the val set.
+stage10_train.py --check-numpy asserts max|torch - numpy| < 1e-4 over the val set
+(verified locally: Δr ~1e-8, Δsigma ~1e-7).
 
 Architecture (plan §3):
   feature standardization (frozen pretrain mean/std)

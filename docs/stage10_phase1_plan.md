@@ -21,7 +21,7 @@ between the model predictions and the optimizer.
 | FDR & intel multipliers | **Left exactly where they are.** Stage 10 corrects raw GBM `mu` only; FDR + `AVAIL_MULT` + rotation tiers + `DGW_PRED_MULT` + `OWN_BOOST_GW1` + loyalty all apply *after* Stage 10, unchanged. | `STAGE10=off` must be byte-identical to baselines (hard gate). Stage 10 sees clean `mu` and never learns around the FDR hack. |
 | Validation strictness | **Same rules as everything else, no exceptions.** Walk-forward by season, GW1 blind, sequences truncated at kickoff, per-GW update in-season. | Thesis-defensible; rules #1–#7 in `CLAUDE.md`. |
 | Uncertainty output | LSTM emits `(residual, sigma)`; `sigma` replaces the empirical-headroom `q90` in `prediction_matrix.py`. | Directly targets the q90 coverage gap (0.836 → 0.90). |
-| Training environment | **Train on Colab, run inference in pure numpy (option C + D).** Windows Smart App Control (enforced on the dev machine) blocks the PyTorch DLLs; no Docker/WSL here either. `stage10_train.py` runs on Colab via `notebooks/stage10_colab_train.ipynb`; checkpoints return as `.npz`. | Keeps the dev machine's security posture; `stage10_infer.py` / the season simulator / the Optuna loop never import torch. |
+| Training environment | **Train locally with torch; run inference in pure numpy (option D kept).** Windows Smart App Control briefly blocked the torch DLLs; once they executed during a SAC-off window SAC whitelisted them permanently (trust is sticky), so `torch==2.14.0` now runs on Windows with SAC re-enabled. `stage10_train.py` runs on the dev machine. If a torch upgrade or SAC cache clear ever re-blocks it, training moves to WSL2 — the `.npz` checkpoints keep the simulator running meanwhile. | `stage10_infer.py` / `season_simulator` / the Optuna loop never import torch (reproducibility + SAC insurance). |
 
 ---
 
@@ -32,16 +32,13 @@ pipeline/
   stage10_oof.py            # step 1: walk-forward OOF GBM predictions → residual target   [DONE]
   stage10_sequence.py       # step 2: leakage-safe per-player sequence builder             [DONE]
   stage10_model.py          # step 3: torch LSTM (training) + numpy forward (runtime)      [DONE]
-  stage10_train.py          # step 3: walk-forward pretrain + gate 2/3 report (Colab)      [DONE]
+  stage10_train.py          # step 3: walk-forward pretrain + gate 2/3 report (local torch) [DONE]
   stage10_infer.py          # step 3: torch-free runtime refiner (loads .npz)              [DONE]
   stage10_refine.py         # step 4/5: runtime hook  refine(pool, gw, ...) -> pool
 
-notebooks/
-  stage10_colab_train.ipynb # clone → pretrain → gates → package checkpoints              [DONE]
-
 models/stage10/
   oof_preds.csv             # name, season, GW, position, mu_gbm_oof, actual, residual, regime  [DONE]
-  pretrain_<valseason>.pt   # torch checkpoint per walk-forward fold (from Colab)
+  pretrain_<valseason>.pt   # torch checkpoint per walk-forward fold
   pretrain_<valseason>.npz  # numpy weights + norm stats — the RUNTIME path
   ft_<season>_gw<t>.pt      # in-season fine-tuned heads (cache) — step 6
   stage10_config.json       # arch, hyperparams, feature spec
@@ -334,9 +331,9 @@ First full Phase 1 result: ~1 day wall-clock, mostly the existing season sims.
 1. ✅ `stage10_oof.py` — OOF residual target, distributions verified (bias ≈ 0,
    MAE matches `stage7_results.json`, 2:1 skew toward missed hauls)
 2. ✅ `stage10_sequence.py` + `test_stage10_sequence.py` — 11/11 leakage tests pass
-3. **← current:** `stage10_model.py` (torch + numpy) + `stage10_train.py` +
-   `stage10_infer.py` + Colab notebook written; **awaiting Colab run** for the
-   NLL curves, gate 2 (MAE), gate 3 (q90), and torch↔numpy equivalence
+3. **← current:** `stage10_model.py` (torch + numpy, parity Δ < 1e-7 verified) +
+   `stage10_train.py` + `stage10_infer.py`; running `--pretrain --ablation`
+   locally for the NLL curves, gate 2 (MAE), gate 3 (q90)
 4. `stage10_refine.py` + `predict_pool` loop-split + `test_stage10_identity.py` +
    `test_stage10_shapes.py` (gate 1, legacy)
 5. `build_matrix` callback + gate 1 (mp / corrected)

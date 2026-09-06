@@ -3,18 +3,18 @@ pipeline/stage10_infer.py
 Stage 10 Phase 1 — the torch-free runtime inference path (option D).
 
 season_simulator / stage10_refine call this; it loads a numpy .npz checkpoint
-(exported on Colab by stage10_train.py) and returns the residual correction +
-uncertainty for a batch of players. NO torch import — the production simulator
-and the Optuna loop stay torch-free.
+(exported by stage10_train.py) and returns the residual correction + uncertainty
+for a batch of players. NO torch import — the production simulator and the
+Optuna loop stay torch-free (and it keeps running if SAC ever re-blocks torch).
 
 Checkpoint selection:
     live season  S  ->  models/stage10/pretrain_<S-1>.npz   (the "final" fold)
     SIM_SEASON backtest S  ->  models/stage10/pretrain_<S>.npz  (walk-forward fold)
 Both cases: the checkpoint's training data ends strictly before season S — no leakage.
 
-If the checkpoint is missing (checkpoints not yet brought back from Colab), the
-refiner reports `ready == False` and every correction is 0.0 / sigma = prior, so
-STAGE10=on degrades to exactly STAGE10=off. Callers should check `ready`.
+If the checkpoint is missing (not yet trained), the refiner reports
+`ready == False` and every correction is 0.0 / sigma = prior, so STAGE10=on
+degrades to exactly STAGE10=off. Callers should check `ready`.
 """
 from __future__ import annotations
 
