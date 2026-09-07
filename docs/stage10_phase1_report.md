@@ -266,9 +266,33 @@ MID gain amplifies through the optimizer onto XI/captain picks. 2024-25/2025-26
 expected ≈ flat (rerun pending). Leakage 11/11, boundary verified, off
 byte-identical.
 
-### Fixes 3-7 (in progress)
-3. penalty/set-piece feature → `FEAT_COLS`; 4. cheap ceiling features
-(`max_points_last5`, `hauls_last10`, `p75_points_last8`); 5. pinball q90 head;
-6. EV captain objective; 7. conformal calibration on a recent held-out slice.
-Each measured and either shipped or ruled out with data, then a full A/B +
-gate-2/3 + captain-regret refresh.
+### Fix 3 — penalty-taker feature: RULED OUT with data
+Added `penalty_taker` (1.0 = first-choice PK taker, from vaastav `players_raw`
+`penalties_order`) to `FEAT_COLS`. Sourcing script kept at
+`pipeline/archive/add_penalty_feature.py`. **Reverted** — negative on both axes:
+
+- **Gate 2 MAE:** mean **+0.026 → +0.016**. GBM OOF MAE by position was
+  unchanged (`goals_per_game` already encodes "high scorer"), but the 28th
+  input dimension degraded the thin early folds (2022-23 +0.043 → +0.004). The
+  deployment checkpoint (2025-26) barely used the feature (r̂ moved 0.016 on
+  PK-taker rows vs 0.16 for the 3-season 2023-24 checkpoint) — same shrink-off
+  pattern as `o_bps`.
+- **Captain channel — worse.** `penalty_taker` pushed PK takers up the q90
+  ranking (~6-8 places on 2025-26), but PK takers are **high-ceiling and
+  blank-prone** — penalty-dependent scorers who return nothing when the PK
+  doesn't come. The q90 head *already* over-promotes high-variance players
+  (§ Q2 analysis: q90-top1 beat μ-top1 only 6/30 pre-fix); flagging PK takers
+  amplified it. Offline captain-regret proxy (q90-pick vs μ-pick, MID/FWD):
+  2023-24 −0.22, 2024-25 −0.14, **2025-26 +1.24 (worse)**.
+
+**Structural conclusion:** penalty-taker status is a *ceiling* signal, not a
+*mean* signal. Feeding it to a residual-mean model that then derives q90 from a
+symmetric-ish σ over-weights the ceiling for captaincy. The right home for it is
+**fix 6 — an explicit EV captain objective** `π·E[2·points | plays]` that can
+value a PK taker's asymmetric upside without over-captaining the blank weeks.
+
+### Fixes 4-7 (in progress)
+4. cheap ceiling features (`max_points_last5`, `hauls_last10`, `p75_points_last8`);
+5. pinball q90 head; 6. EV captain objective (see fix-3 conclusion); 7. conformal
+calibration on a recent held-out slice. Each measured and either shipped or
+ruled out with data, then a full A/B + gate-2/3 + captain-regret refresh.

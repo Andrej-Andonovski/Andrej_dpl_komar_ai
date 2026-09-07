@@ -406,6 +406,15 @@ CAREER_FEAT_COLS = [
     "career_minutes_reliability_last_season", "career_seasons_established",
 ]
 
+# Stage 10 LSTM fix 3 (penalty_taker feature) was tried and RULED OUT with data
+# — gate-2 MAE regressed (mean +0.026 -> +0.016; the 28th dim degraded the thin
+# early folds) and it made the captain channel worse: PK takers are high-ceiling
+# but blank-prone, the q90 head already over-promotes high-variance players, and
+# flagging PK takers amplified that (2025-26 captain-regret proxy +1.24). The
+# right place to use penalty-taker ceiling is fix 6 (EV captain objective).
+# Sourcing script kept: pipeline/add_penalty_feature.py. See
+# docs/stage10_phase1_report.md §12.
+
 FEAT_COLS = ROLLING_FEAT_COLS + [
     "value", "was_home", "fdr",
 ] + PREV_LEAGUE_FEAT_COLS + CAREER_FEAT_COLS
@@ -1267,7 +1276,7 @@ def build_gw1_pool(players_df, train_dfs, fdr_lookup, home_lookup):
             "player_id": pid, "web_name": web, "pos": pos,
             "element_type": etype, "team": team,
             "price": price, "sbp": sbp, "zero_minutes": False,
-            **{f: feats.get(f, 0.0) for f in FEAT_COLS}
+            **{f: feats.get(f, 0.0) for f in FEAT_COLS},
         })
 
     print(f"  [GW1 pool] {len(pool)} players | "
@@ -1441,7 +1450,7 @@ def build_retrain_rows(players_df, hist_lookup, fdr_lookup, home_lookup,
                 "team_cs_rate_last3":  tf.get("team_cs_rate_last3", 0.3),
                 "opp_goals_last3":     opp.get("opp_goals_last3",   1.5),
                 "opp_cs_rate_last3":   opp.get("opp_cs_rate_last3", 0.3),
-                "total_points":        target_pts,
+                    "total_points":        target_pts,
                 **career,
             })
     return rows_by_pos
