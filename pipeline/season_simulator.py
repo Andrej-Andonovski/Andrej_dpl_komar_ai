@@ -464,6 +464,7 @@ def load_player_history():
             "transfers_in":  int(getattr(r, "transfers_in",  0) or 0),
             "transfers_out": int(getattr(r, "transfers_out", 0) or 0),
             "bonus":         int(getattr(r, "bonus", 0) or 0),
+            "bps":           int(getattr(r, "bps", 0) or 0),
         }
         if gw in hist[pid]:
             # DGW: accumulate additive stats; keep latest value for non-additive
@@ -475,6 +476,7 @@ def load_player_history():
             existing["clean_sheets"] += row["clean_sheets"]
             existing["saves"]        += row["saves"]
             existing["bonus"]        += row["bonus"]
+            existing["bps"]          += row["bps"]
             existing["value"]    = row["value"]
             existing["was_home"] = row["was_home"]
         else:

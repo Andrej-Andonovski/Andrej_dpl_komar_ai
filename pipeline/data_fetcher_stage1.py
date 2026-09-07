@@ -293,6 +293,7 @@ def fetch_player_summaries(players_df: pd.DataFrame, team_lookup: dict):
                 "clean_sheets": h.get("clean_sheets"),
                 "saves": h.get("saves"),
                 "bonus": h.get("bonus"),
+                "bps": h.get("bps"),
                 "value": h.get("value", 0) / 10.0,
             })
 

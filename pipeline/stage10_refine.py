@@ -18,7 +18,9 @@ Runtime approximations vs the offline training sequences (tightened in step 6):
   * mu_gbm_oof[g] / residual[g]: from past_mu_history (the model-as-of-g's own
     raw prediction, accumulated by the sim each GW — walk-forward correct);
     falls back to 0 for GWs before the sim's start
-  * o_gc / o_bps timesteps: hist_lookup lacks them -> 0 (2 of 56 features)
+  * o_bps: carried from hist_lookup (fix 2 — load_player_history reads bps;
+    backtest seasons get it via build_season_inputs, live via data_fetcher_stage1)
+  * o_gc timestep: hist_lookup still lacks goals_conceded -> 0 (1 of 56 features)
   * is_dgw / is_blank / intel timesteps: 0 (as in offline training)
 """
 from __future__ import annotations
@@ -79,8 +81,8 @@ def _timestep(p, g, ph, mu_g, fdr_g, home_g):
         float(mu_g or 0.0), float(resid),
         float(h.get("total_points", 0.0)), float(mins),
         float(h.get("goals_scored", 0)), float(h.get("assists", 0)),
-        float(h.get("clean_sheets", 0)), 0.0,                   # o_gc unavailable
-        float(h.get("bonus", 0)), 0.0,                          # o_bps unavailable
+        float(h.get("clean_sheets", 0)), 0.0,                   # o_gc still unavailable
+        float(h.get("bonus", 0)), float(h.get("bps", 0)),       # o_bps — fix 2 (load_player_history)
         float(h.get("saves", 0)),
         float(home_g), float(fdr_g), 0.0, 0.0,                  # is_dgw/is_blank
         played, 0.0, 1.0 - played, 0.0, 0.0,                    # gap/first/streak filled below

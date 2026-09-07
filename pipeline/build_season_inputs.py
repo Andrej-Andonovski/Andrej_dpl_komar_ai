@@ -66,6 +66,7 @@ def build_season(season):
         "clean_sheets":     gw["clean_sheets"],
         "saves":            gw["saves"],
         "bonus":            gw["bonus"],
+        "bps":              gw["bps"],
         "value":            gw["value"] / 10.0,
         "was_home":         gw["was_home"].astype(int),
         "transfers_in":     gw["transfers_in"],
