@@ -298,22 +298,39 @@ change). **Reverted.**
   2024-25 −0.14 → +0.11, 2025-26 +1.24 → +0.62; q90-beat-μ down to 3/13, 2/6,
   2/6.
 
-### Structural conclusion (confirmed twice — fix 3 and fix 4)
-Any **ceiling signal** — penalty-taker status *or* realized max/haul features —
-fed into a **residual-*mean* LSTM** whose q90 is then derived from a
-roughly-**symmetric σ** ends up **over-promoting boom-bust players for
-captaincy**. The q90 head was already picking blank-prone players (6/30
-pre-fix). More input features don't fix this — **the Gaussian σ assumption is
-the root cause.** The real fixes:
-- **Fix 5 — pinball loss:** a direct 90th-percentile head, decoupled from the
-  mean, no Gaussian, no z-calibration. Models the asymmetric residual tail
-  directly and is inherently robust to the OOD-σ blowup (fix 1) — pinball's
-  optimum is the empirical quantile, not the outlier.
-- **Fix 6 — EV captain objective:** `π·E[2·points | plays]`, so a genuine
-  high-ceiling player's asymmetric upside is valued without over-captaining
-  their blank weeks.
+### Fix 5 — pinball q90 head: RULED OUT with data (4-config sweep)
+A direct 90th-percentile head trained with pinball loss at q=0.90/0.93,
+decoupled from the mean/σ. Four configs:
+
+| config | gate 2 | gate 3 | 2023-24 cov (goal >0.871) | captain regret 23/24/25 |
+|---|---|---|---|---|
+| baseline (Gaussian σ + z) | +0.026 | 0.892 | 0.871 | −0.22 / −0.14 / +1.24 |
+| coupled λ=1.0, q=0.90 | +0.012 | 0.886 | 0.902 | +0.89 / −1.27 / +2.41 |
+| detached λ=1.0, q=0.90 | +0.028 | 0.863 (undercover) | 0.854 | +0.73 / −0.95 / +2.19 |
+| coupled λ=0.3, q=0.93 | +0.012 | 0.910 | 0.915 | — |
+| detached λ=1.0, q=0.93 | +0.027 | 0.887 | 0.876 | +0.32 / −0.95 / +2.11 |
+
+**No config wins.** Any trunk coupling that helps coverage wrecks gate 2 (the
+shared trunk can't optimise mean *and* quantile); detaching preserves gate 2 but
+the head then just tracks the Gaussian — coverage spread 0.053 vs the Gaussian's
+0.045, and **the weak 2023-24 fold never improved** (0.85–0.92 by config,
+≈ the Gaussian's 0.871 + noise). Captain regret stayed bimodal across every
+config (2024-25 always better, 2025-26 always +2). Reverted; kept the Gaussian
+σ + z-cal path (fix 1d).
+
+### Structural conclusion (confirmed three times — fix 3, fix 4, fix 5)
+**The captain problem is not a σ-*formulation* problem — it is an *objective*
+problem.** Fix 3 (penalty status) and fix 4 (realized max/haul) fed a ceiling
+signal *in*; fix 5 changed *how* the ceiling is computed (direct quantile vs
+Gaussian). All three left captain regret unchanged or worse, because
+**maximising *any* captaincy-ceiling metric — q90 however derived — selects
+boom-bust players by construction.** The highest-q90 MID/FWD is the
+highest-*variance* one, who blanks more than he hauls. This directly motivates
+**fix 6: replace the ceiling objective with an expected-value one**,
+`κ ∝ π·E[2·points | plays]`, so a genuine high-ceiling **high-floor** player
+(Haaland, Salah) wins and a penalty-dependent blank-prone one does not.
 
 ### Fixes 6-7 (in progress)
-6. EV captain objective; 7. conformal calibration on a recent held-out slice.
-Each measured and either shipped or ruled out with data, then a full A/B +
-gate-2/3 + captain-regret refresh.
+6. EV captain objective (the real fix per the conclusion above); 7. conformal
+calibration on a recent held-out slice. Each measured and either shipped or
+ruled out with data, then a full A/B + gate-2/3 + captain-regret refresh.
