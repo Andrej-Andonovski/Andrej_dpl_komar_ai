@@ -285,14 +285,35 @@ Added `penalty_taker` (1.0 = first-choice PK taker, from vaastav `players_raw`
   amplified it. Offline captain-regret proxy (q90-pick vs μ-pick, MID/FWD):
   2023-24 −0.22, 2024-25 −0.14, **2025-26 +1.24 (worse)**.
 
-**Structural conclusion:** penalty-taker status is a *ceiling* signal, not a
-*mean* signal. Feeding it to a residual-mean model that then derives q90 from a
-symmetric-ish σ over-weights the ceiling for captaincy. The right home for it is
-**fix 6 — an explicit EV captain objective** `π·E[2·points | plays]` that can
-value a PK taker's asymmetric upside without over-captaining the blank weeks.
+### Fix 4 — cheap ceiling features: RULED OUT with data
+Added `max_points_last5`, `hauls_last10` (count of ≥8-pt GWs), `p75_points_last8`
+to the sequence timestep vector (`TS_COLS`, F 56→59; not `FEAT_COLS`, so no GBM
+change). **Reverted.**
 
-### Fixes 4-7 (in progress)
-4. cheap ceiling features (`max_points_last5`, `hauls_last10`, `p75_points_last8`);
-5. pinball q90 head; 6. EV captain objective (see fix-3 conclusion); 7. conformal
-calibration on a recent held-out slice. Each measured and either shipped or
-ruled out with data, then a full A/B + gate-2/3 + captain-regret refresh.
+- **Gate 2:** mean +0.026 → +0.024 (flat) but the per-fold **thrashed ±0.04
+  both ways** (2023-24 +0.037 → −0.001 regression; 2024-25 +0.005 → +0.036) —
+  deterministic, so it's the 3 extra dims genuinely destabilising the small
+  model on thin folds. Gate 3 did the same.
+- **Captain regret — worse on all three folds:** 2023-24 −0.22 → +0.89,
+  2024-25 −0.14 → +0.11, 2025-26 +1.24 → +0.62; q90-beat-μ down to 3/13, 2/6,
+  2/6.
+
+### Structural conclusion (confirmed twice — fix 3 and fix 4)
+Any **ceiling signal** — penalty-taker status *or* realized max/haul features —
+fed into a **residual-*mean* LSTM** whose q90 is then derived from a
+roughly-**symmetric σ** ends up **over-promoting boom-bust players for
+captaincy**. The q90 head was already picking blank-prone players (6/30
+pre-fix). More input features don't fix this — **the Gaussian σ assumption is
+the root cause.** The real fixes:
+- **Fix 5 — pinball loss:** a direct 90th-percentile head, decoupled from the
+  mean, no Gaussian, no z-calibration. Models the asymmetric residual tail
+  directly and is inherently robust to the OOD-σ blowup (fix 1) — pinball's
+  optimum is the empirical quantile, not the outlier.
+- **Fix 6 — EV captain objective:** `π·E[2·points | plays]`, so a genuine
+  high-ceiling player's asymmetric upside is valued without over-captaining
+  their blank weeks.
+
+### Fixes 6-7 (in progress)
+6. EV captain objective; 7. conformal calibration on a recent held-out slice.
+Each measured and either shipped or ruled out with data, then a full A/B +
+gate-2/3 + captain-regret refresh.

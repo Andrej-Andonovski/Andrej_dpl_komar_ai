@@ -91,6 +91,7 @@ def _timestep(p, g, ph, mu_g, fdr_g, home_g):
         1.0 if p["pos"] == "GK" else 0.0, 1.0 if p["pos"] == "DEF" else 0.0,
         1.0 if p["pos"] == "MID" else 0.0, 1.0 if p["pos"] == "FWD" else 0.0,
     ]
+    assert len(row) == sq.F, f"_timestep row {len(row)} != TS_COLS F {sq.F}"
     return row
 
 

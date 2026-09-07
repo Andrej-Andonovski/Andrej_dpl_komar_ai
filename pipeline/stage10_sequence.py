@@ -64,6 +64,10 @@ _TS_TAIL = [
     "ts_was_home", "ts_fdr", "ts_is_dgw", "ts_is_blank",
     "played", "gap_since_played", "did_not_feature", "is_first_appearance",
     "streak_len", "roll_std_points5", "roll_std_minutes5",
+    # Stage 10 fix 4 (ceiling features max_points_last5 / hauls_last10 /
+    # p75_points_last8) was tried and RULED OUT — added per-fold gate-2
+    # instability with no mean gain, and worsened captain regret on all folds
+    # (same over-promotes-boom-bust failure as fix 3). See report §12.
     "avail_tier_ord", "rotation_score", "intel_present",
     "pos_gk", "pos_def", "pos_mid", "pos_fwd",
 ]
