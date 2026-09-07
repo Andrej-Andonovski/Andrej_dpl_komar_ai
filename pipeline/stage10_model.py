@@ -34,6 +34,13 @@ POS_EMB_DIM = 8
 MLP_HIDDEN = 64
 DROPOUT = 0.2
 SIGMA_FLOOR = 0.5
+SIGMA_CAP = 15.0        # inference guardrail — the log-variance head blows up on
+                       #   a handful of out-of-distribution FWD/MID sequences
+                       #   (sigma to 130); a q90 of mu+130 breaks the optimizer's
+                       #   captain term (kappa). The soft training penalty
+                       #   (stage10_train.LAMBDA_LV_TAIL) tames the common case;
+                       #   this caps the residual OOD tail. z*15 ~ 22 pts of
+                       #   captain headroom — beyond any real ceiling.
 
 POSITIONS = ["GK", "DEF", "MID", "FWD"]
 Z90 = 1.2815515655446004                     # standard-normal 90th percentile
@@ -157,6 +164,7 @@ def apply_gate(r_hat, sigma, n_played, positions):
     prior = np.array([HEADROOM_PRIOR[p] for p in positions], dtype=float)
     thin = n_played < SIGMA_SHRINK_BELOW
     sigma_eff = np.where(thin, 0.5 * sigma + 0.5 * prior, sigma)
+    sigma_eff = np.minimum(sigma_eff, SIGMA_CAP)      # OOD-tail guardrail (see SIGMA_CAP)
     return r_applied, sigma_eff
 
 

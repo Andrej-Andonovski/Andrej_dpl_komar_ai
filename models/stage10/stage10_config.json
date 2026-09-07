@@ -159,6 +159,8 @@
     "max_len": 38,
     "lambda_r": 0.4,
     "lambda_lv": 0.0,
+    "lambda_lv_tail": 0.03,
+    "lv_tail_thresh": 3.0,
     "checkpoint_metric": "val_gated_mae"
   },
   "gate": {
