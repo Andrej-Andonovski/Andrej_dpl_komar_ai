@@ -9,6 +9,11 @@ Plan: `docs/stage10_phase1_plan.md`. Artifacts: `pipeline/stage10_*.py`,
 `stage10_config.json`, `stage10_calibration.json`), `tests/test_stage10_*.py`,
 runs in `data/intel/season_simulation_*_s10.json`.
 
+> **Post-ship LSTM refinements (2026-09-07+).** After Phase 1 shipped, a series
+> of targeted LSTM fixes was worked through (`docs/stage10_phase1_plan.md` §
+> "LSTM refinements"). §12 below tracks them; the gate-2/3/4 tables in §§2-3-9
+> are the *shipped Phase 1* numbers and are annotated where a fix changed them.
+
 ## 1. What was built
 
 A stacked residual layer between the LightGBM predictions and the optimizer:
@@ -62,6 +67,17 @@ Every fold's ALL row is positive with a bootstrap CI excluding 0. **MID/FWD gain
 near the GBM (the L2 penalty correctly not forcing signal that isn't there — the
 recent-season residual has little exploitable structure). One flagged cell
 (2025-26 MID −0.0003) is floating-point noise.
+
+> **Known train/serve gap in these numbers (disclosed for the thesis).** These
+> OOF MAE figures were computed on offline sequences that carry the real `o_bps`
+> timestep feature (bonus-points-system score per past GW). At *inference* time
+> `o_bps` was hardcoded to 0 because `load_player_history` never read `bps` — so
+> the shipped Phase 1 A/B (§9) ran with an `o_bps=0` train/serve gap. **Fix 2
+> (§12) closes it.** Measured cost of the gap, `o_bps=0 → real`, by checkpoint:
+> 2023-24 MID **+0.037** / ALL +0.015 (the weak 3-season checkpoint leaned on
+> it); 2024-25 and 2025-26 ≈ 0 (the L2-penalised model on more data doesn't use
+> a single weak feature). So the §2 numbers slightly *overstate* the shipped
+> inference quality on the 2023-24 fold and are accurate for 2024-25/2025-26.
 
 ## 3. Gate 3 — q90 coverage
 
@@ -212,9 +228,10 @@ For the live 2026-27 run the refiner loads `pretrain_2025-26.npz` (trained on
   scale) and the q90-in-heuristic is high-variance. Fixes (apply `r` after
   `_finalize`; wire q90 deeper) are Phase 1.5 if legacy is kept past the
   optimizer redesign.
-- **Runtime sequence approximations** — `o_gc` / `o_bps` timesteps → 0
-  (hist_lookup lacks them), slow features (`prev_*` / `career_*`) held at the
-  current GW. 4 of 56 features; documented in `stage10_refine.py`.
+- **Runtime sequence approximations** — `o_gc` timestep → 0 (hist_lookup lacks
+  `goals_conceded`), slow features (`prev_*` / `career_*`) held at the current
+  GW. `o_bps` was also 0 until fix 2 (§12). ~3 of 56 features; see
+  `stage10_refine.py`.
 - **Horizon** — only the decision GW is corrected in the mp matrix; future
   horizon GWs (g > t) keep the raw μ. A t-anchored sequence could feed all g.
 - **In-sample tuning** — `LAMBDA_R` / z-quantile were selected partly on fold-5
@@ -222,3 +239,36 @@ For the live 2026-27 run the refiner loads `pretrain_2025-26.npz` (trained on
   report 2025-26) would remove the mild optimism.
 - **GNN (Phase 2)** — player-interaction graph on top of the LSTM embeddings;
   design in `docs/stage10_phase1_plan.md` and the user's Phase 2 spec.
+
+## 12. Post-ship LSTM refinements
+
+Worked through in order after Phase 1 shipped; each committed and measured.
+
+### Fix 1 — FWD σ tail (`03a32ef`)
+The log-variance head blew up on a few out-of-distribution FWD/MID sequences
+(`pretrain_2025-26`: 2 players — Adli, Gyökeres — raw σ to 116-130, reaching the
+captain channel via kappa). Soft penalty `LAMBDA_LV_TAIL·mean(relu(log_var−3)²)`
+(weight 0.03) tames folds 1-4 to raw σ ≤ 8; it **cannot** fix 2025-26 (that fold
+early-stops before the penalty converges, and NLL genuinely wants big σ for two
+unpredictable elite haulers). Hard backstop: `sm.apply_gate` clamps `sigma_eff`
+at `SIGMA_CAP=15` — a guardrail on kappa arithmetic, applied in both the numpy
+runtime and the training-time eval/z-calibration. Effective σ reaching the
+optimizer is ≤ 15 every season. Gate 2 unchanged (+0.026), gate 3 0.890 → 0.892,
+parity 2.3e-7.
+
+### Fix 2 — `o_bps` train/serve gap (`9ba5082`)
+`o_bps` (timestep 36/56) was 0 at inference (`load_player_history` never read
+`bps`). Closed: `load_player_history` reads it (DGW-summed), `stage10_refine`
+uses it, `build_season_inputs`/`data_fetcher_stage1` emit the column.
+Cost of the gap (`o_bps=0 → real`), OOF MAE: **2023-24 MID +0.037** / ALL +0.015;
+2024-25 & 2025-26 ≈ 0. Season A/B: **mp 2023-24 +14 → +65** (2255 vs 2190) — the
+MID gain amplifies through the optimizer onto XI/captain picks. 2024-25/2025-26
+expected ≈ flat (rerun pending). Leakage 11/11, boundary verified, off
+byte-identical.
+
+### Fixes 3-7 (in progress)
+3. penalty/set-piece feature → `FEAT_COLS`; 4. cheap ceiling features
+(`max_points_last5`, `hauls_last10`, `p75_points_last8`); 5. pinball q90 head;
+6. EV captain objective; 7. conformal calibration on a recent held-out slice.
+Each measured and either shipped or ruled out with data, then a full A/B +
+gate-2/3 + captain-regret refresh.
