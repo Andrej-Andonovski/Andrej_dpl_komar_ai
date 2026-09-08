@@ -62,7 +62,9 @@ no-op — `stage10_refine` is never imported, so **torch never loads**, and
   blended into `select_captain` (`CAP_Q90_W`, the `kappa` analogue).
 - **mp path** — `build_matrix(resid_fn=…)` adds r to the post-FDR summed μ and
   overrides the headroom `q90` with the calibrated value → straight into the
-  MILP objective (`kappa = π·[(1−θ)μ + θ·q90]`).
+  MILP objective (`kappa = π·[(1−θ)μ + θ·q90]`). Since fix 6 the shipped
+  `MP_THETA=0`, so `kappa = π·μ` (pure EV) and the calibrated q90 is currently
+  unused by the mp captain channel — kept for the legacy captain and Phase 2.
 
 ## Depends on
 
@@ -81,14 +83,17 @@ no-op — `stage10_refine` is never imported, so **torch never loads**, and
 
 ## Assumptions & limitations
 
-- **Shipped for `OPTIMIZER=mp`.** A/B (`STAGE10` off → on): mp +14 / +40 / +81
-  across 2023-24 / 2024-25 / 2025-26; legacy −12 / +0 / +73 (inconsistent — one
-  regression). Full table and per-GW analysis in [[stage10_phase1_report]].
+- **Shipped for `OPTIMIZER=mp MP_THETA=0`.** Definitive 15-run A/B (`STAGE10`
+  off → on, all fixes): mp **+28 / +56 / +81** across 2023-24 / 2024-25 / 2025-26
+  (**mean +55/season** — LSTM residual ~+28, pure-EV captain objective ~+27,
+  additive); legacy −53 / 0 / +19 (mean −11, inconsistent, one real regression).
+  Full matrix, decomposition, and ruled-out fixes 3/4/5 in
+  [[stage10_phase1_report]].
 - **In-season fine-tune is disabled** — measured to hurt holdout MAE (the head
   overfits the thin partial-season sample). `STAGE10_FT=on` to experiment.
-- **Runtime sequence approximations** — `o_gc`/`o_bps` timesteps → 0, slow
-  features held at the current GW (4 of 56 features). Documented in
-  `stage10_refine.py`.
+- **Runtime sequence approximations** — `o_gc` timestep → 0, slow features held
+  at the current GW (2 of 56 features). `o_bps` was also 0 until fix 2 closed
+  that train/serve gap. Documented in `stage10_refine.py`.
 - **Determinism** — the `STAGE10=on` runtime is numpy-only and fully
   deterministic. Training carries a small cross-machine tolerance band; the
   shipped artifact is the frozen `.npz`.

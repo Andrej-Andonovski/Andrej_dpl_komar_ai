@@ -405,13 +405,14 @@ Per-GW explanations via Claude API (post-simulation analysis):
   - MAX_TOKENS: 1200, TEMPERATURE: 0
   Note: Stage 9 is explanatory only — decisions are made by intel_06/simulator.
 
-## Stage 10 — LSTM Residual Layer (Phase 1, shipped 2026-09-07)
+## Stage 10 — LSTM Residual Layer (Phase 1, shipped 2026-09-08)
 Stacked correction between the LightGBM μ and the optimizer. Full evidence:
-docs/stage10_phase1_report.md; plan: docs/stage10_phase1_plan.md; component
-note: docs/components/stage10-residual-layer.md.
+docs/stage10_phase1_report.md (definitive A/B matrix + post-ship refinement log,
+fixes 1-7); plan: docs/stage10_phase1_plan.md; component note:
+docs/components/stage10-residual-layer.md.
   Flow:  LightGBM μ -> LSTM(μ, GW-sequence 1..t-1) -> (r̂, σ)
          r_applied = confidence_gate(r̂)  added to raw μ  (FDR/intel stay downstream)
-         q90       = μ + r_applied + z·σ_eff   -> captain channel
+         q90       = μ + r_applied + z·σ_eff   -> legacy captain only (mp uses pure EV)
   Flag:  STAGE10=off (default, TRUE no-op — stage10_refine never imported so
          torch never loads; predict_pool/build_matrix byte-identical) | on
          (writes *_s10.json).
@@ -426,13 +427,26 @@ note: docs/components/stage10-residual-layer.md.
   Gates:  1 (off byte-identical, all 4 configs) PASS; 2 (OOF MAE) mean +0.026,
           all folds positive; 3 (q90 coverage) 0.836 -> 0.890; 4 (A/B) see below;
           8 (determinism) PASS. Tests: test_stage10_{sequence,identity,shapes}.py.
-  A/B (STAGE10 off -> on, full season):
-             mp     2023-24 +14 | 2024-25 +40 | 2025-26 +81   (mean +45)
-             legacy 2023-24 -12 | 2024-25  +0 | 2025-26 +73   (mean +20, inconsistent)
-  SHIPPING CONFIG:  STAGE10=on OPTIMIZER=mp RULES_MODE=corrected.
-             Legacy works + helps on 2/3 seasons (big on deployment) but has one
-             regression — kept functional, mp recommended. select_captain got a
-             CAP_Q90_W=0.35 kappa-analogue blend (legacy only; ILP untouched).
+  A/B (definitive 15-run matrix, STAGE10 off -> on, all fixes applied):
+             mp  2023-24 +28 | 2024-25 +56 | 2025-26 +81   (MEAN +55/season)
+                 decomposition: LSTM residual ~+28 (+37/+33/+14)
+                              + pure-EV captain obj (fix 6, MP_THETA 0.3->0) ~+27
+             legacy 2023-24 -53 | 2024-25 +0 | 2025-26 +19  (mean -11, inconsistent,
+                 one real regression — kept functional, mp recommended)
+  SHIPPING CONFIG:  STAGE10=on OPTIMIZER=mp MP_THETA=0 RULES_MODE=corrected.
+             select_captain got a CAP_Q90_W=0.35 kappa-analogue blend (legacy
+             only; ILP untouched). mp captain = pure EV (MP_THETA=0): removing the
+             q90 ceiling tilt is theoretically correct for season-long points max
+             and +23..+27/season on the A/B. q90 head now vestigial for mp, kept
+             for legacy + Phase 2 GNN.
+  Post-ship fixes:  1 (FWD sigma tail) = inference SIGMA_CAP=15 clamp ONLY; the
+             training-side tail penalty was REVERTED after it silently cost ~60
+             A/B pts (gate-only check missed it) -> checkpoints byte-identical to
+             step 3. 2 (o_bps train/serve gap) closed. 3/4/5 (penalty feature,
+             cheap ceiling features, pinball q90 head) all RULED OUT with data:
+             confirmed 3x that the captain problem is an OBJECTIVE problem not a
+             sigma-formulation problem -> motivated fix 6. 6 shipped. 7 (conformal
+             cal) pending, low priority.
   In-season head fine-tune (stage10_finetune.py): built, MEASURED NEGATIVE
              (holdout MAE -0.001..-0.054), DISABLED (STAGE10_FT=on to experiment;
              ft_*.npz gitignored).

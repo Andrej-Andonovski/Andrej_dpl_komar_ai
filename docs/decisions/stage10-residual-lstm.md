@@ -41,35 +41,43 @@ within-current-season only, so they have no representation of a player's
   loop torch-free and is a permanent SAC hedge. Training uses torch offline.
 
 ## Decision
-**Ship Phase 1 (LSTM only) for `OPTIMIZER=mp`.** A 2-layer LSTM (hidden 64,
-shared trunk + position embedding) predicts the residual with a Gaussian-NLL +
-`LAMBDA_R·mean(r̂²)` objective; a variance head produces a per-position
-train-calibrated `q90`. Selected by `STAGE10=off|on` (default off, a true
-no-op). Full evidence: [[stage10_phase1_report]].
+**Ship Phase 1 (LSTM only) for `OPTIMIZER=mp MP_THETA=0`.** A 2-layer LSTM
+(hidden 64, shared trunk + position embedding) predicts the residual with a
+Gaussian-NLL + `LAMBDA_R·mean(r̂²)` objective; a variance head produces a
+per-position train-calibrated `q90`. Selected by `STAGE10=off|on` (default off, a
+true no-op). Full evidence: [[stage10_phase1_report]].
 
-Results (A/B, `STAGE10` off → on):
+Results (definitive 15-run A/B, `STAGE10` off → on, all fixes applied):
 
-| optimizer | 2023-24 | 2024-25 | 2025-26 |
-|---|---|---|---|
-| **mp** | +14 | +40 | +81 |
-| legacy | −12 | +0 | +73 |
+| optimizer | 2023-24 | 2024-25 | 2025-26 | mean |
+|---|---|---|---|---|
+| **mp** | +28 | +56 | +81 | **+55/season** |
+| legacy | −53 | 0 | +19 | −11/season |
 
-`mp` is positive on every season (mean +45) and passes the gate cleanly.
-`legacy` is inconsistent — one regression (−12 on 2023-24, high-variance captain
-swings) — kept **functional and documented**, but `mp` is the recommended
-config. Gate 2 (residual MAE) mean +0.026, gate 3 (q90 coverage) 0.836 → 0.89.
+`mp` is positive on every season. The +55 splits ~evenly and additively into the
+LSTM residual correction (~+28: +37/+33/+14) and the pure-EV captain objective
+(fix 6, `MP_THETA` 0.3→0; ~+27) that the σ-formulation dead-ends (fixes 3/4/5)
+motivated. `legacy` is inconsistent — one real regression (−53 on 2023-24) —
+kept **functional and documented**, but `mp` is the recommended config. Gate 2
+(residual MAE) mean +0.026, gate 3 (q90 coverage) 0.836 → 0.89.
 
 ## Tradeoffs accepted
 - **The mean correction is small** on recent seasons (+0.004 OOF MAE on folds
   4–5) — the recent-season residual has little exploitable temporal structure.
-  Most of Phase 1's season-score value on the deployment proxy comes from the
-  q90 → captain channel, not the μ correction.
+  The LSTM residual still contributes ~+28/season on the A/B; the rest is the
+  captain-objective fix.
+- **q90 head vestigial for mp** — after `MP_THETA=0` the mp captain channel is
+  pure `π·μ`; the calibrated q90 is kept for the legacy captain
+  (`CAP_Q90_W=0.35`) and Phase 2.
 - **Mild in-sample tuning** — `LAMBDA_R` and the z-quantile were chosen partly
   on fold-5 gate numbers; the fully-blind A/B seasons are 2023-24 / 2024-25.
 - **Legacy distortion** — on the legacy path the additive residual is pushed
   through ~4 downstream multiplicative transforms; a clean fix (apply `r` after
   `_finalize`) is deferred to Phase 1.5 (legacy is the retiring optimizer).
-- Runtime sequence approximations (4 of 56 timestep features) — see
+- **Gate-only acceptance is insufficient** — fix 1's training-side tail penalty
+  passed gates 2/3 unchanged but cost ~60 A/B pts; reverted to a clamp-only
+  change. Training changes must be validated on the full season A/B.
+- Runtime sequence approximations (2 of 56 timestep features) — see
   `stage10_refine.py`.
 
 ## Components affected
