@@ -73,20 +73,15 @@ MAX_LEN = 38
 LAMBDA_R = 0.4        # L2 on r_hat: shrink the residual mean toward 0
 LAMBDA_LV = 0.0       # global L2 on the log-variance head — tried 0.02, it
                       #   over-shrank sigma everywhere and cost ~0.04 coverage.
-# Fix 1 (2026-09-07): the log-variance head blew up on a handful of
-# out-of-distribution FWD/MID sequences (pretrain_2025-26: 2 players — Adli,
-# Gyokeres — sigma to 130, reaching the captain channel via kappa).
-# Soft penalty on ONLY the extreme tail: relu(log_var - thresh)^2, ~0 in the
-# normal sigma range. This tames folds 1-4 but CANNOT fix 2025-26 (the fold
-# early-stops before the penalty converges, and NLL genuinely wants big sigma
-# for those two players — that IS correct uncertainty). The hard backstop is
-# an inference-time clamp: sm.apply_gate caps sigma_eff at sm.SIGMA_CAP (15) —
-# a guardrail on the kappa arithmetic, not a modelling choice. Weight kept
-# mild (.mean, 0.03) so gate-2 MAE is untouched.
-LV_TAIL_THRESH = 3.0
-LAMBDA_LV_TAIL = 0.03
-# checkpoint select + early stop now track val GATED-MAE, not val NLL (NLL was
-# flat while MAE diverged — sigma was absorbing the error).
+# Fix 1 (2026-09-07/08): the log-variance head blows up on 2 out-of-distribution
+# FWD players in pretrain_2025-26 (Adli, Gyokeres — raw sigma to 130). A
+# training-side tail penalty + sane-sigma checkpoint selection were tried and
+# REVERTED — they cost ~60 pts on the mp season A/B (gate 2/3 unaffected, so it
+# was missed at the time). The landmine is fully handled by the INFERENCE clamp
+# alone: sm.apply_gate caps sigma_eff at sm.SIGMA_CAP (15) — a no-op for every
+# fold whose sigma isn't blown, so zero A/B cost. See report §12.
+# checkpoint select + early stop track val GATED-MAE, not val NLL (NLL was flat
+# while MAE diverged — sigma was absorbing the error).
 
 
 # ---------------------------------------------------------------------------
@@ -182,12 +177,9 @@ def train_one_fold(train_seasons, val_season, joined, *, pos_filter=None,
         return float(np.abs(Yva - r_app).mean())
 
     curve = []
-    best_val = float("inf")            # tracks val GATED-MAE now
+    best_val = float("inf")            # tracks val GATED-MAE
     best_state = None
-    best_clean = None                  # best-MAE among epochs with max(sigma) <= SIGMA_SANE
-    best_clean_val = float("inf")
     bad = 0
-    SIGMA_SANE = 15.0
     if verbose:
         print(f"    train={len(Xtr):,} val={len(Xva):,}  seq_w={Xtr.shape[1]}  "
               f"threads={torch.get_num_threads()}  lambda_r={LAMBDA_R}")
@@ -201,8 +193,7 @@ def train_one_fold(train_seasons, val_season, joined, *, pos_filter=None,
             r, s, lv = model(Xtr_t[b], Qtr_t[b], Ltr_t[b], Ptr_t[b])
             nll = (sm.gaussian_nll(r, s, Ytr_t[b]) * wtr_t[b]).sum() / wtr_t[b].sum()
             loss = (nll + LAMBDA_R * (r ** 2).mean()
-                    + LAMBDA_LV * (lv ** 2).mean()
-                    + LAMBDA_LV_TAIL * (torch.relu(lv - LV_TAIL_THRESH) ** 2).mean())
+                    + LAMBDA_LV * (lv ** 2).mean())
             loss.backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), GRAD_CLIP)
             opt.step()
@@ -230,29 +221,16 @@ def train_one_fold(train_seasons, val_season, joined, *, pos_filter=None,
                   f"val_MAE(gated) {vmae_raw:.3f} -> {vmae_gated:.3f}  "
                   f"|r|std={rv_np.std():.2f} sig={sv_np.mean():.2f}/{sig_max:.0f}  "
                   f"({ep_s:.1f}s)", flush=True)
-        _snap = lambda: {k: v.detach().clone()                          # noqa: E731
-                         for k, v in model.state_dict().items()}
-        if sig_max <= SIGMA_SANE and (best_clean is None
-                                      or vmae_gated < best_clean_val - 1e-4):
-            best_clean, best_clean_val = _snap(), vmae_gated
         if best_state is None or vmae_gated < best_val - 1e-4:
-            best_val, best_state, bad = vmae_gated, _snap(), 0
+            best_val, best_state = vmae_gated, {k: v.detach().clone()
+                                               for k, v in model.state_dict().items()}
+            bad = 0
         else:
             bad += 1
             if bad >= PATIENCE:
                 if verbose:
                     print(f"    early stop @ ep{ep} (best val gated-MAE={best_val:.3f})")
                 break
-
-    # Prefer the best-MAE checkpoint whose val sigma is sane (no captain landmine).
-    # Falls back to raw best-MAE only if NO epoch stayed under SIGMA_SANE.
-    if best_clean is not None:
-        if verbose and best_clean_val > best_val + 1e-4:
-            print(f"    checkpoint: sane-sigma epoch (MAE {best_clean_val:.3f}) "
-                  f"over raw-best (MAE {best_val:.3f})")
-        best_state = best_clean
-    elif verbose:
-        print("    [WARN] no epoch kept max(sigma) <= 15 — shipping raw best-MAE")
 
     model.load_state_dict(best_state)
     model.eval()
@@ -444,8 +422,8 @@ def run_pretrain(ablation=False, device="cpu"):
                   "weight_decay": WEIGHT_DECAY, "grad_clip": GRAD_CLIP,
                   "patience": PATIENCE, "seed": SEED, "max_len": MAX_LEN,
                   "lambda_r": LAMBDA_R, "lambda_lv": LAMBDA_LV,
-                  "lambda_lv_tail": LAMBDA_LV_TAIL, "lv_tail_thresh": LV_TAIL_THRESH,
-                  "checkpoint_metric": "val_gated_mae"},
+                  "checkpoint_metric": "val_gated_mae",
+                  "sigma_cap_inference": sm.SIGMA_CAP},
         "gate": {"z90": sm.Z90, "conf_ramp": sm.CONF_RAMP,
                  "sigma_shrink_below": sm.SIGMA_SHRINK_BELOW,
                  "headroom_prior": sm.HEADROOM_PRIOR},
