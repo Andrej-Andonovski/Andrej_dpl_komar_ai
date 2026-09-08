@@ -185,12 +185,16 @@ if OPTIMIZER == "mp":
 # Phase 1 decay measurement.
 MP_HORIZON = int(os.environ.get("MP_HORIZON", "5"))
 
-# Captain mean-to-ceiling blend for the mp objective.  Kept as an environment
-# override so ablations do not require source edits; its value is recorded in
-# the simulation log below.  Default 0.3 = the 2026-07-15 sweep winner
-# (sum 6824 vs 6681 at 0.5, 6766 at 0.1): captaincy pays closer to the
-# reliable mean than the q90 ceiling.
-MP_THETA = float(os.environ.get("MP_THETA", "0.3"))
+# Captain mean-to-ceiling blend for the mp objective:
+#   kappa = pi * [(1-theta)*mu + theta*q90]
+# Default 0.0 (pure expected value) as of Stage 10 fix 6 (2026-09-08). For a
+# season-long, risk-neutral points-maximisation objective, the optimal captain
+# pick is pure EV (linearity of expectation — no variance term). The old 0.3
+# ceiling tilt was human "differential captaincy" intuition, a rank-variance
+# strategy, not an EV one. A/B (STAGE10=on, theta 0.3 -> 0): mp +67 / +16 / -13
+# across 2023-24 / 2024-25 / 2025-26 (mean +23, positive on both blind seasons).
+# See docs/stage10_phase1_report.md §12. Kept env-overridable for ablations.
+MP_THETA = float(os.environ.get("MP_THETA", "0.0"))
 if not 0.0 <= MP_THETA <= 1.0:
     raise ValueError(f"MP_THETA must be in [0, 1], got {MP_THETA!r}")
 # Phase 6 sweep knobs: the remaining honest constants, env-exposed so the
@@ -335,9 +339,12 @@ CHIP_BAR_WC     = 20.0   # WC rebuild gain over WC_HORIZON must be >= this
 
 CAP_MULT = {1: 0.0, 2: 0.75, 3: 1.15, 4: 1.25}   # by element_type
 
-# STAGE10=="on" only: blend the captain base score toward the LSTM-calibrated
-# q90 ceiling — the legacy analogue of milp_core.kappa's (1-θ)μ + θ·q90 (θ=0.5).
-# A touch below mp's θ because legacy's base is already FDR/cap/loyalty-adjusted.
+# STAGE10=="on" only: blend the legacy captain base score toward the
+# LSTM-calibrated q90 ceiling. Unlike the mp path (fix 6: MP_THETA=0, pure EV),
+# legacy KEEPS this 0.35 tilt — its base score is already so transformed
+# (FDR x DGW x availability x loyalty x cap) that a mild q90 nudge recovers
+# lost ceiling signal. A/B (STAGE10=on, CAP_Q90_W 0.35 -> 0): legacy -38 / -10 /
+# -19 across the three seasons AND captain regret +0.5. Report §12.
 # 0.0 => no effect (STAGE10=off is unaffected regardless: q90 is only stashed on).
 CAP_Q90_W = float(os.environ.get("CAP_Q90_W", "0.35"))
 
